@@ -4,15 +4,25 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<!-- ![haneulee](./assets/img/screenshot.png) -->
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Haneul Lee
+=============
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+#### WORK EXPERIENCE
+2013.12 ~ present  
+Staff Researcher    
+Web Framework Team / Web Write Team  
+Currently work as a Front-end Developer at Hancom Inc.   
+Especially working on web office service such as Google Docs.  
 
+#### EDUCATION
+2009.03 ~ 2014.02  
+Kongju National University  
+Bachelor of Science in Radio Science Engineering  
 
-[jekyll-organization]: https://github.com/jekyll
+#### SKILLS
+Javascript / HTML / CSS / React / React-Native  
+JQuery / Underscore / Backbone / RequireJS / Qunit  
+Processing / Arduino  
+Photoshop / Illustrator / After Effect  
