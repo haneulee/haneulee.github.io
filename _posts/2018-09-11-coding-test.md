@@ -2,7 +2,7 @@
 layout: post
 title: "테스트"
 date: 2018-09-11 14:13:52 +0900
-categories: jekyll update
+categories: coding test
 ---
 
 코딩 테스트 복기

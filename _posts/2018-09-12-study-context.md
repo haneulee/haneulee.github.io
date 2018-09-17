@@ -2,7 +2,7 @@
 layout: post
 title: "Javascript Context"
 date: 2018-09-12 17:56:52 +0900
-categories: jekyll update
+categories: javascript study
 ---
 
 자바스크립트 실행 컨텍스트
