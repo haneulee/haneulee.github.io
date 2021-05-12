@@ -2,7 +2,8 @@
 layout: post
 title: "Javascript use strict"
 date: 2018-09-17 17:03:00 +0900
-categories: javascript study
+categories: [Development, Javscript]
+tags: [javascript, use, strict]
 ---
 
 자바스크립트 use strict 모드

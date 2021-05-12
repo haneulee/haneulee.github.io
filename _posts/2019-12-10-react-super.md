@@ -4,6 +4,8 @@ title: "Why Do We Write super(props)?"
 date: '2018-12-10'
 categories: React study
 spoiler: There’s a twist at the end.
+categories: [Development, React]
+tags: [javascript, hooks, super]
 
 ---
 

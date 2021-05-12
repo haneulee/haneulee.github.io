@@ -2,7 +2,8 @@
 layout: post
 title: "Javascript Context"
 date: 2018-09-12 17:56:52 +0900
-categories: javascript study
+categories: [Development, Javscript]
+tags: [javascript, context]
 ---
 
 자바스크립트 실행 컨텍스트

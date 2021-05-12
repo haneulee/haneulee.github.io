@@ -2,7 +2,8 @@
 layout: post
 title: "Redux"
 date: 2018-10-03 11:03:00 +0900
-categories: React study
+categories: [Development, Redux]
+tags: [javascript, react, Redux]
 ---
 
 # Redux 리덕스

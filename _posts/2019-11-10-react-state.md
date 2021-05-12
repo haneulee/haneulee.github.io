@@ -2,7 +2,8 @@
 layout: post
 title: "Svelte"
 date: 2019-11-10 23:03:00 +0900
-categories: Svelte study
+categories: [Development, Svelte]
+tags: [javascript, svelte]
 ---
 
 # Svelte
