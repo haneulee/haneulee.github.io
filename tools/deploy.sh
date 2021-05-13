@@ -15,6 +15,8 @@ init() {
     exit -1
   fi
 
+  git stash && git pull origin master && git stash pop
+
   if [[ -z $(git branch -av | grep "$PAGES_BRANCH") ]]; then
     _no_branch=true
     git checkout -b "$PAGES_BRANCH"
@@ -45,11 +47,6 @@ flush() {
 deploy() {
   git config --global user.name "GitHub Actions"
   git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-  git reset --hard
-  git pull
-
-  # git stash && git pull origin master && git stash pop
   
   git update-ref -d HEAD
   git add -A
