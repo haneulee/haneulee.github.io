@@ -14,6 +14,9 @@ init() {
     echo "ERROR: This script is not allowed to run outside of GitHub Action."
     exit -1
   fi
+
+  git config --global user.name "GitHub Actions"
+  git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
   
   git add .
   git commit -a
@@ -46,9 +49,6 @@ flush() {
 }
 
 deploy() {
-  git config --global user.name "GitHub Actions"
-  git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-  
   git update-ref -d HEAD
   git add -A
   git commit -m "[Automation] Site update No.${GITHUB_RUN_NUMBER}"
