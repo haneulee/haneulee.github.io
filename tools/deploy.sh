@@ -14,8 +14,9 @@ init() {
     echo "ERROR: This script is not allowed to run outside of GitHub Action."
     exit -1
   fi
-
-  git stash && git pull origin master && git stash pop
+  
+  git add .
+  git commit -a
 
   if [[ -z $(git branch -av | grep "$PAGES_BRANCH") ]]; then
     _no_branch=true
