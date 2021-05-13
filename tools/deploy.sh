@@ -15,12 +15,6 @@ init() {
     exit -1
   fi
 
-  git config --global user.name "GitHub Actions"
-  git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-  
-  git add .
-  git commit -a
-
   if [[ -z $(git branch -av | grep "$PAGES_BRANCH") ]]; then
     _no_branch=true
     git checkout -b "$PAGES_BRANCH"
@@ -49,6 +43,9 @@ flush() {
 }
 
 deploy() {
+  git config --global user.name "GitHub Actions"
+  git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
   git update-ref -d HEAD
   git add -A
   git commit -m "[Automation] Site update No.${GITHUB_RUN_NUMBER}"
