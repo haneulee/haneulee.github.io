@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>context on Haneul Devlog</title>
+    <link>https://haneulee.github.io/tags/context/</link>
+    <description>Recent content in context on Haneul Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 12 Sep 2018 17:56:52 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/context/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript Context</title>
+      <link>https://haneulee.github.io/2018/09/javascript-context/</link>
+      <pubDate>Wed, 12 Sep 2018 17:56:52 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2018/09/javascript-context/</guid>
+      <description>자바스크립트 실행 컨텍스트 : 현재 실행되는 컨텍스트에서 이 컨텍스트와 관련 없는 실행 코드가 실행되면, 새로운 컨텍스트가 생성되어 스택에 들어가고 제어권이 그 컨텍스트로 이동한다.
+ 실행 컨텍스트가 형성되는 경우  전역 코드 eval() 함수로 실행되는 코드 함수 안의 코드를 실행하는 경우    </description>
+    </item>
+    
+  </channel>
+</rss>

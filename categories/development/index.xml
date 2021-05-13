@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on Haneul Devlog</title>
+    <link>https://haneulee.github.io/categories/development/</link>
+    <description>Recent content in Development on Haneul Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 10 Nov 2019 23:03:00 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Svelte</title>
+      <link>https://haneulee.github.io/2019/11/svelte/</link>
+      <pubDate>Sun, 10 Nov 2019 23:03:00 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2019/11/svelte/</guid>
+      <description>Svelte Svelte란? svelte란 날씬한, 호리호리한이란 뜻입니다.
+이름답게 적은 코드, 적은 용량 등을 자랑하는 프레임워크입니다.
+공식 문서에 따르면 새로운 웹 어플리케이션 개발 방법을 제시하는 컴파일러라고도 소개되어 있습니다.
+vue, react와는 다르게 가상돔을 사용하지 않습니다.
+svelte는 빌드 타임에 실행되며, 효과적으로 DOM을 업데이트하는 코드로 컴파일됩니다.
+기본 문법 svelte는 vue 처럼 .svelte라는 별도의 파일 확장자를 갖습니다.
+기본문법은 html과 비슷합니다.
+h1 태그 내에 {name}은 스크립트의 선언한 name 변수를 참조해서 출력합니다.
+css 또한 똑같이 작성하시면 됩니다.
+// App.</description>
+    </item>
+    
+    <item>
+      <title>how to handle React state array</title>
+      <link>https://haneulee.github.io/2019/11/how-to-handle-react-state-array/</link>
+      <pubDate>Sun, 10 Nov 2019 00:03:00 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2019/11/how-to-handle-react-state-array/</guid>
+      <description>state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.  2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
+  이것을 사용하기 위해서는 라이브러리를 사전 설치해줘야 한다.
+  설치 방법 : npm을 통한 설치
+  $npm install &amp;ndash;save react-addons-update
+  import update from &amp;lsquo;react-addons-update&amp;rsquo;
+  원소 추가
+  this.setState({ list: update( this.state.list, { $push: [newObj, newObj2] } ); });   (줄 3) 첫 번째 인수 : 처리해야할 객체나 배열</description>
+    </item>
+    
+    <item>
+      <title>Why Do We Write super(props)?</title>
+      <link>https://haneulee.github.io/2018/12/why-do-we-write-superprops/</link>
+      <pubDate>Mon, 10 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://haneulee.github.io/2018/12/why-do-we-write-superprops/</guid>
+      <description>Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
+요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
+웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
+이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
+첫번째,
+ 나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
+class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .</description>
+    </item>
+    
+    <item>
+      <title>Redux</title>
+      <link>https://haneulee.github.io/2018/10/redux/</link>
+      <pubDate>Wed, 03 Oct 2018 11:03:00 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2018/10/redux/</guid>
+      <description>Redux 리덕스 : 리액트를 위한 스테이트 매니지먼트 툴 (복잡한 앱에서 효율적, 단순한 앱에서 필요없음)
+Why do we need it? 왜 필요한가?  Components have local state, but apps have global state. Sometimes state need to be shared. We need to save the shared state somewhere. Redux == state container  Redux is a gloabl state container  Ther Redux Store is like a box We go and grab what we need for the container For example, from we only grab the username  Stuff to remember  The whole state of your app is stored in an object(store)   state 가 복잡하고 커질 수 있어서 리덕스는 해당 오브젝트를 수정하는 것에 매우 엄격함  If you wanna change the data inside of this object you need to &amp;lsquo;dispatch&amp;rsquo; (sned) an action   오브젝트의 데이터를 수정하는 방법은 액션을 reducer 로 보내면 가능함  You will send this actions to a reducer and this reducer will change the object for you.</description>
+    </item>
+    
+    <item>
+      <title>Javascript use strict</title>
+      <link>https://haneulee.github.io/2018/09/javascript-use-strict/</link>
+      <pubDate>Mon, 17 Sep 2018 17:03:00 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2018/09/javascript-use-strict/</guid>
+      <description>자바스크립트 use strict 모드 : strict 모드는 ES5(ECMA Script 5)에 추가된 키워드 strict 모드는 자바스크립트가 묵인했던 에러들의 에러 메시지를 발생시킨다.
+ 선언하지 않고 전역 변수를 만들 수 없다.  &amp;quot;use strict&amp;quot; temp = 4;  writable이 false로, 읽기 전용 객체에 쓰는 것이 불가능. (read only 객체 수정 불가능)  &amp;quot;use strict&amp;quot;; var testObj = Object.defineProperties({}, { prop1: { value: 10, writable: false // by default }, prop2: { get: function () { } } }); testObj.</description>
+    </item>
+    
+    <item>
+      <title>Javascript Context</title>
+      <link>https://haneulee.github.io/2018/09/javascript-context/</link>
+      <pubDate>Wed, 12 Sep 2018 17:56:52 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2018/09/javascript-context/</guid>
+      <description>자바스크립트 실행 컨텍스트 : 현재 실행되는 컨텍스트에서 이 컨텍스트와 관련 없는 실행 코드가 실행되면, 새로운 컨텍스트가 생성되어 스택에 들어가고 제어권이 그 컨텍스트로 이동한다.
+ 실행 컨텍스트가 형성되는 경우  전역 코드 eval() 함수로 실행되는 코드 함수 안의 코드를 실행하는 경우    </description>
+    </item>
+    
+  </channel>
+</rss>

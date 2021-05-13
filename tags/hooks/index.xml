@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hooks on Haneul Devlog</title>
+    <link>https://haneulee.github.io/tags/hooks/</link>
+    <description>Recent content in hooks on Haneul Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 10 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://haneulee.github.io/tags/hooks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why Do We Write super(props)?</title>
+      <link>https://haneulee.github.io/2018/12/why-do-we-write-superprops/</link>
+      <pubDate>Mon, 10 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://haneulee.github.io/2018/12/why-do-we-write-superprops/</guid>
+      <description>Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
+요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
+웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
+이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
+첫번째,
+ 나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
+class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .</description>
+    </item>
+    
+  </channel>
+</rss>

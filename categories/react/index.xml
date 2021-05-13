@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React on Haneul Devlog</title>
+    <link>https://haneulee.github.io/categories/react/</link>
+    <description>Recent content in React on Haneul Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 10 Nov 2019 00:03:00 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>how to handle React state array</title>
+      <link>https://haneulee.github.io/2019/11/how-to-handle-react-state-array/</link>
+      <pubDate>Sun, 10 Nov 2019 00:03:00 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2019/11/how-to-handle-react-state-array/</guid>
+      <description>state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.  2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
+  이것을 사용하기 위해서는 라이브러리를 사전 설치해줘야 한다.
+  설치 방법 : npm을 통한 설치
+  $npm install &amp;ndash;save react-addons-update
+  import update from &amp;lsquo;react-addons-update&amp;rsquo;
+  원소 추가
+  this.setState({ list: update( this.state.list, { $push: [newObj, newObj2] } ); });   (줄 3) 첫 번째 인수 : 처리해야할 객체나 배열</description>
+    </item>
+    
+    <item>
+      <title>Why Do We Write super(props)?</title>
+      <link>https://haneulee.github.io/2018/12/why-do-we-write-superprops/</link>
+      <pubDate>Mon, 10 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://haneulee.github.io/2018/12/why-do-we-write-superprops/</guid>
+      <description>Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
+요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
+웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
+이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
+첫번째,
+ 나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
+class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .</description>
+    </item>
+    
+  </channel>
+</rss>

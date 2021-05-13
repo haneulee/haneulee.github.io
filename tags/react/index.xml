@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>react on Haneul Devlog</title>
+    <link>https://haneulee.github.io/tags/react/</link>
+    <description>Recent content in react on Haneul Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 10 Nov 2019 00:03:00 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>how to handle React state array</title>
+      <link>https://haneulee.github.io/2019/11/how-to-handle-react-state-array/</link>
+      <pubDate>Sun, 10 Nov 2019 00:03:00 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2019/11/how-to-handle-react-state-array/</guid>
+      <description>state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.  2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
+  이것을 사용하기 위해서는 라이브러리를 사전 설치해줘야 한다.
+  설치 방법 : npm을 통한 설치
+  $npm install &amp;ndash;save react-addons-update
+  import update from &amp;lsquo;react-addons-update&amp;rsquo;
+  원소 추가
+  this.setState({ list: update( this.state.list, { $push: [newObj, newObj2] } ); });   (줄 3) 첫 번째 인수 : 처리해야할 객체나 배열</description>
+    </item>
+    
+    <item>
+      <title>Redux</title>
+      <link>https://haneulee.github.io/2018/10/redux/</link>
+      <pubDate>Wed, 03 Oct 2018 11:03:00 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2018/10/redux/</guid>
+      <description>Redux 리덕스 : 리액트를 위한 스테이트 매니지먼트 툴 (복잡한 앱에서 효율적, 단순한 앱에서 필요없음)
+Why do we need it? 왜 필요한가?  Components have local state, but apps have global state. Sometimes state need to be shared. We need to save the shared state somewhere. Redux == state container  Redux is a gloabl state container  Ther Redux Store is like a box We go and grab what we need for the container For example, from we only grab the username  Stuff to remember  The whole state of your app is stored in an object(store)   state 가 복잡하고 커질 수 있어서 리덕스는 해당 오브젝트를 수정하는 것에 매우 엄격함  If you wanna change the data inside of this object you need to &amp;lsquo;dispatch&amp;rsquo; (sned) an action   오브젝트의 데이터를 수정하는 방법은 액션을 reducer 로 보내면 가능함  You will send this actions to a reducer and this reducer will change the object for you.</description>
+    </item>
+    
+  </channel>
+</rss>
