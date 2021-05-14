@@ -8,45 +8,61 @@
 <meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content=", development, next-gen">
-<meta name="description" content="자바스크립트 use strict 모드 : strict 모드는 ES5(ECMA Script 5)에 추가된 키워드 strict 모드는 자바스크립트가 묵인했던 에러들의 에러 메시지를 발생시킨다.
- 선언하지 않고 전역 변수를 만들 수 없다.  &quot;use strict&quot; temp = 4;  writable이 false로, 읽기 전용 객체에 쓰는 것이 불가능. (read only 객체 수정 불가능)  &quot;use strict&quot;; var testObj = Object.defineProperties({}, { prop1: { value: 10, writable: false // by default }, prop2: { get: function () { } } }); testObj.">
+<meta name="description" content="개발 블로그를 작성하다보면 코드 블럭을 사용하는 경우가 많다. 그런데 아래처럼 코드블럭이 그냥 일반 텍스트처럼 나와 매우 가독성이 떨어진다. 따라서 티스토리 블로그의 코드블럭 스타일을 변경하기로 했다. [##Image|kage@GrZYu/btqBNMNomxQ/f9wfkU88g7Umz5L3CsjyR0/img.png|alignCenter|data-filename=&ldquo;스크린샷 2020-02-09 오후 4.13.33.png&rdquo; data-origin-width=&ldquo;2254&rdquo; data-origin-height=&ldquo;1376&rdquo; data-ke-mobilestyle=&ldquo;widthOrigin&rdquo;|||##]
+**2가지 방법이 있는데, **
+1. 관리페이지 &gt; 플러그인 &gt; 코드블럭 &gt; 마음에 드는 스타일 설정
+2. 스킨편집 &gt; html 편집 &gt; &lsquo;head&rsquo;태그 안에 Highlight.js 임포트
+2번 방법은
+먼저 아래 코드를 태그 안에 넣으면 됨!
+https://highlightjs.org/static/demo/에서 마음에 드는 데모 스타일을 고르고 아래 코드에서 default.">
 
 
-<meta property="og:description" content="자바스크립트 use strict 모드 : strict 모드는 ES5(ECMA Script 5)에 추가된 키워드 strict 모드는 자바스크립트가 묵인했던 에러들의 에러 메시지를 발생시킨다.
- 선언하지 않고 전역 변수를 만들 수 없다.  &quot;use strict&quot; temp = 4;  writable이 false로, 읽기 전용 객체에 쓰는 것이 불가능. (read only 객체 수정 불가능)  &quot;use strict&quot;; var testObj = Object.defineProperties({}, { prop1: { value: 10, writable: false // by default }, prop2: { get: function () { } } }); testObj.">
+<meta property="og:description" content="개발 블로그를 작성하다보면 코드 블럭을 사용하는 경우가 많다. 그런데 아래처럼 코드블럭이 그냥 일반 텍스트처럼 나와 매우 가독성이 떨어진다. 따라서 티스토리 블로그의 코드블럭 스타일을 변경하기로 했다. [##Image|kage@GrZYu/btqBNMNomxQ/f9wfkU88g7Umz5L3CsjyR0/img.png|alignCenter|data-filename=&ldquo;스크린샷 2020-02-09 오후 4.13.33.png&rdquo; data-origin-width=&ldquo;2254&rdquo; data-origin-height=&ldquo;1376&rdquo; data-ke-mobilestyle=&ldquo;widthOrigin&rdquo;|||##]
+**2가지 방법이 있는데, **
+1. 관리페이지 &gt; 플러그인 &gt; 코드블럭 &gt; 마음에 드는 스타일 설정
+2. 스킨편집 &gt; html 편집 &gt; &lsquo;head&rsquo;태그 안에 Highlight.js 임포트
+2번 방법은
+먼저 아래 코드를 태그 안에 넣으면 됨!
+https://highlightjs.org/static/demo/에서 마음에 드는 데모 스타일을 고르고 아래 코드에서 default.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript use strict">
-<meta name="twitter:title" content="Javascript use strict">
-<meta property="og:url" content="https://haneulee.github.io/2018/09/javascript-use-strict/">
-<meta property="twitter:url" content="https://haneulee.github.io/2018/09/javascript-use-strict/">
+<meta property="og:title" content="2020 02 09 Tstory Code Block">
+<meta name="twitter:title" content="2020 02 09 Tstory Code Block">
+<meta property="og:url" content="https://haneulee.github.io/2020/02/2020-02-09-tstory-code-block/">
+<meta property="twitter:url" content="https://haneulee.github.io/2020/02/2020-02-09-tstory-code-block/">
 <meta property="og:site_name" content="Haneul Devlog">
-<meta property="og:description" content="자바스크립트 use strict 모드 : strict 모드는 ES5(ECMA Script 5)에 추가된 키워드 strict 모드는 자바스크립트가 묵인했던 에러들의 에러 메시지를 발생시킨다.
- 선언하지 않고 전역 변수를 만들 수 없다.  &quot;use strict&quot; temp = 4;  writable이 false로, 읽기 전용 객체에 쓰는 것이 불가능. (read only 객체 수정 불가능)  &quot;use strict&quot;; var testObj = Object.defineProperties({}, { prop1: { value: 10, writable: false // by default }, prop2: { get: function () { } } }); testObj.">
-<meta name="twitter:description" content="자바스크립트 use strict 모드 : strict 모드는 ES5(ECMA Script 5)에 추가된 키워드 strict 모드는 자바스크립트가 묵인했던 에러들의 에러 메시지를 발생시킨다.
- 선언하지 않고 전역 변수를 만들 수 없다.  &quot;use strict&quot; temp = 4;  writable이 false로, 읽기 전용 객체에 쓰는 것이 불가능. (read only 객체 수정 불가능)  &quot;use strict&quot;; var testObj = Object.defineProperties({}, { prop1: { value: 10, writable: false // by default }, prop2: { get: function () { } } }); testObj.">
+<meta property="og:description" content="개발 블로그를 작성하다보면 코드 블럭을 사용하는 경우가 많다. 그런데 아래처럼 코드블럭이 그냥 일반 텍스트처럼 나와 매우 가독성이 떨어진다. 따라서 티스토리 블로그의 코드블럭 스타일을 변경하기로 했다. [##Image|kage@GrZYu/btqBNMNomxQ/f9wfkU88g7Umz5L3CsjyR0/img.png|alignCenter|data-filename=&ldquo;스크린샷 2020-02-09 오후 4.13.33.png&rdquo; data-origin-width=&ldquo;2254&rdquo; data-origin-height=&ldquo;1376&rdquo; data-ke-mobilestyle=&ldquo;widthOrigin&rdquo;|||##]
+**2가지 방법이 있는데, **
+1. 관리페이지 &gt; 플러그인 &gt; 코드블럭 &gt; 마음에 드는 스타일 설정
+2. 스킨편집 &gt; html 편집 &gt; &lsquo;head&rsquo;태그 안에 Highlight.js 임포트
+2번 방법은
+먼저 아래 코드를 태그 안에 넣으면 됨!
+https://highlightjs.org/static/demo/에서 마음에 드는 데모 스타일을 고르고 아래 코드에서 default.">
+<meta name="twitter:description" content="개발 블로그를 작성하다보면 코드 블럭을 사용하는 경우가 많다. 그런데 아래처럼 코드블럭이 그냥 일반 텍스트처럼 나와 매우 가독성이 떨어진다. 따라서 티스토리 블로그의 코드블럭 스타일을 변경하기로 했다. [##Image|kage@GrZYu/btqBNMNomxQ/f9wfkU88g7Umz5L3CsjyR0/img.png|alignCenter|data-filename=&ldquo;스크린샷 2020-02-09 오후 4.13.33.png&rdquo; data-origin-width=&ldquo;2254&rdquo; data-origin-height=&ldquo;1376&rdquo; data-ke-mobilestyle=&ldquo;widthOrigin&rdquo;|||##]
+**2가지 방법이 있는데, **
+1. 관리페이지 &gt; 플러그인 &gt; 코드블럭 &gt; 마음에 드는 스타일 설정
+2. 스킨편집 &gt; html 편집 &gt; &lsquo;head&rsquo;태그 안에 Highlight.js 임포트
+2번 방법은
+먼저 아래 코드를 태그 안에 넣으면 됨!
+https://highlightjs.org/static/demo/에서 마음에 드는 데모 스타일을 고르고 아래 코드에서 default.">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2018-09-17T17:03:00">
+    <meta property="article:published_time" content="2020-02-09T13:15:32">
   
   
-    <meta property="article:modified_time" content="2018-09-17T17:03:00">
+    <meta property="article:modified_time" content="2020-02-09T13:15:32">
   
-  
-  
-    
-      <meta property="article:section" content="Development">
-    
-      <meta property="article:section" content="Javscript">
-    
   
   
     
-      <meta property="article:tag" content="javascript">
+      <meta property="article:section" content="Developement">
     
-      <meta property="article:tag" content="use">
+      <meta property="article:section" content="code block">
     
-      <meta property="article:tag" content="strict">
+  
+  
+    
+      <meta property="article:tag" content="code block tsotry">
     
   
 
@@ -67,14 +83,14 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/c7422c9edb30fbd0676bd6ea2f340348?s=640">
 
 
-    <title>Javascript use strict</title>
+    <title>2020 02 09 Tstory Code Block</title>
 
     <link rel="icon" href="img/favicon.ico">
     
 
     
 
-    <link rel="canonical" href="https://haneulee.github.io/2018/09/javascript-use-strict/">
+    <link rel="canonical" href="https://haneulee.github.io/2020/02/2020-02-09-tstory-code-block/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -211,23 +227,23 @@ if (!doNotTrack) {
 
       <div id="main" data-behavior="4"
         class="
-               hasCoverMetaIn
+               hasCoverMetaOut
                ">
         <article class="post" itemscope itemType="http://schema.org/BlogPosting">
           
           
-            <div class="post-header main-content-wrap text-left">
+            <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      Javascript use strict
+      2020 02 09 Tstory Code Block
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-09-17T17:03:00&#43;09:00">
+      <time itemprop="datePublished" datetime="2020-02-09T13:15:32&#43;09:00">
         
-  September 17, 2018
+  February 9, 2020
 
       </time>
     
@@ -236,9 +252,9 @@ if (!doNotTrack) {
   
     <span>in</span>
     
-      <a class="category-link" href="https://haneulee.github.io/categories/development">Development</a>, 
+      <a class="category-link" href="https://haneulee.github.io/categories/developement">Developement</a>, 
     
-      <a class="category-link" href="https://haneulee.github.io/categories/javscript">Javscript</a>
+      <a class="category-link" href="https://haneulee.github.io/categories/code-block">code block</a>
     
   
 
@@ -248,123 +264,29 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h1 id="자바스크립트-use-strict-모드">자바스크립트 use strict 모드</h1>
-<p>: strict 모드는 ES5(ECMA Script 5)에 추가된 키워드
-strict 모드는 자바스크립트가 묵인했던 에러들의 에러 메시지를 발생시킨다.</p>
-<ul>
-<li>선언하지 않고 전역 변수를 만들 수 없다.</li>
-</ul>
-<pre><code class="language-{.javascript}" data-lang="{.javascript}">&quot;use strict&quot;
-temp = 4;
-</code></pre><ul>
-<li>writable이 false로, 읽기 전용 객체에 쓰는 것이 불가능. (read only 객체 수정 불가능)</li>
-</ul>
-<pre><code class="language-{.javascript}" data-lang="{.javascript}">&quot;use strict&quot;;
-var testObj = Object.defineProperties({}, {
-    prop1: {
-        value: 10,
-        writable: false // by default
-    },
-    prop2: {
-        get: function () {
-        }
-    }
-});
-testObj.prop1 = 20;
-testObj.prop2 = 30;
-</code></pre><ul>
-<li>get으로 선언된 객체는 수정할 수 없다. (getter-only property 수정 불가능)</li>
-</ul>
-<pre><code class="language-{.javascript}" data-lang="{.javascript}">&quot;use strict&quot;;
-var obj2 = { get x() { return 17; } };
-obj2.x = 5; // throws a TypeError
-</code></pre><ul>
-<li>extensible 특성이 false로 설정된 객체에 속성을 확장 할 수 없다. (확장 불가 객체 확장 불가능)</li>
-</ul>
-<pre><code class="language-{.javascript}" data-lang="{.javascript}">&quot;use strict&quot;;
-var testObj = new Object();
-Object.preventExtensions(testObj);
-testObj.name = &quot;Bob&quot;;
-</code></pre><ul>
-<li>delete를 호출 할 수 없다.</li>
-</ul>
-<pre><code class="language-{.javascript}" data-lang="{.javascript}">&quot;use strict&quot;;
-var temp = 4;
-delete temp;
-</code></pre><ul>
-<li>리터럴 객체는 동일한 이름의 property를 가질 수 없다.(ES6는 가능)</li>
-</ul>
-<pre><code class="language-{.javascript}" data-lang="{.javascript}">&quot;use strict&quot;;
-var o = { p: 1, p: 2 }; // !!! syntax error
-</code></pre><ul>
-<li>함수의 동일한 매개 변수 이름을 선언하는 것이 불가능</li>
-</ul>
-<pre><code class="language-{.javascript}" data-lang="{.javascript}">&quot;use strict&quot;;
-function testFunc(param1, param1) {
-    return 1;
-};
-</code></pre><ul>
-<li>8진수 숫자 리터럴 및 이스케이프 문자를 사용 할 수 없다.</li>
-</ul>
-<pre><code class="language-{.javascript}" data-lang="{.javascript}">&quot;use strict&quot;;
-var testoctal = 010;
-var testescape = \010;
-</code></pre><ul>
-<li>primitive values의 속성 설정이 불가능.</li>
-</ul>
-<pre><code class="language-{.javascript}" data-lang="{.javascript}">function() {
-&quot;use strict&quot;;
-false.true = &quot;&quot;;         // TypeError
-(14).sailing = &quot;home&quot;;     // TypeError
-&quot;with&quot;.you = &quot;far away&quot;; // TypeError
-}
-</code></pre><ul>
-<li>with를 사용할 수 없다.</li>
-<li>eval 함수는 주변 스코프에 새로운 변수를 추가하지 않는다.</li>
-<li>eval을 변수 또는 함수, 매개 변수의 이름으로 사용할 수 없다.</li>
-</ul>
-<pre><code class="language-{.javascript}" data-lang="{.javascript}">var x = 17;
-var evalX = eval(&quot;'use strict'; var x = 42; x&quot;);
-console.log(x);
-console.log(evalX);
-</code></pre><ul>
-<li>arguments를 변수 또는 함수, 매개 변수의 이름으로 사용할 수 없다.</li>
-<li>인자값을 수정함으로 arguments의 값이 수정되지 않는다.</li>
-</ul>
-<pre><code class="language-{.javascript}" data-lang="{.javascript}">function f(a){
-    &quot;use strict&quot;;
-    a = 42;
-    return [a, arguments[0]];
-}
-var pair = f(17);
-console.log(pair[0]);
-console.log(pair[1]);
-</code></pre><ul>
-<li>callee 지원 안 함.</li>
-<li>함수 선언은 스크립트나 함수의 최상위에서 해야함.</li>
-<li>예약된 키워드의 이름으로 변수 또한 함수를 생성할 수 없다.</li>
-<li>callee, caller를 통해 stack 검색이 불가능.</li>
-</ul>
-<pre><code class="language-{.javascript}" data-lang="{.javascript}">function restricted() {
-    &quot;use strict&quot;;
-    restricted.caller;    // throws a TypeError
-    restricted.arguments; // throws a TypeError
-}
-function privilegedInvoker() {
-    return restricted();
-}
-privilegedInvoker();
-</code></pre><ul>
-<li>this의 값이 null 또는 undefined인 경우 전역 객체로 변환하지 않는다. (undefined가 그대로 보임)</li>
-</ul>
-<pre><code class="language-{.javascript}" data-lang="{.javascript}">&quot;use strict&quot;;
-function fun() { return this; }
-console.log(fun());
-console.log(fun.call(2));
-console.log(fun.apply(null));
-console.log(fun.call(undefined));
-console.log(fun.bind(true)());
-</code></pre>
+              <p>개발 블로그를 작성하다보면 코드 블럭을 사용하는 경우가 많다. </p>
+<p>그런데 아래처럼 코드블럭이 그냥 일반 텍스트처럼 나와 매우 가독성이 떨어진다. </p>
+<p>따라서 티스토리 블로그의 코드블럭 스타일을 변경하기로 했다. </p>
+<p>[##<em>Image|kage@GrZYu/btqBNMNomxQ/f9wfkU88g7Umz5L3CsjyR0/img.png|alignCenter|data-filename=&ldquo;스크린샷 2020-02-09 오후 4.13.33.png&rdquo; data-origin-width=&ldquo;2254&rdquo; data-origin-height=&ldquo;1376&rdquo; data-ke-mobilestyle=&ldquo;widthOrigin&rdquo;|||</em>##]</p>
+<p>**2가지 방법이 있는데, **</p>
+<p><strong>1. 관리페이지 &gt; 플러그인 &gt; 코드블럭 &gt; 마음에 드는 스타일 설정</strong></p>
+<p><strong>2. 스킨편집 &gt; html 편집 &gt; &lsquo;head&rsquo;태그 안에 Highlight.js 임포트</strong></p>
+<p>2번 방법은</p>
+<p>먼저 아래 코드를 <!-- raw HTML omitted -->태그 안에 넣으면 됨!</p>
+<p><a href="https://highlightjs.org/static/demo/">https://highlightjs.org/static/demo/</a>에서 마음에 드는 데모 스타일을 고르고 아래 코드에서 default.min.css 에서 default를 다른 스타일 이름으로 변경하면 된다. </p>
+<p>[</p>
+<p>highlight.js demo</p>
+<p>highlightjs.org</p>
+<p>](<a href="https://highlightjs.org/static/demo/">https://highlightjs.org/static/demo/</a>)</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css&quot;&gt;
+&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+</code></pre><p>[##<em>Image|kage@m42J6/btqBRwvm8CS/RwybAlxm2zeLp2zEk32w91/img.png|alignCenter|data-filename=&ldquo;스크린샷 2020-02-09 오후 4.14.23.png&rdquo; data-origin-width=&ldquo;3166&rdquo; data-origin-height=&ldquo;1840&rdquo; data-ke-mobilestyle=&ldquo;widthOrigin&rdquo;|||</em>##]</p>
+<p>2번 방법을 따라해보았지만 이상하게 스타일이 변경되지 않았다. </p>
+<p>따라서 1번 방법으로 설정!</p>
+<p>내가 원하는 테마는 Darcular 였기 때문에 플러그인으로 쉽게 변경할 수 있었다. </p>
+<p>[##<em>Image|kage@zBpLt/btqBQ2nKxw1/H8M1NjN6KDoNJJ7zQBxw3k/img.png|alignCenter|data-filename=&ldquo;스크린샷 2020-02-09 오후 4.23.41.png&rdquo; data-origin-width=&ldquo;2850&rdquo; data-origin-height=&ldquo;1834&rdquo; data-ke-mobilestyle=&ldquo;widthOrigin&rdquo;|||</em>##]</p>
+
               
             </div>
           </div>
@@ -376,11 +298,7 @@ console.log(fun.bind(true)());
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/javascript/">javascript</a>
-
-  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/use/">use</a>
-
-  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/strict/">strict</a>
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/code-block-tsotry/">code block tsotry</a>
 
                   </div>
                 
@@ -393,7 +311,7 @@ console.log(fun.bind(true)());
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2018/10/redux/" data-tooltip="Redux">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/advanced-git/" data-tooltip="Advanced Git">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -401,7 +319,7 @@ console.log(fun.bind(true)());
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2018/09/javascript-context/" data-tooltip="Javascript Context">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2019/11/svelte/" data-tooltip="Svelte">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -419,19 +337,19 @@ console.log(fun.bind(true)());
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2018/09/javascript-use-strict/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2020/02/2020-02-09-tstory-code-block/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2018/09/javascript-use-strict/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2020/02/2020-02-09-tstory-code-block/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2018/09/javascript-use-strict/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2020/02/2020-02-09-tstory-code-block/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -482,7 +400,7 @@ console.log(fun.bind(true)());
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2018/10/redux/" data-tooltip="Redux">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/advanced-git/" data-tooltip="Advanced Git">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -490,7 +408,7 @@ console.log(fun.bind(true)());
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2018/09/javascript-context/" data-tooltip="Javascript Context">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2019/11/svelte/" data-tooltip="Svelte">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -508,19 +426,19 @@ console.log(fun.bind(true)());
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2018/09/javascript-use-strict/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2020/02/2020-02-09-tstory-code-block/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2018/09/javascript-use-strict/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2020/02/2020-02-09-tstory-code-block/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2018/09/javascript-use-strict/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2020/02/2020-02-09-tstory-code-block/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -550,19 +468,19 @@ console.log(fun.bind(true)());
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2018%2F09%2Fjavascript-use-strict%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2020%2F02%2F2020-02-09-tstory-code-block%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2018%2F09%2Fjavascript-use-strict%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2020%2F02%2F2020-02-09-tstory-code-block%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2018%2F09%2Fjavascript-use-strict%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2020%2F02%2F2020-02-09-tstory-code-block%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -654,9 +572,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/haneulee.github.io\/2018\/09\/javascript-use-strict\/';
+          this.page.url = 'https:\/\/haneulee.github.io\/2020\/02\/2020-02-09-tstory-code-block\/';
           
-            this.page.identifier = '\/2018\/09\/javascript-use-strict\/'
+            this.page.identifier = '\/2020\/02\/2020-02-09-tstory-code-block\/'
           
         };
         (function() {
