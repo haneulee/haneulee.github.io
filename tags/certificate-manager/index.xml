@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>certificate manager on Haneul Devlog</title><link>https://haneulee.github.io/tags/certificate-manager/</link><description>Recent content in certificate manager on Haneul Devlog</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><lastBuildDate>Thu, 13 Feb 2020 19:28:20 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/certificate-manager/index.xml" rel="self" type="application/rss+xml"/><item><title>Aws Certificate Manager</title><link>https://haneulee.github.io/2020/02/aws-certificate-manager/</link><pubDate>Thu, 13 Feb 2020 19:28:20 +0900</pubDate><guid>https://haneulee.github.io/2020/02/aws-certificate-manager/</guid><description>aws Certificate Manager 에서는 무료로 ssl 공인 인증서를 받을 수 있다.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>certificate manager on Haneul Devlog</title>
+    <link>https://haneulee.github.io/tags/certificate-manager/</link>
+    <description>Recent content in certificate manager on Haneul Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 13 Feb 2020 19:28:20 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/certificate-manager/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aws Certificate Manager</title>
+      <link>https://haneulee.github.io/2020/02/aws-certificate-manager/</link>
+      <pubDate>Thu, 13 Feb 2020 19:28:20 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2020/02/aws-certificate-manager/</guid>
+      <description>aws Certificate Manager 에서는 무료로 ssl 공인 인증서를 받을 수 있다.
 ssl 인증서는 https로 웹사이트를 통신하기 위해서 꼭 필요한 것이다. aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
 도메인 이름을 등록하고,
-여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고, 태그는 그냥 다음으로 넘어가고, 확인 및 요청을 누르면 무료 ssl 인증서를 신청하게 된다. 신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야 자동으로 내가 가지고 있는 도메인에 연동이 되어 https://로도 접속이 가능하게 된다.</description></item></channel></rss>
+여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고, 태그는 그냥 다음으로 넘어가고, 확인 및 요청을 누르면 무료 ssl 인증서를 신청하게 된다. 신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야 자동으로 내가 가지고 있는 도메인에 연동이 되어 https://로도 접속이 가능하게 된다.</description>
+    </item>
+    
+  </channel>
+</rss>

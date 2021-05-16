@@ -1,45 +1,354 @@
-<!doctype html><html lang=ko-kr><head><script data-ad-client=ca-pub-7146914144035062 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','G-BHPHWPTLMZ');</script><script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ==" crossorigin=anonymous></script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Hugo 0.64.0 with theme Tranquilpeak 0.4.8-BETA"><meta name=author content="Haneul Lee"><meta name=keywords content=",development,next-gen"><meta name=description content="Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Haneul Lee">
+<meta name="keywords" content=", development, next-gen">
+<meta name="description" content="Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
 요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
 웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
 이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
  첫번째,
  나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
-class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // ."><meta property="og:description" content="Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
+class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .">
+
+
+<meta property="og:description" content="Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
 요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
 웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
 이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
  첫번째,
  나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
-class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // ."><meta property="og:type" content="article"><meta property="og:title" content="Why Do We Write super(props)?"><meta name=twitter:title content="Why Do We Write super(props)?"><meta property="og:url" content="https://haneulee.github.io/2018/12/why-do-we-write-superprops/"><meta property="twitter:url" content="https://haneulee.github.io/2018/12/why-do-we-write-superprops/"><meta property="og:site_name" content="Haneul Devlog"><meta property="og:description" content="Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
+class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why Do We Write super(props)?">
+<meta name="twitter:title" content="Why Do We Write super(props)?">
+<meta property="og:url" content="https://haneulee.github.io/2018/12/why-do-we-write-superprops/">
+<meta property="twitter:url" content="https://haneulee.github.io/2018/12/why-do-we-write-superprops/">
+<meta property="og:site_name" content="Haneul Devlog">
+<meta property="og:description" content="Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
 요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
 웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
 이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
  첫번째,
  나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
-class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // ."><meta name=twitter:description content="Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
+class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .">
+<meta name="twitter:description" content="Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
 요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
 웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
 이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
  첫번째,
  나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
-class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // ."><meta property="og:locale" content="en-us"><meta property="article:published_time" content="2018-12-10T00:00:00"><meta property="article:modified_time" content="2018-12-10T00:00:00"><meta property="article:section" content="development"><meta property="article:section" content="React"><meta property="article:tag" content="javascript"><meta property="article:tag" content="hooks"><meta property="article:tag" content="super"><meta property="article:tag" content="리액트"><meta property="article:tag" content="훅스"><meta name=twitter:card content="summary"><meta property="og:image" content="https://haneulee.github.io/img/profile.jpeg"><meta property="twitter:image" content="https://haneulee.github.io/img/profile.jpeg"><title>Why Do We Write super(props)?</title><link rel=icon href=https://haneulee.github.io/img/favicon.ico><link rel=canonical href=https://haneulee.github.io/2018/12/why-do-we-write-superprops/><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin=anonymous><link rel=stylesheet href=https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','G-BHPHWPTLMZ','auto');ga('send','pageview');}</script></head><body><div id=blog><header id=header data-behavior=4><i id=btn-open-sidebar class="fa fa-lg fa-bars"></i><div class=header-title><a class=header-title-link href=https://haneulee.github.io/>Haneul Devlog</a></div><a class=header-right-picture href=https://haneulee.github.io/#about><img class=header-picture src=https://haneulee.github.io/img/profile.jpeg alt="Author's picture"></a></header><nav id=sidebar data-behavior=4><div class=sidebar-container><div class=sidebar-profile><a href=https://haneulee.github.io/#about><img class=sidebar-profile-picture src=https://haneulee.github.io/img/profile.jpeg alt="Author's picture"></a><h4 class=sidebar-profile-name>Haneul Lee</h4><h5 class=sidebar-profile-bio>Devlog</h5></div><ul class=sidebar-buttons><li class=sidebar-button><a class=sidebar-button-link href=https://haneulee.github.io/><i class="sidebar-button-icon fa fa-lg fa-home"></i><span class=sidebar-button-desc>Home</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://haneulee.github.io/categories><i class="sidebar-button-icon fa fa-lg fa-bookmark"></i><span class=sidebar-button-desc>Categories</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://haneulee.github.io/tags><i class="sidebar-button-icon fa fa-lg fa-tags"></i><span class=sidebar-button-desc>Tags</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://haneulee.github.io/archives><i class="sidebar-button-icon fa fa-lg fa-archive"></i><span class=sidebar-button-desc>Archives</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://haneulee.github.io/#about><i class="sidebar-button-icon fa fa-lg fa-question"></i><span class=sidebar-button-desc>About</span></a></li></ul><ul class=sidebar-buttons><li class=sidebar-button><a class=sidebar-button-link href=https://haneulee.github.io/categories/development><i class="sidebar-button-icon fa fa-lg fa-bookmark"></i><span class=sidebar-button-desc>Development</span></a></li></ul><ul class=sidebar-buttons><li class=sidebar-button><a class=sidebar-button-link href=https://github.com/haneulee target=_blank rel=noopener><i class="sidebar-button-icon fa fa-lg fa-github"></i><span class=sidebar-button-desc>GitHub</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=https://linkedin.com/in/hnlee target=_blank rel=noopener><i class="sidebar-button-icon fa fa-lg fa-linkedin-square"></i><span class=sidebar-button-desc>LinkedIn</span></a></li><li class=sidebar-button><a class=sidebar-button-link href=mailto:lovesky4294@gmail.com target=_blank rel=noopener><i class="sidebar-button-icon fa fa-lg fa-envelope"></i><span class=sidebar-button-desc>Email</span></a></li></ul></div></nav><div id=main data-behavior=4 class=hasCoverMetaIn><article class=post itemscope itemtype=http://schema.org/BlogPosting><div class="post-header main-content-wrap text-left"><h1 class=post-title itemprop=headline>Why Do We Write super(props)?</h1><div class="postShorten-meta post-meta"><time itemprop=datePublished datetime=2018-12-10T00:00:00Z>December 10, 2018</time>
-<span>in</span>
-<a class=category-link href=https://haneulee.github.io/categories/development>development</a>,
-<a class=category-link href=https://haneulee.github.io/categories/react>React</a></div></div><div class="post-content markdown" itemprop=articleBody><div class=main-content-wrap><h1 id=why-do-we-write-superprops>Why Do We Write super(props)?</h1><p>: 왜 super(props)를 써야 하는가?</p><p>요즘에는 <a href=https://reactjs.org/docs/hooks-intro.html>훅스(Hooks)</a>가 새로운 트렌드이다.
-[클래스 사용 지양]</p><p>웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.</p><div class="alert info"><p><strong>이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.</strong></p></div><p>첫번째,</p><hr><p>나는 정말 <code>super(props)</code>를 내가 알고싶은 것보다 더 많이 사용했다.</p><pre><code class=language-jsx{3} data-lang=jsx{3}>class Checkbox extends React.Component {
+class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-12-10T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2018-12-10T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+      <meta property="article:section" content="React">
+    
+  
+  
+    
+      <meta property="article:tag" content="javascript">
+    
+      <meta property="article:tag" content="hooks">
+    
+      <meta property="article:tag" content="super">
+    
+      <meta property="article:tag" content="리액트">
+    
+      <meta property="article:tag" content="훅스">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://haneulee.github.io/img/profile.jpeg">
+  <meta property="twitter:image" content="https://haneulee.github.io/img/profile.jpeg">
+
+
+    <title>Why Do We Write super(props)?</title>
+
+    <link rel="icon" href="https://haneulee.github.io/img/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://haneulee.github.io/2018/12/why-do-we-write-superprops/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-alio7vvcfjjgpy8aicqcylmu6zjs9avht2icrj2arlsbxmofanqtf5zntn.min.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-BHPHWPTLMZ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://haneulee.github.io/">Haneul Devlog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://haneulee.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://haneulee.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Haneul Lee</h4>
+        
+          <h5 class="sidebar-profile-bio">Devlog</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories/development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin-square"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Why Do We Write super(props)?
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-12-10T00:00:00Z">
+        
+  December 10, 2018
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/react">React</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h1 id="why-do-we-write-superprops">Why Do We Write super(props)?</h1>
+<p>: 왜 super(props)를 써야 하는가?</p>
+<p>요즘에는 <a href="https://reactjs.org/docs/hooks-intro.html">훅스(Hooks)</a>가 새로운 트렌드이다.
+[클래스 사용 지양]</p>
+<p>웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.</p>
+<div class="alert info ">
+  <p><strong>이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.</strong></p>
+</div>
+<p>첫번째,</p>
+<hr>
+<p>나는 정말 <code>super(props)</code>를 내가 알고싶은 것보다 더 많이 사용했다.</p>
+<pre><code class="language-jsx{3}" data-lang="jsx{3}">class Checkbox extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isOn: true };
   }
   // ...
 }
-</code></pre><p>물론, <a href=https://github.com/tc39/proposal-class-fields>클래스 필드 제안</a>은 이 과정을 생략하게 한다.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Checkbox</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>Component</span> {
-  <span style=color:#a6e22e>state</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>isOn</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>true</span> };
-  <span style=color:#75715e>// ...
-</span><span style=color:#75715e></span>}
+</code></pre><p>물론, <a href="https://github.com/tc39/proposal-class-fields">클래스 필드 제안</a>은 이 과정을 생략하게 한다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Checkbox</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">isOn</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
 </code></pre></div><p>이런 문법은 리액트 0.13이 2015년 자바스크립트 클래스에 대한 지원이 추가될 때 계획되었다.
-constructor를 정의하고, super(props)를 부르는 것은 클래스 필드가 편리한 대안을 제공하기 전까지 항상 임시적인 해결책이었다.</p><p>그러나 es2015 기능만 사용하는 아래 예제를 보자.</p><pre><code class=language-jsx{3} data-lang=jsx{3}>class Checkbox extends React.Component {
+constructor를 정의하고, super(props)를 부르는 것은 클래스 필드가 편리한 대안을 제공하기 전까지 항상 임시적인 해결책이었다.</p>
+<p>그러나 es2015 기능만 사용하는 아래 예제를 보자.</p>
+<pre><code class="language-jsx{3}" data-lang="jsx{3}">class Checkbox extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isOn: true };
@@ -49,92 +358,430 @@ constructor를 정의하고, super(props)를 부르는 것은 클래스 필드�
 </code></pre><p>왜 우리는 <code>super</code>를 사용할까? 사용하지 않으면 안될까?
 만약 사용한다 해도 props를 넘기지 않으면 무슨일이 일어날까?
 어떤 인자들이 있을까?
-찾아보자.</p><hr><p>자바스크립트에서는 <code>super</code>가 부모 클래스 생성자를 참조한다.
-(여기 예제에서는 React.Component 구현을 가리킨다.)</p><p>중요한 것은 부모 생성자를 호출할 때까지 생성자 안에서 this를 사용할 수 없다.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Checkbox</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>Component</span> {
-  <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>props</span>) {
-    <span style=color:#75715e>// 🔴 Can’t use `this` yet
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>super</span>(<span style=color:#a6e22e>props</span>);
-    <span style=color:#75715e>// ✅ Now it’s okay though
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>state</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>isOn</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>true</span> };
+찾아보자.</p>
+<hr>
+<p>자바스크립트에서는 <code>super</code>가 부모 클래스 생성자를 참조한다.
+(여기 예제에서는 React.Component 구현을 가리킨다.)</p>
+<p>중요한 것은 부모 생성자를 호출할 때까지 생성자 안에서 this를 사용할 수 없다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Checkbox</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#75715e">// 🔴 Can’t use `this` yet
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+    <span style="color:#75715e">// ✅ Now it’s okay though
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">isOn</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
   }
-  <span style=color:#75715e>// ...
-</span><span style=color:#75715e></span>}
-</code></pre></div><p>왜 자바스크립트가 this 전에 부모 생성자가 실행되게 하는데에는 좋은 이유가 있다. 클래스 계층 구조를 생각해보라.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Person</span> {
-  <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>name</span>) {
-    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>name</span>;
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>왜 자바스크립트가 this 전에 부모 생성자가 실행되게 하는데에는 좋은 이유가 있다. 클래스 계층 구조를 생각해보라.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
   }
 }
 
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>PolitePerson</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>Person</span> {
-  <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>name</span>) {
-    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>greetColleagues</span>(); <span style=color:#75715e>// 🔴 This is disallowed, read below why
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>super</span>(<span style=color:#a6e22e>name</span>);
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PolitePerson</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Person</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">greetColleagues</span>(); <span style="color:#75715e">// 🔴 This is disallowed, read below why
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">name</span>);
   }
-  <span style=color:#a6e22e>greetColleagues</span>() {
-    <span style=color:#a6e22e>alert</span>(<span style=color:#e6db74>&#39;Good morning folks!&#39;</span>);
+  <span style="color:#a6e22e">greetColleagues</span>() {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;Good morning folks!&#39;</span>);
   }
 }
-</code></pre></div><p><code>super</code> 전에 <code>this</code>가 사용된다고 상상해봐라. 한 달 후에, 메세지에서 사람의 이름을 사용하기 위해 greetColleagues를 수정할 수 있다.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>greetColleagues</span>() {
-    <span style=color:#a6e22e>alert</span>(<span style=color:#e6db74>&#39;Good morning folks!&#39;</span>);
-    <span style=color:#a6e22e>alert</span>(<span style=color:#e6db74>&#39;My name is &#39;</span> <span style=color:#f92672>+</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;, nice to meet you!&#39;</span>);
+</code></pre></div><p><code>super</code> 전에 <code>this</code>가 사용된다고 상상해봐라. 한 달 후에, 메세지에서 사람의 이름을 사용하기 위해 greetColleagues를 수정할 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">greetColleagues</span>() {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;Good morning folks!&#39;</span>);
+    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;My name is &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;, nice to meet you!&#39;</span>);
 }
 </code></pre></div><p>그러나 super() 호출이 this를 설정하기 전에 this.greetColleagues()가 불려진다는 것을 잊었다.
-그래서 this.name은 아직 정의되지 않았다. 보다시피, 이런 코드는 생각하기 매우 어렵다.</p><p>이런 문제를 피하기 위해 자바스크립트는 생성자에서 this를 사용하고 싶을 때, super를 먼저 호출하게 한다.
-이런 제한은 클래스로 정의된 리액트 컴포넌트에도 해당된다.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>props</span>) {
-    <span style=color:#66d9ef>super</span>(<span style=color:#a6e22e>props</span>);
-    <span style=color:#75715e>// ✅ Okay to use `this` now
-</span><span style=color:#75715e></span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>state</span> <span style=color:#f92672>=</span> { <span style=color:#a6e22e>isOn</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>true</span> };
+그래서 this.name은 아직 정의되지 않았다. 보다시피, 이런 코드는 생각하기 매우 어렵다.</p>
+<p>이런 문제를 피하기 위해 자바스크립트는 생성자에서 this를 사용하고 싶을 때, super를 먼저 호출하게 한다.
+이런 제한은 클래스로 정의된 리액트 컴포넌트에도 해당된다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+    <span style="color:#75715e">// ✅ Okay to use `this` now
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">isOn</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
 }
-</code></pre></div><dl><dt>이는 또 다른 질문을 남긴다.</dt><dd>왜 props를 전달할까?</dd></dl><p>기본 React.Component 생성자가 this.props를 초기화할 수 있도록 super를 통해 props를 전달하는 것이 필수라고 생각할 수 있다.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#75715e>// Inside React
-</span><span style=color:#75715e></span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Component</span> {
-  <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>props</span>) {
-    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>props</span>;
-    <span style=color:#75715e>// ...
-</span><span style=color:#75715e></span>  }
+</code></pre></div><dl>
+<dt>이는 또 다른 질문을 남긴다.</dt>
+<dd>왜 props를 전달할까?</dd>
+</dl>
+<p>기본 React.Component 생성자가 this.props를 초기화할 수 있도록 super를 통해 props를 전달하는 것이 필수라고 생각할 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// Inside React
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">props</span>;
+    <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>  }
 }
-</code></pre></div><p>그리고 그것은 진실과 멀지 않다. <a href=https://github.com/facebook/react/blob/1d25aa5787d4e19704c049c3cfa985d3b5190e0d/packages/react/src/ReactBaseClasses.js#L22>사실 그렇게 하는것이다.</a>
+</code></pre></div><p>그리고 그것은 진실과 멀지 않다. <a href="https://github.com/facebook/react/blob/1d25aa5787d4e19704c049c3cfa985d3b5190e0d/packages/react/src/ReactBaseClasses.js#L22">사실 그렇게 하는것이다.</a>
 그러나 어떻게든 props 인자 없이 super()를 호출하더라도 render 또는 다른 메소드에서도 this.props에 접근할 수 있다.
 (직접 시도해봐라!)
-어떻게 이게 가능할까? 리액트는 생성자를 호출한 직후에 인스턴스에 props를 할당하는 것으로 밝혀졌다.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#75715e>// Inside React
-</span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>instance</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>YourComponent</span>(<span style=color:#a6e22e>props</span>);
-<span style=color:#a6e22e>instance</span>.<span style=color:#a6e22e>props</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>props</span>;
+어떻게 이게 가능할까? 리액트는 생성자를 호출한 직후에 인스턴스에 props를 할당하는 것으로 밝혀졌다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// Inside React
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">instance</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">YourComponent</span>(<span style="color:#a6e22e">props</span>);
+<span style="color:#a6e22e">instance</span>.<span style="color:#a6e22e">props</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">props</span>;
 </code></pre></div><p>그래서 super()에 props를 전달하는 것을 잊어버려도 리액트는 나중에 props를 set 해준다. 여기에는 이유가 있는데,
-리액트가 클래스를 지원할 때, 단지 es6 클래스 자체만 지원하는 것이 아니다. 목표는 가능한 한 광범위한 클래스 추상화를 지원하는 것이었다. ClojureScript, CoffeeScript, ES6, Fable, Scala.js, TypeScript 또는 기타 솔루션이 컴포넌트를 정의하는데 얼마나 성공적이었는지 <a href=https://reactjs.org/blog/2015/01/27/react-v0.13.0-beta-1.html#other-languages>분명하지 않다</a>.<br>그래서 리액트는 es6 클래스가 그렇더라도 super()를 호출하는 것이 필요한지에 대해 의도적으로 알려주지 않은 것이다.
+리액트가 클래스를 지원할 때, 단지 es6 클래스 자체만 지원하는 것이 아니다. 목표는 가능한 한 광범위한 클래스 추상화를 지원하는 것이었다. ClojureScript, CoffeeScript, ES6, Fable, Scala.js, TypeScript 또는 기타 솔루션이 컴포넌트를 정의하는데 얼마나 성공적이었는지 <a href="https://reactjs.org/blog/2015/01/27/react-v0.13.0-beta-1.html#other-languages">분명하지 않다</a>.<br>
+그래서 리액트는 es6 클래스가 그렇더라도 super()를 호출하는 것이 필요한지에 대해 의도적으로 알려주지 않은 것이다.
 그렇다면 <code>super(props)</code> 대신 <code>super()</code>를 사용할 수 있다는 것인가?
 <strong>여전히 혼란스럽기 때문에 아니다.</strong>
-물론 리액트는 생성자가 <em>실행된 후에</em> this.props를 할당할 것이다. 하지만 this.props는 super 호출과 생성자 마지막 사이에서 undefiend가 될 것이다.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#75715e>// Inside React
-</span><span style=color:#75715e></span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Component</span> {
-  <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>props</span>) {
-    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>props</span>;
-    <span style=color:#75715e>// ...
-</span><span style=color:#75715e></span>  }
+물론 리액트는 생성자가 <em>실행된 후에</em> this.props를 할당할 것이다. 하지만 this.props는 super 호출과 생성자 마지막 사이에서 undefiend가 될 것이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// Inside React
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">props</span>;
+    <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>  }
 }
 
-<span style=color:#75715e>// Inside your code
-</span><span style=color:#75715e></span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Button</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>Component</span> {
-  <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>props</span>) {
-    <span style=color:#66d9ef>super</span>(); <span style=color:#75715e>// 😬 We forgot to pass props
-</span><span style=color:#75715e></span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>props</span>);      <span style=color:#75715e>// ✅ {}
-</span><span style=color:#75715e></span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span>); <span style=color:#75715e>// 😬 undefined 
-</span><span style=color:#75715e></span>  }
-  <span style=color:#75715e>// ...
-</span><span style=color:#75715e></span>}
-</code></pre></div><p>생성자에서 호출된 일부 메소드에서 이 이슈가 발생하면 디버깅하기 어려울 수 있다. 그래서 꼭 필요한 것은 아니지만 항상 <code>super(props)</code>를 하는것을 추천한다.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-jsx data-lang=jsx><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Button</span> <span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>React</span>.<span style=color:#a6e22e>Component</span> {
-  <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>props</span>) {
-    <span style=color:#66d9ef>super</span>(<span style=color:#a6e22e>props</span>); <span style=color:#75715e>// ✅ We passed props
-</span><span style=color:#75715e></span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>props</span>);      <span style=color:#75715e>// ✅ {}
-</span><span style=color:#75715e></span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>props</span>); <span style=color:#75715e>// ✅ {}
-</span><span style=color:#75715e></span>  }
-  <span style=color:#75715e>// ...
-</span><span style=color:#75715e></span>}
-</code></pre></div><p>이렇게 하면 생성자가 끝나기 전에 <code>this.props</code>가 설정된다.</p><hr><p>오랫동안 리액트 사용자들이 궁금해할만한 하나가 있다.
-Context API를 클래스에서 사용할 때(레거시 <code>contextTypes</code> 또는 React16.6에 추가된 최신 <code>contextType API</code>의 경우) 컨텍스트가 생성자의 두번째 인자로 전달된다는 사실을 알고 있을 것이다.</p><p>그렇다면 왜 우리는 <code>super(props, context)</code>를 써야하나?
-컨텍스트가 자주 사용되지 않기 때문에 이 문제가 그렇게 많이 발생하지는 않는다.</p><p><strong><a href=https://github.com/tc39/proposal-class-fields>클래스 필드 제안</a>으로 모든 문제는 대부분 없어진다.</strong> 명시적 생성자 없이는 모든 인자들이 자동으로 전달된다. 이는 필요하다면 <code>this.props</code> 나 <code>this.context</code>에 대한 참조를 포함하도록 <code>state = {}</code>와 같은 표현식을 허용한다.</p><p>훅스(Hooks)는 <code>super</code>나 <code>this</code>가 없다. 이는 다음 글에서 다룰 것이다.</p><h3 id=dan-abramov-bloghttpsoverreactediowhy-do-we-write-super-props-참고><a href=https://overreacted.io/why-do-we-write-super-props/>Dan Abramov blog</a> 참고</h3></div></div><div id=post-footer class="post-footer main-content-wrap"><div class=post-footer-tags><span class="text-color-light text-small">TAGGED IN</span><br><a class="tag tag--primary tag--small" href=https://haneulee.github.io/tags/javascript/>javascript</a>
-<a class="tag tag--primary tag--small" href=https://haneulee.github.io/tags/hooks/>hooks</a>
-<a class="tag tag--primary tag--small" href=https://haneulee.github.io/tags/super/>super</a>
-<a class="tag tag--primary tag--small" href=https://haneulee.github.io/tags/%EB%A6%AC%EC%95%A1%ED%8A%B8/>리액트</a>
-<a class="tag tag--primary tag--small" href=https://haneulee.github.io/tags/%ED%9B%85%EC%8A%A4/>훅스</a></div><div class=post-actions-wrap><nav><ul class="post-actions post-action-nav"><li class=post-action><a class="post-action-btn btn btn--default tooltip--top" href=https://haneulee.github.io/2019/11/how-to-handle-react-state-array/ data-tooltip="how to handle React state array"><i class="fa fa-angle-left"></i><span class="hide-xs hide-sm text-small icon-ml">NEXT</span></a></li><li class=post-action><a class="post-action-btn btn btn--default tooltip--top" href=https://haneulee.github.io/2018/10/redux/ data-tooltip=Redux><span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-<i class="fa fa-angle-right"></i></a></li></ul></nav><ul class="post-actions post-action-share"><li class="post-action hide-lg hide-md hide-sm"><a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions><i class="fa fa-share-alt"></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2018/12/why-do-we-write-superprops/"><i class="fa fa-facebook-official"></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2018/12/why-do-we-write-superprops/"><i class="fa fa-twitter"></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://plus.google.com/share?url=https://haneulee.github.io/2018/12/why-do-we-write-superprops/"><i class="fa fa-google-plus"></i></a></li><li class=post-action><a class="post-action-btn btn btn--default" href=#disqus_thread><i class="fa fa-comment-o"></i></a></li><li class=post-action><a class="post-action-btn btn btn--default" href=#><i class="fa fa-list"></i></a></li></ul></div><a href=https://www.buymeacoffee.com/haneullee target=_blank><img src=https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png alt="Buy Me A Coffee" style=height:60px!important;width:217px!important></a><div id=disqus_thread><noscript>Please enable JavaScript to view the <a href=//disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div></div></article><footer id=footer class=main-content-wrap><span class=copyrights>&copy; 2021 <a href=https://github.com/haneulee>haneulee</a>. All Rights Reserved</span></footer></div><div id=bottom-bar class=post-bottom-bar data-behavior=4><div class=post-actions-wrap><nav><ul class="post-actions post-action-nav"><li class=post-action><a class="post-action-btn btn btn--default tooltip--top" href=https://haneulee.github.io/2019/11/how-to-handle-react-state-array/ data-tooltip="how to handle React state array"><i class="fa fa-angle-left"></i><span class="hide-xs hide-sm text-small icon-ml">NEXT</span></a></li><li class=post-action><a class="post-action-btn btn btn--default tooltip--top" href=https://haneulee.github.io/2018/10/redux/ data-tooltip=Redux><span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-<i class="fa fa-angle-right"></i></a></li></ul></nav><ul class="post-actions post-action-share"><li class="post-action hide-lg hide-md hide-sm"><a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions><i class="fa fa-share-alt"></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2018/12/why-do-we-write-superprops/"><i class="fa fa-facebook-official"></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2018/12/why-do-we-write-superprops/"><i class="fa fa-twitter"></i></a></li><li class="post-action hide-xs"><a class="post-action-btn btn btn--default" target=new href="https://plus.google.com/share?url=https://haneulee.github.io/2018/12/why-do-we-write-superprops/"><i class="fa fa-google-plus"></i></a></li><li class=post-action><a class="post-action-btn btn btn--default" href=#disqus_thread><i class="fa fa-comment-o"></i></a></li><li class=post-action><a class="post-action-btn btn btn--default" href=#><i class="fa fa-list"></i></a></li></ul></div></div><div id=share-options-bar class=share-options-bar data-behavior=4><i id=btn-close-shareoptions class="fa fa-close"></i><ul class=share-options><li class=share-option><a class=share-option-btn target=new href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2018%2F12%2Fwhy-do-we-write-superprops%2F"><i class="fa fa-facebook-official"></i><span>Share on Facebook</span></a></li><li class=share-option><a class=share-option-btn target=new href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2018%2F12%2Fwhy-do-we-write-superprops%2F"><i class="fa fa-twitter"></i><span>Share on Twitter</span></a></li><li class=share-option><a class=share-option-btn target=new href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2018%2F12%2Fwhy-do-we-write-superprops%2F"><i class="fa fa-google-plus"></i><span>Share on Google+</span></a></li></ul></div><div id=share-options-mask class=share-options-mask></div></div><div id=about><div id=about-card><div id=about-btn-close><i class="fa fa-remove"></i></div><img id=about-card-picture src=https://haneulee.github.io/img/profile.jpeg alt="Author's picture"><h4 id=about-card-name>Haneul Lee</h4><div id=about-card-bio>Devlog</div><div id=about-card-job><i class="fa fa-briefcase"></i><br>Front-end Developer</div><div id=about-card-location><i class="fa fa-map-marker"></i><br>Korea</div></div></div><div id=cover style=background-image:url(https://haneulee.github.io/img/gradient.png)></div><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin=anonymous></script><script src=https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js></script><script lang=javascript>window.onload=updateMinWidth;window.onresize=updateMinWidth;document.getElementById("sidebar").addEventListener("transitionend",updateMinWidth);function updateMinWidth(){var sidebar=document.getElementById("sidebar");var main=document.getElementById("main");main.style.minWidth="";var w1=getComputedStyle(main).getPropertyValue("min-width");var w2=getComputedStyle(sidebar).getPropertyValue("width");var w3=getComputedStyle(sidebar).getPropertyValue("left");main.style.minWidth=`calc(${w1} - ${w2} - ${w3})`;}</script><script>$(document).ready(function(){hljs.configure({classPrefix:'',useBR:false});$('pre.code-highlight > code, pre > code').each(function(i,block){if(!$(this).hasClass('codeblock')){$(this).addClass('codeblock');}
-hljs.highlightBlock(block);});});</script><script>var disqus_config=function(){this.page.url='https:\/\/haneulee.github.io\/2018\/12\/why-do-we-write-superprops\/';this.page.identifier='\/2018\/12\/why-do-we-write-superprops\/'};(function(){if(window.location.hostname=="localhost"){return;}
-var d=document,s=d.createElement('script');var disqus_shortname='haneulee-github-io';s.src='//'+disqus_shortname+'.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script></body></html>
+<span style="color:#75715e">// Inside your code
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Button</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">super</span>(); <span style="color:#75715e">// 😬 We forgot to pass props
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">props</span>);      <span style="color:#75715e">// ✅ {}
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>); <span style="color:#75715e">// 😬 undefined 
+</span><span style="color:#75715e"></span>  }
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>생성자에서 호출된 일부 메소드에서 이 이슈가 발생하면 디버깅하기 어려울 수 있다. 그래서 꼭 필요한 것은 아니지만 항상 <code>super(props)</code>를 하는것을 추천한다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Button</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>); <span style="color:#75715e">// ✅ We passed props
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">props</span>);      <span style="color:#75715e">// ✅ {}
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>); <span style="color:#75715e">// ✅ {}
+</span><span style="color:#75715e"></span>  }
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>이렇게 하면 생성자가 끝나기 전에 <code>this.props</code>가 설정된다.</p>
+<hr>
+<p>오랫동안 리액트 사용자들이 궁금해할만한 하나가 있다.
+Context API를 클래스에서 사용할 때(레거시 <code>contextTypes</code> 또는 React16.6에 추가된 최신 <code>contextType API</code>의 경우) 컨텍스트가 생성자의 두번째 인자로 전달된다는 사실을 알고 있을 것이다.</p>
+<p>그렇다면 왜 우리는 <code>super(props, context)</code>를 써야하나?
+컨텍스트가 자주 사용되지 않기 때문에 이 문제가 그렇게 많이 발생하지는 않는다.</p>
+<p><strong><a href="https://github.com/tc39/proposal-class-fields">클래스 필드 제안</a>으로 모든 문제는 대부분 없어진다.</strong> 명시적 생성자 없이는 모든 인자들이 자동으로 전달된다. 이는 필요하다면 <code>this.props</code> 나 <code>this.context</code>에 대한 참조를 포함하도록 <code>state = {}</code>와 같은 표현식을 허용한다.</p>
+<p>훅스(Hooks)는 <code>super</code>나 <code>this</code>가 없다. 이는 다음 글에서 다룰 것이다.</p>
+<h3 id="dan-abramov-bloghttpsoverreactediowhy-do-we-write-super-props-참고"><a href="https://overreacted.io/why-do-we-write-super-props/">Dan Abramov blog</a> 참고</h3>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/javascript/">javascript</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/hooks/">hooks</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/super/">super</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%EB%A6%AC%EC%95%A1%ED%8A%B8/">리액트</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%ED%9B%85%EC%8A%A4/">훅스</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2019/11/how-to-handle-react-state-array/" data-tooltip="how to handle React state array">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2018/10/redux/" data-tooltip="Redux">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2018/12/why-do-we-write-superprops/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2018/12/why-do-we-write-superprops/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2018/12/why-do-we-write-superprops/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 <a href="https://github.com/haneulee">haneulee</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2019/11/how-to-handle-react-state-array/" data-tooltip="how to handle React state array">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2018/10/redux/" data-tooltip="Redux">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2018/12/why-do-we-write-superprops/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2018/12/why-do-we-write-superprops/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2018/12/why-do-we-write-superprops/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2018%2F12%2Fwhy-do-we-write-superprops%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2018%2F12%2Fwhy-do-we-write-superprops%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2018%2F12%2Fwhy-do-we-write-superprops%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Lee</h4>
+    
+      <div id="about-card-bio">Devlog</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://haneulee.github.io/img/gradient.png');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://haneulee.github.io/js/script-0jjlwciyjdjjnq4etz59vmnrx3ljqwdjcu42ph0pghf4nnrasdfdxn4brime.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/haneulee.github.io\/2018\/12\/why-do-we-write-superprops\/';
+          
+            this.page.identifier = '\/2018\/12\/why-do-we-write-superprops\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'haneulee-github-io';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
