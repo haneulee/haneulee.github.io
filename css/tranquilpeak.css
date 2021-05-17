@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,700,700i&subset=cyrillic,cyrillic-ext,latin-ext");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -677,7 +678,7 @@ pre.code-highlight > code {
       width: calc(100% - 75px); } }
 
 #sidebar {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   height: 100%;
   position: fixed;
   top: 0;
@@ -1497,7 +1498,7 @@ pre.code-highlight > code {
 
 .caption {
   display: block;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   font-size: 1.3rem;
   color: #81929d;
   text-align: center;
@@ -1948,7 +1949,7 @@ a.fancybox {
   .post .post-content {
     text-rendering: optimizelegibility;
     letter-spacing: -0.3px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Nanum Gothic", sans-serif;
     color: #5d686f;
     margin-top: 20px;
     font-weight: 400;
@@ -2252,7 +2253,7 @@ a.fancybox {
   .postShorten .postShorten-content {
     text-rendering: optimizelegibility;
     letter-spacing: -0.3px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Nanum Gothic", sans-serif;
     color: #5d686f;
     font-weight: 400;
     overflow: hidden;

@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Haneul Lee">
+<meta name="keywords" content="development, front-end, development, next-gen">
+<meta name="description" content="휴고 공식 문서
+ hugo 소개 Hugo는 Go로 작성된 빠르고 현대적인 정적 사이트 생성기이며 웹 사이트를 다시 재미있게 만들 수 있도록 설계되었습니다. Hugo는 범용 웹 사이트 프레임 워크입니다. 기술적으로 말해서 Hugo는 정적 사이트 생성기 입니다. 방문자 요청마다 페이지를 동적으로 구축하는 시스템과 달리 Hugo는 콘텐츠를 생성하거나 업데이트 할 때 페이지를 구축합니다. 웹 사이트는 편집하는 것보다 훨씬 더 자주보기 때문에 Hugo는 웹 사이트의 최종 사용자에게 최적의보기 경험을 제공하고 웹 사이트 작성자에게 이상적인 글쓰기 경험을 제공하도록 설계되었습니다.">
+
+
+<meta property="og:description" content="휴고 공식 문서
+ hugo 소개 Hugo는 Go로 작성된 빠르고 현대적인 정적 사이트 생성기이며 웹 사이트를 다시 재미있게 만들 수 있도록 설계되었습니다. Hugo는 범용 웹 사이트 프레임 워크입니다. 기술적으로 말해서 Hugo는 정적 사이트 생성기 입니다. 방문자 요청마다 페이지를 동적으로 구축하는 시스템과 달리 Hugo는 콘텐츠를 생성하거나 업데이트 할 때 페이지를 구축합니다. 웹 사이트는 편집하는 것보다 훨씬 더 자주보기 때문에 Hugo는 웹 사이트의 최종 사용자에게 최적의보기 경험을 제공하고 웹 사이트 작성자에게 이상적인 글쓰기 경험을 제공하도록 설계되었습니다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hugo 블로그 시작">
+<meta name="twitter:title" content="Hugo 블로그 시작">
+<meta property="og:url" content="https://haneulee.github.io/2021/05/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91/">
+<meta property="twitter:url" content="https://haneulee.github.io/2021/05/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91/">
+<meta property="og:site_name" content="Haneul Devlog">
+<meta property="og:description" content="휴고 공식 문서
+ hugo 소개 Hugo는 Go로 작성된 빠르고 현대적인 정적 사이트 생성기이며 웹 사이트를 다시 재미있게 만들 수 있도록 설계되었습니다. Hugo는 범용 웹 사이트 프레임 워크입니다. 기술적으로 말해서 Hugo는 정적 사이트 생성기 입니다. 방문자 요청마다 페이지를 동적으로 구축하는 시스템과 달리 Hugo는 콘텐츠를 생성하거나 업데이트 할 때 페이지를 구축합니다. 웹 사이트는 편집하는 것보다 훨씬 더 자주보기 때문에 Hugo는 웹 사이트의 최종 사용자에게 최적의보기 경험을 제공하고 웹 사이트 작성자에게 이상적인 글쓰기 경험을 제공하도록 설계되었습니다.">
+<meta name="twitter:description" content="휴고 공식 문서
+ hugo 소개 Hugo는 Go로 작성된 빠르고 현대적인 정적 사이트 생성기이며 웹 사이트를 다시 재미있게 만들 수 있도록 설계되었습니다. Hugo는 범용 웹 사이트 프레임 워크입니다. 기술적으로 말해서 Hugo는 정적 사이트 생성기 입니다. 방문자 요청마다 페이지를 동적으로 구축하는 시스템과 달리 Hugo는 콘텐츠를 생성하거나 업데이트 할 때 페이지를 구축합니다. 웹 사이트는 편집하는 것보다 훨씬 더 자주보기 때문에 Hugo는 웹 사이트의 최종 사용자에게 최적의보기 경험을 제공하고 웹 사이트 작성자에게 이상적인 글쓰기 경험을 제공하도록 설계되었습니다.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-05-17T11:48:31">
+  
+  
+    <meta property="article:modified_time" content="2021-05-17T11:48:31">
+  
+  
+  
+    
+      <meta property="article:section" content="blog">
+    
+      <meta property="article:section" content="hugo">
+    
+  
+  
+    
+      <meta property="article:tag" content="development">
+    
+      <meta property="article:tag" content="front-end">
+    
+      <meta property="article:tag" content="hugo">
+    
+      <meta property="article:tag" content="blog">
+    
+      <meta property="article:tag" content="휴고">
+    
+      <meta property="article:tag" content="블로그">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://haneulee.github.io/img/post/hugo/github-site.png">
+  <meta property="twitter:image" content="https://haneulee.github.io/img/post/hugo/github-site.png">
+
+
+
+
+
+  <meta property="og:image" content="https://haneulee.github.io/img/profile.jpeg">
+  <meta property="twitter:image" content="https://haneulee.github.io/img/profile.jpeg">
+
+
+    <title>Hugo 블로그 시작</title>
+
+    <link rel="icon" href="https://haneulee.github.io/img/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://haneulee.github.io/2021/05/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-qkvvwklooslu9qnsv43k1d59pglvtyyxqb3ktq0e5hhuwmrznunkbdtc1el.min.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-BHPHWPTLMZ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://haneulee.github.io/">Haneul Devlog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://haneulee.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://haneulee.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Haneul Lee</h4>
+        
+          <h5 class="sidebar-profile-bio">Devlog</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories/development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin-square"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Hugo 블로그 시작
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-05-17T11:48:31&#43;09:00">
+        
+  May 17, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/blog">blog</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/hugo">hugo</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#hugo-설치">hugo 설치</a></li>
+    <li><a href="#hugo-테마-적용">hugo 테마 적용</a></li>
+    <li><a href="#hugo-포스트">hugo 포스트</a></li>
+    <li><a href="#hugo-로컬-실행">hugo 로컬 실행</a></li>
+    <li><a href="#public-폴더에-호스팅할-레파지토리-추가">public 폴더에 호스팅할 레파지토리 추가</a></li>
+    <li><a href="#배포">배포</a></li>
+    <li><a href="#다른-환경에서-다운로드">다른 환경에서 다운로드</a></li>
+  </ul>
+</nav>
+<div class="alert info ">
+  <p><a href="https://gohugo.io/about/what-is-hugo/">휴고 공식 문서</a></p>
+</div>
+<h1 id="hugo-소개">hugo 소개</h1>
+<p>Hugo는 Go로 작성된 빠르고 현대적인 정적 사이트 생성기이며 웹 사이트를 다시 재미있게 만들 수 있도록 설계되었습니다.
+Hugo는 범용 웹 사이트 프레임 워크입니다. 기술적으로 말해서 Hugo는 정적 사이트 생성기 입니다. 방문자 요청마다 페이지를 동적으로 구축하는 시스템과 달리 Hugo는 콘텐츠를 생성하거나 업데이트 할 때 페이지를 구축합니다. 웹 사이트는 편집하는 것보다 훨씬 더 자주보기 때문에 Hugo는 웹 사이트의 최종 사용자에게 최적의보기 경험을 제공하고 웹 사이트 작성자에게 이상적인 글쓰기 경험을 제공하도록 설계되었습니다.</p>
+<p>Hugo로 구축 된 웹 사이트는 매우 빠르고 안전합니다. Hugo 사이트는 Netlify , Heroku , GoDaddy , DreamHost , GitHub Pages , GitLab Pages , Surge , Aerobatic , Firebase , Google Cloud Storage , Amazon S3 , Rackspace , Azure 및 CloudFront를 포함하여 어디서나 호스팅 할 수 있으며 CDN과 잘 작동합니다. Hugo 사이트는 데이터베이스 나 Ruby, Python 또는 PHP와 같은 값 비싼 런타임에 대한 종속성없이 실행됩니다.</p>
+<p>우리는 Hugo를 거의 즉각적인 빌드 시간을 가진 이상적인 웹 사이트 생성 도구로 생각하고 변경이있을 때마다 다시 빌드 할 수 있습니다.</p>
+<p><strong>&lt;장점&gt;</strong></p>
+<ul>
+<li>go 언어 사용</li>
+<li>빠른 빌드</li>
+<li>정적 페이지 생성</li>
+<li>다양한 테마</li>
+<li>한국어 지원 부족</li>
+<li>사용자 늘고 있는 추세</li>
+</ul>
+<h2 id="hugo-설치">hugo 설치</h2>
+<ul>
+<li>Mac (맥) 환경에서 설치</li>
+</ul>
+<pre><code>brew install hugo 
+hugo version
+hugo new site quickstart
+</code></pre><h2 id="hugo-테마-적용">hugo 테마 적용</h2>
+<p><a href="https://themes.gohugo.io/">휴고 테마 사이트</a></p>
+<pre><code>cd quickstart
+git init
+// 테마 폴더에 깃 서브모듈 적용
+// 나는 tranquilpeak 테마가 마음에 들어서 적용
+git submodule add https://github.com/haneulee/hugo-tranquilpeak-theme.git themes/tranquilpeak
+
+// config.toml 파일에서 theme를 해당 테마 이름으로 변경
+echo theme = \&quot;tranquilpeak\&quot; &gt;&gt; config.toml
+</code></pre><h2 id="hugo-포스트">hugo 포스트</h2>
+<p><strong>포스트는 archetypes 폴더의 default.md 를 똑같이 복사하여 새로 생성한다.</strong></p>
+<pre><code>hugo new [포스트상위폴더]/[포스트 제목].md
+// ex) hugo new post/blog/hugo-blog.md
+</code></pre><h2 id="hugo-로컬-실행">hugo 로컬 실행</h2>
+<ul>
+<li>아래 명령어를 실행하면 http://localhost:1313/ 에서 나의 블로그를 확인해볼 수 있다.</li>
+</ul>
+<pre><code>▶ hugo server -D
+
+                   | EN
++------------------+----+
+  Pages            | 10
+  Paginator pages  |  0
+  Non-page files   |  0
+  Static files     |  3
+  Processed images |  0
+  Aliases          |  1
+  Sitemaps         |  1
+  Cleaned          |  0
+
+Total in 11 ms
+Watching for changes in /Users/bep/quickstart/{content,data,layouts,static,themes}
+Watching for config changes in /Users/bep/quickstart/config.toml
+Environment: &quot;development&quot;
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+</code></pre><h2 id="public-폴더에-호스팅할-레파지토리-추가">public 폴더에 호스팅할 레파지토리 추가</h2>
+<p>먼저 hugo 블로그를 [사용자 아이디].github.io 주소로 올리고 싶을 때는
+깃헙 레파지토리를 2개 생성해야한다.</p>
+<ol>
+<li>휴고 블로그  - hugo-blog</li>
+<li>블로그 호스팅 - haneulee.github.io</li>
+</ol>
+<p>아래 이름으로 2개 생성한 다음, 아까 만들었던 quickstart 루트 디렉토리에서
+휴고 블로그를 리모트로 추가한다.</p>
+<pre><code>git remote add origin &quot;[휴고 블로그 레파지토리 주소]&quot;
+</code></pre><p>다음은 hugo 명령어를 실행할 때 public 폴더에 빌드된 파일들이 생성되는데
+public 폴더에 블로그 호스팅 깃 레파지토리를 submodule 로 추가해야 한다.
+먼저 public 폴더에 파일이 있으면 다 비워주고 submodule 설정을 한다.</p>
+<pre><code>git submodule add -b master https://github.com/haneulee/haneulee.github.io.git public
+</code></pre><h2 id="배포">배포</h2>
+<pre><code>// public 폴더에 빌드된 파일들이 생성된다.
+hugo -D 
+</code></pre><p>배포는 github action 으로 자동 배포 해도 되는데
+배포 파일을 따로 만들어서 실행해보기로 했다.
+일단 deploy.sh 파일을 루트 디렉토리에 만든다음
+아래 내용을 저장한다. 내용은 아까 만들었던 2개의 레파지토리에 업데이트 내용을 다 반영하는 것!</p>
+<pre><code>#!/bin/bash
+
+echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
+
+# Build the project.
+# theme 폴더 하위 테마 이름
+hugo -t tranquilpeak
+
+# Go To Public folder
+cd public
+# Add changes to git.
+git add .
+
+# Commit changes.
+msg=&quot;rebuilding site `date`&quot;
+if [ $# -eq 1 ]
+  then msg=&quot;$1&quot;
+fi
+git commit -m &quot;$msg&quot;
+
+# Push source and build repos.
+git push origin master
+
+# Come Back up to the Project Root
+cd ..
+
+
+# blog 저장소 Commit &amp; Push
+git add .
+
+msg=&quot;rebuilding site `date`&quot;
+if [ $# -eq 1 ]
+  then msg=&quot;$1&quot;
+fi
+git commit -m &quot;$msg&quot;
+
+git push origin master
+
+</code></pre><p>실행은 루트 디렉토리에서 ./deploy.sh 를 하면 성공
+블로그 호스팅 레파지토리에서는 setting &gt; pages 에 들어가서
+branch를 master로 설정하고 save를 해야 한다.</p>
+<p><img src="https://haneulee.github.io/img/post/hugo/github-repo.png" alt=""></p>
+<p>오류 없이 배포되면
+[사용자 아이디].github.io 주소로 나의 블로그를 확인할 수 있다.</p>
+<p><img src="https://haneulee.github.io/img/post/hugo/github-site.png" alt=""></p>
+<h2 id="다른-환경에서-다운로드">다른 환경에서 다운로드</h2>
+<pre><code>git clone https://github.com/[사용자 아이디]/[휴고 블로그 레파지토리 이름].git
+git submodule update --init --recursive
+
+</code></pre>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/development/">development</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/front-end/">front-end</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/hugo/">hugo</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/blog/">blog</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%ED%9C%B4%EA%B3%A0/">휴고</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/">블로그</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/advanced-git/" data-tooltip="Advanced Git">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/05/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/05/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/05/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 <a href="https://github.com/haneulee">haneulee</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/advanced-git/" data-tooltip="Advanced Git">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/05/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/05/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/05/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Fhugo-%25EB%25B8%2594%25EB%25A1%259C%25EA%25B7%25B8-%25EC%258B%259C%25EC%259E%2591%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Fhugo-%25EB%25B8%2594%25EB%25A1%259C%25EA%25B7%25B8-%25EC%258B%259C%25EC%259E%2591%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Fhugo-%25EB%25B8%2594%25EB%25A1%259C%25EA%25B7%25B8-%25EC%258B%259C%25EC%259E%2591%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Lee</h4>
+    
+      <div id="about-card-bio">Devlog</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://haneulee.github.io/img/gradient.png');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://haneulee.github.io/js/script-um4asudfeaklsjoa2t0o8ajepqincisksr0u9pmzrd38hgbouqkdpvj.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/haneulee.github.io\/2021\/05\/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91\/';
+          
+            this.page.identifier = '\/2021\/05\/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'haneulee-github-io';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
