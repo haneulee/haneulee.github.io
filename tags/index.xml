@@ -6,7 +6,88 @@
     <description>Recent content in Tags on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 18 May 2021 12:40:39 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 May 2021 16:10:04 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>development</title>
+      <link>https://haneulee.github.io/tags/development/</link>
+      <pubDate>Tue, 18 May 2021 16:10:04 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>front-end</title>
+      <link>https://haneulee.github.io/tags/front-end/</link>
+      <pubDate>Tue, 18 May 2021 16:10:04 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/front-end/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://haneulee.github.io/tags/git/</link>
+      <pubDate>Tue, 18 May 2021 16:10:04 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>profile</title>
+      <link>https://haneulee.github.io/tags/profile/</link>
+      <pubDate>Tue, 18 May 2021 16:10:04 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/profile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>branch</title>
+      <link>https://haneulee.github.io/tags/branch/</link>
+      <pubDate>Tue, 18 May 2021 16:01:06 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/branch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>feature</title>
+      <link>https://haneulee.github.io/tags/feature/</link>
+      <pubDate>Tue, 18 May 2021 16:01:06 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/feature/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>깃</title>
+      <link>https://haneulee.github.io/tags/%EA%B9%83/</link>
+      <pubDate>Tue, 18 May 2021 16:01:06 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/%EA%B9%83/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>브랜치</title>
+      <link>https://haneulee.github.io/tags/%EB%B8%8C%EB%9E%9C%EC%B9%98/</link>
+      <pubDate>Tue, 18 May 2021 16:01:06 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/%EB%B8%8C%EB%9E%9C%EC%B9%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>피처</title>
+      <link>https://haneulee.github.io/tags/%ED%94%BC%EC%B2%98/</link>
+      <pubDate>Tue, 18 May 2021 16:01:06 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/%ED%94%BC%EC%B2%98/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Android</title>
       <link>https://haneulee.github.io/tags/android/</link>
@@ -17,29 +98,11 @@
     </item>
     
     <item>
-      <title>development</title>
-      <link>https://haneulee.github.io/tags/development/</link>
-      <pubDate>Tue, 18 May 2021 12:40:39 +0900</pubDate>
-      
-      <guid>https://haneulee.github.io/tags/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>flutter</title>
       <link>https://haneulee.github.io/tags/flutter/</link>
       <pubDate>Tue, 18 May 2021 12:40:39 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/flutter/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>front-end</title>
-      <link>https://haneulee.github.io/tags/front-end/</link>
-      <pubDate>Tue, 18 May 2021 12:40:39 +0900</pubDate>
-      
-      <guid>https://haneulee.github.io/tags/front-end/</guid>
       <description></description>
     </item>
     
@@ -283,15 +346,6 @@
       <pubDate>Mon, 17 May 2021 11:48:31 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/%ED%9C%B4%EA%B3%A0/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https://haneulee.github.io/tags/git/</link>
-      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://haneulee.github.io/tags/git/</guid>
       <description></description>
     </item>
     

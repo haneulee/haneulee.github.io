@@ -6,7 +6,27 @@
     <description>Recent content on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 18 May 2021 12:40:39 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 May 2021 16:10:04 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Profile 꾸미기 👩🏻‍💻</title>
+      <link>https://haneulee.github.io/2021/05/git-profile-%EA%BE%B8%EB%AF%B8%EA%B8%B0/</link>
+      <pubDate>Tue, 18 May 2021 16:10:04 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/05/git-profile-%EA%BE%B8%EB%AF%B8%EA%B8%B0/</guid>
+      <description>Git Profile 꾸미기 먼저 아래 그림과 같이 git repository에서 나의 id와 똑같은 이름으로 새로운 repository를 생성한다. *** add READ.me 를 클릭하기, public으로 !! *** 생성이 되면 해당 레파지토리에 read.me에는 다음과 같이 작성되어 있을 것이다.
+### Hi there 👋 &amp;lt;!-- **haneulee/haneulee** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. Here are some ideas to get you started: - 🔭 I’m currently working on .</description>
+    </item>
+    
+    <item>
+      <title>Git Feature 브랜치 생성 &amp; push</title>
+      <link>https://haneulee.github.io/2021/05/git-feature-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EC%83%9D%EC%84%B1-push/</link>
+      <pubDate>Tue, 18 May 2021 16:01:06 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/05/git-feature-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EC%83%9D%EC%84%B1-push/</guid>
+      <description>branch 생성 $ git branch &amp;lt;branchName&amp;gt; 생성한 브랜치로 이동 $ git checkout &amp;lt;branchName&amp;gt; // 브랜치 생성 &amp;amp; 체크아웃 $ git checkout -b &amp;lt;branchName&amp;gt; 원격 저장소에 push 하기 로컬에서만 생성한 branch를 upstream branch로 만든다.
+$ git push --set-upstream origin &amp;lt;branchName&amp;gt; </description>
+    </item>
+    
     <item>
       <title>플러터(flutter) 설치</title>
       <link>https://haneulee.github.io/2021/05/%ED%94%8C%EB%9F%AC%ED%84%B0flutter-%EC%84%A4%EC%B9%98/</link>
