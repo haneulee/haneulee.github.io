@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>server on Haneul Devlog</title>
+    <link>https://haneulee.github.io/tags/server/</link>
+    <description>Recent content in server on Haneul Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 18 May 2021 12:31:38 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>connection reset by [ip] port 22</title>
+      <link>https://haneulee.github.io/2021/05/connection-reset-by-ip-port-22/</link>
+      <pubDate>Tue, 18 May 2021 12:31:38 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/05/connection-reset-by-ip-port-22/</guid>
+      <description>리눅스에서 ssh 접속 후 아무 작업을 하지 않고 그대로 두면 Connection reset by peer 메시지와 함께 접속이 끊기는 경우가 발생한다.
+ Read from remote host xxx.xxx.xxx.xxx: Connection reset by peer
+Connection to xxx.xxx.xxx.xxx closed.
+1)/etc/ssh/sshd_config에 다음을 추가하고 재실행해주면 새로 접속하는 ssh부터는 아무런 작업을 하지 않는다고 해도 끊기지는 않을 것이다.
+ClientAliveInterval 600
+ClientAliveCountMax 3
+ClientAliveInterval 초단위 (default 0)
+Client에서 수신한 data가 없을 경우 sshd 데몬에서 클라이언트가 살아있는지 체크하기 위한 메시지(client alive messages)를 보내게 되는데, 이 메시지를 보내는 초단위 간격을 설정한다.</description>
+    </item>
+    
+  </channel>
+</rss>

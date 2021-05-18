@@ -6,7 +6,34 @@
     <description>Recent content in React on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sun, 10 Nov 2019 00:03:00 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 May 2021 12:30:09 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리액트 useState 훅 사용하기</title>
+      <link>https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-usestate-%ED%9B%85-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Tue, 18 May 2021 12:30:09 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-usestate-%ED%9B%85-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
+      <description>배열 state  1. 추가 const [language, setLanguage] = useState([]); setLanguage([...language, newLanguage]); // or setLanguage(language.concat(newLanguage)); 2. 삭제 const [language, setLanguage] = useState([]); setLanguage(language.filter(item =&amp;gt; item.id !== id)); 3. 수정 const [language, setLanguage] = useState([]); setLanguage( language.map(item =&amp;gt; item.id === id ? { ...item, active: !item.active } : item ) ); </description>
+    </item>
+    
+    <item>
+      <title>리액트 절대 경로 설정하기</title>
+      <link>https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Tue, 18 May 2021 12:26:22 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
+      <description>Web을 개발하다보면 폴더와 파일의 depth가 깊어지는 경우가 있다.
+이런 경우 파일 import시에 ../../components/sign/logout 식으로 ../가 많아져서 복잡하고 번거로워진다.
+그러나 절대경로를 설정하면 components/sign/logout 으로 간단히 작성할 수 있다는 사실!
+나는 src 폴더를 기준으로 절대경로를 설정하였다.
+방법은 아래와 같다.
+| Linux, Mac 에서 설정하기
+프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
+&amp;quot;start&amp;quot;: &amp;quot;NODE_PATH=src/ react-scripts start&amp;quot;, &amp;quot;build&amp;quot;: &amp;quot;NODE_PATH=src/ react-scripts build&amp;quot;, | Window 에서 설정하기
+여기서는 cross-env가 필요하다.
+먼저 다음 command를 이용해 cross-env를 설치해준다.</description>
+    </item>
+    
     <item>
       <title>how to handle React state array</title>
       <link>https://haneulee.github.io/2019/11/how-to-handle-react-state-array/</link>
