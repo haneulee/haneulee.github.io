@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Haneul Lee">
+<meta name="keywords" content="development, front-end, development, next-gen">
+<meta name="description" content="1.자바스크립트 테스팅 환경 테스트 러너  테스트 파일을 읽어들여 실행하고, 결과를 출력 파일이 변경된 경우 자동으로 실행해주는 watch 등의 기능 제공 Reporter를 지정해서 원하는 형태로 결과를 출력 Node 환경에서 실행 : Mocha, Jest, AVA  브라우저 환경에서 실행 : Karma → 웹서버에 연결되어 있는 브라우저 위에서 테스트를 수행  카르마보다 Node가 조금 더 빠르다.
+테스트 프레임워크  사용자가 테스트 코드를 작성할 수 있는 기반을 제공 프레임 워크에 의해 제공된 함수를 이용해서 테스트 코드를 작성⇒ 프레임 워크가 자동으로 테스트를 실행하고 결과를 수집해서 출력.">
+
+
+<meta property="og:description" content="1.자바스크립트 테스팅 환경 테스트 러너  테스트 파일을 읽어들여 실행하고, 결과를 출력 파일이 변경된 경우 자동으로 실행해주는 watch 등의 기능 제공 Reporter를 지정해서 원하는 형태로 결과를 출력 Node 환경에서 실행 : Mocha, Jest, AVA  브라우저 환경에서 실행 : Karma → 웹서버에 연결되어 있는 브라우저 위에서 테스트를 수행  카르마보다 Node가 조금 더 빠르다.
+테스트 프레임워크  사용자가 테스트 코드를 작성할 수 있는 기반을 제공 프레임 워크에 의해 제공된 함수를 이용해서 테스트 코드를 작성⇒ 프레임 워크가 자동으로 테스트를 실행하고 결과를 수집해서 출력.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript 테스트">
+<meta name="twitter:title" content="Javascript 테스트">
+<meta property="og:url" content="https://haneulee.github.io/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+<meta property="twitter:url" content="https://haneulee.github.io/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+<meta property="og:site_name" content="Haneul Devlog">
+<meta property="og:description" content="1.자바스크립트 테스팅 환경 테스트 러너  테스트 파일을 읽어들여 실행하고, 결과를 출력 파일이 변경된 경우 자동으로 실행해주는 watch 등의 기능 제공 Reporter를 지정해서 원하는 형태로 결과를 출력 Node 환경에서 실행 : Mocha, Jest, AVA  브라우저 환경에서 실행 : Karma → 웹서버에 연결되어 있는 브라우저 위에서 테스트를 수행  카르마보다 Node가 조금 더 빠르다.
+테스트 프레임워크  사용자가 테스트 코드를 작성할 수 있는 기반을 제공 프레임 워크에 의해 제공된 함수를 이용해서 테스트 코드를 작성⇒ 프레임 워크가 자동으로 테스트를 실행하고 결과를 수집해서 출력.">
+<meta name="twitter:description" content="1.자바스크립트 테스팅 환경 테스트 러너  테스트 파일을 읽어들여 실행하고, 결과를 출력 파일이 변경된 경우 자동으로 실행해주는 watch 등의 기능 제공 Reporter를 지정해서 원하는 형태로 결과를 출력 Node 환경에서 실행 : Mocha, Jest, AVA  브라우저 환경에서 실행 : Karma → 웹서버에 연결되어 있는 브라우저 위에서 테스트를 수행  카르마보다 Node가 조금 더 빠르다.
+테스트 프레임워크  사용자가 테스트 코드를 작성할 수 있는 기반을 제공 프레임 워크에 의해 제공된 함수를 이용해서 테스트 코드를 작성⇒ 프레임 워크가 자동으로 테스트를 실행하고 결과를 수집해서 출력.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-05-20T11:07:12">
+  
+  
+    <meta property="article:modified_time" content="2021-05-20T11:07:12">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+      <meta property="article:section" content="unittest">
+    
+  
+  
+    
+      <meta property="article:tag" content="development">
+    
+      <meta property="article:tag" content="front-end">
+    
+      <meta property="article:tag" content="unittest">
+    
+      <meta property="article:tag" content="javascript">
+    
+      <meta property="article:tag" content="testrunner">
+    
+      <meta property="article:tag" content="mocha">
+    
+      <meta property="article:tag" content="jasmine">
+    
+      <meta property="article:tag" content="karma">
+    
+      <meta property="article:tag" content="jest">
+    
+      <meta property="article:tag" content="ava">
+    
+      <meta property="article:tag" content="qunit">
+    
+      <meta property="article:tag" content="유닛테스트">
+    
+      <meta property="article:tag" content="테스트코드">
+    
+      <meta property="article:tag" content="테스트프레임워크">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-1.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-1.png">
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+
+
+    <title>Javascript 테스트</title>
+
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://haneulee.github.io/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-BHPHWPTLMZ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://haneulee.github.io/">Haneul Devlog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://haneulee.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://haneulee.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Haneul Lee</h4>
+        
+          <h5 class="sidebar-profile-bio">Devlog</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories/development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin-square"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Javascript 테스트
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-05-20T11:07:12&#43;09:00">
+        
+  May 20, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/unittest">unittest</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>
+  <br/>
+</p>
+<h1>1.자바스크립트 테스팅 환경</h1>
+<h1>테스트 러너</h1>
+<ul>
+  <li class="gb gc eg ge b gf jr gh gi gj js gl gm gn jt gp gq gr ju gt gu gv jv gx gy gz jz ka kb fc" style="list-style-type: disc;">테스트 파일을 읽어들여 실행하고, 결과를 출력</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">파일이 변경된 경우 자동으로 실행해주는 watch 등의 기능 제공</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">Reporter를 지정해서 원하는 형태로 결과를 출력</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+    <strong>Node 환경</strong>에서 실행 : <span style="color: rgb(255,0,0);">Mocha, Jest, AVA</span>
+  </li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+    <strong>브라우저 환경</strong>에서 실행 : <span style="color: rgb(255,0,0);">Karma</span> → 웹서버에 연결되어 있는 브라우저 위에서 테스트를 수행</li>
+</ul>
+<p class="gb gc eg ge b gf gg gh gi gj gk gl gm gn go gp gq gr gs gt gu gv gw gx gy gz db fc">카르마보다 Node가 조금 더 빠르다.</p>
+<h1 class="iw hk eg as ix iy iz gh ja jb jc gl jd je jf jg jh ji jj jk jl jm jn jo jp jq fc">테스트 프레임워크</h1>
+<ul>
+  <li class="gb gc eg ge b gf jr gh gi gj js gl gm gn jt gp gq gr ju gt gu gv jv gx gy gz jz ka kb fc" style="list-style-type: disc;">사용자가 테스트 코드를 작성할 수 있는 기반을 제공</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">프레임 워크에 의해 제공된 함수를 이용해서 테스트 코드를 작성<br/>⇒ 프레임 워크가 자동으로 테스트를 실행하고 결과를 수집해서 출력.</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">테스트 Spec 들을 그룹핑하거나 공통 사전 작업 등을 처리해 줌.</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">Mocha, Jasmine(Jest), AVA</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">예제 (Jasmine)</li>
+</ul>
+<pre class="hb hc hd he hf hg hh hi">
+  <br/>
+</pre>
+<p>
+  <br/>
+</p>
+<h1>2.브라우저 환경 vs Node.js 환경</h1>
+<p class="gb gc eg ge b gf jr gh gi gj js gl gm gn jt gp gq gr ju gt gu gv jv gx gy gz db fc">
+  <strong>브라우저에서 테스트 실행</strong>
+</p>
+<ul>
+  <li class="gb gc eg ge b gf gg gh gi gj gk gl gm gn go gp gq gr gs gt gu gv gw gx gy gz jz ka kb fc" style="list-style-type: disc;">실제 브라우저 환경에서 테스트 코드를 실행</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">브라우저의 모든 API를 사용해서 테스트 가능</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">실제 브라우저를 실행해야 하기 때문에 번거로움(Headless 브라우저 사용) ⇒ Headless gui 없이 실행시키는 환경.</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">테스트 파일 별로 별도의 브라우저에서 테스트 하기가 어려움(속도 문제)</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">빈 페이지를 만들고 모든 스크립트 파일 및 CSS등을 include 해서 테스트(번들 과정 필요)</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">브라우저 호환성 테스트 가능</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">개발 시 : 빠른 피드백을 위해 Headless 브라우저를 사용</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">빌드 시 : CI 서버 및 Webdriver와 연동하여 여러 개의 브라우저에서 테스트</li>
+</ul>
+<p class="gb gc eg ge b gf gg gh gi gj gk gl gm gn go gp gq gr gs gt gu gv gw gx gy gz db fc">
+  <strong>Node.js에서 테스트 실행</strong>
+</p>
+<ul>
+  <li class="gb gc eg ge b gf gg gh gi gj gk gl gm gn go gp gq gr gs gt gu gv gw gx gy gz jz ka kb fc" style="list-style-type: disc;">Node.js 환경에서 테스트 코드를 실행(Mocha, Jest 등)</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">브라우저에 비해서 가볍기 때문에 실행 속도가 빠름.</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">개별 테스트 파일을 별도의 프로세스에서 실행할 수 없음(병렬 실행 가능)</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">브라우저 API 대신 JSDom을 이용해서 테스트 ⇒ JSDom = 가짜 브라우저.</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">실제 렌더링을 해 주지 않으므로, 렌더링 관련 테스트 불가능</li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">브라우저 호환성 테스트 불가능.</li>
+</ul>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+  <br/>
+</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-1.png" alt=""></p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+  <br/>
+</p>
+<h1 class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">Vue 프로젝트에 주로 사용되는 테스트 방식</h1>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc">
+  <br/>
+</p>
+<blockquote>
+  <p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc">
+    <strong>Vue CLI 로 프로젝트 시작 설정에서</strong>
+  </p>
+  <p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc">
+    <strong>Unit Test 로 <span style="color: rgb(255,0,0);">Jest</span> 또는 <span style="color: rgb(255,0,0);">Mocha + Karma</span> 선택 가능</strong>
+  </p>
+</blockquote>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc">
+  <br/>
+</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc">
+  <br/>
+</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc">
+  <br/>
+</p>
+<h1>karma</h1>
+<hr/>
+<ul>
+  <li>브라우저 런처를 이용하여 다양한 브라우저를 띄우고, 그 위에서 테스트 코드를 실행한다. (런처 설치 필요)</li>
+  <li>웹 소켓을 통한 연결 : 카르마는 웹 소켓을 이용해 브라우저가 카르마 웹서버와 커넥션을 만든다. → 파일 변화 자동 감지</li>
+  <li>Iframe 기반 테스트 : 테스트 대상 코드를 iframe에 로드하여 테스트를 수행한다. 테스트 실행마다 iframe을 다시 로드</li>
+  <li>jasmine이나 mocha같은 테스트 프레임워크는 node 기반의 러너만 제공하기 때문에 브라우저 환경에서 도는 러너가 필요</li>
+  <li>카르마 서버 ↔ 클라이언트 매니저 ↔ iframe ↔ 테스트 프레임워크 어댑터 ↔ 테스트 프레임워크<br/>
+    <ul>
+      <li>
+        ![](https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-2.png)
+      </li>
+      <li>성공 실패 여부는 이벤트를 발생시킴으로써 클라이언트 페이지로 postMessage 를 통해 전달한다.</li>
+      <li>클라이언트 페이지는 다시 웹 소켓을 통해 카르마 서버에 결과를 전달한다.</li>
+    </ul>
+  </li>
+</ul>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc">
+  <br/>
+</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc">→ Mocha + Karma</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc">
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-3.png" alt=""></p>
+</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc">
+  <br/>
+</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc">
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-4.png" alt=""></p>
+</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc">
+  <br/>
+</p>
+<p>
+  <br/>
+</p>
+<h1 class="iw hk eg as ix iy ko gh ja jb kp gl jd je kq jg jh ji kr jk jl jm ks jo jp jq fc">Jasmine</h1>
+<hr/>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+  <a href="https://jasmine.github.io/">https://jasmine.github.io/</a>
+</p>
+<ul>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+    <span style="color: rgb(51,51,51);">BDD(Behavior Driven Development) 를 위한 API 제공</span>
+  </li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+    <span style="color: rgb(51,51,51);">
+      <span>비동기 코드 테스트 지원</span>
+    </span>
+  </li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+    <span style="color: rgb(51,51,51);">
+      <span>NodeJS, 브라우저 환경 모두 지원</span>
+    </span>
+  </li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+    <span style="color: rgb(51,51,51);">
+      <span>비교적 빠른 테스트</span>
+    </span>
+  </li>
+  <li class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+    <span style="color: rgb(51,51,51);">
+      <span>테스트 명세 그룹화 가능</span>
+    </span>
+  </li>
+</ul>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+  <br/>
+</p>
+<h2 class="iw hk eg as ix iy ko gh ja jb kp gl jd je kq jg jh ji kr jk jl jm ks jo jp jq fc">1. <span style="letter-spacing: -0.008em;">HTML 페이지 방식 : </span>
+  <span style="letter-spacing: -0.008em;">Jasmine </span>
+</h2>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">index.js → jasmine.css 와 jasmine.js 링크</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-5.png" alt=""></p>
+</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+  <br/>
+</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">test.vue → 테스트 코드 </p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-6.png" alt=""></p>
+</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+  <br/>
+</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">테스트 화면 → '/test' 페이지 이동하여 테스트 코드 실행</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-7.png" alt=""></p>
+</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+  <br/>
+</p>
+<h2 class="iw hk eg as ix iy ko gh ja jb kp gl jd je kq jg jh ji kr jk jl jm ks jo jp jq fc">2. 테스트 러너 방식 : Jasmine + Karma</h2>
+<p>→ </p>
+<p>
+  <br/>
+</p>
+<h1 class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+  <span style="font-size: 24.0px;letter-spacing: -0.01em;">Qunit</span>
+</h1>
+<hr/>
+<p>
+  <a href="https://qunitjs.com/" style="letter-spacing: 0.0px;">https://qunitjs.com/</a>
+</p>
+<p>
+  <br/>
+</p>
+<ul>
+  <li>강력하고 사용하기 쉬운 Javascript 단위 테스트 프레임워크</li>
+  <li>가장 오래됨</li>
+  <li>진입장벽 낮음</li>
+  <li>
+    <span style="letter-spacing: 0.0px;">jQuery, jQuery UI, jQuery Mobile 에서도 사용 가능</span>
+  </li>
+</ul>
+<p>
+  <br/>
+</p>
+<p>index.js → qunit.css 와 qunit.js 링크</p>
+<p>
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-8.png" alt=""></p>
+</p>
+<p>
+  <br/>
+</p>
+<p>test.vue → 테스트 코드 </p>
+<p>
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-9.png" alt=""></p>
+</p>
+<p>
+  <br/>
+</p>
+<p>홈화면</p>
+<p>
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-10.png" alt=""></p>
+</p>
+<p>테스트 화면 → '/test' 페이지 이동하여 테스트 코드 실행</p>
+<p>
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-11.png" alt=""></p>
+</p>
+<p>
+  <br/>
+</p>
+<p>
+  <br/>
+</p>
+<p>
+  <br/>
+</p>
+<h3>
+  <a href="https://sungjk.github.io/2017/03/03/testing-react-application.html">→ Jest VS Mocha 비교 참고 사이트</a>
+</h3>
+<h1>Mocha</h1>
+<hr/>
+<ul>
+  <li>Node.js 환경, 브라우저 환경 모두 지원</li>
+  <li>TDD, BDD, QUnit, export 스타일 모두 적용</li>
+  <li>Karma 테스트 러너와 함께 사용되기도 함</li>
+  <li>assertion 은 Chai 와 함께 사용<span style="color: rgb(93,104,111);">
+      <br/>
+    </span>
+  </li>
+</ul>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+  <br/>
+</p>
+<h1>Jest</h1>
+<hr/>
+<ul>
+  <li>jasmine 기반</li>
+  <li>React에서 공식적으로 지원</li>
+  <li>Auto Mocking 지원</li>
+  <li>비동기 코드 테스트 지원</li>
+  <li>스냅샷 테스트 지원</li>
+</ul>
+<p>
+  <br/>
+</p>
+<h1 class="iw hk eg as ix iy ko gh ja jb kp gl jd je kq jg jh ji kr jk jl jm ks jo jp jq fc">Vue Test Utils</h1>
+<hr/>
+<p>
+  <br/>
+</p>
+<ul>
+  <li>vue 프레임워크에 한정적</li>
+  <li>다른 프레임워크 변경 시, 테스트 코드도 새롭게 변경해야 함</li>
+</ul>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+  <br/>
+</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+  <br/>
+</p>
+<p class="gb gc eg ge b gf kc gh gi gj kd gl gm gn ke gp gq gr kf gt gu gv kg gx gy gz jz ka kb fc" style="list-style-type: disc;">
+  <br/>
+</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/development/">development</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/front-end/">front-end</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/unittest/">unittest</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/javascript/">javascript</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/testrunner/">testrunner</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/mocha/">mocha</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/jasmine/">jasmine</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/karma/">karma</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/jest/">jest</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/ava/">ava</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/qunit/">qunit</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%EC%9C%A0%EB%8B%9B%ED%85%8C%EC%8A%A4%ED%8A%B8/">유닛테스트</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C/">테스트코드</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/">테스트프레임워크</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/tvml-for-apple-tv/" data-tooltip="TVML for Apple TV">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 <a href="https://github.com/haneulee">haneulee</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/tvml-for-apple-tv/" data-tooltip="TVML for Apple TV">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Fjavascript-%25ED%2585%258C%25EC%258A%25A4%25ED%258A%25B8%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Fjavascript-%25ED%2585%258C%25EC%258A%25A4%25ED%258A%25B8%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Fjavascript-%25ED%2585%258C%25EC%258A%25A4%25ED%258A%25B8%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Lee</h4>
+    
+      <div id="about-card-bio">Devlog</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://haneulee.github.io/img/gradient.png');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/haneulee.github.io\/2021\/05\/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8\/';
+          
+            this.page.identifier = '\/2021\/05\/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'haneulee-github-io';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

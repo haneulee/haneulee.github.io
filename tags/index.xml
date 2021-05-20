@@ -6,11 +6,20 @@
     <description>Recent content in Tags on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 18 May 2021 16:10:04 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 May 2021 11:07:12 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ava</title>
+      <link>https://haneulee.github.io/tags/ava/</link>
+      <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/ava/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>development</title>
       <link>https://haneulee.github.io/tags/development/</link>
-      <pubDate>Tue, 18 May 2021 16:10:04 +0900</pubDate>
+      <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/development/</guid>
       <description></description>
@@ -19,18 +28,252 @@
     <item>
       <title>front-end</title>
       <link>https://haneulee.github.io/tags/front-end/</link>
-      <pubDate>Tue, 18 May 2021 16:10:04 +0900</pubDate>
+      <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/front-end/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>jasmine</title>
+      <link>https://haneulee.github.io/tags/jasmine/</link>
+      <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/jasmine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://haneulee.github.io/tags/javascript/</link>
+      <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jest</title>
+      <link>https://haneulee.github.io/tags/jest/</link>
+      <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/jest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>karma</title>
+      <link>https://haneulee.github.io/tags/karma/</link>
+      <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/karma/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mocha</title>
+      <link>https://haneulee.github.io/tags/mocha/</link>
+      <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/mocha/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>qunit</title>
+      <link>https://haneulee.github.io/tags/qunit/</link>
+      <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/qunit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testrunner</title>
+      <link>https://haneulee.github.io/tags/testrunner/</link>
+      <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/testrunner/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unittest</title>
+      <link>https://haneulee.github.io/tags/unittest/</link>
+      <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/unittest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>유닛테스트</title>
+      <link>https://haneulee.github.io/tags/%EC%9C%A0%EB%8B%9B%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
+      <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/%EC%9C%A0%EB%8B%9B%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>테스트코드</title>
+      <link>https://haneulee.github.io/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C/</link>
+      <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>테스트프레임워크</title>
+      <link>https://haneulee.github.io/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/</link>
+      <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>appletv</title>
+      <link>https://haneulee.github.io/tags/appletv/</link>
+      <pubDate>Thu, 20 May 2021 10:52:18 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/appletv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ios</title>
+      <link>https://haneulee.github.io/tags/ios/</link>
+      <pubDate>Thu, 20 May 2021 10:52:18 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>swift</title>
+      <link>https://haneulee.github.io/tags/swift/</link>
+      <pubDate>Thu, 20 May 2021 10:52:18 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/swift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TVML</title>
+      <link>https://haneulee.github.io/tags/tvml/</link>
+      <pubDate>Thu, 20 May 2021 10:52:18 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/tvml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tvos</title>
+      <link>https://haneulee.github.io/tags/tvos/</link>
+      <pubDate>Thu, 20 May 2021 10:52:18 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/tvos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>애플티비</title>
+      <link>https://haneulee.github.io/tags/%EC%95%A0%ED%94%8C%ED%8B%B0%EB%B9%84/</link>
+      <pubDate>Thu, 20 May 2021 10:52:18 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/%EC%95%A0%ED%94%8C%ED%8B%B0%EB%B9%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sonarlint</title>
+      <link>https://haneulee.github.io/tags/sonarlint/</link>
+      <pubDate>Thu, 20 May 2021 10:46:41 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/sonarlint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sonarqube</title>
+      <link>https://haneulee.github.io/tags/sonarqube/</link>
+      <pubDate>Thu, 20 May 2021 10:46:41 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/sonarqube/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sonarscanner</title>
+      <link>https://haneulee.github.io/tags/sonarscanner/</link>
+      <pubDate>Thu, 20 May 2021 10:46:41 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/sonarscanner/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>소나큐브</title>
+      <link>https://haneulee.github.io/tags/%EC%86%8C%EB%82%98%ED%81%90%EB%B8%8C/</link>
+      <pubDate>Thu, 20 May 2021 10:46:41 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/%EC%86%8C%EB%82%98%ED%81%90%EB%B8%8C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>정적분석</title>
+      <link>https://haneulee.github.io/tags/%EC%A0%95%EC%A0%81%EB%B6%84%EC%84%9D/</link>
+      <pubDate>Thu, 20 May 2021 10:46:41 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/%EC%A0%95%EC%A0%81%EB%B6%84%EC%84%9D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>테스트</title>
+      <link>https://haneulee.github.io/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
+      <pubDate>Thu, 20 May 2021 10:46:41 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>프론트엔드</title>
+      <link>https://haneulee.github.io/tags/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C/</link>
+      <pubDate>Thu, 20 May 2021 10:46:41 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>error</title>
+      <link>https://haneulee.github.io/tags/error/</link>
+      <pubDate>Thu, 20 May 2021 10:45:13 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/error/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>git</title>
       <link>https://haneulee.github.io/tags/git/</link>
-      <pubDate>Tue, 18 May 2021 16:10:04 +0900</pubDate>
+      <pubDate>Thu, 20 May 2021 10:45:13 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>push</title>
+      <link>https://haneulee.github.io/tags/push/</link>
+      <pubDate>Thu, 20 May 2021 10:45:13 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/push/</guid>
       <description></description>
     </item>
     
@@ -103,15 +346,6 @@
       <pubDate>Tue, 18 May 2021 12:40:39 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/flutter/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ios</title>
-      <link>https://haneulee.github.io/tags/ios/</link>
-      <pubDate>Tue, 18 May 2021 12:40:39 +0900</pubDate>
-      
-      <guid>https://haneulee.github.io/tags/ios/</guid>
       <description></description>
     </item>
     
@@ -481,15 +715,6 @@
       <pubDate>Sun, 09 Feb 2020 13:15:32 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/%ED%8B%B0%EC%8A%A4%ED%86%A0%EB%A6%AC/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://haneulee.github.io/tags/javascript/</link>
-      <pubDate>Sun, 10 Nov 2019 23:03:00 +0900</pubDate>
-      
-      <guid>https://haneulee.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     
