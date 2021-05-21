@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Haneul Lee">
+<meta name="keywords" content="development, front-end, development, next-gen">
+<meta name="description" content="Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &quot;엔터&quot; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !">
+
+
+<meta property="og:description" content="Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &quot;엔터&quot; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Githup SSH  키 생성 및 등록">
+<meta name="twitter:title" content="Githup SSH  키 생성 및 등록">
+<meta property="og:url" content="https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/">
+<meta property="twitter:url" content="https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/">
+<meta property="og:site_name" content="Haneul Devlog">
+<meta property="og:description" content="Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &quot;엔터&quot; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !">
+<meta name="twitter:description" content="Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &quot;엔터&quot; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-05-21T10:30:25">
+  
+  
+    <meta property="article:modified_time" content="2021-05-21T10:30:25">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+      <meta property="article:section" content="github">
+    
+  
+  
+    
+      <meta property="article:tag" content="development">
+    
+      <meta property="article:tag" content="front-end">
+    
+      <meta property="article:tag" content="github">
+    
+      <meta property="article:tag" content="git">
+    
+      <meta property="article:tag" content="ssh">
+    
+      <meta property="article:tag" content="key">
+    
+      <meta property="article:tag" content="ssh인증">
+    
+      <meta property="article:tag" content="개인키">
+    
+      <meta property="article:tag" content="공개키">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F5at4r%2Fbtq4HHWbxKj%2FtxkRe5QG0TkjAlHB09uRAK%2Fimg.png">
+  <meta property="twitter:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F5at4r%2Fbtq4HHWbxKj%2FtxkRe5QG0TkjAlHB09uRAK%2Fimg.png">
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+
+
+    <title>Githup SSH  키 생성 및 등록</title>
+
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-amwwsek1km5ktg0jdnasyimfcocmzihio9bisdqlmnwznwztzogu2y5qmyi.min.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-BHPHWPTLMZ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://haneulee.github.io/">Haneul Devlog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://haneulee.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://haneulee.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Haneul Lee</h4>
+        
+          <h5 class="sidebar-profile-bio">Devlog</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories/development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin-square"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Githup SSH  키 생성 및 등록
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-05-21T10:30:25&#43;09:00">
+        
+  May 21, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/github">github</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#github에서-ssh-key-생성">Github에서 SSH key 생성</a></li>
+    <li><a href="#공개키-등록--복사">공개키 등록 &amp; 복사</a></li>
+    <li><a href="#github-에-공개키-등록">github 에 공개키 등록</a></li>
+  </ul>
+</nav>
+<h2 id="github에서-ssh-key-생성">Github에서 SSH key 생성</h2>
+<pre><code class="language-console" data-lang="console">// 홈 디렉토리 이동
+cd ~
+
+// ssh 키 디렉토리 생성
+mkdir ~/.ssh
+chmod 700 ~/.ssh
+cd .ssh
+
+// ssh 사용자 키 생성
+ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com”
+
+// 아래와 같이 뜨면 &quot;엔터&quot; 입력
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/user/.ssh/id_rsa):
+
+// 아래와 같이 뜨면 비밀먼호 두번 입력
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again:
+</code></pre><p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FclbTFB%2Fbtq4BxHN5gr%2FNZHG8WR6QKczxD0Vu7fJR0%2Fimg.png" alt=""></p>
+<p>키 생성 완료 !!</p>
+<p>ls -l 입력하여 생성된 키 확인 !</p>
+<p>id_rsa 는 개인키, id_rsa.pub 은 공개키 (개인키는 절대 공개하면 안됨)</p>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRddA5%2Fbtq4H0nGtyH%2F7IDEsz1lCBH1GzHv0InE8k%2Fimg.png" alt=""></p>
+<h2 id="공개키-등록--복사">공개키 등록 &amp; 복사</h2>
+<pre><code>// 공개키 출력 (ssh-rsa 부터 이메일까지 복사)
+cat ~/.ssh/id_rsa.pub
+
+eval $(ssh-agent -s)
+// ssh-add를 사용해 개인키를 ssh-agent에 등록함 (비밀번호 입력)
+ssh-add ~/.ssh/id_rsa
+</code></pre><p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FJxTkr%2Fbtq4EtxEOJF%2FXedFUpWTQKjTwiKpiHhG41%2Fimg.png" alt=""></p>
+<h2 id="github-에-공개키-등록">github 에 공개키 등록</h2>
+<p>깃헙 설정에 들어가서 SSH and GPG keys 클릭하여 </p>
+<p>new SSH key 를 클릭한다.</p>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcmvA4f%2Fbtq4F18FjEs%2FUxAX31nUqc7D1Ld1SB0jnk%2Fimg.png" alt=""></p>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F5at4r%2Fbtq4HHWbxKj%2FtxkRe5QG0TkjAlHB09uRAK%2Fimg.png" alt=""></p>
+<p>Key 안에 복사했던 공개키를 붙여넣고, 타이틀 지정</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/development/">development</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/front-end/">front-end</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/github/">github</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/git/">git</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/ssh/">ssh</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/key/">key</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/ssh%EC%9D%B8%EC%A6%9D/">ssh인증</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%EA%B0%9C%EC%9D%B8%ED%82%A4/">개인키</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%EA%B3%B5%EA%B0%9C%ED%82%A4/">공개키</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/nestjs-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/" data-tooltip="NestJS 프레임워크">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 <a href="https://github.com/haneulee">haneulee</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/nestjs-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/" data-tooltip="NestJS 프레임워크">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Fgithup-ssh-%25ED%2582%25A4-%25EC%2583%259D%25EC%2584%25B1-%25EB%25B0%258F-%25EB%2593%25B1%25EB%25A1%259D%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Fgithup-ssh-%25ED%2582%25A4-%25EC%2583%259D%25EC%2584%25B1-%25EB%25B0%258F-%25EB%2593%25B1%25EB%25A1%259D%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Fgithup-ssh-%25ED%2582%25A4-%25EC%2583%259D%25EC%2584%25B1-%25EB%25B0%258F-%25EB%2593%25B1%25EB%25A1%259D%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Lee</h4>
+    
+      <div id="about-card-bio">Devlog</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://haneulee.github.io/img/gradient.png');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://haneulee.github.io/js/script-rinop9qnmrrgnnkceqjpm1grpojhqqbbi1bei65eqtj4xaanixg6ynkekfs.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/haneulee.github.io\/2021\/05\/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D\/';
+          
+            this.page.identifier = '\/2021\/05\/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'haneulee-github-io';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

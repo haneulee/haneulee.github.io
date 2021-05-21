@@ -6,7 +6,40 @@
     <description>Recent content in Posts on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 20 May 2021 11:07:12 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 May 2021 10:30:25 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Githup SSH  키 생성 및 등록</title>
+      <link>https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/</link>
+      <pubDate>Fri, 21 May 2021 10:30:25 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/</guid>
+      <description>Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &amp;quot;엔터&amp;quot; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !</description>
+    </item>
+    
+    <item>
+      <title>NestJS 프레임워크</title>
+      <link>https://haneulee.github.io/2021/05/nestjs-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/</link>
+      <pubDate>Fri, 21 May 2021 10:23:15 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/05/nestjs-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/</guid>
+      <description>NestJS: Nest (NestJS)는 효율적이고 확장 가능한Node.js서버 측 애플리케이션을 구축하기위한 프레임 워크입니다.프로그레시브 JavaScript를 사용하고TypeScript로 빌드되고 완전히 지원하며 (하지만 여전히 개발자가 순수 JavaScript로 코딩 할 수 있음) OOP (Object Oriented Programming), FP (Functional Programming) 및 FRP (Functional Reactive Programming) 요소를 결합합니다.
+내부적으로 Nest는Express(기본값)와같은 강력한 HTTP 서버 프레임 워크를 사용하며 선택적으로 Fastify를 사용하도록 구성 할 수도 있습니다!
+Nest는 이러한 일반적인 Node.js 프레임 워크 (Express / Fastify) 위에 추상화 수준을 제공하지만 API를 개발자에게 직접 노출합니다.</description>
+    </item>
+    
+    <item>
+      <title>XCODE TVML app</title>
+      <link>https://haneulee.github.io/2021/05/xcode-tvml-app/</link>
+      <pubDate>Fri, 21 May 2021 10:20:38 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/05/xcode-tvml-app/</guid>
+      <description>xcode에서 tvml 샘플 앱을 만들어 테스트 해보기 STEP 1. xcode 설치 developer.apple.com/xcode/downloads/
+STEP 2. xcode 를 열고, create new project 를 통해 tvOS 탭에서 TVML App 을 선택 후 next 버튼을 누른다. 다음 product name과 language 등을 선택한다. STEP 3. 터미널을 통해 해당 프로젝트 디렉토리로 가서 웹서버를 실행한다. 맥은 기본적으로 python이 설치 되어 있으므로
+python -m SimpleHTTPServer 9001
+또는 ruby -run -ehttpd . -p9001
+STEP 4. 시뮬레이터를 apple tv 4k 로 선택한 후, 상단 왼쪽의 play 버튼을 클릭하면 빌드가 실행된다.</description>
+    </item>
+    
     <item>
       <title>Javascript 테스트</title>
       <link>https://haneulee.github.io/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>

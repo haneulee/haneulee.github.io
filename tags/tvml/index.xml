@@ -6,7 +6,20 @@
     <description>Recent content in TVML on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 20 May 2021 10:52:18 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/tvml/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 May 2021 10:20:38 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/tvml/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XCODE TVML app</title>
+      <link>https://haneulee.github.io/2021/05/xcode-tvml-app/</link>
+      <pubDate>Fri, 21 May 2021 10:20:38 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/05/xcode-tvml-app/</guid>
+      <description>xcode에서 tvml 샘플 앱을 만들어 테스트 해보기 STEP 1. xcode 설치 developer.apple.com/xcode/downloads/
+STEP 2. xcode 를 열고, create new project 를 통해 tvOS 탭에서 TVML App 을 선택 후 next 버튼을 누른다. 다음 product name과 language 등을 선택한다. STEP 3. 터미널을 통해 해당 프로젝트 디렉토리로 가서 웹서버를 실행한다. 맥은 기본적으로 python이 설치 되어 있으므로
+python -m SimpleHTTPServer 9001
+또는 ruby -run -ehttpd . -p9001
+STEP 4. 시뮬레이터를 apple tv 4k 로 선택한 후, 상단 왼쪽의 play 버튼을 클릭하면 빌드가 실행된다.</description>
+    </item>
+    
     <item>
       <title>TVML for Apple TV</title>
       <link>https://haneulee.github.io/2021/05/tvml-for-apple-tv/</link>
