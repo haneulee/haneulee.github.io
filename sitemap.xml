@@ -3,28 +3,68 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://haneulee.github.io/tags/author/</loc>
+    <lastmod>2021-05-24T18:09:54+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://haneulee.github.io/categories/</loc>
-    <lastmod>2021-05-21T10:30:25+09:00</lastmod>
+    <lastmod>2021-05-24T18:09:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haneulee.github.io/tags/commit/</loc>
+    <lastmod>2021-05-24T18:09:54+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://haneulee.github.io/tags/development/</loc>
-    <lastmod>2021-05-21T10:30:25+09:00</lastmod>
+    <lastmod>2021-05-24T18:09:54+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://haneulee.github.io/categories/development/</loc>
-    <lastmod>2021-05-21T10:30:25+09:00</lastmod>
+    <lastmod>2021-05-24T18:09:54+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://haneulee.github.io/tags/front-end/</loc>
-    <lastmod>2021-05-21T10:30:25+09:00</lastmod>
+    <lastmod>2021-05-24T18:09:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haneulee.github.io/categories/git/</loc>
+    <lastmod>2021-05-24T18:09:54+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://haneulee.github.io/tags/git/</loc>
-    <lastmod>2021-05-21T10:30:25+09:00</lastmod>
+    <lastmod>2021-05-24T18:09:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haneulee.github.io/2021/05/git-%EC%9D%B4%EB%AF%B8-commit%ED%95%9C-author-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0/</loc>
+    <lastmod>2021-05-24T18:09:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haneulee.github.io/</loc>
+    <lastmod>2021-05-24T18:09:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haneulee.github.io/post/</loc>
+    <lastmod>2021-05-24T18:09:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haneulee.github.io/tags/</loc>
+    <lastmod>2021-05-24T18:09:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haneulee.github.io/tags/%EC%BB%A4%EB%B0%8B%EC%88%98%EC%A0%95/</loc>
+    <lastmod>2021-05-24T18:09:54+09:00</lastmod>
   </url>
   
   <url>
@@ -43,17 +83,7 @@
   </url>
   
   <url>
-    <loc>https://haneulee.github.io/</loc>
-    <lastmod>2021-05-21T10:30:25+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://haneulee.github.io/tags/key/</loc>
-    <lastmod>2021-05-21T10:30:25+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haneulee.github.io/post/</loc>
     <lastmod>2021-05-21T10:30:25+09:00</lastmod>
   </url>
   
@@ -64,11 +94,6 @@
   
   <url>
     <loc>https://haneulee.github.io/tags/ssh%EC%9D%B8%EC%A6%9D/</loc>
-    <lastmod>2021-05-21T10:30:25+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haneulee.github.io/tags/</loc>
     <lastmod>2021-05-21T10:30:25+09:00</lastmod>
   </url>
   
@@ -284,11 +309,6 @@
   
   <url>
     <loc>https://haneulee.github.io/tags/error/</loc>
-    <lastmod>2021-05-20T10:45:13+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haneulee.github.io/categories/git/</loc>
     <lastmod>2021-05-20T10:45:13+09:00</lastmod>
   </url>
   

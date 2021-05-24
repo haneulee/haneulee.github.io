@@ -6,7 +6,18 @@
     <description>Recent content in Git on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 20 May 2021 10:45:13 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 May 2021 18:09:54 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git - 이미 commit한 author 수정하기</title>
+      <link>https://haneulee.github.io/2021/05/git-%EC%9D%B4%EB%AF%B8-commit%ED%95%9C-author-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Mon, 24 May 2021 18:09:54 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/05/git-%EC%9D%B4%EB%AF%B8-commit%ED%95%9C-author-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
+      <description>git config user.email 수정 git config --global user.email &amp;quot;이메일&amp;quot; git config --global user.name &amp;quot;이름&amp;quot; author(이름)을 바꿀 commit 지정 git rebase 명령을 통해 author을 바꿀 커밋을 선택해준다.
+// ~ 뒤에 입력한 숫자는 4번째 커밋까지 선택 git rebase -i HEAD~4 그럼 아래와 같은 vi 화면이 뜨는데 변경할 커밋의 pick =&amp;gt; e로 변경해주고 :wq 를 눌러 저장, 종료해준다. git rebase -i HEAD~4 변경할 author 입력 git commit &amp;ndash;amend &amp;ndash;author=&amp;ldquo;아이디 &amp;lt;이메일&amp;gt;&amp;rdquo; 입력
+git commit --amend --author=&amp;quot;haneulee &amp;lt;lovesky4294@gmail.</description>
+    </item>
+    
     <item>
       <title>Git 오류 fatal: refusing to merge unrelated histories</title>
       <link>https://haneulee.github.io/2021/05/git-%EC%98%A4%EB%A5%98-fatal-refusing-to-merge-unrelated-histories/</link>

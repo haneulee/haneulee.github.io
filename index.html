@@ -68,7 +68,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-amwwsek1km5ktg0jdnasyimfcocmzihio9bisdqlmnwznwztzogu2y5qmyi.min.css" />
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-kaah6lpeqltxbpxdwqokjucv9msscifptg8aupyjicuyi54dow2vypybev.min.css" />
     
     
 
@@ -239,6 +239,66 @@ if (!doNotTrack) {
                ">
         <section class="postShorten-group main-content-wrap">
           
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://haneulee.github.io/2021/05/git-%EC%9D%B4%EB%AF%B8-commit%ED%95%9C-author-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0/">
+          Git - 이미 commit한 author 수정하기
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-05-24T18:09:54&#43;09:00">
+        
+  May 24, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/git">git</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        git config user.email 수정 git config --global user.email &quot;이메일&quot; git config --global user.name &quot;이름&quot; author(이름)을 바꿀 commit 지정 git rebase 명령을 통해 author을 바꿀 커밋을 선택해준다.
+// ~ 뒤에 입력한 숫자는 4번째 커밋까지 선택 git rebase -i HEAD~4 그럼 아래와 같은 vi 화면이 뜨는데 변경할 커밋의 pick =&gt; e로 변경해주고 :wq 를 눌러 저장, 종료해준다. git rebase -i HEAD~4 변경할 author 입력 git commit &ndash;amend &ndash;author=&ldquo;아이디 &lt;이메일&gt;&rdquo; 입력
+git commit --amend --author=&quot;haneulee &lt;lovesky4294@gmail.
+      
+      <p>
+        <a href="https://haneulee.github.io/2021/05/git-%EC%9D%B4%EB%AF%B8-commit%ED%95%9C-author-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
           
             
   
@@ -615,66 +675,6 @@ STEP 4. 시뮬레이터를 apple tv 4k 로 선택한 후, 상단 왼쪽의 play
 </article>
 
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://haneulee.github.io/2021/05/git-%EC%98%A4%EB%A5%98-fatal-refusing-to-merge-unrelated-histories/">
-          Git 오류 fatal: refusing to merge unrelated histories
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2021-05-20T10:45:13&#43;09:00">
-        
-  May 20, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
-    
-      <a class="category-link" href="https://haneulee.github.io/categories/git">git</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        git clone 후, git push 하는 과정 중에 다음과 같이 오류가 날 경우가 있다. 이는 push 하기 전에 git pull 을 먼저 실행해야 하는데 그 전에 수정했던 어떤 커밋과 꼬여 오류가 날 경우..
-fatal: refusing to merge unrelated histories 이럴 때는 아래처럼 실행하주고, 다시 git push를 하면 해결됨
-git pull origin 브런치명 --allow-unrelated-histories 
-      
-      <p>
-        <a href="https://haneulee.github.io/2021/05/git-%EC%98%A4%EB%A5%98-fatal-refusing-to-merge-unrelated-histories/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
           
   <div class="pagination-bar">
     <ul class="pagination">
@@ -751,7 +751,7 @@ git pull origin 브런치명 --allow-unrelated-histories
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-rinop9qnmrrgnnkceqjpm1grpojhqqbbi1bei65eqtj4xaanixg6ynkekfs.min.js"></script>
+<script src="https://haneulee.github.io/js/script-ikkjznzvdhslil70ktokhih8hzgyzzt3efytencefwkqm6n8fodsvk2pgbg.min.js"></script>
 
 
 <script lang="javascript">
