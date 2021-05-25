@@ -472,12 +472,6 @@ nest generate controller blog
         
       
       
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
-      
       <li class="post-action">
         
           <a class="post-action-btn btn btn--default" href="#table-of-contents">
@@ -494,11 +488,17 @@ nest generate controller blog
 </a>
             
               
-                <div id="disqus_thread">
-  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-              
             
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
           </div>
         </article>
         <footer id="footer" class="main-content-wrap">
@@ -560,12 +560,6 @@ nest generate controller blog
           </li>
         
       
-      
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
       
       <li class="post-action">
         
@@ -685,28 +679,6 @@ $(document).ready(function() {
 
 
   
-    
-      <script>
-        var disqus_config = function () {
-          this.page.url = 'https:\/\/haneulee.github.io\/2021\/05\/nestjs-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC\/';
-          
-            this.page.identifier = '\/2021\/05\/nestjs-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC\/'
-          
-        };
-        (function() {
-          
-          
-          if (window.location.hostname == "localhost") {
-            return;
-          }
-          var d = document, s = d.createElement('script');
-          var disqus_shortname = 'haneulee-github-io';
-          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
     
   
 

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Haneul Lee">
+<meta name="keywords" content="development, front-end, development, next-gen">
+<meta name="description" content="Lodash Lodash는 배열, 숫자, 객체, 문자열 등으로 작업하는 번거 로움을 없애 자바 스크립트를 더 쉽게 만듭니다. Lodash의 모듈 식 방법은 다음에 적합합니다.
+ 배열, 객체 및 문자열 반복 값 조작 및 테스트 복합 함수 만들기  map .map(collection, [iteratee=.identity])  배열 안에 객체들의 요소 중, 특정 요소만 빼서 배열로 만들고 싶은 경우 사용합니다.  Creates an array of values by running each element in collection thru iteratee. The iteratee is invoked with three arguments: (value, index|key, collection).">
+
+
+<meta property="og:description" content="Lodash Lodash는 배열, 숫자, 객체, 문자열 등으로 작업하는 번거 로움을 없애 자바 스크립트를 더 쉽게 만듭니다. Lodash의 모듈 식 방법은 다음에 적합합니다.
+ 배열, 객체 및 문자열 반복 값 조작 및 테스트 복합 함수 만들기  map .map(collection, [iteratee=.identity])  배열 안에 객체들의 요소 중, 특정 요소만 빼서 배열로 만들고 싶은 경우 사용합니다.  Creates an array of values by running each element in collection thru iteratee. The iteratee is invoked with three arguments: (value, index|key, collection).">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lodash 란 🤔">
+<meta name="twitter:title" content="Lodash 란 🤔">
+<meta property="og:url" content="https://haneulee.github.io/2021/05/lodash-%EB%9E%80/">
+<meta property="twitter:url" content="https://haneulee.github.io/2021/05/lodash-%EB%9E%80/">
+<meta property="og:site_name" content="Haneul Devlog">
+<meta property="og:description" content="Lodash Lodash는 배열, 숫자, 객체, 문자열 등으로 작업하는 번거 로움을 없애 자바 스크립트를 더 쉽게 만듭니다. Lodash의 모듈 식 방법은 다음에 적합합니다.
+ 배열, 객체 및 문자열 반복 값 조작 및 테스트 복합 함수 만들기  map .map(collection, [iteratee=.identity])  배열 안에 객체들의 요소 중, 특정 요소만 빼서 배열로 만들고 싶은 경우 사용합니다.  Creates an array of values by running each element in collection thru iteratee. The iteratee is invoked with three arguments: (value, index|key, collection).">
+<meta name="twitter:description" content="Lodash Lodash는 배열, 숫자, 객체, 문자열 등으로 작업하는 번거 로움을 없애 자바 스크립트를 더 쉽게 만듭니다. Lodash의 모듈 식 방법은 다음에 적합합니다.
+ 배열, 객체 및 문자열 반복 값 조작 및 테스트 복합 함수 만들기  map .map(collection, [iteratee=.identity])  배열 안에 객체들의 요소 중, 특정 요소만 빼서 배열로 만들고 싶은 경우 사용합니다.  Creates an array of values by running each element in collection thru iteratee. The iteratee is invoked with three arguments: (value, index|key, collection).">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-05-25T14:34:02">
+  
+  
+    <meta property="article:modified_time" content="2021-05-25T14:34:02">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+      <meta property="article:section" content="lodash">
+    
+  
+  
+    
+      <meta property="article:tag" content="development">
+    
+      <meta property="article:tag" content="front-end">
+    
+      <meta property="article:tag" content="lodash">
+    
+      <meta property="article:tag" content="javascript">
+    
+      <meta property="article:tag" content="map">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/lodash/img-1.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/lodash/img-1.png">
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+
+
+    <title>Lodash 란 🤔</title>
+
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://haneulee.github.io/2021/05/lodash-%EB%9E%80/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-kaah6lpeqltxbpxdwqokjucv9msscifptg8aupyjicuyi54dow2vypybev.min.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-BHPHWPTLMZ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://haneulee.github.io/">Haneul Devlog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://haneulee.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://haneulee.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Haneul Lee</h4>
+        
+          <h5 class="sidebar-profile-bio">Devlog</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories/development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin-square"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Lodash 란 🤔
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-05-25T14:34:02&#43;09:00">
+        
+  May 25, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/lodash">lodash</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#map">map</a>
+      <ul>
+        <li><a href="#_mapcollection-iteratee_identity"><em>.map(collection, [iteratee=</em>.identity])</a></li>
+      </ul>
+    </li>
+    <li><a href="#sortby">sortBy</a>
+      <ul>
+        <li><a href="#_sortbycollection-iteratees_identity"><em>.sortBy(collection, [iteratees=[</em>.identity]])</a></li>
+      </ul>
+    </li>
+    <li><a href="#uniqby">uniqBy</a>
+      <ul>
+        <li><a href="#_uniqbyarray-iteratee_identity"><em>.uniqBy(array, [iteratee=</em>.identity])</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<h1 id="lodashhttpslodashcom"><a href="https://lodash.com/">Lodash</a></h1>
+<p>Lodash는 배열, 숫자, 객체, 문자열 등으로 작업하는 번거 로움을 없애 자바 스크립트를 더 쉽게 만듭니다.
+Lodash의 모듈 식 방법은 다음에 적합합니다.</p>
+<ul>
+<li>배열, 객체 및 문자열 반복</li>
+<li>값 조작 및 테스트</li>
+<li>복합 함수 만들기</li>
+</ul>
+<h2 id="map">map</h2>
+<h3 id="_mapcollection-iteratee_identity"><em>.map(collection, [iteratee=</em>.identity])</h3>
+<ul>
+<li>배열 안에 객체들의 요소 중, 특정 요소만 빼서 배열로 만들고 싶은 경우 사용합니다.</li>
+</ul>
+<p>Creates an array of values by running each element in collection thru iteratee. The iteratee is invoked with three arguments:
+(value, index|key, collection).</p>
+<p>Many lodash methods are guarded to work as iteratees for methods like _.every, _.filter, _.map, _.mapValues, _.reject, and _.some.</p>
+<p><em><strong>Arguments</strong></em>
+collection (Array|Object): The collection to iterate over.
+[iteratee=_.identity] (Function): The function invoked per iteration.</p>
+<p><em><strong>Returns</strong></em>
+(Array): Returns the new mapped array.</p>
+<p><em><strong>Example</strong></em></p>
+<pre><code>function square(n) {
+  return n * n;
+}
+ 
+_.map([4, 8], square);
+// =&gt; [16, 64]
+ 
+_.map({ 'a': 4, 'b': 8 }, square);
+// =&gt; [16, 64] (iteration order is not guaranteed)
+ 
+var users = [
+  { 'user': 'barney' },
+  { 'user': 'fred' }
+];
+ 
+// The `_.property` iteratee shorthand.
+_.map(users, 'user');
+// =&gt; ['barney', 'fred']
+Try in REPL
+</code></pre><h2 id="sortby">sortBy</h2>
+<ul>
+<li>Collection 값들을 원하는 필드를 기준으로 정렬해줍니다.</li>
+</ul>
+<h3 id="_sortbycollection-iteratees_identity"><em>.sortBy(collection, [iteratees=[</em>.identity]])</h3>
+<p>Creates an array of elements, sorted in ascending order by the results of running each element in a collection thru each iteratee. This method performs a stable sort, that is, it preserves the original sort order of equal elements. The iteratees are invoked with one argument: (value).</p>
+<p><em><strong>Arguments</strong></em>
+collection (Array|Object): The collection to iterate over.
+[iteratees=[_.identity]] (&hellip;(Function|Function[])): The iteratees to sort by.</p>
+<p><em><strong>Returns</strong></em>
+(Array): Returns the new sorted array.</p>
+<p><em><strong>Example</strong></em></p>
+<pre><code>var users = [
+  { 'user': 'fred',   'age': 48 },
+  { 'user': 'barney', 'age': 36 },
+  { 'user': 'fred',   'age': 40 },
+  { 'user': 'barney', 'age': 34 }
+];
+ 
+_.sortBy(users, [function(o) { return o.user; }]);
+// =&gt; objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 40]]
+ 
+_.sortBy(users, ['user', 'age']);
+// =&gt; objects for [['barney', 34], ['barney', 36], ['fred', 40], ['fred', 48]]
+</code></pre><h2 id="uniqby">uniqBy</h2>
+<ul>
+<li>배열 안에 객체들의 요소 중복을 제거하고 싶을 때 사용합니다. (추가로, uniq 함수는 배열의 중복을 제거합니다.)</li>
+</ul>
+<h3 id="_uniqbyarray-iteratee_identity"><em>.uniqBy(array, [iteratee=</em>.identity])</h3>
+<p>This method is like _.uniq except that it accepts iteratee which is invoked for each element in array to generate the criterion by which uniqueness is computed. The order of result values is determined by the order they occur in the array. The iteratee is invoked with one argument:
+(value).</p>
+<p><em><strong>Arguments</strong></em>
+array (Array): The array to inspect.
+[iteratee=_.identity] (Function): The iteratee invoked per element.</p>
+<p><em><strong>Returns</strong></em>
+(Array): Returns the new duplicate free array.</p>
+<p><em><strong>Example</strong></em></p>
+<pre><code>_.uniqBy([2.1, 1.2, 2.3], Math.floor);
+// =&gt; [2.1, 1.2]
+ 
+// The `_.property` iteratee shorthand.
+_.uniqBy([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x');
+// =&gt; [{ 'x': 1 }, { 'x': 2 }]
+</code></pre><p><a href="https://codepen.io/travist/full/jrBjBz/">lodash tester</a>
+codepen에서 lodash를 테스트 해볼 수 있다.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/lodash/img-1.png" alt=""></p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/development/">development</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/front-end/">front-end</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/lodash/">lodash</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/javascript/">javascript</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/map/">map</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/disqus-%EC%97%90%EC%84%9C-utterances%EB%A1%9C-%EB%B3%80%EA%B2%BD-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%8C%93%EA%B8%80-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0/" data-tooltip="disqus 에서 utterances로 변경 - hugo 블로그 댓글 추가하기 ✨💬✨">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/git-%EC%9D%B4%EB%AF%B8-commit%ED%95%9C-author-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0/" data-tooltip="Git - 이미 commit한 author 수정하기">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/05/lodash-%EB%9E%80/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/05/lodash-%EB%9E%80/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/05/lodash-%EB%9E%80/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+            
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 <a href="https://github.com/haneulee">haneulee</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/disqus-%EC%97%90%EC%84%9C-utterances%EB%A1%9C-%EB%B3%80%EA%B2%BD-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%8C%93%EA%B8%80-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0/" data-tooltip="disqus 에서 utterances로 변경 - hugo 블로그 댓글 추가하기 ✨💬✨">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/git-%EC%9D%B4%EB%AF%B8-commit%ED%95%9C-author-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0/" data-tooltip="Git - 이미 commit한 author 수정하기">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/05/lodash-%EB%9E%80/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/05/lodash-%EB%9E%80/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/05/lodash-%EB%9E%80/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Flodash-%25EB%259E%2580%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Flodash-%25EB%259E%2580%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Flodash-%25EB%259E%2580%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Lee</h4>
+    
+      <div id="about-card-bio">Devlog</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://haneulee.github.io/img/gradient.png');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://haneulee.github.io/js/script-ikkjznzvdhslil70ktokhih8hzgyzzt3efytencefwkqm6n8fodsvk2pgbg.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

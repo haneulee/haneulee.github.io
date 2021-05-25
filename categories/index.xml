@@ -6,13 +6,31 @@
     <description>Recent content in Categories on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 24 May 2021 18:09:54 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 May 2021 14:36:24 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blog</title>
+      <link>https://haneulee.github.io/categories/blog/</link>
+      <pubDate>Tue, 25 May 2021 14:36:24 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/categories/blog/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>development</title>
       <link>https://haneulee.github.io/categories/development/</link>
-      <pubDate>Mon, 24 May 2021 18:09:54 +0900</pubDate>
+      <pubDate>Tue, 25 May 2021 14:36:24 +0900</pubDate>
       
       <guid>https://haneulee.github.io/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lodash</title>
+      <link>https://haneulee.github.io/categories/lodash/</link>
+      <pubDate>Tue, 25 May 2021 14:34:02 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/categories/lodash/</guid>
       <description></description>
     </item>
     
@@ -112,15 +130,6 @@
       <pubDate>Tue, 18 May 2021 12:28:37 +0900</pubDate>
       
       <guid>https://haneulee.github.io/categories/rect/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>https://haneulee.github.io/categories/blog/</link>
-      <pubDate>Mon, 17 May 2021 18:33:22 +0900</pubDate>
-      
-      <guid>https://haneulee.github.io/categories/blog/</guid>
       <description></description>
     </item>
     

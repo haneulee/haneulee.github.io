@@ -464,12 +464,6 @@ if (!doNotTrack) {
         
       
       
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
-      
       <li class="post-action">
         
           <a class="post-action-btn btn btn--default" href="#">
@@ -486,11 +480,17 @@ if (!doNotTrack) {
 </a>
             
               
-                <div id="disqus_thread">
-  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-              
             
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
           </div>
         </article>
         <footer id="footer" class="main-content-wrap">
@@ -552,12 +552,6 @@ if (!doNotTrack) {
           </li>
         
       
-      
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
       
       <li class="post-action">
         
@@ -677,28 +671,6 @@ $(document).ready(function() {
 
 
   
-    
-      <script>
-        var disqus_config = function () {
-          this.page.url = 'https:\/\/haneulee.github.io\/2021\/05\/ssh-%EB%B0%B1%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95\/';
-          
-            this.page.identifier = '\/2021\/05\/ssh-%EB%B0%B1%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95\/'
-          
-        };
-        (function() {
-          
-          
-          if (window.location.hostname == "localhost") {
-            return;
-          }
-          var d = document, s = d.createElement('script');
-          var disqus_shortname = 'haneulee-github-io';
-          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
     
   
 

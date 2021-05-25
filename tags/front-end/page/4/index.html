@@ -246,6 +246,127 @@ if (!doNotTrack) {
               
   
     
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://haneulee.github.io/2021/05/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91/">
+          Hugo 블로그 시작
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-05-17T11:48:31&#43;09:00">
+        
+  May 17, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/blog">blog</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/hugo">hugo</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        휴고 공식 문서
+ hugo 소개 Hugo는 Go로 작성된 빠르고 현대적인 정적 사이트 생성기이며 웹 사이트를 다시 재미있게 만들 수 있도록 설계되었습니다. Hugo는 범용 웹 사이트 프레임 워크입니다. 기술적으로 말해서 Hugo는 정적 사이트 생성기 입니다. 방문자 요청마다 페이지를 동적으로 구축하는 시스템과 달리 Hugo는 콘텐츠를 생성하거나 업데이트 할 때 페이지를 구축합니다. 웹 사이트는 편집하는 것보다 훨씬 더 자주보기 때문에 Hugo는 웹 사이트의 최종 사용자에게 최적의보기 경험을 제공하고 웹 사이트 작성자에게 이상적인 글쓰기 경험을 제공하도록 설계되었습니다.
+      
+      <p>
+        <a href="https://haneulee.github.io/2021/05/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+    <a href="https://haneulee.github.io/2021/05/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91/">
+      <div class="postShorten-thumbnailimg">
+        <img alt="" itemprop="image" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/hugo/github-site.png"/>
+      </div>
+    </a>
+  
+</article>
+
+            
+              
+  
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://haneulee.github.io/2020/02/gitlab-pages%EC%97%90-%EB%82%98%EC%9D%98-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0/">
+          gitlab pages에 나의 도메인 연결하기
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2020-02-13T22:20:42&#43;09:00">
+        
+  February 13, 2020
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/gitlab">gitlab</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        먼저 gitlab repository를 새로 만들고 , 정적 웹페이지 든 spa 이든 프로젝트 폴더를 만들고 .gitlab-ci.yml 파일을 새로 만들어서 아래와 같이 입력한다. image: node:latest cache: paths: - node_modules/ before_script: - npm install # test: # stage: test # script: # - CI=true npm test pages: stage: deploy script: - CI=true npm run build - rm -rf public - mv build public artifacts: paths: - public # GitLab pages serve from a 'public' directory only: - master # run on master branch 그리고 git push 를 하면 자동으로 위와 같이 빌드를 하게되고, 해당 웹사이트에서 자동으로 배포되는 것을 알 수 있다.
+      
+      <p>
+        <a href="https://haneulee.github.io/2020/02/gitlab-pages%EC%97%90-%EB%82%98%EC%9D%98-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+    <a href="https://haneulee.github.io/2020/02/gitlab-pages%EC%97%90-%EB%82%98%EC%9D%98-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0/">
+      <div class="postShorten-thumbnailimg">
+        <img alt="" itemprop="image" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FB7wAZ%2FbtqBUTZRU2a%2FZkVPDNukK7yJTuC8it3Mv1%2Fimg.png"/>
+      </div>
+    </a>
+  
+</article>
+
+            
+              
+  
+    
       
         
       

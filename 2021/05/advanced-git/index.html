@@ -375,12 +375,6 @@ if (!doNotTrack) {
         
       
       
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
-      
       <li class="post-action">
         
           <a class="post-action-btn btn btn--default" href="#">
@@ -397,11 +391,17 @@ if (!doNotTrack) {
 </a>
             
               
-                <div id="disqus_thread">
-  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-              
             
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
           </div>
         </article>
         <footer id="footer" class="main-content-wrap">
@@ -463,12 +463,6 @@ if (!doNotTrack) {
           </li>
         
       
-      
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
       
       <li class="post-action">
         
@@ -588,28 +582,6 @@ $(document).ready(function() {
 
 
   
-    
-      <script>
-        var disqus_config = function () {
-          this.page.url = 'https:\/\/haneulee.github.io\/2021\/05\/advanced-git\/';
-          
-            this.page.identifier = '\/2021\/05\/advanced-git\/'
-          
-        };
-        (function() {
-          
-          
-          if (window.location.hostname == "localhost") {
-            return;
-          }
-          var d = document, s = d.createElement('script');
-          var disqus_shortname = 'haneulee-github-io';
-          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
     
   
 
