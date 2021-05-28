@@ -13,7 +13,7 @@
       <pubDate>Tue, 18 May 2021 12:30:09 +0900</pubDate>
       
       <guid>https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-usestate-%ED%9B%85-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
-      <description>배열 state  1. 추가 const [language, setLanguage] = useState([]); setLanguage([...language, newLanguage]); // or setLanguage(language.concat(newLanguage)); 2. 삭제 const [language, setLanguage] = useState([]); setLanguage(language.filter(item =&amp;gt; item.id !== id)); 3. 수정 const [language, setLanguage] = useState([]); setLanguage( language.map(item =&amp;gt; item.id === id ? { ...item, active: !item.active } : item ) ); </description>
+      <description>배열 state  1. 추가 const [language, setLanguage] = useState([]); setLanguage([...language, newLanguage]); // or setLanguage(language.concat(newLanguage)); 2. 삭제 const [language, setLanguage] = useState([]); setLanguage(language.filter(item =&amp;gt; item.id !== id)); 3. 수정 const [language, setLanguage] = useState([]); setLanguage( language.map(item =&amp;gt; item.id === id ? { ...item, active: !item.active } : item ) );    (adsbygoogle = window.adsbygoogle || []).push({});  </description>
     </item>
     
     <item>

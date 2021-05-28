@@ -44,7 +44,7 @@ h4,
 h5,
 h6 {
   letter-spacing: -0.04em;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   line-height: 1.45em;
   color: #4a4a4a; }
@@ -238,7 +238,8 @@ pre.code-highlight > code {
     #about #about-card #about-card-job,
     #about #about-card #about-card-location {
       display: inline-block;
-      vertical-align: top; }
+      vertical-align: top;
+      word-break: break-word; }
     #about #about-card #about-card-job,
     #about #about-card #about-card-location,
     #about #about-card #about-card-bio {
@@ -678,7 +679,7 @@ pre.code-highlight > code {
       width: calc(100% - 75px); } }
 
 #sidebar {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   height: 100%;
   position: fixed;
   top: 0;
@@ -1498,7 +1499,7 @@ pre.code-highlight > code {
 
 .caption {
   display: block;
-  font-family: "Open Sans";
+  font-family: "Merriweather", serif;
   font-size: 1.3rem;
   color: #81929d;
   text-align: center;
@@ -1940,7 +1941,7 @@ a.fancybox {
       text-decoration: none; }
   .post .post-meta {
     line-height: 1.5em;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
     font-weight: 400;
     color: #9eabb3; }
@@ -2078,7 +2079,7 @@ a.fancybox {
         text-decoration: none; }
     .post-header-cover .post-header .post-meta {
       max-width: 750px;
-      font-family: "Open Sans";
+      font-family: "Open Sans", sans-serif;
       font-size: 1.6rem;
       color: white !important;
       font-weight: 400;
@@ -2246,7 +2247,7 @@ a.fancybox {
   .postShorten .postShorten-meta,
   .postShorten .postShorten-readingtime,
   .postShorten .postShorten-excerpt_link {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
     font-weight: 400; }
   .postShorten .postShorten-excerpt,
