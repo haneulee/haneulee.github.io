@@ -68,7 +68,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-amwwsek1km5ktg0jdnasyimfcocmzihio9bisdqlmnwznwztzogu2y5qmyi.min.css" />
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-kaah6lpeqltxbpxdwqokjucv9msscifptg8aupyjicuyi54dow2vypybev.min.css" />
     
     
 
@@ -242,6 +242,66 @@ if (!doNotTrack) {
         
           <section class="postShorten-group main-content-wrap">
             
+            
+              
+  
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
+          NextJS - document is not defined 오류
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-05-30T16:51:26&#43;09:00">
+        
+  May 30, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/nextjs">nextjs</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        (adsbygoogle = window.adsbygoogle || []).push({});  document is not defined 오류 해결방법  서버사이드 렌더링인 nextJS를 사용할 때는 window 또는 Document 객체를 사용할 수 없다.  해결 방법 첫번째  window 오브젝트가 있는지 확인하는 조건문을 추가하여 렌더링 된 다음에 document 코드를 실행하도록 한다.  if (typeof window === 'object') { // Check if document is finally loaded document.addEventListener(&quot;DOMContentLoaded&quot;, function () { alert('Finished loading') }); } 두번째  nextJS는 react를 사용할 수 있기 때문에 react에서 컴포넌트가 마운트 또는 업데이트 된 다음에 동작하는 componentDidMount 또는 useEffect 훅을 사용하여 체크한다.
+      
+      <p>
+        <a href="https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+    <a href="https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
+      <div class="postShorten-thumbnailimg">
+        <img alt="" itemprop="image" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/nextjs/img-3.png"/>
+      </div>
+    </a>
+  
+</article>
+
             
               
   
@@ -615,67 +675,6 @@ STEP 4. 시뮬레이터를 apple tv 4k 로 선택한 후, 상단 왼쪽의 play
 </article>
 
             
-              
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://haneulee.github.io/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
-          Javascript 테스트
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2021-05-20T11:07:12&#43;09:00">
-        
-  May 20, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
-    
-      <a class="category-link" href="https://haneulee.github.io/categories/unittest">unittest</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        1.자바스크립트 테스팅 환경 테스트 러너  테스트 파일을 읽어들여 실행하고, 결과를 출력 파일이 변경된 경우 자동으로 실행해주는 watch 등의 기능 제공 Reporter를 지정해서 원하는 형태로 결과를 출력 Node 환경에서 실행 : Mocha, Jest, AVA  브라우저 환경에서 실행 : Karma → 웹서버에 연결되어 있는 브라우저 위에서 테스트를 수행  카르마보다 Node가 조금 더 빠르다.
-테스트 프레임워크  사용자가 테스트 코드를 작성할 수 있는 기반을 제공 프레임 워크에 의해 제공된 함수를 이용해서 테스트 코드를 작성⇒ 프레임 워크가 자동으로 테스트를 실행하고 결과를 수집해서 출력.
-      
-      <p>
-        <a href="https://haneulee.github.io/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://haneulee.github.io/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-1.png"/>
-      </div>
-    </a>
-  
-</article>
-
-            
             
   <div class="pagination-bar">
     <ul class="pagination">
@@ -753,7 +752,7 @@ STEP 4. 시뮬레이터를 apple tv 4k 로 선택한 후, 상단 왼쪽의 play
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-rinop9qnmrrgnnkceqjpm1grpojhqqbbi1bei65eqtj4xaanixg6ynkekfs.min.js"></script>
+<script src="https://haneulee.github.io/js/script-ikkjznzvdhslil70ktokhih8hzgyzzt3efytencefwkqm6n8fodsvk2pgbg.min.js"></script>
 
 
 <script lang="javascript">

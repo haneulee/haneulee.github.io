@@ -6,22 +6,31 @@
     <description>Recent content in Categories on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 25 May 2021 14:36:24 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 May 2021 16:51:26 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>development</title>
+      <link>https://haneulee.github.io/categories/development/</link>
+      <pubDate>Sun, 30 May 2021 16:51:26 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nextjs</title>
+      <link>https://haneulee.github.io/categories/nextjs/</link>
+      <pubDate>Sun, 30 May 2021 16:51:26 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/categories/nextjs/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>blog</title>
       <link>https://haneulee.github.io/categories/blog/</link>
       <pubDate>Tue, 25 May 2021 14:36:24 +0900</pubDate>
       
       <guid>https://haneulee.github.io/categories/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>development</title>
-      <link>https://haneulee.github.io/categories/development/</link>
-      <pubDate>Tue, 25 May 2021 14:36:24 +0900</pubDate>
-      
-      <guid>https://haneulee.github.io/categories/development/</guid>
       <description></description>
     </item>
     
