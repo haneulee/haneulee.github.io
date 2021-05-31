@@ -244,30 +244,26 @@ if (!doNotTrack) {
             
   
     
-      
-        
-      
-    
   
 
 
   
 
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
   <div class="postShorten-wrap">
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-usestate-%ED%9B%85-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/">
-          리액트 useState 훅 사용하기
+        <a class="link-unstyled" href="https://haneulee.github.io/2020/02/%ED%8B%B0%EC%8A%A4%ED%86%A0%EB%A6%AC-code-block/">
+          티스토리 Code Block
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-05-18T12:30:09&#43;09:00">
+      <time itemprop="datePublished" datetime="2020-02-09T13:15:32&#43;09:00">
         
-  May 18, 2021
+  February 9, 2020
 
       </time>
     
@@ -278,7 +274,7 @@ if (!doNotTrack) {
     
       <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
     
-      <a class="category-link" href="https://haneulee.github.io/categories/react">react</a>
+      <a class="category-link" href="https://haneulee.github.io/categories/codeblock">codeblock</a>
     
   
 
@@ -287,76 +283,25 @@ if (!doNotTrack) {
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        배열 state  1. 추가 const [language, setLanguage] = useState([]); setLanguage([...language, newLanguage]); // or setLanguage(language.concat(newLanguage)); 2. 삭제 const [language, setLanguage] = useState([]); setLanguage(language.filter(item =&gt; item.id !== id)); 3. 수정 const [language, setLanguage] = useState([]); setLanguage( language.map(item =&gt; item.id === id ? { ...item, active: !item.active } : item ) );    (adsbygoogle = window.adsbygoogle || []).push({});  
+        개발 블로그를 작성하다보면 코드 블럭을 사용하는 경우가 많다. 그런데 아래처럼 코드블럭이 그냥 일반 텍스트처럼 나와 매우 가독성이 떨어진다. 따라서 티스토리 블로그의 코드블럭 스타일을 변경하기로 했다. **2가지 방법이 있는데, **
+1. 관리페이지 &gt; 플러그인 &gt; 코드블럭 &gt; 마음에 드는 스타일 설정
+2. 스킨편집 &gt; html 편집 &gt; &lsquo;head&rsquo;태그 안에 Highlight.js 임포트
+2번 방법은
+먼저 아래 코드를 태그 안에 넣으면 됨!
+https://highlightjs.org/static/demo/에서 마음에 드는 데모 스타일을 고르고 아래 코드에서 default.min.css 에서 default를 다른 스타일 이름으로 변경하면 된다.
       
       <p>
-        <a href="https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-usestate-%ED%9B%85-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link">Continue reading</a>
+        <a href="https://haneulee.github.io/2020/02/%ED%8B%B0%EC%8A%A4%ED%86%A0%EB%A6%AC-code-block/" class="postShorten-excerpt_link link">Continue reading</a>
         
       </p>
     </div>
   </div>
   
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://haneulee.github.io/2021/05/create-react-app-%EC%A0%88%EB%8C%80%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95-%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/">
-          create-react-app 절대경로 설정, 타입스크립트
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2021-05-18T12:28:37&#43;09:00">
-        
-  May 18, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
-    
-      <a class="category-link" href="https://haneulee.github.io/categories/rect">rect</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        타입스크립트 설치 후, tsc init으로 tsconfig.json을 생성했다. 그리고, 절대 경로 설정을 위해 tsconfig.json 파일에 path 를 변경했는데 npm start를 할 때마다 계속 tsconfig.json파일이 자동으로 변경되었다&hellip;&hellip;.. ㅠㅠ
-원인은 CRA로 프로젝트를 만들면 내부에 있는 웹팩 설정에서 tsconfig.json을 default로 설정하기 때문&hellip;.
-npm run eject를 해야 웹팩 설정이 보이고, 거기서 수정해야한다&hellip;
-그런데 한번 eject를 하면 React의 버전업에 대한 자동으로 다른 구성요소 및 설정이 변경되는 장점을 잃어버리게 된다
-하지만 나는 eject를 하기 싫었으므로 이를 피해가기 위해 craco를 사용하였다.
-      
-      <p>
-        <a href="https://haneulee.github.io/2021/05/create-react-app-%EC%A0%88%EB%8C%80%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95-%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
+    <a href="https://haneulee.github.io/2020/02/%ED%8B%B0%EC%8A%A4%ED%86%A0%EB%A6%AC-code-block/">
+      <div class="postShorten-thumbnailimg">
+        <img alt="" itemprop="image" src="https://blog.kakaocdn.net/dn/m42J6/btqBRwvm8CS/RwybAlxm2zeLp2zEk32w91/img.png"/>
+      </div>
+    </a>
   
 </article>
 
@@ -378,16 +323,16 @@ npm run eject를 해야 웹팩 설정이 보이고, 거기서 수정해야한다
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/">
-          리액트 절대 경로 설정하기
+        <a class="link-unstyled" href="https://haneulee.github.io/2019/11/svelte/">
+          Svelte
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-05-18T12:26:22&#43;09:00">
+      <time itemprop="datePublished" datetime="2019-11-10T23:03:00&#43;09:00">
         
-  May 18, 2021
+  November 10, 2019
 
       </time>
     
@@ -398,7 +343,7 @@ npm run eject를 해야 웹팩 설정이 보이고, 거기서 수정해야한다
     
       <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
     
-      <a class="category-link" href="https://haneulee.github.io/categories/react">react</a>
+      <a class="category-link" href="https://haneulee.github.io/categories/svelte">Svelte</a>
     
   
 
@@ -407,19 +352,18 @@ npm run eject를 해야 웹팩 설정이 보이고, 거기서 수정해야한다
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        Web을 개발하다보면 폴더와 파일의 depth가 깊어지는 경우가 있다.
-이런 경우 파일 import시에 ../../components/sign/logout 식으로 ../가 많아져서 복잡하고 번거로워진다.
-그러나 절대경로를 설정하면 components/sign/logout 으로 간단히 작성할 수 있다는 사실!
-나는 src 폴더를 기준으로 절대경로를 설정하였다.
-방법은 아래와 같다.
-| Linux, Mac 에서 설정하기
-프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
-&quot;start&quot;: &quot;NODE_PATH=src/ react-scripts start&quot;, &quot;build&quot;: &quot;NODE_PATH=src/ react-scripts build&quot;, | Window 에서 설정하기
-여기서는 cross-env가 필요하다.
-먼저 다음 command를 이용해 cross-env를 설치해준다.
+        Svelte Svelte란? svelte란 날씬한, 호리호리한이란 뜻입니다.
+이름답게 적은 코드, 적은 용량 등을 자랑하는 프레임워크입니다.
+공식 문서에 따르면 새로운 웹 어플리케이션 개발 방법을 제시하는 컴파일러라고도 소개되어 있습니다.
+vue, react와는 다르게 가상돔을 사용하지 않습니다.
+svelte는 빌드 타임에 실행되며, 효과적으로 DOM을 업데이트하는 코드로 컴파일됩니다.
+기본 문법 svelte는 vue 처럼 .svelte라는 별도의 파일 확장자를 갖습니다.
+기본문법은 html과 비슷합니다.
+h1 태그 내에 {name}은 스크립트의 선언한 name 변수를 참조해서 출력합니다.
+css 또한 똑같이 작성하시면 됩니다.
       
       <p>
-        <a href="https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link">Continue reading</a>
+        <a href="https://haneulee.github.io/2019/11/svelte/" class="postShorten-excerpt_link link">Continue reading</a>
         
       </p>
     </div>
@@ -440,21 +384,21 @@ npm run eject를 해야 웹팩 설정이 보이고, 거기서 수정해야한다
 
   
 
-<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
   <div class="postShorten-wrap">
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://haneulee.github.io/2021/05/cdn-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/">
-          CDN 이미지 블로그에 적용하기
+        <a class="link-unstyled" href="https://haneulee.github.io/2019/11/how-to-handle-react-state-array/">
+          how to handle React state array
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-05-17T18:33:22&#43;09:00">
+      <time itemprop="datePublished" datetime="2019-11-10T00:03:00&#43;09:00">
         
-  May 17, 2021
+  November 10, 2019
 
       </time>
     
@@ -465,7 +409,7 @@ npm run eject를 해야 웹팩 설정이 보이고, 거기서 수정해야한다
     
       <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
     
-      <a class="category-link" href="https://haneulee.github.io/categories/blog">blog</a>
+      <a class="category-link" href="https://haneulee.github.io/categories/react">React</a>
     
   
 
@@ -474,11 +418,16 @@ npm run eject를 해야 웹팩 설정이 보이고, 거기서 수정해야한다
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        CDN 이미지를 블로그에 적용하기 깃헙 블로그를 사용하면서 이미지가 상당히 느리게 로딩되는 것을 확인 jsdelivr의 cdn 서버를 이용하여 이미지를 로딩하기로 결정
-https://cdn.jsdelivr.net/gh/계정명/레파지토리명/파일경로 
+        state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.  2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
+  이것을 사용하기 위해서는 라이브러리를 사전 설치해줘야 한다.
+  설치 방법 : npm을 통한 설치
+  $npm install &ndash;save react-addons-update
+  import update from &lsquo;react-addons-update&rsquo;
+  원소 추가
+  this.setState({ list: update( this.state.list, { $push: [newObj, newObj2] } ); });   (줄 3) 첫 번째 인수 : 처리해야할 객체나 배열
       
       <p>
-        <a href="https://haneulee.github.io/2021/05/cdn-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link">Continue reading</a>
+        <a href="https://haneulee.github.io/2019/11/how-to-handle-react-state-array/" class="postShorten-excerpt_link link">Continue reading</a>
         
       </p>
     </div>
@@ -490,87 +439,30 @@ https://cdn.jsdelivr.net/gh/계정명/레파지토리명/파일경로
             
   
     
+      
+        
+      
+    
   
 
 
   
 
-<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
   <div class="postShorten-wrap">
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://haneulee.github.io/2021/05/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91/">
-          Hugo 블로그 시작
+        <a class="link-unstyled" href="https://haneulee.github.io/2018/12/why-do-we-write-superprops/">
+          Why Do We Write super(props)?
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-05-17T11:48:31&#43;09:00">
+      <time itemprop="datePublished" datetime="2018-12-10T00:00:00Z">
         
-  May 17, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://haneulee.github.io/categories/blog">blog</a>, 
-    
-      <a class="category-link" href="https://haneulee.github.io/categories/hugo">hugo</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        휴고 공식 문서
- hugo 소개 Hugo는 Go로 작성된 빠르고 현대적인 정적 사이트 생성기이며 웹 사이트를 다시 재미있게 만들 수 있도록 설계되었습니다. Hugo는 범용 웹 사이트 프레임 워크입니다. 기술적으로 말해서 Hugo는 정적 사이트 생성기 입니다. 방문자 요청마다 페이지를 동적으로 구축하는 시스템과 달리 Hugo는 콘텐츠를 생성하거나 업데이트 할 때 페이지를 구축합니다. 웹 사이트는 편집하는 것보다 훨씬 더 자주보기 때문에 Hugo는 웹 사이트의 최종 사용자에게 최적의보기 경험을 제공하고 웹 사이트 작성자에게 이상적인 글쓰기 경험을 제공하도록 설계되었습니다.
-      
-      <p>
-        <a href="https://haneulee.github.io/2021/05/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://haneulee.github.io/2021/05/hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%8B%9C%EC%9E%91/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/hugo/github-site.png"/>
-      </div>
-    </a>
-  
-</article>
-
-          
-            
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://haneulee.github.io/2021/05/advanced-git/">
-          Advanced Git
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2021-05-11T00:00:00Z">
-        
-  May 11, 2021
+  December 10, 2018
 
       </time>
     
@@ -581,7 +473,7 @@ https://cdn.jsdelivr.net/gh/계정명/레파지토리명/파일경로
     
       <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
     
-      <a class="category-link" href="https://haneulee.github.io/categories/git">Git</a>
+      <a class="category-link" href="https://haneulee.github.io/categories/react">React</a>
     
   
 
@@ -590,20 +482,20 @@ https://cdn.jsdelivr.net/gh/계정명/레파지토리명/파일경로
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        watch -n 1 -d find .    (adsbygoogle = window.adsbygoogle || []).push({});  
+        Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
+요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
+웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
+이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
+ 첫번째,
+ 나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
+class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .
       
       <p>
-        <a href="https://haneulee.github.io/2021/05/advanced-git/" class="postShorten-excerpt_link link">Continue reading</a>
+        <a href="https://haneulee.github.io/2018/12/why-do-we-write-superprops/" class="postShorten-excerpt_link link">Continue reading</a>
         
       </p>
     </div>
   </div>
-  
-    <a href="https://haneulee.github.io/2021/05/advanced-git/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg"/>
-      </div>
-    </a>
   
 </article>
 
@@ -611,26 +503,30 @@ https://cdn.jsdelivr.net/gh/계정명/레파지토리명/파일경로
             
   
     
+      
+        
+      
+    
   
 
 
   
 
-<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
   <div class="postShorten-wrap">
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://haneulee.github.io/2020/02/gitlab-pages%EC%97%90-%EB%82%98%EC%9D%98-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0/">
-          gitlab pages에 나의 도메인 연결하기
+        <a class="link-unstyled" href="https://haneulee.github.io/2018/10/redux/">
+          Redux
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-02-13T22:20:42&#43;09:00">
+      <time itemprop="datePublished" datetime="2018-10-03T11:03:00&#43;09:00">
         
-  February 13, 2020
+  October 3, 2018
 
       </time>
     
@@ -641,7 +537,7 @@ https://cdn.jsdelivr.net/gh/계정명/레파지토리명/파일경로
     
       <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
     
-      <a class="category-link" href="https://haneulee.github.io/categories/gitlab">gitlab</a>
+      <a class="category-link" href="https://haneulee.github.io/categories/redux">Redux</a>
     
   
 
@@ -650,20 +546,133 @@ https://cdn.jsdelivr.net/gh/계정명/레파지토리명/파일경로
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        먼저 gitlab repository를 새로 만들고 , 정적 웹페이지 든 spa 이든 프로젝트 폴더를 만들고 .gitlab-ci.yml 파일을 새로 만들어서 아래와 같이 입력한다. image: node:latest cache: paths: - node_modules/ before_script: - npm install # test: # stage: test # script: # - CI=true npm test pages: stage: deploy script: - CI=true npm run build - rm -rf public - mv build public artifacts: paths: - public # GitLab pages serve from a 'public' directory only: - master # run on master branch 그리고 git push 를 하면 자동으로 위와 같이 빌드를 하게되고, 해당 웹사이트에서 자동으로 배포되는 것을 알 수 있다.
+        Redux 리덕스 : 리액트를 위한 스테이트 매니지먼트 툴 (복잡한 앱에서 효율적, 단순한 앱에서 필요없음)
+Why do we need it? 왜 필요한가?  Components have local state, but apps have global state. Sometimes state need to be shared. We need to save the shared state somewhere. Redux == state container  Redux is a gloabl state container  Ther Redux Store is like a box We go and grab what we need for the container For example, from  we only grab the username  Stuff to remember  The whole state of your app is stored in an object(store)   state 가 복잡하고 커질 수 있어서 리덕스는 해당 오브젝트를 수정하는 것에 매우 엄격함  If you wanna change the data inside of this object you need to &lsquo;dispatch&rsquo; (sned) an action   오브젝트의 데이터를 수정하는 방법은 액션을 reducer 로 보내면 가능함  You will send this actions to a reducer and this reducer will change the object for you.
       
       <p>
-        <a href="https://haneulee.github.io/2020/02/gitlab-pages%EC%97%90-%EB%82%98%EC%9D%98-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link">Continue reading</a>
+        <a href="https://haneulee.github.io/2018/10/redux/" class="postShorten-excerpt_link link">Continue reading</a>
         
       </p>
     </div>
   </div>
   
-    <a href="https://haneulee.github.io/2020/02/gitlab-pages%EC%97%90-%EB%82%98%EC%9D%98-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FB7wAZ%2FbtqBUTZRU2a%2FZkVPDNukK7yJTuC8it3Mv1%2Fimg.png"/>
-      </div>
-    </a>
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://haneulee.github.io/2018/09/javascript-use-strict/">
+          Javascript use strict
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-09-17T17:03:00&#43;09:00">
+        
+  September 17, 2018
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/javascript">javascript</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        자바스크립트 use strict 모드 : strict 모드는 ES5(ECMA Script 5)에 추가된 키워드 strict 모드는 자바스크립트가 묵인했던 에러들의 에러 메시지를 발생시킨다.
+ 선언하지 않고 전역 변수를 만들 수 없다.  &quot;use strict&quot; temp = 4;  writable이 false로, 읽기 전용 객체에 쓰는 것이 불가능. (read only 객체 수정 불가능)  &quot;use strict&quot;; var testObj = Object.defineProperties({}, { prop1: { value: 10, writable: false // by default }, prop2: { get: function () { } } }); testObj.
+      
+      <p>
+        <a href="https://haneulee.github.io/2018/09/javascript-use-strict/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://haneulee.github.io/2018/09/javascript-context/">
+          Javascript Context
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-09-12T17:56:52&#43;09:00">
+        
+  September 12, 2018
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/javascript">javascript</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        자바스크립트 실행 컨텍스트 : 현재 실행되는 컨텍스트에서 이 컨텍스트와 관련 없는 실행 코드가 실행되면, 새로운 컨텍스트가 생성되어 스택에 들어가고 제어권이 그 컨텍스트로 이동한다.
+ 실행 컨텍스트가 형성되는 경우  전역 코드 eval() 함수로 실행되는 코드 함수 안의 코드를 실행하는 경우       (adsbygoogle = window.adsbygoogle || []).push({});  
+      
+      <p>
+        <a href="https://haneulee.github.io/2018/09/javascript-context/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
   
 </article>
 
@@ -681,15 +690,8 @@ https://cdn.jsdelivr.net/gh/계정명/레파지토리명/파일경로
           </li>
         
         
-          <li class="pagination-next">
-            <a class="btn btn--default btn--small" href="https://haneulee.github.io/post/page/5/">
-              <span>OLDER POSTS</span>
-              <i class="fa fa-angle-right text-base icon-ml"></i>
-            </a>
-          </li>
-        
       
-      <li class="pagination-number">page 4 of 6</li>
+      <li class="pagination-number">page 4 of 4</li>
     </ul>
   </div>
 
