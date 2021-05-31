@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Haneul Lee">
+<meta name="keywords" content="development, front-end, development, next-gen">
+<meta name="description" content="(adsbygoogle = window.adsbygoogle || []).push({});  Pug Pug 란 ?  Pug는 Haml의 영향을 많이 받고 Node.js 및 브라우저 용 JavaScript로 구현 된 고성능 템플릿 엔진이다.  이 프로젝트는 이전에 &ldquo;Jade&quot;로 알려졌습니다. 그러나 &ldquo;Jade&quot;는 등록 상표라는 것이 밝혀졌습니다. 결과적으로 이름 변경이 필요했습니다. 메인테이너들 사이의 토론 끝에 &ldquo;Pug&rdquo; 가이 프로젝트의 새 이름으로 선택되었습니다. 버전 2부터는 &ldquo;pug&quot;가 공식 패키지 이름입니다.
+패키지 또는 앱에서 현재를 사용 jade하는 경우 걱정하지 마십시오.">
+
+
+<meta property="og:description" content="(adsbygoogle = window.adsbygoogle || []).push({});  Pug Pug 란 ?  Pug는 Haml의 영향을 많이 받고 Node.js 및 브라우저 용 JavaScript로 구현 된 고성능 템플릿 엔진이다.  이 프로젝트는 이전에 &ldquo;Jade&quot;로 알려졌습니다. 그러나 &ldquo;Jade&quot;는 등록 상표라는 것이 밝혀졌습니다. 결과적으로 이름 변경이 필요했습니다. 메인테이너들 사이의 토론 끝에 &ldquo;Pug&rdquo; 가이 프로젝트의 새 이름으로 선택되었습니다. 버전 2부터는 &ldquo;pug&quot;가 공식 패키지 이름입니다.
+패키지 또는 앱에서 현재를 사용 jade하는 경우 걱정하지 마십시오.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pug로 HTML 템플릿 만들기 🐶">
+<meta name="twitter:title" content="Pug로 HTML 템플릿 만들기 🐶">
+<meta property="og:url" content="https://haneulee.github.io/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/">
+<meta property="twitter:url" content="https://haneulee.github.io/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/">
+<meta property="og:site_name" content="Haneul Devlog">
+<meta property="og:description" content="(adsbygoogle = window.adsbygoogle || []).push({});  Pug Pug 란 ?  Pug는 Haml의 영향을 많이 받고 Node.js 및 브라우저 용 JavaScript로 구현 된 고성능 템플릿 엔진이다.  이 프로젝트는 이전에 &ldquo;Jade&quot;로 알려졌습니다. 그러나 &ldquo;Jade&quot;는 등록 상표라는 것이 밝혀졌습니다. 결과적으로 이름 변경이 필요했습니다. 메인테이너들 사이의 토론 끝에 &ldquo;Pug&rdquo; 가이 프로젝트의 새 이름으로 선택되었습니다. 버전 2부터는 &ldquo;pug&quot;가 공식 패키지 이름입니다.
+패키지 또는 앱에서 현재를 사용 jade하는 경우 걱정하지 마십시오.">
+<meta name="twitter:description" content="(adsbygoogle = window.adsbygoogle || []).push({});  Pug Pug 란 ?  Pug는 Haml의 영향을 많이 받고 Node.js 및 브라우저 용 JavaScript로 구현 된 고성능 템플릿 엔진이다.  이 프로젝트는 이전에 &ldquo;Jade&quot;로 알려졌습니다. 그러나 &ldquo;Jade&quot;는 등록 상표라는 것이 밝혀졌습니다. 결과적으로 이름 변경이 필요했습니다. 메인테이너들 사이의 토론 끝에 &ldquo;Pug&rdquo; 가이 프로젝트의 새 이름으로 선택되었습니다. 버전 2부터는 &ldquo;pug&quot;가 공식 패키지 이름입니다.
+패키지 또는 앱에서 현재를 사용 jade하는 경우 걱정하지 마십시오.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-05-31T13:11:16">
+  
+  
+    <meta property="article:modified_time" content="2021-05-31T13:11:16">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+      <meta property="article:section" content="pug">
+    
+  
+  
+    
+      <meta property="article:tag" content="development">
+    
+      <meta property="article:tag" content="front-end">
+    
+      <meta property="article:tag" content="pug">
+    
+      <meta property="article:tag" content="html">
+    
+      <meta property="article:tag" content="템플릿">
+    
+      <meta property="article:tag" content="개발">
+    
+      <meta property="article:tag" content="express">
+    
+      <meta property="article:tag" content="template">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/pug/img-1.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/pug/img-1.png">
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+
+
+    <title>Pug로 HTML 템플릿 만들기 🐶</title>
+
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://haneulee.github.io/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-kaah6lpeqltxbpxdwqokjucv9msscifptg8aupyjicuyi54dow2vypybev.min.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-BHPHWPTLMZ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://haneulee.github.io/">Haneul Devlog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://haneulee.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://haneulee.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Haneul Lee</h4>
+        
+          <h5 class="sidebar-profile-bio">Devlog</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories/development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin-square"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Pug로 HTML 템플릿 만들기 🐶
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-05-31T13:11:16&#43;09:00">
+        
+  May 31, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/pug">pug</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#pug-란-">Pug 란 ?</a></li>
+    <li><a href="#설치">설치</a></li>
+    <li><a href="#pug-문법">Pug 문법</a></li>
+    <li><a href="#express-에서-pug-적용">Express 에서 pug 적용</a></li>
+  </ul>
+</nav>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="7146914144035062"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h1 id="pug">Pug</h1>
+<p><img src="%22https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/pug/img-1.png%22" alt=""></p>
+<h2 id="pug-란-">Pug 란 ?</h2>
+<ul>
+<li>Pug는 Haml의 영향을 많이 받고 Node.js 및 브라우저 용 JavaScript로 구현 된 고성능 템플릿 엔진이다.</li>
+</ul>
+<p>이 프로젝트는 이전에 &ldquo;Jade&quot;로 알려졌습니다. 그러나 &ldquo;Jade&quot;는 등록 상표라는 것이 밝혀졌습니다. 결과적으로 이름 변경이 필요했습니다. 메인테이너들 사이의 토론 끝에 &ldquo;Pug&rdquo; 가이 프로젝트의 새 이름으로 선택되었습니다. 버전 2부터는 &ldquo;pug&quot;가 공식 패키지 이름입니다.</p>
+<p>패키지 또는 앱에서 현재를 사용 jade하는 경우 걱정하지 마십시오. 모든 새 버전이 .NET에서 릴리스 될 예정이지만 해당 패키지 이름을 계속 사용할 수있는 권한을 확보했습니다.</p>
+<p>이름을 바꾸기 전에는 이미 &ldquo;Jade 2.0.0&quot;에서 작업이 시작되었습니다.
+따라서 Pug 로의 이름 변경은 주요 버전 범프와 일치했습니다. 결과적으로 Jade에서 Pug로 업그레이드하는 것은 메이저 버전 범프가있는 다른 패키지를 업그레이드하는 것과 동일한 프로세스가 됩니다.</p>
+<h2 id="설치">설치</h2>
+<pre><code>npm i pug
+</code></pre><h2 id="pug-문법">Pug 문법</h2>
+<ol>
+<li>pug 샘플</li>
+</ol>
+<pre><code class="language-pug" data-lang="pug">doctype html
+html(lang=&quot;en&quot;)
+  head
+    title= pageTitle
+    script(type='text/javascript').
+      if (foo) bar(1 + 5)
+  body
+    h1 Pug - node template engine
+    #container.col
+      if youAreUsingPug
+        p You are amazing
+      else
+        p Get on it!
+      p.
+        Pug is a terse and simple templating language with a
+        strong focus on performance and powerful features.
+</code></pre><ol start="2">
+<li>변환된 html</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;Pug&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">foo</span>) <span style="color:#a6e22e">bar</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span>)
+    &lt;/<span style="color:#f92672">script</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">h1</span>&gt;Pug - node template engine&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col&#34;</span>&gt;
+      &lt;<span style="color:#f92672">p</span>&gt;You are amazing&lt;/<span style="color:#f92672">p</span>&gt;
+      &lt;<span style="color:#f92672">p</span>&gt;Pug is a terse and simple templating language with a strong focus on performance and powerful features.&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h2 id="express-에서-pug-적용">Express 에서 pug 적용</h2>
+<ul>
+<li>Express 에서 pug 를 사용하려면 먼저 아래와 같이 설정을 해줘야 한다.</li>
+<li>&ldquo;views&quot;는 pug 파일 경로를 설정하는 것이다.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">express</span>();
+
+<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;view engine&#34;</span>, <span style="color:#e6db74">&#34;pug&#34;</span>);
+<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;views&#34;</span>, <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">cwd</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/src/views&#34;</span>);
+
+<span style="color:#75715e">// (localhost:4000/home 경로로 들어왔을 때, &#34;home.pug&#34; 파일을 렌더링하게 되어 있다. pageTitle은 템플릿 파일로 넘겨줄 변수
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">home</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">render</span>(<span style="color:#e6db74">&#34;home&#34;</span>, { <span style="color:#a6e22e">pageTitle</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Home&#34;</span> });
+
+</code></pre></div><div class="alert info ">
+  <p>아래처럼 기본 베이스 pug 파일(layout.pug)을 생성하고 다른 pug 파일(home.pug)에서 해당 템플릿을 사용할 수 있다.</p>
+</div>
+<pre><code class="language-pug" data-lang="pug">// layout.pug
+doctype html
+html(lang=&quot;ko&quot;)
+    include partials/head.pug
+    body
+    include partials/header.pug
+        main
+            block content
+    include partials/footer.pug
+</code></pre><pre><code class="language-pug" data-lang="pug">// home.pug
+extends layout.pug
+
+block content
+    h1 Home
+</code></pre><p>참고 :
+<a href="https://pugjs.org/api/getting-started.html">공식 사이트</a>,
+<a href="https://github.com/pugjs/pug">깃헙</a></p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/development/">development</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/front-end/">front-end</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/pug/">pug</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/html/">html</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%ED%85%9C%ED%94%8C%EB%A6%BF/">템플릿</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%EA%B0%9C%EB%B0%9C/">개발</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/express/">express</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/template/">template</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/" data-tooltip="NextJS - document is not defined 오류">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+            
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 <a href="https://github.com/haneulee">haneulee</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/" data-tooltip="NextJS - document is not defined 오류">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Fpug%25EB%25A1%259C-html-%25ED%2585%259C%25ED%2594%258C%25EB%25A6%25BF-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Fpug%25EB%25A1%259C-html-%25ED%2585%259C%25ED%2594%258C%25EB%25A6%25BF-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Fpug%25EB%25A1%259C-html-%25ED%2585%259C%25ED%2594%258C%25EB%25A6%25BF-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Lee</h4>
+    
+      <div id="about-card-bio">Devlog</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://haneulee.github.io/img/gradient.png');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://haneulee.github.io/js/script-ikkjznzvdhslil70ktokhih8hzgyzzt3efytencefwkqm6n8fodsvk2pgbg.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

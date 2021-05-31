@@ -6,7 +6,17 @@
     <description>Recent content in development on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sun, 30 May 2021 16:51:26 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 31 May 2021 13:11:16 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pug로 HTML 템플릿 만들기 🐶</title>
+      <link>https://haneulee.github.io/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+      <pubDate>Mon, 31 May 2021 13:11:16 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  Pug Pug 란 ?  Pug는 Haml의 영향을 많이 받고 Node.js 및 브라우저 용 JavaScript로 구현 된 고성능 템플릿 엔진이다.  이 프로젝트는 이전에 &amp;ldquo;Jade&amp;quot;로 알려졌습니다. 그러나 &amp;ldquo;Jade&amp;quot;는 등록 상표라는 것이 밝혀졌습니다. 결과적으로 이름 변경이 필요했습니다. 메인테이너들 사이의 토론 끝에 &amp;ldquo;Pug&amp;rdquo; 가이 프로젝트의 새 이름으로 선택되었습니다. 버전 2부터는 &amp;ldquo;pug&amp;quot;가 공식 패키지 이름입니다.
+패키지 또는 앱에서 현재를 사용 jade하는 경우 걱정하지 마십시오.</description>
+    </item>
+    
     <item>
       <title>NextJS - document is not defined 오류</title>
       <link>https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/</link>
