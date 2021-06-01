@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>그래프큐엘 on Haneul Devlog</title>
+    <link>https://haneulee.github.io/tags/%EA%B7%B8%EB%9E%98%ED%94%84%ED%81%90%EC%97%98/</link>
+    <description>Recent content in 그래프큐엘 on Haneul Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 01 Jun 2021 16:57:25 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/%EA%B7%B8%EB%9E%98%ED%94%84%ED%81%90%EC%97%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GraphQL 시작하기 🔥</title>
+      <link>https://haneulee.github.io/2021/06/graphql-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Tue, 01 Jun 2021 16:57:25 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/06/graphql-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  GraphQL GraphQL 이란 ? Graph QL(이하 gql)은 Structed Query Language(이하 sql)와 마찬가지로 쿼리 언어입니다. 하지만 gql과 sql의 언어적 구조 차이는 매우 큽니다. 또한 gql과 sql이 실전에서 쓰이는 방식의 차이도 매우 큽니다. gql과 sql의 언어적 구조 차이가 활용 측면에서의 차이를 가져왔습니다. 이 둘은 애초에 탄생 시기도 다르고 배경도 다릅니다. sql은 데이터베이스 시스템에 저장된 데이터를 효율적으로 가져오는 것이 목적이고, gql은 웹 클라이언트가 데이터를 서버로 부터 효율적으로 가져오는 것이 목적입니다.</description>
+    </item>
+    
+  </channel>
+</rss>
