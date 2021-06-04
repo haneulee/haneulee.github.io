@@ -6,13 +6,22 @@
     <description>Recent content in Categories on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 01 Jun 2021 16:57:25 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Jun 2021 10:03:44 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>development</title>
       <link>https://haneulee.github.io/categories/development/</link>
-      <pubDate>Tue, 01 Jun 2021 16:57:25 +0900</pubDate>
+      <pubDate>Fri, 04 Jun 2021 10:03:44 +0900</pubDate>
       
       <guid>https://haneulee.github.io/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mongoDB</title>
+      <link>https://haneulee.github.io/categories/mongodb/</link>
+      <pubDate>Fri, 04 Jun 2021 10:03:44 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/categories/mongodb/</guid>
       <description></description>
     </item>
     

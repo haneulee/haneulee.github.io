@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mongoDB on Haneul Devlog</title>
+    <link>https://haneulee.github.io/categories/mongodb/</link>
+    <description>Recent content in mongoDB on Haneul Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 04 Jun 2021 10:03:44 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MongoDB 시작하기 🌱 </title>
+      <link>https://haneulee.github.io/2021/06/mongodb-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Fri, 04 Jun 2021 10:03:44 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/06/mongodb-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  MongoDB MongoDB 란 ? mongoDB는 문서지향(Document-Oriented) 저장소를 제공하는 NoSQL 데이터베이스 시스템으로, 현존하는 NoSQL 데이터베이스 중 인지도 1위를 유지하고 있습니다. mongoDB에서는 데이터가 Document로 불리며, 이 데이터의 집합을 Collection(RDMS에서는 Table)이라고 합니다. 스키마 제약 없이 자유롭고, BSON(Binary JSON) 형태로 각 문서가 저장되며 배열(Array)이나 날짜(Date) 등 기존 RDMS에서 지원하지 않던 형태로도 저장할 수 있기 때문에 JOIN이 필요 없이 한 문서에 좀 더 이해하기 쉬운 형태 그대로 정보를 저장할 수 있다는 것이 특징입니다.</description>
+    </item>
+    
+  </channel>
+</rss>
