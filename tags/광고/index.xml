@@ -6,7 +6,17 @@
     <description>Recent content in 광고 on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 25 May 2021 14:36:24 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/%EA%B4%91%EA%B3%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Jun 2021 15:39:20 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/%EA%B4%91%EA%B3%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>블로그 Google Adsense 구글 애드센스 광고 달기 💵</title>
+      <link>https://haneulee.github.io/2021/06/%EB%B8%94%EB%A1%9C%EA%B7%B8-google-adsense-%EA%B5%AC%EA%B8%80-%EC%95%A0%EB%93%9C%EC%84%BC%EC%8A%A4-%EA%B4%91%EA%B3%A0-%EB%8B%AC%EA%B8%B0/</link>
+      <pubDate>Thu, 10 Jun 2021 15:39:20 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/06/%EB%B8%94%EB%A1%9C%EA%B7%B8-google-adsense-%EA%B5%AC%EA%B8%80-%EC%95%A0%EB%93%9C%EC%84%BC%EC%8A%A4-%EA%B4%91%EA%B3%A0-%EB%8B%AC%EA%B8%B0/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  블로그 구글 광고 (Google Adsense) 달기 💵  구글 애드센스는 개인의 블로그/사이트에 광고를 게재할 수 있는 네이버 애드포스트와 같은 수익형 광고이다.  구글 애드센스 신청 먼저 구글 애드센스 웹사이트에 접속해서 구글 로그인 후, 사이트 주소를 입력하고 아래처럼 코드가 나오면 이 코드를 내 블로그 head 태그 안에 삽입해주고 포스팅하면 된다. 결과가 나오기까지는 사람마다 다른데 보통 1주일 후면 나오는 것 같다.
+&amp;lt;script data-ad-client=&amp;quot;ca-pub-7146914144035062&amp;quot; async src=&amp;quot;https://pagead2.</description>
+    </item>
+    
     <item>
       <title>disqus 에서 utterances로 변경 - hugo 블로그 댓글 추가하기 ✨💬✨</title>
       <link>https://haneulee.github.io/2021/05/disqus-%EC%97%90%EC%84%9C-utterances%EB%A1%9C-%EB%B3%80%EA%B2%BD-hugo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%8C%93%EA%B8%80-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0/</link>
