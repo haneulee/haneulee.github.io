@@ -20,18 +20,22 @@
 <meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content="development, front-end, development, next-gen">
-<meta name="description" content="브라우저 세션 Browser Session Session  브라우저와 백엔드 사이의 memory or history 쿠키는 상태 데이터를 클라이언트에 저장했다면, 세션은 서버에 저장 세션은 기본적으로는 쿠키를 사용하지만 세션 id만 쿠키로 저장하고, 상태 데이터들은 세션 id를 id로하여 서버에 저장한다.    (adsbygoogle = window.adsbygoogle || []).push({});   stateless server side에 client와 server의 동작, 상태정보를 저장하지 않는 형태, server의 응답이 client와의 세션 상태와 독립적임 장점 : 서버가 client정보를 저장관리 하지 않으므로 Scaling이 자유로움">
+<meta name="description" content="브라우저 세션 Browser Session Session  브라우저와 백엔드 사이의 memory or history 쿠키는 상태 데이터를 클라이언트에 저장했다면, 세션은 서버에 저장 세션은 기본적으로는 쿠키를 사용하지만 세션 id만 쿠키로 저장하고, 상태 데이터들은 세션 id를 id로하여 서버에 저장한다.  stateless server side에 client와 server의 동작, 상태정보를 저장하지 않는 형태, server의 응답이 client와의 세션 상태와 독립적임 장점 : 서버가 client정보를 저장관리 하지 않으므로 Scaling이 자유로움
+ex) UDP / HTTP : UDP는 TCP와 달리 Client의 세션 상태와 관계 없이 요청에 대한 응답만을 수행하고, server가 client의 정보를 저장하지 않는다.">
 
 
-<meta property="og:description" content="브라우저 세션 Browser Session Session  브라우저와 백엔드 사이의 memory or history 쿠키는 상태 데이터를 클라이언트에 저장했다면, 세션은 서버에 저장 세션은 기본적으로는 쿠키를 사용하지만 세션 id만 쿠키로 저장하고, 상태 데이터들은 세션 id를 id로하여 서버에 저장한다.    (adsbygoogle = window.adsbygoogle || []).push({});   stateless server side에 client와 server의 동작, 상태정보를 저장하지 않는 형태, server의 응답이 client와의 세션 상태와 독립적임 장점 : 서버가 client정보를 저장관리 하지 않으므로 Scaling이 자유로움">
+<meta property="og:description" content="브라우저 세션 Browser Session Session  브라우저와 백엔드 사이의 memory or history 쿠키는 상태 데이터를 클라이언트에 저장했다면, 세션은 서버에 저장 세션은 기본적으로는 쿠키를 사용하지만 세션 id만 쿠키로 저장하고, 상태 데이터들은 세션 id를 id로하여 서버에 저장한다.  stateless server side에 client와 server의 동작, 상태정보를 저장하지 않는 형태, server의 응답이 client와의 세션 상태와 독립적임 장점 : 서버가 client정보를 저장관리 하지 않으므로 Scaling이 자유로움
+ex) UDP / HTTP : UDP는 TCP와 달리 Client의 세션 상태와 관계 없이 요청에 대한 응답만을 수행하고, server가 client의 정보를 저장하지 않는다.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="브라우저 세션 &amp; 쿠키 Browser Session &amp; cookies 🍪">
 <meta name="twitter:title" content="브라우저 세션 &amp; 쿠키 Browser Session &amp; cookies 🍪">
 <meta property="og:url" content="https://haneulee.github.io/2021/06/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%B8%EC%85%98-%EC%BF%A0%ED%82%A4-browser-session-cookies/">
 <meta property="twitter:url" content="https://haneulee.github.io/2021/06/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%B8%EC%85%98-%EC%BF%A0%ED%82%A4-browser-session-cookies/">
 <meta property="og:site_name" content="Haneul Devlog">
-<meta property="og:description" content="브라우저 세션 Browser Session Session  브라우저와 백엔드 사이의 memory or history 쿠키는 상태 데이터를 클라이언트에 저장했다면, 세션은 서버에 저장 세션은 기본적으로는 쿠키를 사용하지만 세션 id만 쿠키로 저장하고, 상태 데이터들은 세션 id를 id로하여 서버에 저장한다.    (adsbygoogle = window.adsbygoogle || []).push({});   stateless server side에 client와 server의 동작, 상태정보를 저장하지 않는 형태, server의 응답이 client와의 세션 상태와 독립적임 장점 : 서버가 client정보를 저장관리 하지 않으므로 Scaling이 자유로움">
-<meta name="twitter:description" content="브라우저 세션 Browser Session Session  브라우저와 백엔드 사이의 memory or history 쿠키는 상태 데이터를 클라이언트에 저장했다면, 세션은 서버에 저장 세션은 기본적으로는 쿠키를 사용하지만 세션 id만 쿠키로 저장하고, 상태 데이터들은 세션 id를 id로하여 서버에 저장한다.    (adsbygoogle = window.adsbygoogle || []).push({});   stateless server side에 client와 server의 동작, 상태정보를 저장하지 않는 형태, server의 응답이 client와의 세션 상태와 독립적임 장점 : 서버가 client정보를 저장관리 하지 않으므로 Scaling이 자유로움">
+<meta property="og:description" content="브라우저 세션 Browser Session Session  브라우저와 백엔드 사이의 memory or history 쿠키는 상태 데이터를 클라이언트에 저장했다면, 세션은 서버에 저장 세션은 기본적으로는 쿠키를 사용하지만 세션 id만 쿠키로 저장하고, 상태 데이터들은 세션 id를 id로하여 서버에 저장한다.  stateless server side에 client와 server의 동작, 상태정보를 저장하지 않는 형태, server의 응답이 client와의 세션 상태와 독립적임 장점 : 서버가 client정보를 저장관리 하지 않으므로 Scaling이 자유로움
+ex) UDP / HTTP : UDP는 TCP와 달리 Client의 세션 상태와 관계 없이 요청에 대한 응답만을 수행하고, server가 client의 정보를 저장하지 않는다.">
+<meta name="twitter:description" content="브라우저 세션 Browser Session Session  브라우저와 백엔드 사이의 memory or history 쿠키는 상태 데이터를 클라이언트에 저장했다면, 세션은 서버에 저장 세션은 기본적으로는 쿠키를 사용하지만 세션 id만 쿠키로 저장하고, 상태 데이터들은 세션 id를 id로하여 서버에 저장한다.  stateless server side에 client와 server의 동작, 상태정보를 저장하지 않는 형태, server의 응답이 client와의 세션 상태와 독립적임 장점 : 서버가 client정보를 저장관리 하지 않으므로 Scaling이 자유로움
+ex) UDP / HTTP : UDP는 TCP와 달리 Client의 세션 상태와 관계 없이 요청에 대한 응답만을 수행하고, server가 client의 정보를 저장하지 않는다.">
 <meta property="og:locale" content="en-us">
 
   
@@ -331,17 +335,7 @@ if (!doNotTrack) {
 <ul>
 <li>브라우저와 백엔드 사이의 memory or history</li>
 <li>쿠키는 상태 데이터를 클라이언트에 저장했다면, 세션은 서버에 저장</li>
-<li>세션은 기본적으로는 쿠키를 사용하지만 세션 id만 쿠키로 저장하고, 상태 데이터들은 세션 id를 id로하여 서버에 저장한다.
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7146914144035062"
-     data-ad-slot="3551187766"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></li>
+<li>세션은 기본적으로는 쿠키를 사용하지만 세션 id만 쿠키로 저장하고, 상태 데이터들은 세션 id를 id로하여 서버에 저장한다.</li>
 </ul>
 <h3 id="stateless">stateless</h3>
 <p>server side에 client와 server의 동작, 상태정보를 저장하지 않는 형태, server의 응답이 client와의 세션 상태와 독립적임
@@ -369,16 +363,6 @@ TCP : TCP의 server와 client는 1. establishing connection, 2. Trasmitting data
 <li>클라이언트 로컬에 저장되는 key-value 형태의 데이터</li>
 <li>클라이언트에서 서버에 request할때 쿠키를 담아 보내면, 서버에서는 쿠키에서 상태 데이터를 읽고 클라이언트의 상태를 파악하여 그에 따른 response를 준다.</li>
 </ul>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7146914144035062"
-     data-ad-slot="3551187766"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <h3 id="쿠키-vs-세션">쿠키 vs 세션</h3>
 <table>
 <thead>
@@ -418,8 +402,8 @@ TCP : TCP의 server와 client는 1. establishing connection, 2. Trasmitting data
 </table>
 <p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/browser/img-2.png" alt=""></p>
 <p>참고 :
-<img src="https://velog.io/@makeitcloud/%EB%9E%80-Stateless-Stateful-%EC%9D%B4%EB%9E%80" alt="https://velog.io/@makeitcloud/%EB%9E%80-Stateless-Stateful-%EC%9D%B4%EB%9E%80">,
-<img src="https://velog.io/@damiano1027/CS-%EC%BF%A0%ED%82%A4Cookie%EC%99%80-%EC%84%B8%EC%85%98Session" alt="https://velog.io/@damiano1027/CS-%EC%BF%A0%ED%82%A4Cookie%EC%99%80-%EC%84%B8%EC%85%98Session">,</p>
+<a href="https://velog.io/@makeitcloud/%EB%9E%80-Stateless-Stateful-%EC%9D%B4%EB%9E%80">https://velog.io/@makeitcloud/%EB%9E%80-Stateless-Stateful-%EC%9D%B4%EB%9E%80</a>,
+<a href="https://velog.io/@damiano1027/CS-%EC%BF%A0%ED%82%A4Cookie%EC%99%80-%EC%84%B8%EC%85%98Session">https://velog.io/@damiano1027/CS-%EC%BF%A0%ED%82%A4Cookie%EC%99%80-%EC%84%B8%EC%85%98Session</a>,</p>
 
               
             </div>
