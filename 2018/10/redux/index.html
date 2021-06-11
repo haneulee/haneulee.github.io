@@ -20,11 +20,11 @@
 <meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content=", development, next-gen">
-<meta name="description" content="Redux 리덕스 : 리액트를 위한 스테이트 매니지먼트 툴 (복잡한 앱에서 효율적, 단순한 앱에서 필요없음)
+<meta name="description" content="Redux 리덕스 : 리액트를 위한 스테이트 매니지먼트 툴 (복잡한 앱에서 효율적, 단순한 앱에서 필요없음)    (adsbygoogle = window.adsbygoogle || []).push({}); 
 Why do we need it? 왜 필요한가?  Components have local state, but apps have global state. Sometimes state need to be shared. We need to save the shared state somewhere. Redux == state container  Redux is a gloabl state container  Ther Redux Store is like a box We go and grab what we need for the container For example, from  we only grab the username  Stuff to remember  The whole state of your app is stored in an object(store)   state 가 복잡하고 커질 수 있어서 리덕스는 해당 오브젝트를 수정하는 것에 매우 엄격함  If you wanna change the data inside of this object you need to &lsquo;dispatch&rsquo; (sned) an action   오브젝트의 데이터를 수정하는 방법은 액션을 reducer 로 보내면 가능함  You will send this actions to a reducer and this reducer will change the object for you.">
 
 
-<meta property="og:description" content="Redux 리덕스 : 리액트를 위한 스테이트 매니지먼트 툴 (복잡한 앱에서 효율적, 단순한 앱에서 필요없음)
+<meta property="og:description" content="Redux 리덕스 : 리액트를 위한 스테이트 매니지먼트 툴 (복잡한 앱에서 효율적, 단순한 앱에서 필요없음)    (adsbygoogle = window.adsbygoogle || []).push({}); 
 Why do we need it? 왜 필요한가?  Components have local state, but apps have global state. Sometimes state need to be shared. We need to save the shared state somewhere. Redux == state container  Redux is a gloabl state container  Ther Redux Store is like a box We go and grab what we need for the container For example, from  we only grab the username  Stuff to remember  The whole state of your app is stored in an object(store)   state 가 복잡하고 커질 수 있어서 리덕스는 해당 오브젝트를 수정하는 것에 매우 엄격함  If you wanna change the data inside of this object you need to &lsquo;dispatch&rsquo; (sned) an action   오브젝트의 데이터를 수정하는 방법은 액션을 reducer 로 보내면 가능함  You will send this actions to a reducer and this reducer will change the object for you.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Redux">
@@ -32,9 +32,9 @@ Why do we need it? 왜 필요한가?  Components have local state, but apps have
 <meta property="og:url" content="https://haneulee.github.io/2018/10/redux/">
 <meta property="twitter:url" content="https://haneulee.github.io/2018/10/redux/">
 <meta property="og:site_name" content="Haneul Devlog">
-<meta property="og:description" content="Redux 리덕스 : 리액트를 위한 스테이트 매니지먼트 툴 (복잡한 앱에서 효율적, 단순한 앱에서 필요없음)
+<meta property="og:description" content="Redux 리덕스 : 리액트를 위한 스테이트 매니지먼트 툴 (복잡한 앱에서 효율적, 단순한 앱에서 필요없음)    (adsbygoogle = window.adsbygoogle || []).push({}); 
 Why do we need it? 왜 필요한가?  Components have local state, but apps have global state. Sometimes state need to be shared. We need to save the shared state somewhere. Redux == state container  Redux is a gloabl state container  Ther Redux Store is like a box We go and grab what we need for the container For example, from  we only grab the username  Stuff to remember  The whole state of your app is stored in an object(store)   state 가 복잡하고 커질 수 있어서 리덕스는 해당 오브젝트를 수정하는 것에 매우 엄격함  If you wanna change the data inside of this object you need to &lsquo;dispatch&rsquo; (sned) an action   오브젝트의 데이터를 수정하는 방법은 액션을 reducer 로 보내면 가능함  You will send this actions to a reducer and this reducer will change the object for you.">
-<meta name="twitter:description" content="Redux 리덕스 : 리액트를 위한 스테이트 매니지먼트 툴 (복잡한 앱에서 효율적, 단순한 앱에서 필요없음)
+<meta name="twitter:description" content="Redux 리덕스 : 리액트를 위한 스테이트 매니지먼트 툴 (복잡한 앱에서 효율적, 단순한 앱에서 필요없음)    (adsbygoogle = window.adsbygoogle || []).push({}); 
 Why do we need it? 왜 필요한가?  Components have local state, but apps have global state. Sometimes state need to be shared. We need to save the shared state somewhere. Redux == state container  Redux is a gloabl state container  Ther Redux Store is like a box We go and grab what we need for the container For example, from  we only grab the username  Stuff to remember  The whole state of your app is stored in an object(store)   state 가 복잡하고 커질 수 있어서 리덕스는 해당 오브젝트를 수정하는 것에 매우 엄격함  If you wanna change the data inside of this object you need to &lsquo;dispatch&rsquo; (sned) an action   오브젝트의 데이터를 수정하는 방법은 액션을 reducer 로 보내면 가능함  You will send this actions to a reducer and this reducer will change the object for you.">
 <meta property="og:locale" content="en-us">
 
@@ -96,7 +96,7 @@ Why do we need it? 왜 필요한가?  Components have local state, but apps have
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-kaah6lpeqltxbpxdwqokjucv9msscifptg8aupyjicuyi54dow2vypybev.min.css" />
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-amwwsek1km5ktg0jdnasyimfcocmzihio9bisdqlmnwznwztzogu2y5qmyi.min.css" />
     
     
 
@@ -309,7 +309,17 @@ if (!doNotTrack) {
   </ul>
 </nav>
 <h1 id="redux-리덕스">Redux 리덕스</h1>
-<p>: 리액트를 위한 스테이트 매니지먼트 툴 (복잡한 앱에서 효율적, 단순한 앱에서 필요없음)</p>
+<p>: 리액트를 위한 스테이트 매니지먼트 툴 (복잡한 앱에서 효율적, 단순한 앱에서 필요없음)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="3551187766"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
 <h2 id="why-do-we-need-it-왜-필요한가">Why do we need it? 왜 필요한가?</h2>
 <ol>
 <li>Components have local state, but apps have global state.</li>
@@ -350,32 +360,12 @@ if (!doNotTrack) {
 <img src="https://haneulee.github.io/assets/redux/5.png" alt="5"><br>
 <img src="https://haneulee.github.io/assets/redux/6.png" alt="6"><br>
 <img src="https://haneulee.github.io/assets/redux/7.png" alt="7"></p>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7146914144035062"
-     data-ad-slot="3551187766"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
               
             </div>
           </div>
           <div id="post-footer" class="post-footer main-content-wrap">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7146914144035062"
-     data-ad-slot="5041197559"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+            
             <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
     <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
 </a>
@@ -622,7 +612,7 @@ if (!doNotTrack) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-ikkjznzvdhslil70ktokhih8hzgyzzt3efytencefwkqm6n8fodsvk2pgbg.min.js"></script>
+<script src="https://haneulee.github.io/js/script-rinop9qnmrrgnnkceqjpm1grpojhqqbbi1bei65eqtj4xaanixg6ynkekfs.min.js"></script>
 
 
 <script lang="javascript">

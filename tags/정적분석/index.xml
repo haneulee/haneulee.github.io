@@ -14,10 +14,9 @@
       
       <guid>https://haneulee.github.io/2021/05/frontend-sonarqube-%EC%A0%81%EC%9A%A9/</guid>
       <description>이번에 회사에서 개발 코드 정적 분석 툴인 소나큐브 (sonarqube)를 도입하기로 해서 사전 검토에 들어갔다. 먼저 현재 개발중인 SKB G2 웹앱 코드를 소나큐브로 돌려보기로 했다. 해당 웹앱 코드는 vue 프레임워크를 사용중
- 1. 소나큐브 서버 띄우기 소나큐브는 아래 사이트에서 다운로드 받고, 소나스캐너는 맥을 이용중이므로 간단하게 brew로 설치해준다. brew install sonar-scanner www.sonarqube.org/downloads/
+   (adsbygoogle = window.adsbygoogle || []).push({});   1. 소나큐브 서버 띄우기 소나큐브는 아래 사이트에서 다운로드 받고, 소나스캐너는 맥을 이용중이므로 간단하게 brew로 설치해준다. brew install sonar-scanner www.sonarqube.org/downloads/
 사이트에서 무료버전인 community 버전을 다운로드 받고, zip파일 압축을 풀어준다.
-터미널을 통해 sonarqube 폴더 위치를 확인하고, 아래 명령어를 실행한다.
-/usr/sonarqube-8.6.0.39681/bin/macosx-universal-64/sonar.sh console sonarqube is up이 뜬다면 성공!</description>
+터미널을 통해 sonarqube 폴더 위치를 확인하고, 아래 명령어를 실행한다.</description>
     </item>
     
   </channel>
