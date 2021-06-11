@@ -16,8 +16,7 @@
       <description>TVML (Television Markup Language) 앱의 뷰를 정의한 XML의 형태, TV용 클라이언트-서버 랩의 인터페이스를 만듬
 자바스크립트 API를 통해 전체 클라이언트와 서버를 만들수 있는 TVJS와 함께 결합한다.
 기본적으로 애플TV 앱은 iOS와 유사하게 개발할 수 있다. 더불어 클라이언트-서버 앱을 개발하도록 했다. 개발자는 자바스크립트, DOM, HTTPS, XMLHTTPRequst 같은 웹 기술을 사용할 수 있다.
-   (adsbygoogle = window.adsbygoogle || []).push({});    TVMLJS : TVML 페이지를 읽을 때 사용되는 자바스크립트 API
-  TVMLKit : 앱에서 자바스크립트와 TVML 요소를 통합하는 수단 (네이티브와 자바스크립트/TVML 코드를 연결)</description>
+   (adsbygoogle = window.adsbygoogle || []).push({});    TVMLJS : TVML 페이지를 읽을 때 사용되는 자바스크립트 API</description>
     </item>
     
     <item>
@@ -26,12 +25,11 @@
       <pubDate>Tue, 18 May 2021 12:40:39 +0900</pubDate>
       
       <guid>https://haneulee.github.io/2021/05/%ED%94%8C%EB%9F%AC%ED%84%B0flutter-%EC%84%A4%EC%B9%98/</guid>
-      <description>flutter-ko.dev/docs/get-started/install/macos
-플러터 설치 방법은 아래와 같이 2가지가 있다.  플러터 sdk로 설치하기  git clone 으로 설치하기  github.com/flutter/flutter.git    다음은 아래와 같이 flutter PATH 설정하기
-cd vi .bash_profile export PATH=&amp;quot;$HOME/Desktop/flutter/bin:$PATH&amp;quot; :wq로 저장 후 source .bash_profile을 사용하여 적용시켜준다.
+      <description>플러터 Flutter 📱 flutter-ko.dev/docs/get-started/install/macos
+플러터 설치 방법은 아래와 같이 2가지가 있다.     (adsbygoogle = window.adsbygoogle || []).push({});   플러터 sdk로 설치하기  git clone 으로 설치하기  github.com/flutter/flutter.git    다음은 아래와 같이 flutter PATH 설정하기 cd vi .bash_profile export PATH=&amp;quot;$HOME/Desktop/flutter/bin:$PATH&amp;quot; :wq로 저장 후 source .bash_profile을 사용하여 적용시켜준다.
 플러터 디렉토리 경로로 가서 pwd 로 경로 찾아서 설정해줘도 됨
 flutter doctor 를 실행한다.
-ios면 xcode android면 android studio 관련하여 잘 설정이 되었는지 확인할 수 있다. xcode 버전이 최소 11이상이어야 해서 맥os 업데이트와 xcode 설치까지 오랜 시간이 걸렸다 ㅠㅠ</description>
+ios면 xcode android면 android studio 관련하여 잘 설정이 되었는지 확인할 수 있다.</description>
     </item>
     
   </channel>

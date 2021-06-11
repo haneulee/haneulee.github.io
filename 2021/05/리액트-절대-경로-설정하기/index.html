@@ -20,46 +20,42 @@
 <meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content="development, front-end, development, next-gen">
-<meta name="description" content="Web을 개발하다보면 폴더와 파일의 depth가 깊어지는 경우가 있다.
+<meta name="description" content="리액트 절대 경로 설정하기 Web을 개발하다보면 폴더와 파일의 depth가 깊어지는 경우가 있다.
 이런 경우 파일 import시에 ../../components/sign/logout 식으로 ../가 많아져서 복잡하고 번거로워진다.
 그러나 절대경로를 설정하면 components/sign/logout 으로 간단히 작성할 수 있다는 사실!
 나는 src 폴더를 기준으로 절대경로를 설정하였다.
 방법은 아래와 같다.
-   (adsbygoogle = window.adsbygoogle || []).push({});  | Linux, Mac 에서 설정하기
-프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
-&quot;start&quot;: &quot;NODE_PATH=src/ react-scripts start&quot;, &quot;build&quot;: &quot;NODE_PATH=src/ react-scripts build&quot;, | Window 에서 설정하기">
+   (adsbygoogle = window.adsbygoogle || []).push({});  | Linux, Mac 에서 설정하기 프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
+&quot;start&quot;: &quot;NODE_PATH=src/ react-scripts start&quot;, &quot;build&quot;: &quot;NODE_PATH=src/ react-scripts build&quot;, | Window 에서 설정하기 여기서는 cross-env가 필요하다.">
 
 
-<meta property="og:description" content="Web을 개발하다보면 폴더와 파일의 depth가 깊어지는 경우가 있다.
+<meta property="og:description" content="리액트 절대 경로 설정하기 Web을 개발하다보면 폴더와 파일의 depth가 깊어지는 경우가 있다.
 이런 경우 파일 import시에 ../../components/sign/logout 식으로 ../가 많아져서 복잡하고 번거로워진다.
 그러나 절대경로를 설정하면 components/sign/logout 으로 간단히 작성할 수 있다는 사실!
 나는 src 폴더를 기준으로 절대경로를 설정하였다.
 방법은 아래와 같다.
-   (adsbygoogle = window.adsbygoogle || []).push({});  | Linux, Mac 에서 설정하기
-프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
-&quot;start&quot;: &quot;NODE_PATH=src/ react-scripts start&quot;, &quot;build&quot;: &quot;NODE_PATH=src/ react-scripts build&quot;, | Window 에서 설정하기">
+   (adsbygoogle = window.adsbygoogle || []).push({});  | Linux, Mac 에서 설정하기 프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
+&quot;start&quot;: &quot;NODE_PATH=src/ react-scripts start&quot;, &quot;build&quot;: &quot;NODE_PATH=src/ react-scripts build&quot;, | Window 에서 설정하기 여기서는 cross-env가 필요하다.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="리액트 절대 경로 설정하기">
 <meta name="twitter:title" content="리액트 절대 경로 설정하기">
 <meta property="og:url" content="https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/">
 <meta property="twitter:url" content="https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/">
 <meta property="og:site_name" content="Haneul Devlog">
-<meta property="og:description" content="Web을 개발하다보면 폴더와 파일의 depth가 깊어지는 경우가 있다.
+<meta property="og:description" content="리액트 절대 경로 설정하기 Web을 개발하다보면 폴더와 파일의 depth가 깊어지는 경우가 있다.
 이런 경우 파일 import시에 ../../components/sign/logout 식으로 ../가 많아져서 복잡하고 번거로워진다.
 그러나 절대경로를 설정하면 components/sign/logout 으로 간단히 작성할 수 있다는 사실!
 나는 src 폴더를 기준으로 절대경로를 설정하였다.
 방법은 아래와 같다.
-   (adsbygoogle = window.adsbygoogle || []).push({});  | Linux, Mac 에서 설정하기
-프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
-&quot;start&quot;: &quot;NODE_PATH=src/ react-scripts start&quot;, &quot;build&quot;: &quot;NODE_PATH=src/ react-scripts build&quot;, | Window 에서 설정하기">
-<meta name="twitter:description" content="Web을 개발하다보면 폴더와 파일의 depth가 깊어지는 경우가 있다.
+   (adsbygoogle = window.adsbygoogle || []).push({});  | Linux, Mac 에서 설정하기 프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
+&quot;start&quot;: &quot;NODE_PATH=src/ react-scripts start&quot;, &quot;build&quot;: &quot;NODE_PATH=src/ react-scripts build&quot;, | Window 에서 설정하기 여기서는 cross-env가 필요하다.">
+<meta name="twitter:description" content="리액트 절대 경로 설정하기 Web을 개발하다보면 폴더와 파일의 depth가 깊어지는 경우가 있다.
 이런 경우 파일 import시에 ../../components/sign/logout 식으로 ../가 많아져서 복잡하고 번거로워진다.
 그러나 절대경로를 설정하면 components/sign/logout 으로 간단히 작성할 수 있다는 사실!
 나는 src 폴더를 기준으로 절대경로를 설정하였다.
 방법은 아래와 같다.
-   (adsbygoogle = window.adsbygoogle || []).push({});  | Linux, Mac 에서 설정하기
-프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
-&quot;start&quot;: &quot;NODE_PATH=src/ react-scripts start&quot;, &quot;build&quot;: &quot;NODE_PATH=src/ react-scripts build&quot;, | Window 에서 설정하기">
+   (adsbygoogle = window.adsbygoogle || []).push({});  | Linux, Mac 에서 설정하기 프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
+&quot;start&quot;: &quot;NODE_PATH=src/ react-scripts start&quot;, &quot;build&quot;: &quot;NODE_PATH=src/ react-scripts build&quot;, | Window 에서 설정하기 여기서는 cross-env가 필요하다.">
 <meta property="og:locale" content="en-us">
 
   
@@ -326,7 +322,15 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>Web을 개발하다보면 폴더와 파일의 depth가 깊어지는 경우가 있다.</p>
+              <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#-linux-mac-에서-설정하기"><strong>| Linux, Mac 에서 설정하기</strong></a></li>
+    <li><a href="#-window-에서-설정하기"><strong>| Window 에서 설정하기</strong></a></li>
+    <li><a href="#-기타"><strong>| 기타</strong></a></li>
+  </ul>
+</nav>
+<h1 id="리액트-절대-경로-설정하기">리액트 절대 경로 설정하기</h1>
+<p>Web을 개발하다보면 폴더와 파일의 depth가 깊어지는 경우가 있다.</p>
 <p>이런 경우 파일 import시에 ../../components/sign/logout 식으로 ../가 많아져서 복잡하고 번거로워진다.</p>
 <p>그러나 절대경로를 설정하면 components/sign/logout 으로 간단히 작성할 수 있다는 사실!</p>
 <p>나는 src 폴더를 기준으로 절대경로를 설정하였다.</p>
@@ -341,18 +345,18 @@ if (!doNotTrack) {
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<p><strong>| Linux, Mac 에서 설정하기</strong></p>
+<h2 id="-linux-mac-에서-설정하기"><strong>| Linux, Mac 에서 설정하기</strong></h2>
 <p>프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.</p>
 <pre><code>&quot;start&quot;: &quot;NODE_PATH=src/ react-scripts start&quot;,
 &quot;build&quot;: &quot;NODE_PATH=src/ react-scripts build&quot;,
-</code></pre><p><strong>| Window 에서 설정하기</strong></p>
+</code></pre><h2 id="-window-에서-설정하기"><strong>| Window 에서 설정하기</strong></h2>
 <p>여기서는 cross-env가 필요하다.</p>
 <p>먼저 다음 command를 이용해 cross-env를 설치해준다.</p>
 <pre><code>yarn add cross-env
 </code></pre><p>그리고 프로젝트의 package.json으로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.</p>
 <pre><code>&quot;start&quot;: &quot;cross-env NODE_PATH=src/ react-scripts start&quot;,
 &quot;build&quot;: &quot;cross-env NODE_PATH=src/ react-scripts build&quot;,
-</code></pre><p><strong>| 기타</strong></p>
+</code></pre><h2 id="-기타"><strong>| 기타</strong></h2>
 <p>처음에 NODE_PATH를 설정할 때 src로 설정했더니 빌드시에 경로를 제대로 못 잡아서 src/로 잡아주었더니 해결되었다.</p>
 
               
@@ -438,7 +442,7 @@ if (!doNotTrack) {
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#">
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
         
           <i class="fa fa-list"></i>
         </a>
@@ -535,7 +539,7 @@ if (!doNotTrack) {
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#">
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
         
           <i class="fa fa-list"></i>
         </a>

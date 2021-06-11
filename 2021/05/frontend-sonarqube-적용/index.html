@@ -20,30 +20,26 @@
 <meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content="development, front-end, development, next-gen">
-<meta name="description" content="이번에 회사에서 개발 코드 정적 분석 툴인 소나큐브 (sonarqube)를 도입하기로 해서 사전 검토에 들어갔다. 먼저 현재 개발중인 SKB G2 웹앱 코드를 소나큐브로 돌려보기로 했다. 해당 웹앱 코드는 vue 프레임워크를 사용중
+<meta name="description" content="Frontend SonarQube 적용 이번에 회사에서 개발 코드 정적 분석 툴인 소나큐브 (sonarqube)를 도입하기로 해서 사전 검토에 들어갔다. 먼저 현재 개발중인 SKB G2 웹앱 코드를 소나큐브로 돌려보기로 했다. 해당 웹앱 코드는 vue 프레임워크를 사용중
    (adsbygoogle = window.adsbygoogle || []).push({});   1. 소나큐브 서버 띄우기 소나큐브는 아래 사이트에서 다운로드 받고, 소나스캐너는 맥을 이용중이므로 간단하게 brew로 설치해준다. brew install sonar-scanner www.sonarqube.org/downloads/
-사이트에서 무료버전인 community 버전을 다운로드 받고, zip파일 압축을 풀어준다.
-터미널을 통해 sonarqube 폴더 위치를 확인하고, 아래 명령어를 실행한다.">
+사이트에서 무료버전인 community 버전을 다운로드 받고, zip파일 압축을 풀어준다.">
 
 
-<meta property="og:description" content="이번에 회사에서 개발 코드 정적 분석 툴인 소나큐브 (sonarqube)를 도입하기로 해서 사전 검토에 들어갔다. 먼저 현재 개발중인 SKB G2 웹앱 코드를 소나큐브로 돌려보기로 했다. 해당 웹앱 코드는 vue 프레임워크를 사용중
+<meta property="og:description" content="Frontend SonarQube 적용 이번에 회사에서 개발 코드 정적 분석 툴인 소나큐브 (sonarqube)를 도입하기로 해서 사전 검토에 들어갔다. 먼저 현재 개발중인 SKB G2 웹앱 코드를 소나큐브로 돌려보기로 했다. 해당 웹앱 코드는 vue 프레임워크를 사용중
    (adsbygoogle = window.adsbygoogle || []).push({});   1. 소나큐브 서버 띄우기 소나큐브는 아래 사이트에서 다운로드 받고, 소나스캐너는 맥을 이용중이므로 간단하게 brew로 설치해준다. brew install sonar-scanner www.sonarqube.org/downloads/
-사이트에서 무료버전인 community 버전을 다운로드 받고, zip파일 압축을 풀어준다.
-터미널을 통해 sonarqube 폴더 위치를 확인하고, 아래 명령어를 실행한다.">
+사이트에서 무료버전인 community 버전을 다운로드 받고, zip파일 압축을 풀어준다.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Frontend SonarQube 적용">
 <meta name="twitter:title" content="Frontend SonarQube 적용">
 <meta property="og:url" content="https://haneulee.github.io/2021/05/frontend-sonarqube-%EC%A0%81%EC%9A%A9/">
 <meta property="twitter:url" content="https://haneulee.github.io/2021/05/frontend-sonarqube-%EC%A0%81%EC%9A%A9/">
 <meta property="og:site_name" content="Haneul Devlog">
-<meta property="og:description" content="이번에 회사에서 개발 코드 정적 분석 툴인 소나큐브 (sonarqube)를 도입하기로 해서 사전 검토에 들어갔다. 먼저 현재 개발중인 SKB G2 웹앱 코드를 소나큐브로 돌려보기로 했다. 해당 웹앱 코드는 vue 프레임워크를 사용중
+<meta property="og:description" content="Frontend SonarQube 적용 이번에 회사에서 개발 코드 정적 분석 툴인 소나큐브 (sonarqube)를 도입하기로 해서 사전 검토에 들어갔다. 먼저 현재 개발중인 SKB G2 웹앱 코드를 소나큐브로 돌려보기로 했다. 해당 웹앱 코드는 vue 프레임워크를 사용중
    (adsbygoogle = window.adsbygoogle || []).push({});   1. 소나큐브 서버 띄우기 소나큐브는 아래 사이트에서 다운로드 받고, 소나스캐너는 맥을 이용중이므로 간단하게 brew로 설치해준다. brew install sonar-scanner www.sonarqube.org/downloads/
-사이트에서 무료버전인 community 버전을 다운로드 받고, zip파일 압축을 풀어준다.
-터미널을 통해 sonarqube 폴더 위치를 확인하고, 아래 명령어를 실행한다.">
-<meta name="twitter:description" content="이번에 회사에서 개발 코드 정적 분석 툴인 소나큐브 (sonarqube)를 도입하기로 해서 사전 검토에 들어갔다. 먼저 현재 개발중인 SKB G2 웹앱 코드를 소나큐브로 돌려보기로 했다. 해당 웹앱 코드는 vue 프레임워크를 사용중
+사이트에서 무료버전인 community 버전을 다운로드 받고, zip파일 압축을 풀어준다.">
+<meta name="twitter:description" content="Frontend SonarQube 적용 이번에 회사에서 개발 코드 정적 분석 툴인 소나큐브 (sonarqube)를 도입하기로 해서 사전 검토에 들어갔다. 먼저 현재 개발중인 SKB G2 웹앱 코드를 소나큐브로 돌려보기로 했다. 해당 웹앱 코드는 vue 프레임워크를 사용중
    (adsbygoogle = window.adsbygoogle || []).push({});   1. 소나큐브 서버 띄우기 소나큐브는 아래 사이트에서 다운로드 받고, 소나스캐너는 맥을 이용중이므로 간단하게 brew로 설치해준다. brew install sonar-scanner www.sonarqube.org/downloads/
-사이트에서 무료버전인 community 버전을 다운로드 받고, zip파일 압축을 풀어준다.
-터미널을 통해 sonarqube 폴더 위치를 확인하고, 아래 명령어를 실행한다.">
+사이트에서 무료버전인 community 버전을 다운로드 받고, zip파일 압축을 풀어준다.">
 <meta property="og:locale" content="en-us">
 
   
@@ -325,14 +321,11 @@ if (!doNotTrack) {
             <div class="main-content-wrap">
               <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#1-소나큐브-서버-띄우기">1. 소나큐브 서버 띄우기</a></li>
-        <li><a href="#2-소나스캐너로-코드-검사-하기">2. 소나스캐너로 코드 검사 하기</a></li>
-      </ul>
-    </li>
+    <li><a href="#1-소나큐브-서버-띄우기">1. 소나큐브 서버 띄우기</a></li>
+    <li><a href="#2-소나스캐너로-코드-검사-하기">2. 소나스캐너로 코드 검사 하기</a></li>
   </ul>
 </nav>
+<h1 id="frontend-sonarqube-적용">Frontend SonarQube 적용</h1>
 <p>이번에 회사에서 개발 코드 정적 분석 툴인 </p>
 <p>소나큐브 (sonarqube)를 도입하기로 해서 사전 검토에 들어갔다. </p>
 <p>먼저 현재 개발중인 SKB G2 웹앱 코드를 소나큐브로 돌려보기로 했다. </p>
@@ -348,7 +341,7 @@ if (!doNotTrack) {
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 <hr>
-<h3 id="1-소나큐브-서버-띄우기">1. 소나큐브 서버 띄우기</h3>
+<h2 id="1-소나큐브-서버-띄우기">1. 소나큐브 서버 띄우기</h2>
 <p>소나큐브는 아래 사이트에서 다운로드 받고, </p>
 <p>소나스캐너는 맥을 이용중이므로 간단하게 brew로 설치해준다. </p>
 <pre><code>brew install sonar-scanner
@@ -374,7 +367,7 @@ if (!doNotTrack) {
 <p>맨 아래에 있는 소나 스캐너 명령어만 copy 해준다.</p>
 <p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fmy1O7%2FbtqSXkMuhBx%2F4oo8oRSuvqwjQeLAQXRPPk%2Fimg.png" alt=""></p>
 <hr>
-<h3 id="2-소나스캐너로-코드-검사-하기">2. 소나스캐너로 코드 검사 하기</h3>
+<h2 id="2-소나스캐너로-코드-검사-하기">2. 소나스캐너로 코드 검사 하기</h2>
 <p>위에서 복사했던 소나스캐너 명령어를 검사할 프로젝트 root 위치에서 실행해준다. </p>
 <p>여기서 나는 git scm 에러가 발생했다. </p>
 <p>그래서 &lsquo;-Dsonar.scm.provider=git&rsquo; 을 명령어 뒤에 추가해줬다. </p>

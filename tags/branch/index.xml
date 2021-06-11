@@ -13,8 +13,7 @@
       <pubDate>Tue, 18 May 2021 16:01:06 +0900</pubDate>
       
       <guid>https://haneulee.github.io/2021/05/git-feature-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EC%83%9D%EC%84%B1-push/</guid>
-      <description>branch 생성 $ git branch &amp;lt;branchName&amp;gt; 생성한 브랜치로 이동 $ git checkout &amp;lt;branchName&amp;gt; // 브랜치 생성 &amp;amp; 체크아웃 $ git checkout -b &amp;lt;branchName&amp;gt;    (adsbygoogle = window.adsbygoogle || []).push({});  원격 저장소에 push 하기 로컬에서만 생성한 branch를 upstream branch로 만든다.
-$ git push --set-upstream origin &amp;lt;branchName&amp;gt; </description>
+      <description>branch 생성  아래 명령어로 새로운 브랜치 생성    (adsbygoogle = window.adsbygoogle || []).push({});   $ git branch &amp;lt;branchName&amp;gt; 생성한 브랜치로 이동  생성한 브랜치로 체크아웃하기  $ git checkout &amp;lt;branchName&amp;gt; // 브랜치 생성 &amp;amp; 체크아웃 $ git checkout -b &amp;lt;branchName&amp;gt; 원격 저장소에 push 하기  로컬에서만 생성한 branch를 upstream branch로 만든다.  $ git push --set-upstream origin &amp;lt;branchName&amp;gt; </description>
     </item>
     
   </channel>

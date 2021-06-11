@@ -13,8 +13,9 @@
       <pubDate>Thu, 20 May 2021 10:45:13 +0900</pubDate>
       
       <guid>https://haneulee.github.io/2021/05/git-%EC%98%A4%EB%A5%98-fatal-refusing-to-merge-unrelated-histories/</guid>
-      <description>git clone 후, git push 하는 과정 중에 다음과 같이 오류가 날 경우가 있다. 이는 push 하기 전에 git pull 을 먼저 실행해야 하는데 그 전에 수정했던 어떤 커밋과 꼬여 오류가 날 경우..
-fatal: refusing to merge unrelated histories    (adsbygoogle = window.adsbygoogle || []).push({});  이럴 때는 아래처럼 실행하주고, 다시 git push를 하면 해결됨
+      <description>git clone 후, git push 하는 과정 중에 다음과 같이 오류가 날 경우가 있다.    (adsbygoogle = window.adsbygoogle || []).push({}); 
+이는 push 하기 전에 git pull 을 먼저 실행해야 하는데 그 전에 수정했던 어떤 커밋과 꼬여 오류가 날 경우..
+fatal: refusing to merge unrelated histories 이럴 때는 아래처럼 실행하주고, 다시 git push를 하면 해결됨
 git pull origin 브런치명 --allow-unrelated-histories </description>
     </item>
     

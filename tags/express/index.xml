@@ -13,8 +13,7 @@
       <pubDate>Mon, 31 May 2021 13:11:16 +0900</pubDate>
       
       <guid>https://haneulee.github.io/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
-      <description>Pug Pug 란 ?  Pug는 Haml의 영향을 많이 받고 Node.js 및 브라우저 용 JavaScript로 구현 된 고성능 템플릿 엔진이다.  이 프로젝트는 이전에 &amp;ldquo;Jade&amp;quot;로 알려졌습니다. 그러나 &amp;ldquo;Jade&amp;quot;는 등록 상표라는 것이 밝혀졌습니다. 결과적으로 이름 변경이 필요했습니다. 메인테이너들 사이의 토론 끝에 &amp;ldquo;Pug&amp;rdquo; 가이 프로젝트의 새 이름으로 선택되었습니다. 버전 2부터는 &amp;ldquo;pug&amp;quot;가 공식 패키지 이름입니다.
-패키지 또는 앱에서 현재를 사용 jade하는 경우 걱정하지 마십시오. 모든 새 버전이 .NET에서 릴리스 될 예정이지만 해당 패키지 이름을 계속 사용할 수있는 권한을 확보했습니다.</description>
+      <description>Pug Pug 란 ?  Pug는 Haml의 영향을 많이 받고 Node.js 및 브라우저 용 JavaScript로 구현 된 고성능 템플릿 엔진이다.    (adsbygoogle = window.adsbygoogle || []).push({});  이 프로젝트는 이전에 &amp;ldquo;Jade&amp;quot;로 알려졌습니다. 그러나 &amp;ldquo;Jade&amp;quot;는 등록 상표라는 것이 밝혀졌습니다. 결과적으로 이름 변경이 필요했습니다. 메인테이너들 사이의 토론 끝에 &amp;ldquo;Pug&amp;rdquo; 가이 프로젝트의 새 이름으로 선택되었습니다. 버전 2부터는 &amp;ldquo;pug&amp;quot;가 공식 패키지 이름입니다.  패키지 또는 앱에서 현재를 사용 jade하는 경우 걱정하지 마십시오.</description>
     </item>
     
     <item>
@@ -23,7 +22,7 @@
       <pubDate>Wed, 26 May 2021 14:07:54 +0900</pubDate>
       
       <guid>https://haneulee.github.io/2021/05/express-%EB%9E%80/</guid>
-      <description>Express 설명  Express는 웹 및 모바일 애플리케이션을 위한 일련의 강력한 기능을 제공하는 간결하고 유연한 Node.js 웹 애플리케이션 프레임워크입니다. 자유롭게 활용할 수 있는 수많은 HTTP 유틸리티 메소드 및 미들웨어를 통해 쉽고 빠르게 강력한 API를 작성할 수 있습니다.  설치 npm install express API const express = require(&amp;#34;express&amp;#34;); const app = express(); const port = 3000; app.get(&amp;#34;/&amp;#34;, (req, res) =&amp;gt; { res.send(&amp;#34;Hello World!&amp;#34;); }); app.listen(port, () =&amp;gt; { console.log(`Example app listening at http://localhost:${port}`); }); get() &amp;amp; post() //GET 방식의 METHOD app.</description>
+      <description>Express 설명  Express는 웹 및 모바일 애플리케이션을 위한 일련의 강력한 기능을 제공하는 간결하고 유연한 Node.js 웹 애플리케이션 프레임워크입니다. 자유롭게 활용할 수 있는 수많은 HTTP 유틸리티 메소드 및 미들웨어를 통해 쉽고 빠르게 강력한 API를 작성할 수 있습니다.    (adsbygoogle = window.adsbygoogle || []).push({});   설치 npm install express API const express = require(&amp;#34;express&amp;#34;); const app = express(); const port = 3000; app.get(&amp;#34;/&amp;#34;, (req, res) =&amp;gt; { res.</description>
     </item>
     
   </channel>

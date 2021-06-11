@@ -13,7 +13,7 @@
       <pubDate>Mon, 17 May 2021 18:33:22 +0900</pubDate>
       
       <guid>https://haneulee.github.io/2021/05/cdn-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%97%90-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
-      <description>CDN 이미지를 블로그에 적용하기 깃헙 블로그를 사용하면서 이미지가 상당히 느리게 로딩되는 것을 확인 jsdelivr의 cdn 서버를 이용하여 이미지를 로딩하기로 결정
+      <description>CDN 이미지를 블로그에 적용하기    (adsbygoogle = window.adsbygoogle || []).push({});  깃헙 블로그를 사용하면서 이미지가 상당히 느리게 로딩되는 것을 확인 jsdelivr의 cdn 서버를 이용하여 이미지를 로딩하기로 결정
 https://cdn.jsdelivr.net/gh/계정명/레파지토리명/파일경로 </description>
     </item>
     
