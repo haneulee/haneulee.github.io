@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 11 Jun 2021 13:50:39 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Jun 2021 16:37:27 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>development</title>
+      <link>https://haneulee.github.io/tags/development/</link>
+      <pubDate>Fri, 25 Jun 2021 16:37:27 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>front-end</title>
+      <link>https://haneulee.github.io/tags/front-end/</link>
+      <pubDate>Fri, 25 Jun 2021 16:37:27 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/front-end/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://haneulee.github.io/tags/javascript/</link>
+      <pubDate>Fri, 25 Jun 2021 16:37:27 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>typescript</title>
+      <link>https://haneulee.github.io/tags/typescript/</link>
+      <pubDate>Fri, 25 Jun 2021 16:37:27 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/typescript/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>browser</title>
       <link>https://haneulee.github.io/tags/browser/</link>
@@ -22,24 +58,6 @@
       <pubDate>Fri, 11 Jun 2021 13:50:39 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/cookie/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>development</title>
-      <link>https://haneulee.github.io/tags/development/</link>
-      <pubDate>Fri, 11 Jun 2021 13:50:39 +0900</pubDate>
-      
-      <guid>https://haneulee.github.io/tags/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>front-end</title>
-      <link>https://haneulee.github.io/tags/front-end/</link>
-      <pubDate>Fri, 11 Jun 2021 13:50:39 +0900</pubDate>
-      
-      <guid>https://haneulee.github.io/tags/front-end/</guid>
       <description></description>
     </item>
     
@@ -445,15 +463,6 @@
       <pubDate>Tue, 25 May 2021 14:36:24 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/%EB%8C%93%EA%B8%80/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://haneulee.github.io/tags/javascript/</link>
-      <pubDate>Tue, 25 May 2021 14:34:02 +0900</pubDate>
-      
-      <guid>https://haneulee.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     

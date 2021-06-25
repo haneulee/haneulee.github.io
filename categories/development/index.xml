@@ -6,7 +6,16 @@
     <description>Recent content in development on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 11 Jun 2021 13:50:39 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Jun 2021 16:37:27 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Typescript 시작하기</title>
+      <link>https://haneulee.github.io/2021/06/typescript-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Fri, 25 Jun 2021 16:37:27 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/06/typescript-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  Typescript Typescript 란 ? : 정적 타입 검사자 (TypeScript: A Static Type Checker) 마이크로소프트에서 구현한 JavaScript의 슈퍼셋(Superset) 프로그래밍 언어. 확장자로는 .ts를 사용하며, 컴파일의 결과물로 JavaScript 코드를 출력한다. 최종적으로 런타임에서는 이렇게 출력된 JavaScript 코드를 구동시키게 된다. TypeScript라는 이름답게 정적 타입을 명시할 수 있다는 것이 순수한 자바스크립트와의 가장 큰 차이점이다. 덕분에 개발 도구(IDE나 컴파일러 등)에게 개발자가 의도한 변수나 함수 등의 목적을 더욱 명확하게 전달할 수 있고, 그렇게 전달된 정보를 기반으로 코드 자동 완성이나 잘못된 변수/함수 사용에 대한 에러 알림 같은 풍부한 피드백을 받을 수 있게 되므로 순수 자바스크립트에 비해 어마어마한 생산성 향상을 꾀할 수 있다.</description>
+    </item>
+    
     <item>
       <title>브라우저 세션 &amp; 쿠키 Browser Session &amp; cookies 🍪</title>
       <link>https://haneulee.github.io/2021/06/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%B8%EC%85%98-%EC%BF%A0%ED%82%A4-browser-session-cookies/</link>
