@@ -6,7 +6,17 @@
     <description>Recent content on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 25 Jun 2021 16:37:27 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Jul 2021 13:56:56 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Typeorm Start </title>
+      <link>https://haneulee.github.io/2021/07/typeorm-start/</link>
+      <pubDate>Mon, 05 Jul 2021 13:56:56 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/07/typeorm-start/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  Typeorm ORM (Object Relational Mapping) ORM (Object-relational mapping)은 객체지향 프로그래밍(Object-Oriented-Programming) 과 관계형 데이터베이스(Relational-Database)사이의 호환되지 않는 데이터를 변환하는 시스템이다. 객체지향 프로그래밍은 Class를 사용하고 관계형 데이터베이스는 Table을 사용한다.
+장점  선언, 할당, 종료 같은 부수적인 코드가 없거나 급격히 줄어든다. 각종 객체에 대한 코드를 별도로 작성하기 떄문에 코드의 가독성을 올려준다. SQL 의 절차, 순차적인 접근 방식이 아닌 객체 접근 방식이다.  단점  완벽하게 ORM 서비스구현이 어려울수있다.</description>
+    </item>
+    
     <item>
       <title>Typescript 시작하기</title>
       <link>https://haneulee.github.io/2021/06/typescript-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
