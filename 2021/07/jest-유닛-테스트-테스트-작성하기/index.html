@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Haneul Lee">
+<meta name="keywords" content="development, front-end, development, next-gen">
+<meta name="description" content="Jest    (adsbygoogle = window.adsbygoogle || []).push({});  Jest 테스트 작성하기 jwt.service.spec.ts describe(&#39;JwtService&#39;, () =&gt; { let service: JwtService; beforeAll(async () =&gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&lt;JwtService&gt;(JwtService); }); jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다. jwt service가 제대로 준비 되었는지 확인하려면 it(&#39;should be defined&#39;,()={ expect(service).toBeDefined();}); 이 코드로 확인해볼 수 있다.">
+
+
+<meta property="og:description" content="Jest    (adsbygoogle = window.adsbygoogle || []).push({});  Jest 테스트 작성하기 jwt.service.spec.ts describe(&#39;JwtService&#39;, () =&gt; { let service: JwtService; beforeAll(async () =&gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&lt;JwtService&gt;(JwtService); }); jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다. jwt service가 제대로 준비 되었는지 확인하려면 it(&#39;should be defined&#39;,()={ expect(service).toBeDefined();}); 이 코드로 확인해볼 수 있다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jest 유닛 테스트 - 테스트 작성하기">
+<meta name="twitter:title" content="Jest 유닛 테스트 - 테스트 작성하기">
+<meta property="og:url" content="https://haneulee.github.io/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0/">
+<meta property="twitter:url" content="https://haneulee.github.io/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0/">
+<meta property="og:site_name" content="Haneul Devlog">
+<meta property="og:description" content="Jest    (adsbygoogle = window.adsbygoogle || []).push({});  Jest 테스트 작성하기 jwt.service.spec.ts describe(&#39;JwtService&#39;, () =&gt; { let service: JwtService; beforeAll(async () =&gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&lt;JwtService&gt;(JwtService); }); jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다. jwt service가 제대로 준비 되었는지 확인하려면 it(&#39;should be defined&#39;,()={ expect(service).toBeDefined();}); 이 코드로 확인해볼 수 있다.">
+<meta name="twitter:description" content="Jest    (adsbygoogle = window.adsbygoogle || []).push({});  Jest 테스트 작성하기 jwt.service.spec.ts describe(&#39;JwtService&#39;, () =&gt; { let service: JwtService; beforeAll(async () =&gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&lt;JwtService&gt;(JwtService); }); jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다. jwt service가 제대로 준비 되었는지 확인하려면 it(&#39;should be defined&#39;,()={ expect(service).toBeDefined();}); 이 코드로 확인해볼 수 있다.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-07-12T10:30:49">
+  
+  
+    <meta property="article:modified_time" content="2021-07-12T10:30:49">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+  
+  
+    
+      <meta property="article:tag" content="development">
+    
+      <meta property="article:tag" content="front-end">
+    
+      <meta property="article:tag" content="unittest">
+    
+      <meta property="article:tag" content="jest">
+    
+      <meta property="article:tag" content="javascript">
+    
+      <meta property="article:tag" content="facebook">
+    
+      <meta property="article:tag" content="react">
+    
+      <meta property="article:tag" content="nextjs">
+    
+      <meta property="article:tag" content="테스트주도개발">
+    
+      <meta property="article:tag" content="제스트">
+    
+      <meta property="article:tag" content="TDD">
+    
+      <meta property="article:tag" content="페이스북">
+    
+      <meta property="article:tag" content="단위테스트">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+
+
+    <title>Jest 유닛 테스트 - 테스트 작성하기</title>
+
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://haneulee.github.io/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-ztpa5racnvwb1piogkwp3ingkdtmmy22omvqduglh84iehd9iimsso9o.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="https://haneulee.github.io/css/mystyle.css">
+      
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-BHPHWPTLMZ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://haneulee.github.io/">Haneul Devlog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://haneulee.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://haneulee.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Haneul Lee</h4>
+        
+          <h5 class="sidebar-profile-bio">Devlog</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories/development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin-square"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Jest 유닛 테스트 - 테스트 작성하기
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-07-12T10:30:49&#43;09:00">
+        
+  July 12, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#jest-테스트-작성하기">Jest 테스트 작성하기</a>
+      <ul>
+        <li><a href="#jwtservicespects">jwt.service.spec.ts</a></li>
+        <li><a href="#usersservicespects">users.service.spec.ts</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<h1 id="jest">Jest</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-jest.png" alt=""></p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="3551187766"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h2 id="jest-테스트-작성하기">Jest 테스트 작성하기</h2>
+<h3 id="jwtservicespects">jwt.service.spec.ts</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;JwtService&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">service</span>: <span style="color:#66d9ef">JwtService</span>;
+
+  <span style="color:#a6e22e">beforeAll</span>(<span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">module</span>: <span style="color:#66d9ef">TestingModule</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">Test</span>.<span style="color:#a6e22e">createTestingModule</span>({
+      <span style="color:#a6e22e">providers</span><span style="color:#f92672">:</span> [
+        <span style="color:#a6e22e">JwtService</span>,
+        { <span style="color:#a6e22e">provide</span>: <span style="color:#66d9ef">CONFIG_OPTIONS</span>, <span style="color:#a6e22e">useValue</span>: <span style="color:#66d9ef">jwtOptions</span> },
+      ],
+    }).<span style="color:#a6e22e">compile</span>();
+    <span style="color:#a6e22e">service</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">module</span><span style="color:#a6e22e">.get</span>&lt;<span style="color:#f92672">JwtService</span>&gt;(<span style="color:#a6e22e">JwtService</span>);
+  });
+
+</code></pre></div><span class="highlight-text yellow">
+jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다.
+jwt service가 제대로 준비 되었는지 확인하려면
+it('should be defined',()=>{ expect(service).toBeDefined();}); 이 코드로 확인해볼 수 있다.
+</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">mock</span>(<span style="color:#e6db74">&#34;jsonwebtoken&#34;</span>, () <span style="color:#f92672">=&gt;</span> ({
+  <span style="color:#a6e22e">sign</span>: <span style="color:#66d9ef">jest.fn</span>(() <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">MOCKED_TOKEN</span>),
+  <span style="color:#a6e22e">verify</span>: <span style="color:#66d9ef">jest.fn</span>(() <span style="color:#f92672">=&gt;</span> ({ <span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">TEST_ID</span> })),
+}));
+
+<span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#34;Test sign method&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;should return MOCKED_TOKEN&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">token</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">sign</span>(<span style="color:#a6e22e">TEST_ID</span>);
+
+    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">jwt</span>.<span style="color:#a6e22e">sign</span>).<span style="color:#a6e22e">toHaveBeenCalledTimes</span>(<span style="color:#ae81ff">1</span>);
+    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">jwt</span>.<span style="color:#a6e22e">sign</span>).<span style="color:#a6e22e">toHaveBeenCalledWith</span>({ <span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">TEST_ID</span> }, <span style="color:#a6e22e">TEST_PRIVATE</span>);
+    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">token</span>).<span style="color:#a6e22e">toEqual</span>(<span style="color:#a6e22e">MOCKED_TOKEN</span>);
+    <span style="color:#a6e22e">expect</span>(<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">token</span>).<span style="color:#a6e22e">toEqual</span>(<span style="color:#e6db74">&#34;string&#34;</span>);
+  });
+});
+</code></pre></div><span class="highlight-text yellow">
+jest.mock('jsonwebtoken', () => ...) 이 블럭은 jsonwebtoken 패키지를 mocking하는 것이다.
+유닛테스트이기 때문에 jwt service 자체에만 집중해야 하기 때문에 이러한 영향을 줄 수 있는 패키지나 함수, 클래스들은 mocking하여 테스트의 도구로 이용한다.
+
+밑에 expect(jwt.sign).toHaveBeenCalledTimes(1);은 jwt.sign이 단 한 번 호출 되는지 테스트로 확인하는 것이다.
+expect와 실제와 다르면 테스트는 실패한다.
+
+describe, it 을 적절히 잘 사용하면 테스트 코드 가독성이 높아진다. describe는 테스트할 대상에 대해 설명한다.
+it(individual test), 그 대상을 개별적으로 테스트 하는 것을 의미한다.
+</span>
+<h3 id="usersservicespects">users.service.spec.ts</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;UsersService&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">service</span>: <span style="color:#66d9ef">UsersService</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jwtService</span>: <span style="color:#66d9ef">JwtService</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">userRepository</span>: <span style="color:#66d9ef">MockRepository</span>&lt;<span style="color:#f92672">User</span>&gt;;
+
+  <span style="color:#a6e22e">beforeEach</span>(<span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">module</span>: <span style="color:#66d9ef">TestingModule</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">Test</span>.<span style="color:#a6e22e">createTestingModule</span>({
+      <span style="color:#a6e22e">providers</span><span style="color:#f92672">:</span> [
+        <span style="color:#a6e22e">UsersService</span>,
+        {
+          <span style="color:#a6e22e">provide</span>: <span style="color:#66d9ef">getRepositoryToken</span>(<span style="color:#a6e22e">User</span>),
+          <span style="color:#a6e22e">useValue</span>: <span style="color:#66d9ef">mockRepository</span>(),
+        },
+        {
+          <span style="color:#a6e22e">provide</span>: <span style="color:#66d9ef">JwtService</span>,
+          <span style="color:#a6e22e">useValue</span>: <span style="color:#66d9ef">mockJwtService</span>,
+        },
+      ],
+    }).<span style="color:#a6e22e">compile</span>();
+
+    <span style="color:#a6e22e">service</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">module</span><span style="color:#a6e22e">.get</span>&lt;<span style="color:#f92672">UsersService</span>&gt;(<span style="color:#a6e22e">UsersService</span>);
+    <span style="color:#a6e22e">userRepository</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">module</span><span style="color:#a6e22e">.get</span>(<span style="color:#a6e22e">getRepositoryToken</span>(<span style="color:#a6e22e">User</span>));
+    <span style="color:#a6e22e">jwtService</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">module</span><span style="color:#a6e22e">.get</span>&lt;<span style="color:#f92672">JwtService</span>&gt;(<span style="color:#a6e22e">JwtService</span>);
+  });
+</code></pre></div><span class="highlight-text yellow">
+먼저 user service만 테스트해야 하는데, repository도 연결되어 있고, user 로그인 처리할 때 사용하는 jwt service도 연결되어 있습니다. user service에 집중해야 하는 단위 테스트이므로, 이것들은 mocking을 해야 합니다. jwtService는 jwt.service와 마찬가지로 여기서도 다시 mocking을 해주고, repository는 약간 생소하지만 위의 코드와 같이 설정을 해줍니다.
+
+코드를 보시면 jwt.service.spec.ts와는 달리 users.service.spec.ts에서는 beforeAll이 아니라 [**beforeEach**](https://jestjs.io/docs/setup-teardown)로 모듈을 초기화했습니다.
+이 둘의 차이는 뭘까요?
+테스트를 진행하기 전에 앞의 jwt 테스트에서 한 것처럼 세팅이 필요합니다. 세팅을 매 테스트마다 할 것인지 또는 전체 테스트에서 한 번만해도 되는지의 차이입니다.
+예를 들어, mocking한 respository 같은 경우에는 createAccount 테스트에도 사용할 수가 있고, seeProfile, editProfile 테스트하는 경우에도 모두 사용가능한데, 매번 사용횟수나 들어 간 변수들을 초기화하지 않으면 테스트가 꼬일 수 밖에 없습니다. 그래서 user.service를 테스트할 때에는 beforeAll이 아니라 beforeEach가 되는 것입니다.
+
+</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">async</span> <span style="color:#a6e22e">createAccount</span>({
+    <span style="color:#a6e22e">email</span>,
+    <span style="color:#a6e22e">password</span>,
+    <span style="color:#a6e22e">role</span>,
+  }<span style="color:#f92672">:</span> <span style="color:#a6e22e">CreateAccountInput</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">Promise</span>&lt;<span style="color:#f92672">CreateAccountOutput</span>&gt; {
+    <span style="color:#66d9ef">try</span> {
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">exists</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">findOne</span>({ <span style="color:#a6e22e">email</span> });
+      <span style="color:#75715e">// test 1
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">exists</span>) {
+        <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">ok</span>: <span style="color:#66d9ef">false</span>, <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`There is a user with that email already`</span> };
+      }
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">create</span>({
+        <span style="color:#a6e22e">email</span>,
+        <span style="color:#a6e22e">password</span>,
+        <span style="color:#a6e22e">role</span>,
+      });
+      <span style="color:#66d9ef">await</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">save</span>(<span style="color:#a6e22e">user</span>);
+
+      <span style="color:#75715e">// test 2
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">return</span> {
+        <span style="color:#a6e22e">ok</span>: <span style="color:#66d9ef">true</span>,
+        <span style="color:#a6e22e">error</span>: <span style="color:#66d9ef">null</span>,
+      };
+    } <span style="color:#66d9ef">catch</span> {
+        <span style="color:#75715e">// test 3
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">return</span> {
+        <span style="color:#a6e22e">ok</span>: <span style="color:#66d9ef">false</span>,
+        <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Could not create account&#39;</span>,
+      };
+    }
+  }
+</code></pre></div><span class="highlight-text yellow">
+
+1의 경우 - 이미 존재하는 이메일이 있을 경우에는 creatAccount가 실패해야 합니다.
+2의 경우 - 정상적으로 계정이 만들어져야 하는 경우입니다.
+3의 경우 - findOne이나 save 메소드에서 에러가 발생하여 catch로 넘어가는 경우입니다.
+
+위의 createAccount에서는 위의 logic들을 판단해야만 코드 모든 부분들을 테스트 하는 것으로 볼 수 있습니다.
+그래서 테스트는
+
+---
+
+it('should success to create User', async () => { ...
+it('should fail because of user existing', async () => { ...
+it('should fail because of saving failed', async () => { ...
+
+---
+
+이렇게 세 가지 로직으로 테스트를 할 수 있습니다.
+그러면 createAccount에 대한 test coverage가 전부 채워집니다.
+
+위의 it(individual test) 코드를 조금더 살펴 보면 테스트가 어떤 식으로 진행이 되어야 하는지 감을 잡을 수 있습니다.
+it('should success to create user', ...: createAccount를 호출해서 성공적으로 계정 만드는 것을 테스트 하는 것입니다.
+service의 로직만 테스트하는 것이므로 respository는 흉내내기를 해야 합니다.
+users.service.spec.ts 상단 코드에 보면 이미 userRepository를 흉내내고 설정을 해놨습니다.
+beforeEach를 통해서 매 테스트마다 초기화가 되기 때문에 걱정하지 않고 테스트 안에서 리턴 값을 흉내낼 수 있습니다.
+
+userRepository.findOne.mockResolvedValueOnce(null); : user repository의 findOne값을 흉내낸 것입니다.
+mockResolvedValue는 Promise를 리턴합니다. Promise의 resolve값이 null이라는 뜻이 되겠습니다. 실제 db라면 db 연결이나 상태에 따라 값을 리턴 못할 수도 있고 연결이 안될 수도 있기 때문에 유닛 테스트라는 의미가 살지 않기 때문에 어떤 경우라도 db와는 관계 없이 null 값을 resolve로 넘겨준다는 뜻이 됩니다.
+
+userRepository.create.mockReturnValueOnce(hostArgs);: create는 typeorm repository에서 Promise로 리턴을 하는 것이 아니라, 엔티티 객체를 리턴해줍니다. 세이브 되기 이전 값입니다. 그래서 create는 resolve 값을 리턴하는 것이 아닙니다. 그냥 객체를 리턴해주기 때문에 위와 같이 설정을 해주면 되겠습니다.
+
+userRepository.save.mockResolvedValue(TEST_HOST);: findOne과 마찬가지로 resolve 값을 리턴해줍니다. 성공적으로 만들어진 경우이므로 db에 성공적으로 저장된 값을 리턴하는 repository의 save 메소드를 흉내낸 것입니다.
+
+</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#34;createAccount Testing&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;should success to create User&#34;</span>, <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#a6e22e">userRepository</span>.<span style="color:#a6e22e">findOne</span>.<span style="color:#a6e22e">mockResolvedValueOnce</span>(<span style="color:#66d9ef">null</span>);
+    <span style="color:#a6e22e">userRepository</span>.<span style="color:#a6e22e">create</span>.<span style="color:#a6e22e">mockReturnValueOnce</span>(<span style="color:#a6e22e">hostArgs</span>);
+    <span style="color:#a6e22e">userRepository</span>.<span style="color:#a6e22e">save</span>.<span style="color:#a6e22e">mockResolvedValue</span>(<span style="color:#a6e22e">TEST_HOST</span>);
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">createAccount</span>(<span style="color:#a6e22e">hostArgs</span>);
+
+    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">userRepository</span>.<span style="color:#a6e22e">findOne</span>).<span style="color:#a6e22e">toHaveBeenCalledTimes</span>(<span style="color:#ae81ff">1</span>);
+    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">userRepository</span>.<span style="color:#a6e22e">findOne</span>).<span style="color:#a6e22e">toHaveBeenCalledWith</span>({
+      <span style="color:#a6e22e">email</span>: <span style="color:#66d9ef">hostArgs.email</span>,
+    });
+    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">userRepository</span>.<span style="color:#a6e22e">create</span>).<span style="color:#a6e22e">toHaveBeenCalledTimes</span>(<span style="color:#ae81ff">1</span>);
+    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">userRepository</span>.<span style="color:#a6e22e">create</span>).<span style="color:#a6e22e">toHaveBeenCalledWith</span>(<span style="color:#a6e22e">hostArgs</span>);
+    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">userRepository</span>.<span style="color:#a6e22e">save</span>).<span style="color:#a6e22e">toHaveBeenCalledTimes</span>(<span style="color:#ae81ff">1</span>);
+    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">userRepository</span>.<span style="color:#a6e22e">save</span>).<span style="color:#a6e22e">toHaveBeenCalledWith</span>(<span style="color:#a6e22e">hostArgs</span>);
+    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">result</span>).<span style="color:#a6e22e">toMatchObject</span>({ <span style="color:#a6e22e">ok</span>: <span style="color:#66d9ef">true</span>, <span style="color:#a6e22e">error</span>: <span style="color:#66d9ef">null</span> });
+  });
+});
+</code></pre></div><span class="highlight-text yellow">
+createAccount가 호출되었습니다. 우리가 설정해 놓은 값에 의하면 위 코드는 findOne을 호출해서 이미 존재하는 이메일 계정이 없음을 확인하고 create 메소드를 호출해서 entity를 만들고, save 메소드를 호출해서 db에 엔티티를 저장하는 로직으로 흘러 갈 것입니다.
+우리가 만든 createAccount가 위의 로직대로 흘러간다고 기대하였으므로, 실제로 그렇게 호출이 되었나 확인만 해주면 테스트를 성공적으로 한 것입니다.
+
+위의 로직대로 findOne이 호출되었는가(toHaveBeenCalledTimes), 파라미터는 제대로 입력 되었는가(toHaveBeenCalledWith), create는 제대로 호출되었는가, save는 제대로 호출되었고, 결과가 우리가 원하는 값(toMatchObject)이 나오는가?를 jest에서 판단을 해주기 때문에 createAccount가 정상적으로 작동하는 경우 테스트가 끝난 것입니다.
+
+createAccount를 모두 테스트하려면, 앞에서 언급드린 대로, 이미 이메일 계정이 이미 있는 경우와, save 메소드가 실패할 경우를 모두 테스트해야 full coverage를 완성할 수 있습니다.
+</span>
+<p>참고 :
+<a href="https://jestjs.io/docs/api">jset 공식문서</a>,
+<a href="https://www.daleseo.com/jest-fn-spy-on/">jset mocking</a>,</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/development/">development</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/front-end/">front-end</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/unittest/">unittest</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/jest/">jest</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/javascript/">javascript</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/facebook/">facebook</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/react/">react</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/nextjs/">nextjs</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%A3%BC%EB%8F%84%EA%B0%9C%EB%B0%9C/">테스트주도개발</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%EC%A0%9C%EC%8A%A4%ED%8A%B8/">제스트</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/tdd/">TDD</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%B6%81/">페이스북</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%EB%8B%A8%EC%9C%84%ED%85%8C%EC%8A%A4%ED%8A%B8/">단위테스트</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/07/%EC%9C%A0%EC%9A%A9%ED%95%9C-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%AA%A8%EC%9D%8C/" data-tooltip="유용한 사이트 모음 💖">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+            
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="5041197559"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <span class="copyrights">
+      &copy; 2021 <a href="https://github.com/haneulee">haneulee</a>. All Rights Reserved
+    </span>
+  </footer>
+  
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/07/%EC%9C%A0%EC%9A%A9%ED%95%9C-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%AA%A8%EC%9D%8C/" data-tooltip="유용한 사이트 모음 💖">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2021%2F07%2Fjest-%25EC%259C%25A0%25EB%258B%259B-%25ED%2585%258C%25EC%258A%25A4%25ED%258A%25B8-%25ED%2585%258C%25EC%258A%25A4%25ED%258A%25B8-%25EC%259E%2591%25EC%2584%25B1%25ED%2595%2598%25EA%25B8%25B0%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2021%2F07%2Fjest-%25EC%259C%25A0%25EB%258B%259B-%25ED%2585%258C%25EC%258A%25A4%25ED%258A%25B8-%25ED%2585%258C%25EC%258A%25A4%25ED%258A%25B8-%25EC%259E%2591%25EC%2584%25B1%25ED%2595%2598%25EA%25B8%25B0%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2021%2F07%2Fjest-%25EC%259C%25A0%25EB%258B%259B-%25ED%2585%258C%25EC%258A%25A4%25ED%258A%25B8-%25ED%2585%258C%25EC%258A%25A4%25ED%258A%25B8-%25EC%259E%2591%25EC%2584%25B1%25ED%2595%2598%25EA%25B8%25B0%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Lee</h4>
+    
+      <div id="about-card-bio">Devlog</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://haneulee.github.io/img/gradient.png');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://haneulee.github.io/js/script-u9yd4ao2ybcuytgtttyecmko3uojks2wyf8e51tnmi3gtvs2ulbfyz1znoe.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

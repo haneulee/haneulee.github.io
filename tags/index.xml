@@ -6,11 +6,11 @@
     <description>Recent content in Tags on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 09 Jul 2021 11:06:17 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Jul 2021 10:30:49 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>development</title>
       <link>https://haneulee.github.io/tags/development/</link>
-      <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
+      <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/development/</guid>
       <description></description>
@@ -19,7 +19,7 @@
     <item>
       <title>facebook</title>
       <link>https://haneulee.github.io/tags/facebook/</link>
-      <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
+      <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/facebook/</guid>
       <description></description>
@@ -28,7 +28,7 @@
     <item>
       <title>front-end</title>
       <link>https://haneulee.github.io/tags/front-end/</link>
-      <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
+      <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/front-end/</guid>
       <description></description>
@@ -37,7 +37,7 @@
     <item>
       <title>javascript</title>
       <link>https://haneulee.github.io/tags/javascript/</link>
-      <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
+      <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/javascript/</guid>
       <description></description>
@@ -46,7 +46,7 @@
     <item>
       <title>jest</title>
       <link>https://haneulee.github.io/tags/jest/</link>
-      <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
+      <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/jest/</guid>
       <description></description>
@@ -55,7 +55,7 @@
     <item>
       <title>nextjs</title>
       <link>https://haneulee.github.io/tags/nextjs/</link>
-      <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
+      <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/nextjs/</guid>
       <description></description>
@@ -64,7 +64,7 @@
     <item>
       <title>react</title>
       <link>https://haneulee.github.io/tags/react/</link>
-      <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
+      <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/react/</guid>
       <description></description>
@@ -73,7 +73,7 @@
     <item>
       <title>TDD</title>
       <link>https://haneulee.github.io/tags/tdd/</link>
-      <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
+      <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/tdd/</guid>
       <description></description>
@@ -82,7 +82,7 @@
     <item>
       <title>unittest</title>
       <link>https://haneulee.github.io/tags/unittest/</link>
-      <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
+      <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/unittest/</guid>
       <description></description>
@@ -91,7 +91,7 @@
     <item>
       <title>단위테스트</title>
       <link>https://haneulee.github.io/tags/%EB%8B%A8%EC%9C%84%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
-      <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
+      <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/%EB%8B%A8%EC%9C%84%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
       <description></description>
@@ -100,7 +100,7 @@
     <item>
       <title>제스트</title>
       <link>https://haneulee.github.io/tags/%EC%A0%9C%EC%8A%A4%ED%8A%B8/</link>
-      <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
+      <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/%EC%A0%9C%EC%8A%A4%ED%8A%B8/</guid>
       <description></description>
@@ -109,7 +109,7 @@
     <item>
       <title>테스트주도개발</title>
       <link>https://haneulee.github.io/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%A3%BC%EB%8F%84%EA%B0%9C%EB%B0%9C/</link>
-      <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
+      <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%A3%BC%EB%8F%84%EA%B0%9C%EB%B0%9C/</guid>
       <description></description>
@@ -118,9 +118,27 @@
     <item>
       <title>페이스북</title>
       <link>https://haneulee.github.io/tags/%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%B6%81/</link>
-      <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
+      <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
       <guid>https://haneulee.github.io/tags/%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%B6%81/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>website</title>
+      <link>https://haneulee.github.io/tags/website/</link>
+      <pubDate>Fri, 09 Jul 2021 15:00:01 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>유용한사이트</title>
+      <link>https://haneulee.github.io/tags/%EC%9C%A0%EC%9A%A9%ED%95%9C%EC%82%AC%EC%9D%B4%ED%8A%B8/</link>
+      <pubDate>Fri, 09 Jul 2021 15:00:01 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/tags/%EC%9C%A0%EC%9A%A9%ED%95%9C%EC%82%AC%EC%9D%B4%ED%8A%B8/</guid>
       <description></description>
     </item>
     
