@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Haneul Lee">
+<meta name="keywords" content="development, front-end, development, next-gen">
+<meta name="description" content="E2E TEST 🏃🏻‍♀️ E2E Test (End To End Test) 란 ? 개별 모듈 및 클래스에 중점을 두는 단위 테스트와 달리 e2e 테스트는 최종 사용자가 프로덕션과 함께 하게 될 상호 작용의 종류에 더 가까운 보다 종합적인 수준에서 클래스와 모듈의 상호 작용을 다룹니다. 각 API 엔드포인트의 종단 간 테스트는 시스템의 전반적인 동작이 정확하고 프로젝트 요구 사항을 충족하는지 확인하는 데 도움이 됩니다. NestJS를 사용하면 supertest 라이브러리를 사용하여 HTTP 요청을 쉽게 시뮬레이션할 수 있습니다.">
+
+
+<meta property="og:description" content="E2E TEST 🏃🏻‍♀️ E2E Test (End To End Test) 란 ? 개별 모듈 및 클래스에 중점을 두는 단위 테스트와 달리 e2e 테스트는 최종 사용자가 프로덕션과 함께 하게 될 상호 작용의 종류에 더 가까운 보다 종합적인 수준에서 클래스와 모듈의 상호 작용을 다룹니다. 각 API 엔드포인트의 종단 간 테스트는 시스템의 전반적인 동작이 정확하고 프로젝트 요구 사항을 충족하는지 확인하는 데 도움이 됩니다. NestJS를 사용하면 supertest 라이브러리를 사용하여 HTTP 요청을 쉽게 시뮬레이션할 수 있습니다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NestJS 에서 E2E TEST 🏃🏻‍♀️">
+<meta name="twitter:title" content="NestJS 에서 E2E TEST 🏃🏻‍♀️">
+<meta property="og:url" content="https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-e2e-test-%EF%B8%8F/">
+<meta property="twitter:url" content="https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-e2e-test-%EF%B8%8F/">
+<meta property="og:site_name" content="Haneul Devlog">
+<meta property="og:description" content="E2E TEST 🏃🏻‍♀️ E2E Test (End To End Test) 란 ? 개별 모듈 및 클래스에 중점을 두는 단위 테스트와 달리 e2e 테스트는 최종 사용자가 프로덕션과 함께 하게 될 상호 작용의 종류에 더 가까운 보다 종합적인 수준에서 클래스와 모듈의 상호 작용을 다룹니다. 각 API 엔드포인트의 종단 간 테스트는 시스템의 전반적인 동작이 정확하고 프로젝트 요구 사항을 충족하는지 확인하는 데 도움이 됩니다. NestJS를 사용하면 supertest 라이브러리를 사용하여 HTTP 요청을 쉽게 시뮬레이션할 수 있습니다.">
+<meta name="twitter:description" content="E2E TEST 🏃🏻‍♀️ E2E Test (End To End Test) 란 ? 개별 모듈 및 클래스에 중점을 두는 단위 테스트와 달리 e2e 테스트는 최종 사용자가 프로덕션과 함께 하게 될 상호 작용의 종류에 더 가까운 보다 종합적인 수준에서 클래스와 모듈의 상호 작용을 다룹니다. 각 API 엔드포인트의 종단 간 테스트는 시스템의 전반적인 동작이 정확하고 프로젝트 요구 사항을 충족하는지 확인하는 데 도움이 됩니다. NestJS를 사용하면 supertest 라이브러리를 사용하여 HTTP 요청을 쉽게 시뮬레이션할 수 있습니다.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-07-14T14:40:42">
+  
+  
+    <meta property="article:modified_time" content="2021-07-14T14:40:42">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+  
+  
+    
+      <meta property="article:tag" content="development">
+    
+      <meta property="article:tag" content="front-end">
+    
+      <meta property="article:tag" content="e2e">
+    
+      <meta property="article:tag" content="jest">
+    
+      <meta property="article:tag" content="javascript">
+    
+      <meta property="article:tag" content="facebook">
+    
+      <meta property="article:tag" content="react">
+    
+      <meta property="article:tag" content="nextjs">
+    
+      <meta property="article:tag" content="supertest">
+    
+      <meta property="article:tag" content="endtoendtest">
+    
+      <meta property="article:tag" content="테스트주도개발">
+    
+      <meta property="article:tag" content="제스트">
+    
+      <meta property="article:tag" content="TDD">
+    
+      <meta property="article:tag" content="페이스북">
+    
+      <meta property="article:tag" content="엔드투엔드테스트">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-jest.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-jest.png">
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+
+
+    <title>NestJS 에서 E2E TEST 🏃🏻‍♀️</title>
+
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-e2e-test-%EF%B8%8F/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-amwwsek1km5ktg0jdnasyimfcocmzihio9bisdqlmnwznwztzogu2y5qmyi.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="https://haneulee.github.io/css/mystyle.css">
+      
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-BHPHWPTLMZ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://haneulee.github.io/">Haneul Devlog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://haneulee.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://haneulee.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Haneul Lee</h4>
+        
+          <h5 class="sidebar-profile-bio">Devlog</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories/development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-code"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.haneul-lee.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-window-maximize"></i>
+      
+      <span class="sidebar-button-desc">Website</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/resume" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-file"></i>
+      
+      <span class="sidebar-button-desc">Resume</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin-square"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      
+      
+      <span class="sidebar-button-desc"></span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      NestJS 에서 E2E TEST 🏃🏻‍♀️
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-07-14T14:40:42&#43;09:00">
+        
+  July 14, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#e2e-test-end-to-end-test-란-">E2E Test (End To End Test) 란 ?</a></li>
+    <li><a href="#nestjs">NestJS</a></li>
+    <li><a href="#테스트-설정하기">테스트 설정하기</a></li>
+    <li><a href="#테스트-수행">테스트 수행</a></li>
+  </ul>
+</nav>
+<h1 id="e2e-test-">E2E TEST 🏃🏻‍♀️</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-jest.png" alt=""></p>
+<h2 id="e2e-test-end-to-end-test-란-">E2E Test (End To End Test) 란 ?</h2>
+<p>개별 모듈 및 클래스에 중점을 두는 단위 테스트와 달리 e2e 테스트는 최종 사용자가 프로덕션과 함께 하게 될 상호 작용의 종류에 더 가까운 보다 종합적인 수준에서 클래스와 모듈의 상호 작용을 다룹니다.
+각 API 엔드포인트의 종단 간 테스트는 시스템의 전반적인 동작이 정확하고 프로젝트 요구 사항을 충족하는지 확인하는 데 도움이 됩니다.
+NestJS를 사용하면 <strong><a href="https://github.com/visionmedia/supertest">supertest</a></strong> 라이브러리를 사용하여 <strong>HTTP 요청</strong>을 쉽게 시뮬레이션할 수 있습니다.</p>
+<ul>
+<li>Endpoint(종단) 간 테스트로 사용자의 입장에서 사용자가 사용하는 상황을 가정하고 테스트 하는 것</li>
+<li>일반적으로 웹이나 어플 등에서 GUI를 통해 시나리오, 기능 테스트 등을 수행한다.</li>
+<li>사용자에게 직접적으로 노출되는 부분을 점검한다.</li>
+<li>유닛 테스트로 불가능한 사용자 관점의 테스트까지 가능하다.</li>
+<li>Endpoint 테스트를 통과하면 기능이 잘 작동한다는 것이므로 모든 테스트를 할 수 없다면 E2E Test만이라도 하는 것이 좋다!</li>
+<li>백엔드 관점에서 개발한 REST API를 테스트 하기 위해 실제로 서버에 요청을 보낸 뒤 클라이언트에서 원하는 데이터가 전송되는 지 확인해야 한다.</li>
+</ul>
+<span class="highlight-text yellow">
+E2E 테스트는 환경에 의존하는 테스트이지만, 단위 테스트는 실행 중인 환경에 의존하면 안 되고, 빠르게 실행되어야 한다. E2E 테스트에서는 보통 테스트 데이터베이스를 사용하고, 테스트의 신뢰성이 높지만 속도가 느리다는 단점이 있다.
+</span>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="3551187766"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h2 id="nestjs">NestJS</h2>
+<p>NestJS에서는 특정 도구를 강제하지는 않지만 Jest를 기본 테스트 프레임워크로 제공해주며 테스팅 패키지도 제공하기 때문에 개발자가 다른 도구를 찾는데 소모하는 리소스를 줄일 수 있다.</p>
+<p></br></br></p>
+<h2 id="테스트-설정하기">테스트 설정하기</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts">
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">podcastsRepository</span>: <span style="color:#66d9ef">Repository</span>&lt;<span style="color:#f92672">Podcast</span>&gt;;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">episodesRepository</span>: <span style="color:#66d9ef">Repository</span>&lt;<span style="color:#f92672">Episode</span>&gt;;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">usersRepository</span>: <span style="color:#66d9ef">Repository</span>&lt;<span style="color:#f92672">User</span>&gt;;
+</code></pre></div><p>테스트 설정에 let으로 repository들이 초기화되어있는데, 밑 라인의 beforeAll에서 app과 repository를 초기화시키기 때문에 let으로 선언되어 있습니다.
+</br></br></p>
+<ul>
+<li>repository 초기화</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">podcastsRepository</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">module</span><span style="color:#a6e22e">Fixture.get</span>&lt;<span style="color:#f92672">Repository</span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">Podcast</span>&gt;<span style="color:#f92672">&gt;</span>(<span style="color:#a6e22e">getRepositoryToken</span>(<span style="color:#a6e22e">Podcast</span>));
+</code></pre></div><p>나머지 episodeRepsitory, usersRepository 초기화 방법은 모두 동일합니다.
+</br></br></p>
+<blockquote>
+<p><a href="https://jestjs.io/docs/api#afterallfn-timeout">afterAll</a></p>
+<ul>
+<li>테스트를 매번 새로 시작할 때마다 만든 데이터들이 쌓여 있으면 다음 테스트에 영향을 미치기 때문에, databse에 drop 명령을 내려 DB를 초기화시키는 과정이 필요합니다. 그래서 afterAll 안에서 이 과정을 수행하도록 합니다.
+</br></br></li>
+</ul>
+</blockquote>
+<h2 id="테스트-수행">테스트 수행</h2>
+<p>e2e테스트는 흔히 종단간 테스트로 번역이 되고, 실제 사용자가 행동하는 방식으로 테스트를 한다고 생각하시면 됩니다. unit 테스트처럼 가짜 데이터 베이스를 사용하지 않습니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">baseTest</span> <span style="color:#f92672">=</span> () <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">request</span>(<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">getHttpServer</span>()).<span style="color:#a6e22e">post</span>(<span style="color:#a6e22e">GRAPHQL_ENDPOINT</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">publicTest</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">query</span>: <span style="color:#66d9ef">string</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">baseTest</span>().<span style="color:#a6e22e">send</span>({ <span style="color:#a6e22e">query</span> });
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">privateTest</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">query</span>: <span style="color:#66d9ef">string</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">baseTest</span>().<span style="color:#66d9ef">set</span>(<span style="color:#e6db74">&#39;X-JWT&#39;</span>, <span style="color:#a6e22e">jwtToken</span>).<span style="color:#a6e22e">send</span>({ <span style="color:#a6e22e">query</span> });
+</code></pre></div><p>e2e테스트에서는 request(app.getHttpServer()).post(GRAPHQL_ENDPOINT).send({query})가 계속 반복될 것이므로 함수를 wrapping 해놓았습니다.
+request는 <a href="https://github.com/visionmedia/supertest">supertest</a> 패키지에서 import한 함수이며, express test를 위해 nestjs 프레임워크에 포함 된 패키지입니다
+</br></br>
+privateTest에 보시면 set(&lsquo;X-JWT&rsquo;, jwtToken)는 헤더에 &lsquo;X-JWT&rsquo;라는 이름으로 jwtToken을 넘겨주는 과정입니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;Podcasts Resolver&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;createPodcast&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
+      <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;should create a new podcast&#39;</span>, () <span style="color:#f92672">=&gt;</span>
+        <span style="color:#a6e22e">publicTest</span>(<span style="color:#e6db74">`
+</span><span style="color:#e6db74">            mutation {
+</span><span style="color:#e6db74">              createPodcast(input: {
+</span><span style="color:#e6db74">                title: &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">testPodcast</span>.<span style="color:#a6e22e">title</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;,
+</span><span style="color:#e6db74">                category: &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">testPodcast</span>.<span style="color:#a6e22e">category</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;,
+</span><span style="color:#e6db74">              }) {
+</span><span style="color:#e6db74">                ok
+</span><span style="color:#e6db74">                id
+</span><span style="color:#e6db74">              }
+</span><span style="color:#e6db74">            }
+</span><span style="color:#e6db74">          `</span>)
+          .<span style="color:#a6e22e">expect</span>(<span style="color:#ae81ff">200</span>)
+          .<span style="color:#a6e22e">expect</span>((<span style="color:#a6e22e">res</span>) <span style="color:#f92672">=&gt;</span> {
+            <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">createPodcast</span>.<span style="color:#a6e22e">ok</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">true</span>);
+            <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">createPodcast</span>.<span style="color:#a6e22e">id</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#ae81ff">1</span>);
+          }));
+    });
+});
+</code></pre></div><p></br></br>
+래핑해 놓은 함수에 <strong>mutation ~</strong> 부분에 실제로 graphql 문이 들어가있습니다. 주의하실 부분은 ${testPodcast.title} 이 부분인데 자바스크립트에서는 저렇게만 해도 string으로 인식하지만, graphql에서는 그렇지 않습니다. 작은 따옴표(')도 아니고 큰 따옴표(&quot;)로 감싸주어야 텍스트로 인식하므로 주의하셔야 합니다.</p>
+<p></br></br>
+또 한가지 주의해야 할 점은 request.send&hellip;(솔루션은 publicRest, privateTest) 이 코드들은 반드시 리턴값으로 넘겨주셔야 합니다. 그렇지 않으면 테스트는 무조건 success로 나오기 때문에 주의하셔야 합니다. 나머지 결과들도 영향을 받을 수 있기 때문에 꼭 리턴값으로 넘기셔야 한다는 것을 기억하셔야 합니다.
+</br></br></p>
+<p>expect(200): 200은 post 메소드로 send함수를 이용하여 보낸 request에 대한 응답의 status code를 의미합니다. /graphql에 정상적으로 query가 잘 보내졌으면, 200 의 응답코드를 받아야 한다는 의미인데, 위에서 언급한 큰 따옴표를 생략하고 request 요청을 하면 흔히 400 응답코드를 많이 받습니다.
+</br></br>
+테스트 방법은 unit 테스트처럼, 성공적으로 처리 되는 경우, 에러인 경우 에러처리 등의 경우가 잘 처리되고 있나 테스트 해보시면 됩니다.
+unit테스트와는 달리 실제 DB 사용, 실제 graphql에 query 요청을 한다는 점 등이 다릅니다.
+</br></br></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;updatePodcast&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rating</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">podcastId</span>: <span style="color:#66d9ef">number</span>;
+      
+      <span style="color:#a6e22e">beforeAll</span>(<span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+        <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">podcast</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">podcastsRepository</span>.<span style="color:#a6e22e">find</span>();
+        <span style="color:#a6e22e">podcastId</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">podcast</span>.<span style="color:#a6e22e">id</span>;
+      });
+
+      <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;should success to update Podcast&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">publicTest</span>(<span style="color:#e6db74">`
+</span><span style="color:#e6db74">            mutation {
+</span><span style="color:#e6db74">              updatePodcast(input: { id: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">podcastId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, payload: { rating: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">rating</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> } }) {
+</span><span style="color:#e6db74">                ok
+</span><span style="color:#e6db74">              }
+</span><span style="color:#e6db74">            }
+</span><span style="color:#e6db74">          `</span>)
+          .<span style="color:#a6e22e">expect</span>(<span style="color:#ae81ff">200</span>)
+          .<span style="color:#a6e22e">expect</span>((<span style="color:#a6e22e">res</span>) <span style="color:#f92672">=&gt;</span> {
+            <span style="color:#66d9ef">const</span> {
+              <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
+                  <span style="color:#a6e22e">updatePodcast</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">ok</span> },
+                },
+              },
+            } <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>;
+            <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">ok</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">true</span>);
+          });
+      });
+      <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;should failed to update Podcast, becuase of getPodcast emitting error&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">errorPodcastId</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>;
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">publicTest</span>(<span style="color:#e6db74">`
+</span><span style="color:#e6db74">            mutation {
+</span><span style="color:#e6db74">              updatePodcast(input: { id: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">errorPodcastId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, payload: { rating: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">rating</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> } }) {
+</span><span style="color:#e6db74">                ok
+</span><span style="color:#e6db74">                error
+</span><span style="color:#e6db74">              }
+</span><span style="color:#e6db74">            }
+</span><span style="color:#e6db74">          `</span>)
+          .<span style="color:#a6e22e">expect</span>(<span style="color:#ae81ff">200</span>)
+          .<span style="color:#a6e22e">expect</span>((<span style="color:#a6e22e">res</span>) <span style="color:#f92672">=&gt;</span> {
+            <span style="color:#66d9ef">const</span> {
+              <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
+                  <span style="color:#a6e22e">updatePodcast</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">ok</span>, <span style="color:#a6e22e">error</span> },
+                },
+              },
+            } <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>;
+            <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">ok</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">false</span>);
+            <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">error</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#e6db74">`Podcast with id </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">errorPodcastId</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> not found`</span>);
+          });
+      });
+      <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;should fail to update Podcast, due to invalid payload&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">errorRating</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">publicTest</span>(<span style="color:#e6db74">`
+</span><span style="color:#e6db74">            mutation {
+</span><span style="color:#e6db74">              updatePodcast(input: { id: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">podcastId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, payload: { rating: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">errorRating</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> } }) {
+</span><span style="color:#e6db74">                ok
+</span><span style="color:#e6db74">                error
+</span><span style="color:#e6db74">              }
+</span><span style="color:#e6db74">            }
+</span><span style="color:#e6db74">          `</span>)
+          .<span style="color:#a6e22e">expect</span>(<span style="color:#ae81ff">200</span>)
+          .<span style="color:#a6e22e">expect</span>((<span style="color:#a6e22e">res</span>) <span style="color:#f92672">=&gt;</span> {
+            <span style="color:#66d9ef">const</span> {
+              <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
+                  <span style="color:#a6e22e">updatePodcast</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">ok</span>, <span style="color:#a6e22e">error</span> },
+                },
+              },
+            } <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>;
+            <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">ok</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">false</span>);
+            <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">error</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#e6db74">&#39;Rating must be between 1 and 5.&#39;</span>);
+          });
+      });
+    });
+</code></pre></div><hr>
+<p>참고 :</p>
+<p><a href="https://github.com/visionmedia/supertest">supertest</a>,
+<a href="https://docs.nestjs.com/fundamentals/testing#end-to-end-testing">nextJS 공식문서</a>,
+<a href=""></a>,</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/development/">development</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/front-end/">front-end</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/e2e/">e2e</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/jest/">jest</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/javascript/">javascript</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/facebook/">facebook</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/react/">react</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/nextjs/">nextjs</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/supertest/">supertest</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/endtoendtest/">endtoendtest</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%A3%BC%EB%8F%84%EA%B0%9C%EB%B0%9C/">테스트주도개발</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%EC%A0%9C%EC%8A%A4%ED%8A%B8/">제스트</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/tdd/">TDD</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%B6%81/">페이스북</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%EC%97%94%EB%93%9C%ED%88%AC%EC%97%94%EB%93%9C%ED%85%8C%EC%8A%A4%ED%8A%B8/">엔드투엔드테스트</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-unit-test-%EF%B8%8F/" data-tooltip="NestJS 에서 UNIT TEST 🏃🏻‍♀️">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-e2e-test-%EF%B8%8F/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-e2e-test-%EF%B8%8F/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-e2e-test-%EF%B8%8F/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+            
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="5041197559"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <span class="copyrights">
+      &copy; 2021 <a href="https://github.com/haneulee">haneulee</a>. All Rights Reserved
+    </span>
+  </footer>
+  
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-unit-test-%EF%B8%8F/" data-tooltip="NestJS 에서 UNIT TEST 🏃🏻‍♀️">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-e2e-test-%EF%B8%8F/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-e2e-test-%EF%B8%8F/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-e2e-test-%EF%B8%8F/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2021%2F07%2Fnestjs-%25EC%2597%2590%25EC%2584%259C-e2e-test-%25EF%25B8%258F%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2021%2F07%2Fnestjs-%25EC%2597%2590%25EC%2584%259C-e2e-test-%25EF%25B8%258F%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2021%2F07%2Fnestjs-%25EC%2597%2590%25EC%2584%259C-e2e-test-%25EF%25B8%258F%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Lee</h4>
+    
+      <div id="about-card-bio">Devlog</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://haneulee.github.io/img/gradient.png');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://haneulee.github.io/js/script-rinop9qnmrrgnnkceqjpm1grpojhqqbbi1bei65eqtj4xaanixg6ynkekfs.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
