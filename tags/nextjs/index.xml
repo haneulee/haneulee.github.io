@@ -40,7 +40,7 @@
       <pubDate>Sun, 30 May 2021 16:51:26 +0900</pubDate>
       
       <guid>https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/</guid>
-      <description>document is not defined 오류 해결방법    (adsbygoogle = window.adsbygoogle || []).push({});   서버사이드 렌더링인 nextJS를 사용할 때는 window 또는 Document 객체를 사용할 수 없다.  해결 방법 첫번째  window 오브젝트가 있는지 확인하는 조건문을 추가하여 렌더링 된 다음에 document 코드를 실행하도록 한다.  if (typeof window === &#39;object&#39;) { // Check if document is finally loaded document.addEventListener(&amp;quot;DOMContentLoaded&amp;quot;, function () { alert(&#39;Finished loading&#39;) }); } 두번째  nextJS는 react를 사용할 수 있기 때문에 react에서 컴포넌트가 마운트 또는 업데이트 된 다음에 동작하는 componentDidMount 또는 useEffect 훅을 사용하여 체크한다.</description>
+      <description>document is not defined 오류 해결방법  서버사이드 렌더링인 nextJS를 사용할 때는 window 또는 Document 객체를 사용할 수 없다.  해결 방법 첫번째  window 오브젝트가 있는지 확인하는 조건문을 추가하여 렌더링 된 다음에 document 코드를 실행하도록 한다.  if (typeof window === &#39;object&#39;) { // Check if document is finally loaded document.addEventListener(&amp;quot;DOMContentLoaded&amp;quot;, function () { alert(&#39;Finished loading&#39;) }); }    (adsbygoogle = window.adsbygoogle || []).push({});  두번째  nextJS는 react를 사용할 수 있기 때문에 react에서 컴포넌트가 마운트 또는 업데이트 된 다음에 동작하는 componentDidMount 또는 useEffect 훅을 사용하여 체크한다.</description>
     </item>
     
     <item>
@@ -49,7 +49,7 @@
       <pubDate>Wed, 26 May 2021 14:32:39 +0900</pubDate>
       
       <guid>https://haneulee.github.io/2021/05/nextjs-%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81/</guid>
-      <description>NextJS Next.js는 무엇인가?    (adsbygoogle = window.adsbygoogle || []).push({});  Next.js는 리액트를 SSR(Server-Side rendering) 방식을 구현할 수 있도록 도와주는 프레임워크이다. 정확하게는, SSR과 CSR의 각 장점을 조합하여 동작하게 된다.
+      <description>NextJS Next.js는 무엇인가? Next.js는 리액트를 SSR(Server-Side rendering) 방식을 구현할 수 있도록 도와주는 프레임워크이다. 정확하게는, SSR과 CSR의 각 장점을 조합하여 동작하게 된다.
 SSR과 CSR의 차이 기본적으로 처음 웹 화면을 접속하면, DOM과 스크립트 코드, 리소스 등 해당 웹 페이지를 구성하기 위해 필요로 한 모든 요소들을 서버에서 로드하게 된다.
 SSR은 화면에서 보여줄 특정 페이지의 View를 서버 단에서 렌더링을 한 후, 클라이언트에게 제공된다. View를 빠르게 렌더링 후에 사용자에게 미리 웹 화면으로 보여주고, 이후에 웹 페이지를 동작하게 하거나 구성하는 리소스들을 로드하도록 한다.</description>
     </item>
