@@ -290,6 +290,67 @@ if (!doNotTrack) {
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://haneulee.github.io/2021/07/nestjs-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC-entity-resolver/">
+          NestJS 프레임워크 - Entity &amp; Resolver
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-07-16T11:36:53&#43;09:00">
+        
+  July 16, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        NestJS 프레임워크 - Entity &amp; Resolver Entity Setting (relation) eager
+eager 데코레이터가 설정되어 있으면, N:1로 관계가 설정된 podcast의 데이터를 따로 설정 없이(이를테면, find 함수의 relation 사용)
+db에서 쉽게 가져올 수 있습니다.
+import { ObjectType, Field } from &#34;@nestjs/graphql&#34;; import { IsString } from &#34;class-validator&#34;; import { Column, Entity, ManyToOne } from &#34;typeorm&#34;; import { CoreEntity } from &#34;./core.entity&#34;; import { Podcast } from &#34;./podcast.entity&#34;; @Entity() @ObjectType() export class Episode extends CoreEntity { @Column() @Field((type) =&gt; String) @IsString() title: string; @Column() @Field((type) =&gt; String) @IsString() category: string; @ManyToOne(() =&gt; Podcast, (podcast) =&gt; podcast.
+      
+      <p>
+        <a href="https://haneulee.github.io/2021/07/nestjs-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC-entity-resolver/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+    <a href="https://haneulee.github.io/2021/07/nestjs-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC-entity-resolver/">
+      <div class="postShorten-thumbnailimg">
+        <img alt="" itemprop="image" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/nestjs/img-1.png"/>
+      </div>
+    </a>
+  
+</article>
+
+            
+              
+  
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://haneulee.github.io/2021/07/nestjs-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC-decorator/">
           NestJS 프레임워크 - Decorator
         </a>
@@ -801,67 +862,6 @@ export enum UserRole { Host = &#39;Host&#39;, Listener = &#39;Listener&#39;, } r
     <a href="https://haneulee.github.io/2021/06/typescript-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/">
       <div class="postShorten-thumbnailimg">
         <img alt="" itemprop="image" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/typescript/img-1.png"/>
-      </div>
-    </a>
-  
-</article>
-
-            
-              
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://haneulee.github.io/2021/06/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%B8%EC%85%98-%EC%BF%A0%ED%82%A4-browser-session-cookies/">
-          브라우저 세션 &amp; 쿠키 Browser Session &amp; cookies 🍪
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2021-06-11T13:50:39&#43;09:00">
-        
-  June 11, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
-    
-      <a class="category-link" href="https://haneulee.github.io/categories/browser">browser</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        브라우저 세션 Browser Session Session  브라우저와 백엔드 사이의 memory or history 쿠키는 상태 데이터를 클라이언트에 저장했다면, 세션은 서버에 저장 세션은 기본적으로는 쿠키를 사용하지만 세션 id만 쿠키로 저장하고, 상태 데이터들은 세션 id를 id로하여 서버에 저장한다.  stateless server side에 client와 server의 동작, 상태정보를 저장하지 않는 형태, server의 응답이 client와의 세션 상태와 독립적임 장점 : 서버가 client정보를 저장관리 하지 않으므로 Scaling이 자유로움
-ex) UDP / HTTP : UDP는 TCP와 달리 Client의 세션 상태와 관계 없이 요청에 대한 응답만을 수행하고, server가 client의 정보를 저장하지 않는다.
-      
-      <p>
-        <a href="https://haneulee.github.io/2021/06/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%B8%EC%85%98-%EC%BF%A0%ED%82%A4-browser-session-cookies/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://haneulee.github.io/2021/06/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%B8%EC%85%98-%EC%BF%A0%ED%82%A4-browser-session-cookies/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/browser/img-1.png"/>
       </div>
     </a>
   

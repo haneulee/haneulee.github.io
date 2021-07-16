@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>eager on Haneul Devlog</title>
+    <link>https://haneulee.github.io/tags/eager/</link>
+    <description>Recent content in eager on Haneul Devlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 16 Jul 2021 11:36:53 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/eager/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NestJS 프레임워크 - Entity &amp; Resolver</title>
+      <link>https://haneulee.github.io/2021/07/nestjs-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC-entity-resolver/</link>
+      <pubDate>Fri, 16 Jul 2021 11:36:53 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/07/nestjs-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC-entity-resolver/</guid>
+      <description>NestJS 프레임워크 - Entity &amp;amp; Resolver Entity Setting (relation) eager
+eager 데코레이터가 설정되어 있으면, N:1로 관계가 설정된 podcast의 데이터를 따로 설정 없이(이를테면, find 함수의 relation 사용)
+db에서 쉽게 가져올 수 있습니다.
+import { ObjectType, Field } from &amp;#34;@nestjs/graphql&amp;#34;; import { IsString } from &amp;#34;class-validator&amp;#34;; import { Column, Entity, ManyToOne } from &amp;#34;typeorm&amp;#34;; import { CoreEntity } from &amp;#34;./core.entity&amp;#34;; import { Podcast } from &amp;#34;./podcast.entity&amp;#34;; @Entity() @ObjectType() export class Episode extends CoreEntity { @Column() @Field((type) =&amp;gt; String) @IsString() title: string; @Column() @Field((type) =&amp;gt; String) @IsString() category: string; @ManyToOne(() =&amp;gt; Podcast, (podcast) =&amp;gt; podcast.</description>
+    </item>
+    
+  </channel>
+</rss>
