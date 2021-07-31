@@ -314,8 +314,7 @@ if (!doNotTrack) {
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        !&ndash;toc&ndash;&gt;
- Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
+        Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
 import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;./constants&#34;; import { setContext } from &#34;@apollo/client/link/context&#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: &#34;http://localhost:4000/graphql&#34;, }); const authLink = setContext((_, { headers }) =&gt; { return { headers: { .
       
       <p>
