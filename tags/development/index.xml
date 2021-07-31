@@ -6,7 +6,18 @@
     <description>Recent content in development on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 21 Jul 2021 11:07:36 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jul 2021 13:57:53 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apollo에서 Authentication 인증하기 💫</title>
+      <link>https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Sat, 31 Jul 2021 13:57:53 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/</guid>
+      <description>!&amp;ndash;toc&amp;ndash;&amp;gt;
+ Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
+import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &amp;#34;@apollo/client&amp;#34;; import { LOCALSTORAGE_TOKEN } from &amp;#34;./constants&amp;#34;; import { setContext } from &amp;#34;@apollo/client/link/context&amp;#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: &amp;#34;http://localhost:4000/graphql&amp;#34;, }); const authLink = setContext((_, { headers }) =&amp;gt; { return { headers: { .</description>
+    </item>
+    
     <item>
       <title>GraphQL과 Apollo 함께 쓰기 🔥</title>
       <link>https://haneulee.github.io/2021/07/graphql%EA%B3%BC-apollo-%ED%95%A8%EA%BB%98-%EC%93%B0%EA%B8%B0/</link>

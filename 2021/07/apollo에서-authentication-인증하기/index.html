@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Haneul Lee">
+<meta name="keywords" content="development, front-end, development, next-gen">
+<meta name="description" content="!&ndash;toc&ndash;&gt;
+ Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
+import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;./constants&#34;; import { setContext } from &#34;@apollo/client/link/context&#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: &#34;http://localhost:4000/graphql&#34;, }); const authLink = setContext((_, { headers }) =&gt; { return { headers: { .">
+
+
+<meta property="og:description" content="!&ndash;toc&ndash;&gt;
+ Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
+import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;./constants&#34;; import { setContext } from &#34;@apollo/client/link/context&#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: &#34;http://localhost:4000/graphql&#34;, }); const authLink = setContext((_, { headers }) =&gt; { return { headers: { .">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apollo에서 Authentication 인증하기 💫">
+<meta name="twitter:title" content="Apollo에서 Authentication 인증하기 💫">
+<meta property="og:url" content="https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/">
+<meta property="twitter:url" content="https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/">
+<meta property="og:site_name" content="Haneul Devlog">
+<meta property="og:description" content="!&ndash;toc&ndash;&gt;
+ Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
+import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;./constants&#34;; import { setContext } from &#34;@apollo/client/link/context&#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: &#34;http://localhost:4000/graphql&#34;, }); const authLink = setContext((_, { headers }) =&gt; { return { headers: { .">
+<meta name="twitter:description" content="!&ndash;toc&ndash;&gt;
+ Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
+import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;./constants&#34;; import { setContext } from &#34;@apollo/client/link/context&#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: &#34;http://localhost:4000/graphql&#34;, }); const authLink = setContext((_, { headers }) =&gt; { return { headers: { .">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-07-31T13:57:53">
+  
+  
+    <meta property="article:modified_time" content="2021-07-31T13:57:53">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+  
+  
+    
+      <meta property="article:tag" content="development">
+    
+      <meta property="article:tag" content="front-end">
+    
+      <meta property="article:tag" content="apollo/client">
+    
+      <meta property="article:tag" content="apollo">
+    
+      <meta property="article:tag" content="graphql">
+    
+      <meta property="article:tag" content="Authentication">
+    
+      <meta property="article:tag" content="인증">
+    
+      <meta property="article:tag" content="토큰">
+    
+      <meta property="article:tag" content="로그인">
+    
+      <meta property="article:tag" content="login">
+    
+      <meta property="article:tag" content="jwt">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/graphql/apollo-graphql.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/graphql/apollo-graphql.png">
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+
+
+    <title>Apollo에서 Authentication 인증하기 💫</title>
+
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-n3viotqzhxlaiqzckigo0fseosihbtvki5la2psestq36iag7xprumzywn.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="https://haneulee.github.io/css/mystyle.css">
+      
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-BHPHWPTLMZ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://haneulee.github.io/">Haneul Devlog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://haneulee.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://haneulee.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Haneul Lee</h4>
+        
+          <h5 class="sidebar-profile-bio">Devlog</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories/development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-code"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.haneul-lee.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-window-maximize"></i>
+      
+      <span class="sidebar-button-desc">Website</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/resume" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-file"></i>
+      
+      <span class="sidebar-button-desc">Resume</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin-square"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      
+      
+      <span class="sidebar-button-desc"></span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Apollo에서 Authentication 인증하기 💫
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-07-31T13:57:53&#43;09:00">
+        
+  July 31, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>!&ndash;toc&ndash;&gt;</p>
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/graphql/apollo-graphql.png" alt=""></p>
+<hr>
+<h1 id="apollo에서-authentication-인증하기-">Apollo에서 Authentication 인증하기 💫</h1>
+<h2 id="authlink">authLink</h2>
+<p>백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> {
+  <span style="color:#a6e22e">ApolloClient</span>,
+  <span style="color:#a6e22e">createHttpLink</span>,
+  <span style="color:#a6e22e">InMemoryCache</span>,
+  <span style="color:#a6e22e">makeVar</span>,
+} <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@apollo/client&#34;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">LOCALSTORAGE_TOKEN</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;./constants&#34;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">setContext</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@apollo/client/link/context&#34;</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">token</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">LOCALSTORAGE_TOKEN</span>);
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isLoggedInVar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">makeVar</span>(Boolean(<span style="color:#a6e22e">token</span>));
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">authTokenVar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">makeVar</span>(<span style="color:#a6e22e">token</span>);
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">httpLink</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createHttpLink</span>({
+  <span style="color:#a6e22e">uri</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://localhost:4000/graphql&#34;</span>,
+});
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">authLink</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setContext</span>((<span style="color:#a6e22e">_</span>, { <span style="color:#a6e22e">headers</span> }) <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#66d9ef">return</span> {
+    <span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> {
+      ...<span style="color:#a6e22e">headers</span>,
+      <span style="color:#e6db74">&#34;x-jwt&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">authTokenVar</span>() <span style="color:#f92672">||</span> <span style="color:#e6db74">&#34;&#34;</span>,
+    },
+  };
+});
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">client</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ApolloClient</span>({
+  <span style="color:#a6e22e">link</span>: <span style="color:#66d9ef">authLink.concat</span>(<span style="color:#a6e22e">httpLink</span>),
+  <span style="color:#a6e22e">cache</span>: <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">InMemoryCache</span>({
+    <span style="color:#a6e22e">typePolicies</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">Query</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">fields</span><span style="color:#f92672">:</span> {
+          <span style="color:#a6e22e">isLoggedIn</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">read() {</span>
+              <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">isLoggedInVar</span>();
+            },
+          },
+          <span style="color:#a6e22e">token</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">read() {</span>
+              <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">authTokenVar</span>();
+            },
+          },
+        },
+      },
+    },
+  }),
+});
+</code></pre></div><p>위처럼 <a href="https://www.apollographql.com/docs/react/networking/authentication/">authLink</a>에 setContext를 넘겨줘서 기존의 httpLink과 연결시켜주면 됩니다.<br>
+apollo client에서 Context Link를 사용합니다.</p>
+<p>위 코드와 같이 설정을 해주면 이제 request header에는 x-jwt라는 키값에 인증 토큰이 들어가게 되고,<br>
+서버에서는 위 토큰을 받아서 유저 정보를 파악할 수 있게 됩니다.<br>
+그래서 Role 기반 권한부여를 구현할 수 있게 됩니다.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="3551187766"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h2 id="팟캐스트--에피소드-렌더링">팟캐스트 &amp; 에피소드 렌더링</h2>
+<p>apollo client의 useQuery 훅을 이용하면 쉽게 구현이 가능합니다.<br>
+<a href="https://www.apollographql.com/docs/react/api/react/hooks/#usequery">useQuery</a>는 함수는 쿼리어(gql)과 옵션 값을 입력 받아, 서버에 전달하여 query 문에 대한 결과 값을 가져옵니다.<br>
+useQuery는 data, loading, errors를 리턴해줍니다.</p>
+<p>그 외에도 <a href="https://www.apollographql.com/blog/apollo-client/caching/when-to-use-refetch-queries/">refetch</a>와 <a href="https://www.apollographql.com/docs/react/pagination/core-api/">fetchMore</a> 등이 있습니다.<br>
+useQuery의 결과 값으로 솔루션에서는 podcast의 배열 값을 받습니다.<br>
+그 배열값을 javascript의 Array.map을 이용하여 렌더링 합니다.</p>
+<hr>
+<p>참고:
+<a href="https://d2.naver.com/helloworld/4245995">https://d2.naver.com/helloworld/4245995</a>,<br>
+<a href="https://athilog.github.io/react/apollo-hooks%EB%A1%9C%20refetch%EC%8B%9C%ED%82%A4%EA%B8%B0/">apollo-hooks로 refetch시키기</a>,</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/development/">development</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/front-end/">front-end</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/apollo/client/">apollo/client</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/apollo/">apollo</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/graphql/">graphql</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/authentication/">Authentication</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%EC%9D%B8%EC%A6%9D/">인증</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%ED%86%A0%ED%81%B0/">토큰</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%EB%A1%9C%EA%B7%B8%EC%9D%B8/">로그인</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/login/">login</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/jwt/">jwt</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/07/graphql%EA%B3%BC-apollo-%ED%95%A8%EA%BB%98-%EC%93%B0%EA%B8%B0/" data-tooltip="GraphQL과 Apollo 함께 쓰기 🔥">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+            
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="5041197559"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <span class="copyrights">
+      &copy; 2021 <a href="https://github.com/haneulee">haneulee</a>. All Rights Reserved
+    </span>
+  </footer>
+  
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/07/graphql%EA%B3%BC-apollo-%ED%95%A8%EA%BB%98-%EC%93%B0%EA%B8%B0/" data-tooltip="GraphQL과 Apollo 함께 쓰기 🔥">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2021%2F07%2Fapollo%25EC%2597%2590%25EC%2584%259C-authentication-%25EC%259D%25B8%25EC%25A6%259D%25ED%2595%2598%25EA%25B8%25B0%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2021%2F07%2Fapollo%25EC%2597%2590%25EC%2584%259C-authentication-%25EC%259D%25B8%25EC%25A6%259D%25ED%2595%2598%25EA%25B8%25B0%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2021%2F07%2Fapollo%25EC%2597%2590%25EC%2584%259C-authentication-%25EC%259D%25B8%25EC%25A6%259D%25ED%2595%2598%25EA%25B8%25B0%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Lee</h4>
+    
+      <div id="about-card-bio">Devlog</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://haneulee.github.io/img/gradient.png');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://haneulee.github.io/js/script-lpcba4q6ro8i5swk5d9fjpafhafjw20qvxi3zjbiqf5nemgxwcftyfktpu.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

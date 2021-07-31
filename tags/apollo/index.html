@@ -290,6 +290,126 @@ if (!doNotTrack) {
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/">
+          Apollo에서 Authentication 인증하기 💫
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-07-31T13:57:53&#43;09:00">
+        
+  July 31, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        !&ndash;toc&ndash;&gt;
+ Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
+import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;./constants&#34;; import { setContext } from &#34;@apollo/client/link/context&#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: &#34;http://localhost:4000/graphql&#34;, }); const authLink = setContext((_, { headers }) =&gt; { return { headers: { .
+      
+      <p>
+        <a href="https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+    <a href="https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/">
+      <div class="postShorten-thumbnailimg">
+        <img alt="" itemprop="image" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/graphql/apollo-graphql.png"/>
+      </div>
+    </a>
+  
+</article>
+
+            
+              
+  
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/">
+          Apollo에서 Authentication 인증하기 💫
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-07-31T13:57:53&#43;09:00">
+        
+  July 31, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        !&ndash;toc&ndash;&gt;
+ Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
+import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;./constants&#34;; import { setContext } from &#34;@apollo/client/link/context&#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: &#34;http://localhost:4000/graphql&#34;, }); const authLink = setContext((_, { headers }) =&gt; { return { headers: { .
+      
+      <p>
+        <a href="https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+    <a href="https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/">
+      <div class="postShorten-thumbnailimg">
+        <img alt="" itemprop="image" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/graphql/apollo-graphql.png"/>
+      </div>
+    </a>
+  
+</article>
+
+            
+              
+  
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://haneulee.github.io/2021/07/graphql%EA%B3%BC-apollo-%ED%95%A8%EA%BB%98-%EC%93%B0%EA%B8%B0/">
           GraphQL과 Apollo 함께 쓰기 🔥
         </a>
