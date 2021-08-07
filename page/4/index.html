@@ -277,6 +277,67 @@ if (!doNotTrack) {
             
   
     
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://haneulee.github.io/2021/05/git-%EC%98%A4%EB%A5%98-fatal-refusing-to-merge-unrelated-histories/">
+          Git 오류 fatal: refusing to merge unrelated histories
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-05-20T10:45:13&#43;09:00">
+        
+  May 20, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/git">git</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        git clone 후, git push 하는 과정 중에 다음과 같이 오류가 날 경우가 있다.    (adsbygoogle = window.adsbygoogle || []).push({}); 
+이는 push 하기 전에 git pull 을 먼저 실행해야 하는데 그 전에 수정했던 어떤 커밋과 꼬여 오류가 날 경우..
+fatal: refusing to merge unrelated histories 이럴 때는 아래처럼 실행하주고, 다시 git push를 하면 해결됨
+git pull origin 브런치명 --allow-unrelated-histories 
+      
+      <p>
+        <a href="https://haneulee.github.io/2021/05/git-%EC%98%A4%EB%A5%98-fatal-refusing-to-merge-unrelated-histories/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
   
 
 
@@ -823,70 +884,6 @@ npm run eject를 해야 웹팩 설정이 보이고, 거기서 수정해야한다
       
       <p>
         <a href="https://haneulee.github.io/2021/05/create-react-app-%EC%A0%88%EB%8C%80%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95-%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/">
-          리액트 절대 경로 설정하기
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2021-05-18T12:26:22&#43;09:00">
-        
-  May 18, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
-    
-      <a class="category-link" href="https://haneulee.github.io/categories/react">react</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        리액트 절대 경로 설정하기 Web을 개발하다보면 폴더와 파일의 depth가 깊어지는 경우가 있다.
-이런 경우 파일 import시에 ../../components/sign/logout 식으로 ../가 많아져서 복잡하고 번거로워진다.
-그러나 절대경로를 설정하면 components/sign/logout 으로 간단히 작성할 수 있다는 사실!
-나는 src 폴더를 기준으로 절대경로를 설정하였다.
-방법은 아래와 같다.
-   (adsbygoogle = window.adsbygoogle || []).push({});  | Linux, Mac 에서 설정하기 프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
-&quot;start&quot;: &quot;NODE_PATH=src/ react-scripts start&quot;, &quot;build&quot;: &quot;NODE_PATH=src/ react-scripts build&quot;, | Window 에서 설정하기 여기서는 cross-env가 필요하다.
-      
-      <p>
-        <a href="https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link">Continue reading</a>
         
       </p>
     </div>

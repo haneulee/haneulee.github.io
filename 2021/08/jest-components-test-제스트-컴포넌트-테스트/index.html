@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Haneul Lee">
+<meta name="keywords" content="development, front-end, development, next-gen">
+<meta name="description" content="Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src/pages/test/create-account.spec.tsx  beforeEach(async () =&gt; { await waitFor(() =&gt; { mockedClient = createMockClient(); renderResult = render( &lt;ApolloProvider client={mockedClient}&gt; &lt;CreateAccount /&gt; &lt;/ApolloProvider&gt; ); }); }); frontend 유닛테스트의 기본구조
+apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.
+위와 같은 방법 이외 MockedProvider를 이용하는 방법도 있으니 참고 바랍니다.
+create-account에서는 유저에게 계정에 대한 입력을 받습니다.">
+
+
+<meta property="og:description" content="Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src/pages/test/create-account.spec.tsx  beforeEach(async () =&gt; { await waitFor(() =&gt; { mockedClient = createMockClient(); renderResult = render( &lt;ApolloProvider client={mockedClient}&gt; &lt;CreateAccount /&gt; &lt;/ApolloProvider&gt; ); }); }); frontend 유닛테스트의 기본구조
+apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.
+위와 같은 방법 이외 MockedProvider를 이용하는 방법도 있으니 참고 바랍니다.
+create-account에서는 유저에게 계정에 대한 입력을 받습니다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jest Components Test 제스트 컴포넌트 테스트 🔥">
+<meta name="twitter:title" content="Jest Components Test 제스트 컴포넌트 테스트 🔥">
+<meta property="og:url" content="https://haneulee.github.io/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+<meta property="twitter:url" content="https://haneulee.github.io/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+<meta property="og:site_name" content="Haneul Devlog">
+<meta property="og:description" content="Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src/pages/test/create-account.spec.tsx  beforeEach(async () =&gt; { await waitFor(() =&gt; { mockedClient = createMockClient(); renderResult = render( &lt;ApolloProvider client={mockedClient}&gt; &lt;CreateAccount /&gt; &lt;/ApolloProvider&gt; ); }); }); frontend 유닛테스트의 기본구조
+apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.
+위와 같은 방법 이외 MockedProvider를 이용하는 방법도 있으니 참고 바랍니다.
+create-account에서는 유저에게 계정에 대한 입력을 받습니다.">
+<meta name="twitter:description" content="Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src/pages/test/create-account.spec.tsx  beforeEach(async () =&gt; { await waitFor(() =&gt; { mockedClient = createMockClient(); renderResult = render( &lt;ApolloProvider client={mockedClient}&gt; &lt;CreateAccount /&gt; &lt;/ApolloProvider&gt; ); }); }); frontend 유닛테스트의 기본구조
+apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.
+위와 같은 방법 이외 MockedProvider를 이용하는 방법도 있으니 참고 바랍니다.
+create-account에서는 유저에게 계정에 대한 입력을 받습니다.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-08-07T02:54:15">
+  
+  
+    <meta property="article:modified_time" content="2021-08-07T02:54:15">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+      <meta property="article:section" content="front-end">
+    
+      <meta property="article:section" content="unittest">
+    
+      <meta property="article:section" content="jest">
+    
+      <meta property="article:section" content="javascript">
+    
+      <meta property="article:section" content="facebook">
+    
+      <meta property="article:section" content="react">
+    
+      <meta property="article:section" content="nextjs">
+    
+      <meta property="article:section" content="테스트주도개발">
+    
+      <meta property="article:section" content="제스트">
+    
+      <meta property="article:section" content="TDD">
+    
+      <meta property="article:section" content="페이스북">
+    
+      <meta property="article:section" content="단위테스트">
+    
+  
+  
+    
+      <meta property="article:tag" content="development">
+    
+      <meta property="article:tag" content="front-end">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-jest.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-jest.png">
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+
+
+    <title>Jest Components Test 제스트 컴포넌트 테스트 🔥</title>
+
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://haneulee.github.io/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-n3viotqzhxlaiqzckigo0fseosihbtvki5la2psestq36iag7xprumzywn.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="https://haneulee.github.io/css/mystyle.css">
+      
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-BHPHWPTLMZ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://haneulee.github.io/">Haneul Devlog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://haneulee.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://haneulee.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Haneul Lee</h4>
+        
+          <h5 class="sidebar-profile-bio">Devlog</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories/development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-code"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.haneul-lee.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-window-maximize"></i>
+      
+      <span class="sidebar-button-desc">Website</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/resume" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-file"></i>
+      
+      <span class="sidebar-button-desc">Resume</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin-square"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      
+      
+      <span class="sidebar-button-desc"></span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Jest Components Test 제스트 컴포넌트 테스트 🔥
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-08-07T02:54:15&#43;09:00">
+        
+  August 7, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/front-end">front-end</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/unittest">unittest</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/jest">jest</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/javascript">javascript</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/facebook">facebook</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/react">react</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/nextjs">nextjs</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/%ed%85%8c%ec%8a%a4%ed%8a%b8%ec%a3%bc%eb%8f%84%ea%b0%9c%eb%b0%9c">테스트주도개발</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/%ec%a0%9c%ec%8a%a4%ed%8a%b8">제스트</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/tdd">TDD</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/%ed%8e%98%ec%9d%b4%ec%8a%a4%eb%b6%81">페이스북</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/%eb%8b%a8%ec%9c%84%ed%85%8c%ec%8a%a4%ed%8a%b8">단위테스트</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#리액트-컴포넌트-테스트-">리액트 컴포넌트 테스트 🏃🏻‍♀️</a>
+      <ul>
+        <li><a href="#기본-구조-및-테스트-방법">기본 구조 및 테스트 방법</a></li>
+        <li><a href="#create-account의-로직">create-account의 로직</a></li>
+        <li><a href="#유저입력이-올바르지-않을-때-에러-핸들링-테스트">유저입력이 올바르지 않을 때 에러 핸들링 테스트</a></li>
+        <li><a href="#올바른-입력을-받아서-계정-만들기">올바른 입력을 받아서 계정 만들기</a></li>
+        <li><a href="#패키지-일부함수만-mocking하기">패키지 일부함수만 mocking하기</a></li>
+        <li><a href="#data-fetching">data fetching</a></li>
+        <li><a href="#렌더링-테스트">렌더링 테스트</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<h1 id="jest-components-test-제스트-컴포넌트-테스트-">Jest Components Test 제스트 컴포넌트 테스트 🔥</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-jest.png" alt=""></p>
+<h2 id="리액트-컴포넌트-테스트-">리액트 컴포넌트 테스트 🏃🏻‍♀️</h2>
+<hr>
+<h3 id="기본-구조-및-테스트-방법">기본 구조 및 테스트 방법</h3>
+<ul>
+<li>src/pages/<strong>test</strong>/create-account.spec.tsx</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">beforeEach</span>(<span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">waitFor</span>(() <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#a6e22e">mockedClient</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createMockClient</span>();
+    <span style="color:#a6e22e">renderResult</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">render</span>(
+      &lt;<span style="color:#f92672">ApolloProvider</span> <span style="color:#a6e22e">client</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">mockedClient</span>}&gt;
+        &lt;<span style="color:#f92672">CreateAccount</span> /&gt;
+      &lt;/<span style="color:#f92672">ApolloProvider</span>&gt;
+    );
+  });
+});
+</code></pre></div><p>frontend 유닛테스트의 기본구조<br>
+apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.<br>
+위와 같은 방법 이외 <a href="https://www.apollographql.com/docs/react/development-testing/testing/#the-mockedprovider-component">MockedProvider</a>를 이용하는 방법도 있으니 참고 바랍니다.</p>
+<p>create-account에서는 유저에게 계정에 대한 입력을 받습니다.<br>
+첫째 입력이 잘못되었을 때, 에러 핸들링을 잘하고 있는가, 둘째 입력이 잘 되었을 때 생성 요청에 대한 핸들링이 잘 되는가를 테스트해야 한다.</p>
+<hr>
+<h3 id="create-account의-로직">create-account의 로직</h3>
+<p>테스트는 유저에게 입력을 받고 받은 입력이 올바른지 파악해야 합니다.</p>
+<p>(1) 올바르지 않다면 에러메세지 출력<br>
+(2) 올바르다면 백엔드에 createAccount Mutation 보내고, 루트 페이지로 이동하기 입니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;renders OK&#34;</span>, <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">waitFor</span>(() <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">expect</span>(document.<span style="color:#a6e22e">title</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#e6db74">&#34;CreateAccount | Podcast&#34;</span>));
+});
+<span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;renders validation errors&#34;</span>, <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {});
+<span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;submits mutation with form values&#34;</span>, <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {});
+<span style="color:#a6e22e">afterAll</span>(() <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">clearAllMocks</span>(); <span style="color:#75715e">// test 후 모든 것을 제자리로 돌려 놓음(hooks mock 이후)
+</span><span style="color:#75715e"></span>});
+</code></pre></div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="3551187766"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<hr>
+<h3 id="유저입력이-올바르지-않을-때-에러-핸들링-테스트">유저입력이 올바르지 않을 때 에러 핸들링 테스트</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;renders validation errors&#34;</span>, <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">getByRole</span>, <span style="color:#a6e22e">getByPlaceholderText</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">renderResult</span>;
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getByPlaceholderText</span>(<span style="color:#e6db74">/email/i</span>);
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">button</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getByRole</span>(<span style="color:#e6db74">&#34;button&#34;</span>);
+  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">waitFor</span>(() <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#75715e">// 여기에선 state가 바뀌는 것을 기다리기 위해 사용
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">userEvent</span>.<span style="color:#66d9ef">type</span>(<span style="color:#a6e22e">email</span>, <span style="color:#e6db74">&#34;wont@work&#34;</span>);
+  });
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">errorMessage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getByRole</span>(<span style="color:#e6db74">&#34;alert&#34;</span>);
+  <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">errorMessage</span>).<span style="color:#a6e22e">toHaveTextContent</span>(<span style="color:#e6db74">/Please enter a valid email/i</span>);
+  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">waitFor</span>(() <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#a6e22e">userEvent</span>.<span style="color:#a6e22e">clear</span>(<span style="color:#a6e22e">email</span>);
+  });
+  <span style="color:#a6e22e">errorMessage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getByRole</span>(<span style="color:#e6db74">&#34;alert&#34;</span>);
+  <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">errorMessage</span>).<span style="color:#a6e22e">toHaveTextContent</span>(<span style="color:#e6db74">/Email is required/i</span>);
+  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">waitFor</span>(() <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#a6e22e">userEvent</span>.<span style="color:#66d9ef">type</span>(<span style="color:#a6e22e">email</span>, <span style="color:#e6db74">&#34;working@email.com&#34;</span>);
+    <span style="color:#a6e22e">userEvent</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">button</span>);
+  });
+  <span style="color:#a6e22e">errorMessage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getByRole</span>(<span style="color:#e6db74">&#34;alert&#34;</span>);
+  <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">errorMessage</span>).<span style="color:#a6e22e">toHaveTextContent</span>(<span style="color:#e6db74">/Password is required/i</span>);
+});
+</code></pre></div><p>위 코드의 renders validation errors에 해당하는 부분입니다.
+위 코드의 첫번째 줄 <a href="https://testing-library.com/docs/react-testing-library/api/#render-result">renderResult</a>는 테스트 셋팅 부분인 beforeEach부분에서 설정된 부분입니다.</p>
+<p>렌더링 결과에 대해 html을 선택할 수 있게끔 만들어진 함수 집합들입니다.<br>
+email 엘리먼트는 placeholder가 정규표현식으로 email을 포함하는데, case insensitive하게 검색을 하여 선택을 하였습니다. button은 role 속성이 button인 것을 검색하여 선택하도록 하였습니다. 그리고 email 엘리먼트에는 wont @work 라는 잘못된 이메일을 userEvent를 통해 입력하도록 하여 그 후의 코드에서 테스트 할 수 있게 하였습니다.</p>
+<hr>
+<h3 id="올바른-입력을-받아서-계정-만들기">올바른 입력을 받아서 계정 만들기</h3>
+<p>이번에는 userEvent를 통해 이메일과 패스워드, role에 올바른 입력값들을 넣어주어서 가짜 서버에 createAccount를 요청합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">mockedClient</span>.<span style="color:#a6e22e">setRequestHandler</span>(
+  <span style="color:#a6e22e">CREATE_ACCOUNT_MUTATION</span>,
+  <span style="color:#a6e22e">mockedCreatedAccountMutationResponse</span>
+);
+<span style="color:#75715e">// jest.spyOn(Object, method)..mockImplementation(callback:()=&gt;result);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">spyOn</span>(window, <span style="color:#e6db74">&#34;alert&#34;</span>).<span style="color:#a6e22e">mockImplementation</span>(() <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">null</span>); <span style="color:#75715e">// 이렇게 결과값까지 mock할 수 있구나
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">waitFor</span>(() <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#a6e22e">userEvent</span>.<span style="color:#66d9ef">type</span>(<span style="color:#a6e22e">email</span>, <span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">email</span>);
+  <span style="color:#a6e22e">userEvent</span>.<span style="color:#66d9ef">type</span>(<span style="color:#a6e22e">password</span>, <span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">password</span>);
+  <span style="color:#a6e22e">userEvent</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">button</span>);
+});
+</code></pre></div><p>위 코드에서 mockedClient.setRequestHandler가 보이시나요? apollo client에 CREATE_ACCOUNT_MUTATION이라는 요청이 들어오면 mockedCreatedAccountMutationResponse로 응답을 리턴하라는 의미입니다. 유닛테스트이기 때문에 클라이언트에서 요청하는 서버 응답값은 흉내내는 것입니다.<br>
+그리고 요청한 값들에 대해 제대로 처리 되었는지 확인하면 create account테스트는 완료됩니다.</p>
+<hr>
+<h3 id="패키지-일부함수만-mocking하기">패키지 일부함수만 mocking하기</h3>
+<p>풀커버리지를 해야 하는 것을 고려하면 최대한 많은 부분에서 테스트 해야 합니다.<br>
+그래서 useHistory 역시 테스트 대상입니다.</p>
+<p>history.push('/');</p>
+<p>history는 react-router-dom 패키지의 useHistory에 있습니다.<br>
+이것을 mocking 하려면 아래 그림의 코드와 같이 해주셔야 합니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#75715e">// how to mock hooks
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mockPush</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">fn</span>();
+<span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">mock</span>(<span style="color:#e6db74">&#34;react-router-dom&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#75715e">// jest가 module을 전부 cover하면서 beforeEach에서 쓰고 있는 Router까지 고장남
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">realModule</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">requireActual</span>(<span style="color:#e6db74">&#34;react-router-dom&#34;</span>); <span style="color:#75715e">// 실제 모듈을 필요로 함
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> {
+    ...<span style="color:#a6e22e">realModule</span>, <span style="color:#75715e">// 실제 모듈 기능 + mock이 필요한 부분만 mock
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">useHistory</span><span style="color:#f92672">:</span> () <span style="color:#f92672">=&gt;</span> {
+      <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">push</span>: <span style="color:#66d9ef">mockPush</span> };
+    },
+  };
+});
+</code></pre></div><p>위의 코드처럼 작성을 하시고 expect를 이용하여 history.push를 호출 했는지 여부를 테스트 할 수 있게 되며, 조금더 풀커버리지에 가까워졌습니다.</p>
+<hr>
+<h3 id="data-fetching">data fetching</h3>
+<p>data는 어디서 오죠? 서버에서 gql을 이용하여 끌어 오는거죠? 유닛테스트에서는 거기까지 테스트할 순 없죠? 그럼 mocking하면 됩니다. mocking을 한 후에, mocking한 함수가 호출되었는가? 호출되었는데 내가 원하는 데이터를 입력하고, 원하는 데이터를 받아오나? 체크하시면 됩니다.</p>
+<p>데이터 중에 특히나 주의여겨 보셔야 할 것은 **typename 입니다.<br>
+graphql이 데이터 처리를 위해 타입을 확인하는 것이라서 **typename을 지정해주셔야 합니다. 그렇지 않으면 테스트 결과가 원하는대로 처리되지 않을 가능성이 높습니다.
+참고. ApolloProvider에 mocked client를 입력한 것이 아니라 MockedProvider를 이용하셨다면 addTypename={false} 옵션을 이용하실 수도 있습니다.</p>
+<hr>
+<h3 id="렌더링-테스트">렌더링 테스트</h3>
+<p>render함수를 이용하여 renderResult를 받고 나서 원하는 테스트를 하면 됩니다.<br>
+mocking한 client에서 받은 텍스트를 가진 엘리먼트가 있는지 getByText를 이용해도 좋고, 클래스를 찾아도 좋습니다.</p>
+<hr>
+<p>&lt;주의사항&gt;<br>
+form의 handleSubmit의 콜백함수 같은 경우에는 테스트가 어렵습니다. 안에 들어가있는 콜백함수를 mocking하지 않으니 콜이 되었는지 여부를 모를 수 있습니다. <a href="https://enzymejs.github.io/enzyme/">enzyme</a>과 같은 패키지를 사용하거나 블루프린트에 세팅되어 있는 test-utils의 fireEvent 등을 이용해서 가능하다고 하는 글도 있지만, handleSubmit안에 있기 때문에 mocking 하기가 쉽지 않습니다.</p>
+<hr>
+<p>참고 :
+<a href="https://jestjs.io/docs/api">jset 공식문서</a>,
+<a href="https://www.daleseo.com/jest-fn-spy-on/">jset mocking</a>,</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/development/">development</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/front-end/">front-end</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/" data-tooltip="Apollo에서 Authentication 인증하기 💫">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+            
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="5041197559"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <span class="copyrights">
+      &copy; 2021 <a href="https://github.com/haneulee">haneulee</a>. All Rights Reserved
+    </span>
+  </footer>
+  
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/" data-tooltip="Apollo에서 Authentication 인증하기 💫">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2021%2F08%2Fjest-components-test-%25EC%25A0%259C%25EC%258A%25A4%25ED%258A%25B8-%25EC%25BB%25B4%25ED%258F%25AC%25EB%2584%258C%25ED%258A%25B8-%25ED%2585%258C%25EC%258A%25A4%25ED%258A%25B8%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2021%2F08%2Fjest-components-test-%25EC%25A0%259C%25EC%258A%25A4%25ED%258A%25B8-%25EC%25BB%25B4%25ED%258F%25AC%25EB%2584%258C%25ED%258A%25B8-%25ED%2585%258C%25EC%258A%25A4%25ED%258A%25B8%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2021%2F08%2Fjest-components-test-%25EC%25A0%259C%25EC%258A%25A4%25ED%258A%25B8-%25EC%25BB%25B4%25ED%258F%25AC%25EB%2584%258C%25ED%258A%25B8-%25ED%2585%258C%25EC%258A%25A4%25ED%258A%25B8%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Lee</h4>
+    
+      <div id="about-card-bio">Devlog</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://haneulee.github.io/img/gradient.png');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://haneulee.github.io/js/script-lpcba4q6ro8i5swk5d9fjpafhafjw20qvxi3zjbiqf5nemgxwcftyfktpu.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
