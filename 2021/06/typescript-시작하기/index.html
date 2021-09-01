@@ -341,7 +341,12 @@ if (!doNotTrack) {
       </ul>
     </li>
     <li><a href="#typescript-설치">Typescript 설치</a></li>
-    <li><a href="#typescript-문법">Typescript 문법</a></li>
+    <li><a href="#typescript-문법">Typescript 문법</a>
+      <ul>
+        <li><a href="#utility-type">Utility Type</a></li>
+        <li><a href="#mapped-type">Mapped Type</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 <p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/typescript/img-1.png" alt=""></p>
@@ -363,7 +368,32 @@ if (!doNotTrack) {
 <h2 id="typescript-설치">Typescript 설치</h2>
 <pre><code>npm i -g typescript
 </code></pre><h2 id="typescript-문법">Typescript 문법</h2>
-<p>참고 :
+<h3 id="utility-type">Utility Type</h3>
+<p>제네릭타입 이라고도 불리운다.</p>
+<h4 id="pick">pick</h4>
+<p>type에서 key로 속성을 선택한 새로운 타입 반환</p>
+<h4 id="omit">omit</h4>
+<p>type에서 key로 속성을 생략하고 나머지를 선택한 새로운 타입 반환</p>
+<h4 id="partial">partial</h4>
+<p>type의 모든 속성을 선택적으로 변경한 새로운 타입 반환</p>
+<h3 id="mapped-type">Mapped Type</h3>
+<p>이전 타입을 기반으로 새로운 타입을 생성
+es6 map함수와 비슷</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">type</span> <span style="color:#a6e22e">Keys</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;option1&#39;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;option2&#39;</span>;
+<span style="color:#a6e22e">type</span> <span style="color:#a6e22e">Flags</span> <span style="color:#f92672">=</span> { [<span style="color:#a6e22e">K</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">Keys</span>]<span style="color:#f92672">:</span> <span style="color:#66d9ef">boolean</span> };
+
+<span style="color:#75715e">// 위와 같이 정의했을 경우 Flags는 아래와 같다.
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">type</span> <span style="color:#a6e22e">Flags</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">option1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">boolean</span>;
+  <span style="color:#a6e22e">option2</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">boolean</span>;
+}
+
+<span style="color:#75715e">// Flags 타입의 변수 선언
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Flags</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">option1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+  <span style="color:#a6e22e">option1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+}
+</code></pre></div><p>참고 :
 <a href="https://namu.wiki/w/TypeScript">https://namu.wiki/w/TypeScript</a>,
 <a href="https://typescript-kr.github.io/">https://typescript-kr.github.io/</a></p>
 
