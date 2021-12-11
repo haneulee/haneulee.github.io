@@ -17,21 +17,21 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content="development, front-end, development, next-gen">
-<meta name="description" content="Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh    (adsbygoogle = window.adsbygoogle || []).push({});  // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &quot;엔터&quot; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !">
+<meta name="description" content="Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh    (adsbygoogle = window.adsbygoogle || []).push({});  // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &#34;엔터&#34; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !">
 
 
-<meta property="og:description" content="Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh    (adsbygoogle = window.adsbygoogle || []).push({});  // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &quot;엔터&quot; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !">
+<meta property="og:description" content="Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh    (adsbygoogle = window.adsbygoogle || []).push({});  // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &#34;엔터&#34; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Githup SSH  키 생성 및 등록">
 <meta name="twitter:title" content="Githup SSH  키 생성 및 등록">
 <meta property="og:url" content="https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/">
 <meta property="twitter:url" content="https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/">
 <meta property="og:site_name" content="Haneul Devlog">
-<meta property="og:description" content="Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh    (adsbygoogle = window.adsbygoogle || []).push({});  // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &quot;엔터&quot; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !">
-<meta name="twitter:description" content="Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh    (adsbygoogle = window.adsbygoogle || []).push({});  // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &quot;엔터&quot; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !">
+<meta property="og:description" content="Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh    (adsbygoogle = window.adsbygoogle || []).push({});  // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &#34;엔터&#34; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !">
+<meta name="twitter:description" content="Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh    (adsbygoogle = window.adsbygoogle || []).push({});  // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &#34;엔터&#34; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !">
 <meta property="og:locale" content="en-us">
 
   
@@ -105,7 +105,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-n3viotqzhxlaiqzckigo0fseosihbtvki5la2psestq36iag7xprumzywn.min.css" />
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
       
@@ -115,16 +115,14 @@
 
     
       
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-BHPHWPTLMZ', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
 }
 </script>
 
@@ -351,15 +349,15 @@ if (!doNotTrack) {
   </ul>
 </nav>
 <h2 id="github에서-ssh-key-생성">Github에서 SSH key 생성</h2>
-<pre><code class="language-console" data-lang="console">// 홈 디렉토리 이동
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">// 홈 디렉토리 이동
 cd ~
-
-// ssh 키 디렉토리 생성
+<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>// ssh 키 디렉토리 생성
 mkdir ~/.ssh
 chmod 700 ~/.ssh
 cd .ssh
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
@@ -369,24 +367,24 @@ cd .ssh
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-
-// ssh 사용자 키 생성
+<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>// ssh 사용자 키 생성
 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com”
-
-// 아래와 같이 뜨면 &quot;엔터&quot; 입력
+<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>// 아래와 같이 뜨면 &#34;엔터&#34; 입력
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/user/.ssh/id_rsa):
-
-// 아래와 같이 뜨면 비밀먼호 두번 입력
+<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>// 아래와 같이 뜨면 비밀먼호 두번 입력
 Enter passphrase (empty for no passphrase): 
 Enter same passphrase again:
-</code></pre><p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FclbTFB%2Fbtq4BxHN5gr%2FNZHG8WR6QKczxD0Vu7fJR0%2Fimg.png" alt=""></p>
+</code></pre></div><p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FclbTFB%2Fbtq4BxHN5gr%2FNZHG8WR6QKczxD0Vu7fJR0%2Fimg.png" alt=""></p>
 <p>키 생성 완료 !!</p>
 <p>ls -l 입력하여 생성된 키 확인 !</p>
 <p>id_rsa 는 개인키, id_rsa.pub 은 공개키 (개인키는 절대 공개하면 안됨)</p>
 <p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRddA5%2Fbtq4H0nGtyH%2F7IDEsz1lCBH1GzHv0InE8k%2Fimg.png" alt=""></p>
 <h2 id="공개키-등록--복사">공개키 등록 &amp; 복사</h2>
-<pre><code>// 공개키 출력 (ssh-rsa 부터 이메일까지 복사)
+<pre tabindex="0"><code>// 공개키 출력 (ssh-rsa 부터 이메일까지 복사)
 cat ~/.ssh/id_rsa.pub
 
 eval $(ssh-agent -s)
@@ -672,7 +670,7 @@ ssh-add ~/.ssh/id_rsa
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-lpcba4q6ro8i5swk5d9fjpafhafjw20qvxi3zjbiqf5nemgxwcftyfktpu.min.js"></script>
+<script src="https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
 <script lang="javascript">

@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content=", development, next-gen">
 <meta name="description" content="state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.     (adsbygoogle = window.adsbygoogle || []).push({});  2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
@@ -114,7 +114,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-n3viotqzhxlaiqzckigo0fseosihbtvki5la2psestq36iag7xprumzywn.min.css" />
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
       
@@ -124,16 +124,14 @@
 
     
       
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-BHPHWPTLMZ', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
 }
 </script>
 
@@ -395,7 +393,7 @@ if (!doNotTrack) {
 <p>원소 추가</p>
 </li>
 </ul>
-<pre><code>this.setState({
+<pre tabindex="0"><code>this.setState({
     list: update(
         this.state.list,
         {
@@ -417,7 +415,7 @@ if (!doNotTrack) {
 <p>원소 제거</p>
 </li>
 </ul>
-<pre><code>this.setState({
+<pre tabindex="0"><code>this.setState({
     list: update(
         this.state.list,
         {
@@ -433,7 +431,7 @@ if (!doNotTrack) {
 <p>원소 수정</p>
 </li>
 </ul>
-<pre><code>this.setState({
+<pre tabindex="0"><code>this.setState({
     list: update(
         this.state.list,
         {
@@ -452,7 +450,7 @@ if (!doNotTrack) {
 <p>객체를 다룰 때에도 직접 접근하면 안된다.</p>
 </li>
 </ul>
-<pre><code>let object = {
+<pre tabindex="0"><code>let object = {
     a: '1',
     b: '2',
     c: {
@@ -484,7 +482,7 @@ let changed = update(object, {
 <li>$npm install &ndash;save babel-preset-stage-0</li>
 <li>webpack.config.js 파일을 아래와 같이 수정해야 한다.</li>
 </ul>
-<pre><code>module:{
+<pre tabindex="0"><code>module:{
         loaders: [
             {
                 test: /.js$/,
@@ -502,7 +500,7 @@ let changed = update(object, {
 </code></pre><ul>
 <li>spread 연산자를 이용하여 값을 수정</li>
 </ul>
-<pre><code>let object = {
+<pre tabindex="0"><code>let object = {
     a: '1',
     b: '2',
     c: {
@@ -527,7 +525,7 @@ let changed = {
 <p>값 수정의 또 다른 예시</p>
 </li>
 </ul>
-<pre><code>let object = {
+<pre tabindex="0"><code>let object = {
     a: '1',
     b: '2',
     c: {
@@ -561,7 +559,7 @@ let changed = {
 <p>배열에서도 마찬가지로 spread 연산자 이용이 가능하다.</p>
 </li>
 </ul>
-<pre><code>let array = [1, 2, 3, 4, 5, 6];
+<pre tabindex="0"><code>let array = [1, 2, 3, 4, 5, 6];
 let changed = [ ...array, 7];
 </code></pre><ul>
 <li>
@@ -571,7 +569,7 @@ let changed = [ ...array, 7];
 <p>배열 원소 제거</p>
 </li>
 </ul>
-<pre><code>let array = [1, 2, 3, 4, 5, 6];
+<pre tabindex="0"><code>let array = [1, 2, 3, 4, 5, 6];
 let changed = [ ...array.slice(0,2), ...array.slice(3,array.length)];
 </code></pre><ul>
 <li>
@@ -581,7 +579,7 @@ let changed = [ ...array.slice(0,2), ...array.slice(3,array.length)];
 <p>배열 원소 수정</p>
 </li>
 </ul>
-<pre><code>let array = [1, 2, 3, 4, 5, 6];
+<pre tabindex="0"><code>let array = [1, 2, 3, 4, 5, 6];
 let changed = [ ...array.slice(0,2), '수정', ...array.slice(3,array.length-1)];
 </code></pre><ul>
 <li>changed 배열을 출력해보면 [1, 2, &ldquo;수정&rdquo;, 4, 5, 6] 로 출력된다.</li>
@@ -851,7 +849,7 @@ let changed = [ ...array.slice(0,2), '수정', ...array.slice(3,array.length-1)]
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-lpcba4q6ro8i5swk5d9fjpafhafjw20qvxi3zjbiqf5nemgxwcftyfktpu.min.js"></script>
+<script src="https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
 <script lang="javascript">

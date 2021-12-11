@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content="development, front-end, react, 리액트, cra, 절대경로, 타입스크립트, development, next-gen">
 <meta name="description" content="create-react-app 절대경로 설정, 타입스크립트 타입스크립트 설치 후, tsc init으로 tsconfig.json을 생성했다. 그리고, 절대 경로 설정을 위해 tsconfig.json 파일에 path 를 변경했는데 npm start를 할 때마다 계속 tsconfig.json파일이 자동으로 변경되었다&hellip;&hellip;.. ㅠㅠ {{ adsense }}
@@ -100,7 +100,7 @@ npm run eject를 해야 웹팩 설정이 보이고, 거기서 수정해야한다
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-n3viotqzhxlaiqzckigo0fseosihbtvki5la2psestq36iag7xprumzywn.min.css" />
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
       
@@ -110,16 +110,14 @@ npm run eject를 해야 웹팩 설정이 보이고, 거기서 수정해야한다
 
     
       
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-BHPHWPTLMZ', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
 }
 </script>
 
@@ -364,7 +362,7 @@ if (!doNotTrack) {
 <p>tsconfig의 paths 설정을 바로 사용하기 위해<a href="https://github.com/risenforces/craco-alias#migrating-from-cra-alias">craco-alias</a>도 함께 설치</p>
 <h2 id="사용법"><strong>사용법</strong></h2>
 <h2 id="packagejson파일을-수정한다-react-script를-craco로-변경"><strong>package.json</strong> 파일을 수정한다. (react-script를 craco로 변경)</h2>
-<pre><code>{
+<pre tabindex="0"><code>{
 	...
 	&quot;scripts&quot;: {
 		&quot;start&quot;: &quot;craco start&quot;,
@@ -375,7 +373,7 @@ if (!doNotTrack) {
     ...
 }
 </code></pre><h2 id="tsconfigpathsjson파일을-루트에-생성하고-paths-설정을-한다"><strong>tsconfig.paths.json</strong> 파일을 루트에 생성하고 paths 설정을 한다.</h2>
-<pre><code>{
+<pre tabindex="0"><code>{
 	&quot;compilerOptions&quot;: {
 		&quot;baseUrl&quot;: &quot;src&quot;,
 		&quot;paths&quot;: {
@@ -395,7 +393,7 @@ if (!doNotTrack) {
 	}
 }
 </code></pre><h2 id="tsconfigjson맨-윗-라인에-확장-옵션을-넣는다"><strong>tsconfig.json</strong> 맨 윗 라인에 확장 옵션을 넣는다.</h2>
-<pre><code>{
+<pre tabindex="0"><code>{
 	&quot;extends&quot;: &quot;./tsconfig.paths.json&quot;,
     &quot;compilerOptions&quot;: {
     },
@@ -403,7 +401,7 @@ if (!doNotTrack) {
 }
 
 </code></pre><h2 id="cracoconfigjs파일을-루트에-생성-후-webpack-설정을-변경하면-된다"><strong>craco.config.js</strong> 파일을 루트에 생성 후 webpack 설정을 변경하면 된다.</h2>
-<pre><code>const CracoAlias = require('craco-alias');
+<pre tabindex="0"><code>const CracoAlias = require('craco-alias');
 
 module.exports = {
 	plugins: [
@@ -421,7 +419,7 @@ module.exports = {
 };
 
 </code></pre><p>이제 다음과 같이 사용 할 수 있다!! WOW!</p>
-<pre><code>import { useAppSettings, getAppSettings } from '~/settings';
+<pre tabindex="0"><code>import { useAppSettings, getAppSettings } from '~/settings';
 import { containAlphabet } from '@utils/string-util';
 import { useLocalization } from '@locales';
 
@@ -684,7 +682,7 @@ import { useLocalization } from '@locales';
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-lpcba4q6ro8i5swk5d9fjpafhafjw20qvxi3zjbiqf5nemgxwcftyfktpu.min.js"></script>
+<script src="https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
 <script lang="javascript">

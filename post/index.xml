@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sat, 07 Aug 2021 02:54:15 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Dec 2021 10:46:28 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TIL📚 앱개발 스터디 - 1week</title>
+      <link>https://haneulee.github.io/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-1week/</link>
+      <pubDate>Sat, 11 Dec 2021 10:46:28 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-1week/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  TIL📚 앱개발 스터디 - 1week Javascript Object Oriented Programming   상속 : 클래스개념에서 상위 클래스(부모)로 부터 하위 클래스(자식)이 유산을 물려받는것과 같이, 부모의 메소드나 변수를 사용할 수 있는 것을 말함.
+  다형성 : 같은 함수가 있다고 칠대 그 함수가 매개변수에 따라 다른 역할을 할 수 도 있다.
+  캡슐화 : 보통 데이터를 은닉시킨다고 표현하는데, 외부에서 쉽게 데이터를 접근할 수 없게 만들기도하고, 데이터 구조와 데이터를 다루는 방법들을 한데다 묶는것.</description>
+    </item>
+    
     <item>
       <title>Jest Components Test 제스트 컴포넌트 테스트 🔥</title>
       <link>https://haneulee.github.io/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
@@ -256,7 +267,7 @@ utterances는 아주 재미있는 프로젝트인데 GitHub의 이슈 검색 API
       <pubDate>Fri, 21 May 2021 10:30:25 +0900</pubDate>
       
       <guid>https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/</guid>
-      <description>Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh    (adsbygoogle = window.adsbygoogle || []).push({});  // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &amp;quot;엔터&amp;quot; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !</description>
+      <description>Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh    (adsbygoogle = window.adsbygoogle || []).push({});  // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &amp;#34;엔터&amp;#34; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !</description>
     </item>
     
     <item>

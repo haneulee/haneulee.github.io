@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content="development, front-end, development, next-gen">
 <meta name="description" content="document is not defined 오류 해결방법  서버사이드 렌더링인 nextJS를 사용할 때는 window 또는 Document 객체를 사용할 수 없다.  해결 방법 첫번째  window 오브젝트가 있는지 확인하는 조건문을 추가하여 렌더링 된 다음에 document 코드를 실행하도록 한다.  if (typeof window === &#39;object&#39;) { // Check if document is finally loaded document.addEventListener(&quot;DOMContentLoaded&quot;, function () { alert(&#39;Finished loading&#39;) }); }    (adsbygoogle = window.adsbygoogle || []).push({});  두번째  nextJS는 react를 사용할 수 있기 때문에 react에서 컴포넌트가 마운트 또는 업데이트 된 다음에 동작하는 componentDidMount 또는 useEffect 훅을 사용하여 체크한다.">
@@ -97,7 +97,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-n3viotqzhxlaiqzckigo0fseosihbtvki5la2psestq36iag7xprumzywn.min.css" />
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
       
@@ -107,16 +107,14 @@
 
     
       
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-BHPHWPTLMZ', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
 }
 </script>
 
@@ -356,7 +354,7 @@ if (!doNotTrack) {
 <ul>
 <li>window 오브젝트가 있는지 확인하는 조건문을 추가하여 렌더링 된 다음에 document 코드를 실행하도록 한다.</li>
 </ul>
-<pre><code>if (typeof window === 'object') {
+<pre tabindex="0"><code>if (typeof window === 'object') {
 // Check if document is finally loaded
    document.addEventListener(&quot;DOMContentLoaded&quot;, function () {
        alert('Finished loading')
@@ -376,7 +374,7 @@ if (!doNotTrack) {
 <ul>
 <li>nextJS는 react를 사용할 수 있기 때문에 react에서 컴포넌트가 마운트 또는 업데이트 된 다음에 동작하는 componentDidMount 또는 useEffect 훅을 사용하여 체크한다.</li>
 </ul>
-<pre><code>import {useEffect} from &quot;react&quot;;
+<pre tabindex="0"><code>import {useEffect} from &quot;react&quot;;
 
 useEffect(() =&gt; {
     alert('Finished loading');
@@ -385,7 +383,7 @@ useEffect(() =&gt; {
 <ul>
 <li>process.browser는 지금 deprecated 되었으므로 process.client를 사용해서 렌더링 여부를 확인한다.</li>
 </ul>
-<pre><code>if (process.browser) {
+<pre tabindex="0"><code>if (process.browser) {
     document.addEventListener(&quot;DOMContentLoaded&quot;, function () {
        alert('Finished loading');
      });
@@ -657,7 +655,7 @@ useEffect(() =&gt; {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-lpcba4q6ro8i5swk5d9fjpafhafjw20qvxi3zjbiqf5nemgxwcftyfktpu.min.js"></script>
+<script src="https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
 <script lang="javascript">

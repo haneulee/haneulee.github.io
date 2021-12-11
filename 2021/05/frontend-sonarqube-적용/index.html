@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content="development, front-end, development, next-gen">
 <meta name="description" content="Frontend SonarQube 적용 이번에 회사에서 개발 코드 정적 분석 툴인 소나큐브 (sonarqube)를 도입하기로 해서 사전 검토에 들어갔다. 먼저 현재 개발중인 SKB G2 웹앱 코드를 소나큐브로 돌려보기로 했다. 해당 웹앱 코드는 vue 프레임워크를 사용중
@@ -115,7 +115,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-n3viotqzhxlaiqzckigo0fseosihbtvki5la2psestq36iag7xprumzywn.min.css" />
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
       
@@ -125,16 +125,14 @@
 
     
       
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-BHPHWPTLMZ', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
 }
 </script>
 
@@ -378,11 +376,11 @@ if (!doNotTrack) {
 <h2 id="1-소나큐브-서버-띄우기">1. 소나큐브 서버 띄우기</h2>
 <p>소나큐브는 아래 사이트에서 다운로드 받고, </p>
 <p>소나스캐너는 맥을 이용중이므로 간단하게 brew로 설치해준다. </p>
-<pre><code>brew install sonar-scanner
+<pre tabindex="0"><code>brew install sonar-scanner
 </code></pre><p><a href="https://www.sonarqube.org/downloads/">www.sonarqube.org/downloads/</a></p>
 <p>사이트에서 무료버전인 community 버전을 다운로드 받고,  zip파일 압축을 풀어준다.</p>
 <p>터미널을 통해 sonarqube 폴더 위치를 확인하고, 아래 명령어를 실행한다.</p>
-<pre><code>/usr/sonarqube-8.6.0.39681/bin/macosx-universal-64/sonar.sh console
+<pre tabindex="0"><code>/usr/sonarqube-8.6.0.39681/bin/macosx-universal-64/sonar.sh console
 </code></pre><p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FzdbiF%2FbtqSQ6hlHpH%2FoUod8lJky0Ahs20mfkWbf1%2Fimg.png" alt=""></p>
 <p>sonarqube is up이 뜬다면 성공! </p>
 <p>sonarqube server를 띄워주는데 default url은 http://localhost:9000 이다. </p>
@@ -405,7 +403,7 @@ if (!doNotTrack) {
 <p>위에서 복사했던 소나스캐너 명령어를 검사할 프로젝트 root 위치에서 실행해준다. </p>
 <p>여기서 나는 git scm 에러가 발생했다. </p>
 <p>그래서 &lsquo;-Dsonar.scm.provider=git&rsquo; 을 명령어 뒤에 추가해줬다. </p>
-<pre><code>sonar-scanner \
+<pre tabindex="0"><code>sonar-scanner \
   -Dsonar.projectKey=test_automation \
   -Dsonar.sources=. \
   -Dsonar.host.url=http://localhost:9000 \
@@ -413,7 +411,7 @@ if (!doNotTrack) {
   -Dsonar.scm.provider=git
 </code></pre><p>해당 명령어를 실행하면 아래와 같이 모든 코드가 정적분석 검사되고, </p>
 <p>SUCCESS 가 뜨는지 확인!!</p>
-<pre><code>INFO: Scanner configuration file: /usr/local/Cellar/sonar-scanner/4.5.0.2216/libexec/conf/sonar-scanner.properties
+<pre tabindex="0"><code>INFO: Scanner configuration file: /usr/local/Cellar/sonar-scanner/4.5.0.2216/libexec/conf/sonar-scanner.properties
 INFO: Project root configuration file: NONE
 INFO: SonarScanner 4.5.0.2216
 INFO: Java 13.0.1 Oracle Corporation (64-bit)
@@ -795,7 +793,7 @@ INFO: ------------------------------------------------------------------------
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-lpcba4q6ro8i5swk5d9fjpafhafjw20qvxi3zjbiqf5nemgxwcftyfktpu.min.js"></script>
+<script src="https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
 <script lang="javascript">

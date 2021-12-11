@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content="development, front-end, development, next-gen">
 <meta name="description" content="E2E TEST 🏃🏻‍♀️ E2E Test (End To End Test) 란 ? 개별 모듈 및 클래스에 중점을 두는 단위 테스트와 달리 e2e 테스트는 최종 사용자가 프로덕션과 함께 하게 될 상호 작용의 종류에 더 가까운 보다 종합적인 수준에서 클래스와 모듈의 상호 작용을 다룹니다. 각 API 엔드포인트의 종단 간 테스트는 시스템의 전반적인 동작이 정확하고 프로젝트 요구 사항을 충족하는지 확인하는 데 도움이 됩니다. NestJS를 사용하면 supertest 라이브러리를 사용하여 HTTP 요청을 쉽게 시뮬레이션할 수 있습니다.">
@@ -115,7 +115,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-n3viotqzhxlaiqzckigo0fseosihbtvki5la2psestq36iag7xprumzywn.min.css" />
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
       
@@ -125,16 +125,14 @@
 
     
       
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-BHPHWPTLMZ', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
 }
 </script>
 
@@ -390,7 +388,7 @@ E2E 테스트는 환경에 의존하는 테스트이지만, 단위 테스트는 
 <p>NestJS에서는 특정 도구를 강제하지는 않지만 Jest를 기본 테스트 프레임워크로 제공해주며 테스팅 패키지도 제공하기 때문에 개발자가 다른 도구를 찾는데 소모하는 리소스를 줄일 수 있다.</p>
 <p></br></br></p>
 <h2 id="테스트-설정하기">테스트 설정하기</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts">
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">podcastsRepository</span>: <span style="color:#66d9ef">Repository</span>&lt;<span style="color:#f92672">Podcast</span>&gt;;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">episodesRepository</span>: <span style="color:#66d9ef">Repository</span>&lt;<span style="color:#f92672">Episode</span>&gt;;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">usersRepository</span>: <span style="color:#66d9ef">Repository</span>&lt;<span style="color:#f92672">User</span>&gt;;
@@ -399,7 +397,7 @@ E2E 테스트는 환경에 의존하는 테스트이지만, 단위 테스트는 
 <ul>
 <li>repository 초기화</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">podcastsRepository</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">module</span><span style="color:#a6e22e">Fixture.get</span>&lt;<span style="color:#f92672">Repository</span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">Podcast</span>&gt;<span style="color:#f92672">&gt;</span>(<span style="color:#a6e22e">getRepositoryToken</span>(<span style="color:#a6e22e">Podcast</span>));
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">podcastsRepository</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">module</span><span style="color:#a6e22e">Fixture.get</span>&lt;<span style="color:#f92672">Repository</span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">Podcast</span>&gt;<span style="color:#f92672">&gt;</span>(<span style="color:#a6e22e">getRepositoryToken</span>(<span style="color:#a6e22e">Podcast</span>));
 </code></pre></div><p>나머지 episodeRepsitory, usersRepository 초기화 방법은 모두 동일합니다.
 </br></br></p>
 <blockquote>
@@ -411,14 +409,14 @@ E2E 테스트는 환경에 의존하는 테스트이지만, 단위 테스트는 
 </blockquote>
 <h2 id="테스트-수행">테스트 수행</h2>
 <p>e2e테스트는 흔히 종단간 테스트로 번역이 되고, 실제 사용자가 행동하는 방식으로 테스트를 한다고 생각하시면 됩니다. unit 테스트처럼 가짜 데이터 베이스를 사용하지 않습니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">baseTest</span> <span style="color:#f92672">=</span> () <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">request</span>(<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">getHttpServer</span>()).<span style="color:#a6e22e">post</span>(<span style="color:#a6e22e">GRAPHQL_ENDPOINT</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">baseTest</span> <span style="color:#f92672">=</span> () <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">request</span>(<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">getHttpServer</span>()).<span style="color:#a6e22e">post</span>(<span style="color:#a6e22e">GRAPHQL_ENDPOINT</span>);
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">publicTest</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">query</span>: <span style="color:#66d9ef">string</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">baseTest</span>().<span style="color:#a6e22e">send</span>({ <span style="color:#a6e22e">query</span> });
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">privateTest</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">query</span>: <span style="color:#66d9ef">string</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">baseTest</span>().<span style="color:#66d9ef">set</span>(<span style="color:#e6db74">&#39;X-JWT&#39;</span>, <span style="color:#a6e22e">jwtToken</span>).<span style="color:#a6e22e">send</span>({ <span style="color:#a6e22e">query</span> });
 </code></pre></div><p>e2e테스트에서는 request(app.getHttpServer()).post(GRAPHQL_ENDPOINT).send({query})가 계속 반복될 것이므로 함수를 wrapping 해놓았습니다.
 request는 <a href="https://github.com/visionmedia/supertest">supertest</a> 패키지에서 import한 함수이며, express test를 위해 nestjs 프레임워크에 포함 된 패키지입니다
 </br></br>
 privateTest에 보시면 set(&lsquo;X-JWT&rsquo;, jwtToken)는 헤더에 &lsquo;X-JWT&rsquo;라는 이름으로 jwtToken을 넘겨주는 과정입니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;Podcasts Resolver&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;Podcasts Resolver&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
     <span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;createPodcast&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
       <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;should create a new podcast&#39;</span>, () <span style="color:#f92672">=&gt;</span>
         <span style="color:#a6e22e">publicTest</span>(<span style="color:#e6db74">`
@@ -449,7 +447,7 @@ privateTest에 보시면 set(&lsquo;X-JWT&rsquo;, jwtToken)는 헤더에 &lsquo;
 테스트 방법은 unit 테스트처럼, 성공적으로 처리 되는 경우, 에러인 경우 에러처리 등의 경우가 잘 처리되고 있나 테스트 해보시면 됩니다.
 unit테스트와는 달리 실제 DB 사용, 실제 graphql에 query 요청을 한다는 점 등이 다릅니다.
 </br></br></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;updatePodcast&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;updatePodcast&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
       <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rating</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
       <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">podcastId</span>: <span style="color:#66d9ef">number</span>;
       
@@ -815,7 +813,7 @@ unit테스트와는 달리 실제 DB 사용, 실제 graphql에 query 요청을 �
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-lpcba4q6ro8i5swk5d9fjpafhafjw20qvxi3zjbiqf5nemgxwcftyfktpu.min.js"></script>
+<script src="https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
 <script lang="javascript">

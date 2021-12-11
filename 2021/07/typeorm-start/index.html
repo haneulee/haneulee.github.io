@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content="development, front-end, development, next-gen">
 <meta name="description" content="(adsbygoogle = window.adsbygoogle || []).push({});  Typeorm ORM (Object Relational Mapping) ORM (Object-relational mapping)은 객체지향 프로그래밍(Object-Oriented-Programming) 과 관계형 데이터베이스(Relational-Database)사이의 호환되지 않는 데이터를 변환하는 시스템이다. 객체지향 프로그래밍은 Class를 사용하고 관계형 데이터베이스는 Table을 사용한다.
@@ -105,7 +105,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-n3viotqzhxlaiqzckigo0fseosihbtvki5la2psestq36iag7xprumzywn.min.css" />
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
       
@@ -115,16 +115,14 @@
 
     
       
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-BHPHWPTLMZ', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
 }
 </script>
 
@@ -387,7 +385,7 @@ if (!doNotTrack) {
 MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, WebSQL 데이터베이스를 지원한다.</p>
 <h2 id="entity-설정">entity 설정</h2>
 <p>nestjs에서 typeorm을 사용하려면 repository를 이용하기 위해 typeorm의 data mapper 패턴을 사용합니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Episode</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;./episode.entity&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Episode</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;./episode.entity&#39;</span>;
 <span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">ObjectType</span>, <span style="color:#a6e22e">Field</span>, <span style="color:#a6e22e">InputType</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@nestjs/graphql&#39;</span>;
 <span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">IsString</span>, <span style="color:#a6e22e">IsNumber</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;class-validator&#39;</span>;
 <span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Column</span>, <span style="color:#a6e22e">Entity</span>, <span style="color:#a6e22e">OneToMany</span>, <span style="color:#a6e22e">PrimaryGeneratedColumn</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;typeorm&#39;</span>;
@@ -408,7 +406,7 @@ MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, WebSQL 데이터베�
 <p>또한 graphql의 object type, input type임을 역시 데코레이터를 이용하여 알려주고, input type이나 object type에 name을 지정해주어서 중복 이름을 갖지 않도록 합니다.</p>
 <h2 id="entity-등록-설정">entity 등록 설정</h2>
 <p>src/app.module.ts의 imports에 보면 TypeOrmModule.forRoot 안에 entity를 꼭 등록하고 사용해야 한다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Module</span>({
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Module</span>({
   <span style="color:#a6e22e">imports</span><span style="color:#f92672">:</span> [
     <span style="color:#a6e22e">PodcastsModule</span>,
     <span style="color:#a6e22e">GraphQLModule</span>.<span style="color:#a6e22e">forRoot</span>({ <span style="color:#a6e22e">autoSchemaFile</span>: <span style="color:#66d9ef">true</span> }),
@@ -425,13 +423,13 @@ MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, WebSQL 데이터베�
 })
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AppModule</span> {}
 </code></pre></div><p>src/podcast/podcast.module.ts의 imports에 TypeOrmModule.forFeature에도 사용 등록을 해야 한다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Module</span>({
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Module</span>({
   <span style="color:#a6e22e">imports</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">TypeOrmModule</span>.<span style="color:#a6e22e">forFeature</span>([<span style="color:#a6e22e">Podcast</span>, <span style="color:#a6e22e">Episode</span>])],
   <span style="color:#a6e22e">providers</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">PodcastsService</span>, <span style="color:#a6e22e">PodcastsResolver</span>, <span style="color:#a6e22e">EpisodeResolver</span>],
 })
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PodcastsModule</span> {}
 </code></pre></div><p>service에서 사용하려면 repository를 설정해주어야 한다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Injectable</span>()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Injectable</span>()
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PodcastsService</span> {
   <span style="color:#66d9ef">constructor</span>(
     <span style="color:#66d9ef">@InjectRepository</span>(<span style="color:#a6e22e">Podcast</span>)
@@ -444,7 +442,7 @@ MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, WebSQL 데이터베�
 </code></pre></div><h2 id="relation-설정">Relation 설정</h2>
 <p>데이터베이스의 관계에는 1:1, 1:N, N:N이 있습니다.
 TypeORM에서는 @OneToOne , @OneToMany / @ManyToOne , @ManyToMany 데코레이터를 이용해서 관계를 설정할 수 있습니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Field</span>((<span style="color:#66d9ef">type</span>) <span style="color:#f92672">=&gt;</span> [<span style="color:#a6e22e">Episode</span>], { <span style="color:#a6e22e">nullable</span>: <span style="color:#66d9ef">true</span> })
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Field</span>((<span style="color:#66d9ef">type</span>) <span style="color:#f92672">=&gt;</span> [<span style="color:#a6e22e">Episode</span>], { <span style="color:#a6e22e">nullable</span>: <span style="color:#66d9ef">true</span> })
   <span style="color:#66d9ef">@OneToMany</span>((<span style="color:#66d9ef">type</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">Episode</span>, (<span style="color:#a6e22e">episode</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">episode</span>.<span style="color:#a6e22e">podcast</span>)
   <span style="color:#a6e22e">episodes</span>: <span style="color:#66d9ef">Episode</span>[];
 
@@ -738,7 +736,7 @@ update 메소드를 이용해서도 Update 작업을 할 수 있습니다만, up
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-lpcba4q6ro8i5swk5d9fjpafhafjw20qvxi3zjbiqf5nemgxwcftyfktpu.min.js"></script>
+<script src="https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
 <script lang="javascript">

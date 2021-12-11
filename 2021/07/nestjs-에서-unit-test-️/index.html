@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content="development, front-end, development, next-gen">
 <meta name="description" content="Jest NestJS 에서 UNIT TEST 🏃🏻‍♀️ jwt.service.spec.ts describe(&#39;JwtService&#39;, () =&gt; { let service: JwtService; beforeAll(async () =&gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&lt;JwtService&gt;(JwtService); }); jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다.  jwt service가 제대로 준비 되었는지 확인하려면  it(&#39;should be defined&#39;,()={ expect(service).toBeDefined();});   이 코드로 확인해볼 수 있다.">
@@ -111,7 +111,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-n3viotqzhxlaiqzckigo0fseosihbtvki5la2psestq36iag7xprumzywn.min.css" />
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
       
@@ -121,16 +121,14 @@
 
     
       
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-BHPHWPTLMZ', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
 }
 </script>
 
@@ -361,7 +359,7 @@ if (!doNotTrack) {
 <p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-jest.png" alt=""></p>
 <h2 id="nestjs-에서-unit-test-">NestJS 에서 UNIT TEST 🏃🏻‍♀️</h2>
 <h3 id="jwtservicespects">jwt.service.spec.ts</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;JwtService&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;JwtService&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">service</span>: <span style="color:#66d9ef">JwtService</span>;
 
   <span style="color:#a6e22e">beforeAll</span>(<span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
@@ -383,7 +381,7 @@ it('should be defined',()=>{ expect(service).toBeDefined();});
 </span>
 </br>
 이 코드로 확인해볼 수 있다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">mock</span>(<span style="color:#e6db74">&#34;jsonwebtoken&#34;</span>, () <span style="color:#f92672">=&gt;</span> ({
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">mock</span>(<span style="color:#e6db74">&#34;jsonwebtoken&#34;</span>, () <span style="color:#f92672">=&gt;</span> ({
   <span style="color:#a6e22e">sign</span>: <span style="color:#66d9ef">jest.fn</span>(() <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">MOCKED_TOKEN</span>),
   <span style="color:#a6e22e">verify</span>: <span style="color:#66d9ef">jest.fn</span>(() <span style="color:#f92672">=&gt;</span> ({ <span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">TEST_ID</span> })),
 }));
@@ -410,7 +408,7 @@ describe, it 을 적절히 잘 사용하면 테스트 코드 가독성이 높아
 </br>
 it(individual test), 그 대상을 개별적으로 테스트 하는 것을 의미한다.</p>
 <h3 id="usersservicespects">users.service.spec.ts</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;UsersService&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;UsersService&#39;</span>, () <span style="color:#f92672">=&gt;</span> {
   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">service</span>: <span style="color:#66d9ef">UsersService</span>;
   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jwtService</span>: <span style="color:#66d9ef">JwtService</span>;
   <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">userRepository</span>: <span style="color:#66d9ef">MockRepository</span>&lt;<span style="color:#f92672">User</span>&gt;;
@@ -454,7 +452,7 @@ it(individual test), 그 대상을 개별적으로 테스트 하는 것을 의�
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">async</span> <span style="color:#a6e22e">createAccount</span>({
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">async</span> <span style="color:#a6e22e">createAccount</span>({
     <span style="color:#a6e22e">email</span>,
     <span style="color:#a6e22e">password</span>,
     <span style="color:#a6e22e">role</span>,
@@ -495,7 +493,7 @@ it(individual test), 그 대상을 개별적으로 테스트 하는 것을 의�
 위의 createAccount에서는 위의 logic들을 판단해야만 코드 모든 부분들을 테스트 하는 것으로 볼 수 있습니다.
 그래서 테스트는
 </br></br></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;should success to create User&#39;</span>, <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> { ...
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;should success to create User&#39;</span>, <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> { ...
 <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;should fail because of user existing&#39;</span>, <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> { ...
 <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;should fail because of saving failed&#39;</span>, <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> { ...
 </code></pre></div></br>
@@ -530,7 +528,7 @@ mockResolvedValue는 Promise를 리턴합니다. Promise의 resolve값이 null�
 </blockquote>
 <p>findOne과 마찬가지로 resolve 값을 리턴해줍니다. 성공적으로 만들어진 경우이므로 db에 성공적으로 저장된 값을 리턴하는 repository의 save 메소드를 흉내낸 것입니다.</p>
 <p></br></br></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#34;createAccount Testing&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#34;createAccount Testing&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
   <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;should success to create User&#34;</span>, <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
     <span style="color:#a6e22e">userRepository</span>.<span style="color:#a6e22e">findOne</span>.<span style="color:#a6e22e">mockResolvedValueOnce</span>(<span style="color:#66d9ef">null</span>);
     <span style="color:#a6e22e">userRepository</span>.<span style="color:#a6e22e">create</span>.<span style="color:#a6e22e">mockReturnValueOnce</span>(<span style="color:#a6e22e">hostArgs</span>);
@@ -840,7 +838,7 @@ createAccount를 모두 테스트하려면, 앞에서 언급드린 대로, 이�
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-lpcba4q6ro8i5swk5d9fjpafhafjw20qvxi3zjbiqf5nemgxwcftyfktpu.min.js"></script>
+<script src="https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
 <script lang="javascript">

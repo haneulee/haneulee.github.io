@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content="development, front-end, development, next-gen">
 <meta name="description" content="git config user.email 수정    (adsbygoogle = window.adsbygoogle || []).push({});  git config --global user.email &quot;이메일&quot; git config --global user.name &quot;이름&quot; author(이름)을 바꿀 commit 지정 git rebase 명령을 통해 author을 바꿀 커밋을 선택해준다.
@@ -103,7 +103,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-n3viotqzhxlaiqzckigo0fseosihbtvki5la2psestq36iag7xprumzywn.min.css" />
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
       
@@ -113,16 +113,14 @@
 
     
       
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-BHPHWPTLMZ', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
 }
 </script>
 
@@ -353,21 +351,21 @@ if (!doNotTrack) {
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<pre><code>git config --global user.email &quot;이메일&quot;
+<pre tabindex="0"><code>git config --global user.email &quot;이메일&quot;
 git config --global user.name &quot;이름&quot;
 </code></pre><h1 id="author이름을-바꿀-commit-지정">author(이름)을 바꿀 commit 지정</h1>
 <p>git rebase 명령을 통해 author을 바꿀 커밋을 선택해준다.</p>
-<pre><code>// ~ 뒤에 입력한 숫자는 4번째 커밋까지 선택
+<pre tabindex="0"><code>// ~ 뒤에 입력한 숫자는 4번째 커밋까지 선택
 git rebase -i HEAD~4
 </code></pre><p>그럼 아래와 같은 vi 화면이 뜨는데 변경할 커밋의 pick =&gt; e로 변경해주고 :wq 를 눌러 저장, 종료해준다.
 <img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/git/img-2.png" alt=""></p>
-<pre><code>git rebase -i HEAD~4
+<pre tabindex="0"><code>git rebase -i HEAD~4
 </code></pre><h1 id="변경할-author-입력">변경할 author 입력</h1>
 <p>git commit &ndash;amend &ndash;author=&ldquo;아이디 &lt;이메일&gt;&rdquo; 입력</p>
-<pre><code>git commit --amend --author=&quot;haneulee &lt;lovesky4294@gmail.com&gt;&quot;
+<pre tabindex="0"><code>git commit --amend --author=&quot;haneulee &lt;lovesky4294@gmail.com&gt;&quot;
 </code></pre><h1 id="git-rebase---continue--git-push-origin-master">git rebase &ndash;continue,  git push origin master</h1>
 <p>github repository에 이름 수정 내역 반영</p>
-<pre><code>git rebase --continue
+<pre tabindex="0"><code>git rebase --continue
 
 git push origin master
 </code></pre><p>참고 :
@@ -639,7 +637,7 @@ git push origin master
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-lpcba4q6ro8i5swk5d9fjpafhafjw20qvxi3zjbiqf5nemgxwcftyfktpu.min.js"></script>
+<script src="https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
 <script lang="javascript">

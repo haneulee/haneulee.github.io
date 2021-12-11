@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content="development, front-end, development, next-gen">
 <meta name="description" content="GraphQL과 Apollo 함께 쓰기 🔥 Apollo 란 ? Apollo란 GraphQL의 클라이언트 라이브러리 중 하나로 GraphQL을 사용한다면 거의 필수적으로 사용하는 상태 관리 플랫폼입니다.
@@ -129,7 +129,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-n3viotqzhxlaiqzckigo0fseosihbtvki5la2psestq36iag7xprumzywn.min.css" />
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
       
@@ -139,16 +139,14 @@
 
     
       
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-BHPHWPTLMZ', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
 }
 </script>
 
@@ -403,7 +401,7 @@ if (!doNotTrack) {
 <p>typePolicies, Query field가 customizing 설정이 되어 있지만, 필수는 아니기 때문에 uri만 제공해줘도 무방합니다.<br>
 export const client = new ApolloClient({uri, cache: new InMemoryCache()}) 이런식으로만 하셔도 괜찮습니다.<br>
 위와 같이 설정한 client는 앱 최상단에 <ApolloProvider> 컴포넌트로 감싸서 사용하면 됩니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">ApolloClient</span>, <span style="color:#a6e22e">InMemoryCache</span>, <span style="color:#a6e22e">makeVar</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@apollo/client&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">ApolloClient</span>, <span style="color:#a6e22e">InMemoryCache</span>, <span style="color:#a6e22e">makeVar</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@apollo/client&#34;</span>;
 <span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">LS_TOKEN</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;./constants&#34;</span>;
 
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">token</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">LS_TOKEN</span>);
@@ -433,7 +431,7 @@ export const client = new ApolloClient({uri, cache: new InMemoryCache()}) 이런
 });
 </code></pre></div><h2 id="react-router-dom-설정">react router dom 설정</h2>
 <p>react router dom을 사용하려면 Route를 Router(BrowserRouter, 또는 HashRouter)로 감싸서 사용하시면 됩니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">BrowserRouter</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">Router</span>, <span style="color:#a6e22e">Route</span>, <span style="color:#a6e22e">Switch</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;react-router-dom&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">BrowserRouter</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">Router</span>, <span style="color:#a6e22e">Route</span>, <span style="color:#a6e22e">Switch</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;react-router-dom&#34;</span>;
 <span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Login</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;../pages/login&#34;</span>;
 
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">LoggedOutRouter</span> <span style="color:#f92672">=</span> () <span style="color:#f92672">=&gt;</span> {
@@ -460,7 +458,7 @@ export const client = new ApolloClient({uri, cache: new InMemoryCache()}) 이런
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 <h2 id="reactive-variableshttpswwwapollographqlcomdocsreactlocal-statereactive-variables---로그인-토큰-및-로그인-상태"><a href="https://www.apollographql.com/docs/react/local-state/reactive-variables/">reactive variables</a> - 로그인 토큰 및 로그인 상태</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App() {</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App() {</span>
   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isLoggedIn</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useReactiveVar</span>(<span style="color:#a6e22e">isLoggedInVar</span>);
   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">isLoggedIn</span> <span style="color:#f92672">?</span> &lt;<span style="color:#f92672">LoggedInRouter</span> /&gt; <span style="color:#f92672">:</span> &lt;<span style="color:#f92672">LoggedOutRouter</span> /&gt;;
 }
@@ -470,7 +468,7 @@ export const client = new ApolloClient({uri, cache: new InMemoryCache()}) 이런
 <p>makeVar를 이용하여 로그인 토큰도 localStorage에 연결된 token 값에 반응하도록 설정할 수 있습니다.<br>
 이런 방법으로 로그인 토큰이 저장된 로컬 스토리지를 react로 쉽게 연결하여 사용할 수 있습니다.</p>
 <h2 id="로그인-mutation">로그인 Mutation</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">LOGIN_MUTATION</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">gql</span><span style="color:#e6db74">`
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">LOGIN_MUTATION</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">gql</span><span style="color:#e6db74">`
 </span><span style="color:#e6db74">  mutation login($input: LoginInput!) {
 </span><span style="color:#e6db74">    login(input: $input) {
 </span><span style="color:#e6db74">      ok
@@ -481,7 +479,7 @@ export const client = new ApolloClient({uri, cache: new InMemoryCache()}) 이런
 </span><span style="color:#e6db74">`</span>;
 </code></pre></div><p>graphql의 mutation을 클라이언트에서 이용하려면 먼저 gql을 사용하여, 쿼리문을 먼저 작성하도록 합니다.<br>
 login은 mutation이므로 useMutation을 사용하시면 됩니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">login</span>, { <span style="color:#a6e22e">data</span>: <span style="color:#66d9ef">loginResults</span>, <span style="color:#a6e22e">loading</span> }] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useMutation</span><span style="color:#f92672">&lt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">login</span>, { <span style="color:#a6e22e">data</span>: <span style="color:#66d9ef">loginResults</span>, <span style="color:#a6e22e">loading</span> }] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useMutation</span><span style="color:#f92672">&lt;</span>
   <span style="color:#a6e22e">login</span>,
   <span style="color:#a6e22e">loginVariables</span>
 <span style="color:#f92672">&gt;</span>(<span style="color:#a6e22e">LOGIN_MUTATION</span>, {
@@ -491,7 +489,7 @@ login은 mutation이므로 useMutation을 사용하시면 됩니다.</p>
 인자로 넘겨준 것은 위의 쿼리어로 만든 LOGIN_MUTATION과 <a href="https://www.apollographql.com/docs/react/data/mutations/#options">옵션값</a>입니다.</p>
 <p><a href="https://graphql-kr.github.io/learn/queries/">query/mutation</a></p>
 <h2 id="useformhttpsreact-hook-formcomkrv6apiuseform---react-hook-form"><a href="https://react-hook-form.com/kr/v6/api#useForm">useForm</a> - react hook form</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ILoginForm</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ILoginForm</span> {
   <span style="color:#a6e22e">email</span>: <span style="color:#66d9ef">string</span>;
   <span style="color:#a6e22e">password</span>: <span style="color:#66d9ef">string</span>;
 }
@@ -499,7 +497,7 @@ login은 mutation이므로 useMutation을 사용하시면 됩니다.</p>
 <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">register</span>, <span style="color:#a6e22e">handleSubmit</span>, <span style="color:#a6e22e">getValues</span>, <span style="color:#a6e22e">errors</span>, <span style="color:#a6e22e">formState</span> } <span style="color:#f92672">=</span>
   <span style="color:#a6e22e">useForm</span>&lt;<span style="color:#f92672">ILoginForm</span>&gt;({ <span style="color:#a6e22e">mode</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;onChange&#34;</span> });
 </code></pre></div><p>useForm 함수는 위와 같이 사용하며 타입스크립트를 지원하기 때문에 위와 같이 타입을 제공해주면 자동완성이 쉽게 되기 때문에 편하고 실수할 일이 적어집니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">onValid</span> <span style="color:#f92672">=</span> () <span style="color:#f92672">=&gt;</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">onValid</span> <span style="color:#f92672">=</span> () <span style="color:#f92672">=&gt;</span> {
   <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">email</span>, <span style="color:#a6e22e">password</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">getValues</span>();
   <span style="color:#a6e22e">login</span>({
     <span style="color:#a6e22e">variables</span><span style="color:#f92672">:</span> {
@@ -823,7 +821,7 @@ login은 mutation이므로 useMutation을 사용하시면 됩니다.</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-lpcba4q6ro8i5swk5d9fjpafhafjw20qvxi3zjbiqf5nemgxwcftyfktpu.min.js"></script>
+<script src="https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
 <script lang="javascript">

@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content=", development, next-gen">
 <meta name="description" content="Svelte Svelte란? svelte란 날씬한, 호리호리한이란 뜻입니다.
@@ -120,7 +120,7 @@ h1 태그 내에 {name}은 스크립트의 선언한 name 변수를 참조해서
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-n3viotqzhxlaiqzckigo0fseosihbtvki5la2psestq36iag7xprumzywn.min.css" />
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
       
@@ -130,16 +130,14 @@ h1 태그 내에 {name}은 스크립트의 선언한 name 변수를 참조해서
 
     
       
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-BHPHWPTLMZ', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
 }
 </script>
 
@@ -396,7 +394,7 @@ if (!doNotTrack) {
 <p>기본문법은 html과 비슷합니다.</p>
 <p>h1 태그 내에 {name}은 스크립트의 선언한 name 변수를 참조해서 출력합니다.</p>
 <p>css 또한 똑같이 작성하시면 됩니다.</p>
-<pre><code>// App.svelte
+<pre tabindex="0"><code>// App.svelte
 &lt;script&gt;
 const name = 'ashnamuh'
 &lt;/script&gt;
@@ -411,7 +409,7 @@ const name = 'ashnamuh'
 
 </code></pre><p>위 코드는 빌드 후 다음과 같이 변환됩니다.</p>
 <p>css가 자동으로 scoped 되어서 현재 컴포넌트에만 적용이 되는군요!</p>
-<pre><code>&lt;body cz-shortcut-listen=&quot;true&quot;&gt;
+<pre tabindex="0"><code>&lt;body cz-shortcut-listen=&quot;true&quot;&gt;
   &lt;h1 class=&quot;svelte-1x1ajbk&quot;&gt;
     Hello ashnamuh!
   &lt;/h1&gt;
@@ -429,7 +427,7 @@ const elementId = 'the-header'
 </code></pre><h2 id="컴포넌트">컴포넌트</h2>
 <p>컴포넌트는 .svelte파일을 바로 불러와서 사용할 수 있습니다.</p>
 <p>위에서 만든 TheHeader.svelte를 사용하는 예시입니다.</p>
-<pre><code>// App.svelte
+<pre tabindex="0"><code>// App.svelte
 &lt;script&gt;
 import TheHeader from './components/TheHeader.svelte'
 
@@ -448,7 +446,7 @@ const name = 'ashnamuh'
 <p>vue는 루트 엘리먼트가 반드시 하나여야하고, react는 &lt;React.Fragment&gt;를 사용해서 그룹화를 해야합니다.</p>
 <h2 id="props">props</h2>
 <p>props로 사용할 변수를 자식 컴포넌트에서 export해서 사용할 수 있습니다.</p>
-<pre><code>// Person.svelte
+<pre tabindex="0"><code>// Person.svelte
 &lt;script&gt;
 export let name
 export let age
@@ -457,7 +455,7 @@ export let age
 &lt;p&gt;My name is {name}. I am {age} years old.&lt;/p&gt;
 </code></pre><p>다음은 위 Person.svelte 컴포넌트를 사용하는 예시입니다.</p>
 <p>객체 spread 문법으로 자식에게 데이터를 전달할 수도 있습니다.</p>
-<pre><code>&lt;script&gt;
+<pre tabindex="0"><code>&lt;script&gt;
 import Person from './components/Person.svelte'
 
 const ashnamuh = {
@@ -475,7 +473,7 @@ const jaemok = {
 &lt;Person {...jaemok}&gt;&lt;/Person&gt;
 </code></pre><h2 id="이벤트">이벤트</h2>
 <p>:on 디렉티브를 사용해서 돔 이벤트를 리스닝할 수 있습니다.</p>
-<pre><code>&lt;button on:click={() =&gt; alert('Hello!')}&gt;인라인 js&lt;/button&gt;
+<pre tabindex="0"><code>&lt;button on:click={() =&gt; alert('Hello!')}&gt;인라인 js&lt;/button&gt;
 스크립트 내에 함수를 연결할 수도 있습니다.
 
 &lt;script&gt;
@@ -485,7 +483,7 @@ const showAlert = () =&gt; alert('Hi!')
 &lt;button on:click={showAlert}&gt;함수 분리&lt;/button&gt;
 </code></pre><p>또한 |를 이용해서 이벤트 수식어를 붙일 수 있습니다.</p>
 <p>다음은 이벤트 수식어를 설정한 이벤트 캡쳐링 예시입니다.</p>
-<pre><code>&lt;script&gt;
+<pre tabindex="0"><code>&lt;script&gt;
 const clickGrandParent = () =&gt; console.log('clicked grand parent')
 const clickParent = () =&gt; console.log('clicked parent')
 const clickChild = () =&gt; console.log('clicked child')
@@ -503,7 +501,7 @@ const clickChild = () =&gt; console.log('clicked child')
 <p>이 말은 값이 바뀌면 자동으로 DOM을 갱신한다는 의미입니다.</p>
 <p>다음은 setInterval 함수로 1초마다 count 값을 증가시키는 코드입니다.</p>
 <p>count 값이 변함에 따라 p태그의 출력도 달라지지요.</p>
-<pre><code>// Count.svelte
+<pre tabindex="0"><code>// Count.svelte
 &lt;script&gt;
 let count = 0
 
@@ -518,7 +516,7 @@ setInterval(() =&gt; {
 <p>다음은 $ 로 count 값에 따라 변하는 doubled 변수를 선언한 예시입니다.</p>
 <p>vue의 computed와 비슷한 맥락입니다.</p>
 <p>svelte의 $문법이 조금 낯설게 느껴질 수도 있습니다.</p>
-<pre><code>// Count.svelte
+<pre tabindex="0"><code>// Count.svelte
 &lt;script&gt;
 let count = 0
 
@@ -538,7 +536,7 @@ setInterval(() =&gt; {
 <h2 id="주의할-점">주의할 점</h2>
 <p>배열이나 객체의 값이 변경될 땐 재할당해야만 반응성을 지원합니다.</p>
 <p>다음처럼 객체의 속성을 직접 추가하거나,Array.prototype.push 등은 반응성이 지원되지 않습니다.</p>
-<pre><code>&lt;script&gt;
+<pre tabindex="0"><code>&lt;script&gt;
 let arr = []
 let obj = {name: 'ashnamuh'}
 
@@ -560,7 +558,7 @@ const handleClick = () =&gt; {
 <h2 id="if-else">if-else</h2>
 <p>순수 자바스크립트가 아닌 svelte에서 제공하는 문법으로 if문을 사용할 수 있습니다.</p>
 <p>다음은 유저의 loggedIn 값에 따라 버튼을 다르게 보여주는 예시입니다.</p>
-<pre><code>&lt;script&gt;
+<pre tabindex="0"><code>&lt;script&gt;
 let user = { loggedIn: false }
 
 const toggle = () =&gt; {
@@ -580,7 +578,7 @@ const toggle = () =&gt; {
   &lt;/button&gt;
 {/if}
 </code></pre><p>if-else를 쓰면 다음과 같이 표현할 수도 있습니다. 반드시 {/if}로 if문을 닫아줘야 합니다.</p>
-<pre><code>{#if user.loggedIn}
+<pre tabindex="0"><code>{#if user.loggedIn}
   &lt;button on:click={toggle}&gt;
     Log out
   &lt;/button&gt;
@@ -590,7 +588,7 @@ const toggle = () =&gt; {
   &lt;/button&gt;
 {/if}
 </code></pre><p>다음처럼 if문과 if-else문을 사용할 수도 있습니다.</p>
-<pre><code>&lt;script&gt;
+<pre tabindex="0"><code>&lt;script&gt;
 let count = 7
 &lt;/script&gt;
 
@@ -605,7 +603,7 @@ let count = 7
 <p>여러개의 똑같은 엘리먼트를 반복적으로 보여줄 때 유용한 기능입니다.</p>
 <p>vue에서는 v-for, angular에선 ngFor, react에서는 Array.prototype.map으로 사용할 수 있는 기능입니다.</p>
 <p>each를 사용해서 사람리스트를 보여주는 예시입니다.</p>
-<pre><code>&lt;script&gt;
+<pre tabindex="0"><code>&lt;script&gt;
 let people = [
   { id: 1, name: 'ashnamuh' },
   { id: 2, name: 'Jaemok Lee' },
@@ -642,7 +640,7 @@ let people = [
 <p>svelte는 비동기 작업을 처리하는 await이라는 제어문도 제공합니다.</p>
 <p>then, catch 등 Promise와 비슷한 문법으로 비동기 작업의 결과에 따라 분기할 수 있습니다.</p>
 <p>다음은 fetch 요청 결과에 따라 DOM 렌더링을 분기하는 예시입니다.</p>
-<pre><code>&lt;script&gt;
+<pre tabindex="0"><code>&lt;script&gt;
 let promise = getRandomNumber()
 
 const getRandomNumber = async () =&gt; {
@@ -935,7 +933,7 @@ const handleClick = () =&gt; {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-lpcba4q6ro8i5swk5d9fjpafhafjw20qvxi3zjbiqf5nemgxwcftyfktpu.min.js"></script>
+<script src="https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
 <script lang="javascript">

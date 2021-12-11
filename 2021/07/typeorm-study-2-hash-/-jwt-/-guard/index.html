@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.80.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Lee">
 <meta name="keywords" content="development, front-end, development, next-gen">
 <meta name="description" content="(adsbygoogle = window.adsbygoogle || []).push({});  Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &lsquo;enum&rsquo; 이 아니라 &lsquo;simple-enum&rsquo;으로 지정해주면 해결된다.
@@ -113,7 +113,7 @@ export enum UserRole { Host = &#39;Host&#39;, Listener = &#39;Listener&#39;, } r
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-n3viotqzhxlaiqzckigo0fseosihbtvki5la2psestq36iag7xprumzywn.min.css" />
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
     
       
@@ -123,16 +123,14 @@ export enum UserRole { Host = &#39;Host&#39;, Listener = &#39;Listener&#39;, } r
 
     
       
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-BHPHWPTLMZ', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
 }
 </script>
 
@@ -376,7 +374,7 @@ if (!doNotTrack) {
 sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데
 아래 코드처럼 @Column 데코레이터에 type을 &lsquo;enum&rsquo; 이 아니라 &lsquo;simple-enum&rsquo;으로 지정해주면 해결된다.</p>
 <p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/typeorm/img-2.png" alt=""></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">UserRole</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">UserRole</span> {
   <span style="color:#a6e22e">Host</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Host&#39;</span>,
   <span style="color:#a6e22e">Listener</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Listener&#39;</span>,
 }
@@ -391,7 +389,7 @@ sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생�
 <h2 id="password-hash-처리">password hash 처리</h2>
 <p>typeorm 에는 @BeforeInsert , @BeforeUpdate 데코레이터들이 저장 또는 변경되기 전에 패스워드를 hash 처리할 수 있다.
 <a href="https://www.npmjs.com/package/bcrypt">bcrypt</a> 패키지를 사용하여 hash 해준다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts">    <span style="color:#66d9ef">@BeforeInsert</span>()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts">    <span style="color:#66d9ef">@BeforeInsert</span>()
     <span style="color:#66d9ef">@BeforeUpdate</span>()
     <span style="color:#66d9ef">async</span> <span style="color:#a6e22e">hashPassword</span>()<span style="color:#f92672">:</span> <span style="color:#a6e22e">Promise</span>&lt;<span style="color:#f92672">void</span>&gt; {
         <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">password</span>) {
@@ -405,7 +403,7 @@ sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생�
         }
     }
 </code></pre></div><h2 id="jwt-처리">jwt 처리</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Module</span>({})
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Module</span>({})
 <span style="color:#66d9ef">@Global</span>()
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JwtModule</span> {
   <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">forRoot</span>(<span style="color:#a6e22e">options</span>: <span style="color:#66d9ef">JwtModuleOptions</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">DynamicModule</span> {
@@ -429,7 +427,7 @@ sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생�
 <li>constructor( <strong>@Inject</strong> (CONFIG_OPTIONS) private readonly options: JwtModuleOptions) {}</li>
 </ul>
 <p>@Global 데코레이터는 import 하면 전역적으로 어디서든 사용할 수 있다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Injectable</span>()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Injectable</span>()
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JwtMiddleware</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">NestMiddleware</span> {
   <span style="color:#66d9ef">constructor</span>(
     <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">jwtService</span>: <span style="color:#66d9ef">JwtService</span>,
@@ -455,7 +453,7 @@ sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생�
 </code></pre></div><p>middleware에서 service를 사용하기 위해 constructor에서 parameter properties를 사용한다.
 이렇게 생성한 middleware 아래와 같이 appModule에 추가해주면 된다.
 참고: <a href="https://docs.nestjs.com/middleware#applying-middleware">Applying Middleware</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AppModule</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AppModule</span> {
   <span style="color:#a6e22e">configure</span>(<span style="color:#a6e22e">consumer</span>: <span style="color:#66d9ef">MiddlewareConsumer</span>) {
     <span style="color:#a6e22e">consumer</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#a6e22e">JwtMiddleware</span>).<span style="color:#a6e22e">forRoutes</span>({
       <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/graphql&#34;</span>,
@@ -464,7 +462,7 @@ sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생�
   }
 }
 </code></pre></div><h2 id="로그인-파트">로그인 파트</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">passwordCorrect</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">checkPassword</span>(<span style="color:#a6e22e">password</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">passwordCorrect</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">checkPassword</span>(<span style="color:#a6e22e">password</span>);
 <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">passwordCorrect</span>) {
   <span style="color:#66d9ef">return</span> {
     <span style="color:#a6e22e">ok</span>: <span style="color:#66d9ef">false</span>,
@@ -481,7 +479,7 @@ sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생�
 </ul>
 <h2 id="guardhttpsdocsnestjscomguardsguards"><a href="https://docs.nestjs.com/guards#guards">Guard</a></h2>
 <p>nestjs 에서는 유저 인증, 권한부여를 위해서 guard라는 개념을 사용합니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Injectable</span>()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Injectable</span>()
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AuthGuard</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">CanActivate</span> {
   <span style="color:#a6e22e">canActivate</span>(<span style="color:#a6e22e">context</span>: <span style="color:#66d9ef">ExecutionContext</span>) {
     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">gqlContext</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">GqlExecutionContext</span>.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">context</span>).<span style="color:#a6e22e">getContext</span>();
@@ -494,14 +492,14 @@ sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생�
 }
 </code></pre></div><p>graphql의 context에는 유저 인증 정보가 들어가 있습니다.
 context에 user 정보를 넘겨주려면, graphql 모듈을 app 모듈에서 import 하는 단계에서 설정을 해줘야 합니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">GraphQLModule</span>.<span style="color:#a6e22e">forRoot</span>({
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">GraphQLModule</span>.<span style="color:#a6e22e">forRoot</span>({
       <span style="color:#a6e22e">autoSchemaFile</span>: <span style="color:#66d9ef">true</span>,
       <span style="color:#a6e22e">context</span><span style="color:#f92672">:</span> ({ <span style="color:#a6e22e">req</span> }) <span style="color:#f92672">=&gt;</span> {
         <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">user</span>: <span style="color:#66d9ef">req</span>[<span style="color:#e6db74">&#39;user&#39;</span>] };
       },
     }),
 </code></pre></div><p>위에서 만든 AuthGuard는 @UseGuards 데코레이터를 이용하여 사용할 수 있습니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts">    <span style="color:#66d9ef">@UseGuards</span>(<span style="color:#a6e22e">AuthGuard</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts">    <span style="color:#66d9ef">@UseGuards</span>(<span style="color:#a6e22e">AuthGuard</span>)
     <span style="color:#66d9ef">@Query</span>(<span style="color:#a6e22e">returns</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">UserProfileOutput</span>)
     <span style="color:#a6e22e">seeProfile</span>(
         <span style="color:#66d9ef">@Args</span>() <span style="color:#a6e22e">userProfileInput</span>: <span style="color:#66d9ef">UserProfileInput</span>,
@@ -511,7 +509,7 @@ context에 user 정보를 넘겨주려면, graphql 모듈을 app 모듈에서 im
 </code></pre></div><p>resolver위에 @UseGuards 데코레이터를 이용하면 유저 인증이 완성이 됩니다.
 로그인 하지 않은 채로, 즉 로그인 토큰을 헤더에 제공하지 않은 상태로 해당 resolver를 사용하면 Forbidden Resource 에러가 발생하게 됩니다.</p>
 <h2 id="로그인-유저-정보-획득">로그인 유저 정보 획득</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">AuthUser</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createParamDecorator</span>(
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">AuthUser</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createParamDecorator</span>(
   (<span style="color:#a6e22e">data</span>: <span style="color:#66d9ef">unknown</span>, <span style="color:#a6e22e">context</span>: <span style="color:#66d9ef">ExecutionContext</span>) <span style="color:#f92672">=&gt;</span> {
     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">gqlContext</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">GqlExecutionContext</span>.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">context</span>).<span style="color:#a6e22e">getContext</span>();
     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">gqlContext</span>[<span style="color:#e6db74">&#34;user&#34;</span>];
@@ -801,7 +799,7 @@ context에 user 정보를 넘겨주려면, graphql 모듈을 app 모듈에서 im
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-lpcba4q6ro8i5swk5d9fjpafhafjw20qvxi3zjbiqf5nemgxwcftyfktpu.min.js"></script>
+<script src="https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
 
 
 <script lang="javascript">
