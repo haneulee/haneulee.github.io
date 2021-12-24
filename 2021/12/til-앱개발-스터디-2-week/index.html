@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Haneul Lee">
+<meta name="keywords" content="development, front-end, development, next-gen">
+<meta name="description" content="(adsbygoogle = window.adsbygoogle || []).push({});  TIL📚 앱개발 스터디 - 2 week Expo 설치 👉 Expo 란?
+expo는 리액트 네이티브를 크로스 플랫폼으로 개발하기 위한 빌드도구 네이티브 모듈을 보다 쉽고 편하게 사용할 수 있으며 빠르게 실제 기기에서 테스트해볼 수 있도록 해주는 테스트 통합 환경
+ npm install -g expo-cli // expo 설치 (npm) yarn -global add expo-cli // expo 설치 (yarn) expo init [프로젝트 이름] // 프로젝트 생성 expo start // 실행  React Native 🤔 React Native is like React, but it uses native components instead of web components as building blocks.">
+
+
+<meta property="og:description" content="(adsbygoogle = window.adsbygoogle || []).push({});  TIL📚 앱개발 스터디 - 2 week Expo 설치 👉 Expo 란?
+expo는 리액트 네이티브를 크로스 플랫폼으로 개발하기 위한 빌드도구 네이티브 모듈을 보다 쉽고 편하게 사용할 수 있으며 빠르게 실제 기기에서 테스트해볼 수 있도록 해주는 테스트 통합 환경
+ npm install -g expo-cli // expo 설치 (npm) yarn -global add expo-cli // expo 설치 (yarn) expo init [프로젝트 이름] // 프로젝트 생성 expo start // 실행  React Native 🤔 React Native is like React, but it uses native components instead of web components as building blocks.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TIL📚 앱개발 스터디 - 2 week">
+<meta name="twitter:title" content="TIL📚 앱개발 스터디 - 2 week">
+<meta property="og:url" content="https://haneulee.github.io/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-2-week/">
+<meta property="twitter:url" content="https://haneulee.github.io/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-2-week/">
+<meta property="og:site_name" content="Haneul Devlog">
+<meta property="og:description" content="(adsbygoogle = window.adsbygoogle || []).push({});  TIL📚 앱개발 스터디 - 2 week Expo 설치 👉 Expo 란?
+expo는 리액트 네이티브를 크로스 플랫폼으로 개발하기 위한 빌드도구 네이티브 모듈을 보다 쉽고 편하게 사용할 수 있으며 빠르게 실제 기기에서 테스트해볼 수 있도록 해주는 테스트 통합 환경
+ npm install -g expo-cli // expo 설치 (npm) yarn -global add expo-cli // expo 설치 (yarn) expo init [프로젝트 이름] // 프로젝트 생성 expo start // 실행  React Native 🤔 React Native is like React, but it uses native components instead of web components as building blocks.">
+<meta name="twitter:description" content="(adsbygoogle = window.adsbygoogle || []).push({});  TIL📚 앱개발 스터디 - 2 week Expo 설치 👉 Expo 란?
+expo는 리액트 네이티브를 크로스 플랫폼으로 개발하기 위한 빌드도구 네이티브 모듈을 보다 쉽고 편하게 사용할 수 있으며 빠르게 실제 기기에서 테스트해볼 수 있도록 해주는 테스트 통합 환경
+ npm install -g expo-cli // expo 설치 (npm) yarn -global add expo-cli // expo 설치 (yarn) expo init [프로젝트 이름] // 프로젝트 생성 expo start // 실행  React Native 🤔 React Native is like React, but it uses native components instead of web components as building blocks.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-12-20T12:19:04">
+  
+  
+    <meta property="article:modified_time" content="2021-12-20T12:19:04">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+      <meta property="article:section" content="react native">
+    
+  
+  
+    
+      <meta property="article:tag" content="development">
+    
+      <meta property="article:tag" content="front-end">
+    
+      <meta property="article:tag" content="react-native">
+    
+      <meta property="article:tag" content="javascript">
+    
+      <meta property="article:tag" content="til">
+    
+      <meta property="article:tag" content="sparta">
+    
+      <meta property="article:tag" content="coding">
+    
+      <meta property="article:tag" content="스파르타코딩">
+    
+      <meta property="article:tag" content="react native">
+    
+      <meta property="article:tag" content="android">
+    
+      <meta property="article:tag" content="expo">
+    
+      <meta property="article:tag" content="ios">
+    
+      <meta property="article:tag" content="app">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/til/til.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/til/til.png">
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+
+
+    <title>TIL📚 앱개발 스터디 - 2 week</title>
+
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://haneulee.github.io/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-2-week/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="https://haneulee.github.io/css/mystyle.css">
+      
+    
+
+    
+      
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://haneulee.github.io/">Haneul Devlog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://haneulee.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://haneulee.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Haneul Lee</h4>
+        
+          <h5 class="sidebar-profile-bio">Devlog</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories/development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-code"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.haneul-lee.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-window-maximize"></i>
+      
+      <span class="sidebar-button-desc">Website</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/resume" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-file"></i>
+      
+      <span class="sidebar-button-desc">Resume</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin-square"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      
+      
+      <span class="sidebar-button-desc"></span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      TIL📚 앱개발 스터디 - 2 week
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-12-20T12:19:04&#43;09:00">
+        
+  December 20, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/react-native">react native</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#expo-설치-">Expo 설치 👉</a></li>
+    <li><a href="#react-native-">React Native 🤔</a>
+      <ul>
+        <li><a href="#react-native-장단점-">React Native 장단점 👍</a></li>
+        <li><a href="#react-native-components">React Native Components</a></li>
+      </ul>
+    </li>
+    <li><a href="#til-">TIL ✅</a></li>
+  </ul>
+</nav>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="3551187766"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h1 id="til-앱개발-스터디---2-week">TIL📚 앱개발 스터디 - 2 week</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/til/til.png" alt=""></p>
+<h2 id="expo-설치-">Expo 설치 👉</h2>
+<p><strong>Expo 란?</strong></p>
+<div class="alert info ">
+  <p>expo는 리액트 네이티브를 크로스 플랫폼으로 개발하기 위한 빌드도구
+네이티브 모듈을 보다 쉽고 편하게 사용할 수 있으며 빠르게 실제 기기에서 테스트해볼 수 있도록 해주는 테스트 통합 환경</p>
+</div>
+<pre tabindex="0"><code>npm install -g expo-cli // expo 설치 (npm)
+yarn -global add expo-cli // expo 설치 (yarn)
+
+expo init [프로젝트 이름] // 프로젝트 생성
+expo start // 실행
+</code></pre><p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/til/expo-install-1.png" alt=""></p>
+<hr>
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/til/expo-install-2.png" alt=""></p>
+<h2 id="react-native-">React Native 🤔</h2>
+<p>React Native is like React, but it uses native components instead of web components as building blocks. So to understand the basic structure of a React Native app, you need to understand some of the basic React concepts, like JSX, components, state, and props. If you already know React, you still need to learn some React-Native-specific stuff, like the native components. This tutorial is aimed at all audiences, whether you have React experience or not.</p>
+<h3 id="react-native-장단점-">React Native 장단점 👍</h3>
+<h4 id="장점">장점</h4>
+<ul>
+<li>네이티브와 비교해 월등히 빠른 생산성. 체감으론 3~4배</li>
+<li>UI 등 패키지 40여개</li>
+<li>라이브 리로딩</li>
+<li>코드 푸시</li>
+<li>간편한 문법</li>
+</ul>
+<h4 id="단점">단점</h4>
+<ul>
+<li>초기 퍼포먼스는 좋지만 뷰 스택이 쌓일수록 느려짐</li>
+<li>비지니스 로직이 복잡하면 느려짐</li>
+<li>네이티브 뷰 &lt;-&gt; JS 로직간 소통이 많으면 느려짐</li>
+<li>미묘한 UI 의 이상 동작</li>
+<li>써드파티 SDK 탑재 제약</li>
+</ul>
+<h3 id="react-native-components">React Native Components</h3>
+<h4 id="view">View</h4>
+<ul>
+<li>The most fundamental component for building a UI, View is a container that supports layout with flexbox, style, some touch handling, and accessibility controls.</li>
+<li>div 태그와 비슷</li>
+</ul>
+<pre tabindex="0"><code>import React from &quot;react&quot;;
+import { View, Text } from &quot;react-native&quot;;
+
+const ViewBoxesWithColorAndText = () =&gt; {
+  return (
+    &lt;View
+      style={{
+        flexDirection: &quot;row&quot;,
+        height: 100,
+        padding: 20
+      }}
+    &gt;
+      &lt;View style={{ backgroundColor: &quot;blue&quot;, flex: 0.3 }} /&gt;
+      &lt;View style={{ backgroundColor: &quot;red&quot;, flex: 0.5 }} /&gt;
+      &lt;Text&gt;Hello World!&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default ViewBoxesWithColorAndText;
+</code></pre><h4 id="text">Text</h4>
+<ul>
+<li>A React component for displaying text.</li>
+<li>Text supports nesting, styling, and touch handling.</li>
+</ul>
+<pre tabindex="0"><code>import React, { useState } from &quot;react&quot;;
+import { Text, StyleSheet } from &quot;react-native&quot;;
+
+const TextInANest = () =&gt; {
+  const [titleText, setTitleText] = useState(&quot;Bird's Nest&quot;);
+  const bodyText = &quot;This is not really a bird nest.&quot;;
+
+  const onPressTitle = () =&gt; {
+    setTitleText(&quot;Bird's Nest [pressed]&quot;);
+  };
+
+  return (
+    &lt;Text style={styles.baseText}&gt;
+      &lt;Text style={styles.titleText} onPress={onPressTitle}&gt;
+        {titleText}
+        {&quot;\n&quot;}
+        {&quot;\n&quot;}
+      &lt;/Text&gt;
+      &lt;Text numberOfLines={5}&gt;{bodyText}&lt;/Text&gt;
+    &lt;/Text&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  baseText: {
+    fontFamily: &quot;Cochin&quot;
+  },
+  titleText: {
+    fontSize: 20,
+    fontWeight: &quot;bold&quot;
+  }
+});
+
+export default TextInANest;
+</code></pre><h4 id="scrollview">ScrollView</h4>
+<ul>
+<li>Component that wraps platform ScrollView while providing integration with touch locking &ldquo;responder&rdquo; system.</li>
+<li>컨텐츠가 넘쳤을 때 스크롤을 생성하고 가려지는 부분을 보여줌</li>
+<li><a href="https://reactnative.dev/docs/scrollview">https://reactnative.dev/docs/scrollview</a></li>
+</ul>
+<pre tabindex="0"><code>import React from 'react';
+import { StyleSheet, Text, SafeAreaView, ScrollView, StatusBar } from 'react-native';
+
+const App = () =&gt; {
+  return (
+    &lt;SafeAreaView style={styles.container}&gt;
+      &lt;ScrollView style={styles.scrollView}&gt;
+        &lt;Text style={styles.text}&gt;
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/Text&gt;
+      &lt;/ScrollView&gt;
+    &lt;/SafeAreaView&gt;
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: StatusBar.currentHeight,
+  },
+  scrollView: {
+    backgroundColor: 'pink',
+    marginHorizontal: 20,
+  },
+  text: {
+    fontSize: 42,
+  },
+});
+
+export default App;
+</code></pre><h4 id="textinput">TextInput</h4>
+<ul>
+<li>A foundational component for inputting text into the app via a keyboard.</li>
+</ul>
+<pre tabindex="0"><code>import React from &quot;react&quot;;
+import { SafeAreaView, StyleSheet, TextInput } from &quot;react-native&quot;;
+
+const UselessTextInput = () =&gt; {
+  const [text, onChangeText] = React.useState(&quot;Useless Text&quot;);
+  const [number, onChangeNumber] = React.useState(null);
+
+  return (
+    &lt;SafeAreaView&gt;
+      &lt;TextInput
+        style={styles.input}
+        onChangeText={onChangeText}
+        value={text}
+      /&gt;
+      &lt;TextInput
+        style={styles.input}
+        onChangeText={onChangeNumber}
+        value={number}
+        placeholder=&quot;useless placeholder&quot;
+        keyboardType=&quot;numeric&quot;
+      /&gt;
+    &lt;/SafeAreaView&gt;
+  );
+};
+
+const styles = StyleSheet.create({
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
+});
+
+export default UselessTextInput;
+</code></pre><h2 id="til-">TIL ✅</h2>
+<p>react native 로 실제 메인 페이지를 만드는 작업을 진행
+기본적인 컴포넌트들 사용 연습 및 테스트함 !
+라우팅을 사용해 다양한 페이지 레이아웃 구성을 해봐야 할 것 같다.</p>
+<p>참고 :
+<a href="https://spartacodingclub.kr/">스파르타 코딩클럽</a>,
+<a href="https://reactnative.dev/">React Naitve</a>,
+<a href="https://yozm.wishket.com/magazine/detail/567/">RN vs Native vs Flutter 비교</a></p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/development/">development</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/front-end/">front-end</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/react-native/">react-native</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/javascript/">javascript</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/til/">til</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/sparta/">sparta</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/coding/">coding</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%EC%8A%A4%ED%8C%8C%EB%A5%B4%ED%83%80%EC%BD%94%EB%94%A9/">스파르타코딩</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/react-native/">react native</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/android/">android</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/expo/">expo</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/ios/">ios</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/app/">app</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-3-week/" data-tooltip="TIL📚 앱개발 스터디 - 3 week">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-1-week/" data-tooltip="TIL📚 앱개발 스터디 - 1 week">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-2-week/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-2-week/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-2-week/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+            
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="5041197559"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <span class="copyrights">
+      &copy; 2021 <a href="https://github.com/haneulee">haneulee</a>. All Rights Reserved
+    </span>
+  </footer>
+  
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-3-week/" data-tooltip="TIL📚 앱개발 스터디 - 3 week">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-1-week/" data-tooltip="TIL📚 앱개발 스터디 - 1 week">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-2-week/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-2-week/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-2-week/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2021%2F12%2Ftil-%25EC%2595%25B1%25EA%25B0%259C%25EB%25B0%259C-%25EC%258A%25A4%25ED%2584%25B0%25EB%2594%2594-2-week%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2021%2F12%2Ftil-%25EC%2595%25B1%25EA%25B0%259C%25EB%25B0%259C-%25EC%258A%25A4%25ED%2584%25B0%25EB%2594%2594-2-week%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2021%2F12%2Ftil-%25EC%2595%25B1%25EA%25B0%259C%25EB%25B0%259C-%25EC%258A%25A4%25ED%2584%25B0%25EB%2594%2594-2-week%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Lee</h4>
+    
+      <div id="about-card-bio">Devlog</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://haneulee.github.io/img/gradient.png');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

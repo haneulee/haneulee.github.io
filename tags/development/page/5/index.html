@@ -292,6 +292,71 @@ if (!doNotTrack) {
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://haneulee.github.io/2021/05/connection-reset-by-ip-port-22/">
+          connection reset by [ip] port 22
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-05-18T12:31:38&#43;09:00">
+        
+  May 18, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/linux">linux</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        리눅스에서 ssh 접속 후 아무 작업을 하지 않고 그대로 두면 Connection reset by peer 메시지와 함께 접속이 끊기는 경우가 발생한다.
+ Read from remote host xxx.xxx.xxx.xxx: Connection reset by peer
+Connection to xxx.xxx.xxx.xxx closed.
+1)/etc/ssh/sshd_config에 다음을 추가하고 재실행해주면 새로 접속하는 ssh부터는 아무런 작업을 하지 않는다고 해도 끊기지는 않을 것이다.
+ClientAliveInterval 600
+ClientAliveCountMax 3
+ClientAliveInterval 초단위 (default 0)
+Client에서 수신한 data가 없을 경우 sshd 데몬에서 클라이언트가 살아있는지 체크하기 위한 메시지(client alive messages)를 보내게 되는데, 이 메시지를 보내는 초단위 간격을 설정한다.
+      
+      <p>
+        <a href="https://haneulee.github.io/2021/05/connection-reset-by-ip-port-22/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-usestate-%ED%9B%85-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/">
           리액트 useState 훅 사용하기
         </a>
