@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="Haneul Lee">
+<meta name="keywords" content="development, front-end, development, next-gen">
+<meta name="description" content="(adsbygoogle = window.adsbygoogle || []).push({});  React Native UI toolkits 리액트 네이티브 유용한 도구 🍯  1. NativeBase 1만개의 별과 포크를 받은 NativeBase는 수십 개의 크로스 플랫폼 컴포넌트를 제공하는 널리 사용되고 있는 React Native용 UI 컴포넌트 라이브러리입니다.
+NativeBase를 사용하면, 네이티브 서드파티 라이브러리를 기본적으로 사용할 수 있습니다. 그리고 프로젝트 자체에 유용한 starter-kits 부터 customizable theme templates 까지 풍부한 생태계가 구성되어 있습니다.
+여기 멋진 초보자용 키트가 있습니다.
+GeekyAnts/NativeBaseNativeBase — Essential cross-platform UI components for React Nativegithub.">
+
+
+<meta property="og:description" content="(adsbygoogle = window.adsbygoogle || []).push({});  React Native UI toolkits 리액트 네이티브 유용한 도구 🍯  1. NativeBase 1만개의 별과 포크를 받은 NativeBase는 수십 개의 크로스 플랫폼 컴포넌트를 제공하는 널리 사용되고 있는 React Native용 UI 컴포넌트 라이브러리입니다.
+NativeBase를 사용하면, 네이티브 서드파티 라이브러리를 기본적으로 사용할 수 있습니다. 그리고 프로젝트 자체에 유용한 starter-kits 부터 customizable theme templates 까지 풍부한 생태계가 구성되어 있습니다.
+여기 멋진 초보자용 키트가 있습니다.
+GeekyAnts/NativeBaseNativeBase — Essential cross-platform UI components for React Nativegithub.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Native UI toolkits 리액트 네이티브 유용한 도구 🍯">
+<meta name="twitter:title" content="React Native UI toolkits 리액트 네이티브 유용한 도구 🍯">
+<meta property="og:url" content="https://haneulee.github.io/2022/01/react-native-ui-toolkits-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC/">
+<meta property="twitter:url" content="https://haneulee.github.io/2022/01/react-native-ui-toolkits-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC/">
+<meta property="og:site_name" content="Haneul Devlog">
+<meta property="og:description" content="(adsbygoogle = window.adsbygoogle || []).push({});  React Native UI toolkits 리액트 네이티브 유용한 도구 🍯  1. NativeBase 1만개의 별과 포크를 받은 NativeBase는 수십 개의 크로스 플랫폼 컴포넌트를 제공하는 널리 사용되고 있는 React Native용 UI 컴포넌트 라이브러리입니다.
+NativeBase를 사용하면, 네이티브 서드파티 라이브러리를 기본적으로 사용할 수 있습니다. 그리고 프로젝트 자체에 유용한 starter-kits 부터 customizable theme templates 까지 풍부한 생태계가 구성되어 있습니다.
+여기 멋진 초보자용 키트가 있습니다.
+GeekyAnts/NativeBaseNativeBase — Essential cross-platform UI components for React Nativegithub.">
+<meta name="twitter:description" content="(adsbygoogle = window.adsbygoogle || []).push({});  React Native UI toolkits 리액트 네이티브 유용한 도구 🍯  1. NativeBase 1만개의 별과 포크를 받은 NativeBase는 수십 개의 크로스 플랫폼 컴포넌트를 제공하는 널리 사용되고 있는 React Native용 UI 컴포넌트 라이브러리입니다.
+NativeBase를 사용하면, 네이티브 서드파티 라이브러리를 기본적으로 사용할 수 있습니다. 그리고 프로젝트 자체에 유용한 starter-kits 부터 customizable theme templates 까지 풍부한 생태계가 구성되어 있습니다.
+여기 멋진 초보자용 키트가 있습니다.
+GeekyAnts/NativeBaseNativeBase — Essential cross-platform UI components for React Nativegithub.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2022-01-05T19:32:04">
+  
+  
+    <meta property="article:modified_time" content="2022-01-05T19:32:04">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+  
+  
+    
+      <meta property="article:tag" content="development">
+    
+      <meta property="article:tag" content="front-end">
+    
+      <meta property="article:tag" content="reactnative">
+    
+      <meta property="article:tag" content="리액트네이티브">
+    
+      <meta property="article:tag" content="tool">
+    
+      <meta property="article:tag" content="rn">
+    
+      <meta property="article:tag" content="react">
+    
+      <meta property="article:tag" content="리액트">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg">
+
+
+    <title>React Native UI toolkits 리액트 네이티브 유용한 도구 🍯</title>
+
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://haneulee.github.io/2022/01/react-native-ui-toolkits-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://haneulee.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="https://haneulee.github.io/css/mystyle.css">
+      
+    
+
+    
+      
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://haneulee.github.io/">Haneul Devlog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://haneulee.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://haneulee.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Haneul Lee</h4>
+        
+          <h5 class="sidebar-profile-bio">Devlog</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/categories/development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-code"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.haneul-lee.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-window-maximize"></i>
+      
+      <span class="sidebar-button-desc">Website</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/resume" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-file"></i>
+      
+      <span class="sidebar-button-desc">Resume</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin-square"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+    
+      
+      
+      <span class="sidebar-button-desc"></span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      React Native UI toolkits 리액트 네이티브 유용한 도구 🍯
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2022-01-05T19:32:04&#43;09:00">
+        
+  January 5, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-nativebase"><strong>1. NativeBase</strong></a></li>
+    <li><a href="#2-react-native-elements"><strong>2. React Native Elements</strong></a></li>
+    <li><a href="#3-shoutem"><strong>3. Shoutem</strong></a></li>
+    <li><a href="#4-ui-kitten"><strong>4. UI Kitten</strong></a></li>
+    <li><a href="#5-react-native-material-ui"><strong>5. React Native Material UI</strong></a></li>
+    <li><a href="#6-react-native-material-kit"><strong>6. React Native Material Kit</strong></a></li>
+    <li><a href="#7-nachos-ui"><strong>7. Nachos UI</strong></a></li>
+    <li><a href="#8-react-native-ui-library"><strong>8. React Native UI Library</strong></a></li>
+    <li><a href="#9-react-native-paper"><strong>9. React Native Paper</strong></a></li>
+    <li><a href="#10-react-native-vector-icons"><strong>10. React Native Vector Icons</strong></a></li>
+    <li><a href="#11-teaset"><strong>11. Teaset</strong></a></li>
+  </ul>
+</nav>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="3551187766"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h1 id="react-native-ui-toolkits-리액트-네이티브-유용한-도구-">React Native UI toolkits 리액트 네이티브 유용한 도구 🍯</h1>
+<hr>
+<h2 id="1-nativebase"><strong>1. NativeBase</strong></h2>
+<p><img src="https://miro.medium.com/max/742/1*dMxFx8ZbGCS6OnxrxcqsMw.gif" alt="https://miro.medium.com/max/742/1*dMxFx8ZbGCS6OnxrxcqsMw.gif"></p>
+<p><img src="https://miro.medium.com/max/894/1*OOjngkrwyH_x8C9N68gtuA.gif" alt="https://miro.medium.com/max/894/1*OOjngkrwyH_x8C9N68gtuA.gif"></p>
+<p>1만개의 별과 포크를 받은 NativeBase는 수십 개의 크로스 플랫폼 컴포넌트를 제공하는 널리 사용되고 있는 React Native용 UI 컴포넌트 라이브러리입니다.</p>
+<p>NativeBase를 사용하면, 네이티브 서드파티 라이브러리를 기본적으로 사용할 수 있습니다. 그리고 프로젝트 자체에 유용한 <a href="https://reactnativeseed.com/?utm_source=nativebase&amp;utm_medium=website+fold&amp;utm_campaign=nativebase">starter-kits</a> 부터 <a href="https://nativebase.io/nativebase-customizer">customizable theme templates</a> 까지 풍부한 생태계가 구성되어 있습니다.</p>
+<p><a href="https://startreact.com/themes/native-starter/?utm_source=nativebase&amp;utm_medium=showcase+section&amp;utm_campaign=nativebase">여기</a> 멋진 초보자용 키트가 있습니다.</p>
+<p><a href="https://github.com/GeekyAnts/NativeBase">GeekyAnts/NativeBaseNativeBase — Essential cross-platform UI components for React Nativegithub.com</a></p>
+<hr>
+<h2 id="2-react-native-elements"><strong>2. React Native Elements</strong></h2>
+<p><img src="https://miro.medium.com/max/646/1*hJ3ocV65gfmjcNEN_bd01A.gif" alt="https://miro.medium.com/max/646/1*hJ3ocV65gfmjcNEN_bd01A.gif"></p>
+<p><img src="https://miro.medium.com/max/646/1*xEUKT95BCNbzCgwpkFbF0A.gif" alt="https://miro.medium.com/max/646/1*xEUKT95BCNbzCgwpkFbF0A.gif"></p>
+<p>1만2천개의 별을 받은 react-native-elements는 자바 스크립트로 제작 된 사용자 정의가 가능한 cross-platform UI toolkit입니다.</p>
+<p>이 라이브러리 제작자는 “React Native Elements의 아이디어는 실제 디자인보다 컴포넌트 구조에 대한 것입니다. 즉, 특정 요소를 설정하는 데 필요한 상용구가 적지만 디자인을 완벽하게 제어 할 수 있습니다.” 라고 말했습니다. 이는 초급 개발자와 베테랑 개발자 모두에게 매력적일 것입니다.</p>
+<p>다음은 작동중인 모든 컴포넌트를 보여주는 예제 <a href="https://react-native-training.github.io/react-native-elements/">Expo app</a> 앱입니다. 부담없이 뛰어 들어보세요.</p>
+<p><a href="https://github.com/react-native-training/react-native-elements">react-native-training/react-native-elementsreact-native-elements — Cross Platform React Native UI Toolkitgithub.com</a></p>
+<hr>
+<h2 id="3-shoutem"><strong>3. Shoutem</strong></h2>
+<p><img src="https://miro.medium.com/proxy/1*69xNYZ9Nuaa_5r8K2P31QQ.png" alt="https://miro.medium.com/proxy/1*69xNYZ9Nuaa_5r8K2P31QQ.png"></p>
+<p>3천5백개의 별을 받은 Shoutem은 <a href="https://github.com/shoutem/ui">UI 컴포넌트</a>, <a href="https://github.com/shoutem/theme">테마</a>, 컴포넌트 <a href="https://github.com/shoutem/animation">애니메이션</a> 세 부분으로 구성된 React Native UI Kit입니다.</p>
+<p>이 라이브러리는 iOS 및 Android용 크로스 플랫폼 컴포넌트 세트를 제공하며, 모든 컴포넌트는 구성 가능하고 사용자 정의 할 수 있도록 제작되었습니다.</p>
+<p>각 컴포넌트에는 rest와 일관되게 미리 정의 된 스타일이 있으므로, 복잡한 스타일을 수동으로 정의하지 않고도 복합적인 컴포넌트를 작성할 수 있습니다.</p>
+<p><a href="https://shoutem.github.io/ui/">Shoutem UI toolkitAn exhaustive UI component set that makes writing cross-platform React Native components as easy as it should be.shoutem.github.io</a></p>
+<hr>
+<h2 id="4-ui-kitten"><strong>4. UI Kitten</strong></h2>
+<p>3천개의 별을 받은 이 라이브러리는 스타일 정의를 특정 위치로 이동시켜 컴포넌트를 재사용 및 단일방식(single way(?))으로 스타일화하는 컨셉에 기반하여 사용자 정의 및 재사용이 가능한 react-native component kit를 제공합니다.</p>
+<p>Themes can be rather easily changed ”on the fly” by passing a different set of variables.</p>
+<p>테마는 다른 변수 집합(a different set of variables)를 전달하여 “그때그때” 상당히 쉽게 변경할 수 있습니다.</p>
+<p>여기 살펴보기 좋은 <a href="https://expo.io/@akveo/ui-kitten-explorer-app">Expo application</a>이 있습니다.</p>
+<p><a href="https://github.com/akveo/react-native-ui-kitten">akveo/react-native-ui-kittenreact-native-ui-kitten — 🐱 Customizable and reusable react-native component kitgithub.com</a></p>
+<hr>
+<h2 id="5-react-native-material-ui"><strong>5. React Native Material UI</strong></h2>
+<p><img src="https://miro.medium.com/proxy/1*Fx_NouOtA2VtWHHKZCyzxQ.png" alt="https://miro.medium.com/proxy/1*Fx_NouOtA2VtWHHKZCyzxQ.png"></p>
+<p>2천개의 별을 받은 React Native Material UI는 라이브러리를 사용하여 Google’s material design을 구현하는 맞춤 설정할 수있는 UI 컴포넌트 세트를 제공합니다.</p>
+<p>이 라이브러리는 최대한 맞춤형 설정을 하기 위해 컨텍스트를 통해 전달되는 uiTheme이라는 단일 JS 객체를 사용한다는 것에 주의하세요.</p>
+<p>기본적으로, 이 uiTheme 객체는 lightTheme을 기반으로합니다. (lightTheme는 <a href="https://github.com/xotahal/react-native-material-ui/blob/master/src/styles/themes/light.js">여기</a>에서 볼 수 있습니다.)</p>
+<p>여기 시각적인 예제가 있는 라이브러리의 컴포넌트 <a href="https://github.com/xotahal/react-native-material-ui/blob/master/docs/Components.md">리스트</a>가 있습니다.</p>
+<p><a href="https://github.com/xotahal/react-native-material-ui">xotahal/react-native-material-uireact-native-material-ui — Highly customizable material design components for React Nativegithub.com</a></p>
+<hr>
+<h2 id="6-react-native-material-kit"><strong>6. React Native Material Kit</strong></h2>
+<p><img src="https://miro.medium.com/proxy/1*b7dqYzbQeFiqOFjdKYbhHA.png" alt="https://miro.medium.com/proxy/1*b7dqYzbQeFiqOFjdKYbhHA.png"></p>
+<p>마지막 NPM이 2017년 12월에 발행되었지만, 4천개의 별을 받은 이 라이브러리는 Google의 MD를 구현하는 기본적이지만 유용한 UI 컴포넌트 및 테마로 여전히 가치가 있습니다. 왜냐, 간단하고 유용하며 주변의 “노이즈”가 적습니다.</p>
+<p>유지보수가 상대적으로 저조하므로 주의해서 사용하시기 바랍니다.</p>
+<p><a href="https://github.com/xinthink/react-native-material-kit">xinthink/react-native-material-kitreact-native-material-kit — Bringing Material Design to React Nativegithub.com</a></p>
+<hr>
+<h2 id="7-nachos-ui"><strong>7. Nachos UI</strong></h2>
+<p><img src="https://miro.medium.com/proxy/1*TpOO6lp9bVPP_D5uVW8LIQ.png" alt="https://miro.medium.com/proxy/1*TpOO6lp9bVPP_D5uVW8LIQ.png"></p>
+<p>1천5백개의 별을 받은 Nachos UI는 30개 이상의 사용자 정의 가능한 컴포넌트가 있는 React Native 컴포넌트 라이브러리로서 <a href="https://github.com/necolas/react-native-web%5C">react-native-web</a> 덕분에 웹에서 작동합니다.</p>
+<p>Jest snapshot testing을 통해, prettier와 yarn을 지원하고 면밀한 기능 라이브러리로 짜릿한 디자인과 글로벌 테마 매니저를 제공합니다. 좋습니다!</p>
+<p><a href="https://github.com/nachos-ui/nachos-ui">nachos-ui/nachos-uinachos-ui — Nachos UI is a React Native component library.github.com</a></p>
+<hr>
+<h2 id="8-react-native-ui-library"><strong>8. React Native UI Library</strong></h2>
+<p><img src="https://miro.medium.com/max/540/1*NwGOEameqRhp96qVingC0A.gif" alt="https://miro.medium.com/max/540/1*NwGOEameqRhp96qVingC0A.gif"></p>
+<p><img src="https://miro.medium.com/max/540/1*qywBNyzzPH-YvUWlHrJNXw.gif" alt="https://miro.medium.com/max/540/1*qywBNyzzPH-YvUWlHrJNXw.gif"></p>
+<p><a href="https://twitter.com/WixEng?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Wix engineering</a>은 <a href="https://github.com/oblador/react-native-animatable">react-native-animatable</a>과 <a href="https://github.com/react-native-community/react-native-blur">react-native-blur</a>을 지원하는 React native용 최신 UI toolset 및 컴포넌트 라이브러리를 개발하고 있습니다.</p>
+<p>이 라이브러리에는 색상, 타이포그래피, 그림자, 테두리 반경 등 미리 정의 된 스타일 설정 (modifiers로 변환 됨)이 제공됩니다.</p>
+<p>한번 살펴보세요.</p>
+<p><a href="https://github.com/wix/react-native-ui-lib">wix/react-native-ui-libreact-native-ui-lib — UI Components Library for React Nativegithub.com</a></p>
+<hr>
+<h2 id="9-react-native-paper"><strong>9. React Native Paper</strong></h2>
+<p><img src="https://miro.medium.com/max/2160/1*E9GVJ2yXhjLYxfL2zv0mkw.png" alt="https://miro.medium.com/max/2160/1*E9GVJ2yXhjLYxfL2zv0mkw.png"></p>
+<p><img src="https://miro.medium.com/max/2160/1*NYLVp9sl2xtCFsvmxkBMcA.png" alt="https://miro.medium.com/max/2160/1*NYLVp9sl2xtCFsvmxkBMcA.png"></p>
+<p>1천5백개의 별을 받은 React Native Paper는 bundle-size를 줄이기위한 선택적인 babel-plugin과 <a href="https://callstack.github.io/react-native-paper/theming.html">글로벌 테마 지원</a> material design 가이드 라인을 따르는 크로스 플랫폼 UI 컴포넌트 라이브러리입니다.</p>
+<p>여기 빠르게 아이디어를 얻을 수있는 <a href="https://expo.io/@satya164/react-native-paper-example">Expo example app</a>이 있습니다.</p>
+<p><a href="https://github.com/callstack/react-native-paper">callstack/react-native-paperreact-native-paper — Material Design for React Native (Android &amp; iOS)github.com</a></p>
+<hr>
+<h2 id="10-react-native-vector-icons"><strong>10. React Native Vector Icons</strong></h2>
+<p><img src="https://miro.medium.com/proxy/1*Hm2KC9-5fbqbRMozN573Jw.png" alt="https://miro.medium.com/proxy/1*Hm2KC9-5fbqbRMozN573Jw.png"></p>
+<p>1만개에 가까운 별을 받은 이 라이브러리는 NavBar / TabBar / ToolbarAndroid, 이미지 소스 및 전체 스타일링을 지원하는 React Native용 맞춤형 아이콘 세트입니다.</p>
+<p>놀랄 것도 없이, 이 라이브러리는 매우 유용하며, 다른 UI 컴포넌트 라이브러리 (react-native-paper와 같은) 처럼 수천 가지 응용 프로그램을 사용합니다.</p>
+<p>라이브러리에는 기본적으로 사전 제작 된 번들 아이콘 세트가 제공되며, 여기 라이브러리의 모든 아이콘에 대한 <a href="https://oblador.github.io/react-native-vector-icons/">전체 예제</a>가 있습니다.</p>
+<p><a href="https://github.com/oblador/react-native-vector-icons">oblador/react-native-vector-iconsreact-native-vector-icons — Customizable Icons for React Native with support for NavBar/TabBar/ToolbarAndroid, image…github.com</a></p>
+<hr>
+<h2 id="11-teaset"><strong>11. Teaset</strong></h2>
+<p><img src="https://miro.medium.com/max/750/1*DFz_Suu-bs8XlqRWMiwUQA.png" alt="https://miro.medium.com/max/750/1*DFz_Suu-bs8XlqRWMiwUQA.png"></p>
+<p><img src="https://miro.medium.com/max/750/1*4BCP961S46lkbG2v63qCBg.png" alt="https://miro.medium.com/max/750/1*4BCP961S46lkbG2v63qCBg.png"></p>
+<p>1천3백개의 별을 받은 Teaset은 20개 이상의 순수JS(ES6) 컴포넌트와 반응하는 UI 라이브러리입니다. 콘텐츠 표시 및 동작 제어에 중점을 둡니다.</p>
+<p>문서는 드물게 있지만, 그 단순함과 디자인은 내 눈을 사로 잡았습니다. 한번 보세요.</p>
+<p><a href="https://github.com/rilyu/teaset">rilyu/teasetteaset — A UI library for react native, provides 20+ pure JS(ES6) components, focusing on content display and action…github.com</a></p>
+<hr>
+<p>참고 :
+<a href="https://www.awesome-react-native.com/">https://www.awesome-react-native.com/</a>,
+<a href="https://spartacodingclub.kr/">스파르타 코딩클럽</a>,
+<a href="https://reactnative.dev/">React Naitve</a>,</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/development/">development</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/front-end/">front-end</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/reactnative/">reactnative</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%EB%A6%AC%EC%95%A1%ED%8A%B8%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C/">리액트네이티브</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/tool/">tool</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/rn/">rn</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/react/">react</a>
+
+  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%EB%A6%AC%EC%95%A1%ED%8A%B8/">리액트</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-5-week/" data-tooltip="TIL📚 앱개발 스터디 - 5 week">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2022/01/react-native-ui-toolkits-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2022/01/react-native-ui-toolkits-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2022/01/react-native-ui-toolkits-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+            
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="5041197559"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <span class="copyrights">
+      &copy; 2022 <a href="https://github.com/haneulee">haneulee</a>. All Rights Reserved
+    </span>
+  </footer>
+  
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-5-week/" data-tooltip="TIL📚 앱개발 스터디 - 5 week">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2022/01/react-native-ui-toolkits-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2022/01/react-native-ui-toolkits-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2022/01/react-native-ui-toolkits-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2022%2F01%2Freact-native-ui-toolkits-%25EB%25A6%25AC%25EC%2595%25A1%25ED%258A%25B8-%25EB%2584%25A4%25EC%259D%25B4%25ED%258B%25B0%25EB%25B8%258C-%25EC%259C%25A0%25EC%259A%25A9%25ED%2595%259C-%25EB%258F%2584%25EA%25B5%25AC%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2022%2F01%2Freact-native-ui-toolkits-%25EB%25A6%25AC%25EC%2595%25A1%25ED%258A%25B8-%25EB%2584%25A4%25EC%259D%25B4%25ED%258B%25B0%25EB%25B8%258C-%25EC%259C%25A0%25EC%259A%25A9%25ED%2595%259C-%25EB%258F%2584%25EA%25B5%25AC%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2022%2F01%2Freact-native-ui-toolkits-%25EB%25A6%25AC%25EC%2595%25A1%25ED%258A%25B8-%25EB%2584%25A4%25EC%259D%25B4%25ED%258B%25B0%25EB%25B8%258C-%25EC%259C%25A0%25EC%259A%25A9%25ED%2595%259C-%25EB%258F%2584%25EA%25B5%25AC%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.jpeg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Lee</h4>
+    
+      <div id="about-card-bio">Devlog</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://haneulee.github.io/img/gradient.png');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://haneulee.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

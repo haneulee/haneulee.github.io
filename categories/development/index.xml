@@ -6,7 +6,30 @@
     <description>Recent content in development on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 03 Jan 2022 12:57:22 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Jan 2022 19:32:04 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React Native UI toolkits 리액트 네이티브 유용한 도구 🍯</title>
+      <link>https://haneulee.github.io/2022/01/react-native-ui-toolkits-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC/</link>
+      <pubDate>Wed, 05 Jan 2022 19:32:04 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2022/01/react-native-ui-toolkits-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  React Native UI toolkits 리액트 네이티브 유용한 도구 🍯  1. NativeBase 1만개의 별과 포크를 받은 NativeBase는 수십 개의 크로스 플랫폼 컴포넌트를 제공하는 널리 사용되고 있는 React Native용 UI 컴포넌트 라이브러리입니다.
+NativeBase를 사용하면, 네이티브 서드파티 라이브러리를 기본적으로 사용할 수 있습니다. 그리고 프로젝트 자체에 유용한 starter-kits 부터 customizable theme templates 까지 풍부한 생태계가 구성되어 있습니다.
+여기 멋진 초보자용 키트가 있습니다.
+GeekyAnts/NativeBaseNativeBase — Essential cross-platform UI components for React Nativegithub.</description>
+    </item>
+    
+    <item>
+      <title>TIL📚 앱개발 스터디 - 5 week</title>
+      <link>https://haneulee.github.io/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-5-week/</link>
+      <pubDate>Wed, 05 Jan 2022 19:26:50 +0900</pubDate>
+      
+      <guid>https://haneulee.github.io/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-5-week/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  TIL📚 앱개발 스터디 - 5 week 구글 앱스토어 출시 아직 검토중!
+ 프로젝트 녹화 영상 취지 &amp;amp; 설명 꿀팁에 대한 정보를 담은 앱
+기술 설명  파이어베이스 리액트 네이티브 expo axios &amp;hellip;etc  &amp;quot;@expo/vector-icons&amp;quot;: &amp;quot;^12.0.0&amp;quot;, &amp;quot;@react-native-async-storage/async-storage&amp;quot;: &amp;quot;~1.15.0&amp;quot;, &amp;quot;@react-native-community/masked-view&amp;quot;: &amp;quot;^0.1.11&amp;quot;, &amp;quot;@react-navigation/native&amp;quot;: &amp;quot;^6.0.6&amp;quot;, &amp;quot;@react-navigation/stack&amp;quot;: &amp;quot;^6.0.11&amp;quot;, &amp;quot;axios&amp;quot;: &amp;quot;^0.24.0&amp;quot;, &amp;quot;expo&amp;quot;: &amp;quot;~43.0.2&amp;quot;, &amp;quot;expo-ads-admob&amp;quot;: &amp;quot;~11.0.3&amp;quot;, &amp;quot;expo-app-loading&amp;quot;: &amp;quot;~1.2.1&amp;quot;, &amp;quot;expo-asset&amp;quot;: &amp;quot;~8.4.3&amp;quot;, &amp;quot;expo-constants&amp;quot;: &amp;quot;^13.0.0&amp;quot;, &amp;quot;expo-font&amp;quot;: &amp;quot;~10.0.3&amp;quot;, &amp;quot;expo-linking&amp;quot;: &amp;quot;~2.4.2&amp;quot;, &amp;quot;expo-location&amp;quot;: &amp;quot;^14.</description>
+    </item>
+    
     <item>
       <title>TIL📚 앱개발 스터디 - 4 week</title>
       <link>https://haneulee.github.io/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-4-week/</link>
