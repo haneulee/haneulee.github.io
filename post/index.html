@@ -292,6 +292,75 @@ if (!doNotTrack) {
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://haneulee.github.io/2022/01/%EB%85%B8%EA%B0%9C%EB%B6%81-today-i-read-%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-day-3/">
+          [노개북] Today I Read - 클린코드 - Day 3 📕
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2022-01-24T00:45:22&#43;09:00">
+        
+  January 24, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        (adsbygoogle = window.adsbygoogle || []).push({});  [노개북] Today I Read - 클린코드 - Day 3 📕 🔖 오늘 읽은 범위 : 1장 깨끗한 코드 (끝까지)
+  😃 책에서 기억하고 싶은 내용을 써보세요. C++ 창시자 의존성을 최대한 줄여야 유지보수가 쉬워진다
+깨끗한 코드란 한가지를 잘한다고 단언한다
+나쁜 코드는 너무 많은 일을 하려 애쓰다가 의도가 뒤섞이고 목적이 흐려진다
+그래디 부치 그래디 부치는 가독성을 강조 한다
+깨끗한 코드는 잘 쓴 문장처럼 읽혀야 한다
+      
+      <p>
+        <a href="https://haneulee.github.io/2022/01/%EB%85%B8%EA%B0%9C%EB%B6%81-today-i-read-%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-day-3/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+    <a href="https://haneulee.github.io/2022/01/%EB%85%B8%EA%B0%9C%EB%B6%81-today-i-read-%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-day-3/">
+      <div class="postShorten-thumbnailimg">
+        <img alt="" itemprop="image" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/book/book.png"/>
+      </div>
+    </a>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+          
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://haneulee.github.io/2022/01/%EB%85%B8%EA%B0%9C%EB%B6%81-today-i-read-%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-day-2/">
           [노개북] Today I Read - 클린코드 - Day 2 📕
         </a>
@@ -831,65 +900,6 @@ create-account에서는 유저에게 계정에 대한 입력을 받습니다.
     <a href="https://haneulee.github.io/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/">
       <div class="postShorten-thumbnailimg">
         <img alt="" itemprop="image" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-jest.png"/>
-      </div>
-    </a>
-  
-</article>
-
-          
-            
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/">
-          Apollo에서 Authentication 인증하기 💫
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2021-07-31T13:57:53&#43;09:00">
-        
-  July 31, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
-import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;./constants&#34;; import { setContext } from &#34;@apollo/client/link/context&#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: &#34;http://localhost:4000/graphql&#34;, }); const authLink = setContext((_, { headers }) =&gt; { return { headers: { .
-      
-      <p>
-        <a href="https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://haneulee.github.io/2021/07/apollo%EC%97%90%EC%84%9C-authentication-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/graphql/apollo-graphql.png"/>
       </div>
     </a>
   
