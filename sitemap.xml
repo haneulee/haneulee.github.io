@@ -2,10 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://haneulee.github.io/2022/01/%EB%85%B8%EA%B0%9C%EB%B6%81-today-i-read-%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-day-3/</loc>
-    <lastmod>2022-01-24T00:45:22+09:00</lastmod>
+    <loc>https://haneulee.github.io/tags/blog/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
   </url><url>
     <loc>https://haneulee.github.io/categories/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/development/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/categories/development/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/dns/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/domain/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/front-end/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/github/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/gitlab/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/hostinger/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/nameserver/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/post/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/subdomain/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/website/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/%EA%B9%83%ED%97%99%EB%B8%94%EB%A1%9C%EA%B7%B8/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/%EB%84%A4%EC%9E%84%EC%84%9C%EB%B2%84/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/%EB%8F%84%EB%A9%94%EC%9D%B8/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/2022/03/%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B5%AC%EB%A7%A4-%ED%9B%84-%EA%B9%83%ED%97%99-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/%EC%84%9C%EB%B8%8C%EB%8F%84%EB%A9%94%EC%9D%B8/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/tags/%ED%98%B8%EC%8A%A4%ED%8C%85%EC%96%B4/</loc>
+    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
+  </url><url>
+    <loc>https://haneulee.github.io/2022/01/%EB%85%B8%EA%B0%9C%EB%B6%81-today-i-read-%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-day-3/</loc>
     <lastmod>2022-01-24T00:45:22+09:00</lastmod>
   </url><url>
     <loc>https://haneulee.github.io/tags/clean-code/</loc>
@@ -14,28 +77,10 @@
     <loc>https://haneulee.github.io/tags/cleancode/</loc>
     <lastmod>2022-01-24T00:45:22+09:00</lastmod>
   </url><url>
-    <loc>https://haneulee.github.io/tags/development/</loc>
-    <lastmod>2022-01-24T00:45:22+09:00</lastmod>
-  </url><url>
-    <loc>https://haneulee.github.io/categories/development/</loc>
-    <lastmod>2022-01-24T00:45:22+09:00</lastmod>
-  </url><url>
-    <loc>https://haneulee.github.io/tags/front-end/</loc>
-    <lastmod>2022-01-24T00:45:22+09:00</lastmod>
-  </url><url>
-    <loc>https://haneulee.github.io/</loc>
-    <lastmod>2022-01-24T00:45:22+09:00</lastmod>
-  </url><url>
     <loc>https://haneulee.github.io/tags/nomadcoder/</loc>
     <lastmod>2022-01-24T00:45:22+09:00</lastmod>
   </url><url>
-    <loc>https://haneulee.github.io/post/</loc>
-    <lastmod>2022-01-24T00:45:22+09:00</lastmod>
-  </url><url>
     <loc>https://haneulee.github.io/tags/programming/</loc>
-    <lastmod>2022-01-24T00:45:22+09:00</lastmod>
-  </url><url>
-    <loc>https://haneulee.github.io/tags/</loc>
     <lastmod>2022-01-24T00:45:22+09:00</lastmod>
   </url><url>
     <loc>https://haneulee.github.io/tags/tir/</loc>
@@ -305,9 +350,6 @@
     <loc>https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-unit-test-%EF%B8%8F/</loc>
     <lastmod>2021-07-12T10:30:49+09:00</lastmod>
   </url><url>
-    <loc>https://haneulee.github.io/tags/website/</loc>
-    <lastmod>2021-07-09T15:00:01+09:00</lastmod>
-  </url><url>
     <loc>https://haneulee.github.io/2021/07/%EC%9C%A0%EC%9A%A9%ED%95%9C-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%AA%A8%EC%9D%8C/</loc>
     <lastmod>2021-07-09T15:00:01+09:00</lastmod>
   </url><url>
@@ -390,9 +432,6 @@
     <lastmod>2021-06-11T13:50:39+09:00</lastmod>
   </url><url>
     <loc>https://haneulee.github.io/tags/adsense/</loc>
-    <lastmod>2021-06-10T15:39:20+09:00</lastmod>
-  </url><url>
-    <loc>https://haneulee.github.io/tags/blog/</loc>
     <lastmod>2021-06-10T15:39:20+09:00</lastmod>
   </url><url>
     <loc>https://haneulee.github.io/categories/blog/</loc>
@@ -544,9 +583,6 @@
   </url><url>
     <loc>https://haneulee.github.io/tags/%EC%BB%A4%EB%B0%8B%EC%88%98%EC%A0%95/</loc>
     <lastmod>2021-05-24T18:09:54+09:00</lastmod>
-  </url><url>
-    <loc>https://haneulee.github.io/tags/github/</loc>
-    <lastmod>2021-05-21T10:30:25+09:00</lastmod>
   </url><url>
     <loc>https://haneulee.github.io/categories/github/</loc>
     <lastmod>2021-05-21T10:30:25+09:00</lastmod>
@@ -800,9 +836,6 @@
     <loc>https://haneulee.github.io/tags/%ED%9C%B4%EA%B3%A0/</loc>
     <lastmod>2021-05-17T11:48:31+09:00</lastmod>
   </url><url>
-    <loc>https://haneulee.github.io/tags/gitlab/</loc>
-    <lastmod>2020-02-13T22:20:42+09:00</lastmod>
-  </url><url>
     <loc>https://haneulee.github.io/categories/gitlab/</loc>
     <lastmod>2020-02-13T22:20:42+09:00</lastmod>
   </url><url>
@@ -813,9 +846,6 @@
     <lastmod>2020-02-13T22:20:42+09:00</lastmod>
   </url><url>
     <loc>https://haneulee.github.io/tags/%EA%B9%83%EB%9E%A9%ED%8E%98%EC%9D%B4%EC%A7%80/</loc>
-    <lastmod>2020-02-13T22:20:42+09:00</lastmod>
-  </url><url>
-    <loc>https://haneulee.github.io/tags/%EB%8F%84%EB%A9%94%EC%9D%B8/</loc>
     <lastmod>2020-02-13T22:20:42+09:00</lastmod>
   </url><url>
     <loc>https://haneulee.github.io/tags/aws/</loc>
