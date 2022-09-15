@@ -18,7 +18,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
-<meta name="author" content="Haneul Lee">
+<meta name="author" content="Haneul Devlog">
 <meta name="keywords" content="development, front-end, development, next-gen">
 <meta name="description" content="Jest NestJS 에서 UNIT TEST 🏃🏻‍♀️ jwt.service.spec.ts describe(&#39;JwtService&#39;, () =&gt; { let service: JwtService; beforeAll(async () =&gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&lt;JwtService&gt;(JwtService); }); jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다.  jwt service가 제대로 준비 되었는지 확인하려면  it(&#39;should be defined&#39;,()={ expect(service).toBeDefined();});   이 코드로 확인해볼 수 있다.">
 
@@ -29,7 +29,7 @@
 <meta name="twitter:title" content="NestJS 에서 UNIT TEST 🏃🏻‍♀️">
 <meta property="og:url" content="https://blog.haneul-lee.com/2021/07/nestjs-%EC%97%90%EC%84%9C-unit-test-%EF%B8%8F/">
 <meta property="twitter:url" content="https://blog.haneul-lee.com/2021/07/nestjs-%EC%97%90%EC%84%9C-unit-test-%EF%B8%8F/">
-<meta property="og:site_name" content="Haneul Devlog">
+<meta property="og:site_name" content="Haneul Devlog 개발 블로그 📚">
 <meta property="og:description" content="Jest NestJS 에서 UNIT TEST 🏃🏻‍♀️ jwt.service.spec.ts describe(&#39;JwtService&#39;, () =&gt; { let service: JwtService; beforeAll(async () =&gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&lt;JwtService&gt;(JwtService); }); jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다.  jwt service가 제대로 준비 되었는지 확인하려면  it(&#39;should be defined&#39;,()={ expect(service).toBeDefined();});   이 코드로 확인해볼 수 있다.">
 <meta name="twitter:description" content="Jest NestJS 에서 UNIT TEST 🏃🏻‍♀️ jwt.service.spec.ts describe(&#39;JwtService&#39;, () =&gt; { let service: JwtService; beforeAll(async () =&gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&lt;JwtService&gt;(JwtService); }); jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다.  jwt service가 제대로 준비 되었는지 확인하려면  it(&#39;should be defined&#39;,()={ expect(service).toBeDefined();});   이 코드로 확인해볼 수 있다.">
 <meta property="og:locale" content="en-us">
@@ -141,7 +141,7 @@ if (!doNotTrack) {
       <header id="header" data-behavior="4">
  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
  <div class="header-title">
-   <a class="header-title-link" href="https://blog.haneul-lee.com/">Haneul Devlog</a>
+   <a class="header-title-link" href="https://blog.haneul-lee.com/">Haneul Devlog 개발 블로그 📚</a>
  </div>
  
    
@@ -165,9 +165,9 @@ if (!doNotTrack) {
        <a href="https://blog.haneul-lee.com/#about">
          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
        </a>
-       <h4 class="sidebar-profile-name">Haneul Lee</h4>
+       <h4 class="sidebar-profile-name">Haneul Devlog</h4>
        
-         <h5 class="sidebar-profile-bio">Devlog</h5>
+         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br>이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</h5>
        
      </div>
    
@@ -523,7 +523,11 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+              
+              
+                
+                
+                <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
   <ul>
     <li><a href="#nestjs-에서-unit-test-">NestJS 에서 UNIT TEST 🏃🏻‍♀️</a>
       <ul>
@@ -736,6 +740,7 @@ createAccount를 모두 테스트하려면, 앞에서 언급드린 대로, 이�
 <a href="https://jestjs.io/docs/api">jset 공식문서</a>,
 <a href="https://www.daleseo.com/jest-fn-spy-on/">jset mocking</a>,</p>
 
+              
               
             </div>
           </div>
@@ -977,9 +982,9 @@ createAccount를 모두 테스트하려면, 앞에서 언급드린 대로, 이�
     
       <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
     
-    <h4 id="about-card-name">Haneul Lee</h4>
+    <h4 id="about-card-name">Haneul Devlog</h4>
     
-      <div id="about-card-bio">Devlog</div>
+      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br>이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</div>
     
     
       <div id="about-card-job">

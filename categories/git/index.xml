@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>git on Haneul Devlog</title>
+    <title>git on Haneul Devlog 개발 블로그 📚</title>
     <link>https://blog.haneul-lee.com/categories/git/</link>
-    <description>Recent content in git on Haneul Devlog</description>
+    <description>Recent content in git on Haneul Devlog 개발 블로그 📚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <lastBuildDate>Mon, 24 May 2021 18:09:54 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/categories/git/index.xml" rel="self" type="application/rss+xml" />

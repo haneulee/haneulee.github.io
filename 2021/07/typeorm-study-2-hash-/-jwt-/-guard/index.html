@@ -18,7 +18,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
-<meta name="author" content="Haneul Lee">
+<meta name="author" content="Haneul Devlog">
 <meta name="keywords" content="development, front-end, development, next-gen">
 <meta name="description" content="(adsbygoogle = window.adsbygoogle || []).push({});  Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &lsquo;enum&rsquo; 이 아니라 &lsquo;simple-enum&rsquo;으로 지정해주면 해결된다.
 export enum UserRole { Host = &#39;Host&#39;, Listener = &#39;Listener&#39;, } registerEnumType(UserRole, { name: &#39;UserRole&#39; }); @Column({ type: &#39;simple-enum&#39;, enum: UserRole }) @Field(type =&gt; UserRole) role: UserRole; registerEnumType 함수를 사용해 enum type을 등록해준다.">
@@ -31,7 +31,7 @@ export enum UserRole { Host = &#39;Host&#39;, Listener = &#39;Listener&#39;, } r
 <meta name="twitter:title" content="Typeorm study 2 - Hash / JWT / Guard">
 <meta property="og:url" content="https://blog.haneul-lee.com/2021/07/typeorm-study-2-hash-/-jwt-/-guard/">
 <meta property="twitter:url" content="https://blog.haneul-lee.com/2021/07/typeorm-study-2-hash-/-jwt-/-guard/">
-<meta property="og:site_name" content="Haneul Devlog">
+<meta property="og:site_name" content="Haneul Devlog 개발 블로그 📚">
 <meta property="og:description" content="(adsbygoogle = window.adsbygoogle || []).push({});  Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &lsquo;enum&rsquo; 이 아니라 &lsquo;simple-enum&rsquo;으로 지정해주면 해결된다.
 export enum UserRole { Host = &#39;Host&#39;, Listener = &#39;Listener&#39;, } registerEnumType(UserRole, { name: &#39;UserRole&#39; }); @Column({ type: &#39;simple-enum&#39;, enum: UserRole }) @Field(type =&gt; UserRole) role: UserRole; registerEnumType 함수를 사용해 enum type을 등록해준다.">
 <meta name="twitter:description" content="(adsbygoogle = window.adsbygoogle || []).push({});  Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &lsquo;enum&rsquo; 이 아니라 &lsquo;simple-enum&rsquo;으로 지정해주면 해결된다.
@@ -143,7 +143,7 @@ if (!doNotTrack) {
       <header id="header" data-behavior="4">
  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
  <div class="header-title">
-   <a class="header-title-link" href="https://blog.haneul-lee.com/">Haneul Devlog</a>
+   <a class="header-title-link" href="https://blog.haneul-lee.com/">Haneul Devlog 개발 블로그 📚</a>
  </div>
  
    
@@ -167,9 +167,9 @@ if (!doNotTrack) {
        <a href="https://blog.haneul-lee.com/#about">
          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
        </a>
-       <h4 class="sidebar-profile-name">Haneul Lee</h4>
+       <h4 class="sidebar-profile-name">Haneul Devlog</h4>
        
-         <h5 class="sidebar-profile-bio">Devlog</h5>
+         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br>이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</h5>
        
      </div>
    
@@ -525,7 +525,11 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+              
+              
+                
+                
+                <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
   <ul>
     <li><a href="#enum-type-enumerated-type">Enum Type (enumerated type)</a></li>
     <li><a href="#password-hash-처리">password hash 처리</a></li>
@@ -699,6 +703,7 @@ context에 user 정보를 넘겨주려면, graphql 모듈을 app 모듈에서 im
 <p>참고 :
 <a href="https://docs.nestjs.com/">nestJS</a></p>
 
+              
               
             </div>
           </div>
@@ -938,9 +943,9 @@ context에 user 정보를 넘겨주려면, graphql 모듈을 app 모듈에서 im
     
       <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
     
-    <h4 id="about-card-name">Haneul Lee</h4>
+    <h4 id="about-card-name">Haneul Devlog</h4>
     
-      <div id="about-card-bio">Devlog</div>
+      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br>이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</div>
     
     
       <div id="about-card-job">

@@ -18,7 +18,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
-<meta name="author" content="Haneul Lee">
+<meta name="author" content="Haneul Devlog">
 <meta name="keywords" content="development, front-end, development, next-gen">
 <meta name="description" content="git config user.email 수정    (adsbygoogle = window.adsbygoogle || []).push({});  git config --global user.email &quot;이메일&quot; git config --global user.name &quot;이름&quot; author(이름)을 바꿀 commit 지정 git rebase 명령을 통해 author을 바꿀 커밋을 선택해준다.
 // ~ 뒤에 입력한 숫자는 4번째 커밋까지 선택 git rebase -i HEAD~4 그럼 아래와 같은 vi 화면이 뜨는데 변경할 커밋의 pick =&gt; e로 변경해주고 :wq 를 눌러 저장, 종료해준다. git rebase -i HEAD~4 변경할 author 입력 git commit &ndash;amend &ndash;author=&ldquo;아이디 &lt;이메일&gt;&rdquo; 입력">
@@ -31,7 +31,7 @@
 <meta name="twitter:title" content="Git - 이미 commit한 author 수정하기">
 <meta property="og:url" content="https://blog.haneul-lee.com/2021/05/git-%EC%9D%B4%EB%AF%B8-commit%ED%95%9C-author-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0/">
 <meta property="twitter:url" content="https://blog.haneul-lee.com/2021/05/git-%EC%9D%B4%EB%AF%B8-commit%ED%95%9C-author-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0/">
-<meta property="og:site_name" content="Haneul Devlog">
+<meta property="og:site_name" content="Haneul Devlog 개발 블로그 📚">
 <meta property="og:description" content="git config user.email 수정    (adsbygoogle = window.adsbygoogle || []).push({});  git config --global user.email &quot;이메일&quot; git config --global user.name &quot;이름&quot; author(이름)을 바꿀 commit 지정 git rebase 명령을 통해 author을 바꿀 커밋을 선택해준다.
 // ~ 뒤에 입력한 숫자는 4번째 커밋까지 선택 git rebase -i HEAD~4 그럼 아래와 같은 vi 화면이 뜨는데 변경할 커밋의 pick =&gt; e로 변경해주고 :wq 를 눌러 저장, 종료해준다. git rebase -i HEAD~4 변경할 author 입력 git commit &ndash;amend &ndash;author=&ldquo;아이디 &lt;이메일&gt;&rdquo; 입력">
 <meta name="twitter:description" content="git config user.email 수정    (adsbygoogle = window.adsbygoogle || []).push({});  git config --global user.email &quot;이메일&quot; git config --global user.name &quot;이름&quot; author(이름)을 바꿀 commit 지정 git rebase 명령을 통해 author을 바꿀 커밋을 선택해준다.
@@ -133,7 +133,7 @@ if (!doNotTrack) {
       <header id="header" data-behavior="4">
  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
  <div class="header-title">
-   <a class="header-title-link" href="https://blog.haneul-lee.com/">Haneul Devlog</a>
+   <a class="header-title-link" href="https://blog.haneul-lee.com/">Haneul Devlog 개발 블로그 📚</a>
  </div>
  
    
@@ -157,9 +157,9 @@ if (!doNotTrack) {
        <a href="https://blog.haneul-lee.com/#about">
          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
        </a>
-       <h4 class="sidebar-profile-name">Haneul Lee</h4>
+       <h4 class="sidebar-profile-name">Haneul Devlog</h4>
        
-         <h5 class="sidebar-profile-bio">Devlog</h5>
+         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br>이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</h5>
        
      </div>
    
@@ -517,7 +517,11 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents"></nav>
+              
+              
+                
+                
+                <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents"></nav>
 <h1 id="git-config-useremail-수정">git config user.email 수정</h1>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
@@ -549,6 +553,7 @@ git push origin master
 </code></pre><p>참고 :
 <a href="https://korband.tistory.com/34">https://korband.tistory.com/34</a></p>
 
+              
               
             </div>
           </div>
@@ -776,9 +781,9 @@ git push origin master
     
       <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
     
-    <h4 id="about-card-name">Haneul Lee</h4>
+    <h4 id="about-card-name">Haneul Devlog</h4>
     
-      <div id="about-card-bio">Devlog</div>
+      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br>이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</div>
     
     
       <div id="about-card-job">

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>프로그래밍 on Haneul Devlog</title>
+    <title>프로그래밍 on Haneul Devlog 개발 블로그 📚</title>
     <link>https://blog.haneul-lee.com/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</link>
-    <description>Recent content in 프로그래밍 on Haneul Devlog</description>
+    <description>Recent content in 프로그래밍 on Haneul Devlog 개발 블로그 📚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <lastBuildDate>Mon, 24 Jan 2022 00:45:22 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/index.xml" rel="self" type="application/rss+xml" />
