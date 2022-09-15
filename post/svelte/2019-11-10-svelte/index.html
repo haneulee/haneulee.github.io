@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+ <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/blog.haneul-lee.com\/",
+  "author": {
+    "@type": "Person",
+    "name": "Haneul Devlog",
+    
+    "image": "https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png"
+    
+  },
+  "name":"Haneul Devlog 개발 블로그 📚",
+  "description":"Svelte Svelte란? svelte란 날씬한, 호리호리한이란 뜻입니다.\n이름답게 적은 코드, 적은 용량 등을 자랑하는 프레임워크입니다.\n공식 문서에 따르면 새로운 웹 어플리케이션 개발 방법을 제시하는 컴파일러라고도 소개되어 있습니다.\nvue, react와는 다르게 가상돔을 사용하지 않습니다.\nsvelte는 빌드 타임에 실행되며, 효과적으로 DOM을 업데이트하는 코드로 컴파일됩니다.\n기본 문법 svelte는 vue 처럼 .svelte라는 별도의 파일 확장자를 갖습니다.\n기본문법은 html과 비슷합니다.\nh1 태그 내에 {name}은 스크립트의 선언한 name 변수를 참조해서 출력합니다.\ncss 또한 똑같이 작성하시면 됩니다.\n\/\/ App.",
+  "url":"https:\/\/blog.haneul-lee.com\/post\/svelte\/2019-11-10-svelte\/",
+  "keywords":"[]"
+}
+
+</script> <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Haneul Devlog">
+<meta name="keywords" content="">
+<meta name="description" content="Svelte Svelte란? svelte란 날씬한, 호리호리한이란 뜻입니다.
+이름답게 적은 코드, 적은 용량 등을 자랑하는 프레임워크입니다.
+공식 문서에 따르면 새로운 웹 어플리케이션 개발 방법을 제시하는 컴파일러라고도 소개되어 있습니다.
+vue, react와는 다르게 가상돔을 사용하지 않습니다.
+svelte는 빌드 타임에 실행되며, 효과적으로 DOM을 업데이트하는 코드로 컴파일됩니다.
+기본 문법 svelte는 vue 처럼 .svelte라는 별도의 파일 확장자를 갖습니다.
+기본문법은 html과 비슷합니다.
+h1 태그 내에 {name}은 스크립트의 선언한 name 변수를 참조해서 출력합니다.
+css 또한 똑같이 작성하시면 됩니다.
+// App.">
+
+
+<meta property="og:description" content="Svelte Svelte란? svelte란 날씬한, 호리호리한이란 뜻입니다.
+이름답게 적은 코드, 적은 용량 등을 자랑하는 프레임워크입니다.
+공식 문서에 따르면 새로운 웹 어플리케이션 개발 방법을 제시하는 컴파일러라고도 소개되어 있습니다.
+vue, react와는 다르게 가상돔을 사용하지 않습니다.
+svelte는 빌드 타임에 실행되며, 효과적으로 DOM을 업데이트하는 코드로 컴파일됩니다.
+기본 문법 svelte는 vue 처럼 .svelte라는 별도의 파일 확장자를 갖습니다.
+기본문법은 html과 비슷합니다.
+h1 태그 내에 {name}은 스크립트의 선언한 name 변수를 참조해서 출력합니다.
+css 또한 똑같이 작성하시면 됩니다.
+// App.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Svelte">
+<meta name="twitter:title" content="Svelte">
+<meta property="og:url" content="https://blog.haneul-lee.com/post/svelte/2019-11-10-svelte/">
+<meta property="twitter:url" content="https://blog.haneul-lee.com/post/svelte/2019-11-10-svelte/">
+<meta property="og:site_name" content="Haneul Devlog 개발 블로그 📚">
+<meta property="og:description" content="Svelte Svelte란? svelte란 날씬한, 호리호리한이란 뜻입니다.
+이름답게 적은 코드, 적은 용량 등을 자랑하는 프레임워크입니다.
+공식 문서에 따르면 새로운 웹 어플리케이션 개발 방법을 제시하는 컴파일러라고도 소개되어 있습니다.
+vue, react와는 다르게 가상돔을 사용하지 않습니다.
+svelte는 빌드 타임에 실행되며, 효과적으로 DOM을 업데이트하는 코드로 컴파일됩니다.
+기본 문법 svelte는 vue 처럼 .svelte라는 별도의 파일 확장자를 갖습니다.
+기본문법은 html과 비슷합니다.
+h1 태그 내에 {name}은 스크립트의 선언한 name 변수를 참조해서 출력합니다.
+css 또한 똑같이 작성하시면 됩니다.
+// App.">
+<meta name="twitter:description" content="Svelte Svelte란? svelte란 날씬한, 호리호리한이란 뜻입니다.
+이름답게 적은 코드, 적은 용량 등을 자랑하는 프레임워크입니다.
+공식 문서에 따르면 새로운 웹 어플리케이션 개발 방법을 제시하는 컴파일러라고도 소개되어 있습니다.
+vue, react와는 다르게 가상돔을 사용하지 않습니다.
+svelte는 빌드 타임에 실행되며, 효과적으로 DOM을 업데이트하는 코드로 컴파일됩니다.
+기본 문법 svelte는 vue 처럼 .svelte라는 별도의 파일 확장자를 갖습니다.
+기본문법은 html과 비슷합니다.
+h1 태그 내에 {name}은 스크립트의 선언한 name 변수를 참조해서 출력합니다.
+css 또한 똑같이 작성하시면 됩니다.
+// App.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2019-11-10T23:03:00">
+  
+  
+    <meta property="article:modified_time" content="2019-11-10T23:03:00">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+      <meta property="article:section" content="Svelte">
+    
+  
+  
+    
+      <meta property="article:tag" content="javascript">
+    
+      <meta property="article:tag" content="svelte">
+    
+      <meta property="article:tag" content="스벨트">
+    
+      <meta property="article:tag" content="자바스크립트">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png">
+
+
+
+
+
+
+    <title>Svelte</title>
+
+    <link
+      rel="icon"
+      href="https://blog.haneul-lee.com/img/favicon.ico"
+    />
+     
+
+    <link rel="canonical" href="https://blog.haneul-lee.com/post/svelte/2019-11-10-svelte/" />
+
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+      integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    
+    
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-3icga1qbbcdn9af8rifmu4vmsfi4zvyxs7muf1edt0qksuqtyp90lgm1ag.min.css" />
+    
+      <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
+}
+</script>
+  
+  </head>
+</html>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+ <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+ <div class="header-title">
+   <a class="header-title-link" href="https://blog.haneul-lee.com/">Haneul Devlog 개발 블로그 📚</a>
+ </div>
+ 
+   
+     <a class="header-right-picture "
+        href="https://blog.haneul-lee.com/#about">
+   
+   
+   
+     
+       <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+     
+   
+   </a>
+ 
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+ <div class="sidebar-container">
+   
+     <div class="sidebar-profile">
+       <a href="https://blog.haneul-lee.com/#about">
+         <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+       </a>
+       <h4 class="sidebar-profile-name">Haneul Devlog</h4>
+       
+         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</h5>
+       
+     </div>
+   
+
+   <div class="js-toggle-wrapper">
+    <div class="js-toggle">
+        <div class="js-toggle-track">
+            <div class="js-toggle-track-check">
+                <img
+                    src="data:image/png;base64,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"
+                    role="presentation"
+                    style="pointer-events: none"
+                    width="16"
+                    height="16"
+                />
+            </div>
+            <div class="js-toggle-track-x">
+                <img
+                    src="data:image/png;base64,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"
+                    role="presentation"
+                    style="pointer-events: none"
+                    width="16"
+                    height="16"
+                />
+            </div>
+        </div>
+        <div class="js-toggle-thumb"></div>
+        <input
+            class="js-toggle-screenreader-only"
+            type="checkbox"
+            aria-label="Switch between Dark and Light mode"
+        />
+    </div>
+</div>
+
+<style>
+     
+
+    body.dark-mode,
+    body.dark-mode #main,
+    body.dark-mode #header,
+    body.dark-mode #bottom-bar,
+    body.dark-mode .btn,
+    body.dark-mode a.tag {
+        background: rgb(45, 45, 45) !important;
+    }
+
+    body.dark-mode,
+    body.dark-mode *:not(a):not(#about):not(i) {
+        color: #f5f5f5;
+    }
+
+    body.dark-mode .alert.info,
+    body.dark-mode .alert.info > p {
+        color: #5d686f !important;
+    }
+
+    .js-toggle-wrapper {
+        margin: 1rem auto;
+        text-align: center;
+        display: block;
+    }
+
+    .js-toggle {
+        touch-action: pan-x;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        -webkit-touch-callout: none;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .js-toggle-screenreader-only {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .js-toggle-track {
+        width: 50px;
+        height: 24px;
+        padding: 0;
+        border-radius: 30px;
+        background-color: black;
+        transition: all 0.2s ease;
+    }
+    .js-toggle-track-check {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        left: 5px;
+        top: 0px;
+        bottom: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: 0;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+    }
+
+    .js-toggle--checked .js-toggle-track-check {
+        opacity: 1;
+        transition: opacity 0.25s ease;
+    }
+
+    .js-toggle-track-x {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        right: 5px;
+        top: 0px;
+        bottom: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: 0;
+        opacity: 1;
+        transition: opacity 0.25s ease;
+    }
+
+    .js-toggle--checked .js-toggle-track-x {
+        opacity: 0;
+    }
+
+    .js-toggle-thumb {
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: #fafafa;
+        box-sizing: border-box;
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+        transform: translateX(0);
+    }
+
+    .js-toggle--checked .js-toggle-thumb {
+        transform: translateX(26px);
+        border-color: #ffffff;
+    }
+</style>
+
+<script>
+    var body = document.body;
+    var switcher = document.getElementsByClassName("js-toggle")[0];
+
+    
+    switcher.addEventListener("click", function () {
+        this.classList.toggle("js-toggle--checked");
+        this.classList.add("js-toggle--focus");
+        
+        if (this.classList.contains("js-toggle--checked")) {
+            body.classList.add("dark-mode");
+            
+            localStorage.setItem("darkMode", "true");
+        } else {
+            body.classList.remove("dark-mode");
+            setTimeout(function () {
+                localStorage.removeItem("darkMode");
+            }, 100);
+        }
+    });
+
+    
+    if (localStorage.getItem("darkMode")) {
+        
+        switcher.classList.add("js-toggle--checked");
+        body.classList.add("dark-mode");
+    }
+</script>
+
+   <ul class="sidebar-buttons">
+     
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/categories/development" title="Development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-code"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+   </ul>
+   <ul class="sidebar-buttons">
+     
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneul-lee.com" target="_blank" rel="noopener" title="Website">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-window-maximize"></i>
+      
+      <span class="sidebar-button-desc">Website</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/resume/" title="Resume">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-file"></i>
+      
+      <span class="sidebar-button-desc">Resume</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener" title="LinkedIn">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener" title="Email">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+   </ul>
+   <ul class="sidebar-buttons">
+     
+
+   </ul>
+ </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      Svelte
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2019-11-10T23:03:00&#43;09:00">
+        
+  November 10, 2019
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/svelte">Svelte</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              
+              
+                
+                
+                <!-- raw HTML omitted -->
+<h1 id="svelte">Svelte</h1>
+<h2 id="svelte란">Svelte란?</h2>
+<p>svelte란 날씬한, 호리호리한이란 뜻입니다.</p>
+<p>이름답게 적은 코드, 적은 용량 등을 자랑하는 프레임워크입니다.</p>
+<p>공식 문서에 따르면 새로운 웹 어플리케이션 개발 방법을 제시하는 컴파일러라고도 소개되어 있습니다.</p>
+<p>vue, react와는 다르게 가상돔을 사용하지 않습니다.</p>
+<p>svelte는 빌드 타임에 실행되며, 효과적으로 DOM을 업데이트하는 코드로 컴파일됩니다.</p>
+<!-- raw HTML omitted -->
+<h2 id="기본-문법">기본 문법</h2>
+<p>svelte는 vue 처럼 .svelte라는 별도의 파일 확장자를 갖습니다.</p>
+<p>기본문법은 html과 비슷합니다.</p>
+<p>h1 태그 내에 {name}은 스크립트의 선언한 name 변수를 참조해서 출력합니다.</p>
+<p>css 또한 똑같이 작성하시면 됩니다.</p>
+<pre tabindex="0"><code>// App.svelte
+&lt;script&gt;
+const name = 'ashnamuh'
+&lt;/script&gt;
+
+&lt;style&gt;
+  h1 {
+    color: blue;
+  }
+&lt;/style&gt;
+
+&lt;h1&gt;Hello {name}!&lt;/h1&gt;
+
+</code></pre><p>위 코드는 빌드 후 다음과 같이 변환됩니다.</p>
+<p>css가 자동으로 scoped 되어서 현재 컴포넌트에만 적용이 되는군요!</p>
+<pre tabindex="0"><code>&lt;body cz-shortcut-listen=&quot;true&quot;&gt;
+  &lt;h1 class=&quot;svelte-1x1ajbk&quot;&gt;
+    Hello ashnamuh!
+  &lt;/h1&gt;
+&lt;/body&gt;
+{}문법은 html 속성에도 똑같이 쓸 수 있습니다.
+
+// TheHeader.svelte
+&lt;script&gt;
+const elementId = 'the-header'
+&lt;/script&gt;
+
+&lt;header id={elementId}&gt;
+  It is a header
+&lt;/header&gt;
+</code></pre><h2 id="컴포넌트">컴포넌트</h2>
+<p>컴포넌트는 .svelte파일을 바로 불러와서 사용할 수 있습니다.</p>
+<p>위에서 만든 TheHeader.svelte를 사용하는 예시입니다.</p>
+<pre tabindex="0"><code>// App.svelte
+&lt;script&gt;
+import TheHeader from './components/TheHeader.svelte'
+
+const name = 'ashnamuh'
+&lt;/script&gt;
+
+&lt;style&gt;
+  h1 {
+    color: blue;
+  }
+&lt;/style&gt;
+
+&lt;TheHeader&gt;&lt;/TheHeader&gt;
+&lt;h1&gt;Hello {name}!&lt;/h1&gt;
+</code></pre><p>컴포넌트의 루트 엘리먼트가 꼭 하나일 필요는 없습니다.</p>
+<p>vue는 루트 엘리먼트가 반드시 하나여야하고, react는 &lt;React.Fragment&gt;를 사용해서 그룹화를 해야합니다.</p>
+<h2 id="props">props</h2>
+<p>props로 사용할 변수를 자식 컴포넌트에서 export해서 사용할 수 있습니다.</p>
+<pre tabindex="0"><code>// Person.svelte
+&lt;script&gt;
+export let name
+export let age
+&lt;/script&gt;
+
+&lt;p&gt;My name is {name}. I am {age} years old.&lt;/p&gt;
+</code></pre><p>다음은 위 Person.svelte 컴포넌트를 사용하는 예시입니다.</p>
+<p>객체 spread 문법으로 자식에게 데이터를 전달할 수도 있습니다.</p>
+<pre tabindex="0"><code>&lt;script&gt;
+import Person from './components/Person.svelte'
+
+const ashnamuh = {
+  age: 23
+}
+
+const jaemok = {
+  name: 'Jaemok',
+  age: 23
+}
+
+&lt;/script&gt;
+
+&lt;Person name=&quot;ashnamuh&quot; age={ashnamuh.age}&gt;&lt;/Person&gt;
+&lt;Person {...jaemok}&gt;&lt;/Person&gt;
+</code></pre><h2 id="이벤트">이벤트</h2>
+<p>:on 디렉티브를 사용해서 돔 이벤트를 리스닝할 수 있습니다.</p>
+<pre tabindex="0"><code>&lt;button on:click={() =&gt; alert('Hello!')}&gt;인라인 js&lt;/button&gt;
+스크립트 내에 함수를 연결할 수도 있습니다.
+
+&lt;script&gt;
+const showAlert = () =&gt; alert('Hi!')
+&lt;/script&gt;
+
+&lt;button on:click={showAlert}&gt;함수 분리&lt;/button&gt;
+</code></pre><p>또한 |를 이용해서 이벤트 수식어를 붙일 수 있습니다.</p>
+<p>다음은 이벤트 수식어를 설정한 이벤트 캡쳐링 예시입니다.</p>
+<pre tabindex="0"><code>&lt;script&gt;
+const clickGrandParent = () =&gt; console.log('clicked grand parent')
+const clickParent = () =&gt; console.log('clicked parent')
+const clickChild = () =&gt; console.log('clicked child')
+&lt;/script&gt;
+
+&lt;div class=&quot;grand-prent&quot; on:click|capture={clickGrandParent}&gt;
+  &lt;div class=&quot;parent&quot; on:click|capture={clickParent}&gt;
+    &lt;div class=&quot;child&quot; on:click|capture={clickChild}&gt;
+      이벤트 캡쳐링
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h2 id="반응성">반응성</h2>
+<p>script 영역에 선언한 것은 반응성을 지원합니다.</p>
+<p>이 말은 값이 바뀌면 자동으로 DOM을 갱신한다는 의미입니다.</p>
+<p>다음은 setInterval 함수로 1초마다 count 값을 증가시키는 코드입니다.</p>
+<p>count 값이 변함에 따라 p태그의 출력도 달라지지요.</p>
+<pre tabindex="0"><code>// Count.svelte
+&lt;script&gt;
+let count = 0
+
+setInterval(() =&gt; {
+  count++
+}, 1000)
+&lt;/script&gt;
+
+&lt;p&gt;count: {count}&lt;/p&gt;
+</code></pre><h2 id="heading">$</h2>
+<p>특정한 값이 변함에 따라 반응해서 변하는 값도 선언 가능합니다.</p>
+<p>다음은 $ 로 count 값에 따라 변하는 doubled 변수를 선언한 예시입니다.</p>
+<p>vue의 computed와 비슷한 맥락입니다.</p>
+<p>svelte의 $문법이 조금 낯설게 느껴질 수도 있습니다.</p>
+<pre tabindex="0"><code>// Count.svelte
+&lt;script&gt;
+let count = 0
+
+$: doubled = count * 2
+
+setInterval(() =&gt; {
+  count++
+}, 1000)
+&lt;/script&gt;
+
+&lt;p&gt;count: {count}&lt;/p&gt;
+&lt;p&gt;doubled: {doubled}&lt;/p&gt;
+</code></pre><p>$문법으로 값 뿐만 아니라 값이 변할 때 호출되는 함수도 선언할 수 있습니다.</p>
+<p>지금보니 vue의 watch 같은 기능도 할 수 있군요!</p>
+<p>다음은 위 count 값이 변하면 콘솔을 출력합니다.</p>
+<p>$: console.log(<code>the count is ${count}</code>)</p>
+<h2 id="주의할-점">주의할 점</h2>
+<p>배열이나 객체의 값이 변경될 땐 재할당해야만 반응성을 지원합니다.</p>
+<p>다음처럼 객체의 속성을 직접 추가하거나,Array.prototype.push 등은 반응성이 지원되지 않습니다.</p>
+<pre tabindex="0"><code>&lt;script&gt;
+let arr = []
+let obj = {name: 'ashnamuh'}
+
+const handleClick = () =&gt; {
+  arr = [...arr, 'item']
+  // arr.push('item') Not working
+
+  obj = {...obj, age: 23 }
+  // obj.age = 23 Also not working
+}
+&lt;/script&gt;
+
+&lt;button on:click={handleClick}&gt;
+  click me to add item
+&lt;/button&gt;
+&lt;p&gt;{arr.join(' ')}&lt;/p&gt;
+&lt;p&gt;{Object.values(obj)}&lt;/p&gt;
+</code></pre><h2 id="제어문">제어문</h2>
+<h2 id="if-else">if-else</h2>
+<p>순수 자바스크립트가 아닌 svelte에서 제공하는 문법으로 if문을 사용할 수 있습니다.</p>
+<p>다음은 유저의 loggedIn 값에 따라 버튼을 다르게 보여주는 예시입니다.</p>
+<pre tabindex="0"><code>&lt;script&gt;
+let user = { loggedIn: false }
+
+const toggle = () =&gt; {
+  user.loggedIn = !user.loggedIn
+}
+&lt;/script&gt;
+
+{#if user.loggedIn}
+  &lt;button on:click={toggle}&gt;
+    Log out
+  &lt;/button&gt;
+{/if}
+
+{#if !user.loggedIn}
+  &lt;button on:click={toggle}&gt;
+    Log in
+  &lt;/button&gt;
+{/if}
+</code></pre><p>if-else를 쓰면 다음과 같이 표현할 수도 있습니다. 반드시 {/if}로 if문을 닫아줘야 합니다.</p>
+<pre tabindex="0"><code>{#if user.loggedIn}
+  &lt;button on:click={toggle}&gt;
+    Log out
+  &lt;/button&gt;
+{:else}
+  &lt;button on:click={toggle}&gt;
+    Log in
+  &lt;/button&gt;
+{/if}
+</code></pre><p>다음처럼 if문과 if-else문을 사용할 수도 있습니다.</p>
+<pre tabindex="0"><code>&lt;script&gt;
+let count = 7
+&lt;/script&gt;
+
+{#if count &gt; 10}
+  &lt;p&gt;{count}는 10 초과&lt;/p&gt;
+{:else if 5 &gt; count}
+  &lt;p&gt;{count}는 5 미만&lt;/p&gt;
+{:else}
+  &lt;p&gt;{count}는 5이상 10 이하&lt;/p&gt;
+{/if}
+</code></pre><h2 id="each">each</h2>
+<p>여러개의 똑같은 엘리먼트를 반복적으로 보여줄 때 유용한 기능입니다.</p>
+<p>vue에서는 v-for, angular에선 ngFor, react에서는 Array.prototype.map으로 사용할 수 있는 기능입니다.</p>
+<p>each를 사용해서 사람리스트를 보여주는 예시입니다.</p>
+<pre tabindex="0"><code>&lt;script&gt;
+let people = [
+  { id: 1, name: 'ashnamuh' },
+  { id: 2, name: 'Jaemok Lee' },
+  { id: 3, name: 'Ash Lee' }
+]
+&lt;/script&gt;
+
+&lt;ul&gt;
+  {#each people as person, index}
+    &lt;li&gt;
+      index: {index}
+      id: {person.id}
+      name: {person.name}
+    &lt;/li&gt;
+  {/each}
+&lt;/ul&gt;
+위 코드는 다음 html로 변환됩니다.
+
+&lt;ul&gt;
+  &lt;li&gt;index: 0
+      id: 1
+      name: ashnamuh
+  &lt;/li&gt;
+  &lt;li&gt;index: 1
+      id: 2
+      name: Jaemok Lee
+  &lt;/li&gt;
+  &lt;li&gt;index: 2
+      id: 3
+      name: Ash Lee
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><h2 id="await">await</h2>
+<p>svelte는 비동기 작업을 처리하는 await이라는 제어문도 제공합니다.</p>
+<p>then, catch 등 Promise와 비슷한 문법으로 비동기 작업의 결과에 따라 분기할 수 있습니다.</p>
+<p>다음은 fetch 요청 결과에 따라 DOM 렌더링을 분기하는 예시입니다.</p>
+<pre tabindex="0"><code>&lt;script&gt;
+let promise = getRandomNumber()
+
+const getRandomNumber = async () =&gt; {
+  const res = await fetch(`https://svelte.dev/tutorial/random-number`)
+  const text = await res.text()
+
+  if (res.ok) {
+    return text
+  } else {
+    throw new Error(text)
+  }
+}
+
+const handleClick = () =&gt; {
+  promise = getRandomNumber()
+}
+&lt;/script&gt;
+
+&lt;button on:click={handleClick}&gt;
+  generate random number
+&lt;/button&gt;
+
+{#await promise}
+  &lt;p&gt;...waiting&lt;/p&gt;
+{:then number}
+  &lt;p&gt;The number is {number}&lt;/p&gt;
+{:catch error}
+  &lt;p style=&quot;color: red&quot;&gt;{error.message}&lt;/p&gt;
+{/await}
+</code></pre>
+              
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/javascript/">javascript</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/svelte/">svelte</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%EC%8A%A4%EB%B2%A8%ED%8A%B8/">스벨트</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/">자바스크립트</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/2020-02-09-tstory-code-block/" data-tooltip="티스토리 Code Block" aria-label="NEXT: 티스토리 Code Block">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/react/2019-11-10-react-state/" data-tooltip="how to handle React state array" aria-label="PREVIOUS: how to handle React state array">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.haneul-lee.com/post/svelte/2019-11-10-svelte/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.haneul-lee.com/post/svelte/2019-11-10-svelte/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.haneul-lee.com/post/svelte/2019-11-10-svelte/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/sharing/share?url=https://blog.haneul-lee.com/post/svelte/2019-11-10-svelte/" title="Share on Google&#43;" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+              
+            
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="5041197559"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <span class="copyrights">
+      &copy; 2022 <a href="https://github.com/haneulee">Haneul Lee</a>. All Rights Reserved
+    </span>
+  </footer>
+  
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/2020-02-09-tstory-code-block/" data-tooltip="티스토리 Code Block" aria-label="NEXT: 티스토리 Code Block">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/react/2019-11-10-react-state/" data-tooltip="how to handle React state array" aria-label="PREVIOUS: how to handle React state array">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.haneul-lee.com/post/svelte/2019-11-10-svelte/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.haneul-lee.com/post/svelte/2019-11-10-svelte/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.haneul-lee.com/post/svelte/2019-11-10-svelte/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/sharing/share?url=https://blog.haneul-lee.com/post/svelte/2019-11-10-svelte/" title="Share on Google&#43;" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fsvelte%2F2019-11-10-svelte%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fsvelte%2F2019-11-10-svelte%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fsvelte%2F2019-11-10-svelte%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/sharing/share?url=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fsvelte%2F2019-11-10-svelte%2F" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Devlog</h4>
+    
+      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Switzerland
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://blog.haneul-lee.com/js/script-oedftdofg5pug6u3d57lixk05cozh9lfe0dmvq6jnf2udnq33rrgnc0adf.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

@@ -9,12 +9,13 @@
     <lastBuildDate>Mon, 03 Jan 2022 12:57:22 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/storage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TIL📚 앱개발 스터디 - 4 week</title>
-      <link>https://blog.haneul-lee.com/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-4-week/</link>
+      <link>https://blog.haneul-lee.com/post/til/sparta-coding-forth-week/</link>
       <pubDate>Mon, 03 Jan 2022 12:57:22 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-4-week/</guid>
+      <guid>https://blog.haneul-lee.com/post/til/sparta-coding-forth-week/</guid>
       <description>TIL📚 앱개발 스터디 - 4 week Firebase 👩🏻‍💻 파이어베이스는 구글에서 만든 서버리스 서비스
-  데이터베이스 이미지 파일 서버 푸시 알람 기능 로그인 인증 기능  Serverless  데이터 생성 데이터 조회 데이터 삭제/수정 등을 제공해주는 서비스들이 존재합니다.  파이어베이스 설치 npm install firebase yarn add firebase expo install firebase 파이어베이스 config 설정 처음에 데이터베이스 연동이 되지 않아 확인해봤더니 지역 설정이 맞지 않는 경우가 있어 databaseURL을 따로 설정해주었다.</description>
+  데이터베이스 이미지 파일 서버 푸시 알람 기능 로그인 인증 기능  Serverless  데이터 생성 데이터 조회 데이터 삭제/수정 등을 제공해주는 서비스들이 존재합니다.  파이어베이스 설치 npm install firebase yarn add firebase expo install firebase 파이어베이스 config 설정 처음에 데이터베이스 연동이 되지 않아 확인해봤더니 지역 설정이 맞지 않는 경우가 있어 databaseURL을 따로 설정해주었다.
+// 사용할 파이어베이스 서비스 주석을 해제합니다 //import &amp;quot;firebase/compat/auth&amp;quot;; import &amp;quot;firebase/compat/database&amp;quot;; //import &amp;quot;firebase/compat/firestore&amp;quot;; //import &amp;quot;firebase/compat/functions&amp;quot;; import &amp;quot;firebase/compat/storage&amp;quot;; import firebase from &amp;quot;firebase/compat/app&amp;quot;; // Initialize Firebase //파이어베이스 사이트에서 봤던 연결정보를 여기에 가져옵니다 const firebaseConfig = { apiKey: &amp;quot;&amp;quot;, authDomain: &amp;quot;sparta-react-native-11669.</description>
     </item>
     
   </channel>

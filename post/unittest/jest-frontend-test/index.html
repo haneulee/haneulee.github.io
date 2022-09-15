@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+ <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/blog.haneul-lee.com\/",
+  "author": {
+    "@type": "Person",
+    "name": "Haneul Devlog",
+    
+    "image": "https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png"
+    
+  },
+  "name":"Haneul Devlog 개발 블로그 📚",
+  "description":"Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src\/pages\/test\/create-account.spec.tsx  beforeEach(async () =\u0026gt; { await waitFor(() =\u0026gt; { mockedClient = createMockClient(); renderResult = render( \u0026lt;ApolloProvider client={mockedClient}\u0026gt; \u0026lt;CreateAccount \/\u0026gt; \u0026lt;\/ApolloProvider\u0026gt; ); }); }); frontend 유닛테스트의 기본구조\napollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.\n위와 같은 방법 이외 MockedProvider를 이용하는 방법도 있으니 참고 바랍니다.\ncreate-account에서는 유저에게 계정에 대한 입력을 받습니다.",
+  "url":"https:\/\/blog.haneul-lee.com\/post\/unittest\/jest-frontend-test\/",
+  "keywords":"[development, front-end]"
+}
+
+</script> <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Haneul Devlog">
+<meta name="keywords" content="development, front-end">
+<meta name="description" content="Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src/pages/test/create-account.spec.tsx  beforeEach(async () =&gt; { await waitFor(() =&gt; { mockedClient = createMockClient(); renderResult = render( &lt;ApolloProvider client={mockedClient}&gt; &lt;CreateAccount /&gt; &lt;/ApolloProvider&gt; ); }); }); frontend 유닛테스트의 기본구조
+apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.
+위와 같은 방법 이외 MockedProvider를 이용하는 방법도 있으니 참고 바랍니다.
+create-account에서는 유저에게 계정에 대한 입력을 받습니다.">
+
+
+<meta property="og:description" content="Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src/pages/test/create-account.spec.tsx  beforeEach(async () =&gt; { await waitFor(() =&gt; { mockedClient = createMockClient(); renderResult = render( &lt;ApolloProvider client={mockedClient}&gt; &lt;CreateAccount /&gt; &lt;/ApolloProvider&gt; ); }); }); frontend 유닛테스트의 기본구조
+apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.
+위와 같은 방법 이외 MockedProvider를 이용하는 방법도 있으니 참고 바랍니다.
+create-account에서는 유저에게 계정에 대한 입력을 받습니다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jest Components Test 제스트 컴포넌트 테스트 🔥">
+<meta name="twitter:title" content="Jest Components Test 제스트 컴포넌트 테스트 🔥">
+<meta property="og:url" content="https://blog.haneul-lee.com/post/unittest/jest-frontend-test/">
+<meta property="twitter:url" content="https://blog.haneul-lee.com/post/unittest/jest-frontend-test/">
+<meta property="og:site_name" content="Haneul Devlog 개발 블로그 📚">
+<meta property="og:description" content="Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src/pages/test/create-account.spec.tsx  beforeEach(async () =&gt; { await waitFor(() =&gt; { mockedClient = createMockClient(); renderResult = render( &lt;ApolloProvider client={mockedClient}&gt; &lt;CreateAccount /&gt; &lt;/ApolloProvider&gt; ); }); }); frontend 유닛테스트의 기본구조
+apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.
+위와 같은 방법 이외 MockedProvider를 이용하는 방법도 있으니 참고 바랍니다.
+create-account에서는 유저에게 계정에 대한 입력을 받습니다.">
+<meta name="twitter:description" content="Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src/pages/test/create-account.spec.tsx  beforeEach(async () =&gt; { await waitFor(() =&gt; { mockedClient = createMockClient(); renderResult = render( &lt;ApolloProvider client={mockedClient}&gt; &lt;CreateAccount /&gt; &lt;/ApolloProvider&gt; ); }); }); frontend 유닛테스트의 기본구조
+apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.
+위와 같은 방법 이외 MockedProvider를 이용하는 방법도 있으니 참고 바랍니다.
+create-account에서는 유저에게 계정에 대한 입력을 받습니다.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-08-07T02:54:15">
+  
+  
+    <meta property="article:modified_time" content="2021-08-07T02:54:15">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+  
+  
+    
+      <meta property="article:tag" content="development">
+    
+      <meta property="article:tag" content="front-end">
+    
+      <meta property="article:tag" content="unittest">
+    
+      <meta property="article:tag" content="jest">
+    
+      <meta property="article:tag" content="javascript">
+    
+      <meta property="article:tag" content="facebook">
+    
+      <meta property="article:tag" content="react">
+    
+      <meta property="article:tag" content="nextjs">
+    
+      <meta property="article:tag" content="테스트주도개발">
+    
+      <meta property="article:tag" content="제스트">
+    
+      <meta property="article:tag" content="TDD">
+    
+      <meta property="article:tag" content="페이스북">
+    
+      <meta property="article:tag" content="단위테스트">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png">
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-jest.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-jest.png">
+
+
+    <title>Jest Components Test 제스트 컴포넌트 테스트 🔥</title>
+
+    <link
+      rel="icon"
+      href="https://blog.haneul-lee.com/img/favicon.ico"
+    />
+     
+
+    <link rel="canonical" href="https://blog.haneul-lee.com/post/unittest/jest-frontend-test/" />
+
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+      integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    
+    
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-3icga1qbbcdn9af8rifmu4vmsfi4zvyxs7muf1edt0qksuqtyp90lgm1ag.min.css" />
+    
+      <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
+}
+</script>
+  
+  </head>
+</html>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+ <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+ <div class="header-title">
+   <a class="header-title-link" href="https://blog.haneul-lee.com/">Haneul Devlog 개발 블로그 📚</a>
+ </div>
+ 
+   
+     <a class="header-right-picture "
+        href="https://blog.haneul-lee.com/#about">
+   
+   
+   
+     
+       <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+     
+   
+   </a>
+ 
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+ <div class="sidebar-container">
+   
+     <div class="sidebar-profile">
+       <a href="https://blog.haneul-lee.com/#about">
+         <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+       </a>
+       <h4 class="sidebar-profile-name">Haneul Devlog</h4>
+       
+         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</h5>
+       
+     </div>
+   
+
+   <div class="js-toggle-wrapper">
+    <div class="js-toggle">
+        <div class="js-toggle-track">
+            <div class="js-toggle-track-check">
+                <img
+                    src="data:image/png;base64,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"
+                    role="presentation"
+                    style="pointer-events: none"
+                    width="16"
+                    height="16"
+                />
+            </div>
+            <div class="js-toggle-track-x">
+                <img
+                    src="data:image/png;base64,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"
+                    role="presentation"
+                    style="pointer-events: none"
+                    width="16"
+                    height="16"
+                />
+            </div>
+        </div>
+        <div class="js-toggle-thumb"></div>
+        <input
+            class="js-toggle-screenreader-only"
+            type="checkbox"
+            aria-label="Switch between Dark and Light mode"
+        />
+    </div>
+</div>
+
+<style>
+     
+
+    body.dark-mode,
+    body.dark-mode #main,
+    body.dark-mode #header,
+    body.dark-mode #bottom-bar,
+    body.dark-mode .btn,
+    body.dark-mode a.tag {
+        background: rgb(45, 45, 45) !important;
+    }
+
+    body.dark-mode,
+    body.dark-mode *:not(a):not(#about):not(i) {
+        color: #f5f5f5;
+    }
+
+    body.dark-mode .alert.info,
+    body.dark-mode .alert.info > p {
+        color: #5d686f !important;
+    }
+
+    .js-toggle-wrapper {
+        margin: 1rem auto;
+        text-align: center;
+        display: block;
+    }
+
+    .js-toggle {
+        touch-action: pan-x;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        -webkit-touch-callout: none;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .js-toggle-screenreader-only {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .js-toggle-track {
+        width: 50px;
+        height: 24px;
+        padding: 0;
+        border-radius: 30px;
+        background-color: black;
+        transition: all 0.2s ease;
+    }
+    .js-toggle-track-check {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        left: 5px;
+        top: 0px;
+        bottom: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: 0;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+    }
+
+    .js-toggle--checked .js-toggle-track-check {
+        opacity: 1;
+        transition: opacity 0.25s ease;
+    }
+
+    .js-toggle-track-x {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        right: 5px;
+        top: 0px;
+        bottom: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: 0;
+        opacity: 1;
+        transition: opacity 0.25s ease;
+    }
+
+    .js-toggle--checked .js-toggle-track-x {
+        opacity: 0;
+    }
+
+    .js-toggle-thumb {
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: #fafafa;
+        box-sizing: border-box;
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+        transform: translateX(0);
+    }
+
+    .js-toggle--checked .js-toggle-thumb {
+        transform: translateX(26px);
+        border-color: #ffffff;
+    }
+</style>
+
+<script>
+    var body = document.body;
+    var switcher = document.getElementsByClassName("js-toggle")[0];
+
+    
+    switcher.addEventListener("click", function () {
+        this.classList.toggle("js-toggle--checked");
+        this.classList.add("js-toggle--focus");
+        
+        if (this.classList.contains("js-toggle--checked")) {
+            body.classList.add("dark-mode");
+            
+            localStorage.setItem("darkMode", "true");
+        } else {
+            body.classList.remove("dark-mode");
+            setTimeout(function () {
+                localStorage.removeItem("darkMode");
+            }, 100);
+        }
+    });
+
+    
+    if (localStorage.getItem("darkMode")) {
+        
+        switcher.classList.add("js-toggle--checked");
+        body.classList.add("dark-mode");
+    }
+</script>
+
+   <ul class="sidebar-buttons">
+     
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/categories/development" title="Development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-code"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+   </ul>
+   <ul class="sidebar-buttons">
+     
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneul-lee.com" target="_blank" rel="noopener" title="Website">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-window-maximize"></i>
+      
+      <span class="sidebar-button-desc">Website</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/resume/" title="Resume">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-file"></i>
+      
+      <span class="sidebar-button-desc">Resume</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener" title="LinkedIn">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener" title="Email">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+   </ul>
+   <ul class="sidebar-buttons">
+     
+
+   </ul>
+ </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title">
+      Jest Components Test 제스트 컴포넌트 테스트 🔥
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-08-07T02:54:15&#43;09:00">
+        
+  August 7, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/development">development</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              
+              
+                
+                
+                <!-- raw HTML omitted -->
+<h1 id="jest-components-test-제스트-컴포넌트-테스트-">Jest Components Test 제스트 컴포넌트 테스트 🔥</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-jest.png" alt=""></p>
+<h2 id="리액트-컴포넌트-테스트-">리액트 컴포넌트 테스트 🏃🏻‍♀️</h2>
+<hr>
+<h3 id="기본-구조-및-테스트-방법">기본 구조 및 테스트 방법</h3>
+<ul>
+<li>src/pages/<strong>test</strong>/create-account.spec.tsx</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">beforeEach</span>(<span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">waitFor</span>(() <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#a6e22e">mockedClient</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createMockClient</span>();
+    <span style="color:#a6e22e">renderResult</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">render</span>(
+      &lt;<span style="color:#f92672">ApolloProvider</span> <span style="color:#a6e22e">client</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">mockedClient</span>}&gt;
+        &lt;<span style="color:#f92672">CreateAccount</span> /&gt;
+      &lt;/<span style="color:#f92672">ApolloProvider</span>&gt;
+    );
+  });
+});
+</code></pre></div><p>frontend 유닛테스트의 기본구조<br>
+apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.<br>
+위와 같은 방법 이외 <a href="https://www.apollographql.com/docs/react/development-testing/testing/#the-mockedprovider-component">MockedProvider</a>를 이용하는 방법도 있으니 참고 바랍니다.</p>
+<p>create-account에서는 유저에게 계정에 대한 입력을 받습니다.<br>
+첫째 입력이 잘못되었을 때, 에러 핸들링을 잘하고 있는가, 둘째 입력이 잘 되었을 때 생성 요청에 대한 핸들링이 잘 되는가를 테스트해야 한다.</p>
+<hr>
+<h3 id="create-account의-로직">create-account의 로직</h3>
+<p>테스트는 유저에게 입력을 받고 받은 입력이 올바른지 파악해야 합니다.</p>
+<p>(1) 올바르지 않다면 에러메세지 출력<br>
+(2) 올바르다면 백엔드에 createAccount Mutation 보내고, 루트 페이지로 이동하기 입니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;renders OK&#34;</span>, <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">waitFor</span>(() <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">expect</span>(document.<span style="color:#a6e22e">title</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#e6db74">&#34;CreateAccount | Podcast&#34;</span>));
+});
+<span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;renders validation errors&#34;</span>, <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {});
+<span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;submits mutation with form values&#34;</span>, <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {});
+<span style="color:#a6e22e">afterAll</span>(() <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">clearAllMocks</span>(); <span style="color:#75715e">// test 후 모든 것을 제자리로 돌려 놓음(hooks mock 이후)
+</span><span style="color:#75715e"></span>});
+</code></pre></div><!-- raw HTML omitted -->
+<hr>
+<h3 id="유저입력이-올바르지-않을-때-에러-핸들링-테스트">유저입력이 올바르지 않을 때 에러 핸들링 테스트</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;renders validation errors&#34;</span>, <span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">getByRole</span>, <span style="color:#a6e22e">getByPlaceholderText</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">renderResult</span>;
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getByPlaceholderText</span>(<span style="color:#e6db74">/email/i</span>);
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">button</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getByRole</span>(<span style="color:#e6db74">&#34;button&#34;</span>);
+  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">waitFor</span>(() <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#75715e">// 여기에선 state가 바뀌는 것을 기다리기 위해 사용
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">userEvent</span>.<span style="color:#66d9ef">type</span>(<span style="color:#a6e22e">email</span>, <span style="color:#e6db74">&#34;wont@work&#34;</span>);
+  });
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">errorMessage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getByRole</span>(<span style="color:#e6db74">&#34;alert&#34;</span>);
+  <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">errorMessage</span>).<span style="color:#a6e22e">toHaveTextContent</span>(<span style="color:#e6db74">/Please enter a valid email/i</span>);
+  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">waitFor</span>(() <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#a6e22e">userEvent</span>.<span style="color:#a6e22e">clear</span>(<span style="color:#a6e22e">email</span>);
+  });
+  <span style="color:#a6e22e">errorMessage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getByRole</span>(<span style="color:#e6db74">&#34;alert&#34;</span>);
+  <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">errorMessage</span>).<span style="color:#a6e22e">toHaveTextContent</span>(<span style="color:#e6db74">/Email is required/i</span>);
+  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">waitFor</span>(() <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#a6e22e">userEvent</span>.<span style="color:#66d9ef">type</span>(<span style="color:#a6e22e">email</span>, <span style="color:#e6db74">&#34;working@email.com&#34;</span>);
+    <span style="color:#a6e22e">userEvent</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">button</span>);
+  });
+  <span style="color:#a6e22e">errorMessage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getByRole</span>(<span style="color:#e6db74">&#34;alert&#34;</span>);
+  <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">errorMessage</span>).<span style="color:#a6e22e">toHaveTextContent</span>(<span style="color:#e6db74">/Password is required/i</span>);
+});
+</code></pre></div><p>위 코드의 renders validation errors에 해당하는 부분입니다.
+위 코드의 첫번째 줄 <a href="https://testing-library.com/docs/react-testing-library/api/#render-result">renderResult</a>는 테스트 셋팅 부분인 beforeEach부분에서 설정된 부분입니다.</p>
+<p>렌더링 결과에 대해 html을 선택할 수 있게끔 만들어진 함수 집합들입니다.<br>
+email 엘리먼트는 placeholder가 정규표현식으로 email을 포함하는데, case insensitive하게 검색을 하여 선택을 하였습니다. button은 role 속성이 button인 것을 검색하여 선택하도록 하였습니다. 그리고 email 엘리먼트에는 wont @work 라는 잘못된 이메일을 userEvent를 통해 입력하도록 하여 그 후의 코드에서 테스트 할 수 있게 하였습니다.</p>
+<hr>
+<h3 id="올바른-입력을-받아서-계정-만들기">올바른 입력을 받아서 계정 만들기</h3>
+<p>이번에는 userEvent를 통해 이메일과 패스워드, role에 올바른 입력값들을 넣어주어서 가짜 서버에 createAccount를 요청합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">mockedClient</span>.<span style="color:#a6e22e">setRequestHandler</span>(
+  <span style="color:#a6e22e">CREATE_ACCOUNT_MUTATION</span>,
+  <span style="color:#a6e22e">mockedCreatedAccountMutationResponse</span>
+);
+<span style="color:#75715e">// jest.spyOn(Object, method)..mockImplementation(callback:()=&gt;result);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">spyOn</span>(window, <span style="color:#e6db74">&#34;alert&#34;</span>).<span style="color:#a6e22e">mockImplementation</span>(() <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">null</span>); <span style="color:#75715e">// 이렇게 결과값까지 mock할 수 있구나
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">waitFor</span>(() <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#a6e22e">userEvent</span>.<span style="color:#66d9ef">type</span>(<span style="color:#a6e22e">email</span>, <span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">email</span>);
+  <span style="color:#a6e22e">userEvent</span>.<span style="color:#66d9ef">type</span>(<span style="color:#a6e22e">password</span>, <span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">password</span>);
+  <span style="color:#a6e22e">userEvent</span>.<span style="color:#a6e22e">click</span>(<span style="color:#a6e22e">button</span>);
+});
+</code></pre></div><p>위 코드에서 mockedClient.setRequestHandler가 보이시나요? apollo client에 CREATE_ACCOUNT_MUTATION이라는 요청이 들어오면 mockedCreatedAccountMutationResponse로 응답을 리턴하라는 의미입니다. 유닛테스트이기 때문에 클라이언트에서 요청하는 서버 응답값은 흉내내는 것입니다.<br>
+그리고 요청한 값들에 대해 제대로 처리 되었는지 확인하면 create account테스트는 완료됩니다.</p>
+<hr>
+<h3 id="패키지-일부함수만-mocking하기">패키지 일부함수만 mocking하기</h3>
+<p>풀커버리지를 해야 하는 것을 고려하면 최대한 많은 부분에서 테스트 해야 합니다.<br>
+그래서 useHistory 역시 테스트 대상입니다.</p>
+<p>history.push('/');</p>
+<p>history는 react-router-dom 패키지의 useHistory에 있습니다.<br>
+이것을 mocking 하려면 아래 그림의 코드와 같이 해주셔야 합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#75715e">// how to mock hooks
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mockPush</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">fn</span>();
+<span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">mock</span>(<span style="color:#e6db74">&#34;react-router-dom&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#75715e">// jest가 module을 전부 cover하면서 beforeEach에서 쓰고 있는 Router까지 고장남
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">realModule</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">requireActual</span>(<span style="color:#e6db74">&#34;react-router-dom&#34;</span>); <span style="color:#75715e">// 실제 모듈을 필요로 함
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> {
+    ...<span style="color:#a6e22e">realModule</span>, <span style="color:#75715e">// 실제 모듈 기능 + mock이 필요한 부분만 mock
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">useHistory</span><span style="color:#f92672">:</span> () <span style="color:#f92672">=&gt;</span> {
+      <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">push</span>: <span style="color:#66d9ef">mockPush</span> };
+    },
+  };
+});
+</code></pre></div><p>위의 코드처럼 작성을 하시고 expect를 이용하여 history.push를 호출 했는지 여부를 테스트 할 수 있게 되며, 조금더 풀커버리지에 가까워졌습니다.</p>
+<hr>
+<h3 id="data-fetching">data fetching</h3>
+<p>data는 어디서 오죠? 서버에서 gql을 이용하여 끌어 오는거죠? 유닛테스트에서는 거기까지 테스트할 순 없죠? 그럼 mocking하면 됩니다. mocking을 한 후에, mocking한 함수가 호출되었는가? 호출되었는데 내가 원하는 데이터를 입력하고, 원하는 데이터를 받아오나? 체크하시면 됩니다.</p>
+<p>데이터 중에 특히나 주의여겨 보셔야 할 것은 **typename 입니다.<br>
+graphql이 데이터 처리를 위해 타입을 확인하는 것이라서 **typename을 지정해주셔야 합니다. 그렇지 않으면 테스트 결과가 원하는대로 처리되지 않을 가능성이 높습니다.
+참고. ApolloProvider에 mocked client를 입력한 것이 아니라 MockedProvider를 이용하셨다면 addTypename={false} 옵션을 이용하실 수도 있습니다.</p>
+<hr>
+<h3 id="렌더링-테스트">렌더링 테스트</h3>
+<p>render함수를 이용하여 renderResult를 받고 나서 원하는 테스트를 하면 됩니다.<br>
+mocking한 client에서 받은 텍스트를 가진 엘리먼트가 있는지 getByText를 이용해도 좋고, 클래스를 찾아도 좋습니다.</p>
+<hr>
+<p>&lt;주의사항&gt;<br>
+form의 handleSubmit의 콜백함수 같은 경우에는 테스트가 어렵습니다. 안에 들어가있는 콜백함수를 mocking하지 않으니 콜이 되었는지 여부를 모를 수 있습니다. <a href="https://enzymejs.github.io/enzyme/">enzyme</a>과 같은 패키지를 사용하거나 블루프린트에 세팅되어 있는 test-utils의 fireEvent 등을 이용해서 가능하다고 하는 글도 있지만, handleSubmit안에 있기 때문에 mocking 하기가 쉽지 않습니다.</p>
+<hr>
+<p>참고 :
+<a href="https://jestjs.io/docs/api">jset 공식문서</a>,
+<a href="https://www.daleseo.com/jest-fn-spy-on/">jset mocking</a>,</p>
+
+              
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/development/">development</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/front-end/">front-end</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/unittest/">unittest</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/jest/">jest</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/javascript/">javascript</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/facebook/">facebook</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/react/">react</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/nextjs/">nextjs</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%A3%BC%EB%8F%84%EA%B0%9C%EB%B0%9C/">테스트주도개발</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%EC%A0%9C%EC%8A%A4%ED%8A%B8/">제스트</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/tdd/">TDD</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%B6%81/">페이스북</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%EB%8B%A8%EC%9C%84%ED%85%8C%EC%8A%A4%ED%8A%B8/">단위테스트</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/til/sparta-coding-first-week/" data-tooltip="TIL📚 앱개발 스터디 - 1 week" aria-label="NEXT: TIL📚 앱개발 스터디 - 1 week">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/graphql/graphql-authentication/" data-tooltip="Apollo에서 Authentication 인증하기 💫" aria-label="PREVIOUS: Apollo에서 Authentication 인증하기 💫">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.haneul-lee.com/post/unittest/jest-frontend-test/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.haneul-lee.com/post/unittest/jest-frontend-test/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.haneul-lee.com/post/unittest/jest-frontend-test/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/sharing/share?url=https://blog.haneul-lee.com/post/unittest/jest-frontend-test/" title="Share on Google&#43;" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+              
+            
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="5041197559"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <span class="copyrights">
+      &copy; 2022 <a href="https://github.com/haneulee">Haneul Lee</a>. All Rights Reserved
+    </span>
+  </footer>
+  
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/til/sparta-coding-first-week/" data-tooltip="TIL📚 앱개발 스터디 - 1 week" aria-label="NEXT: TIL📚 앱개발 스터디 - 1 week">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/graphql/graphql-authentication/" data-tooltip="Apollo에서 Authentication 인증하기 💫" aria-label="PREVIOUS: Apollo에서 Authentication 인증하기 💫">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.haneul-lee.com/post/unittest/jest-frontend-test/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.haneul-lee.com/post/unittest/jest-frontend-test/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.haneul-lee.com/post/unittest/jest-frontend-test/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/sharing/share?url=https://blog.haneul-lee.com/post/unittest/jest-frontend-test/" title="Share on Google&#43;" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Funittest%2Fjest-frontend-test%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Funittest%2Fjest-frontend-test%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Funittest%2Fjest-frontend-test%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/sharing/share?url=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Funittest%2Fjest-frontend-test%2F" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Devlog</h4>
+    
+      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Switzerland
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://blog.haneul-lee.com/js/script-oedftdofg5pug6u3d57lixk05cozh9lfe0dmvq6jnf2udnq33rrgnc0adf.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

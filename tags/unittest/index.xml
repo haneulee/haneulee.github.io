@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 07 Aug 2021 02:54:15 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/unittest/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jest Components Test 제스트 컴포넌트 테스트 🔥</title>
-      <link>https://blog.haneul-lee.com/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
+      <link>https://blog.haneul-lee.com/post/unittest/jest-frontend-test/</link>
       <pubDate>Sat, 07 Aug 2021 02:54:15 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
+      <guid>https://blog.haneul-lee.com/post/unittest/jest-frontend-test/</guid>
       <description>Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src/pages/test/create-account.spec.tsx  beforeEach(async () =&amp;gt; { await waitFor(() =&amp;gt; { mockedClient = createMockClient(); renderResult = render( &amp;lt;ApolloProvider client={mockedClient}&amp;gt; &amp;lt;CreateAccount /&amp;gt; &amp;lt;/ApolloProvider&amp;gt; ); }); }); frontend 유닛테스트의 기본구조
 apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.
 위와 같은 방법 이외 MockedProvider를 이용하는 방법도 있으니 참고 바랍니다.
@@ -21,30 +21,30 @@ create-account에서는 유저에게 계정에 대한 입력을 받습니다.</d
     
     <item>
       <title>NestJS 에서 UNIT TEST 🏃🏻‍♀️</title>
-      <link>https://blog.haneul-lee.com/2021/07/nestjs-%EC%97%90%EC%84%9C-unit-test-%EF%B8%8F/</link>
+      <link>https://blog.haneul-lee.com/post/unittest/jest-service-test/</link>
       <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/07/nestjs-%EC%97%90%EC%84%9C-unit-test-%EF%B8%8F/</guid>
-      <description>Jest NestJS 에서 UNIT TEST 🏃🏻‍♀️ jwt.service.spec.ts describe(&amp;#39;JwtService&amp;#39;, () =&amp;gt; { let service: JwtService; beforeAll(async () =&amp;gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&amp;lt;JwtService&amp;gt;(JwtService); }); jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다.  jwt service가 제대로 준비 되었는지 확인하려면  it(&#39;should be defined&#39;,()={ expect(service).toBeDefined();});   이 코드로 확인해볼 수 있다.</description>
+      <guid>https://blog.haneul-lee.com/post/unittest/jest-service-test/</guid>
+      <description>Jest NestJS 에서 UNIT TEST 🏃🏻‍♀️ jwt.service.spec.ts describe(&amp;#39;JwtService&amp;#39;, () =&amp;gt; { let service: JwtService; beforeAll(async () =&amp;gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&amp;lt;JwtService&amp;gt;(JwtService); }); jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다. jwt service가 제대로 준비 되었는지 확인하려면 it(&#39;should be defined&#39;,()={ expect(service).toBeDefined();});  이 코드로 확인해볼 수 있다.
+jest.mock(&amp;#34;jsonwebtoken&amp;#34;, () =&amp;gt; ({ sign: jest.</description>
     </item>
     
     <item>
       <title>Jest 유닛 테스트 - 소개</title>
-      <link>https://blog.haneul-lee.com/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%86%8C%EA%B0%9C/</link>
+      <link>https://blog.haneul-lee.com/post/unittest/jest-start/</link>
       <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%86%8C%EA%B0%9C/</guid>
-      <description>Jest Jest 란 ? 🤔 Jest는 Facebook에서 개발한 JavaScript 테스팅 프레임워크이다. Babel , TypeScript , Node , React , Angular , Vue 등을 사용하는 프로젝트에서 사용할 수 있다. Test runner와 Test Mathcher, Test Mock 프레임워크까지 제공하여 다른 유닛 테스트 프레임워크보다 편하다.  테스트 주도 개발 (TDD)  짧은 개발 사이클을 반복하는 소프트웨어 개발 프로세스 중 하나 새로운 함수를 정의하는 자동화된 테스트 케이스를 작성한다. 그 케이스를 통과하기 위한 최소한의 코드를 생성한다.</description>
+      <guid>https://blog.haneul-lee.com/post/unittest/jest-start/</guid>
+      <description>Jest Jest 란 ? 🤔 Jest는 Facebook에서 개발한 JavaScript 테스팅 프레임워크이다. Babel , TypeScript , Node , React , Angular , Vue 등을 사용하는 프로젝트에서 사용할 수 있다. Test runner와 Test Mathcher, Test Mock 프레임워크까지 제공하여 다른 유닛 테스트 프레임워크보다 편하다.  테스트 주도 개발 (TDD)  짧은 개발 사이클을 반복하는 소프트웨어 개발 프로세스 중 하나 새로운 함수를 정의하는 자동화된 테스트 케이스를 작성한다. 그 케이스를 통과하기 위한 최소한의 코드를 생성한다. 새 코드를 표준에 맞도록 리팩토링한다.</description>
     </item>
     
     <item>
       <title>Javascript 테스트</title>
-      <link>https://blog.haneul-lee.com/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
+      <link>https://blog.haneul-lee.com/post/unittest/javascript-unit-test/</link>
       <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
-      <description>1.자바스크립트 테스팅 환경 테스트 러너  테스트 파일을 읽어들여 실행하고, 결과를 출력 파일이 변경된 경우 자동으로 실행해주는 watch 등의 기능 제공 Reporter를 지정해서 원하는 형태로 결과를 출력 Node 환경에서 실행 : Mocha, Jest, AVA  브라우저 환경에서 실행 : Karma → 웹서버에 연결되어 있는 브라우저 위에서 테스트를 수행  카르마보다 Node가 조금 더 빠르다.
-테스트 프레임워크  사용자가 테스트 코드를 작성할 수 있는 기반을 제공 프레임 워크에 의해 제공된 함수를 이용해서 테스트 코드를 작성⇒ 프레임 워크가 자동으로 테스트를 실행하고 결과를 수집해서 출력.</description>
+      <guid>https://blog.haneul-lee.com/post/unittest/javascript-unit-test/</guid>
+      <description></description>
     </item>
     
   </channel>

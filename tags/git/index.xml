@@ -9,32 +9,33 @@
     <lastBuildDate>Mon, 24 May 2021 18:09:54 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git - 이미 commit한 author 수정하기</title>
-      <link>https://blog.haneul-lee.com/2021/05/git-%EC%9D%B4%EB%AF%B8-commit%ED%95%9C-author-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0/</link>
+      <link>https://blog.haneul-lee.com/post/git/git-change-author-commit/</link>
       <pubDate>Mon, 24 May 2021 18:09:54 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/git-%EC%9D%B4%EB%AF%B8-commit%ED%95%9C-author-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
-      <description>git config user.email 수정  git config --global user.email &amp;quot;이메일&amp;quot; git config --global user.name &amp;quot;이름&amp;quot; author(이름)을 바꿀 commit 지정 git rebase 명령을 통해 author을 바꿀 커밋을 선택해준다.
-// ~ 뒤에 입력한 숫자는 4번째 커밋까지 선택 git rebase -i HEAD~4 그럼 아래와 같은 vi 화면이 뜨는데 변경할 커밋의 pick =&amp;gt; e로 변경해주고 :wq 를 눌러 저장, 종료해준다. git rebase -i HEAD~4 변경할 author 입력 git commit &amp;ndash;amend &amp;ndash;author=&amp;ldquo;아이디 &amp;lt;이메일&amp;gt;&amp;rdquo; 입력</description>
+      <guid>https://blog.haneul-lee.com/post/git/git-change-author-commit/</guid>
+      <description>git config user.email 수정 git config --global user.email &amp;quot;이메일&amp;quot; git config --global user.name &amp;quot;이름&amp;quot; author(이름)을 바꿀 commit 지정 git rebase 명령을 통해 author을 바꿀 커밋을 선택해준다.
+// ~ 뒤에 입력한 숫자는 4번째 커밋까지 선택 git rebase -i HEAD~4 그럼 아래와 같은 vi 화면이 뜨는데 변경할 커밋의 pick =&amp;gt; e로 변경해주고 :wq 를 눌러 저장, 종료해준다. git rebase -i HEAD~4 변경할 author 입력 git commit &amp;ndash;amend &amp;ndash;author=&amp;ldquo;아이디 &amp;lt;이메일&amp;gt;&amp;rdquo; 입력
+git commit --amend --author=&amp;quot;haneulee &amp;lt;lovesky4294@gmail.</description>
     </item>
     
     <item>
       <title>Githup SSH  키 생성 및 등록</title>
-      <link>https://blog.haneul-lee.com/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/</link>
+      <link>https://blog.haneul-lee.com/post/github/github-ssh-key/</link>
       <pubDate>Fri, 21 May 2021 10:30:25 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/</guid>
+      <guid>https://blog.haneul-lee.com/post/github/github-ssh-key/</guid>
       <description>Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh &amp;lt;!--adsense--&amp;gt; // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &amp;#34;엔터&amp;#34; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !</description>
     </item>
     
     <item>
       <title>Git 오류 fatal: refusing to merge unrelated histories</title>
-      <link>https://blog.haneul-lee.com/2021/05/git-%EC%98%A4%EB%A5%98-fatal-refusing-to-merge-unrelated-histories/</link>
+      <link>https://blog.haneul-lee.com/post/git/git-error-fatal-merge-history/</link>
       <pubDate>Thu, 20 May 2021 10:45:13 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/git-%EC%98%A4%EB%A5%98-fatal-refusing-to-merge-unrelated-histories/</guid>
+      <guid>https://blog.haneul-lee.com/post/git/git-error-fatal-merge-history/</guid>
       <description>git clone 후, git push 하는 과정 중에
 다음과 같이 오류가 날 경우가 있다.
- 이는 push 하기 전에 git pull 을 먼저 실행해야 하는데 그 전에 수정했던 어떤 커밋과 꼬여 오류가 날 경우..
+이는 push 하기 전에 git pull 을 먼저 실행해야 하는데 그 전에 수정했던 어떤 커밋과 꼬여 오류가 날 경우..
 fatal: refusing to merge unrelated histories 이럴 때는
 아래처럼 실행하주고,
 다시 git push를 하면 해결됨
@@ -43,21 +44,21 @@ git pull origin 브런치명 --allow-unrelated-histories </description>
     
     <item>
       <title>Git Profile 꾸미기 👩🏻‍💻</title>
-      <link>https://blog.haneul-lee.com/2021/05/git-profile-%EA%BE%B8%EB%AF%B8%EA%B8%B0/</link>
+      <link>https://blog.haneul-lee.com/post/git/git-profile/</link>
       <pubDate>Tue, 18 May 2021 16:10:04 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/git-profile-%EA%BE%B8%EB%AF%B8%EA%B8%B0/</guid>
+      <guid>https://blog.haneul-lee.com/post/git/git-profile/</guid>
       <description>Git Profile 꾸미기 먼저 아래 그림과 같이 git repository에서 나의 id와 똑같은 이름으로 새로운 repository를 생성한다. _ add READ.me 를 클릭하기, public으로 !! _ 생성이 되면 해당 레파지토리에 read.me에는 다음과 같이 작성되어 있을 것이다.
- ### Hi there 👋 &amp;lt;!-- **haneulee/haneulee** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. Here are some ideas to get you started: - 🔭 I’m currently working on .</description>
+### Hi there 👋 &amp;lt;!-- **haneulee/haneulee** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. Here are some ideas to get you started: - 🔭 I’m currently working on .</description>
     </item>
     
     <item>
       <title>Git Feature 브랜치 생성 &amp; push</title>
-      <link>https://blog.haneul-lee.com/2021/05/git-feature-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EC%83%9D%EC%84%B1-push/</link>
+      <link>https://blog.haneul-lee.com/post/git/git-feature-branch/</link>
       <pubDate>Tue, 18 May 2021 16:01:06 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/git-feature-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EC%83%9D%EC%84%B1-push/</guid>
-      <description>branch 생성  아래 명령어로 새로운 브랜치 생성   $ git branch &amp;lt;branchName&amp;gt; 생성한 브랜치로 이동  생성한 브랜치로 체크아웃하기  $ git checkout &amp;lt;branchName&amp;gt; // 브랜치 생성 &amp;amp; 체크아웃 $ git checkout -b &amp;lt;branchName&amp;gt; 원격 저장소에 push 하기  로컬에서만 생성한 branch를 upstream branch로 만든다.  $ git push --set-upstream origin &amp;lt;branchName&amp;gt; </description>
+      <guid>https://blog.haneul-lee.com/post/git/git-feature-branch/</guid>
+      <description>branch 생성  아래 명령어로 새로운 브랜치 생성  $ git branch &amp;lt;branchName&amp;gt; 생성한 브랜치로 이동  생성한 브랜치로 체크아웃하기  $ git checkout &amp;lt;branchName&amp;gt; // 브랜치 생성 &amp;amp; 체크아웃 $ git checkout -b &amp;lt;branchName&amp;gt; 원격 저장소에 push 하기  로컬에서만 생성한 branch를 upstream branch로 만든다.  $ git push --set-upstream origin &amp;lt;branchName&amp;gt; </description>
     </item>
     
   </channel>

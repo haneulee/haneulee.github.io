@@ -9,20 +9,21 @@
     <lastBuildDate>Mon, 03 Jan 2022 12:57:22 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TIL📚 앱개발 스터디 - 4 week</title>
-      <link>https://blog.haneul-lee.com/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-4-week/</link>
+      <link>https://blog.haneul-lee.com/post/til/sparta-coding-forth-week/</link>
       <pubDate>Mon, 03 Jan 2022 12:57:22 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-4-week/</guid>
+      <guid>https://blog.haneul-lee.com/post/til/sparta-coding-forth-week/</guid>
       <description>TIL📚 앱개발 스터디 - 4 week Firebase 👩🏻‍💻 파이어베이스는 구글에서 만든 서버리스 서비스
-  데이터베이스 이미지 파일 서버 푸시 알람 기능 로그인 인증 기능  Serverless  데이터 생성 데이터 조회 데이터 삭제/수정 등을 제공해주는 서비스들이 존재합니다.  파이어베이스 설치 npm install firebase yarn add firebase expo install firebase 파이어베이스 config 설정 처음에 데이터베이스 연동이 되지 않아 확인해봤더니 지역 설정이 맞지 않는 경우가 있어 databaseURL을 따로 설정해주었다.</description>
+  데이터베이스 이미지 파일 서버 푸시 알람 기능 로그인 인증 기능  Serverless  데이터 생성 데이터 조회 데이터 삭제/수정 등을 제공해주는 서비스들이 존재합니다.  파이어베이스 설치 npm install firebase yarn add firebase expo install firebase 파이어베이스 config 설정 처음에 데이터베이스 연동이 되지 않아 확인해봤더니 지역 설정이 맞지 않는 경우가 있어 databaseURL을 따로 설정해주었다.
+// 사용할 파이어베이스 서비스 주석을 해제합니다 //import &amp;quot;firebase/compat/auth&amp;quot;; import &amp;quot;firebase/compat/database&amp;quot;; //import &amp;quot;firebase/compat/firestore&amp;quot;; //import &amp;quot;firebase/compat/functions&amp;quot;; import &amp;quot;firebase/compat/storage&amp;quot;; import firebase from &amp;quot;firebase/compat/app&amp;quot;; // Initialize Firebase //파이어베이스 사이트에서 봤던 연결정보를 여기에 가져옵니다 const firebaseConfig = { apiKey: &amp;quot;&amp;quot;, authDomain: &amp;quot;sparta-react-native-11669.</description>
     </item>
     
     <item>
       <title>MongoDB 시작하기 🌱 </title>
-      <link>https://blog.haneul-lee.com/2021/06/mongodb-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+      <link>https://blog.haneul-lee.com/post/mongodb/mongodb-start/</link>
       <pubDate>Fri, 04 Jun 2021 10:03:44 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/06/mongodb-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://blog.haneul-lee.com/post/mongodb/mongodb-start/</guid>
       <description>MongoDB MongoDB 란 ? mongoDB는 문서지향(Document-Oriented) 저장소를 제공하는 NoSQL 데이터베이스 시스템으로, 현존하는 NoSQL 데이터베이스 중 인지도 1위를 유지하고 있습니다. mongoDB에서는 데이터가 Document로 불리며, 이 데이터의 집합을 Collection(RDMS에서는 Table)이라고 합니다. 스키마 제약 없이 자유롭고, BSON(Binary JSON) 형태로 각 문서가 저장되며 배열(Array)이나 날짜(Date) 등 기존 RDMS에서 지원하지 않던 형태로도 저장할 수 있기 때문에 JOIN이 필요 없이 한 문서에 좀 더 이해하기 쉬운 형태 그대로 정보를 저장할 수 있다는 것이 특징입니다.
 특히 mongoDB는 문서지향 데이터베이스로, 이것은 객체지향 프로그래밍과 잘 맞고 JSON을 사용할 때 아주 유용합니다.</description>
     </item>

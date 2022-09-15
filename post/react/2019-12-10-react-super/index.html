@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+ <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/blog.haneul-lee.com\/",
+  "author": {
+    "@type": "Person",
+    "name": "Haneul Devlog",
+    
+    "image": "https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png"
+    
+  },
+  "name":"Haneul Devlog 개발 블로그 📚",
+  "description":"Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?\n요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]\n웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.\n이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.\n 첫번째,\n 나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.\nclass Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } \/\/ .",
+  "url":"https:\/\/blog.haneul-lee.com\/post\/react\/2019-12-10-react-super\/",
+  "keywords":"[]"
+}
+
+</script> <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Haneul Devlog">
+<meta name="keywords" content="">
+<meta name="description" content="Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
+요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
+웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
+이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
+ 첫번째,
+ 나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
+class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .">
+
+
+<meta property="og:description" content="Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
+요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
+웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
+이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
+ 첫번째,
+ 나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
+class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why Do We Write super(props)?">
+<meta name="twitter:title" content="Why Do We Write super(props)?">
+<meta property="og:url" content="https://blog.haneul-lee.com/post/react/2019-12-10-react-super/">
+<meta property="twitter:url" content="https://blog.haneul-lee.com/post/react/2019-12-10-react-super/">
+<meta property="og:site_name" content="Haneul Devlog 개발 블로그 📚">
+<meta property="og:description" content="Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
+요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
+웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
+이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
+ 첫번째,
+ 나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
+class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .">
+<meta name="twitter:description" content="Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
+요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
+웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
+이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
+ 첫번째,
+ 나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
+class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-12-10T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2018-12-10T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+      <meta property="article:section" content="React">
+    
+  
+  
+    
+      <meta property="article:tag" content="javascript">
+    
+      <meta property="article:tag" content="hooks">
+    
+      <meta property="article:tag" content="super">
+    
+      <meta property="article:tag" content="리액트">
+    
+      <meta property="article:tag" content="훅스">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png">
+
+
+
+
+
+
+    <title>Why Do We Write super(props)?</title>
+
+    <link
+      rel="icon"
+      href="https://blog.haneul-lee.com/img/favicon.ico"
+    />
+     
+
+    <link rel="canonical" href="https://blog.haneul-lee.com/post/react/2019-12-10-react-super/" />
+
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+      integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    
+    
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-3icga1qbbcdn9af8rifmu4vmsfi4zvyxs7muf1edt0qksuqtyp90lgm1ag.min.css" />
+    
+      <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
+}
+</script>
+  
+  </head>
+</html>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+ <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+ <div class="header-title">
+   <a class="header-title-link" href="https://blog.haneul-lee.com/">Haneul Devlog 개발 블로그 📚</a>
+ </div>
+ 
+   
+     <a class="header-right-picture "
+        href="https://blog.haneul-lee.com/#about">
+   
+   
+   
+     
+       <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+     
+   
+   </a>
+ 
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+ <div class="sidebar-container">
+   
+     <div class="sidebar-profile">
+       <a href="https://blog.haneul-lee.com/#about">
+         <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+       </a>
+       <h4 class="sidebar-profile-name">Haneul Devlog</h4>
+       
+         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</h5>
+       
+     </div>
+   
+
+   <div class="js-toggle-wrapper">
+    <div class="js-toggle">
+        <div class="js-toggle-track">
+            <div class="js-toggle-track-check">
+                <img
+                    src="data:image/png;base64,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"
+                    role="presentation"
+                    style="pointer-events: none"
+                    width="16"
+                    height="16"
+                />
+            </div>
+            <div class="js-toggle-track-x">
+                <img
+                    src="data:image/png;base64,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"
+                    role="presentation"
+                    style="pointer-events: none"
+                    width="16"
+                    height="16"
+                />
+            </div>
+        </div>
+        <div class="js-toggle-thumb"></div>
+        <input
+            class="js-toggle-screenreader-only"
+            type="checkbox"
+            aria-label="Switch between Dark and Light mode"
+        />
+    </div>
+</div>
+
+<style>
+     
+
+    body.dark-mode,
+    body.dark-mode #main,
+    body.dark-mode #header,
+    body.dark-mode #bottom-bar,
+    body.dark-mode .btn,
+    body.dark-mode a.tag {
+        background: rgb(45, 45, 45) !important;
+    }
+
+    body.dark-mode,
+    body.dark-mode *:not(a):not(#about):not(i) {
+        color: #f5f5f5;
+    }
+
+    body.dark-mode .alert.info,
+    body.dark-mode .alert.info > p {
+        color: #5d686f !important;
+    }
+
+    .js-toggle-wrapper {
+        margin: 1rem auto;
+        text-align: center;
+        display: block;
+    }
+
+    .js-toggle {
+        touch-action: pan-x;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        -webkit-touch-callout: none;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .js-toggle-screenreader-only {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .js-toggle-track {
+        width: 50px;
+        height: 24px;
+        padding: 0;
+        border-radius: 30px;
+        background-color: black;
+        transition: all 0.2s ease;
+    }
+    .js-toggle-track-check {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        left: 5px;
+        top: 0px;
+        bottom: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: 0;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+    }
+
+    .js-toggle--checked .js-toggle-track-check {
+        opacity: 1;
+        transition: opacity 0.25s ease;
+    }
+
+    .js-toggle-track-x {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        right: 5px;
+        top: 0px;
+        bottom: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: 0;
+        opacity: 1;
+        transition: opacity 0.25s ease;
+    }
+
+    .js-toggle--checked .js-toggle-track-x {
+        opacity: 0;
+    }
+
+    .js-toggle-thumb {
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: #fafafa;
+        box-sizing: border-box;
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+        transform: translateX(0);
+    }
+
+    .js-toggle--checked .js-toggle-thumb {
+        transform: translateX(26px);
+        border-color: #ffffff;
+    }
+</style>
+
+<script>
+    var body = document.body;
+    var switcher = document.getElementsByClassName("js-toggle")[0];
+
+    
+    switcher.addEventListener("click", function () {
+        this.classList.toggle("js-toggle--checked");
+        this.classList.add("js-toggle--focus");
+        
+        if (this.classList.contains("js-toggle--checked")) {
+            body.classList.add("dark-mode");
+            
+            localStorage.setItem("darkMode", "true");
+        } else {
+            body.classList.remove("dark-mode");
+            setTimeout(function () {
+                localStorage.removeItem("darkMode");
+            }, 100);
+        }
+    });
+
+    
+    if (localStorage.getItem("darkMode")) {
+        
+        switcher.classList.add("js-toggle--checked");
+        body.classList.add("dark-mode");
+    }
+</script>
+
+   <ul class="sidebar-buttons">
+     
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/categories/development" title="Development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-code"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+   </ul>
+   <ul class="sidebar-buttons">
+     
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneul-lee.com" target="_blank" rel="noopener" title="Website">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-window-maximize"></i>
+      
+      <span class="sidebar-button-desc">Website</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/resume/" title="Resume">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-file"></i>
+      
+      <span class="sidebar-button-desc">Resume</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener" title="LinkedIn">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener" title="Email">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+   </ul>
+   <ul class="sidebar-buttons">
+     
+
+   </ul>
+ </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      Why Do We Write super(props)?
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2018-12-10T00:00:00Z">
+        
+  December 10, 2018
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/react">React</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              
+              
+                
+                
+                <h1 id="why-do-we-write-superprops">Why Do We Write super(props)?</h1>
+<p>: 왜 super(props)를 써야 하는가?</p>
+<p>요즘에는 <a href="https://reactjs.org/docs/hooks-intro.html">훅스(Hooks)</a>가 새로운 트렌드이다.
+[클래스 사용 지양]</p>
+<p>웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.</p>
+<!-- raw HTML omitted -->
+<div class="alert info ">
+  <p><strong>이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.</strong></p>
+</div>
+<p>첫번째,</p>
+<hr>
+<p>나는 정말 <code>super(props)</code>를 내가 알고싶은 것보다 더 많이 사용했다.</p>
+<pre tabindex="0"><code class="language-jsx{3}" data-lang="jsx{3}">class Checkbox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { isOn: true };
+  }
+  // ...
+}
+</code></pre><p>물론, <a href="https://github.com/tc39/proposal-class-fields">클래스 필드 제안</a>은 이 과정을 생략하게 한다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Checkbox</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">isOn</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>이런 문법은 리액트 0.13이 2015년 자바스크립트 클래스에 대한 지원이 추가될 때 계획되었다.
+constructor를 정의하고, super(props)를 부르는 것은 클래스 필드가 편리한 대안을 제공하기 전까지 항상 임시적인 해결책이었다.</p>
+<p>그러나 es2015 기능만 사용하는 아래 예제를 보자.</p>
+<pre tabindex="0"><code class="language-jsx{3}" data-lang="jsx{3}">class Checkbox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { isOn: true };
+  }
+  // ...
+}
+</code></pre><p>왜 우리는 <code>super</code>를 사용할까? 사용하지 않으면 안될까?
+만약 사용한다 해도 props를 넘기지 않으면 무슨일이 일어날까?
+어떤 인자들이 있을까?
+찾아보자.</p>
+<hr>
+<p>자바스크립트에서는 <code>super</code>가 부모 클래스 생성자를 참조한다.
+(여기 예제에서는 React.Component 구현을 가리킨다.)</p>
+<p>중요한 것은 부모 생성자를 호출할 때까지 생성자 안에서 this를 사용할 수 없다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Checkbox</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#75715e">// 🔴 Can’t use `this` yet
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+    <span style="color:#75715e">// ✅ Now it’s okay though
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">isOn</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+  }
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>왜 자바스크립트가 this 전에 부모 생성자가 실행되게 하는데에는 좋은 이유가 있다. 클래스 계층 구조를 생각해보라.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+  }
+}
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PolitePerson</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Person</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">greetColleagues</span>(); <span style="color:#75715e">// 🔴 This is disallowed, read below why
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">name</span>);
+  }
+  <span style="color:#a6e22e">greetColleagues</span>() {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Good morning folks!&#34;</span>);
+  }
+}
+</code></pre></div><p><code>super</code> 전에 <code>this</code>가 사용된다고 상상해봐라. 한 달 후에, 메세지에서 사람의 이름을 사용하기 위해 greetColleagues를 수정할 수 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">greetColleagues</span>() {
+    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;Good morning folks!&#39;</span>);
+    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;My name is &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;, nice to meet you!&#39;</span>);
+}
+</code></pre></div><p>그러나 super() 호출이 this를 설정하기 전에 this.greetColleagues()가 불려진다는 것을 잊었다.
+그래서 this.name은 아직 정의되지 않았다. 보다시피, 이런 코드는 생각하기 매우 어렵다.</p>
+<p>이런 문제를 피하기 위해 자바스크립트는 생성자에서 this를 사용하고 싶을 때, super를 먼저 호출하게 한다.
+이런 제한은 클래스로 정의된 리액트 컴포넌트에도 해당된다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+    <span style="color:#75715e">// ✅ Okay to use `this` now
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">isOn</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+}
+</code></pre></div><dl>
+<dt>이는 또 다른 질문을 남긴다.</dt>
+<dd>왜 props를 전달할까?</dd>
+</dl>
+<p>기본 React.Component 생성자가 this.props를 초기화할 수 있도록 super를 통해 props를 전달하는 것이 필수라고 생각할 수 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// Inside React
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">props</span>;
+    <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>  }
+}
+</code></pre></div><p>그리고 그것은 진실과 멀지 않다. <a href="https://github.com/facebook/react/blob/1d25aa5787d4e19704c049c3cfa985d3b5190e0d/packages/react/src/ReactBaseClasses.js#L22">사실 그렇게 하는것이다.</a>
+그러나 어떻게든 props 인자 없이 super()를 호출하더라도 render 또는 다른 메소드에서도 this.props에 접근할 수 있다.
+(직접 시도해봐라!)
+어떻게 이게 가능할까? 리액트는 생성자를 호출한 직후에 인스턴스에 props를 할당하는 것으로 밝혀졌다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// Inside React
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">instance</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">YourComponent</span>(<span style="color:#a6e22e">props</span>);
+<span style="color:#a6e22e">instance</span>.<span style="color:#a6e22e">props</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">props</span>;
+</code></pre></div><p>그래서 super()에 props를 전달하는 것을 잊어버려도 리액트는 나중에 props를 set 해준다. 여기에는 이유가 있는데,
+리액트가 클래스를 지원할 때, 단지 es6 클래스 자체만 지원하는 것이 아니다. 목표는 가능한 한 광범위한 클래스 추상화를 지원하는 것이었다. ClojureScript, CoffeeScript, ES6, Fable, Scala.js, TypeScript 또는 기타 솔루션이 컴포넌트를 정의하는데 얼마나 성공적이었는지 <a href="https://reactjs.org/blog/2015/01/27/react-v0.13.0-beta-1.html#other-languages">분명하지 않다</a>.<br>
+그래서 리액트는 es6 클래스가 그렇더라도 super()를 호출하는 것이 필요한지에 대해 의도적으로 알려주지 않은 것이다.
+그렇다면 <code>super(props)</code> 대신 <code>super()</code>를 사용할 수 있다는 것인가?
+<strong>여전히 혼란스럽기 때문에 아니다.</strong>
+물론 리액트는 생성자가 <em>실행된 후에</em> this.props를 할당할 것이다. 하지만 this.props는 super 호출과 생성자 마지막 사이에서 undefiend가 될 것이다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// Inside React
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">props</span>;
+    <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>  }
+}
+
+<span style="color:#75715e">// Inside your code
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Button</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">super</span>(); <span style="color:#75715e">// 😬 We forgot to pass props
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">props</span>); <span style="color:#75715e">// ✅ {}
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>); <span style="color:#75715e">// 😬 undefined
+</span><span style="color:#75715e"></span>  }
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>생성자에서 호출된 일부 메소드에서 이 이슈가 발생하면 디버깅하기 어려울 수 있다. 그래서 꼭 필요한 것은 아니지만 항상 <code>super(props)</code>를 하는것을 추천한다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Button</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>); <span style="color:#75715e">// ✅ We passed props
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">props</span>); <span style="color:#75715e">// ✅ {}
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>); <span style="color:#75715e">// ✅ {}
+</span><span style="color:#75715e"></span>  }
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>이렇게 하면 생성자가 끝나기 전에 <code>this.props</code>가 설정된다.</p>
+<hr>
+<p>오랫동안 리액트 사용자들이 궁금해할만한 하나가 있다.
+Context API를 클래스에서 사용할 때(레거시 <code>contextTypes</code> 또는 React16.6에 추가된 최신 <code>contextType API</code>의 경우) 컨텍스트가 생성자의 두번째 인자로 전달된다는 사실을 알고 있을 것이다.</p>
+<p>그렇다면 왜 우리는 <code>super(props, context)</code>를 써야하나?
+컨텍스트가 자주 사용되지 않기 때문에 이 문제가 그렇게 많이 발생하지는 않는다.</p>
+<p><strong><a href="https://github.com/tc39/proposal-class-fields">클래스 필드 제안</a>으로 모든 문제는 대부분 없어진다.</strong> 명시적 생성자 없이는 모든 인자들이 자동으로 전달된다. 이는 필요하다면 <code>this.props</code> 나 <code>this.context</code>에 대한 참조를 포함하도록 <code>state = {}</code>와 같은 표현식을 허용한다.</p>
+<p>훅스(Hooks)는 <code>super</code>나 <code>this</code>가 없다. 이는 다음 글에서 다룰 것이다.</p>
+<h3 id="dan-abramov-bloghttpsoverreactediowhy-do-we-write-super-props-참고"><a href="https://overreacted.io/why-do-we-write-super-props/">Dan Abramov blog</a> 참고</h3>
+
+              
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/javascript/">javascript</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/hooks/">hooks</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/super/">super</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%EB%A6%AC%EC%95%A1%ED%8A%B8/">리액트</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%ED%9B%85%EC%8A%A4/">훅스</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/react/2019-11-10-react-state/" data-tooltip="how to handle React state array" aria-label="NEXT: how to handle React state array">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/redux/2018-10-03-study-redux/" data-tooltip="Redux 시작하기 🔥" aria-label="PREVIOUS: Redux 시작하기 🔥">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.haneul-lee.com/post/react/2019-12-10-react-super/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.haneul-lee.com/post/react/2019-12-10-react-super/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.haneul-lee.com/post/react/2019-12-10-react-super/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/sharing/share?url=https://blog.haneul-lee.com/post/react/2019-12-10-react-super/" title="Share on Google&#43;" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+              
+            
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="5041197559"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <span class="copyrights">
+      &copy; 2022 <a href="https://github.com/haneulee">Haneul Lee</a>. All Rights Reserved
+    </span>
+  </footer>
+  
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/react/2019-11-10-react-state/" data-tooltip="how to handle React state array" aria-label="NEXT: how to handle React state array">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/redux/2018-10-03-study-redux/" data-tooltip="Redux 시작하기 🔥" aria-label="PREVIOUS: Redux 시작하기 🔥">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.haneul-lee.com/post/react/2019-12-10-react-super/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.haneul-lee.com/post/react/2019-12-10-react-super/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.haneul-lee.com/post/react/2019-12-10-react-super/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/sharing/share?url=https://blog.haneul-lee.com/post/react/2019-12-10-react-super/" title="Share on Google&#43;" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Freact%2F2019-12-10-react-super%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Freact%2F2019-12-10-react-super%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Freact%2F2019-12-10-react-super%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/sharing/share?url=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Freact%2F2019-12-10-react-super%2F" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Devlog</h4>
+    
+      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Switzerland
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://blog.haneul-lee.com/js/script-oedftdofg5pug6u3d57lixk05cozh9lfe0dmvq6jnf2udnq33rrgnc0adf.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

@@ -9,20 +9,20 @@
     <lastBuildDate>Wed, 26 May 2021 14:07:54 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/%EC%84%9C%EB%B2%84/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Express 란? 🚀🤔 </title>
-      <link>https://blog.haneul-lee.com/2021/05/express-%EB%9E%80/</link>
+      <link>https://blog.haneul-lee.com/post/express/express-start/</link>
       <pubDate>Wed, 26 May 2021 14:07:54 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/express-%EB%9E%80/</guid>
-      <description>Express 설명  Express는 웹 및 모바일 애플리케이션을 위한 일련의 강력한 기능을 제공하는 간결하고 유연한 Node.js 웹 애플리케이션 프레임워크입니다. 자유롭게 활용할 수 있는 수많은 HTTP 유틸리티 메소드 및 미들웨어를 통해 쉽고 빠르게 강력한 API를 작성할 수 있습니다.  설치 npm install express API  const express = require(&amp;#34;express&amp;#34;); const app = express(); const port = 3000; app.get(&amp;#34;/&amp;#34;, (req, res) =&amp;gt; { res.send(&amp;#34;Hello World!&amp;#34;); }); app.listen(port, () =&amp;gt; { console.log(`Example app listening at http://localhost:${port}`); }); get() &amp;amp; post() //GET 방식의 METHOD app.</description>
+      <guid>https://blog.haneul-lee.com/post/express/express-start/</guid>
+      <description>Express 설명  Express는 웹 및 모바일 애플리케이션을 위한 일련의 강력한 기능을 제공하는 간결하고 유연한 Node.js 웹 애플리케이션 프레임워크입니다. 자유롭게 활용할 수 있는 수많은 HTTP 유틸리티 메소드 및 미들웨어를 통해 쉽고 빠르게 강력한 API를 작성할 수 있습니다.  설치 npm install express API const express = require(&amp;#34;express&amp;#34;); const app = express(); const port = 3000; app.get(&amp;#34;/&amp;#34;, (req, res) =&amp;gt; { res.send(&amp;#34;Hello World!&amp;#34;); }); app.listen(port, () =&amp;gt; { console.log(`Example app listening at http://localhost:${port}`); }); get() &amp;amp; post() //GET 방식의 METHOD app.</description>
     </item>
     
     <item>
       <title>리눅스 nodejs, npm 설치</title>
-      <link>https://blog.haneul-lee.com/2021/05/%EB%A6%AC%EB%88%85%EC%8A%A4-nodejs-npm-%EC%84%A4%EC%B9%98/</link>
+      <link>https://blog.haneul-lee.com/post/linux/node-install/</link>
       <pubDate>Tue, 18 May 2021 12:37:15 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/%EB%A6%AC%EB%88%85%EC%8A%A4-nodejs-npm-%EC%84%A4%EC%B9%98/</guid>
-      <description>1 Nodejs 설치   설치에 관련된 설명은 아래 링크를 참조하였습니다.  https://nodejs.org/ko/download/package-manager/
+      <guid>https://blog.haneul-lee.com/post/linux/node-install/</guid>
+      <description>1 Nodejs 설치  설치에 관련된 설명은 아래 링크를 참조하였습니다.  https://nodejs.org/ko/download/package-manager/
  Nodejs 10버전을 설치하기 위하여 아래명령어를 실행합니다.  $ curl &amp;ndash;silent &amp;ndash;location https://rpm.nodesource.com/setup_10.x | sudo bash &amp;ndash;
  Node.js 설치 준비가 완료되었습니다. 아래의 명령어로 install 합니다.  $ yum install nodejs -y
  설치를 확인합니다  $ node &amp;ndash;version $ npm &amp;ndash;version</description>
@@ -30,12 +30,12 @@
     
     <item>
       <title>리눅스 Nginx 설치</title>
-      <link>https://blog.haneul-lee.com/2021/05/%EB%A6%AC%EB%88%85%EC%8A%A4-nginx-%EC%84%A4%EC%B9%98/</link>
+      <link>https://blog.haneul-lee.com/post/linux/nginx-install/</link>
       <pubDate>Tue, 18 May 2021 12:36:03 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/%EB%A6%AC%EB%88%85%EC%8A%A4-nginx-%EC%84%A4%EC%B9%98/</guid>
+      <guid>https://blog.haneul-lee.com/post/linux/nginx-install/</guid>
       <description>리눅스 Nginx 설치 centos6
-vi /etc/yum.repos.d/nginx.repo \[nginx\] name=nginx repo baseurl=http://nginx.org/packages/centos/6/@basearch gpgcheck=0 enabled=1  위 처럼 저장 후,
+vi /etc/yum.repos.d/nginx.repo \[nginx\] name=nginx repo baseurl=http://nginx.org/packages/centos/6/@basearch gpgcheck=0 enabled=1 위 처럼 저장 후,
 yum install nginx nginx -v 시작 : nginx
 종료 : nginx -s stop
  NGINX install support tls v1.3 in CentOS 7 0. Prerequisites openssl 1.1.1 OpenSSL 1.1.1a upgrade for CentOS 7
@@ -46,16 +46,16 @@ yum -y install wget openssl-devel libxml2-devel libxslt-devel gd-devel perl-ExtU
     
     <item>
       <title>ssh 백그라운드 실행 방법</title>
-      <link>https://blog.haneul-lee.com/2021/05/ssh-%EB%B0%B1%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95/</link>
+      <link>https://blog.haneul-lee.com/post/linux/ssh-background-execution/</link>
       <pubDate>Tue, 18 May 2021 12:33:46 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/ssh-%EB%B0%B1%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95/</guid>
+      <guid>https://blog.haneul-lee.com/post/linux/ssh-background-execution/</guid>
       <description>ssh 백그라운드 실행 방법 터미널에서 또는 명령창에서
 ssh 로 접속하여 서버를 실행 후,
 터미널을 종료하거나 다른 프로세스를 실행하면 이전 실행이 중단된다.
 해당 서버에서 계속 서버를 띄어놓기 위해
 백그라운드로 실행하는 방법이 있다.
- nohup nohup node server.js &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;
+nohup nohup node server.js &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;
 (.out 파일 없이 실행하기)
 &amp;lt;실행 방법&amp;gt;
 1. 백그라운드에서 돌리기 위한 실행파일을 준비한다. (나의 실행파일 이름은 main.js)
@@ -66,10 +66,10 @@ ssh 로 접속하여 서버를 실행 후,
     
     <item>
       <title>connection reset by [ip] port 22</title>
-      <link>https://blog.haneul-lee.com/2021/05/connection-reset-by-ip-port-22/</link>
+      <link>https://blog.haneul-lee.com/post/linux/connection-reset/</link>
       <pubDate>Tue, 18 May 2021 12:31:38 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/connection-reset-by-ip-port-22/</guid>
+      <guid>https://blog.haneul-lee.com/post/linux/connection-reset/</guid>
       <description>리눅스에서 ssh 접속 후 아무 작업을 하지 않고 그대로 두면 Connection reset by peer 메시지와 함께 접속이 끊기는 경우가 발생한다.
 Read from remote host xxx.xxx.xxx.xxx: Connection reset by peer
 Connection to xxx.xxx.xxx.xxx closed.

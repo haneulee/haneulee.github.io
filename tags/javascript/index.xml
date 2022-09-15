@@ -9,31 +9,32 @@
     <lastBuildDate>Wed, 05 Jan 2022 19:26:50 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TIL📚 앱개발 스터디 - 5 week</title>
-      <link>https://blog.haneul-lee.com/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-5-week/</link>
+      <link>https://blog.haneul-lee.com/post/til/sparta-coding-fifth-week/</link>
       <pubDate>Wed, 05 Jan 2022 19:26:50 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-5-week/</guid>
+      <guid>https://blog.haneul-lee.com/post/til/sparta-coding-fifth-week/</guid>
       <description>TIL📚 앱개발 스터디 - 5 week 구글 앱스토어 출시 아직 검토중!
  프로젝트 녹화 영상 취지 &amp;amp; 설명 꿀팁에 대한 정보를 담은 앱
-기술 설명  파이어베이스 리액트 네이티브 expo axios &amp;hellip;etc  &amp;quot;@expo/vector-icons&amp;quot;: &amp;quot;^12.0.0&amp;quot;, &amp;quot;@react-native-async-storage/async-storage&amp;quot;: &amp;quot;~1.15.0&amp;quot;, &amp;quot;@react-native-community/masked-view&amp;quot;: &amp;quot;^0.1.11&amp;quot;, &amp;quot;@react-navigation/native&amp;quot;: &amp;quot;^6.0.6&amp;quot;, &amp;quot;@react-navigation/stack&amp;quot;: &amp;quot;^6.0.11&amp;quot;, &amp;quot;axios&amp;quot;: &amp;quot;^0.24.0&amp;quot;, &amp;quot;expo&amp;quot;: &amp;quot;~43.0.2&amp;quot;, &amp;quot;expo-ads-admob&amp;quot;: &amp;quot;~11.0.3&amp;quot;, &amp;quot;expo-app-loading&amp;quot;: &amp;quot;~1.2.1&amp;quot;, &amp;quot;expo-asset&amp;quot;: &amp;quot;~8.4.3&amp;quot;, &amp;quot;expo-constants&amp;quot;: &amp;quot;^13.0.0&amp;quot;, &amp;quot;expo-font&amp;quot;: &amp;quot;~10.0.3&amp;quot;, &amp;quot;expo-linking&amp;quot;: &amp;quot;~2.4.2&amp;quot;, &amp;quot;expo-location&amp;quot;: &amp;quot;^14.0.1&amp;quot;, &amp;quot;expo-status-bar&amp;quot;: &amp;quot;~1.1.0&amp;quot;, &amp;quot;firebase&amp;quot;: &amp;quot;^9.6.1&amp;quot;, &amp;quot;react&amp;quot;: &amp;quot;17.0.1&amp;quot;, &amp;quot;react-dom&amp;quot;: &amp;quot;17.</description>
+기술 설명  파이어베이스 리액트 네이티브 expo axios &amp;hellip;etc  &amp;quot;@expo/vector-icons&amp;quot;: &amp;quot;^12.0.0&amp;quot;, &amp;quot;@react-native-async-storage/async-storage&amp;quot;: &amp;quot;~1.15.0&amp;quot;, &amp;quot;@react-native-community/masked-view&amp;quot;: &amp;quot;^0.1.11&amp;quot;, &amp;quot;@react-navigation/native&amp;quot;: &amp;quot;^6.0.6&amp;quot;, &amp;quot;@react-navigation/stack&amp;quot;: &amp;quot;^6.0.11&amp;quot;, &amp;quot;axios&amp;quot;: &amp;quot;^0.24.0&amp;quot;, &amp;quot;expo&amp;quot;: &amp;quot;~43.0.2&amp;quot;, &amp;quot;expo-ads-admob&amp;quot;: &amp;quot;~11.0.3&amp;quot;, &amp;quot;expo-app-loading&amp;quot;: &amp;quot;~1.2.1&amp;quot;, &amp;quot;expo-asset&amp;quot;: &amp;quot;~8.4.3&amp;quot;, &amp;quot;expo-constants&amp;quot;: &amp;quot;^13.0.0&amp;quot;, &amp;quot;expo-font&amp;quot;: &amp;quot;~10.0.3&amp;quot;, &amp;quot;expo-linking&amp;quot;: &amp;quot;~2.4.2&amp;quot;, &amp;quot;expo-location&amp;quot;: &amp;quot;^14.0.1&amp;quot;, &amp;quot;expo-status-bar&amp;quot;: &amp;quot;~1.1.0&amp;quot;, &amp;quot;firebase&amp;quot;: &amp;quot;^9.6.1&amp;quot;, &amp;quot;react&amp;quot;: &amp;quot;17.0.1&amp;quot;, &amp;quot;react-dom&amp;quot;: &amp;quot;17.0.1&amp;quot;, &amp;quot;react-native&amp;quot;: &amp;quot;0.</description>
     </item>
     
     <item>
       <title>TIL📚 앱개발 스터디 - 4 week</title>
-      <link>https://blog.haneul-lee.com/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-4-week/</link>
+      <link>https://blog.haneul-lee.com/post/til/sparta-coding-forth-week/</link>
       <pubDate>Mon, 03 Jan 2022 12:57:22 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-4-week/</guid>
+      <guid>https://blog.haneul-lee.com/post/til/sparta-coding-forth-week/</guid>
       <description>TIL📚 앱개발 스터디 - 4 week Firebase 👩🏻‍💻 파이어베이스는 구글에서 만든 서버리스 서비스
-  데이터베이스 이미지 파일 서버 푸시 알람 기능 로그인 인증 기능  Serverless  데이터 생성 데이터 조회 데이터 삭제/수정 등을 제공해주는 서비스들이 존재합니다.  파이어베이스 설치 npm install firebase yarn add firebase expo install firebase 파이어베이스 config 설정 처음에 데이터베이스 연동이 되지 않아 확인해봤더니 지역 설정이 맞지 않는 경우가 있어 databaseURL을 따로 설정해주었다.</description>
+  데이터베이스 이미지 파일 서버 푸시 알람 기능 로그인 인증 기능  Serverless  데이터 생성 데이터 조회 데이터 삭제/수정 등을 제공해주는 서비스들이 존재합니다.  파이어베이스 설치 npm install firebase yarn add firebase expo install firebase 파이어베이스 config 설정 처음에 데이터베이스 연동이 되지 않아 확인해봤더니 지역 설정이 맞지 않는 경우가 있어 databaseURL을 따로 설정해주었다.
+// 사용할 파이어베이스 서비스 주석을 해제합니다 //import &amp;quot;firebase/compat/auth&amp;quot;; import &amp;quot;firebase/compat/database&amp;quot;; //import &amp;quot;firebase/compat/firestore&amp;quot;; //import &amp;quot;firebase/compat/functions&amp;quot;; import &amp;quot;firebase/compat/storage&amp;quot;; import firebase from &amp;quot;firebase/compat/app&amp;quot;; // Initialize Firebase //파이어베이스 사이트에서 봤던 연결정보를 여기에 가져옵니다 const firebaseConfig = { apiKey: &amp;quot;&amp;quot;, authDomain: &amp;quot;sparta-react-native-11669.</description>
     </item>
     
     <item>
       <title>TIL📚 앱개발 스터디 - 3 week</title>
-      <link>https://blog.haneul-lee.com/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-3-week/</link>
+      <link>https://blog.haneul-lee.com/post/til/sparta-coding-third-week/</link>
       <pubDate>Sat, 25 Dec 2021 00:07:10 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-3-week/</guid>
+      <guid>https://blog.haneul-lee.com/post/til/sparta-coding-third-week/</guid>
       <description>TIL📚 앱개발 스터디 - 3 week React Navigation 🔥 react native 앱의 네비게이션 기능과 히스토리를 간단히 관리할 수 있는 라이브러리
  설치 yarn add @react-navigation/native yarn add @react-navigation/stack expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view Stack Navigator 📑 스택 네비게이션은 컴포넌트에 페이지 기능을 부여해주고 컴포넌트에서 컴포넌트로 이동, 즉 페이지 이동을 가능하게 해준다.
 &amp;lt;Stack.Navigator screenOptions={{ headerStyle: { backgroundColor: &amp;quot;black&amp;quot;, borderBottomColor: &amp;quot;black&amp;quot;, shadowColor: &amp;quot;black&amp;quot;, height:100 }, //헤더의 텍스트를 왼쪾에 둘지 가운데에 둘지를 결정 headerTintColor: &amp;quot;#fff&amp;quot;, headerBackTitleVisible: false }} &amp;gt; {/* name에 해당 하는 부분이 페이지의 타이틀이 됩니다.</description>
@@ -41,10 +42,10 @@
     
     <item>
       <title>TIL📚 앱개발 스터디 - 2 week</title>
-      <link>https://blog.haneul-lee.com/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-2-week/</link>
+      <link>https://blog.haneul-lee.com/post/til/sparta-coding-second-week/</link>
       <pubDate>Mon, 20 Dec 2021 12:19:04 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-2-week/</guid>
+      <guid>https://blog.haneul-lee.com/post/til/sparta-coding-second-week/</guid>
       <description>TIL📚 앱개발 스터디 - 2 week Expo 설치 👉 Expo 란?
 expo는 리액트 네이티브를 크로스 플랫폼으로 개발하기 위한 빌드도구 네이티브 모듈을 보다 쉽고 편하게 사용할 수 있으며 빠르게 실제 기기에서 테스트해볼 수 있도록 해주는 테스트 통합 환경
  npm install -g expo-cli // expo 설치 (npm) yarn -global add expo-cli // expo 설치 (yarn) expo init [프로젝트 이름] // 프로젝트 생성 expo start // 실행  React Native 🤔 React Native is like React, but it uses native components instead of web components as building blocks.</description>
@@ -52,10 +53,10 @@ expo는 리액트 네이티브를 크로스 플랫폼으로 개발하기 위한 
     
     <item>
       <title>TIL📚 앱개발 스터디 - 1 week</title>
-      <link>https://blog.haneul-lee.com/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-1-week/</link>
+      <link>https://blog.haneul-lee.com/post/til/sparta-coding-first-week/</link>
       <pubDate>Sat, 11 Dec 2021 10:46:28 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-1-week/</guid>
+      <guid>https://blog.haneul-lee.com/post/til/sparta-coding-first-week/</guid>
       <description>TIL📚 앱개발 스터디 - 1 week Javascript Object Oriented Programming   상속 : 클래스개념에서 상위 클래스(부모)로 부터 하위 클래스(자식)이 유산을 물려받는것과 같이, 부모의 메소드나 변수를 사용할 수 있는 것을 말함.
   다형성 : 같은 함수가 있다고 칠대 그 함수가 매개변수에 따라 다른 역할을 할 수 도 있다.
   캡슐화 : 보통 데이터를 은닉시킨다고 표현하는데, 외부에서 쉽게 데이터를 접근할 수 없게 만들기도하고, 데이터 구조와 데이터를 다루는 방법들을 한데다 묶는것.</description>
@@ -63,10 +64,10 @@ expo는 리액트 네이티브를 크로스 플랫폼으로 개발하기 위한 
     
     <item>
       <title>Jest Components Test 제스트 컴포넌트 테스트 🔥</title>
-      <link>https://blog.haneul-lee.com/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
+      <link>https://blog.haneul-lee.com/post/unittest/jest-frontend-test/</link>
       <pubDate>Sat, 07 Aug 2021 02:54:15 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
+      <guid>https://blog.haneul-lee.com/post/unittest/jest-frontend-test/</guid>
       <description>Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src/pages/test/create-account.spec.tsx  beforeEach(async () =&amp;gt; { await waitFor(() =&amp;gt; { mockedClient = createMockClient(); renderResult = render( &amp;lt;ApolloProvider client={mockedClient}&amp;gt; &amp;lt;CreateAccount /&amp;gt; &amp;lt;/ApolloProvider&amp;gt; ); }); }); frontend 유닛테스트의 기본구조
 apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.
 위와 같은 방법 이외 MockedProvider를 이용하는 방법도 있으니 참고 바랍니다.
@@ -75,115 +76,117 @@ create-account에서는 유저에게 계정에 대한 입력을 받습니다.</d
     
     <item>
       <title>NestJS 에서 E2E TEST 🏃🏻‍♀️</title>
-      <link>https://blog.haneul-lee.com/2021/07/nestjs-%EC%97%90%EC%84%9C-e2e-test-%EF%B8%8F/</link>
+      <link>https://blog.haneul-lee.com/post/e2e/e2e-start/</link>
       <pubDate>Wed, 14 Jul 2021 14:40:42 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/07/nestjs-%EC%97%90%EC%84%9C-e2e-test-%EF%B8%8F/</guid>
+      <guid>https://blog.haneul-lee.com/post/e2e/e2e-start/</guid>
       <description>E2E TEST 🏃🏻‍♀️ E2E Test (End To End Test) 란 ? 개별 모듈 및 클래스에 중점을 두는 단위 테스트와 달리 e2e 테스트는 최종 사용자가 프로덕션과 함께 하게 될 상호 작용의 종류에 더 가까운 보다 종합적인 수준에서 클래스와 모듈의 상호 작용을 다룹니다. 각 API 엔드포인트의 종단 간 테스트는 시스템의 전반적인 동작이 정확하고 프로젝트 요구 사항을 충족하는지 확인하는 데 도움이 됩니다. NestJS를 사용하면 supertest 라이브러리를 사용하여 HTTP 요청을 쉽게 시뮬레이션할 수 있습니다.</description>
     </item>
     
     <item>
       <title>NestJS 에서 UNIT TEST 🏃🏻‍♀️</title>
-      <link>https://blog.haneul-lee.com/2021/07/nestjs-%EC%97%90%EC%84%9C-unit-test-%EF%B8%8F/</link>
+      <link>https://blog.haneul-lee.com/post/unittest/jest-service-test/</link>
       <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/07/nestjs-%EC%97%90%EC%84%9C-unit-test-%EF%B8%8F/</guid>
-      <description>Jest NestJS 에서 UNIT TEST 🏃🏻‍♀️ jwt.service.spec.ts describe(&amp;#39;JwtService&amp;#39;, () =&amp;gt; { let service: JwtService; beforeAll(async () =&amp;gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&amp;lt;JwtService&amp;gt;(JwtService); }); jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다.  jwt service가 제대로 준비 되었는지 확인하려면  it(&#39;should be defined&#39;,()={ expect(service).toBeDefined();});   이 코드로 확인해볼 수 있다.</description>
+      <guid>https://blog.haneul-lee.com/post/unittest/jest-service-test/</guid>
+      <description>Jest NestJS 에서 UNIT TEST 🏃🏻‍♀️ jwt.service.spec.ts describe(&amp;#39;JwtService&amp;#39;, () =&amp;gt; { let service: JwtService; beforeAll(async () =&amp;gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&amp;lt;JwtService&amp;gt;(JwtService); }); jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다. jwt service가 제대로 준비 되었는지 확인하려면 it(&#39;should be defined&#39;,()={ expect(service).toBeDefined();});  이 코드로 확인해볼 수 있다.
+jest.mock(&amp;#34;jsonwebtoken&amp;#34;, () =&amp;gt; ({ sign: jest.</description>
     </item>
     
     <item>
       <title>Jest 유닛 테스트 - 소개</title>
-      <link>https://blog.haneul-lee.com/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%86%8C%EA%B0%9C/</link>
+      <link>https://blog.haneul-lee.com/post/unittest/jest-start/</link>
       <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%86%8C%EA%B0%9C/</guid>
-      <description>Jest Jest 란 ? 🤔 Jest는 Facebook에서 개발한 JavaScript 테스팅 프레임워크이다. Babel , TypeScript , Node , React , Angular , Vue 등을 사용하는 프로젝트에서 사용할 수 있다. Test runner와 Test Mathcher, Test Mock 프레임워크까지 제공하여 다른 유닛 테스트 프레임워크보다 편하다.  테스트 주도 개발 (TDD)  짧은 개발 사이클을 반복하는 소프트웨어 개발 프로세스 중 하나 새로운 함수를 정의하는 자동화된 테스트 케이스를 작성한다. 그 케이스를 통과하기 위한 최소한의 코드를 생성한다.</description>
+      <guid>https://blog.haneul-lee.com/post/unittest/jest-start/</guid>
+      <description>Jest Jest 란 ? 🤔 Jest는 Facebook에서 개발한 JavaScript 테스팅 프레임워크이다. Babel , TypeScript , Node , React , Angular , Vue 등을 사용하는 프로젝트에서 사용할 수 있다. Test runner와 Test Mathcher, Test Mock 프레임워크까지 제공하여 다른 유닛 테스트 프레임워크보다 편하다.  테스트 주도 개발 (TDD)  짧은 개발 사이클을 반복하는 소프트웨어 개발 프로세스 중 하나 새로운 함수를 정의하는 자동화된 테스트 케이스를 작성한다. 그 케이스를 통과하기 위한 최소한의 코드를 생성한다. 새 코드를 표준에 맞도록 리팩토링한다.</description>
     </item>
     
     <item>
       <title>Typescript 시작하기</title>
-      <link>https://blog.haneul-lee.com/2021/06/typescript-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+      <link>https://blog.haneul-lee.com/post/typescript/typescript-start/</link>
       <pubDate>Fri, 25 Jun 2021 16:37:27 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/06/typescript-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://blog.haneul-lee.com/post/typescript/typescript-start/</guid>
       <description>Typescript Typescript 란 ? : 정적 타입 검사자 (TypeScript: A Static Type Checker) 마이크로소프트에서 구현한 JavaScript의 슈퍼셋(Superset) 프로그래밍 언어. 확장자로는 .ts를 사용하며, 컴파일의 결과물로 JavaScript 코드를 출력한다. 최종적으로 런타임에서는 이렇게 출력된 JavaScript 코드를 구동시키게 된다. TypeScript라는 이름답게 정적 타입을 명시할 수 있다는 것이 순수한 자바스크립트와의 가장 큰 차이점이다. 덕분에 개발 도구(IDE나 컴파일러 등)에게 개발자가 의도한 변수나 함수 등의 목적을 더욱 명확하게 전달할 수 있고, 그렇게 전달된 정보를 기반으로 코드 자동 완성이나 잘못된 변수/함수 사용에 대한 에러 알림 같은 풍부한 피드백을 받을 수 있게 되므로 순수 자바스크립트에 비해 어마어마한 생산성 향상을 꾀할 수 있다.</description>
     </item>
     
     <item>
       <title>Lodash 란 🤔</title>
-      <link>https://blog.haneul-lee.com/2021/05/lodash-%EB%9E%80/</link>
+      <link>https://blog.haneul-lee.com/post/lodash/lodash-start/</link>
       <pubDate>Tue, 25 May 2021 14:34:02 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/lodash-%EB%9E%80/</guid>
+      <guid>https://blog.haneul-lee.com/post/lodash/lodash-start/</guid>
       <description>Lodash Lodash는 배열, 숫자, 객체, 문자열 등으로 작업하는 번거 로움을 없애 자바 스크립트를 더 쉽게 만듭니다. Lodash의 모듈 식 방법은 다음에 적합합니다.
- 배열, 객체 및 문자열 반복 값 조작 및 테스트 복합 함수 만들기   map .map(collection, [iteratee=.identity])  배열 안에 객체들의 요소 중, 특정 요소만 빼서 배열로 만들고 싶은 경우 사용합니다.  Creates an array of values by running each element in collection thru iteratee. The iteratee is invoked with three arguments: (value, index|key, collection).</description>
+ 배열, 객체 및 문자열 반복 값 조작 및 테스트 복합 함수 만들기  map .map(collection, [iteratee=.identity])  배열 안에 객체들의 요소 중, 특정 요소만 빼서 배열로 만들고 싶은 경우 사용합니다.  Creates an array of values by running each element in collection thru iteratee. The iteratee is invoked with three arguments: (value, index|key, collection).</description>
     </item>
     
     <item>
       <title>Javascript 테스트</title>
-      <link>https://blog.haneul-lee.com/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
+      <link>https://blog.haneul-lee.com/post/unittest/javascript-unit-test/</link>
       <pubDate>Thu, 20 May 2021 11:07:12 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/javascript-%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
-      <description>1.자바스크립트 테스팅 환경 테스트 러너  테스트 파일을 읽어들여 실행하고, 결과를 출력 파일이 변경된 경우 자동으로 실행해주는 watch 등의 기능 제공 Reporter를 지정해서 원하는 형태로 결과를 출력 Node 환경에서 실행 : Mocha, Jest, AVA  브라우저 환경에서 실행 : Karma → 웹서버에 연결되어 있는 브라우저 위에서 테스트를 수행  카르마보다 Node가 조금 더 빠르다.
-테스트 프레임워크  사용자가 테스트 코드를 작성할 수 있는 기반을 제공 프레임 워크에 의해 제공된 함수를 이용해서 테스트 코드를 작성⇒ 프레임 워크가 자동으로 테스트를 실행하고 결과를 수집해서 출력.</description>
+      <guid>https://blog.haneul-lee.com/post/unittest/javascript-unit-test/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>플러터(flutter) 설치</title>
-      <link>https://blog.haneul-lee.com/2021/05/%ED%94%8C%EB%9F%AC%ED%84%B0flutter-%EC%84%A4%EC%B9%98/</link>
+      <link>https://blog.haneul-lee.com/post/flutter/flutter-install/</link>
       <pubDate>Tue, 18 May 2021 12:40:39 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/%ED%94%8C%EB%9F%AC%ED%84%B0flutter-%EC%84%A4%EC%B9%98/</guid>
+      <guid>https://blog.haneul-lee.com/post/flutter/flutter-install/</guid>
       <description>플러터 Flutter 📱 flutter-ko.dev/docs/get-started/install/macos
-플러터 설치 방법은 아래와 같이 2가지가 있다.    플러터 sdk로 설치하기 git clone 으로 설치하기  github.com/flutter/flutter.git    다음은 아래와 같이 flutter PATH 설정하기 cd vi .bash_profile export PATH=&amp;quot;$HOME/Desktop/flutter/bin:$PATH&amp;quot; :wq로 저장 후 source .bash_profile을 사용하여 적용시켜준다.
+플러터 설치 방법은 아래와 같이 2가지가 있다.   플러터 sdk로 설치하기 git clone 으로 설치하기  github.com/flutter/flutter.git    다음은 아래와 같이 flutter PATH 설정하기 cd vi .bash_profile export PATH=&amp;quot;$HOME/Desktop/flutter/bin:$PATH&amp;quot; :wq로 저장 후 source .bash_profile을 사용하여 적용시켜준다.
 플러터 디렉토리 경로로 가서 pwd 로 경로 찾아서 설정해줘도 됨
 flutter doctor 를 실행한다.
-ios면 xcode android면 android studio 관련하여 잘 설정이 되었는지 확인할 수 있다.</description>
+ios면 xcode android면 android studio 관련하여 잘 설정이 되었는지 확인할 수 있다.
+xcode 버전이 최소 11이상이어야 해서 맥os 업데이트와 xcode 설치까지 오랜 시간이 걸렸다 ㅠㅠ</description>
     </item>
     
     <item>
       <title>Svelte</title>
-      <link>https://blog.haneul-lee.com/2019/11/svelte/</link>
+      <link>https://blog.haneul-lee.com/post/svelte/2019-11-10-svelte/</link>
       <pubDate>Sun, 10 Nov 2019 23:03:00 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2019/11/svelte/</guid>
+      <guid>https://blog.haneul-lee.com/post/svelte/2019-11-10-svelte/</guid>
       <description>Svelte Svelte란? svelte란 날씬한, 호리호리한이란 뜻입니다.
 이름답게 적은 코드, 적은 용량 등을 자랑하는 프레임워크입니다.
 공식 문서에 따르면 새로운 웹 어플리케이션 개발 방법을 제시하는 컴파일러라고도 소개되어 있습니다.
 vue, react와는 다르게 가상돔을 사용하지 않습니다.
 svelte는 빌드 타임에 실행되며, 효과적으로 DOM을 업데이트하는 코드로 컴파일됩니다.
- 기본 문법 svelte는 vue 처럼 .svelte라는 별도의 파일 확장자를 갖습니다.
+기본 문법 svelte는 vue 처럼 .svelte라는 별도의 파일 확장자를 갖습니다.
 기본문법은 html과 비슷합니다.
 h1 태그 내에 {name}은 스크립트의 선언한 name 변수를 참조해서 출력합니다.
-css 또한 똑같이 작성하시면 됩니다.</description>
+css 또한 똑같이 작성하시면 됩니다.
+// App.</description>
     </item>
     
     <item>
       <title>how to handle React state array</title>
-      <link>https://blog.haneul-lee.com/2019/11/how-to-handle-react-state-array/</link>
+      <link>https://blog.haneul-lee.com/post/react/2019-11-10-react-state/</link>
       <pubDate>Sun, 10 Nov 2019 00:03:00 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2019/11/how-to-handle-react-state-array/</guid>
-      <description>state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.   2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
+      <guid>https://blog.haneul-lee.com/post/react/2019-11-10-react-state/</guid>
+      <description>state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.  2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
   이것을 사용하기 위해서는 라이브러리를 사전 설치해줘야 한다.
   설치 방법 : npm을 통한 설치
   $npm install &amp;ndash;save react-addons-update
   import update from &amp;lsquo;react-addons-update&amp;rsquo;
   원소 추가
-  this.setState({ list: update( this.</description>
+  this.setState({ list: update( this.state.list, { $push: [newObj, newObj2] } ); });   (줄 3) 첫 번째 인수 : 처리해야할 객체나 배열</description>
     </item>
     
     <item>
       <title>Why Do We Write super(props)?</title>
-      <link>https://blog.haneul-lee.com/2018/12/why-do-we-write-superprops/</link>
+      <link>https://blog.haneul-lee.com/post/react/2019-12-10-react-super/</link>
       <pubDate>Mon, 10 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2018/12/why-do-we-write-superprops/</guid>
+      <guid>https://blog.haneul-lee.com/post/react/2019-12-10-react-super/</guid>
       <description>Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
 요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
 웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
- 이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
+이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
  첫번째,
  나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
 class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .</description>
@@ -191,32 +194,32 @@ class Checkbox extends React.Component { constructor(props) { super(props); this
     
     <item>
       <title>Redux 시작하기 🔥</title>
-      <link>https://blog.haneul-lee.com/2018/10/redux-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+      <link>https://blog.haneul-lee.com/post/redux/2018-10-03-study-redux/</link>
       <pubDate>Wed, 03 Oct 2018 11:03:00 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2018/10/redux-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://blog.haneul-lee.com/post/redux/2018-10-03-study-redux/</guid>
       <description>Redux 리덕스 : 리액트를 위한 스테이트 매니지먼트 툴 (복잡한 앱에서 효율적, 단순한 앱에서 필요없음)
-Why do we need it? 왜 필요한가?  Components have local state, but apps have global state. Sometimes state need to be shared. We need to save the shared state somewhere. Redux == state container   Redux is a gloabl state container  Ther Redux Store is like a box We go and grab what we need for the container For example, from  we only grab the username  Stuff to remember  The whole state of your app is stored in an object(store)   state 가 복잡하고 커질 수 있어서 리덕스는 해당 오브젝트를 수정하는 것에 매우 엄격함  If you wanna change the data inside of this object you need to &amp;lsquo;dispatch&amp;rsquo; (sned) an action   오브젝트의 데이터를 수정하는 방법은 액션을 reducer 로 보내면 가능함  You will send this actions to a reducer and this reducer will change the object for you.</description>
+Why do we need it? 왜 필요한가?  Components have local state, but apps have global state. Sometimes state need to be shared. We need to save the shared state somewhere. Redux == state container  Redux is a gloabl state container  Ther Redux Store is like a box We go and grab what we need for the container For example, from we only grab the username  Stuff to remember  The whole state of your app is stored in an object(store)   state 가 복잡하고 커질 수 있어서 리덕스는 해당 오브젝트를 수정하는 것에 매우 엄격함  If you wanna change the data inside of this object you need to &amp;lsquo;dispatch&amp;rsquo; (sned) an action   오브젝트의 데이터를 수정하는 방법은 액션을 reducer 로 보내면 가능함  You will send this actions to a reducer and this reducer will change the object for you.</description>
     </item>
     
     <item>
       <title>Javascript use strict</title>
-      <link>https://blog.haneul-lee.com/2018/09/javascript-use-strict/</link>
+      <link>https://blog.haneul-lee.com/post/javascript/2018-09-17-study-userstrict/</link>
       <pubDate>Mon, 17 Sep 2018 17:03:00 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2018/09/javascript-use-strict/</guid>
+      <guid>https://blog.haneul-lee.com/post/javascript/2018-09-17-study-userstrict/</guid>
       <description>자바스크립트 use strict 모드  ===========  strict 모드는 ES5(ECMA Script 5)에 추가된 키워드 strict 모드는 자바스크립트가 묵인했던 에러들의 에러 메시지를 발생시킨다.
-   선언하지 않고 전역 변수를 만들 수 없다.  &amp;quot;use strict&amp;quot; temp = 4;   writable이 false로, 읽기 전용 객체에 쓰는 것이 불가능. (read only 객체 수정 불가능)  &amp;quot;use strict&amp;quot;; var testObj = Object.defineProperties({}, { prop1: { value: 10, writable: false // by default }, prop2: { get: function () { } } }); testObj.</description>
+   선언하지 않고 전역 변수를 만들 수 없다.  &amp;quot;use strict&amp;quot; temp = 4;  writable이 false로, 읽기 전용 객체에 쓰는 것이 불가능. (read only 객체 수정 불가능)  &amp;quot;use strict&amp;quot;; var testObj = Object.defineProperties({}, { prop1: { value: 10, writable: false // by default }, prop2: { get: function () { } } }); testObj.</description>
     </item>
     
     <item>
       <title>Javascript Context</title>
-      <link>https://blog.haneul-lee.com/2018/09/javascript-context/</link>
+      <link>https://blog.haneul-lee.com/post/javascript/2018-09-12-study-context/</link>
       <pubDate>Wed, 12 Sep 2018 17:56:52 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2018/09/javascript-context/</guid>
+      <guid>https://blog.haneul-lee.com/post/javascript/2018-09-12-study-context/</guid>
       <description>자바스크립트 실행 컨텍스트  ===========  현재 실행되는 컨텍스트에서 이 컨텍스트와 관련 없는 실행 코드가 실행되면, 새로운 컨텍스트가 생성되어 스택에 들어가고 제어권이 그 컨텍스트로 이동한다.
-    실행 컨텍스트가 형성되는 경우  전역 코드 eval() 함수로 실행되는 코드 함수 안의 코드를 실행하는 경우    </description>
+   실행 컨텍스트가 형성되는 경우  전역 코드 eval() 함수로 실행되는 코드 함수 안의 코드를 실행하는 경우    </description>
     </item>
     
   </channel>

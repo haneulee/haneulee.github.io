@@ -9,12 +9,12 @@
     <lastBuildDate>Tue, 18 May 2021 16:10:04 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/profile/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git Profile 꾸미기 👩🏻‍💻</title>
-      <link>https://blog.haneul-lee.com/2021/05/git-profile-%EA%BE%B8%EB%AF%B8%EA%B8%B0/</link>
+      <link>https://blog.haneul-lee.com/post/git/git-profile/</link>
       <pubDate>Tue, 18 May 2021 16:10:04 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/git-profile-%EA%BE%B8%EB%AF%B8%EA%B8%B0/</guid>
+      <guid>https://blog.haneul-lee.com/post/git/git-profile/</guid>
       <description>Git Profile 꾸미기 먼저 아래 그림과 같이 git repository에서 나의 id와 똑같은 이름으로 새로운 repository를 생성한다. _ add READ.me 를 클릭하기, public으로 !! _ 생성이 되면 해당 레파지토리에 read.me에는 다음과 같이 작성되어 있을 것이다.
- ### Hi there 👋 &amp;lt;!-- **haneulee/haneulee** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. Here are some ideas to get you started: - 🔭 I’m currently working on .</description>
+### Hi there 👋 &amp;lt;!-- **haneulee/haneulee** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. Here are some ideas to get you started: - 🔭 I’m currently working on .</description>
     </item>
     
   </channel>

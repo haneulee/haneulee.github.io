@@ -9,30 +9,30 @@
     <lastBuildDate>Thu, 08 Jul 2021 10:21:03 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Typeorm study 2 - Hash / JWT / Guard</title>
-      <link>https://blog.haneul-lee.com/2021/07/typeorm-study-2-hash-/-jwt-/-guard/</link>
+      <link>https://blog.haneul-lee.com/post/typeorm/typeorm-second/</link>
       <pubDate>Thu, 08 Jul 2021 10:21:03 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/07/typeorm-study-2-hash-/-jwt-/-guard/</guid>
+      <guid>https://blog.haneul-lee.com/post/typeorm/typeorm-second/</guid>
       <description>Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &amp;lsquo;enum&amp;rsquo; 이 아니라 &amp;lsquo;simple-enum&amp;rsquo;으로 지정해주면 해결된다.
 export enum UserRole { Host = &amp;#39;Host&amp;#39;, Listener = &amp;#39;Listener&amp;#39;, } registerEnumType(UserRole, { name: &amp;#39;UserRole&amp;#39; }); @Column({ type: &amp;#39;simple-enum&amp;#39;, enum: UserRole }) @Field(type =&amp;gt; UserRole) role: UserRole; registerEnumType 함수를 사용해 enum type을 등록해준다.</description>
     </item>
     
     <item>
       <title>Typeorm Start </title>
-      <link>https://blog.haneul-lee.com/2021/07/typeorm-start/</link>
+      <link>https://blog.haneul-lee.com/post/typeorm/typeorm-start/</link>
       <pubDate>Mon, 05 Jul 2021 13:56:56 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/07/typeorm-start/</guid>
+      <guid>https://blog.haneul-lee.com/post/typeorm/typeorm-start/</guid>
       <description>Typeorm ORM (Object Relational Mapping) ORM (Object-relational mapping)은 객체지향 프로그래밍(Object-Oriented-Programming) 과 관계형 데이터베이스(Relational-Database)사이의 호환되지 않는 데이터를 변환하는 시스템이다. 객체지향 프로그래밍은 Class를 사용하고 관계형 데이터베이스는 Table을 사용한다.
-장점  선언, 할당, 종료 같은 부수적인 코드가 없거나 급격히 줄어든다. 각종 객체에 대한 코드를 별도로 작성하기 떄문에 코드의 가독성을 올려준다. SQL 의 절차, 순차적인 접근 방식이 아닌 객체 접근 방식이다.  단점  완벽하게 ORM 서비스구현이 어려울수있다. 사용하기에 편리함은 있지만 설계가 복잡하다.</description>
+장점  선언, 할당, 종료 같은 부수적인 코드가 없거나 급격히 줄어든다. 각종 객체에 대한 코드를 별도로 작성하기 떄문에 코드의 가독성을 올려준다. SQL 의 절차, 순차적인 접근 방식이 아닌 객체 접근 방식이다.  단점  완벽하게 ORM 서비스구현이 어려울수있다. 사용하기에 편리함은 있지만 설계가 복잡하다. 프로젝트 복잡성과난이도레따라 퍼포먼스의 큰차이가 있다.</description>
     </item>
     
     <item>
       <title>Typescript 시작하기</title>
-      <link>https://blog.haneul-lee.com/2021/06/typescript-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+      <link>https://blog.haneul-lee.com/post/typescript/typescript-start/</link>
       <pubDate>Fri, 25 Jun 2021 16:37:27 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/06/typescript-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://blog.haneul-lee.com/post/typescript/typescript-start/</guid>
       <description>Typescript Typescript 란 ? : 정적 타입 검사자 (TypeScript: A Static Type Checker) 마이크로소프트에서 구현한 JavaScript의 슈퍼셋(Superset) 프로그래밍 언어. 확장자로는 .ts를 사용하며, 컴파일의 결과물로 JavaScript 코드를 출력한다. 최종적으로 런타임에서는 이렇게 출력된 JavaScript 코드를 구동시키게 된다. TypeScript라는 이름답게 정적 타입을 명시할 수 있다는 것이 순수한 자바스크립트와의 가장 큰 차이점이다. 덕분에 개발 도구(IDE나 컴파일러 등)에게 개발자가 의도한 변수나 함수 등의 목적을 더욱 명확하게 전달할 수 있고, 그렇게 전달된 정보를 기반으로 코드 자동 완성이나 잘못된 변수/함수 사용에 대한 에러 알림 같은 풍부한 피드백을 받을 수 있게 되므로 순수 자바스크립트에 비해 어마어마한 생산성 향상을 꾀할 수 있다.</description>
     </item>
     

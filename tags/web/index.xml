@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 21 Jul 2021 11:07:36 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GraphQL과 Apollo 함께 쓰기 🔥</title>
-      <link>https://blog.haneul-lee.com/2021/07/graphql%EA%B3%BC-apollo-%ED%95%A8%EA%BB%98-%EC%93%B0%EA%B8%B0/</link>
+      <link>https://blog.haneul-lee.com/post/graphql/graphql-apollo/</link>
       <pubDate>Wed, 21 Jul 2021 11:07:36 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/07/graphql%EA%B3%BC-apollo-%ED%95%A8%EA%BB%98-%EC%93%B0%EA%B8%B0/</guid>
+      <guid>https://blog.haneul-lee.com/post/graphql/graphql-apollo/</guid>
       <description>GraphQL과 Apollo 함께 쓰기 🔥 Apollo 란 ? Apollo란 GraphQL의 클라이언트 라이브러리 중 하나로 GraphQL을 사용한다면 거의 필수적으로 사용하는 상태 관리 플랫폼입니다.
 장점
  Query 및 Mutation 직접 전송  API 서버에서 데이터를 가져오기 위해 번거로운 네트워크단의 HTTP 요청을 신경 쓸 필요가 없어진다.   전송받은 데이터 캐싱  클라이언트의 반복 요청을 줄여 서버 부하를 줄일 수 있을 뿐만 아니라, 서비스를 이용하는 사람들에게 더 나은 사용자 경험을 제공할 수 있다.</description>
@@ -20,20 +20,20 @@
     
     <item>
       <title>브라우저 세션 &amp; 쿠키 Browser Session &amp; cookies 🍪</title>
-      <link>https://blog.haneul-lee.com/2021/06/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%B8%EC%85%98-%EC%BF%A0%ED%82%A4-browser-session-cookies/</link>
+      <link>https://blog.haneul-lee.com/post/browser/session-start/</link>
       <pubDate>Fri, 11 Jun 2021 13:50:39 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/06/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%B8%EC%85%98-%EC%BF%A0%ED%82%A4-browser-session-cookies/</guid>
+      <guid>https://blog.haneul-lee.com/post/browser/session-start/</guid>
       <description>브라우저 세션 Browser Session Session  브라우저와 백엔드 사이의 memory or history 쿠키는 상태 데이터를 클라이언트에 저장했다면, 세션은 서버에 저장 세션은 기본적으로는 쿠키를 사용하지만 세션 id만 쿠키로 저장하고, 상태 데이터들은 세션 id를 id로하여 서버에 저장한다.  stateless server side에 client와 server의 동작, 상태정보를 저장하지 않는 형태, server의 응답이 client와의 세션 상태와 독립적임 장점 : 서버가 client정보를 저장관리 하지 않으므로 Scaling이 자유로움
 ex) UDP / HTTP : UDP는 TCP와 달리 Client의 세션 상태와 관계 없이 요청에 대한 응답만을 수행하고, server가 client의 정보를 저장하지 않는다.</description>
     </item>
     
     <item>
       <title>GraphQL 시작하기 🔥</title>
-      <link>https://blog.haneul-lee.com/2021/06/graphql-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+      <link>https://blog.haneul-lee.com/post/graphql/graphql-start/</link>
       <pubDate>Tue, 01 Jun 2021 16:57:25 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/06/graphql-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://blog.haneul-lee.com/post/graphql/graphql-start/</guid>
       <description>GraphQL GraphQL 이란 ? Graph QL(이하 gql)은 Structed Query Language(이하 sql)와 마찬가지로 쿼리 언어입니다. 하지만 gql과 sql의 언어적 구조 차이는 매우 큽니다. 또한 gql과 sql이 실전에서 쓰이는 방식의 차이도 매우 큽니다. gql과 sql의 언어적 구조 차이가 활용 측면에서의 차이를 가져왔습니다. 이 둘은 애초에 탄생 시기도 다르고 배경도 다릅니다. sql은 데이터베이스 시스템에 저장된 데이터를 효율적으로 가져오는 것이 목적이고, gql은 웹 클라이언트가 데이터를 서버로 부터 효율적으로 가져오는 것이 목적입니다. sql의 문장(statement)은 주로 백앤드 시스템에서 작성하고 호출 하는 반면, gql의 문장은 주로 클라이언트 시스템에서 작성하고 호출 합니다.</description>
     </item>
     

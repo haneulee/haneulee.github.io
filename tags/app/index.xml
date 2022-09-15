@@ -9,31 +9,32 @@
     <lastBuildDate>Wed, 05 Jan 2022 19:26:50 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TIL📚 앱개발 스터디 - 5 week</title>
-      <link>https://blog.haneul-lee.com/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-5-week/</link>
+      <link>https://blog.haneul-lee.com/post/til/sparta-coding-fifth-week/</link>
       <pubDate>Wed, 05 Jan 2022 19:26:50 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-5-week/</guid>
+      <guid>https://blog.haneul-lee.com/post/til/sparta-coding-fifth-week/</guid>
       <description>TIL📚 앱개발 스터디 - 5 week 구글 앱스토어 출시 아직 검토중!
  프로젝트 녹화 영상 취지 &amp;amp; 설명 꿀팁에 대한 정보를 담은 앱
-기술 설명  파이어베이스 리액트 네이티브 expo axios &amp;hellip;etc  &amp;quot;@expo/vector-icons&amp;quot;: &amp;quot;^12.0.0&amp;quot;, &amp;quot;@react-native-async-storage/async-storage&amp;quot;: &amp;quot;~1.15.0&amp;quot;, &amp;quot;@react-native-community/masked-view&amp;quot;: &amp;quot;^0.1.11&amp;quot;, &amp;quot;@react-navigation/native&amp;quot;: &amp;quot;^6.0.6&amp;quot;, &amp;quot;@react-navigation/stack&amp;quot;: &amp;quot;^6.0.11&amp;quot;, &amp;quot;axios&amp;quot;: &amp;quot;^0.24.0&amp;quot;, &amp;quot;expo&amp;quot;: &amp;quot;~43.0.2&amp;quot;, &amp;quot;expo-ads-admob&amp;quot;: &amp;quot;~11.0.3&amp;quot;, &amp;quot;expo-app-loading&amp;quot;: &amp;quot;~1.2.1&amp;quot;, &amp;quot;expo-asset&amp;quot;: &amp;quot;~8.4.3&amp;quot;, &amp;quot;expo-constants&amp;quot;: &amp;quot;^13.0.0&amp;quot;, &amp;quot;expo-font&amp;quot;: &amp;quot;~10.0.3&amp;quot;, &amp;quot;expo-linking&amp;quot;: &amp;quot;~2.4.2&amp;quot;, &amp;quot;expo-location&amp;quot;: &amp;quot;^14.0.1&amp;quot;, &amp;quot;expo-status-bar&amp;quot;: &amp;quot;~1.1.0&amp;quot;, &amp;quot;firebase&amp;quot;: &amp;quot;^9.6.1&amp;quot;, &amp;quot;react&amp;quot;: &amp;quot;17.0.1&amp;quot;, &amp;quot;react-dom&amp;quot;: &amp;quot;17.</description>
+기술 설명  파이어베이스 리액트 네이티브 expo axios &amp;hellip;etc  &amp;quot;@expo/vector-icons&amp;quot;: &amp;quot;^12.0.0&amp;quot;, &amp;quot;@react-native-async-storage/async-storage&amp;quot;: &amp;quot;~1.15.0&amp;quot;, &amp;quot;@react-native-community/masked-view&amp;quot;: &amp;quot;^0.1.11&amp;quot;, &amp;quot;@react-navigation/native&amp;quot;: &amp;quot;^6.0.6&amp;quot;, &amp;quot;@react-navigation/stack&amp;quot;: &amp;quot;^6.0.11&amp;quot;, &amp;quot;axios&amp;quot;: &amp;quot;^0.24.0&amp;quot;, &amp;quot;expo&amp;quot;: &amp;quot;~43.0.2&amp;quot;, &amp;quot;expo-ads-admob&amp;quot;: &amp;quot;~11.0.3&amp;quot;, &amp;quot;expo-app-loading&amp;quot;: &amp;quot;~1.2.1&amp;quot;, &amp;quot;expo-asset&amp;quot;: &amp;quot;~8.4.3&amp;quot;, &amp;quot;expo-constants&amp;quot;: &amp;quot;^13.0.0&amp;quot;, &amp;quot;expo-font&amp;quot;: &amp;quot;~10.0.3&amp;quot;, &amp;quot;expo-linking&amp;quot;: &amp;quot;~2.4.2&amp;quot;, &amp;quot;expo-location&amp;quot;: &amp;quot;^14.0.1&amp;quot;, &amp;quot;expo-status-bar&amp;quot;: &amp;quot;~1.1.0&amp;quot;, &amp;quot;firebase&amp;quot;: &amp;quot;^9.6.1&amp;quot;, &amp;quot;react&amp;quot;: &amp;quot;17.0.1&amp;quot;, &amp;quot;react-dom&amp;quot;: &amp;quot;17.0.1&amp;quot;, &amp;quot;react-native&amp;quot;: &amp;quot;0.</description>
     </item>
     
     <item>
       <title>TIL📚 앱개발 스터디 - 4 week</title>
-      <link>https://blog.haneul-lee.com/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-4-week/</link>
+      <link>https://blog.haneul-lee.com/post/til/sparta-coding-forth-week/</link>
       <pubDate>Mon, 03 Jan 2022 12:57:22 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2022/01/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-4-week/</guid>
+      <guid>https://blog.haneul-lee.com/post/til/sparta-coding-forth-week/</guid>
       <description>TIL📚 앱개발 스터디 - 4 week Firebase 👩🏻‍💻 파이어베이스는 구글에서 만든 서버리스 서비스
-  데이터베이스 이미지 파일 서버 푸시 알람 기능 로그인 인증 기능  Serverless  데이터 생성 데이터 조회 데이터 삭제/수정 등을 제공해주는 서비스들이 존재합니다.  파이어베이스 설치 npm install firebase yarn add firebase expo install firebase 파이어베이스 config 설정 처음에 데이터베이스 연동이 되지 않아 확인해봤더니 지역 설정이 맞지 않는 경우가 있어 databaseURL을 따로 설정해주었다.</description>
+  데이터베이스 이미지 파일 서버 푸시 알람 기능 로그인 인증 기능  Serverless  데이터 생성 데이터 조회 데이터 삭제/수정 등을 제공해주는 서비스들이 존재합니다.  파이어베이스 설치 npm install firebase yarn add firebase expo install firebase 파이어베이스 config 설정 처음에 데이터베이스 연동이 되지 않아 확인해봤더니 지역 설정이 맞지 않는 경우가 있어 databaseURL을 따로 설정해주었다.
+// 사용할 파이어베이스 서비스 주석을 해제합니다 //import &amp;quot;firebase/compat/auth&amp;quot;; import &amp;quot;firebase/compat/database&amp;quot;; //import &amp;quot;firebase/compat/firestore&amp;quot;; //import &amp;quot;firebase/compat/functions&amp;quot;; import &amp;quot;firebase/compat/storage&amp;quot;; import firebase from &amp;quot;firebase/compat/app&amp;quot;; // Initialize Firebase //파이어베이스 사이트에서 봤던 연결정보를 여기에 가져옵니다 const firebaseConfig = { apiKey: &amp;quot;&amp;quot;, authDomain: &amp;quot;sparta-react-native-11669.</description>
     </item>
     
     <item>
       <title>TIL📚 앱개발 스터디 - 3 week</title>
-      <link>https://blog.haneul-lee.com/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-3-week/</link>
+      <link>https://blog.haneul-lee.com/post/til/sparta-coding-third-week/</link>
       <pubDate>Sat, 25 Dec 2021 00:07:10 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-3-week/</guid>
+      <guid>https://blog.haneul-lee.com/post/til/sparta-coding-third-week/</guid>
       <description>TIL📚 앱개발 스터디 - 3 week React Navigation 🔥 react native 앱의 네비게이션 기능과 히스토리를 간단히 관리할 수 있는 라이브러리
  설치 yarn add @react-navigation/native yarn add @react-navigation/stack expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view Stack Navigator 📑 스택 네비게이션은 컴포넌트에 페이지 기능을 부여해주고 컴포넌트에서 컴포넌트로 이동, 즉 페이지 이동을 가능하게 해준다.
 &amp;lt;Stack.Navigator screenOptions={{ headerStyle: { backgroundColor: &amp;quot;black&amp;quot;, borderBottomColor: &amp;quot;black&amp;quot;, shadowColor: &amp;quot;black&amp;quot;, height:100 }, //헤더의 텍스트를 왼쪾에 둘지 가운데에 둘지를 결정 headerTintColor: &amp;quot;#fff&amp;quot;, headerBackTitleVisible: false }} &amp;gt; {/* name에 해당 하는 부분이 페이지의 타이틀이 됩니다.</description>
@@ -41,10 +42,10 @@
     
     <item>
       <title>TIL📚 앱개발 스터디 - 2 week</title>
-      <link>https://blog.haneul-lee.com/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-2-week/</link>
+      <link>https://blog.haneul-lee.com/post/til/sparta-coding-second-week/</link>
       <pubDate>Mon, 20 Dec 2021 12:19:04 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/12/til-%EC%95%B1%EA%B0%9C%EB%B0%9C-%EC%8A%A4%ED%84%B0%EB%94%94-2-week/</guid>
+      <guid>https://blog.haneul-lee.com/post/til/sparta-coding-second-week/</guid>
       <description>TIL📚 앱개발 스터디 - 2 week Expo 설치 👉 Expo 란?
 expo는 리액트 네이티브를 크로스 플랫폼으로 개발하기 위한 빌드도구 네이티브 모듈을 보다 쉽고 편하게 사용할 수 있으며 빠르게 실제 기기에서 테스트해볼 수 있도록 해주는 테스트 통합 환경
  npm install -g expo-cli // expo 설치 (npm) yarn -global add expo-cli // expo 설치 (yarn) expo init [프로젝트 이름] // 프로젝트 생성 expo start // 실행  React Native 🤔 React Native is like React, but it uses native components instead of web components as building blocks.</description>

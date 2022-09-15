@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 21 May 2021 10:30:25 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/categories/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Githup SSH  키 생성 및 등록</title>
-      <link>https://blog.haneul-lee.com/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/</link>
+      <link>https://blog.haneul-lee.com/post/github/github-ssh-key/</link>
       <pubDate>Fri, 21 May 2021 10:30:25 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/</guid>
+      <guid>https://blog.haneul-lee.com/post/github/github-ssh-key/</guid>
       <description>Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh &amp;lt;!--adsense--&amp;gt; // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &amp;#34;엔터&amp;#34; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !</description>
     </item>
     

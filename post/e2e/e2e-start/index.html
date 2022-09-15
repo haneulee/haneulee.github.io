@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+ <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/blog.haneul-lee.com\/",
+  "author": {
+    "@type": "Person",
+    "name": "Haneul Devlog",
+    
+    "image": "https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png"
+    
+  },
+  "name":"Haneul Devlog 개발 블로그 📚",
+  "description":"E2E TEST 🏃🏻‍♀️ E2E Test (End To End Test) 란 ? 개별 모듈 및 클래스에 중점을 두는 단위 테스트와 달리 e2e 테스트는 최종 사용자가 프로덕션과 함께 하게 될 상호 작용의 종류에 더 가까운 보다 종합적인 수준에서 클래스와 모듈의 상호 작용을 다룹니다. 각 API 엔드포인트의 종단 간 테스트는 시스템의 전반적인 동작이 정확하고 프로젝트 요구 사항을 충족하는지 확인하는 데 도움이 됩니다. NestJS를 사용하면 supertest 라이브러리를 사용하여 HTTP 요청을 쉽게 시뮬레이션할 수 있습니다.",
+  "url":"https:\/\/blog.haneul-lee.com\/post\/e2e\/e2e-start\/",
+  "keywords":"[development, front-end]"
+}
+
+</script> <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Haneul Devlog">
+<meta name="keywords" content="development, front-end">
+<meta name="description" content="E2E TEST 🏃🏻‍♀️ E2E Test (End To End Test) 란 ? 개별 모듈 및 클래스에 중점을 두는 단위 테스트와 달리 e2e 테스트는 최종 사용자가 프로덕션과 함께 하게 될 상호 작용의 종류에 더 가까운 보다 종합적인 수준에서 클래스와 모듈의 상호 작용을 다룹니다. 각 API 엔드포인트의 종단 간 테스트는 시스템의 전반적인 동작이 정확하고 프로젝트 요구 사항을 충족하는지 확인하는 데 도움이 됩니다. NestJS를 사용하면 supertest 라이브러리를 사용하여 HTTP 요청을 쉽게 시뮬레이션할 수 있습니다.">
+
+
+<meta property="og:description" content="E2E TEST 🏃🏻‍♀️ E2E Test (End To End Test) 란 ? 개별 모듈 및 클래스에 중점을 두는 단위 테스트와 달리 e2e 테스트는 최종 사용자가 프로덕션과 함께 하게 될 상호 작용의 종류에 더 가까운 보다 종합적인 수준에서 클래스와 모듈의 상호 작용을 다룹니다. 각 API 엔드포인트의 종단 간 테스트는 시스템의 전반적인 동작이 정확하고 프로젝트 요구 사항을 충족하는지 확인하는 데 도움이 됩니다. NestJS를 사용하면 supertest 라이브러리를 사용하여 HTTP 요청을 쉽게 시뮬레이션할 수 있습니다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NestJS 에서 E2E TEST 🏃🏻‍♀️">
+<meta name="twitter:title" content="NestJS 에서 E2E TEST 🏃🏻‍♀️">
+<meta property="og:url" content="https://blog.haneul-lee.com/post/e2e/e2e-start/">
+<meta property="twitter:url" content="https://blog.haneul-lee.com/post/e2e/e2e-start/">
+<meta property="og:site_name" content="Haneul Devlog 개발 블로그 📚">
+<meta property="og:description" content="E2E TEST 🏃🏻‍♀️ E2E Test (End To End Test) 란 ? 개별 모듈 및 클래스에 중점을 두는 단위 테스트와 달리 e2e 테스트는 최종 사용자가 프로덕션과 함께 하게 될 상호 작용의 종류에 더 가까운 보다 종합적인 수준에서 클래스와 모듈의 상호 작용을 다룹니다. 각 API 엔드포인트의 종단 간 테스트는 시스템의 전반적인 동작이 정확하고 프로젝트 요구 사항을 충족하는지 확인하는 데 도움이 됩니다. NestJS를 사용하면 supertest 라이브러리를 사용하여 HTTP 요청을 쉽게 시뮬레이션할 수 있습니다.">
+<meta name="twitter:description" content="E2E TEST 🏃🏻‍♀️ E2E Test (End To End Test) 란 ? 개별 모듈 및 클래스에 중점을 두는 단위 테스트와 달리 e2e 테스트는 최종 사용자가 프로덕션과 함께 하게 될 상호 작용의 종류에 더 가까운 보다 종합적인 수준에서 클래스와 모듈의 상호 작용을 다룹니다. 각 API 엔드포인트의 종단 간 테스트는 시스템의 전반적인 동작이 정확하고 프로젝트 요구 사항을 충족하는지 확인하는 데 도움이 됩니다. NestJS를 사용하면 supertest 라이브러리를 사용하여 HTTP 요청을 쉽게 시뮬레이션할 수 있습니다.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-07-14T14:40:42">
+  
+  
+    <meta property="article:modified_time" content="2021-07-14T14:40:42">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+  
+  
+    
+      <meta property="article:tag" content="development">
+    
+      <meta property="article:tag" content="front-end">
+    
+      <meta property="article:tag" content="e2e">
+    
+      <meta property="article:tag" content="jest">
+    
+      <meta property="article:tag" content="javascript">
+    
+      <meta property="article:tag" content="facebook">
+    
+      <meta property="article:tag" content="react">
+    
+      <meta property="article:tag" content="nextjs">
+    
+      <meta property="article:tag" content="supertest">
+    
+      <meta property="article:tag" content="endtoendtest">
+    
+      <meta property="article:tag" content="테스트주도개발">
+    
+      <meta property="article:tag" content="제스트">
+    
+      <meta property="article:tag" content="TDD">
+    
+      <meta property="article:tag" content="페이스북">
+    
+      <meta property="article:tag" content="엔드투엔드테스트">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png">
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-jest.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-jest.png">
+
+
+    <title>NestJS 에서 E2E TEST 🏃🏻‍♀️</title>
+
+    <link
+      rel="icon"
+      href="https://blog.haneul-lee.com/img/favicon.ico"
+    />
+     
+
+    <link rel="canonical" href="https://blog.haneul-lee.com/post/e2e/e2e-start/" />
+
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+      integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    
+    
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-3icga1qbbcdn9af8rifmu4vmsfi4zvyxs7muf1edt0qksuqtyp90lgm1ag.min.css" />
+    
+      <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
+}
+</script>
+  
+  </head>
+</html>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+ <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+ <div class="header-title">
+   <a class="header-title-link" href="https://blog.haneul-lee.com/">Haneul Devlog 개발 블로그 📚</a>
+ </div>
+ 
+   
+     <a class="header-right-picture "
+        href="https://blog.haneul-lee.com/#about">
+   
+   
+   
+     
+       <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+     
+   
+   </a>
+ 
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+ <div class="sidebar-container">
+   
+     <div class="sidebar-profile">
+       <a href="https://blog.haneul-lee.com/#about">
+         <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+       </a>
+       <h4 class="sidebar-profile-name">Haneul Devlog</h4>
+       
+         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</h5>
+       
+     </div>
+   
+
+   <div class="js-toggle-wrapper">
+    <div class="js-toggle">
+        <div class="js-toggle-track">
+            <div class="js-toggle-track-check">
+                <img
+                    src="data:image/png;base64,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"
+                    role="presentation"
+                    style="pointer-events: none"
+                    width="16"
+                    height="16"
+                />
+            </div>
+            <div class="js-toggle-track-x">
+                <img
+                    src="data:image/png;base64,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"
+                    role="presentation"
+                    style="pointer-events: none"
+                    width="16"
+                    height="16"
+                />
+            </div>
+        </div>
+        <div class="js-toggle-thumb"></div>
+        <input
+            class="js-toggle-screenreader-only"
+            type="checkbox"
+            aria-label="Switch between Dark and Light mode"
+        />
+    </div>
+</div>
+
+<style>
+     
+
+    body.dark-mode,
+    body.dark-mode #main,
+    body.dark-mode #header,
+    body.dark-mode #bottom-bar,
+    body.dark-mode .btn,
+    body.dark-mode a.tag {
+        background: rgb(45, 45, 45) !important;
+    }
+
+    body.dark-mode,
+    body.dark-mode *:not(a):not(#about):not(i) {
+        color: #f5f5f5;
+    }
+
+    body.dark-mode .alert.info,
+    body.dark-mode .alert.info > p {
+        color: #5d686f !important;
+    }
+
+    .js-toggle-wrapper {
+        margin: 1rem auto;
+        text-align: center;
+        display: block;
+    }
+
+    .js-toggle {
+        touch-action: pan-x;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        -webkit-touch-callout: none;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .js-toggle-screenreader-only {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .js-toggle-track {
+        width: 50px;
+        height: 24px;
+        padding: 0;
+        border-radius: 30px;
+        background-color: black;
+        transition: all 0.2s ease;
+    }
+    .js-toggle-track-check {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        left: 5px;
+        top: 0px;
+        bottom: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: 0;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+    }
+
+    .js-toggle--checked .js-toggle-track-check {
+        opacity: 1;
+        transition: opacity 0.25s ease;
+    }
+
+    .js-toggle-track-x {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        right: 5px;
+        top: 0px;
+        bottom: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: 0;
+        opacity: 1;
+        transition: opacity 0.25s ease;
+    }
+
+    .js-toggle--checked .js-toggle-track-x {
+        opacity: 0;
+    }
+
+    .js-toggle-thumb {
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: #fafafa;
+        box-sizing: border-box;
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+        transform: translateX(0);
+    }
+
+    .js-toggle--checked .js-toggle-thumb {
+        transform: translateX(26px);
+        border-color: #ffffff;
+    }
+</style>
+
+<script>
+    var body = document.body;
+    var switcher = document.getElementsByClassName("js-toggle")[0];
+
+    
+    switcher.addEventListener("click", function () {
+        this.classList.toggle("js-toggle--checked");
+        this.classList.add("js-toggle--focus");
+        
+        if (this.classList.contains("js-toggle--checked")) {
+            body.classList.add("dark-mode");
+            
+            localStorage.setItem("darkMode", "true");
+        } else {
+            body.classList.remove("dark-mode");
+            setTimeout(function () {
+                localStorage.removeItem("darkMode");
+            }, 100);
+        }
+    });
+
+    
+    if (localStorage.getItem("darkMode")) {
+        
+        switcher.classList.add("js-toggle--checked");
+        body.classList.add("dark-mode");
+    }
+</script>
+
+   <ul class="sidebar-buttons">
+     
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/categories/development" title="Development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-code"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+   </ul>
+   <ul class="sidebar-buttons">
+     
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneul-lee.com" target="_blank" rel="noopener" title="Website">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-window-maximize"></i>
+      
+      <span class="sidebar-button-desc">Website</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/resume/" title="Resume">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-file"></i>
+      
+      <span class="sidebar-button-desc">Resume</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener" title="LinkedIn">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener" title="Email">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+   </ul>
+   <ul class="sidebar-buttons">
+     
+
+   </ul>
+ </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title">
+      NestJS 에서 E2E TEST 🏃🏻‍♀️
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-07-14T14:40:42&#43;09:00">
+        
+  July 14, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/development">development</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              
+              
+                
+                
+                <!-- raw HTML omitted -->
+<h1 id="e2e-test-">E2E TEST 🏃🏻‍♀️</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/unittest/img-jest.png" alt=""></p>
+<h2 id="e2e-test-end-to-end-test-란-">E2E Test (End To End Test) 란 ?</h2>
+<p>개별 모듈 및 클래스에 중점을 두는 단위 테스트와 달리 e2e 테스트는 최종 사용자가 프로덕션과 함께 하게 될 상호 작용의 종류에 더 가까운 보다 종합적인 수준에서 클래스와 모듈의 상호 작용을 다룹니다.
+각 API 엔드포인트의 종단 간 테스트는 시스템의 전반적인 동작이 정확하고 프로젝트 요구 사항을 충족하는지 확인하는 데 도움이 됩니다.
+NestJS를 사용하면 <strong><a href="https://github.com/visionmedia/supertest">supertest</a></strong> 라이브러리를 사용하여 <strong>HTTP 요청</strong>을 쉽게 시뮬레이션할 수 있습니다.</p>
+<ul>
+<li>Endpoint(종단) 간 테스트로 사용자의 입장에서 사용자가 사용하는 상황을 가정하고 테스트 하는 것</li>
+<li>일반적으로 웹이나 어플 등에서 GUI를 통해 시나리오, 기능 테스트 등을 수행한다.</li>
+<li>사용자에게 직접적으로 노출되는 부분을 점검한다.</li>
+<li>유닛 테스트로 불가능한 사용자 관점의 테스트까지 가능하다.</li>
+<li>Endpoint 테스트를 통과하면 기능이 잘 작동한다는 것이므로 모든 테스트를 할 수 없다면 E2E Test만이라도 하는 것이 좋다!</li>
+<li>백엔드 관점에서 개발한 REST API를 테스트 하기 위해 실제로 서버에 요청을 보낸 뒤 클라이언트에서 원하는 데이터가 전송되는 지 확인해야 한다.</li>
+</ul>
+<span class="highlight-text yellow">
+E2E 테스트는 환경에 의존하는 테스트이지만, 단위 테스트는 실행 중인 환경에 의존하면 안 되고, 빠르게 실행되어야 한다. E2E 테스트에서는 보통 테스트 데이터베이스를 사용하고, 테스트의 신뢰성이 높지만 속도가 느리다는 단점이 있다.
+</span>
+<!-- raw HTML omitted -->
+<h2 id="nestjs">NestJS</h2>
+<p>NestJS에서는 특정 도구를 강제하지는 않지만 Jest를 기본 테스트 프레임워크로 제공해주며 테스팅 패키지도 제공하기 때문에 개발자가 다른 도구를 찾는데 소모하는 리소스를 줄일 수 있다.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="테스트-설정하기">테스트 설정하기</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">podcastsRepository</span>: <span style="color:#66d9ef">Repository</span>&lt;<span style="color:#f92672">Podcast</span>&gt;;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">episodesRepository</span>: <span style="color:#66d9ef">Repository</span>&lt;<span style="color:#f92672">Episode</span>&gt;;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">usersRepository</span>: <span style="color:#66d9ef">Repository</span>&lt;<span style="color:#f92672">User</span>&gt;;
+</code></pre></div><p>테스트 설정에 let으로 repository들이 초기화되어있는데, 밑 라인의 beforeAll에서 app과 repository를 초기화시키기 때문에 let으로 선언되어 있습니다.
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<ul>
+<li>repository 초기화</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">podcastsRepository</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">module</span><span style="color:#a6e22e">Fixture.get</span>&lt;<span style="color:#f92672">Repository</span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">Podcast</span>&gt;<span style="color:#f92672">&gt;</span>(
+  <span style="color:#a6e22e">getRepositoryToken</span>(<span style="color:#a6e22e">Podcast</span>)
+);
+</code></pre></div><p>나머지 episodeRepsitory, usersRepository 초기화 방법은 모두 동일합니다.
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<blockquote>
+<p><a href="https://jestjs.io/docs/api#afterallfn-timeout">afterAll</a></p>
+<ul>
+<li>테스트를 매번 새로 시작할 때마다 만든 데이터들이 쌓여 있으면 다음 테스트에 영향을 미치기 때문에, databse에 drop 명령을 내려 DB를 초기화시키는 과정이 필요합니다. 그래서 afterAll 안에서 이 과정을 수행하도록 합니다.
+<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+</blockquote>
+<h2 id="테스트-수행">테스트 수행</h2>
+<p>e2e테스트는 흔히 종단간 테스트로 번역이 되고, 실제 사용자가 행동하는 방식으로 테스트를 한다고 생각하시면 됩니다. unit 테스트처럼 가짜 데이터 베이스를 사용하지 않습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">baseTest</span> <span style="color:#f92672">=</span> () <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">request</span>(<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">getHttpServer</span>()).<span style="color:#a6e22e">post</span>(<span style="color:#a6e22e">GRAPHQL_ENDPOINT</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">publicTest</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">query</span>: <span style="color:#66d9ef">string</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">baseTest</span>().<span style="color:#a6e22e">send</span>({ <span style="color:#a6e22e">query</span> });
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">privateTest</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">query</span>: <span style="color:#66d9ef">string</span>) <span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">baseTest</span>().<span style="color:#66d9ef">set</span>(<span style="color:#e6db74">&#34;X-JWT&#34;</span>, <span style="color:#a6e22e">jwtToken</span>).<span style="color:#a6e22e">send</span>({ <span style="color:#a6e22e">query</span> });
+</code></pre></div><p>e2e테스트에서는 request(app.getHttpServer()).post(GRAPHQL_ENDPOINT).send({query})가 계속 반복될 것이므로 함수를 wrapping 해놓았습니다.
+request는 <a href="https://github.com/visionmedia/supertest">supertest</a> 패키지에서 import한 함수이며, express test를 위해 nestjs 프레임워크에 포함 된 패키지입니다
+<!-- raw HTML omitted --><!-- raw HTML omitted -->
+privateTest에 보시면 set(&lsquo;X-JWT&rsquo;, jwtToken)는 헤더에 &lsquo;X-JWT&rsquo;라는 이름으로 jwtToken을 넘겨주는 과정입니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#34;Podcasts Resolver&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#34;createPodcast&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;should create a new podcast&#34;</span>, () <span style="color:#f92672">=&gt;</span>
+      <span style="color:#a6e22e">publicTest</span>(<span style="color:#e6db74">`
+</span><span style="color:#e6db74">            mutation {
+</span><span style="color:#e6db74">              createPodcast(input: {
+</span><span style="color:#e6db74">                title: &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">testPodcast</span>.<span style="color:#a6e22e">title</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;,
+</span><span style="color:#e6db74">                category: &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">testPodcast</span>.<span style="color:#a6e22e">category</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;,
+</span><span style="color:#e6db74">              }) {
+</span><span style="color:#e6db74">                ok
+</span><span style="color:#e6db74">                id
+</span><span style="color:#e6db74">              }
+</span><span style="color:#e6db74">            }
+</span><span style="color:#e6db74">          `</span>)
+        .<span style="color:#a6e22e">expect</span>(<span style="color:#ae81ff">200</span>)
+        .<span style="color:#a6e22e">expect</span>((<span style="color:#a6e22e">res</span>) <span style="color:#f92672">=&gt;</span> {
+          <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">createPodcast</span>.<span style="color:#a6e22e">ok</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">true</span>);
+          <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">createPodcast</span>.<span style="color:#a6e22e">id</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#ae81ff">1</span>);
+        }));
+  });
+});
+</code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted -->
+래핑해 놓은 함수에 <strong>mutation ~</strong> 부분에 실제로 graphql 문이 들어가있습니다. 주의하실 부분은 ${testPodcast.title} 이 부분인데 자바스크립트에서는 저렇게만 해도 string으로 인식하지만, graphql에서는 그렇지 않습니다. 작은 따옴표(')도 아니고 큰 따옴표(&quot;)로 감싸주어야 텍스트로 인식하므로 주의하셔야 합니다.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->
+또 한가지 주의해야 할 점은 request.send&hellip;(솔루션은 publicRest, privateTest) 이 코드들은 반드시 리턴값으로 넘겨주셔야 합니다. 그렇지 않으면 테스트는 무조건 success로 나오기 때문에 주의하셔야 합니다. 나머지 결과들도 영향을 받을 수 있기 때문에 꼭 리턴값으로 넘기셔야 한다는 것을 기억하셔야 합니다.
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>expect(200): 200은 post 메소드로 send함수를 이용하여 보낸 request에 대한 응답의 status code를 의미합니다. /graphql에 정상적으로 query가 잘 보내졌으면, 200 의 응답코드를 받아야 한다는 의미인데, 위에서 언급한 큰 따옴표를 생략하고 request 요청을 하면 흔히 400 응답코드를 많이 받습니다.
+<!-- raw HTML omitted --><!-- raw HTML omitted -->
+테스트 방법은 unit 테스트처럼, 성공적으로 처리 되는 경우, 에러인 경우 에러처리 등의 경우가 잘 처리되고 있나 테스트 해보시면 됩니다.
+unit테스트와는 달리 실제 DB 사용, 실제 graphql에 query 요청을 한다는 점 등이 다릅니다.
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#34;updatePodcast&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rating</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">podcastId</span>: <span style="color:#66d9ef">number</span>;
+
+  <span style="color:#a6e22e">beforeAll</span>(<span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">podcast</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">podcastsRepository</span>.<span style="color:#a6e22e">find</span>();
+    <span style="color:#a6e22e">podcastId</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">podcast</span>.<span style="color:#a6e22e">id</span>;
+  });
+
+  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;should success to update Podcast&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">publicTest</span>(<span style="color:#e6db74">`
+</span><span style="color:#e6db74">            mutation {
+</span><span style="color:#e6db74">              updatePodcast(input: { id: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">podcastId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, payload: { rating: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">rating</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> } }) {
+</span><span style="color:#e6db74">                ok
+</span><span style="color:#e6db74">              }
+</span><span style="color:#e6db74">            }
+</span><span style="color:#e6db74">          `</span>)
+      .<span style="color:#a6e22e">expect</span>(<span style="color:#ae81ff">200</span>)
+      .<span style="color:#a6e22e">expect</span>((<span style="color:#a6e22e">res</span>) <span style="color:#f92672">=&gt;</span> {
+        <span style="color:#66d9ef">const</span> {
+          <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
+              <span style="color:#a6e22e">updatePodcast</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">ok</span> },
+            },
+          },
+        } <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>;
+        <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">ok</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">true</span>);
+      });
+  });
+  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;should failed to update Podcast, becuase of getPodcast emitting error&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">errorPodcastId</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">publicTest</span>(<span style="color:#e6db74">`
+</span><span style="color:#e6db74">            mutation {
+</span><span style="color:#e6db74">              updatePodcast(input: { id: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">errorPodcastId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, payload: { rating: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">rating</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> } }) {
+</span><span style="color:#e6db74">                ok
+</span><span style="color:#e6db74">                error
+</span><span style="color:#e6db74">              }
+</span><span style="color:#e6db74">            }
+</span><span style="color:#e6db74">          `</span>)
+      .<span style="color:#a6e22e">expect</span>(<span style="color:#ae81ff">200</span>)
+      .<span style="color:#a6e22e">expect</span>((<span style="color:#a6e22e">res</span>) <span style="color:#f92672">=&gt;</span> {
+        <span style="color:#66d9ef">const</span> {
+          <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
+              <span style="color:#a6e22e">updatePodcast</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">ok</span>, <span style="color:#a6e22e">error</span> },
+            },
+          },
+        } <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>;
+        <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">ok</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">false</span>);
+        <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">error</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#e6db74">`Podcast with id </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">errorPodcastId</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> not found`</span>);
+      });
+  });
+  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;should fail to update Podcast, due to invalid payload&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">errorRating</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">publicTest</span>(<span style="color:#e6db74">`
+</span><span style="color:#e6db74">            mutation {
+</span><span style="color:#e6db74">              updatePodcast(input: { id: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">podcastId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, payload: { rating: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">errorRating</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> } }) {
+</span><span style="color:#e6db74">                ok
+</span><span style="color:#e6db74">                error
+</span><span style="color:#e6db74">              }
+</span><span style="color:#e6db74">            }
+</span><span style="color:#e6db74">          `</span>)
+      .<span style="color:#a6e22e">expect</span>(<span style="color:#ae81ff">200</span>)
+      .<span style="color:#a6e22e">expect</span>((<span style="color:#a6e22e">res</span>) <span style="color:#f92672">=&gt;</span> {
+        <span style="color:#66d9ef">const</span> {
+          <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
+              <span style="color:#a6e22e">updatePodcast</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">ok</span>, <span style="color:#a6e22e">error</span> },
+            },
+          },
+        } <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>;
+        <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">ok</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">false</span>);
+        <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">error</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#e6db74">&#34;Rating must be between 1 and 5.&#34;</span>);
+      });
+  });
+});
+</code></pre></div><hr>
+<p>참고 :</p>
+<p><a href="https://github.com/visionmedia/supertest">supertest</a>,
+<a href="https://docs.nestjs.com/fundamentals/testing#end-to-end-testing">nextJS 공식문서</a>,
+<a href=""></a>,</p>
+
+              
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/development/">development</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/front-end/">front-end</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/e2e/">e2e</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/jest/">jest</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/javascript/">javascript</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/facebook/">facebook</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/react/">react</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/nextjs/">nextjs</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/supertest/">supertest</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/endtoendtest/">endtoendtest</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%A3%BC%EB%8F%84%EA%B0%9C%EB%B0%9C/">테스트주도개발</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%EC%A0%9C%EC%8A%A4%ED%8A%B8/">제스트</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/tdd/">TDD</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%B6%81/">페이스북</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%EC%97%94%EB%93%9C%ED%88%AC%EC%97%94%EB%93%9C%ED%85%8C%EC%8A%A4%ED%8A%B8/">엔드투엔드테스트</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/nestjs/decorator/" data-tooltip="NestJS 프레임워크 - Decorator" aria-label="NEXT: NestJS 프레임워크 - Decorator">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/unittest/jest-service-test/" data-tooltip="NestJS 에서 UNIT TEST 🏃🏻‍♀️" aria-label="PREVIOUS: NestJS 에서 UNIT TEST 🏃🏻‍♀️">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.haneul-lee.com/post/e2e/e2e-start/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.haneul-lee.com/post/e2e/e2e-start/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.haneul-lee.com/post/e2e/e2e-start/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/sharing/share?url=https://blog.haneul-lee.com/post/e2e/e2e-start/" title="Share on Google&#43;" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+              
+            
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="5041197559"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <span class="copyrights">
+      &copy; 2022 <a href="https://github.com/haneulee">Haneul Lee</a>. All Rights Reserved
+    </span>
+  </footer>
+  
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/nestjs/decorator/" data-tooltip="NestJS 프레임워크 - Decorator" aria-label="NEXT: NestJS 프레임워크 - Decorator">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/unittest/jest-service-test/" data-tooltip="NestJS 에서 UNIT TEST 🏃🏻‍♀️" aria-label="PREVIOUS: NestJS 에서 UNIT TEST 🏃🏻‍♀️">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.haneul-lee.com/post/e2e/e2e-start/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.haneul-lee.com/post/e2e/e2e-start/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.haneul-lee.com/post/e2e/e2e-start/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/sharing/share?url=https://blog.haneul-lee.com/post/e2e/e2e-start/" title="Share on Google&#43;" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fe2e%2Fe2e-start%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fe2e%2Fe2e-start%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fe2e%2Fe2e-start%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/sharing/share?url=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fe2e%2Fe2e-start%2F" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Devlog</h4>
+    
+      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Switzerland
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://blog.haneul-lee.com/js/script-oedftdofg5pug6u3d57lixk05cozh9lfe0dmvq6jnf2udnq33rrgnc0adf.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+
