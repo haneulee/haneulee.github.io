@@ -208,7 +208,7 @@ if (!doNotTrack) {
        </a>
        <h4 class="sidebar-profile-name">Haneul Devlog</h4>
        
-         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</h5>
+         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</h5>
        
      </div>
    
@@ -568,7 +568,20 @@ if (!doNotTrack) {
               
                 
                 
-                <!-- raw HTML omitted -->
+                <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#graphql과-apollo-함께-쓰기-">GraphQL과 Apollo 함께 쓰기 🔥</a>
+      <ul>
+        <li><a href="#apollo-란-">Apollo 란 ?</a></li>
+        <li><a href="#apollo-client-설정">apollo client 설정</a></li>
+        <li><a href="#react-router-dom-설정">react router dom 설정</a></li>
+        <li><a href="#reactive-variableshttpswwwapollographqlcomdocsreactlocal-statereactive-variables---로그인-토큰-및-로그인-상태"><a href="https://www.apollographql.com/docs/react/local-state/reactive-variables/">reactive variables</a> - 로그인 토큰 및 로그인 상태</a></li>
+        <li><a href="#로그인-mutation">로그인 Mutation</a></li>
+        <li><a href="#useformhttpsreact-hook-formcomkrv6apiuseform---react-hook-form"><a href="https://react-hook-form.com/kr/v6/api#useForm">useForm</a> - react hook form</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 <p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/graphql/apollo-graphql.png" alt=""></p>
 <hr>
 <h1 id="graphql과-apollo-함께-쓰기-">GraphQL과 Apollo 함께 쓰기 🔥</h1>
@@ -596,7 +609,7 @@ if (!doNotTrack) {
 <h2 id="apollo-client-설정">apollo client 설정</h2>
 <p>typePolicies, Query field가 customizing 설정이 되어 있지만, 필수는 아니기 때문에 uri만 제공해줘도 무방합니다.<br>
 export const client = new ApolloClient({uri, cache: new InMemoryCache()}) 이런식으로만 하셔도 괜찮습니다.<br>
-위와 같이 설정한 client는 앱 최상단에 <!-- raw HTML omitted --> 컴포넌트로 감싸서 사용하면 됩니다.</p>
+위와 같이 설정한 client는 앱 최상단에 <ApolloProvider> 컴포넌트로 감싸서 사용하면 됩니다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">ApolloClient</span>, <span style="color:#a6e22e">InMemoryCache</span>, <span style="color:#a6e22e">makeVar</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@apollo/client&#34;</span>;
 <span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">LS_TOKEN</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;./constants&#34;</span>;
 
@@ -643,7 +656,16 @@ export const client = new ApolloClient({uri, cache: new InMemoryCache()}) 이런
 };
 </code></pre></div><p><a href="https://reactrouter.com/web/api/BrowserRouter">BrowserRoute</a><br>
 <a href="https://reactrouter.com/web/api/HashRouter">HashRouter</a></p>
-<!-- raw HTML omitted -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="3551187766"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <h2 id="reactive-variableshttpswwwapollographqlcomdocsreactlocal-statereactive-variables---로그인-토큰-및-로그인-상태"><a href="https://www.apollographql.com/docs/react/local-state/reactive-variables/">reactive variables</a> - 로그인 토큰 및 로그인 상태</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App() {</span>
   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isLoggedIn</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useReactiveVar</span>(<span style="color:#a6e22e">isLoggedInVar</span>);
@@ -651,7 +673,7 @@ export const client = new ApolloClient({uri, cache: new InMemoryCache()}) 이런
 }
 </code></pre></div><p><strong>useReactiveVar(reactive variables)</strong> : apollo client의 cache 밖에서의 local state를 다루기 위해 사용</p>
 <p>useReactiveVar를 이용하여 로그인 여부를 저장하고, 로그인 하였을 때에는 makeVar로 생성한 변수(isLoggedInVar)에 값을 변형하여 리액트에서 바로바로 반응할 수 있게끔 설정을 해줍니다.</p>
-<p><!-- raw HTML omitted --> 컴포넌트에서 <!-- raw HTML omitted --> 컴포넌트를 사용할지 <!-- raw HTML omitted -->컴포넌트를 사용할 것인지를 결정되게 됩니다. 또한, 로그인 토큰과 관련하여서도 react variables를 사용할 수 있습니다.</p>
+<p><App> 컴포넌트에서 <LoggedInRouter> 컴포넌트를 사용할지 <LoggedOutRouter>컴포넌트를 사용할 것인지를 결정되게 됩니다. 또한, 로그인 토큰과 관련하여서도 react variables를 사용할 수 있습니다.</p>
 <p>makeVar를 이용하여 로그인 토큰도 localStorage에 연결된 token 값에 반응하도록 설정할 수 있습니다.<br>
 이런 방법으로 로그인 토큰이 저장된 로컬 스토리지를 react로 쉽게 연결하여 사용할 수 있습니다.</p>
 <h2 id="로그인-mutation">로그인 Mutation</h2>
@@ -836,8 +858,8 @@ login은 mutation이므로 useMutation을 사용하시면 됩니다.</p>
   
   <li class="post-action">
     
-      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
-      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="Table of Contents">
+      <i class="fa fa-list" aria-hidden="true"></i>
     
     </a>
   </li>
@@ -939,8 +961,8 @@ login은 mutation이므로 useMutation을 사용하시면 됩니다.</p>
   
   <li class="post-action">
     
-      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
-      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="Table of Contents">
+      <i class="fa fa-list" aria-hidden="true"></i>
     
     </a>
   </li>
@@ -995,7 +1017,7 @@ login은 mutation이므로 useMutation을 사용하시면 됩니다.</p>
     
     <h4 id="about-card-name">Haneul Devlog</h4>
     
-      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</div>
+      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</div>
     
     
       <div id="about-card-job">

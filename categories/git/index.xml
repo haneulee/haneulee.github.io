@@ -13,9 +13,8 @@
       <pubDate>Mon, 24 May 2021 18:09:54 +0900</pubDate>
       
       <guid>https://blog.haneul-lee.com/post/git/git-change-author-commit/</guid>
-      <description>git config user.email 수정 git config --global user.email &amp;quot;이메일&amp;quot; git config --global user.name &amp;quot;이름&amp;quot; author(이름)을 바꿀 commit 지정 git rebase 명령을 통해 author을 바꿀 커밋을 선택해준다.
-// ~ 뒤에 입력한 숫자는 4번째 커밋까지 선택 git rebase -i HEAD~4 그럼 아래와 같은 vi 화면이 뜨는데 변경할 커밋의 pick =&amp;gt; e로 변경해주고 :wq 를 눌러 저장, 종료해준다. git rebase -i HEAD~4 변경할 author 입력 git commit &amp;ndash;amend &amp;ndash;author=&amp;ldquo;아이디 &amp;lt;이메일&amp;gt;&amp;rdquo; 입력
-git commit --amend --author=&amp;quot;haneulee &amp;lt;lovesky4294@gmail.</description>
+      <description>git config user.email 수정  git config --global user.email &amp;quot;이메일&amp;quot; git config --global user.name &amp;quot;이름&amp;quot; author(이름)을 바꿀 commit 지정 git rebase 명령을 통해 author을 바꿀 커밋을 선택해준다.
+// ~ 뒤에 입력한 숫자는 4번째 커밋까지 선택 git rebase -i HEAD~4 그럼 아래와 같은 vi 화면이 뜨는데 변경할 커밋의 pick =&amp;gt; e로 변경해주고 :wq 를 눌러 저장, 종료해준다. git rebase -i HEAD~4 변경할 author 입력 git commit &amp;ndash;amend &amp;ndash;author=&amp;ldquo;아이디 &amp;lt;이메일&amp;gt;&amp;rdquo; 입력</description>
     </item>
     
     <item>
@@ -26,7 +25,7 @@ git commit --amend --author=&amp;quot;haneulee &amp;lt;lovesky4294@gmail.</descr
       <guid>https://blog.haneul-lee.com/post/git/git-error-fatal-merge-history/</guid>
       <description>git clone 후, git push 하는 과정 중에
 다음과 같이 오류가 날 경우가 있다.
-이는 push 하기 전에 git pull 을 먼저 실행해야 하는데 그 전에 수정했던 어떤 커밋과 꼬여 오류가 날 경우..
+ 이는 push 하기 전에 git pull 을 먼저 실행해야 하는데 그 전에 수정했던 어떤 커밋과 꼬여 오류가 날 경우..
 fatal: refusing to merge unrelated histories 이럴 때는
 아래처럼 실행하주고,
 다시 git push를 하면 해결됨
@@ -40,7 +39,7 @@ git pull origin 브런치명 --allow-unrelated-histories </description>
       
       <guid>https://blog.haneul-lee.com/post/git/git-profile/</guid>
       <description>Git Profile 꾸미기 먼저 아래 그림과 같이 git repository에서 나의 id와 똑같은 이름으로 새로운 repository를 생성한다. _ add READ.me 를 클릭하기, public으로 !! _ 생성이 되면 해당 레파지토리에 read.me에는 다음과 같이 작성되어 있을 것이다.
-### Hi there 👋 &amp;lt;!-- **haneulee/haneulee** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. Here are some ideas to get you started: - 🔭 I’m currently working on .</description>
+ ### Hi there 👋 &amp;lt;!-- **haneulee/haneulee** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. Here are some ideas to get you started: - 🔭 I’m currently working on .</description>
     </item>
     
     <item>
@@ -49,7 +48,7 @@ git pull origin 브런치명 --allow-unrelated-histories </description>
       <pubDate>Tue, 18 May 2021 16:01:06 +0900</pubDate>
       
       <guid>https://blog.haneul-lee.com/post/git/git-feature-branch/</guid>
-      <description>branch 생성  아래 명령어로 새로운 브랜치 생성  $ git branch &amp;lt;branchName&amp;gt; 생성한 브랜치로 이동  생성한 브랜치로 체크아웃하기  $ git checkout &amp;lt;branchName&amp;gt; // 브랜치 생성 &amp;amp; 체크아웃 $ git checkout -b &amp;lt;branchName&amp;gt; 원격 저장소에 push 하기  로컬에서만 생성한 branch를 upstream branch로 만든다.  $ git push --set-upstream origin &amp;lt;branchName&amp;gt; </description>
+      <description>branch 생성  아래 명령어로 새로운 브랜치 생성   $ git branch &amp;lt;branchName&amp;gt; 생성한 브랜치로 이동  생성한 브랜치로 체크아웃하기  $ git checkout &amp;lt;branchName&amp;gt; // 브랜치 생성 &amp;amp; 체크아웃 $ git checkout -b &amp;lt;branchName&amp;gt; 원격 저장소에 push 하기  로컬에서만 생성한 branch를 upstream branch로 만든다.  $ git push --set-upstream origin &amp;lt;branchName&amp;gt; </description>
     </item>
     
   </channel>

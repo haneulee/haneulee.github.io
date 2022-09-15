@@ -14,7 +14,7 @@
       
       <guid>https://blog.haneul-lee.com/post/linux/nginx-install/</guid>
       <description>리눅스 Nginx 설치 centos6
-vi /etc/yum.repos.d/nginx.repo \[nginx\] name=nginx repo baseurl=http://nginx.org/packages/centos/6/@basearch gpgcheck=0 enabled=1 위 처럼 저장 후,
+vi /etc/yum.repos.d/nginx.repo \[nginx\] name=nginx repo baseurl=http://nginx.org/packages/centos/6/@basearch gpgcheck=0 enabled=1  위 처럼 저장 후,
 yum install nginx nginx -v 시작 : nginx
 종료 : nginx -s stop
  NGINX install support tls v1.3 in CentOS 7 0. Prerequisites openssl 1.1.1 OpenSSL 1.1.1a upgrade for CentOS 7
@@ -34,7 +34,7 @@ ssh 로 접속하여 서버를 실행 후,
 터미널을 종료하거나 다른 프로세스를 실행하면 이전 실행이 중단된다.
 해당 서버에서 계속 서버를 띄어놓기 위해
 백그라운드로 실행하는 방법이 있다.
-nohup nohup node server.js &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;
+ nohup nohup node server.js &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;
 (.out 파일 없이 실행하기)
 &amp;lt;실행 방법&amp;gt;
 1. 백그라운드에서 돌리기 위한 실행파일을 준비한다. (나의 실행파일 이름은 main.js)

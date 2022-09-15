@@ -152,7 +152,7 @@ if (!doNotTrack) {
        </a>
        <h4 class="sidebar-profile-name">Haneul Devlog</h4>
        
-         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</h5>
+         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</h5>
        
      </div>
    
@@ -531,7 +531,6 @@ if (!doNotTrack) {
 NativeBase를 사용하면, 네이티브 서드파티 라이브러리를 기본적으로 사용할 수 있습니다. 그리고 프로젝트 자체에 유용한 starter-kits 부터 customizable theme templates 까지 풍부한 생태계가 구성되어 있습니다.
 여기 멋진 초보자용 키트가 있습니다.
 GeekyAnts/NativeBaseNativeBase — Essential cross-platform UI components for React Nativegithub.com
- 2. React Native Elements 1만2천개의 별을 받은 react-native-elements는 자바 스크립트로 제작 된 사용자 정의가 가능한 cross-platform UI toolkit입니다.
       
       <p>
         
@@ -598,7 +597,7 @@ GeekyAnts/NativeBaseNativeBase — Essential cross-platform UI components for Re
 그러나 절대경로를 설정하면 components/sign/logout 으로 간단히 작성할 수 있다는 사실!
 나는 src 폴더를 기준으로 절대경로를 설정하였다.
 방법은 아래와 같다.
-| Linux, Mac 에서 설정하기 프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
+ | Linux, Mac 에서 설정하기 프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
 &quot;start&quot;: &quot;NODE_PATH=src/ react-scripts start&quot;, &quot;build&quot;: &quot;NODE_PATH=src/ react-scripts build&quot;, | Window 에서 설정하기 여기서는 cross-env가 필요하다.
       
       <p>
@@ -661,13 +660,13 @@ GeekyAnts/NativeBaseNativeBase — Essential cross-platform UI components for Re
     </div>
     <div class="postShorten-excerpt">
       
-        state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.  2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
+        state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.   2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
   이것을 사용하기 위해서는 라이브러리를 사전 설치해줘야 한다.
   설치 방법 : npm을 통한 설치
   $npm install &ndash;save react-addons-update
   import update from &lsquo;react-addons-update&rsquo;
   원소 추가
-  this.setState({ list: update( this.state.list, { $push: [newObj, newObj2] } ); });   (줄 3) 첫 번째 인수 : 처리해야할 객체나 배열
+  this.setState({ list: update( this.
       
       <p>
         
@@ -732,7 +731,7 @@ GeekyAnts/NativeBaseNativeBase — Essential cross-platform UI components for Re
         Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
 요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
 웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
-이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
+ 이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
  첫번째,
  나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
 class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .
@@ -783,7 +782,7 @@ class Checkbox extends React.Component { constructor(props) { super(props); this
     
     <h4 id="about-card-name">Haneul Devlog</h4>
     
-      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</div>
+      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</div>
     
     
       <div id="about-card-job">

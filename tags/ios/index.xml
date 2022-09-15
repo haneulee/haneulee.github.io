@@ -15,7 +15,7 @@
       <guid>https://blog.haneul-lee.com/post/til/sparta-coding-fifth-week/</guid>
       <description>TIL📚 앱개발 스터디 - 5 week 구글 앱스토어 출시 아직 검토중!
  프로젝트 녹화 영상 취지 &amp;amp; 설명 꿀팁에 대한 정보를 담은 앱
-기술 설명  파이어베이스 리액트 네이티브 expo axios &amp;hellip;etc  &amp;quot;@expo/vector-icons&amp;quot;: &amp;quot;^12.0.0&amp;quot;, &amp;quot;@react-native-async-storage/async-storage&amp;quot;: &amp;quot;~1.15.0&amp;quot;, &amp;quot;@react-native-community/masked-view&amp;quot;: &amp;quot;^0.1.11&amp;quot;, &amp;quot;@react-navigation/native&amp;quot;: &amp;quot;^6.0.6&amp;quot;, &amp;quot;@react-navigation/stack&amp;quot;: &amp;quot;^6.0.11&amp;quot;, &amp;quot;axios&amp;quot;: &amp;quot;^0.24.0&amp;quot;, &amp;quot;expo&amp;quot;: &amp;quot;~43.0.2&amp;quot;, &amp;quot;expo-ads-admob&amp;quot;: &amp;quot;~11.0.3&amp;quot;, &amp;quot;expo-app-loading&amp;quot;: &amp;quot;~1.2.1&amp;quot;, &amp;quot;expo-asset&amp;quot;: &amp;quot;~8.4.3&amp;quot;, &amp;quot;expo-constants&amp;quot;: &amp;quot;^13.0.0&amp;quot;, &amp;quot;expo-font&amp;quot;: &amp;quot;~10.0.3&amp;quot;, &amp;quot;expo-linking&amp;quot;: &amp;quot;~2.4.2&amp;quot;, &amp;quot;expo-location&amp;quot;: &amp;quot;^14.0.1&amp;quot;, &amp;quot;expo-status-bar&amp;quot;: &amp;quot;~1.1.0&amp;quot;, &amp;quot;firebase&amp;quot;: &amp;quot;^9.6.1&amp;quot;, &amp;quot;react&amp;quot;: &amp;quot;17.0.1&amp;quot;, &amp;quot;react-dom&amp;quot;: &amp;quot;17.0.1&amp;quot;, &amp;quot;react-native&amp;quot;: &amp;quot;0.</description>
+기술 설명  파이어베이스 리액트 네이티브 expo axios &amp;hellip;etc  &amp;quot;@expo/vector-icons&amp;quot;: &amp;quot;^12.0.0&amp;quot;, &amp;quot;@react-native-async-storage/async-storage&amp;quot;: &amp;quot;~1.15.0&amp;quot;, &amp;quot;@react-native-community/masked-view&amp;quot;: &amp;quot;^0.1.11&amp;quot;, &amp;quot;@react-navigation/native&amp;quot;: &amp;quot;^6.0.6&amp;quot;, &amp;quot;@react-navigation/stack&amp;quot;: &amp;quot;^6.0.11&amp;quot;, &amp;quot;axios&amp;quot;: &amp;quot;^0.24.0&amp;quot;, &amp;quot;expo&amp;quot;: &amp;quot;~43.0.2&amp;quot;, &amp;quot;expo-ads-admob&amp;quot;: &amp;quot;~11.0.3&amp;quot;, &amp;quot;expo-app-loading&amp;quot;: &amp;quot;~1.2.1&amp;quot;, &amp;quot;expo-asset&amp;quot;: &amp;quot;~8.4.3&amp;quot;, &amp;quot;expo-constants&amp;quot;: &amp;quot;^13.0.0&amp;quot;, &amp;quot;expo-font&amp;quot;: &amp;quot;~10.0.3&amp;quot;, &amp;quot;expo-linking&amp;quot;: &amp;quot;~2.4.2&amp;quot;, &amp;quot;expo-location&amp;quot;: &amp;quot;^14.0.1&amp;quot;, &amp;quot;expo-status-bar&amp;quot;: &amp;quot;~1.1.0&amp;quot;, &amp;quot;firebase&amp;quot;: &amp;quot;^9.6.1&amp;quot;, &amp;quot;react&amp;quot;: &amp;quot;17.0.1&amp;quot;, &amp;quot;react-dom&amp;quot;: &amp;quot;17.</description>
     </item>
     
     <item>
@@ -25,8 +25,7 @@
       
       <guid>https://blog.haneul-lee.com/post/til/sparta-coding-forth-week/</guid>
       <description>TIL📚 앱개발 스터디 - 4 week Firebase 👩🏻‍💻 파이어베이스는 구글에서 만든 서버리스 서비스
-  데이터베이스 이미지 파일 서버 푸시 알람 기능 로그인 인증 기능  Serverless  데이터 생성 데이터 조회 데이터 삭제/수정 등을 제공해주는 서비스들이 존재합니다.  파이어베이스 설치 npm install firebase yarn add firebase expo install firebase 파이어베이스 config 설정 처음에 데이터베이스 연동이 되지 않아 확인해봤더니 지역 설정이 맞지 않는 경우가 있어 databaseURL을 따로 설정해주었다.
-// 사용할 파이어베이스 서비스 주석을 해제합니다 //import &amp;quot;firebase/compat/auth&amp;quot;; import &amp;quot;firebase/compat/database&amp;quot;; //import &amp;quot;firebase/compat/firestore&amp;quot;; //import &amp;quot;firebase/compat/functions&amp;quot;; import &amp;quot;firebase/compat/storage&amp;quot;; import firebase from &amp;quot;firebase/compat/app&amp;quot;; // Initialize Firebase //파이어베이스 사이트에서 봤던 연결정보를 여기에 가져옵니다 const firebaseConfig = { apiKey: &amp;quot;&amp;quot;, authDomain: &amp;quot;sparta-react-native-11669.</description>
+  데이터베이스 이미지 파일 서버 푸시 알람 기능 로그인 인증 기능  Serverless  데이터 생성 데이터 조회 데이터 삭제/수정 등을 제공해주는 서비스들이 존재합니다.  파이어베이스 설치 npm install firebase yarn add firebase expo install firebase 파이어베이스 config 설정 처음에 데이터베이스 연동이 되지 않아 확인해봤더니 지역 설정이 맞지 않는 경우가 있어 databaseURL을 따로 설정해주었다.</description>
     </item>
     
     <item>
@@ -60,7 +59,7 @@ expo는 리액트 네이티브를 크로스 플랫폼으로 개발하기 위한 
       <description>TVML (Television Markup Language) 앱의 뷰를 정의한 XML의 형태, TV용 클라이언트-서버 랩의 인터페이스를 만듬
 자바스크립트 API를 통해 전체 클라이언트와 서버를 만들수 있는 TVJS와 함께 결합한다.
 기본적으로 애플TV 앱은 iOS와 유사하게 개발할 수 있다. 더불어 클라이언트-서버 앱을 개발하도록 했다. 개발자는 자바스크립트, DOM, HTTPS, XMLHTTPRequst 같은 웹 기술을 사용할 수 있다.
-  TVMLJS : TVML 페이지를 읽을 때 사용되는 자바스크립트 API
+   TVMLJS : TVML 페이지를 읽을 때 사용되는 자바스크립트 API
   TVMLKit : 앱에서 자바스크립트와 TVML 요소를 통합하는 수단 (네이티브와 자바스크립트/TVML 코드를 연결)</description>
     </item>
     
@@ -71,11 +70,10 @@ expo는 리액트 네이티브를 크로스 플랫폼으로 개발하기 위한 
       
       <guid>https://blog.haneul-lee.com/post/flutter/flutter-install/</guid>
       <description>플러터 Flutter 📱 flutter-ko.dev/docs/get-started/install/macos
-플러터 설치 방법은 아래와 같이 2가지가 있다.   플러터 sdk로 설치하기 git clone 으로 설치하기  github.com/flutter/flutter.git    다음은 아래와 같이 flutter PATH 설정하기 cd vi .bash_profile export PATH=&amp;quot;$HOME/Desktop/flutter/bin:$PATH&amp;quot; :wq로 저장 후 source .bash_profile을 사용하여 적용시켜준다.
+플러터 설치 방법은 아래와 같이 2가지가 있다.    플러터 sdk로 설치하기 git clone 으로 설치하기  github.com/flutter/flutter.git    다음은 아래와 같이 flutter PATH 설정하기 cd vi .bash_profile export PATH=&amp;quot;$HOME/Desktop/flutter/bin:$PATH&amp;quot; :wq로 저장 후 source .bash_profile을 사용하여 적용시켜준다.
 플러터 디렉토리 경로로 가서 pwd 로 경로 찾아서 설정해줘도 됨
 flutter doctor 를 실행한다.
-ios면 xcode android면 android studio 관련하여 잘 설정이 되었는지 확인할 수 있다.
-xcode 버전이 최소 11이상이어야 해서 맥os 업데이트와 xcode 설치까지 오랜 시간이 걸렸다 ㅠㅠ</description>
+ios면 xcode android면 android studio 관련하여 잘 설정이 되었는지 확인할 수 있다.</description>
     </item>
     
   </channel>

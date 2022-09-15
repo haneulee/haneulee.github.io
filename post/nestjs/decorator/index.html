@@ -204,7 +204,7 @@ if (!doNotTrack) {
        </a>
        <h4 class="sidebar-profile-name">Haneul Devlog</h4>
        
-         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</h5>
+         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</h5>
        
      </div>
    
@@ -564,7 +564,18 @@ if (!doNotTrack) {
               
                 
                 
-                <!-- raw HTML omitted -->
+                <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#nestjs-프레임워크---decorator">NestJS 프레임워크 - Decorator</a>
+      <ul>
+        <li><a href="#role-데코레이터">@Role 데코레이터</a></li>
+        <li><a href="#app_guard">APP_GUARD</a></li>
+        <li><a href="#authguard">AuthGuard</a></li>
+        <li><a href="#resolver-에서-role-데코레이터-사용">Resolver 에서 @Role 데코레이터 사용</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 <h1 id="nestjs-프레임워크---decorator">NestJS 프레임워크 - Decorator</h1>
 <p><img src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/nestjs/img-1.png" alt=""></p>
 <div class="alert info ">
@@ -610,12 +621,21 @@ enum을 union of literal types로 만들기 위해 사용하는 것이 <strong>k
 그래서 nestjs 에서 제공해주는 APP_GUARD 상수를 이용해서 UseGuards 사용을 줄일 수 있습니다.<br>
 위와 같이 auth 모듈 설정을 해주면, 더이상 UseGuard는 사용하지 않으셔도 됩니다<br>
 대신에 Auth module을 App 모듈에서 꼭 import 해주셔야 합니다.</p>
-<!-- raw HTML omitted -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="3551187766"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <h2 id="authguard">AuthGuard</h2>
 <p>SetMetadata로 넘겨준 &lsquo;roles&rsquo;라는 키를 가진 metadata를 AuthGuard가 작동할 때 값을 가져와서 role이 어떤지 확인 해야 합니다.<br>
 constructor에 보면 어김없이 나오는 parameter properties가 보입니다.</p>
 <p>reflector라는 property가 Reflector 클래스 타입으로 설정되었습니다.<br>
-this.reflector.get<!-- raw HTML omitted --> 에서 SetMetadata로 넘겨준 &lsquo;roles&rsquo; 키에 해당하는 값을 얻어올 수 있습니다.</p>
+this.reflector.get<AllowedRoles> 에서 SetMetadata로 넘겨준 &lsquo;roles&rsquo; 키에 해당하는 값을 얻어올 수 있습니다.</p>
 <p>Role을 설정 안해주면 public resolver로 취급할 수 있다는 의미입니다.<br>
 <a href="https://developer.mozilla.org/ko/docs/Glossary/Falsy">https://developer.mozilla.org/ko/docs/Glossary/Falsy</a></p>
 <p>Role 값들을 얻어 오려면 메타데이터를 설정을 해줘야 하는데, 앞에 코드처럼 우리는 @Role 데코레이터를 이용하여 설정하기로 했습니다.<br>
@@ -769,8 +789,8 @@ this.reflector.get<!-- raw HTML omitted --> 에서 SetMetadata로 넘겨준 &lsq
   
   <li class="post-action">
     
-      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
-      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="Table of Contents">
+      <i class="fa fa-list" aria-hidden="true"></i>
     
     </a>
   </li>
@@ -872,8 +892,8 @@ this.reflector.get<!-- raw HTML omitted --> 에서 SetMetadata로 넘겨준 &lsq
   
   <li class="post-action">
     
-      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
-      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="Table of Contents">
+      <i class="fa fa-list" aria-hidden="true"></i>
     
     </a>
   </li>
@@ -928,7 +948,7 @@ this.reflector.get<!-- raw HTML omitted --> 에서 SetMetadata로 넘겨준 &lsq
     
     <h4 id="about-card-name">Haneul Devlog</h4>
     
-      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</div>
+      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</div>
     
     
       <div id="about-card-job">

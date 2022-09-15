@@ -28,9 +28,9 @@
 2가지 방법이 있는데,
 1. 관리페이지 &amp;gt; 플러그인 &amp;gt; 코드블럭 &amp;gt; 마음에 드는 스타일 설정
 2. 스킨편집 &amp;gt; html 편집 &amp;gt; &amp;lsquo;head&amp;rsquo;태그 안에 Highlight.js 임포트
-2번 방법은
+ 2번 방법은
 먼저 아래 코드를 태그 안에 넣으면 됨!
-https://highlightjs.org/static/demo/에서 마음에 드는 데모 스타일을 고르고 아래 코드에서 default.min.css 에서 default를 다른 스타일 이름으로 변경하면 된다.</description>
+https://highlightjs.org/static/demo/에서 마음에 드는 데모 스타일을 고르고 아래 코드에서 default.</description>
     </item>
     
   </channel>

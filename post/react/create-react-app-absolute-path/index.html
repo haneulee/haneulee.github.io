@@ -179,7 +179,7 @@ if (!doNotTrack) {
        </a>
        <h4 class="sidebar-profile-name">Haneul Devlog</h4>
        
-         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</h5>
+         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</h5>
        
      </div>
    
@@ -541,7 +541,20 @@ if (!doNotTrack) {
               
                 
                 
-                <!-- raw HTML omitted -->
+                <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#create-react-app-절대경로-설정-타입스크립트">create-react-app 절대경로 설정, 타입스크립트</a>
+      <ul>
+        <li><a href="#설치"><strong>설치</strong></a></li>
+        <li><a href="#사용법"><strong>사용법</strong></a></li>
+        <li><a href="#packagejson파일을-수정한다-react-script를-craco로-변경"><strong>package.json</strong> 파일을 수정한다. (react-script를 craco로 변경)</a></li>
+        <li><a href="#tsconfigpathsjson파일을-루트에-생성하고-paths-설정을-한다"><strong>tsconfig.paths.json</strong> 파일을 루트에 생성하고 paths 설정을 한다.</a></li>
+        <li><a href="#tsconfigjson맨-윗-라인에-확장-옵션을-넣는다"><strong>tsconfig.json</strong> 맨 윗 라인에 확장 옵션을 넣는다.</a></li>
+        <li><a href="#cracoconfigjs파일을-루트에-생성-후-webpack-설정을-변경하면-된다"><strong>craco.config.js</strong> 파일을 루트에 생성 후 webpack 설정을 변경하면 된다.</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 <h1 id="create-react-app-절대경로-설정-타입스크립트">create-react-app 절대경로 설정, 타입스크립트</h1>
 <p>타입스크립트 설치 후, </p>
 <p>tsc init으로 tsconfig.json을 생성했다. </p>
@@ -554,7 +567,7 @@ if (!doNotTrack) {
 <p>그런데 한번 eject를 하면 React의 버전업에 대한 자동으로 다른 구성요소 및 설정이 변경되는 장점을 잃어버리게 된다</p>
 <p>하지만 나는 eject를 하기 싫었으므로 이를 피해가기 위해 craco를 사용하였다. </p>
 <h2 id="설치"><strong>설치</strong></h2>
-<!-- raw HTML omitted -->
+<table style="border-collapse: collapse; width: 100%;" border="1" data-ke-align="alignLeft"><tbody><tr><td><span style="color: #333333;">$ yarn add @craco/craco</span><br><span style="color: #333333;">$ yarn add --dev craco-alias</span></td></tr></tbody></table>
 <p>tsconfig의 paths 설정을 바로 사용하기 위해<a href="https://github.com/risenforces/craco-alias#migrating-from-cra-alias">craco-alias</a>도 함께 설치</p>
 <h2 id="사용법"><strong>사용법</strong></h2>
 <h2 id="packagejson파일을-수정한다-react-script를-craco로-변경"><strong>package.json</strong> 파일을 수정한다. (react-script를 craco로 변경)</h2>
@@ -706,8 +719,8 @@ import { useLocalization } from '@locales';
   
   <li class="post-action">
     
-      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
-      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="Table of Contents">
+      <i class="fa fa-list" aria-hidden="true"></i>
     
     </a>
   </li>
@@ -809,8 +822,8 @@ import { useLocalization } from '@locales';
   
   <li class="post-action">
     
-      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
-      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="Table of Contents">
+      <i class="fa fa-list" aria-hidden="true"></i>
     
     </a>
   </li>
@@ -865,7 +878,7 @@ import { useLocalization } from '@locales';
     
     <h4 id="about-card-name">Haneul Devlog</h4>
     
-      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<!-- raw HTML omitted --> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <!-- raw HTML omitted --><!-- raw HTML omitted -->Hello, I&rsquo;m Haneul Lee, a front-end developer. <!-- raw HTML omitted -->This blog is created to record software development studies.</div>
+      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</div>
     
     
       <div id="about-card-job">
