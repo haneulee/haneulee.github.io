@@ -21,15 +21,27 @@
 <meta name="author" content="Haneul Devlog">
 <meta name="keywords" content="development, front-end, development, next-gen">
 <meta name="description" content="aws Certificate Manager 에서는 무료로 ssl 공인 인증서를 받을 수 있다.
-ssl 인증서는 https로 웹사이트를 통신하기 위해서 꼭 필요한 것이다.    (adsbygoogle = window.adsbygoogle || []).push({});  aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
+ssl 인증서는 https로 웹사이트를 통신하기 위해서
+꼭 필요한 것이다.
+ aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
 도메인 이름을 등록하고,
-여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고, 태그는 그냥 다음으로 넘어가고, 확인 및 요청을 누르면 무료 ssl 인증서를 신청하게 된다. 신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야 자동으로 내가 가지고 있는 도메인에 연동이 되어 https://로도 접속이 가능하게 된다.">
+여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고,
+태그는 그냥 다음으로 넘어가고,
+확인 및 요청을 누르면
+무료 ssl 인증서를 신청하게 된다.
+신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야">
 
 
 <meta property="og:description" content="aws Certificate Manager 에서는 무료로 ssl 공인 인증서를 받을 수 있다.
-ssl 인증서는 https로 웹사이트를 통신하기 위해서 꼭 필요한 것이다.    (adsbygoogle = window.adsbygoogle || []).push({});  aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
+ssl 인증서는 https로 웹사이트를 통신하기 위해서
+꼭 필요한 것이다.
+ aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
 도메인 이름을 등록하고,
-여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고, 태그는 그냥 다음으로 넘어가고, 확인 및 요청을 누르면 무료 ssl 인증서를 신청하게 된다. 신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야 자동으로 내가 가지고 있는 도메인에 연동이 되어 https://로도 접속이 가능하게 된다.">
+여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고,
+태그는 그냥 다음으로 넘어가고,
+확인 및 요청을 누르면
+무료 ssl 인증서를 신청하게 된다.
+신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Aws Certificate Manager">
 <meta name="twitter:title" content="Aws Certificate Manager">
@@ -37,13 +49,25 @@ ssl 인증서는 https로 웹사이트를 통신하기 위해서 꼭 필요한 
 <meta property="twitter:url" content="https://blog.haneul-lee.com/2020/02/aws-certificate-manager/">
 <meta property="og:site_name" content="Haneul Devlog 개발 블로그 📚">
 <meta property="og:description" content="aws Certificate Manager 에서는 무료로 ssl 공인 인증서를 받을 수 있다.
-ssl 인증서는 https로 웹사이트를 통신하기 위해서 꼭 필요한 것이다.    (adsbygoogle = window.adsbygoogle || []).push({});  aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
+ssl 인증서는 https로 웹사이트를 통신하기 위해서
+꼭 필요한 것이다.
+ aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
 도메인 이름을 등록하고,
-여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고, 태그는 그냥 다음으로 넘어가고, 확인 및 요청을 누르면 무료 ssl 인증서를 신청하게 된다. 신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야 자동으로 내가 가지고 있는 도메인에 연동이 되어 https://로도 접속이 가능하게 된다.">
+여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고,
+태그는 그냥 다음으로 넘어가고,
+확인 및 요청을 누르면
+무료 ssl 인증서를 신청하게 된다.
+신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야">
 <meta name="twitter:description" content="aws Certificate Manager 에서는 무료로 ssl 공인 인증서를 받을 수 있다.
-ssl 인증서는 https로 웹사이트를 통신하기 위해서 꼭 필요한 것이다.    (adsbygoogle = window.adsbygoogle || []).push({});  aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
+ssl 인증서는 https로 웹사이트를 통신하기 위해서
+꼭 필요한 것이다.
+ aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
 도메인 이름을 등록하고,
-여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고, 태그는 그냥 다음으로 넘어가고, 확인 및 요청을 누르면 무료 ssl 인증서를 신청하게 된다. 신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야 자동으로 내가 가지고 있는 도메인에 연동이 되어 https://로도 접속이 가능하게 된다.">
+여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고,
+태그는 그냥 다음으로 넘어가고,
+확인 및 요청을 누르면
+무료 ssl 인증서를 신청하게 된다.
+신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야">
 <meta property="og:locale" content="en-us">
 
   
@@ -529,8 +553,8 @@ if (!doNotTrack) {
                 
                 
                 <p>aws Certificate Manager 에서는 무료로 ssl 공인 인증서를 받을 수 있다.</p>
-<p>ssl 인증서는 https로 웹사이트를 통신하기 위해서 </p>
-<p>꼭 필요한 것이다. </p>
+<p>ssl 인증서는 https로 웹사이트를 통신하기 위해서</p>
+<p>꼭 필요한 것이다.</p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -546,14 +570,14 @@ if (!doNotTrack) {
 <p>도메인 이름을 등록하고,</p>
 <p>여기서는 *.test.com 또는 <a href="http://test.com">test.com</a>, <a href="http://www.test.com">www.test.com</a> 이렇게 입력해도 좋다.
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdqLxWN%2FbtqBVM0c7z6%2FKWZNuAEST0ljF2eHpoXaW1%2Fimg.png" alt=""></p>
-<p>dns 검증을 선택하고, </p>
+<p>dns 검증을 선택하고,</p>
 <p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FR9zwd%2FbtqBYfGGseY%2F4LLVI5mAiKYg4awqwuUxuk%2Fimg.png" alt=""></p>
-<p>태그는 그냥 다음으로 넘어가고, </p>
-<p>확인 및 요청을 누르면 </p>
-<p>무료 ssl 인증서를 신청하게 된다. </p>
+<p>태그는 그냥 다음으로 넘어가고,</p>
+<p>확인 및 요청을 누르면</p>
+<p>무료 ssl 인증서를 신청하게 된다.</p>
 <p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FunfTZ%2FbtqBXHcAz6Y%2FFivB8QSJKO0tnkgXXGJk60%2Fimg.png" alt=""></p>
-<p>신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야 </p>
-<p>자동으로 내가 가지고 있는 도메인에 연동이 되어 </p>
+<p>신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야</p>
+<p>자동으로 내가 가지고 있는 도메인에 연동이 되어</p>
 <p>https://로도 접속이 가능하게 된다.</p>
 <p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbFYnBt%2FbtqBWB4ZAMi%2F4CNXT8e1pcmH1Zue2UL7Pk%2Fimg.png" alt=""></p>
 

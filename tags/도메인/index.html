@@ -559,7 +559,10 @@ if (!doNotTrack) {
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        gitlab pages에 나의 도메인 연결하기 먼저 gitlab repository를 새로 만들고 , 정적 웹페이지 든 spa 이든 프로젝트 폴더를 만들고 .gitlab-ci.yml 파일을 새로 만들어서 아래와 같이 입력한다.    (adsbygoogle = window.adsbygoogle || []).push({});  image: node:latest cache: paths: - node_modules/ before_script: - npm install # test: # stage: test # script: # - CI=true npm test pages: stage: deploy script: - CI=true npm run build - rm -rf public - mv build public artifacts: paths: - public # GitLab pages serve from a 'public' directory only: - master # run on master branch 그리고 git push 를 하면 자동으로 위와 같이 빌드를 하게되고, 해당 웹사이트에서 자동으로 배포되는 것을 알 수 있다.
+        gitlab pages에 나의 도메인 연결하기 먼저 gitlab repository를 새로 만들고 ,
+정적 웹페이지 든 spa 이든 프로젝트 폴더를 만들고
+.gitlab-ci.yml 파일을 새로 만들어서 아래와 같이 입력한다.
+ image: node:latest cache: paths: - node_modules/ before_script: - npm install # test: # stage: test # script: # - CI=true npm test pages: stage: deploy script: - CI=true npm run build - rm -rf public - mv build public artifacts: paths: - public # GitLab pages serve from a 'public' directory only: - master # run on master branch 그리고 git push 를 하면 자동으로 위와 같이 빌드를 하게되고, 해당 웹사이트에서 자동으로 배포되는 것을 알 수 있다.
       
       <p>
         <a href="https://blog.haneul-lee.com/2020/02/gitlab-pages%EC%97%90-%EB%82%98%EC%9D%98-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link">Continue reading</a>
@@ -620,9 +623,13 @@ if (!doNotTrack) {
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         기존에 이용하던 블루호스트는 처음 웹사이트를 만들 때는 괜찮았지만
-해마다 도메인 사용 연장 비용이 높아져서 다른 곳으로 갈아탈 기회를 엿보고 있었다. fastcommet? 이라는 곳도 호스팅쪽에서는 꽤 괜찮은듯 했지만
-결론적으로 나는 gitlab pages를 이용하여 소스를 관리하고 배포하기로 하였으므로 도메인만 다른곳으로 이전하는 것이 필요했다. 가격은 .com 이 $12 달러로 구글 도메인과 가격이 비슷했다. 구글이나 aws같이 큰 기업에서 도메인을 구매하는 것도 괜찮겠다 싶어 결국 aws로 결정!
-   (adsbygoogle = window.adsbygoogle || []).push({});  기존에 다른 곳에서 사용하던 도메인을 이전하려면 기존사이트에서 제공하는 코드가 필요하다.
+해마다 도메인 사용 연장 비용이 높아져서 다른 곳으로 갈아탈 기회를 엿보고 있었다.
+fastcommet? 이라는 곳도 호스팅쪽에서는 꽤 괜찮은듯 했지만
+결론적으로 나는 gitlab pages를 이용하여 소스를 관리하고 배포하기로 하였으므로
+도메인만 다른곳으로 이전하는 것이 필요했다.
+가격은 .com 이 $12 달러로 구글 도메인과 가격이 비슷했다.
+구글이나 aws같이 큰 기업에서 도메인을 구매하는 것도 괜찮겠다 싶어 결국 aws로 결정!
+ 기존에 다른 곳에서 사용하던 도메인을 이전하려면 기존사이트에서 제공하는 코드가 필요하다.
       
       <p>
         <a href="https://blog.haneul-lee.com/2020/02/aws-route-53/" class="postShorten-excerpt_link link">Continue reading</a>

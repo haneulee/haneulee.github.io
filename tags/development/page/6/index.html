@@ -504,7 +504,7 @@ if (!doNotTrack) {
 그러나 절대경로를 설정하면 components/sign/logout 으로 간단히 작성할 수 있다는 사실!
 나는 src 폴더를 기준으로 절대경로를 설정하였다.
 방법은 아래와 같다.
-   (adsbygoogle = window.adsbygoogle || []).push({});  | Linux, Mac 에서 설정하기 프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
+ | Linux, Mac 에서 설정하기 프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
 &quot;start&quot;: &quot;NODE_PATH=src/ react-scripts start&quot;, &quot;build&quot;: &quot;NODE_PATH=src/ react-scripts build&quot;, | Window 에서 설정하기 여기서는 cross-env가 필요하다.
       
       <p>
@@ -563,7 +563,7 @@ if (!doNotTrack) {
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        CDN 이미지를 블로그에 적용하기    (adsbygoogle = window.adsbygoogle || []).push({});  깃헙 블로그를 사용하면서 이미지가 상당히 느리게 로딩되는 것을 확인 jsdelivr의 cdn 서버를 이용하여 이미지를 로딩하기로 결정
+        CDN 이미지를 블로그에 적용하기  깃헙 블로그를 사용하면서 이미지가 상당히 느리게 로딩되는 것을 확인 jsdelivr의 cdn 서버를 이용하여 이미지를 로딩하기로 결정
 https://cdn.jsdelivr.net/gh/계정명/레파지토리명/파일경로 
       
       <p>
@@ -679,7 +679,10 @@ https://cdn.jsdelivr.net/gh/계정명/레파지토리명/파일경로
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        gitlab pages에 나의 도메인 연결하기 먼저 gitlab repository를 새로 만들고 , 정적 웹페이지 든 spa 이든 프로젝트 폴더를 만들고 .gitlab-ci.yml 파일을 새로 만들어서 아래와 같이 입력한다.    (adsbygoogle = window.adsbygoogle || []).push({});  image: node:latest cache: paths: - node_modules/ before_script: - npm install # test: # stage: test # script: # - CI=true npm test pages: stage: deploy script: - CI=true npm run build - rm -rf public - mv build public artifacts: paths: - public # GitLab pages serve from a 'public' directory only: - master # run on master branch 그리고 git push 를 하면 자동으로 위와 같이 빌드를 하게되고, 해당 웹사이트에서 자동으로 배포되는 것을 알 수 있다.
+        gitlab pages에 나의 도메인 연결하기 먼저 gitlab repository를 새로 만들고 ,
+정적 웹페이지 든 spa 이든 프로젝트 폴더를 만들고
+.gitlab-ci.yml 파일을 새로 만들어서 아래와 같이 입력한다.
+ image: node:latest cache: paths: - node_modules/ before_script: - npm install # test: # stage: test # script: # - CI=true npm test pages: stage: deploy script: - CI=true npm run build - rm -rf public - mv build public artifacts: paths: - public # GitLab pages serve from a 'public' directory only: - master # run on master branch 그리고 git push 를 하면 자동으로 위와 같이 빌드를 하게되고, 해당 웹사이트에서 자동으로 배포되는 것을 알 수 있다.
       
       <p>
         <a href="https://blog.haneul-lee.com/2020/02/gitlab-pages%EC%97%90-%EB%82%98%EC%9D%98-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link">Continue reading</a>
@@ -744,9 +747,15 @@ https://cdn.jsdelivr.net/gh/계정명/레파지토리명/파일경로
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         aws Certificate Manager 에서는 무료로 ssl 공인 인증서를 받을 수 있다.
-ssl 인증서는 https로 웹사이트를 통신하기 위해서 꼭 필요한 것이다.    (adsbygoogle = window.adsbygoogle || []).push({});  aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
+ssl 인증서는 https로 웹사이트를 통신하기 위해서
+꼭 필요한 것이다.
+ aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
 도메인 이름을 등록하고,
-여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고, 태그는 그냥 다음으로 넘어가고, 확인 및 요청을 누르면 무료 ssl 인증서를 신청하게 된다. 신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야 자동으로 내가 가지고 있는 도메인에 연동이 되어 https://로도 접속이 가능하게 된다.
+여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고,
+태그는 그냥 다음으로 넘어가고,
+확인 및 요청을 누르면
+무료 ssl 인증서를 신청하게 된다.
+신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야
       
       <p>
         <a href="https://blog.haneul-lee.com/2020/02/aws-certificate-manager/" class="postShorten-excerpt_link link">Continue reading</a>
@@ -801,7 +810,7 @@ ssl 인증서는 https로 웹사이트를 통신하기 위해서 꼭 필요한 
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         Redux 리덕스 : 리액트를 위한 스테이트 매니지먼트 툴 (복잡한 앱에서 효율적, 단순한 앱에서 필요없음)
-Why do we need it? 왜 필요한가?  Components have local state, but apps have global state. Sometimes state need to be shared. We need to save the shared state somewhere. Redux == state container     (adsbygoogle = window.adsbygoogle || []).push({});  Redux is a gloabl state container  Ther Redux Store is like a box We go and grab what we need for the container For example, from  we only grab the username  Stuff to remember  The whole state of your app is stored in an object(store)   state 가 복잡하고 커질 수 있어서 리덕스는 해당 오브젝트를 수정하는 것에 매우 엄격함  If you wanna change the data inside of this object you need to &lsquo;dispatch&rsquo; (sned) an action   오브젝트의 데이터를 수정하는 방법은 액션을 reducer 로 보내면 가능함  You will send this actions to a reducer and this reducer will change the object for you.
+Why do we need it? 왜 필요한가?  Components have local state, but apps have global state. Sometimes state need to be shared. We need to save the shared state somewhere. Redux == state container   Redux is a gloabl state container  Ther Redux Store is like a box We go and grab what we need for the container For example, from  we only grab the username  Stuff to remember  The whole state of your app is stored in an object(store)   state 가 복잡하고 커질 수 있어서 리덕스는 해당 오브젝트를 수정하는 것에 매우 엄격함  If you wanna change the data inside of this object you need to &lsquo;dispatch&rsquo; (sned) an action   오브젝트의 데이터를 수정하는 방법은 액션을 reducer 로 보내면 가능함  You will send this actions to a reducer and this reducer will change the object for you.
       
       <p>
         <a href="https://blog.haneul-lee.com/2018/10/redux-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link">Continue reading</a>

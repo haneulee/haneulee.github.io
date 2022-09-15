@@ -13,7 +13,8 @@
       <pubDate>Fri, 21 May 2021 10:23:15 +0900</pubDate>
       
       <guid>https://blog.haneul-lee.com/2021/05/nestjs-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/</guid>
-      <description>NestJS: Nest (NestJS)는 효율적이고 확장 가능한Node.js서버 측 애플리케이션을 구축하기위한 프레임 워크입니다.프로그레시브 JavaScript를 사용하고TypeScript로 빌드되고 완전히 지원하며 (하지만 여전히 개발자가 순수 JavaScript로 코딩 할 수 있음) OOP (Object Oriented Programming), FP (Functional Programming) 및 FRP (Functional Reactive Programming) 요소를 결합합니다.    (adsbygoogle = window.adsbygoogle || []).push({});  내부적으로 Nest는Express(기본값)와같은 강력한 HTTP 서버 프레임 워크를 사용하며 선택적으로 Fastify를 사용하도록 구성 할 수도 있습니다!
+      <description>NestJS: Nest (NestJS)는 효율적이고 확장 가능한Node.js서버 측 애플리케이션을 구축하기위한 프레임 워크입니다.프로그레시브 JavaScript를 사용하고TypeScript로 빌드되고 완전히 지원하며 (하지만 여전히 개발자가 순수 JavaScript로 코딩 할 수 있음) OOP (Object Oriented Programming), FP (Functional Programming) 및 FRP (Functional Reactive Programming) 요소를 결합합니다.
+ 내부적으로 Nest는Express(기본값)와같은 강력한 HTTP 서버 프레임 워크를 사용하며 선택적으로 Fastify를 사용하도록 구성 할 수도 있습니다!
 Nest는 이러한 일반적인 Node.js 프레임 워크 (Express / Fastify) 위에 추상화 수준을 제공하지만 API를 개발자에게 직접 노출합니다.</description>
     </item>
     

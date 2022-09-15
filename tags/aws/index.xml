@@ -14,9 +14,15 @@
       
       <guid>https://blog.haneul-lee.com/2020/02/aws-certificate-manager/</guid>
       <description>aws Certificate Manager 에서는 무료로 ssl 공인 인증서를 받을 수 있다.
-ssl 인증서는 https로 웹사이트를 통신하기 위해서 꼭 필요한 것이다.    (adsbygoogle = window.adsbygoogle || []).push({});  aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
+ssl 인증서는 https로 웹사이트를 통신하기 위해서
+꼭 필요한 것이다.
+ aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
 도메인 이름을 등록하고,
-여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고, 태그는 그냥 다음으로 넘어가고, 확인 및 요청을 누르면 무료 ssl 인증서를 신청하게 된다. 신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야 자동으로 내가 가지고 있는 도메인에 연동이 되어 https://로도 접속이 가능하게 된다.</description>
+여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고,
+태그는 그냥 다음으로 넘어가고,
+확인 및 요청을 누르면
+무료 ssl 인증서를 신청하게 된다.
+신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야</description>
     </item>
     
     <item>
@@ -26,9 +32,13 @@ ssl 인증서는 https로 웹사이트를 통신하기 위해서 꼭 필요한 
       
       <guid>https://blog.haneul-lee.com/2020/02/aws-route-53/</guid>
       <description>기존에 이용하던 블루호스트는 처음 웹사이트를 만들 때는 괜찮았지만
-해마다 도메인 사용 연장 비용이 높아져서 다른 곳으로 갈아탈 기회를 엿보고 있었다. fastcommet? 이라는 곳도 호스팅쪽에서는 꽤 괜찮은듯 했지만
-결론적으로 나는 gitlab pages를 이용하여 소스를 관리하고 배포하기로 하였으므로 도메인만 다른곳으로 이전하는 것이 필요했다. 가격은 .com 이 $12 달러로 구글 도메인과 가격이 비슷했다. 구글이나 aws같이 큰 기업에서 도메인을 구매하는 것도 괜찮겠다 싶어 결국 aws로 결정!
-   (adsbygoogle = window.adsbygoogle || []).push({});  기존에 다른 곳에서 사용하던 도메인을 이전하려면 기존사이트에서 제공하는 코드가 필요하다.</description>
+해마다 도메인 사용 연장 비용이 높아져서 다른 곳으로 갈아탈 기회를 엿보고 있었다.
+fastcommet? 이라는 곳도 호스팅쪽에서는 꽤 괜찮은듯 했지만
+결론적으로 나는 gitlab pages를 이용하여 소스를 관리하고 배포하기로 하였으므로
+도메인만 다른곳으로 이전하는 것이 필요했다.
+가격은 .com 이 $12 달러로 구글 도메인과 가격이 비슷했다.
+구글이나 aws같이 큰 기업에서 도메인을 구매하는 것도 괜찮겠다 싶어 결국 aws로 결정!
+ 기존에 다른 곳에서 사용하던 도메인을 이전하려면 기존사이트에서 제공하는 코드가 필요하다.</description>
     </item>
     
   </channel>

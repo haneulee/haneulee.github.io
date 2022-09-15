@@ -502,7 +502,7 @@ if (!doNotTrack) {
 그러나 절대경로를 설정하면 components/sign/logout 으로 간단히 작성할 수 있다는 사실!
 나는 src 폴더를 기준으로 절대경로를 설정하였다.
 방법은 아래와 같다.
-   (adsbygoogle = window.adsbygoogle || []).push({});  | Linux, Mac 에서 설정하기 프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
+ | Linux, Mac 에서 설정하기 프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
 &quot;start&quot;: &quot;NODE_PATH=src/ react-scripts start&quot;, &quot;build&quot;: &quot;NODE_PATH=src/ react-scripts build&quot;, | Window 에서 설정하기 여기서는 cross-env가 필요하다.
       
       <p>
@@ -561,7 +561,7 @@ if (!doNotTrack) {
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        CDN 이미지를 블로그에 적용하기    (adsbygoogle = window.adsbygoogle || []).push({});  깃헙 블로그를 사용하면서 이미지가 상당히 느리게 로딩되는 것을 확인 jsdelivr의 cdn 서버를 이용하여 이미지를 로딩하기로 결정
+        CDN 이미지를 블로그에 적용하기  깃헙 블로그를 사용하면서 이미지가 상당히 느리게 로딩되는 것을 확인 jsdelivr의 cdn 서버를 이용하여 이미지를 로딩하기로 결정
 https://cdn.jsdelivr.net/gh/계정명/레파지토리명/파일경로 
       
       <p>
@@ -677,7 +677,10 @@ https://cdn.jsdelivr.net/gh/계정명/레파지토리명/파일경로
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        gitlab pages에 나의 도메인 연결하기 먼저 gitlab repository를 새로 만들고 , 정적 웹페이지 든 spa 이든 프로젝트 폴더를 만들고 .gitlab-ci.yml 파일을 새로 만들어서 아래와 같이 입력한다.    (adsbygoogle = window.adsbygoogle || []).push({});  image: node:latest cache: paths: - node_modules/ before_script: - npm install # test: # stage: test # script: # - CI=true npm test pages: stage: deploy script: - CI=true npm run build - rm -rf public - mv build public artifacts: paths: - public # GitLab pages serve from a 'public' directory only: - master # run on master branch 그리고 git push 를 하면 자동으로 위와 같이 빌드를 하게되고, 해당 웹사이트에서 자동으로 배포되는 것을 알 수 있다.
+        gitlab pages에 나의 도메인 연결하기 먼저 gitlab repository를 새로 만들고 ,
+정적 웹페이지 든 spa 이든 프로젝트 폴더를 만들고
+.gitlab-ci.yml 파일을 새로 만들어서 아래와 같이 입력한다.
+ image: node:latest cache: paths: - node_modules/ before_script: - npm install # test: # stage: test # script: # - CI=true npm test pages: stage: deploy script: - CI=true npm run build - rm -rf public - mv build public artifacts: paths: - public # GitLab pages serve from a 'public' directory only: - master # run on master branch 그리고 git push 를 하면 자동으로 위와 같이 빌드를 하게되고, 해당 웹사이트에서 자동으로 배포되는 것을 알 수 있다.
       
       <p>
         <a href="https://blog.haneul-lee.com/2020/02/gitlab-pages%EC%97%90-%EB%82%98%EC%9D%98-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link">Continue reading</a>
@@ -742,9 +745,15 @@ https://cdn.jsdelivr.net/gh/계정명/레파지토리명/파일경로
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         aws Certificate Manager 에서는 무료로 ssl 공인 인증서를 받을 수 있다.
-ssl 인증서는 https로 웹사이트를 통신하기 위해서 꼭 필요한 것이다.    (adsbygoogle = window.adsbygoogle || []).push({});  aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
+ssl 인증서는 https로 웹사이트를 통신하기 위해서
+꼭 필요한 것이다.
+ aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
 도메인 이름을 등록하고,
-여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고, 태그는 그냥 다음으로 넘어가고, 확인 및 요청을 누르면 무료 ssl 인증서를 신청하게 된다. 신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야 자동으로 내가 가지고 있는 도메인에 연동이 되어 https://로도 접속이 가능하게 된다.
+여기서는 *.test.com 또는 test.com, www.test.com 이렇게 입력해도 좋다. dns 검증을 선택하고,
+태그는 그냥 다음으로 넘어가고,
+확인 및 요청을 누르면
+무료 ssl 인증서를 신청하게 된다.
+신청이 완료되고, 인증서 목록에서 하위에 route 53에서 레코드 생성을 해줘야
       
       <p>
         <a href="https://blog.haneul-lee.com/2020/02/aws-certificate-manager/" class="postShorten-excerpt_link link">Continue reading</a>
@@ -799,9 +808,13 @@ ssl 인증서는 https로 웹사이트를 통신하기 위해서 꼭 필요한 
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         기존에 이용하던 블루호스트는 처음 웹사이트를 만들 때는 괜찮았지만
-해마다 도메인 사용 연장 비용이 높아져서 다른 곳으로 갈아탈 기회를 엿보고 있었다. fastcommet? 이라는 곳도 호스팅쪽에서는 꽤 괜찮은듯 했지만
-결론적으로 나는 gitlab pages를 이용하여 소스를 관리하고 배포하기로 하였으므로 도메인만 다른곳으로 이전하는 것이 필요했다. 가격은 .com 이 $12 달러로 구글 도메인과 가격이 비슷했다. 구글이나 aws같이 큰 기업에서 도메인을 구매하는 것도 괜찮겠다 싶어 결국 aws로 결정!
-   (adsbygoogle = window.adsbygoogle || []).push({});  기존에 다른 곳에서 사용하던 도메인을 이전하려면 기존사이트에서 제공하는 코드가 필요하다.
+해마다 도메인 사용 연장 비용이 높아져서 다른 곳으로 갈아탈 기회를 엿보고 있었다.
+fastcommet? 이라는 곳도 호스팅쪽에서는 꽤 괜찮은듯 했지만
+결론적으로 나는 gitlab pages를 이용하여 소스를 관리하고 배포하기로 하였으므로
+도메인만 다른곳으로 이전하는 것이 필요했다.
+가격은 .com 이 $12 달러로 구글 도메인과 가격이 비슷했다.
+구글이나 aws같이 큰 기업에서 도메인을 구매하는 것도 괜찮겠다 싶어 결국 aws로 결정!
+ 기존에 다른 곳에서 사용하던 도메인을 이전하려면 기존사이트에서 제공하는 코드가 필요하다.
       
       <p>
         <a href="https://blog.haneul-lee.com/2020/02/aws-route-53/" class="postShorten-excerpt_link link">Continue reading</a>
@@ -861,11 +874,15 @@ ssl 인증서는 https로 웹사이트를 통신하기 위해서 꼭 필요한 
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        티스토리 Code Block 개발 블로그를 작성하다보면 코드 블럭을 사용하는 경우가 많다. 그런데 아래처럼 코드블럭이 그냥 일반 텍스트처럼 나와 매우 가독성이 떨어진다. 따라서 티스토리 블로그의 코드블럭 스타일을 변경하기로 했다. 2가지 방법이 있는데,
+        티스토리 Code Block 개발 블로그를 작성하다보면 코드 블럭을 사용하는 경우가 많다.
+그런데 아래처럼 코드블럭이 그냥 일반 텍스트처럼 나와 매우 가독성이 떨어진다.
+따라서 티스토리 블로그의 코드블럭 스타일을 변경하기로 했다.
+2가지 방법이 있는데,
 1. 관리페이지 &gt; 플러그인 &gt; 코드블럭 &gt; 마음에 드는 스타일 설정
 2. 스킨편집 &gt; html 편집 &gt; &lsquo;head&rsquo;태그 안에 Highlight.js 임포트
-   (adsbygoogle = window.adsbygoogle || []).push({});  2번 방법은
+ 2번 방법은
 먼저 아래 코드를 태그 안에 넣으면 됨!
+https://highlightjs.org/static/demo/에서 마음에 드는 데모 스타일을 고르고 아래 코드에서 default.
       
       <p>
         <a href="https://blog.haneul-lee.com/2020/02/%ED%8B%B0%EC%8A%A4%ED%86%A0%EB%A6%AC-code-block/" class="postShorten-excerpt_link link">Continue reading</a>
@@ -934,9 +951,10 @@ ssl 인증서는 https로 웹사이트를 통신하기 위해서 꼭 필요한 
 공식 문서에 따르면 새로운 웹 어플리케이션 개발 방법을 제시하는 컴파일러라고도 소개되어 있습니다.
 vue, react와는 다르게 가상돔을 사용하지 않습니다.
 svelte는 빌드 타임에 실행되며, 효과적으로 DOM을 업데이트하는 코드로 컴파일됩니다.
-   (adsbygoogle = window.adsbygoogle || []).push({});  기본 문법 svelte는 vue 처럼 .svelte라는 별도의 파일 확장자를 갖습니다.
+ 기본 문법 svelte는 vue 처럼 .svelte라는 별도의 파일 확장자를 갖습니다.
 기본문법은 html과 비슷합니다.
 h1 태그 내에 {name}은 스크립트의 선언한 name 변수를 참조해서 출력합니다.
+css 또한 똑같이 작성하시면 됩니다.
       
       <p>
         <a href="https://blog.haneul-lee.com/2019/11/svelte/" class="postShorten-excerpt_link link">Continue reading</a>
@@ -994,12 +1012,13 @@ h1 태그 내에 {name}은 스크립트의 선언한 name 변수를 참조해서
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.     (adsbygoogle = window.adsbygoogle || []).push({});  2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
+        state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.   2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
   이것을 사용하기 위해서는 라이브러리를 사전 설치해줘야 한다.
   설치 방법 : npm을 통한 설치
   $npm install &ndash;save react-addons-update
   import update from &lsquo;react-addons-update&rsquo;
   원소 추가
+  this.setState({ list: update( this.
       
       <p>
         <a href="https://blog.haneul-lee.com/2019/11/how-to-handle-react-state-array/" class="postShorten-excerpt_link link">Continue reading</a>
@@ -1060,10 +1079,10 @@ h1 태그 내에 {name}은 스크립트의 선언한 name 변수를 참조해서
         Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
 요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
 웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
-   (adsbygoogle = window.adsbygoogle || []).push({});  이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
+ 이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
  첫번째,
  나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
-class Checkbox extends React.
+class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .
       
       <p>
         <a href="https://blog.haneul-lee.com/2018/12/why-do-we-write-superprops/" class="postShorten-excerpt_link link">Continue reading</a>

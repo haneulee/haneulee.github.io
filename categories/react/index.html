@@ -499,7 +499,7 @@ if (!doNotTrack) {
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-         배열 state  1. 추가 const [language, setLanguage] = useState([]); setLanguage([...language, newLanguage]); // or setLanguage(language.concat(newLanguage));    (adsbygoogle = window.adsbygoogle || []).push({});  2. 삭제 const [language, setLanguage] = useState([]); setLanguage(language.filter(item =&gt; item.id !== id)); 3. 수정 const [language, setLanguage] = useState([]); setLanguage( language.map(item =&gt; item.id === id ? { ...item, active: !item.active } : item ) ); 
+         배열 state  1. 추가 const [language, setLanguage] = useState([]); setLanguage([...language, newLanguage]); // or setLanguage(language.concat(newLanguage));  2. 삭제 const [language, setLanguage] = useState([]); setLanguage(language.filter(item =&gt; item.id !== id)); 3. 수정 const [language, setLanguage] = useState([]); setLanguage( language.map(item =&gt; item.id === id ? { ...item, active: !item.active } : item ) ); 
       
       <p>
         <a href="https://blog.haneul-lee.com/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-usestate-%ED%9B%85-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" class="postShorten-excerpt_link link">Continue reading</a>
@@ -562,7 +562,7 @@ if (!doNotTrack) {
 그러나 절대경로를 설정하면 components/sign/logout 으로 간단히 작성할 수 있다는 사실!
 나는 src 폴더를 기준으로 절대경로를 설정하였다.
 방법은 아래와 같다.
-   (adsbygoogle = window.adsbygoogle || []).push({});  | Linux, Mac 에서 설정하기 프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
+ | Linux, Mac 에서 설정하기 프로젝트의 package.json 로 이동 후, scripts의 start, build 부분을 다음과 같이 수정한다.
 &quot;start&quot;: &quot;NODE_PATH=src/ react-scripts start&quot;, &quot;build&quot;: &quot;NODE_PATH=src/ react-scripts build&quot;, | Window 에서 설정하기 여기서는 cross-env가 필요하다.
       
       <p>
@@ -621,12 +621,13 @@ if (!doNotTrack) {
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.     (adsbygoogle = window.adsbygoogle || []).push({});  2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
+        state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.   2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
   이것을 사용하기 위해서는 라이브러리를 사전 설치해줘야 한다.
   설치 방법 : npm을 통한 설치
   $npm install &ndash;save react-addons-update
   import update from &lsquo;react-addons-update&rsquo;
   원소 추가
+  this.setState({ list: update( this.
       
       <p>
         <a href="https://blog.haneul-lee.com/2019/11/how-to-handle-react-state-array/" class="postShorten-excerpt_link link">Continue reading</a>
@@ -687,10 +688,10 @@ if (!doNotTrack) {
         Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
 요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
 웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.
-   (adsbygoogle = window.adsbygoogle || []).push({});  이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
+ 이런 것들은(클래스 컴포넌트) 리액트를 생산적으로 사용하는데 별로 중요하지 않다. 그러나 이것들이 어떻게 작동하는지 깊게 알고 싶다면 아마 놀라울 것이다.
  첫번째,
  나는 정말 super(props)를 내가 알고싶은 것보다 더 많이 사용했다.
-class Checkbox extends React.
+class Checkbox extends React.Component { constructor(props) { super(props); this.state = { isOn: true }; } // .
       
       <p>
         <a href="https://blog.haneul-lee.com/2018/12/why-do-we-write-superprops/" class="postShorten-excerpt_link link">Continue reading</a>

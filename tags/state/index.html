@@ -499,12 +499,13 @@ if (!doNotTrack) {
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.     (adsbygoogle = window.adsbygoogle || []).push({});  2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
+        state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.   2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
   이것을 사용하기 위해서는 라이브러리를 사전 설치해줘야 한다.
   설치 방법 : npm을 통한 설치
   $npm install &ndash;save react-addons-update
   import update from &lsquo;react-addons-update&rsquo;
   원소 추가
+  this.setState({ list: update( this.
       
       <p>
         <a href="https://blog.haneul-lee.com/2019/11/how-to-handle-react-state-array/" class="postShorten-excerpt_link link">Continue reading</a>

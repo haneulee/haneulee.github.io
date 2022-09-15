@@ -14,7 +14,7 @@
       
       <guid>https://blog.haneul-lee.com/2021/05/connection-reset-by-ip-port-22/</guid>
       <description>리눅스에서 ssh 접속 후 아무 작업을 하지 않고 그대로 두면 Connection reset by peer 메시지와 함께 접속이 끊기는 경우가 발생한다.
- Read from remote host xxx.xxx.xxx.xxx: Connection reset by peer
+Read from remote host xxx.xxx.xxx.xxx: Connection reset by peer
 Connection to xxx.xxx.xxx.xxx closed.
 1)/etc/ssh/sshd_config에 다음을 추가하고 재실행해주면 새로 접속하는 ssh부터는 아무런 작업을 하지 않는다고 해도 끊기지는 않을 것이다.
 ClientAliveInterval 600

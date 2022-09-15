@@ -20,11 +20,11 @@
 <meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Devlog">
 <meta name="keywords" content="development, front-end, development, next-gen">
-<meta name="description" content="(adsbygoogle = window.adsbygoogle || []).push({});  Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &lsquo;enum&rsquo; 이 아니라 &lsquo;simple-enum&rsquo;으로 지정해주면 해결된다.
+<meta name="description" content="Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &lsquo;enum&rsquo; 이 아니라 &lsquo;simple-enum&rsquo;으로 지정해주면 해결된다.
 export enum UserRole { Host = &#39;Host&#39;, Listener = &#39;Listener&#39;, } registerEnumType(UserRole, { name: &#39;UserRole&#39; }); @Column({ type: &#39;simple-enum&#39;, enum: UserRole }) @Field(type =&gt; UserRole) role: UserRole; registerEnumType 함수를 사용해 enum type을 등록해준다.">
 
 
-<meta property="og:description" content="(adsbygoogle = window.adsbygoogle || []).push({});  Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &lsquo;enum&rsquo; 이 아니라 &lsquo;simple-enum&rsquo;으로 지정해주면 해결된다.
+<meta property="og:description" content="Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &lsquo;enum&rsquo; 이 아니라 &lsquo;simple-enum&rsquo;으로 지정해주면 해결된다.
 export enum UserRole { Host = &#39;Host&#39;, Listener = &#39;Listener&#39;, } registerEnumType(UserRole, { name: &#39;UserRole&#39; }); @Column({ type: &#39;simple-enum&#39;, enum: UserRole }) @Field(type =&gt; UserRole) role: UserRole; registerEnumType 함수를 사용해 enum type을 등록해준다.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Typeorm study 2 - Hash / JWT / Guard">
@@ -32,9 +32,9 @@ export enum UserRole { Host = &#39;Host&#39;, Listener = &#39;Listener&#39;, } r
 <meta property="og:url" content="https://blog.haneul-lee.com/2021/07/typeorm-study-2-hash-/-jwt-/-guard/">
 <meta property="twitter:url" content="https://blog.haneul-lee.com/2021/07/typeorm-study-2-hash-/-jwt-/-guard/">
 <meta property="og:site_name" content="Haneul Devlog 개발 블로그 📚">
-<meta property="og:description" content="(adsbygoogle = window.adsbygoogle || []).push({});  Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &lsquo;enum&rsquo; 이 아니라 &lsquo;simple-enum&rsquo;으로 지정해주면 해결된다.
+<meta property="og:description" content="Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &lsquo;enum&rsquo; 이 아니라 &lsquo;simple-enum&rsquo;으로 지정해주면 해결된다.
 export enum UserRole { Host = &#39;Host&#39;, Listener = &#39;Listener&#39;, } registerEnumType(UserRole, { name: &#39;UserRole&#39; }); @Column({ type: &#39;simple-enum&#39;, enum: UserRole }) @Field(type =&gt; UserRole) role: UserRole; registerEnumType 함수를 사용해 enum type을 등록해준다.">
-<meta name="twitter:description" content="(adsbygoogle = window.adsbygoogle || []).push({});  Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &lsquo;enum&rsquo; 이 아니라 &lsquo;simple-enum&rsquo;으로 지정해주면 해결된다.
+<meta name="twitter:description" content="Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &lsquo;enum&rsquo; 이 아니라 &lsquo;simple-enum&rsquo;으로 지정해주면 해결된다.
 export enum UserRole { Host = &#39;Host&#39;, Listener = &#39;Listener&#39;, } registerEnumType(UserRole, { name: &#39;UserRole&#39; }); @Column({ type: &#39;simple-enum&#39;, enum: UserRole }) @Field(type =&gt; UserRole) role: UserRole; registerEnumType 함수를 사용해 enum type을 등록해준다.">
 <meta property="og:locale" content="en-us">
 

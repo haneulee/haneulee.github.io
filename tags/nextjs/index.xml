@@ -52,7 +52,7 @@ create-account에서는 유저에게 계정에 대한 입력을 받습니다.</d
       <pubDate>Sun, 30 May 2021 16:51:26 +0900</pubDate>
       
       <guid>https://blog.haneul-lee.com/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/</guid>
-      <description>document is not defined 오류 해결방법  서버사이드 렌더링인 nextJS를 사용할 때는 window 또는 Document 객체를 사용할 수 없다.  해결 방법 첫번째  window 오브젝트가 있는지 확인하는 조건문을 추가하여 렌더링 된 다음에 document 코드를 실행하도록 한다.  if (typeof window === &#39;object&#39;) { // Check if document is finally loaded document.addEventListener(&amp;quot;DOMContentLoaded&amp;quot;, function () { alert(&#39;Finished loading&#39;) }); }    (adsbygoogle = window.adsbygoogle || []).push({});  두번째  nextJS는 react를 사용할 수 있기 때문에 react에서 컴포넌트가 마운트 또는 업데이트 된 다음에 동작하는 componentDidMount 또는 useEffect 훅을 사용하여 체크한다.</description>
+      <description>document is not defined 오류 해결방법  서버사이드 렌더링인 nextJS를 사용할 때는 window 또는 Document 객체를 사용할 수 없다.  해결 방법 첫번째  window 오브젝트가 있는지 확인하는 조건문을 추가하여 렌더링 된 다음에 document 코드를 실행하도록 한다.  if (typeof window === &#39;object&#39;) { // Check if document is finally loaded document.addEventListener(&amp;quot;DOMContentLoaded&amp;quot;, function () { alert(&#39;Finished loading&#39;) }); }  두번째  nextJS는 react를 사용할 수 있기 때문에 react에서 컴포넌트가 마운트 또는 업데이트 된 다음에 동작하는 componentDidMount 또는 useEffect 훅을 사용하여 체크한다.</description>
     </item>
     
     <item>

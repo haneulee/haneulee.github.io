@@ -20,38 +20,42 @@
 <meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Haneul Devlog">
 <meta name="keywords" content=", development, next-gen">
-<meta name="description" content="state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.     (adsbygoogle = window.adsbygoogle || []).push({});  2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
+<meta name="description" content="state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.   2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
   이것을 사용하기 위해서는 라이브러리를 사전 설치해줘야 한다.
   설치 방법 : npm을 통한 설치
   $npm install &ndash;save react-addons-update
   import update from &lsquo;react-addons-update&rsquo;
-  원소 추가">
+  원소 추가
+  this.setState({ list: update( this.">
 
 
-<meta property="og:description" content="state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.     (adsbygoogle = window.adsbygoogle || []).push({});  2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
+<meta property="og:description" content="state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.   2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
   이것을 사용하기 위해서는 라이브러리를 사전 설치해줘야 한다.
   설치 방법 : npm을 통한 설치
   $npm install &ndash;save react-addons-update
   import update from &lsquo;react-addons-update&rsquo;
-  원소 추가">
+  원소 추가
+  this.setState({ list: update( this.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="how to handle React state array">
 <meta name="twitter:title" content="how to handle React state array">
 <meta property="og:url" content="https://blog.haneul-lee.com/2019/11/how-to-handle-react-state-array/">
 <meta property="twitter:url" content="https://blog.haneul-lee.com/2019/11/how-to-handle-react-state-array/">
 <meta property="og:site_name" content="Haneul Devlog 개발 블로그 📚">
-<meta property="og:description" content="state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.     (adsbygoogle = window.adsbygoogle || []).push({});  2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
+<meta property="og:description" content="state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.   2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
   이것을 사용하기 위해서는 라이브러리를 사전 설치해줘야 한다.
   설치 방법 : npm을 통한 설치
   $npm install &ndash;save react-addons-update
   import update from &lsquo;react-addons-update&rsquo;
-  원소 추가">
-<meta name="twitter:description" content="state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.     (adsbygoogle = window.adsbygoogle || []).push({});  2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
+  원소 추가
+  this.setState({ list: update( this.">
+<meta name="twitter:description" content="state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.   2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
   이것을 사용하기 위해서는 라이브러리를 사전 설치해줘야 한다.
   설치 방법 : npm을 통한 설치
   $npm install &ndash;save react-addons-update
   import update from &lsquo;react-addons-update&rsquo;
-  원소 추가">
+  원소 추가
+  this.setState({ list: update( this.">
 <meta property="og:locale" content="en-us">
 
   
@@ -644,7 +648,7 @@ if (!doNotTrack) {
         }
     }
 }
- 
+
 let changed = update(object, {
     c: {
         f: {
@@ -694,7 +698,7 @@ let changed = update(object, {
         }
     }
 }
- 
+
 let changed = {
     ...object,
     b: &quot;hi&quot;
@@ -719,7 +723,7 @@ let changed = {
         }
     }
 }
- 
+
 let changed = {
     ...object,
     c: {
