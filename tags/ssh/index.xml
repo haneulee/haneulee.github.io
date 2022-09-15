@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ssh on Haneul Devlog</title>
-    <link>https://haneulee.github.io/tags/ssh/</link>
+    <link>https://blog.haneul-lee.com/tags/ssh/</link>
     <description>Recent content in ssh on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 21 May 2021 10:30:25 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 May 2021 10:30:25 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Githup SSH  키 생성 및 등록</title>
-      <link>https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/</link>
+      <link>https://blog.haneul-lee.com/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/</link>
       <pubDate>Fri, 21 May 2021 10:30:25 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/</guid>
+      <guid>https://blog.haneul-lee.com/2021/05/githup-ssh-%ED%82%A4-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%93%B1%EB%A1%9D/</guid>
       <description>Github에서 SSH key 생성 // 홈 디렉토리 이동 cd ~ // ssh 키 디렉토리 생성 mkdir ~/.ssh chmod 700 ~/.ssh cd .ssh    (adsbygoogle = window.adsbygoogle || []).push({});  // ssh 사용자 키 생성 ssh-keygen -t rsa -b 4096 -C “lovesky4294@gmail.com” // 아래와 같이 뜨면 &amp;#34;엔터&amp;#34; 입력 Generating public/private rsa key pair. Enter file in which to save the key (/home/user/.ssh/id_rsa): // 아래와 같이 뜨면 비밀먼호 두번 입력 Enter passphrase (empty for no passphrase): Enter same passphrase again: 키 생성 완료 !</description>
     </item>
     
     <item>
       <title>ssh 백그라운드 실행 방법</title>
-      <link>https://haneulee.github.io/2021/05/ssh-%EB%B0%B1%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95/</link>
+      <link>https://blog.haneul-lee.com/2021/05/ssh-%EB%B0%B1%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95/</link>
       <pubDate>Tue, 18 May 2021 12:33:46 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2021/05/ssh-%EB%B0%B1%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95/</guid>
+      <guid>https://blog.haneul-lee.com/2021/05/ssh-%EB%B0%B1%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95/</guid>
       <description>ssh 백그라운드 실행 방법 터미널에서 또는 명령창에서 ssh 로 접속하여 서버를 실행 후, 터미널을 종료하거나 다른 프로세스를 실행하면 이전 실행이 중단된다. 해당 서버에서 계속 서버를 띄어놓기 위해 백그라운드로 실행하는 방법이 있다.    (adsbygoogle = window.adsbygoogle || []).push({}); 
 nohup nohup node server.js &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;
 (.out 파일 없이 실행하기)
@@ -33,10 +33,10 @@ nohup nohup node server.js &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;
     
     <item>
       <title>connection reset by [ip] port 22</title>
-      <link>https://haneulee.github.io/2021/05/connection-reset-by-ip-port-22/</link>
+      <link>https://blog.haneul-lee.com/2021/05/connection-reset-by-ip-port-22/</link>
       <pubDate>Tue, 18 May 2021 12:31:38 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2021/05/connection-reset-by-ip-port-22/</guid>
+      <guid>https://blog.haneul-lee.com/2021/05/connection-reset-by-ip-port-22/</guid>
       <description>리눅스에서 ssh 접속 후 아무 작업을 하지 않고 그대로 두면 Connection reset by peer 메시지와 함께 접속이 끊기는 경우가 발생한다.
  Read from remote host xxx.xxx.xxx.xxx: Connection reset by peer
 Connection to xxx.xxx.xxx.xxx closed.

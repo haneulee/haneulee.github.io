@@ -27,8 +27,8 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="NextJS - document is not defined 오류">
 <meta name="twitter:title" content="NextJS - document is not defined 오류">
-<meta property="og:url" content="https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
-<meta property="twitter:url" content="https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
+<meta property="og:url" content="https://blog.haneul-lee.com/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
+<meta property="twitter:url" content="https://blog.haneul-lee.com/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
 <meta property="og:site_name" content="Haneul Devlog">
 <meta property="og:description" content="document is not defined 오류 해결방법  서버사이드 렌더링인 nextJS를 사용할 때는 window 또는 Document 객체를 사용할 수 없다.  해결 방법 첫번째  window 오브젝트가 있는지 확인하는 조건문을 추가하여 렌더링 된 다음에 document 코드를 실행하도록 한다.  if (typeof window === &#39;object&#39;) { // Check if document is finally loaded document.addEventListener(&quot;DOMContentLoaded&quot;, function () { alert(&#39;Finished loading&#39;) }); }    (adsbygoogle = window.adsbygoogle || []).push({});  두번째  nextJS는 react를 사용할 수 있기 때문에 react에서 컴포넌트가 마운트 또는 업데이트 된 다음에 동작하는 componentDidMount 또는 useEffect 훅을 사용하여 체크한다.">
 <meta name="twitter:description" content="document is not defined 오류 해결방법  서버사이드 렌더링인 nextJS를 사용할 때는 window 또는 Document 객체를 사용할 수 없다.  해결 방법 첫번째  window 오브젝트가 있는지 확인하는 조건문을 추가하여 렌더링 된 다음에 document 코드를 실행하도록 한다.  if (typeof window === &#39;object&#39;) { // Check if document is finally loaded document.addEventListener(&quot;DOMContentLoaded&quot;, function () { alert(&#39;Finished loading&#39;) }); }    (adsbygoogle = window.adsbygoogle || []).push({});  두번째  nextJS는 react를 사용할 수 있기 때문에 react에서 컴포넌트가 마운트 또는 업데이트 된 다음에 동작하는 componentDidMount 또는 useEffect 훅을 사용하여 체크한다.">
@@ -89,7 +89,7 @@
 
     
 
-    <link rel="canonical" href="https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
+    <link rel="canonical" href="https://blog.haneul-lee.com/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -97,11 +97,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
     
     
-    <link rel="stylesheet" href="https://haneulee.github.io/css/style-ivhrqdgtvl1rbrq43yd8f0kphpavbnzuvosqzhmb90vkuaezkmdvg4pi.min.css" />
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-ivhrqdgtvl1rbrq43yd8f0kphpavbnzuvosqzhmb90vkuaezkmdvg4pi.min.css" />
     
     
       
-        <link rel="stylesheet"  href="https://haneulee.github.io/css/mystyle.css">
+        <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">
       
     
 
@@ -127,12 +127,12 @@ if (!doNotTrack) {
       <header id="header" data-behavior="4">
  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
  <div class="header-title">
-   <a class="header-title-link" href="https://haneulee.github.io/">Haneul Devlog</a>
+   <a class="header-title-link" href="https://blog.haneul-lee.com/">Haneul Devlog</a>
  </div>
  
    
      <a class="header-right-picture "
-        href="https://haneulee.github.io/#about">
+        href="https://blog.haneul-lee.com/#about">
    
    
    
@@ -148,7 +148,7 @@ if (!doNotTrack) {
  <div class="sidebar-container">
    
      <div class="sidebar-profile">
-       <a href="https://haneulee.github.io/#about">
+       <a href="https://blog.haneul-lee.com/#about">
          <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
        </a>
        <h4 class="sidebar-profile-name">Haneul Lee</h4>
@@ -339,7 +339,7 @@ if (!doNotTrack) {
      
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/">
     
       <i class="sidebar-button-icon fa fa-lg fa-home"></i>
       
@@ -349,7 +349,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://haneulee.github.io/categories">
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/categories">
     
       <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
       
@@ -359,7 +359,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://haneulee.github.io/tags">
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/tags">
     
       <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
       
@@ -369,7 +369,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://haneulee.github.io/archives">
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/archives">
     
       <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
       
@@ -379,7 +379,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://haneulee.github.io/#about">
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/#about">
     
       <i class="sidebar-button-icon fa fa-lg fa-question"></i>
       
@@ -389,7 +389,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://haneulee.github.io/categories/development">
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/categories/development">
     
       <i class="sidebar-button-icon fa fa-lg fa-code"></i>
       
@@ -413,7 +413,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/resume/" target="_blank" rel="noopener">
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/resume/">
     
       <i class="sidebar-button-icon fa fa-lg fa-file"></i>
       
@@ -457,7 +457,7 @@ if (!doNotTrack) {
      
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://haneulee.github.io/">
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/">
     
       
       
@@ -499,9 +499,9 @@ if (!doNotTrack) {
   
     <span>in</span>
     
-      <a class="category-link" href="https://haneulee.github.io/categories/development">development</a>, 
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/development">development</a>, 
     
-      <a class="category-link" href="https://haneulee.github.io/categories/nextjs">nextjs</a>
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/nextjs">nextjs</a>
     
   
 
@@ -584,15 +584,15 @@ useEffect(() =&gt; {
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/development/">development</a>
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/development/">development</a>
 
-  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/front-end/">front-end</a>
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/front-end/">front-end</a>
 
-  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/nextjs/">nextjs</a>
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/nextjs/">nextjs</a>
 
-  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/document/">document</a>
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/document/">document</a>
 
-  <a class="tag tag--primary tag--small" href="https://haneulee.github.io/tags/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C/">프론트엔드</a>
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C/">프론트엔드</a>
 
                   </div>
                 
@@ -605,7 +605,7 @@ useEffect(() =&gt; {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/" data-tooltip="Pug로 HTML 템플릿 만들기 🐶">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/" data-tooltip="Pug로 HTML 템플릿 만들기 🐶">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -613,7 +613,7 @@ useEffect(() =&gt; {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/nextjs-%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81/" data-tooltip="NextJS 서버 사이드 렌더링 👩🏻‍💻">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/2021/05/nextjs-%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81/" data-tooltip="NextJS 서버 사이드 렌더링 👩🏻‍💻">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -631,19 +631,19 @@ useEffect(() =&gt; {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.haneul-lee.com/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.haneul-lee.com/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://blog.haneul-lee.com/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -702,7 +702,7 @@ useEffect(() =&gt; {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/" data-tooltip="Pug로 HTML 템플릿 만들기 🐶">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/2021/05/pug%EB%A1%9C-html-%ED%85%9C%ED%94%8C%EB%A6%BF-%EB%A7%8C%EB%93%A4%EA%B8%B0/" data-tooltip="Pug로 HTML 템플릿 만들기 🐶">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -710,7 +710,7 @@ useEffect(() =&gt; {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://haneulee.github.io/2021/05/nextjs-%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81/" data-tooltip="NextJS 서버 사이드 렌더링 👩🏻‍💻">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/2021/05/nextjs-%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81/" data-tooltip="NextJS 서버 사이드 렌더링 👩🏻‍💻">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -728,19 +728,19 @@ useEffect(() =&gt; {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.haneul-lee.com/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.haneul-lee.com/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haneulee.github.io/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://blog.haneul-lee.com/2021/05/nextjs-document-is-not-defined-%EC%98%A4%EB%A5%98/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -764,19 +764,19 @@ useEffect(() =&gt; {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Fnextjs-document-is-not-defined-%25EC%2598%25A4%25EB%25A5%2598%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.haneul-lee.com%2F2021%2F05%2Fnextjs-document-is-not-defined-%25EC%2598%25A4%25EB%25A5%2598%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Fnextjs-document-is-not-defined-%25EC%2598%25A4%25EB%25A5%2598%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.haneul-lee.com%2F2021%2F05%2Fnextjs-document-is-not-defined-%25EC%2598%25A4%25EB%25A5%2598%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaneulee.github.io%2F2021%2F05%2Fnextjs-document-is-not-defined-%25EC%2598%25A4%25EB%25A5%2598%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fblog.haneul-lee.com%2F2021%2F05%2Fnextjs-document-is-not-defined-%25EC%2598%25A4%25EB%25A5%2598%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -827,7 +827,7 @@ useEffect(() =&gt; {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
 
 
-<script src="https://haneulee.github.io/js/script-kt8yxumnilzh9eujpvs5oujn5nhsvqy7e8uago36puhs5tuoq8qijyi2d9f.min.js"></script>
+<script src="https://blog.haneul-lee.com/js/script-kt8yxumnilzh9eujpvs5oujn5nhsvqy7e8uago36puhs5tuoq8qijyi2d9f.min.js"></script>
 
 
 <script lang="javascript">

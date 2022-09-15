@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>리액트 on Haneul Devlog</title>
-    <link>https://haneulee.github.io/tags/%EB%A6%AC%EC%95%A1%ED%8A%B8/</link>
+    <link>https://blog.haneul-lee.com/tags/%EB%A6%AC%EC%95%A1%ED%8A%B8/</link>
     <description>Recent content in 리액트 on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 05 Jan 2022 19:32:04 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/%EB%A6%AC%EC%95%A1%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Jan 2022 19:32:04 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/%EB%A6%AC%EC%95%A1%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>React Native UI toolkits 리액트 네이티브 유용한 도구 🍯</title>
-      <link>https://haneulee.github.io/2022/01/react-native-ui-toolkits-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC/</link>
+      <link>https://blog.haneul-lee.com/2022/01/react-native-ui-toolkits-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC/</link>
       <pubDate>Wed, 05 Jan 2022 19:32:04 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2022/01/react-native-ui-toolkits-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC/</guid>
+      <guid>https://blog.haneul-lee.com/2022/01/react-native-ui-toolkits-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC/</guid>
       <description>(adsbygoogle = window.adsbygoogle || []).push({});  React Native UI toolkits 리액트 네이티브 유용한 도구 🍯  1. NativeBase 1만개의 별과 포크를 받은 NativeBase는 수십 개의 크로스 플랫폼 컴포넌트를 제공하는 널리 사용되고 있는 React Native용 UI 컴포넌트 라이브러리입니다.
 NativeBase를 사용하면, 네이티브 서드파티 라이브러리를 기본적으로 사용할 수 있습니다. 그리고 프로젝트 자체에 유용한 starter-kits 부터 customizable theme templates 까지 풍부한 생태계가 구성되어 있습니다.
 여기 멋진 초보자용 키트가 있습니다.
@@ -21,10 +21,10 @@ GeekyAnts/NativeBaseNativeBase — Essential cross-platform UI components for Re
     
     <item>
       <title>리액트 절대 경로 설정하기</title>
-      <link>https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</link>
+      <link>https://blog.haneul-lee.com/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</link>
       <pubDate>Tue, 18 May 2021 12:26:22 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://blog.haneul-lee.com/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
       <description>리액트 절대 경로 설정하기 Web을 개발하다보면 폴더와 파일의 depth가 깊어지는 경우가 있다.
 이런 경우 파일 import시에 ../../components/sign/logout 식으로 ../가 많아져서 복잡하고 번거로워진다.
 그러나 절대경로를 설정하면 components/sign/logout 으로 간단히 작성할 수 있다는 사실!
@@ -36,10 +36,10 @@ GeekyAnts/NativeBaseNativeBase — Essential cross-platform UI components for Re
     
     <item>
       <title>how to handle React state array</title>
-      <link>https://haneulee.github.io/2019/11/how-to-handle-react-state-array/</link>
+      <link>https://blog.haneul-lee.com/2019/11/how-to-handle-react-state-array/</link>
       <pubDate>Sun, 10 Nov 2019 00:03:00 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2019/11/how-to-handle-react-state-array/</guid>
+      <guid>https://blog.haneul-lee.com/2019/11/how-to-handle-react-state-array/</guid>
       <description>state 안에 있는 배열에 변화를 주는 방법 1. concat  기존 배열을 그대로 두고 새 배열을 생성한다.     (adsbygoogle = window.adsbygoogle || []).push({});  2. Immutability Helper   객체나 배열을 좀 더 쉽게 수정하게 해준다.
   이것을 사용하기 위해서는 라이브러리를 사전 설치해줘야 한다.
   설치 방법 : npm을 통한 설치
@@ -50,10 +50,10 @@ GeekyAnts/NativeBaseNativeBase — Essential cross-platform UI components for Re
     
     <item>
       <title>Why Do We Write super(props)?</title>
-      <link>https://haneulee.github.io/2018/12/why-do-we-write-superprops/</link>
+      <link>https://blog.haneul-lee.com/2018/12/why-do-we-write-superprops/</link>
       <pubDate>Mon, 10 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://haneulee.github.io/2018/12/why-do-we-write-superprops/</guid>
+      <guid>https://blog.haneul-lee.com/2018/12/why-do-we-write-superprops/</guid>
       <description>Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
 요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
 웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.

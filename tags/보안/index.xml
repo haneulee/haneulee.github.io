@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>보안 on Haneul Devlog</title>
-    <link>https://haneulee.github.io/tags/%EB%B3%B4%EC%95%88/</link>
+    <link>https://blog.haneul-lee.com/tags/%EB%B3%B4%EC%95%88/</link>
     <description>Recent content in 보안 on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 13 Feb 2020 19:28:20 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/%EB%B3%B4%EC%95%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Feb 2020 19:28:20 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/%EB%B3%B4%EC%95%88/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Aws Certificate Manager</title>
-      <link>https://haneulee.github.io/2020/02/aws-certificate-manager/</link>
+      <link>https://blog.haneul-lee.com/2020/02/aws-certificate-manager/</link>
       <pubDate>Thu, 13 Feb 2020 19:28:20 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2020/02/aws-certificate-manager/</guid>
+      <guid>https://blog.haneul-lee.com/2020/02/aws-certificate-manager/</guid>
       <description>aws Certificate Manager 에서는 무료로 ssl 공인 인증서를 받을 수 있다.
 ssl 인증서는 https로 웹사이트를 통신하기 위해서 꼭 필요한 것이다.    (adsbygoogle = window.adsbygoogle || []).push({});  aws 서비스에서 certificate Manager 혹은 ssl 으로 검색하면 아래와 같이 공인 인증서에 체크하고,
 도메인 이름을 등록하고,

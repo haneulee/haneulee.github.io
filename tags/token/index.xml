@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>token on Haneul Devlog</title>
-    <link>https://haneulee.github.io/tags/token/</link>
+    <link>https://blog.haneul-lee.com/tags/token/</link>
     <description>Recent content in token on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 21 Jul 2021 11:07:36 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/token/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Jul 2021 11:07:36 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/token/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GraphQL과 Apollo 함께 쓰기 🔥</title>
-      <link>https://haneulee.github.io/2021/07/graphql%EA%B3%BC-apollo-%ED%95%A8%EA%BB%98-%EC%93%B0%EA%B8%B0/</link>
+      <link>https://blog.haneul-lee.com/2021/07/graphql%EA%B3%BC-apollo-%ED%95%A8%EA%BB%98-%EC%93%B0%EA%B8%B0/</link>
       <pubDate>Wed, 21 Jul 2021 11:07:36 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2021/07/graphql%EA%B3%BC-apollo-%ED%95%A8%EA%BB%98-%EC%93%B0%EA%B8%B0/</guid>
+      <guid>https://blog.haneul-lee.com/2021/07/graphql%EA%B3%BC-apollo-%ED%95%A8%EA%BB%98-%EC%93%B0%EA%B8%B0/</guid>
       <description>GraphQL과 Apollo 함께 쓰기 🔥 Apollo 란 ? Apollo란 GraphQL의 클라이언트 라이브러리 중 하나로 GraphQL을 사용한다면 거의 필수적으로 사용하는 상태 관리 플랫폼입니다.
 장점
  Query 및 Mutation 직접 전송  API 서버에서 데이터를 가져오기 위해 번거로운 네트워크단의 HTTP 요청을 신경 쓸 필요가 없어진다.   전송받은 데이터 캐싱  클라이언트의 반복 요청을 줄여 서버 부하를 줄일 수 있을 뿐만 아니라, 서비스를 이용하는 사람들에게 더 나은 사용자 경험을 제공할 수 있다.</description>
@@ -20,10 +20,10 @@
     
     <item>
       <title>Typeorm study 2 - Hash / JWT / Guard</title>
-      <link>https://haneulee.github.io/2021/07/typeorm-study-2-hash-/-jwt-/-guard/</link>
+      <link>https://blog.haneul-lee.com/2021/07/typeorm-study-2-hash-/-jwt-/-guard/</link>
       <pubDate>Thu, 08 Jul 2021 10:21:03 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2021/07/typeorm-study-2-hash-/-jwt-/-guard/</guid>
+      <guid>https://blog.haneul-lee.com/2021/07/typeorm-study-2-hash-/-jwt-/-guard/</guid>
       <description>(adsbygoogle = window.adsbygoogle || []).push({});  Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &amp;lsquo;enum&amp;rsquo; 이 아니라 &amp;lsquo;simple-enum&amp;rsquo;으로 지정해주면 해결된다.
 export enum UserRole { Host = &amp;#39;Host&amp;#39;, Listener = &amp;#39;Listener&amp;#39;, } registerEnumType(UserRole, { name: &amp;#39;UserRole&amp;#39; }); @Column({ type: &amp;#39;simple-enum&amp;#39;, enum: UserRole }) @Field(type =&amp;gt; UserRole) role: UserRole; registerEnumType 함수를 사용해 enum type을 등록해준다.</description>
     </item>

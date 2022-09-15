@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>정적사이트 on Haneul Devlog</title>
-    <link>https://haneulee.github.io/tags/%EC%A0%95%EC%A0%81%EC%82%AC%EC%9D%B4%ED%8A%B8/</link>
+    <link>https://blog.haneul-lee.com/tags/%EC%A0%95%EC%A0%81%EC%82%AC%EC%9D%B4%ED%8A%B8/</link>
     <description>Recent content in 정적사이트 on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 26 May 2021 14:32:39 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/%EC%A0%95%EC%A0%81%EC%82%AC%EC%9D%B4%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 May 2021 14:32:39 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/%EC%A0%95%EC%A0%81%EC%82%AC%EC%9D%B4%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NextJS 서버 사이드 렌더링 👩🏻‍💻</title>
-      <link>https://haneulee.github.io/2021/05/nextjs-%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81/</link>
+      <link>https://blog.haneul-lee.com/2021/05/nextjs-%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81/</link>
       <pubDate>Wed, 26 May 2021 14:32:39 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2021/05/nextjs-%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81/</guid>
+      <guid>https://blog.haneul-lee.com/2021/05/nextjs-%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81/</guid>
       <description>NextJS Next.js는 무엇인가? Next.js는 리액트를 SSR(Server-Side rendering) 방식을 구현할 수 있도록 도와주는 프레임워크이다. 정확하게는, SSR과 CSR의 각 장점을 조합하여 동작하게 된다.
 SSR과 CSR의 차이 기본적으로 처음 웹 화면을 접속하면, DOM과 스크립트 코드, 리소스 등 해당 웹 페이지를 구성하기 위해 필요로 한 모든 요소들을 서버에서 로드하게 된다.
 SSR은 화면에서 보여줄 특정 페이지의 View를 서버 단에서 렌더링을 한 후, 클라이언트에게 제공된다. View를 빠르게 렌더링 후에 사용자에게 미리 웹 화면으로 보여주고, 이후에 웹 페이지를 동작하게 하거나 구성하는 리소스들을 로드하도록 한다.</description>

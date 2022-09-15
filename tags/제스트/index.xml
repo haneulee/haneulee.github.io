@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>제스트 on Haneul Devlog</title>
-    <link>https://haneulee.github.io/tags/%EC%A0%9C%EC%8A%A4%ED%8A%B8/</link>
+    <link>https://blog.haneul-lee.com/tags/%EC%A0%9C%EC%8A%A4%ED%8A%B8/</link>
     <description>Recent content in 제스트 on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sat, 07 Aug 2021 02:54:15 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/%EC%A0%9C%EC%8A%A4%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Aug 2021 02:54:15 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/%EC%A0%9C%EC%8A%A4%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jest Components Test 제스트 컴포넌트 테스트 🔥</title>
-      <link>https://haneulee.github.io/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
+      <link>https://blog.haneul-lee.com/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
       <pubDate>Sat, 07 Aug 2021 02:54:15 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
+      <guid>https://blog.haneul-lee.com/2021/08/jest-components-test-%EC%A0%9C%EC%8A%A4%ED%8A%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
       <description>Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src/pages/test/create-account.spec.tsx  beforeEach(async () =&amp;gt; { await waitFor(() =&amp;gt; { mockedClient = createMockClient(); renderResult = render( &amp;lt;ApolloProvider client={mockedClient}&amp;gt; &amp;lt;CreateAccount /&amp;gt; &amp;lt;/ApolloProvider&amp;gt; ); }); }); frontend 유닛테스트의 기본구조
 apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.
 위와 같은 방법 이외 MockedProvider를 이용하는 방법도 있으니 참고 바랍니다.
@@ -21,28 +21,28 @@ create-account에서는 유저에게 계정에 대한 입력을 받습니다.</d
     
     <item>
       <title>NestJS 에서 E2E TEST 🏃🏻‍♀️</title>
-      <link>https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-e2e-test-%EF%B8%8F/</link>
+      <link>https://blog.haneul-lee.com/2021/07/nestjs-%EC%97%90%EC%84%9C-e2e-test-%EF%B8%8F/</link>
       <pubDate>Wed, 14 Jul 2021 14:40:42 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-e2e-test-%EF%B8%8F/</guid>
+      <guid>https://blog.haneul-lee.com/2021/07/nestjs-%EC%97%90%EC%84%9C-e2e-test-%EF%B8%8F/</guid>
       <description>E2E TEST 🏃🏻‍♀️ E2E Test (End To End Test) 란 ? 개별 모듈 및 클래스에 중점을 두는 단위 테스트와 달리 e2e 테스트는 최종 사용자가 프로덕션과 함께 하게 될 상호 작용의 종류에 더 가까운 보다 종합적인 수준에서 클래스와 모듈의 상호 작용을 다룹니다. 각 API 엔드포인트의 종단 간 테스트는 시스템의 전반적인 동작이 정확하고 프로젝트 요구 사항을 충족하는지 확인하는 데 도움이 됩니다. NestJS를 사용하면 supertest 라이브러리를 사용하여 HTTP 요청을 쉽게 시뮬레이션할 수 있습니다.</description>
     </item>
     
     <item>
       <title>NestJS 에서 UNIT TEST 🏃🏻‍♀️</title>
-      <link>https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-unit-test-%EF%B8%8F/</link>
+      <link>https://blog.haneul-lee.com/2021/07/nestjs-%EC%97%90%EC%84%9C-unit-test-%EF%B8%8F/</link>
       <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2021/07/nestjs-%EC%97%90%EC%84%9C-unit-test-%EF%B8%8F/</guid>
+      <guid>https://blog.haneul-lee.com/2021/07/nestjs-%EC%97%90%EC%84%9C-unit-test-%EF%B8%8F/</guid>
       <description>Jest NestJS 에서 UNIT TEST 🏃🏻‍♀️ jwt.service.spec.ts describe(&amp;#39;JwtService&amp;#39;, () =&amp;gt; { let service: JwtService; beforeAll(async () =&amp;gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&amp;lt;JwtService&amp;gt;(JwtService); }); jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다.  jwt service가 제대로 준비 되었는지 확인하려면  it(&#39;should be defined&#39;,()={ expect(service).toBeDefined();});   이 코드로 확인해볼 수 있다.</description>
     </item>
     
     <item>
       <title>Jest 유닛 테스트 - 소개</title>
-      <link>https://haneulee.github.io/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%86%8C%EA%B0%9C/</link>
+      <link>https://blog.haneul-lee.com/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%86%8C%EA%B0%9C/</link>
       <pubDate>Fri, 09 Jul 2021 11:06:17 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%86%8C%EA%B0%9C/</guid>
+      <guid>https://blog.haneul-lee.com/2021/07/jest-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%86%8C%EA%B0%9C/</guid>
       <description>Jest Jest 란 ? 🤔 Jest는 Facebook에서 개발한 JavaScript 테스팅 프레임워크이다. Babel , TypeScript , Node , React , Angular , Vue 등을 사용하는 프로젝트에서 사용할 수 있다. Test runner와 Test Mathcher, Test Mock 프레임워크까지 제공하여 다른 유닛 테스트 프레임워크보다 편하다.  테스트 주도 개발 (TDD)  짧은 개발 사이클을 반복하는 소프트웨어 개발 프로세스 중 하나 새로운 함수를 정의하는 자동화된 테스트 케이스를 작성한다. 그 케이스를 통과하기 위한 최소한의 코드를 생성한다.</description>
     </item>
     

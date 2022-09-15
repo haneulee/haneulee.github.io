@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>절대경로 on Haneul Devlog</title>
-    <link>https://haneulee.github.io/tags/%EC%A0%88%EB%8C%80%EA%B2%BD%EB%A1%9C/</link>
+    <link>https://blog.haneul-lee.com/tags/%EC%A0%88%EB%8C%80%EA%B2%BD%EB%A1%9C/</link>
     <description>Recent content in 절대경로 on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 18 May 2021 12:26:22 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/%EC%A0%88%EB%8C%80%EA%B2%BD%EB%A1%9C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 May 2021 12:26:22 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/%EC%A0%88%EB%8C%80%EA%B2%BD%EB%A1%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>리액트 절대 경로 설정하기</title>
-      <link>https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</link>
+      <link>https://blog.haneul-lee.com/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</link>
       <pubDate>Tue, 18 May 2021 12:26:22 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://blog.haneul-lee.com/2021/05/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0/</guid>
       <description>리액트 절대 경로 설정하기 Web을 개발하다보면 폴더와 파일의 depth가 깊어지는 경우가 있다.
 이런 경우 파일 import시에 ../../components/sign/logout 식으로 ../가 많아져서 복잡하고 번거로워진다.
 그러나 절대경로를 설정하면 components/sign/logout 으로 간단히 작성할 수 있다는 사실!

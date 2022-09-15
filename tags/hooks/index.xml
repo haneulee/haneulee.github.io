@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hooks on Haneul Devlog</title>
-    <link>https://haneulee.github.io/tags/hooks/</link>
+    <link>https://blog.haneul-lee.com/tags/hooks/</link>
     <description>Recent content in hooks on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 10 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://haneulee.github.io/tags/hooks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/hooks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why Do We Write super(props)?</title>
-      <link>https://haneulee.github.io/2018/12/why-do-we-write-superprops/</link>
+      <link>https://blog.haneul-lee.com/2018/12/why-do-we-write-superprops/</link>
       <pubDate>Mon, 10 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://haneulee.github.io/2018/12/why-do-we-write-superprops/</guid>
+      <guid>https://blog.haneul-lee.com/2018/12/why-do-we-write-superprops/</guid>
       <description>Why Do We Write super(props)? : 왜 super(props)를 써야 하는가?
 요즘에는 훅스(Hooks)가 새로운 트렌드이다. [클래스 사용 지양]
 웃기게도 나는 클래스 컴포넌트에 대한 재미있는 것들을 설명하면서 이 블로그를 시작하고 싶다.

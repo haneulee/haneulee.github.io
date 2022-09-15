@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>enum on Haneul Devlog</title>
-    <link>https://haneulee.github.io/tags/enum/</link>
+    <link>https://blog.haneul-lee.com/tags/enum/</link>
     <description>Recent content in enum on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 08 Jul 2021 10:21:03 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/enum/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jul 2021 10:21:03 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/enum/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Typeorm study 2 - Hash / JWT / Guard</title>
-      <link>https://haneulee.github.io/2021/07/typeorm-study-2-hash-/-jwt-/-guard/</link>
+      <link>https://blog.haneul-lee.com/2021/07/typeorm-study-2-hash-/-jwt-/-guard/</link>
       <pubDate>Thu, 08 Jul 2021 10:21:03 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2021/07/typeorm-study-2-hash-/-jwt-/-guard/</guid>
+      <guid>https://blog.haneul-lee.com/2021/07/typeorm-study-2-hash-/-jwt-/-guard/</guid>
       <description>(adsbygoogle = window.adsbygoogle || []).push({});  Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &amp;lsquo;enum&amp;rsquo; 이 아니라 &amp;lsquo;simple-enum&amp;rsquo;으로 지정해주면 해결된다.
 export enum UserRole { Host = &amp;#39;Host&amp;#39;, Listener = &amp;#39;Listener&amp;#39;, } registerEnumType(UserRole, { name: &amp;#39;UserRole&amp;#39; }); @Column({ type: &amp;#39;simple-enum&amp;#39;, enum: UserRole }) @Field(type =&amp;gt; UserRole) role: UserRole; registerEnumType 함수를 사용해 enum type을 등록해준다.</description>
     </item>

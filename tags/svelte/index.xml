@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>svelte on Haneul Devlog</title>
-    <link>https://haneulee.github.io/tags/svelte/</link>
+    <link>https://blog.haneul-lee.com/tags/svelte/</link>
     <description>Recent content in svelte on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sun, 10 Nov 2019 23:03:00 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/svelte/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Nov 2019 23:03:00 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/svelte/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Svelte</title>
-      <link>https://haneulee.github.io/2019/11/svelte/</link>
+      <link>https://blog.haneul-lee.com/2019/11/svelte/</link>
       <pubDate>Sun, 10 Nov 2019 23:03:00 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2019/11/svelte/</guid>
+      <guid>https://blog.haneul-lee.com/2019/11/svelte/</guid>
       <description>Svelte Svelte란? svelte란 날씬한, 호리호리한이란 뜻입니다.
 이름답게 적은 코드, 적은 용량 등을 자랑하는 프레임워크입니다.
 공식 문서에 따르면 새로운 웹 어플리케이션 개발 방법을 제시하는 컴파일러라고도 소개되어 있습니다.

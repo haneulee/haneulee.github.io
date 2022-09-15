@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>xcode on Haneul Devlog</title>
-    <link>https://haneulee.github.io/tags/xcode/</link>
+    <link>https://blog.haneul-lee.com/tags/xcode/</link>
     <description>Recent content in xcode on Haneul Devlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 21 May 2021 10:20:38 +0900</lastBuildDate><atom:link href="https://haneulee.github.io/tags/xcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 May 2021 10:20:38 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/xcode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>XCODE TVML app</title>
-      <link>https://haneulee.github.io/2021/05/xcode-tvml-app/</link>
+      <link>https://blog.haneul-lee.com/2021/05/xcode-tvml-app/</link>
       <pubDate>Fri, 21 May 2021 10:20:38 +0900</pubDate>
       
-      <guid>https://haneulee.github.io/2021/05/xcode-tvml-app/</guid>
+      <guid>https://blog.haneul-lee.com/2021/05/xcode-tvml-app/</guid>
       <description>XCODE TVML app 👩🏻‍💻 xcode에서 tvml 샘플 앱을 만들어 테스트 해보기 STEP 1. xcode 설치 developer.apple.com/xcode/downloads/
 STEP 2. xcode 를 열고, create new project 를 통해 tvOS 탭에서 TVML App 을 선택 후 next 버튼을 누른다. 다음 product name과 language 등을 선택한다.    (adsbygoogle = window.adsbygoogle || []).push({});  STEP 3. 터미널을 통해 해당 프로젝트 디렉토리로 가서 웹서버를 실행한다. 맥은 기본적으로 python이 설치 되어 있으므로
 python -m SimpleHTTPServer 9001</description>
