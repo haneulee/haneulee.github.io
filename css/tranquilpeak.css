@@ -656,7 +656,6 @@ pre.code-highlight > code {
   background: #fff;
   position: fixed;
   top: 0;
-  border: 1px solid #eef2f8;
   color: #88909a;
   z-index: 20;
   transition: transform 0.25s ease-in-out;
@@ -939,8 +938,7 @@ pre.code-highlight > code {
   height: 100%;
   position: fixed;
   top: 0;
-  background: rgb(45, 45, 45);
-  border-right: 1px solid #eef2f8;
+  background: rgba(17, 26, 35, 0);
   overflow: auto;
   z-index: 20;
   transition: transform 0.25s ease-in-out;
@@ -952,7 +950,7 @@ pre.code-highlight > code {
   overflow: auto;
 }
 #sidebar .sidebar-profile {
-  color: #ebebeb;
+  color: #4a4a4a;
   text-align: center;
   padding-top: 18px;
   margin-bottom: 15px;
@@ -963,7 +961,7 @@ pre.code-highlight > code {
 }
 #sidebar .sidebar-profile .sidebar-profile-name {
   font-size: 1.1em;
-  color: #ebebeb;
+  color: #4a4a4a;
 }
 #sidebar ul.sidebar-buttons {
   padding: 0;
@@ -976,13 +974,13 @@ pre.code-highlight > code {
   line-height: 45px;
 }
 #sidebar ul.sidebar-buttons li.sidebar-button .sidebar-button-link {
-  color: #ebebeb;
+  color: #4a4a4a;
   display: block;
   height: 100%;
 }
 #sidebar ul.sidebar-buttons li.sidebar-button .sidebar-button-link:hover, #sidebar ul.sidebar-buttons li.sidebar-button .sidebar-button-link:active {
   text-decoration: none;
-  color: white;
+  color: #a3a3a3;
 }
 #sidebar ul.sidebar-buttons:first-child {
   margin-top: 5px;
@@ -1433,7 +1431,7 @@ pre.code-highlight > code {
 #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-location {
     font-weight: 400;
     font-size: 1.6rem;
-    color: #ebebeb;
+    color: #4a4a4a;
   }
   #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-job,
 #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-location {
@@ -1609,7 +1607,7 @@ pre.code-highlight > code {
 #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-location {
     font-weight: 400;
     font-size: 1.6rem;
-    color: #ebebeb;
+    color: #4a4a4a;
   }
   #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-job,
 #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-location {
@@ -2965,9 +2963,7 @@ a.fancybox {
 }
 .postShorten .postShorten-meta {
   line-height: 1.5em;
-}
-.postShorten .postShorten-meta a {
-  color: #9eabb3;
+  color: #9eabb3 !important;
 }
 .postShorten .postShorten-meta,
 .postShorten .postShorten-readingtime {
@@ -3164,6 +3160,7 @@ a.fancybox {
 a.tag,
 .tag {
   display: inline-block;
+  background: #fff;
   width: auto;
   height: auto;
   border-radius: 3px;
