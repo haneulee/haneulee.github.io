@@ -6,13 +6,22 @@
     <description>Recent content in Categories on Haneul Devlog 개발 블로그 📚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 16 Mar 2022 10:22:01 +0100</lastBuildDate><atom:link href="https://blog.haneul-lee.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Sep 2022 19:00:39 +0200</lastBuildDate><atom:link href="https://blog.haneul-lee.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>development</title>
       <link>https://blog.haneul-lee.com/categories/development/</link>
-      <pubDate>Wed, 16 Mar 2022 10:22:01 +0100</pubDate>
+      <pubDate>Wed, 21 Sep 2022 19:00:39 +0200</pubDate>
       
       <guid>https://blog.haneul-lee.com/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pattern</title>
+      <link>https://blog.haneul-lee.com/categories/pattern/</link>
+      <pubDate>Wed, 21 Sep 2022 19:00:39 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/categories/pattern/</guid>
       <description></description>
     </item>
     

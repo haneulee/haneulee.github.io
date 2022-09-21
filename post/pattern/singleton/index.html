@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+ <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/blog.haneul-lee.com\/",
+  "author": {
+    "@type": "Person",
+    "name": "Haneul Devlog",
+    
+    "image": "https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png"
+    
+  },
+  "name":"Haneul Devlog 개발 블로그 📚",
+  "description":"Singleton 싱글턴 패턴 이 글은 https:\/\/www.patterns.dev\/posts\/singleton-pattern\/의 한글 번역본입니다.\n  singleton pattern : 애플리케이션 전체에서 단일 글로벌 인스턴스 공유\n싱글톤은 한 번 인스턴스화할 수 있고 전역적으로 액세스할 수 있는 클래스입니다.\n이 단일 인스턴스는 응용 프로그램 전체에서 공유할 수 있으므로 Singleton은 응용 프로그램의 전역 상태를 관리하는 데 적합합니다.\n먼저 ES2015 클래스를 사용하여 싱글톤이 어떻게 생겼는지 살펴보겠습니다. 이 예제에서는 다음을 포함하는 Counter 클래스를 만들 것입니다.\n getInstance 인스턴스의 값을 반환 하는 메소드 getCount counter 변수의 현재 값을 반환 하는 메소드 increment counter의 값을 1씩 증가 시키는 메소드 decrement counter의 값을 1씩 감소 시키는 메소드  let counter = 0; class Counter { getInstance() { return this; } getCount() { return counter; } increment() { return \u002b\u002bcounter; } decrement() { return --counter; } } 그러나 이 클래스는 Singleton의 기준을 충족하지 않습니다!",
+  "url":"https:\/\/blog.haneul-lee.com\/post\/pattern\/singleton\/",
+  "keywords":"[development, front-end]"
+}
+
+</script> <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Haneul Devlog">
+<meta name="keywords" content="development, front-end">
+<meta name="description" content="Singleton 싱글턴 패턴 이 글은 https://www.patterns.dev/posts/singleton-pattern/의 한글 번역본입니다.
+  singleton pattern : 애플리케이션 전체에서 단일 글로벌 인스턴스 공유
+싱글톤은 한 번 인스턴스화할 수 있고 전역적으로 액세스할 수 있는 클래스입니다.
+이 단일 인스턴스는 응용 프로그램 전체에서 공유할 수 있으므로 Singleton은 응용 프로그램의 전역 상태를 관리하는 데 적합합니다.
+먼저 ES2015 클래스를 사용하여 싱글톤이 어떻게 생겼는지 살펴보겠습니다. 이 예제에서는 다음을 포함하는 Counter 클래스를 만들 것입니다.
+ getInstance 인스턴스의 값을 반환 하는 메소드 getCount counter 변수의 현재 값을 반환 하는 메소드 increment counter의 값을 1씩 증가 시키는 메소드 decrement counter의 값을 1씩 감소 시키는 메소드  let counter = 0; class Counter { getInstance() { return this; } getCount() { return counter; } increment() { return &#43;&#43;counter; } decrement() { return --counter; } } 그러나 이 클래스는 Singleton의 기준을 충족하지 않습니다!">
+
+
+<meta property="og:description" content="Singleton 싱글턴 패턴 이 글은 https://www.patterns.dev/posts/singleton-pattern/의 한글 번역본입니다.
+  singleton pattern : 애플리케이션 전체에서 단일 글로벌 인스턴스 공유
+싱글톤은 한 번 인스턴스화할 수 있고 전역적으로 액세스할 수 있는 클래스입니다.
+이 단일 인스턴스는 응용 프로그램 전체에서 공유할 수 있으므로 Singleton은 응용 프로그램의 전역 상태를 관리하는 데 적합합니다.
+먼저 ES2015 클래스를 사용하여 싱글톤이 어떻게 생겼는지 살펴보겠습니다. 이 예제에서는 다음을 포함하는 Counter 클래스를 만들 것입니다.
+ getInstance 인스턴스의 값을 반환 하는 메소드 getCount counter 변수의 현재 값을 반환 하는 메소드 increment counter의 값을 1씩 증가 시키는 메소드 decrement counter의 값을 1씩 감소 시키는 메소드  let counter = 0; class Counter { getInstance() { return this; } getCount() { return counter; } increment() { return &#43;&#43;counter; } decrement() { return --counter; } } 그러나 이 클래스는 Singleton의 기준을 충족하지 않습니다!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Singleton 싱글턴 패턴">
+<meta name="twitter:title" content="Singleton 싱글턴 패턴">
+<meta property="og:url" content="https://blog.haneul-lee.com/post/pattern/singleton/">
+<meta property="twitter:url" content="https://blog.haneul-lee.com/post/pattern/singleton/">
+<meta property="og:site_name" content="Haneul Devlog 개발 블로그 📚">
+<meta property="og:description" content="Singleton 싱글턴 패턴 이 글은 https://www.patterns.dev/posts/singleton-pattern/의 한글 번역본입니다.
+  singleton pattern : 애플리케이션 전체에서 단일 글로벌 인스턴스 공유
+싱글톤은 한 번 인스턴스화할 수 있고 전역적으로 액세스할 수 있는 클래스입니다.
+이 단일 인스턴스는 응용 프로그램 전체에서 공유할 수 있으므로 Singleton은 응용 프로그램의 전역 상태를 관리하는 데 적합합니다.
+먼저 ES2015 클래스를 사용하여 싱글톤이 어떻게 생겼는지 살펴보겠습니다. 이 예제에서는 다음을 포함하는 Counter 클래스를 만들 것입니다.
+ getInstance 인스턴스의 값을 반환 하는 메소드 getCount counter 변수의 현재 값을 반환 하는 메소드 increment counter의 값을 1씩 증가 시키는 메소드 decrement counter의 값을 1씩 감소 시키는 메소드  let counter = 0; class Counter { getInstance() { return this; } getCount() { return counter; } increment() { return &#43;&#43;counter; } decrement() { return --counter; } } 그러나 이 클래스는 Singleton의 기준을 충족하지 않습니다!">
+<meta name="twitter:description" content="Singleton 싱글턴 패턴 이 글은 https://www.patterns.dev/posts/singleton-pattern/의 한글 번역본입니다.
+  singleton pattern : 애플리케이션 전체에서 단일 글로벌 인스턴스 공유
+싱글톤은 한 번 인스턴스화할 수 있고 전역적으로 액세스할 수 있는 클래스입니다.
+이 단일 인스턴스는 응용 프로그램 전체에서 공유할 수 있으므로 Singleton은 응용 프로그램의 전역 상태를 관리하는 데 적합합니다.
+먼저 ES2015 클래스를 사용하여 싱글톤이 어떻게 생겼는지 살펴보겠습니다. 이 예제에서는 다음을 포함하는 Counter 클래스를 만들 것입니다.
+ getInstance 인스턴스의 값을 반환 하는 메소드 getCount counter 변수의 현재 값을 반환 하는 메소드 increment counter의 값을 1씩 증가 시키는 메소드 decrement counter의 값을 1씩 감소 시키는 메소드  let counter = 0; class Counter { getInstance() { return this; } getCount() { return counter; } increment() { return &#43;&#43;counter; } decrement() { return --counter; } } 그러나 이 클래스는 Singleton의 기준을 충족하지 않습니다!">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2022-09-21T19:00:39">
+  
+  
+    <meta property="article:modified_time" content="2022-09-21T19:00:39">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+      <meta property="article:section" content="pattern">
+    
+  
+  
+    
+      <meta property="article:tag" content="development">
+    
+      <meta property="article:tag" content="front-end">
+    
+      <meta property="article:tag" content="pattern">
+    
+      <meta property="article:tag" content="singleton">
+    
+      <meta property="article:tag" content="javascript">
+    
+      <meta property="article:tag" content="design pattern">
+    
+      <meta property="article:tag" content="싱글턴">
+    
+      <meta property="article:tag" content="패턴">
+    
+      <meta property="article:tag" content="자바스크립트">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png">
+
+
+
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/dtlpko2wf/image/upload/v1663783683/blog/singleton_y4xvfl.png">
+  <meta property="twitter:image" content="https://res.cloudinary.com/dtlpko2wf/image/upload/v1663783683/blog/singleton_y4xvfl.png">
+
+
+    <title>Singleton 싱글턴 패턴</title>
+
+    <link
+      rel="icon"
+      href="https://blog.haneul-lee.com/img/favicon.ico"
+    />
+     
+
+    <link rel="canonical" href="https://blog.haneul-lee.com/post/pattern/singleton/" />
+
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+      integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    
+    
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-uiavxkidzzp7lut0y17c6lqo92fwi6t6dops3hkbhzq8n0ipg9w977qclolr.min.css" />
+    
+      <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
+}
+</script>
+  
+  </head>
+</html>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+ <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+ <div class="header-title">
+   <a class="header-title-link" href="https://blog.haneul-lee.com/">Haneul Devlog 개발 블로그 📚</a>
+ </div>
+ 
+   
+     <a class="header-right-picture "
+        href="https://blog.haneul-lee.com/#about">
+   
+   
+   
+     
+       <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+     
+   
+   </a>
+ 
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+ <div class="sidebar-container">
+   
+     <div class="sidebar-profile">
+       <a href="https://blog.haneul-lee.com/#about">
+         <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+       </a>
+       <h4 class="sidebar-profile-name">Haneul Devlog</h4>
+       
+         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</h5>
+       
+     </div>
+   
+
+   <div class="js-toggle-wrapper">
+  <div class="js-toggle">
+    <div class="js-toggle-track">
+      <div class="js-toggle-track-check">
+        <img
+          src="data:image/png;base64,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"
+          role="presentation"
+          style="pointer-events: none"
+          width="16"
+          height="16"
+        />
+      </div>
+      <div class="js-toggle-track-x">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAABwNJREFUWAmtV1tsFFUY/s6Z2d22zLYlZakUCRVaQcqlWIiCiS1gTEB9UAO+GR9En3iQGI0xJiSiRB98MjEq8cEQTSBeHhQM0V7whtEGDWC90BYitxahtNtu25058/v/ZzvLbilawJNM5+yZ89+//1LgJhYRNLW1uDfBAvpGiIk2O5auvfFxqIH3ZJ8/u06GN6Z9+wVl5SjcD1IbZa/UPkPyYl2uR4dreoD2bnbYxTlBBRytkHXtAREphP5KuH4lddx9h70yxX05t7yYXwGb6W8nx1jibpl2rFlGBxcG9M18okOrn7Bnk/BAO/4bI0UeEE1zjBp3UmvjOxJXJdaKN/ZiIu4tOZrAb4aTdZAZArKmWeiiJZ6jt5tiagdCS9+6cgO1Ne6Mvhe+ixTIfyDVhipnK9p+P0Edqx9RW/YZtQVGmOLChRxNNlyPsTEgPQKMB3dbEHa0h1awYmQ83enTd2vmUtvKd1Glv2RkzBb+kZGRrKtjzG60Wguhd/lJZBingbcfWWe72vjT75bJDrhYtvA0hrurETDr5HyF2Knb1MM4ab//xIoOqueA0edRnkkinTyJdYvqLFDZO4zUPFCvVoDjJq4T7TE61IWh4x5KqxX5KVKkX8WZ/t2ov2cb3MHt4dhIyOxIJxJOOF6xRx/99BksXLoecWcXytILMNBDqKpnGZWPquYfPxY8iXGR9fK+SgFrgcRPXPjVqhehL+3EmZ5RGJQi1QBU8TPThQnOQzm+5UXGIcetUeEAfP13VwzpI+w1jGJWdSliNfvVhiMPiOsllJag4M/UGHiqM6dlBb2OTLKHHV6KkvogrJ4XhBWniWK/Gp1MQyf93FOeUXKmKk/FzJxbQtKLjFXYT4USupy8fQVir2ynVEBiZMG0qtOHMS/AW4Gwrk7BG3C1F0B5nqNKE0CME4MfVRLPnXkBKe+ipvoFhNQywOhdghvLi0F8ReyVXV4BKTBRbbe5f64zR/DHsdZw1hJfeWlHl/GNRJzDxrd5m192z78TMaVnKELZoINZS4BzQ7vtnZljSnha/pPCbkuxzXcupYwI5tIeCpGc0Yp9tWHZQy/rmYhRfNgg4bHJBYLzGkxsRJF4XKlE2jBOHNSv3kY7Tj6vthzPFl61BrYwqFlmEQhtSVXmLiksxLmtRgYXI1ULU61JJ4eVKmG3/5sCVgpbMT6OMJ2E08/29Xf3w6v4FnHdCjfWgXu/O8Z5mLdCkeRs2khHe1DqOtQwbHWTAnM5S2HNmhALYo5KjkPFrMMKjZl6HxhWIAb0BqE+/73GrBRQUsKYiBu4JX8ycI6wtw+i5ef3NZpsrKVSHYCP37jwGDgeE1SA0S/xtl5SU2fs1ApEp0qTLVRjgyycDSsLHMSwmFltZMStR3uLLg6BdLhDa5dC6ryU2pHBe1BVO9tUcwfitJt2CLJZUHoG6T7Op75u0IyK31TCPcwFqgPk/KCaD3dFOuZBCO7xvCT/j048b3I3c7F2+WuOW7qdgkucFYlcQ4qop3yzTX7WaKfOCccye3Ts1Etq0+a/BHCF1yPgF3tAUkR6OrtGmo6gl94qqcXKh3rDyrOkPa58URoWcov2Mo6M+0QjrqKB+b7++oMa9Sz+ZkM0mie6aAtnGUvhmxaI+TogPOSQedgWioGSHFLn3v4kLh4HRspNmOGv41k+55siLFp2z6xYeJjhljFcbmxJlr4ga06TbevSByz/glQq4BJx46/c+237PbBqEYKxX3HpmKZEnQnr65X20hqJYaNcLoFOLiJk2LuBbyg7Q0OEn+hm0P3honxFD6rdxYorKpeIoi4YSSvyQHQIbM5t4+YNxLj/OxhVOOE4585qGpjnq+wSx6Q9CtNxTjd5klB+g6Mv36r0+b9cZFi44WYkHdG2ZWb3TtOUOXyVAlKlpGvJIAJ3eBMyfYS5C0qRZGtC85j+4sOasDe9xznPYezhhO/2Q6eP2fSOvYHOjtuQ1a9Q1VKynVDaMc8E0tptdxUsTFpFIYjcZKcbnoaQTNdiqCwNlL4G7oziSqGnT1ALf34vhk4R5zU3qYV9ONp9K88RtouShE68JwaU8dFw5W617shWa9ykeaBIn2hcsvPgL00k45QdTCZuSVcTRNs+8fnyLvooQfR5iujAnR9bxfY2xOVOxFS8SK3Le0l48VyYu1M8HRe5JD8wKPTjYnifaK3Wfn/GChYQ8ZAi6WRzWgqLV5YrsVLnZaVSoXU1g9gOIDwFySiGi+Zdrnzr7J3r+SMuszlcQCRn8lNGcTuSy2jOI7o9mxjZo+vR3ej3tN+ifRSOyUTS0+VMOid93cCubeiy/6TImS0QxRSCq2vxKr45zV+FQnjWH6D2xg+E9EatLcLAdHTgtGGD80D6jM0+aOl4wJgO/f96R2aJKCQ3yvgftRhdFMOpd6oAAAAASUVORK5CYII="
+          role="presentation"
+          style="pointer-events: none"
+          width="16"
+          height="16"
+        />
+      </div>
+    </div>
+    <div class="js-toggle-thumb"></div>
+    <input
+      class="js-toggle-screenreader-only"
+      type="checkbox"
+      aria-label="Switch between Dark and Light mode"
+    />
+  </div>
+</div>
+
+<style>
+   
+
+  body.dark-mode,
+  body.dark-mode #main,
+  body.dark-mode #header,
+  body.dark-mode #bottom-bar,
+  body.dark-mode .btn,
+  body.dark-mode a.tag {
+    background: rgb(45, 45, 45) !important;
+  }
+
+  body.dark-mode,
+  body.dark-mode *:not(time):not(a):not(#about):not(i),
+  body.dark-mode #sidebar,
+  body.dark-mode #sidebar i,
+  body.dark-mode #sidebar .sidebar-profile .sidebar-profile-name,
+  body.dark-mode #sidebar .sidebar-profile .sidebar-profile-bio {
+    color: #f5f5f5;
+  }
+
+  body.dark-mode .alert.info,
+  body.dark-mode .alert.info > p {
+    color: #5d686f !important;
+  }
+
+  .js-toggle-wrapper {
+    margin: 1rem auto;
+    text-align: center;
+    display: block;
+  }
+
+  .js-toggle {
+    touch-action: pan-x;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .js-toggle-screenreader-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .js-toggle-track {
+    width: 50px;
+    height: 24px;
+    padding: 0;
+    border-radius: 30px;
+    background-color: black;
+    transition: all 0.2s ease;
+  }
+  .js-toggle-track-check {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 5px;
+    top: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 0;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  .js-toggle--checked .js-toggle-track-check {
+    opacity: 1;
+    transition: opacity 0.25s ease;
+  }
+
+  .js-toggle-track-x {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    right: 5px;
+    top: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 0;
+    opacity: 1;
+    transition: opacity 0.25s ease;
+  }
+
+  .js-toggle--checked .js-toggle-track-x {
+    opacity: 0;
+  }
+
+  .js-toggle-thumb {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    transform: translateX(0);
+  }
+
+  .js-toggle--checked .js-toggle-thumb {
+    transform: translateX(26px);
+    border-color: #ffffff;
+  }
+</style>
+
+<script>
+  var body = document.body;
+  var switcher = document.getElementsByClassName("js-toggle")[0];
+
+  
+  switcher.addEventListener("click", function () {
+    this.classList.toggle("js-toggle--checked");
+    this.classList.add("js-toggle--focus");
+    
+    if (this.classList.contains("js-toggle--checked")) {
+      body.classList.add("dark-mode");
+      
+      localStorage.setItem("darkMode", "true");
+    } else {
+      body.classList.remove("dark-mode");
+      setTimeout(function () {
+        localStorage.removeItem("darkMode");
+      }, 100);
+    }
+  });
+
+  
+  if (localStorage.getItem("darkMode")) {
+    
+    switcher.classList.add("js-toggle--checked");
+    body.classList.add("dark-mode");
+  }
+</script>
+
+   <ul class="sidebar-buttons">
+     
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/categories/development" title="Development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-code"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+   </ul>
+   <ul class="sidebar-buttons">
+     
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneul-lee.com" target="_blank" rel="noopener" title="Website">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-window-maximize"></i>
+      
+      <span class="sidebar-button-desc">Website</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/resume/" title="Resume">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-file"></i>
+      
+      <span class="sidebar-button-desc">Resume</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener" title="LinkedIn">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener" title="Email">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+   </ul>
+   <ul class="sidebar-buttons">
+     
+
+   </ul>
+ </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title">
+      Singleton 싱글턴 패턴
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-09-21T19:00:39&#43;02:00">
+        
+  September 21, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/pattern">pattern</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              
+              
+                
+                
+                <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#singleton-싱글턴-패턴">Singleton 싱글턴 패턴</a>
+      <ul>
+        <li><a href="#단장점">(단)장점</a>
+          <ul>
+            <li><a href="#일반-객체-사용">일반 객체 사용</a></li>
+          </ul>
+        </li>
+        <li><a href="#테스트">테스트</a>
+          <ul>
+            <li><a href="#의존성-은닉">의존성 은닉</a></li>
+          </ul>
+        </li>
+        <li><a href="#글로벌-행동">글로벌 행동</a></li>
+        <li><a href="#react의-상태-관리">React의 상태 관리</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<p><img src="https://res.cloudinary.com/dtlpko2wf/image/upload/v1663783683/blog/singleton_y4xvfl.png" alt=""></p>
+<h1 id="singleton-싱글턴-패턴">Singleton 싱글턴 패턴</h1>
+<div class="alert info ">
+  <p>이 글은 <a href="https://www.patterns.dev/posts/singleton-pattern/">https://www.patterns.dev/posts/singleton-pattern/</a>의 한글 번역본입니다.</p>
+</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="3551187766"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p><code>singleton pattern : 애플리케이션 전체에서 단일 글로벌 인스턴스 공유</code></p>
+<p>싱글톤은 한 번 인스턴스화할 수 있고 전역적으로 액세스할 수 있는 클래스입니다.<br>
+이 단일 인스턴스는 응용 프로그램 전체에서 공유할 수 있으므로 Singleton은 응용 프로그램의 전역 상태를 관리하는 데 적합합니다.</p>
+<p>먼저 ES2015 클래스를 사용하여 싱글톤이 어떻게 생겼는지 살펴보겠습니다. 이 예제에서는 다음을 포함하는 Counter 클래스를 만들 것입니다.</p>
+<ul>
+<li><code>getInstance</code> 인스턴스의 값을 반환 하는 메소드</li>
+<li><code>getCount</code> counter 변수의 현재 값을 반환 하는 메소드</li>
+<li><code>increment</code> counter의 값을 1씩 증가 시키는 메소드</li>
+<li><code>decrement</code> counter의 값을 1씩 감소 시키는 메소드</li>
+</ul>
+<pre tabindex="0"><code>let counter = 0;
+
+class Counter {
+  getInstance() {
+    return this;
+  }
+
+  getCount() {
+    return counter;
+  }
+
+  increment() {
+    return ++counter;
+  }
+
+  decrement() {
+    return --counter;
+  }
+}
+</code></pre><p>그러나 이 클래스는 Singleton의 기준을 충족하지 않습니다!<br>
+Singleton은 한 번만 인스턴스화 될 수 있어야 합니다.<br>
+현재는 Counter 클래스의 여러 인스턴스를 만들 수 있습니다.</p>
+<pre tabindex="0"><code>let counter = 0;
+
+class Counter {
+  getInstance() {
+    return this;
+  }
+
+  getCount() {
+    return counter;
+  }
+
+  increment() {
+    return ++counter;
+  }
+
+  decrement() {
+    return --counter;
+  }
+}
+
+const counter1 = new Counter();
+const counter2 = new Counter();
+
+console.log(counter1.getInstance() === counter2.getInstance()); // false
+</code></pre><p>new 메소드를 두 번 호출하여 다른 인스턴스와 동일하게 counter1, counter2를 설정합니다.<br>
+counter1과 counter2의 getInstance 메서드에서 반환된 값들은 다른 인스턴스에 대한 참조를 효과적으로 반환했습니다.<br>
+두 값은 완전히 동일하지 않습니다!</p>
+<video src="https://res.cloudinary.com/ddxwdqwkr/video/upload/v1609056519/patterns.dev/jspat-52_zkwyk1.mp4">
+<p>Counter 클래스의 인스턴스를 하나만 만들 수 있는지 확인합시다.</p>
+<p>인스턴스를 하나만 만들 수 있도록 하는 한 가지 방법은 <code>instance</code>이라는 변수를 만드는 것입니다.<br>
+Counter의 생성자에서 새 인스턴스가 생성될 때 인스턴스에 대한 참조와 동일하게 <code>instance</code>를 설정할 수 있습니다.<br>
+instance 변수에 이미 값이 있는지 확인하여 새로운 인스턴스화를 방지할 수 있습니다.<br>
+이 경우 인스턴스가 이미 존재합니다.<br>
+이것은 발생하지 않아야 합니다.(사용자에게 알리기 위해 오류가 발생해야 합니다.)</p>
+<pre tabindex="0"><code>let instance;
+let counter = 0;
+
+class Counter {
+  constructor() {
+    if (instance) {
+      throw new Error(&quot;You can only create one instance!&quot;);
+    }
+    instance = this;
+  }
+
+  getInstance() {
+    return this;
+  }
+
+  getCount() {
+    return counter;
+  }
+
+  increment() {
+    return ++counter;
+  }
+
+  decrement() {
+    return --counter;
+  }
+}
+
+const counter1 = new Counter();
+const counter2 = new Counter();
+// Error: You can only create one instance!
+</code></pre><p>완벽하다! 더 이상 여러 인스턴스를 만들 수 없습니다.</p>
+<p>Counter.js 파일에서 Counter 인스턴스를 내보내겠습니다.<br>
+그러나 그렇게하기 전에 우리는 인스턴스 또한 동결해야 합니다.<br>
+이 <code>Object.freeze</code> 방법은 사용하는 코드가 Singleton을 수정할 수 없도록 합니다.<br>
+고정된 인스턴스의 속성은 추가하거나 수정할 수 없으므로 실수로 Singleton의 값을 덮어쓸 위험이 줄어듭니다.</p>
+<pre tabindex="0"><code>let instance;
+let counter = 0;
+
+class Counter {
+  constructor() {
+    if (instance) {
+      throw new Error(&quot;You can only create one instance!&quot;);
+    }
+    instance = this;
+  }
+
+  getInstance() {
+    return this;
+  }
+
+  getCount() {
+    return counter;
+  }
+
+  increment() {
+    return ++counter;
+  }
+
+  decrement() {
+    return --counter;
+  }
+}
+
+const singletonCounter = Object.freeze(new Counter());
+export default singletonCounter;
+</code></pre><p>Counter 예제를 구현하는 응용 프로그램을 살펴보겠습니다.<br>
+다음 파일이 있습니다.</p>
+<ul>
+<li><code>counter.js</code>: Counter클래스를 포함하고 Counter 인스턴스를 기본 내보냅니다.</li>
+<li><code>index.js</code>: redButton.js 및 blueButton.js모듈을 로드합니다.</li>
+<li><code>redButton.js</code>: Counter를 가져오고 Counter의 increment 메서드를 빨간색 버튼에 대한 이벤트 리스너로 추가 합니다. getCount 메서드 를 호출하여 Counter의 현재 값을 기록합니다.</li>
+<li><code>blueButton.js</code>: Counter를 가져오고 Counter의 increment 메서드를 파란색 버튼에 대한 이벤트 리스너로 추가 합니다. getCounte 메서드를 호출하여 Counter의 현재 값을 기록합니다.</li>
+</ul>
+<p>blueButton.js, redButton.js 둘 다 counter.js에서 동일한 인스턴스를 가져옵니다.<br>
+이 인스턴스는 두 파일 모두에서 Counter로 가져옵니다.</p>
+<video src="https://res.cloudinary.com/ddxwdqwkr/video/upload/v1609056519/patterns.dev/jspat-56_wylvcf.mp4">
+<p>redButton.js 또는 blueButton.js에서 increment메서드를 호출하면 Counter 인스턴스의 counter속성 값이 두 파일 모두에서 업데이트됩니다.<br>
+빨간색 버튼을 클릭하든 파란색 버튼을 클릭하든 상관없습니다. : 모든 인스턴스에서 동일한 값을 공유합니다.<br>
+이것이 다른 파일에서 메서드를 호출하더라도 카운터가 계속 1씩 증가하는 이유입니다.</p>
+<hr>
+<h2 id="단장점">(단)장점</h2>
+<p>인스턴스화를 한 인스턴스로만 제한하면 잠재적으로 많은 메모리 공간을 절약할 수 있습니다.<br>
+매번 새 인스턴스에 대한 메모리를 설정하는 대신 애플리케이션 전체에서 참조되는 해당 인스턴스에 대한 메모리만 설정하면 됩니다.<br>
+그러나 싱글톤은 실제로 안티 패턴 으로 간주 되며 JavaScript에서 피할 수 있습니다(또는.. 해야 합니다 ).</p>
+<p>Java 또는 C++와 같은 많은 프로그래밍 언어에서는 JavaScript에서 할 수 있는 방식으로 객체를 직접 생성할 수 없습니다.<br>
+이러한 객체 지향 프로그래밍 언어에서는 객체를 생성하는 클래스를 생성해야 합니다.<br>
+생성된 객체는 JavaScript 예제 instance 값과 마찬가지로 클래스의 인스턴스 값을 가집니다.</p>
+<p>그러나 위의 예에 표시된 클래스 구현은 실제로 과도합니다.<br>
+JavaScript에서 직접 객체를 생성할 수 있으므로 일반 객체를 사용하여 정확히 동일한 결과를 얻을 수 있습니다.<br>
+Singleton 사용의 몇 가지 단점을 살펴보겠습니다!</p>
+<h3 id="일반-객체-사용">일반 객체 사용</h3>
+<p>이전에 본 것과 동일한 예를 사용하겠습니다.<br>
+그러나 이번에는 counter가 단순히 다음을 포함하는 객체입니다.</p>
+<ul>
+<li>count 프로퍼티</li>
+<li>count의 값을 1씩 증가 시키는 increment 메소드</li>
+<li>count의 값을 1씩 감소 시키는 decrement 메소드</li>
+</ul>
+<pre tabindex="0"><code>let count = 0;
+
+const counter = {
+  increment() {
+    return ++count;
+  },
+  decrement() {
+    return --count;
+  }
+};
+
+Object.freeze(counter);
+export { counter };
+</code></pre><p>객체는 참조로 전달되므로 redButton.js, blueButton.js 둘 다 동일한 counter 객체에 대한 참조를 가져옵니다.<br>
+이 파일 중 하나에서 count의 값을 수정하면 두 파일에서 모두 볼 수 있는 counter의 값이 수정됩니다.</p>
+<h2 id="테스트">테스트</h2>
+<p>Singleton에 의존하는 테스트 코드는 까다로울 수 있습니다. 매번 새로운 인스턴스를 생성할 수 없기 때문에 모든 테스트는 이전 테스트의 전역 인스턴스 수정에 의존합니다. 이 경우 테스트 순서가 중요하며 한 번의 작은 수정으로 전체 테스트가 실패할 수 있습니다. 테스트 후에 테스트에서 수정한 사항을 재설정하려면 전체 인스턴스를 재설정해야 합니다.</p>
+<pre tabindex="0"><code>//test.js
+
+import Counter from &quot;../src/counterTest&quot;;
+
+test(&quot;incrementing 1 time should be 1&quot;, () =&gt; {
+  Counter.increment();
+  expect(Counter.getCount()).toBe(1);
+});
+
+test(&quot;incrementing 3 extra times should be 4&quot;, () =&gt; {
+  Counter.increment();
+  Counter.increment();
+  Counter.increment();
+  expect(Counter.getCount()).toBe(4);
+});
+
+test(&quot;decrementing 1  times should be 3&quot;, () =&gt; {
+  Counter.decrement();
+  expect(Counter.getCount()).toBe(3);
+});
+
+//superCounter.js
+import Counter from &quot;./counter&quot;;
+
+export default class SuperCounter {
+  constructor() {
+    this.count = 0;
+  }
+
+  increment() {
+    Counter.increment();
+    return (this.count += 100);
+  }
+
+  decrement() {
+    Counter.decrement();
+    return (this.count -= 100);
+  }
+}
+</code></pre><h3 id="의존성-은닉">의존성 은닉</h3>
+<p>다른 모듈을 가져올 때, superCounter.js에서 모듈이 Singleton을 가져오는지 명확하지 않을 수 있습니다. 이 경우 index.js와 같은 다른 파일에서는 해당 모듈을 가져오고 해당 메서드를 호출할 수 있습니다. 이런 식으로 우리는 실수로 Singleton의 값을 수정합니다. 이는 응용 프로그램 전체에서 Singleton의 여러 인스턴스를 공유할 수 있고 모두 수정될 수 있기 때문에 예기치 않은 동작으로 이어질 수 있습니다.</p>
+<pre tabindex="0"><code>//test.js
+import Counter from &quot;../src/counterTest&quot;;
+
+test(&quot;incrementing 1 time should be 1&quot;, () =&gt; {
+  Counter.increment();
+  expect(Counter.getCount()).toBe(1);
+});
+
+test(&quot;incrementing 3 extra times should be 4&quot;, () =&gt; {
+  Counter.increment();
+  Counter.increment();
+  Counter.increment();
+  expect(Counter.getCount()).toBe(4);
+});
+
+test(&quot;decrementing 1  times should be 3&quot;, () =&gt; {
+  Counter.decrement();
+  expect(Counter.getCount()).toBe(3);
+});
+
+//superCounter.js
+import Counter from &quot;./counter&quot;;
+
+export default class SuperCounter {
+  constructor() {
+    this.count = 0;
+  }
+
+  increment() {
+    Counter.increment();
+    return (this.count += 100);
+  }
+
+  decrement() {
+    Counter.decrement();
+    return (this.count -= 100);
+  }
+}
+</code></pre><h2 id="글로벌-행동">글로벌 행동</h2>
+<p>Singleton 인스턴스는 전체 앱에서 참조될 수 있어야 합니다. 전역 변수는 본질적으로 동일한 동작을 보여줍니다. 전역 변수는 전역 범위에서 사용할 수 있으므로 응용 프로그램 전체에서 해당 변수에 액세스할 수 있습니다.</p>
+<p>전역 변수를 갖는 것은 일반적으로 잘못된 설계 결정으로 간주됩니다. 전역 범위 오염은 실수로 전역 변수 값을 덮어쓰는 결과를 초래할 수 있으며, 이로 인해 많은 예기치 않은 동작이 발생할 수 있습니다.</p>
+<p>ES2015 에서 전역 변수를 생성하는 것은 상당히 드문 일입니다. 새로운 <code>let</code> 및 <code>const</code>는 이 두 키워드로 선언된 변수를 블록 범위로 유지하여 개발자가 실수로 전역 범위를 오염시키는 것을 방지합니다. JavaScript 의 새 <code>module</code> 시스템은 모듈의 export값과 다른 파일의 import값을 사용할 수 있으므로 전역 범위를 오염시키지 않고 전역적으로 액세스 가능한 값을 더 쉽게 생성할 수 있습니다.</p>
+<p>그러나 Singleton의 일반적인 사용 사례는 애플리케이션 전체에 일종의 전역 상태를 갖는 것입니다. 코드베이스의 여러 부분이 동일한 변경 가능한 객체에 의존하는 경우 예기치 않은 동작을 유발할 수 있습니다.</p>
+<p>일반적으로 코드베이스의 특정 부분은 전역 상태 내의 값을 수정하는 반면 다른 부분은 해당 데이터를 사용합니다. 여기서 실행 순서가 중요합니다. : 우리는 소비할 데이터가 없을 때 실수로 데이터를 먼저 소비하는 것을 원하지 않습니다! 전역 상태를 사용할 때 데이터 흐름을 이해하는 것은 애플리케이션이 성장하고 수십 개의 구성 요소가 서로 의존함에 따라 매우 까다로울 수 있습니다.</p>
+<h2 id="react의-상태-관리">React의 상태 관리</h2>
+<p>React에서는 Singleton을 사용하는 대신 <code>Redux</code> 또는 <code>React Context</code> 와 같은 상태 관리 도구를 통해 전역 상태에 의존하는 경우가 많습니다. 전역 상태 동작이 Singleton의 동작과 유사해 보일 수 있지만 이러한 도구는 Singleton의 변경 가능한 상태가 아닌 <code>read-only state</code>를 제공합니다. Redux를 사용할 때, 컴포넌트가 디스패처를 통해 액션을 보낸 후에 순수 함수 리듀서가 state를 업데이트할 수 있습니다.</p>
+<p>이런 도구들을 사용하여 전역 상태의 단점이 사라지지는 않지만, 컴포넌트가 state를 직접 업데이트할 수 없기 때문에 최소한 의도한 대로 전역 상태가 변경되도록 할 수 있습니다.</p>
+<hr>
+<p>참고 :
+<a href="https://www.patterns.dev/posts/singleton-pattern/">https://www.patterns.dev/posts/singleton-pattern/</a>
+<a href="https://ko.wikipedia.org/wiki/%EC%8B%B1%EA%B8%80%ED%84%B4_%ED%8C%A8%ED%84%B4">싱글턴 패턴 위키</a></p>
+
+              
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/development/">development</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/front-end/">front-end</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/pattern/">pattern</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/singleton/">singleton</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/javascript/">javascript</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/design-pattern/">design pattern</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%EC%8B%B1%EA%B8%80%ED%84%B4/">싱글턴</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%ED%8C%A8%ED%84%B4/">패턴</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/">자바스크립트</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/blog/domain-github/" data-tooltip="도메인 구매 후, 깃헙 블로그 연동하기 🏠" aria-label="PREVIOUS: 도메인 구매 후, 깃헙 블로그 연동하기 🏠">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.haneul-lee.com/post/pattern/singleton/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.haneul-lee.com/post/pattern/singleton/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.haneul-lee.com/post/pattern/singleton/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/sharing/share?url=https://blog.haneul-lee.com/post/pattern/singleton/" title="Share on Google&#43;" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="Table of Contents">
+      <i class="fa fa-list" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+              
+            
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="5041197559"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <span class="copyrights">
+      &copy; 2022 <a href="https://github.com/haneulee">Haneul Lee</a>. All Rights Reserved
+    </span>
+  </footer>
+  
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/blog/domain-github/" data-tooltip="도메인 구매 후, 깃헙 블로그 연동하기 🏠" aria-label="PREVIOUS: 도메인 구매 후, 깃헙 블로그 연동하기 🏠">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.haneul-lee.com/post/pattern/singleton/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.haneul-lee.com/post/pattern/singleton/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.haneul-lee.com/post/pattern/singleton/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/sharing/share?url=https://blog.haneul-lee.com/post/pattern/singleton/" title="Share on Google&#43;" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="Table of Contents">
+      <i class="fa fa-list" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fpattern%2Fsingleton%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fpattern%2Fsingleton%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fpattern%2Fsingleton%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/sharing/share?url=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fpattern%2Fsingleton%2F" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Devlog</h4>
+    
+      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Switzerland
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://blog.haneul-lee.com/js/script-nc7irwbrsuq6kdlqb4wt4nsytr2gakrjyrgz86br1v3hzdcblgpfzyqhkc.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

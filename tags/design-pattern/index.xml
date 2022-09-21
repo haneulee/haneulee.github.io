@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>design pattern on Haneul Devlog 개발 블로그 📚</title>
+    <link>https://blog.haneul-lee.com/tags/design-pattern/</link>
+    <description>Recent content in design pattern on Haneul Devlog 개발 블로그 📚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 21 Sep 2022 19:00:39 +0200</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Singleton 싱글턴 패턴</title>
+      <link>https://blog.haneul-lee.com/post/pattern/singleton/</link>
+      <pubDate>Wed, 21 Sep 2022 19:00:39 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/post/pattern/singleton/</guid>
+      <description>Singleton 싱글턴 패턴 이 글은 https://www.patterns.dev/posts/singleton-pattern/의 한글 번역본입니다.
+  singleton pattern : 애플리케이션 전체에서 단일 글로벌 인스턴스 공유
+싱글톤은 한 번 인스턴스화할 수 있고 전역적으로 액세스할 수 있는 클래스입니다.
+이 단일 인스턴스는 응용 프로그램 전체에서 공유할 수 있으므로 Singleton은 응용 프로그램의 전역 상태를 관리하는 데 적합합니다.
+먼저 ES2015 클래스를 사용하여 싱글톤이 어떻게 생겼는지 살펴보겠습니다. 이 예제에서는 다음을 포함하는 Counter 클래스를 만들 것입니다.
+ getInstance 인스턴스의 값을 반환 하는 메소드 getCount counter 변수의 현재 값을 반환 하는 메소드 increment counter의 값을 1씩 증가 시키는 메소드 decrement counter의 값을 1씩 감소 시키는 메소드  let counter = 0; class Counter { getInstance() { return this; } getCount() { return counter; } increment() { return ++counter; } decrement() { return --counter; } } 그러나 이 클래스는 Singleton의 기준을 충족하지 않습니다!</description>
+    </item>
+    
+  </channel>
+</rss>
