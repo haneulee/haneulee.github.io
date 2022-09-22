@@ -160,7 +160,7 @@
     
     
     
-    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-uiavxkidzzp7lut0y17c6lqo92fwi6t6dops3hkbhzq8n0ipg9w977qclolr.min.css" />
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-wogrckem35doefclmldageehbl4glrnm7q8sldg6bls3qealoqujnlr3wgj.min.css" />
     
       <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
@@ -257,7 +257,8 @@ if (!doNotTrack) {
   }
 
   body.dark-mode,
-  body.dark-mode *:not(time):not(a):not(#about):not(i),
+  body.dark-mode
+    *:not(time):not(a):not(#about):not(i):not(code > span):not(code),
   body.dark-mode #sidebar,
   body.dark-mode #sidebar i,
   body.dark-mode #sidebar .sidebar-profile .sidebar-profile-name,
@@ -614,27 +615,59 @@ if (!doNotTrack) {
 <p>typePolicies, Query field가 customizing 설정이 되어 있지만, 필수는 아니기 때문에 uri만 제공해줘도 무방합니다.<br>
 export const client = new ApolloClient({uri, cache: new InMemoryCache()}) 이런식으로만 하셔도 괜찮습니다.<br>
 위와 같이 설정한 client는 앱 최상단에 <ApolloProvider> 컴포넌트로 감싸서 사용하면 됩니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">ApolloClient</span>, <span style="color:#a6e22e">InMemoryCache</span>, <span style="color:#a6e22e">makeVar</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@apollo/client&#34;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">LS_TOKEN</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;./constants&#34;</span>;
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#ff79c6">import</span> { ApolloClient, InMemoryCache, makeVar } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;@apollo/client&#34;</span>;
+<span style="color:#ff79c6">import</span> { LS_TOKEN } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;./constants&#34;</span>;
 
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">token</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">LS_TOKEN</span>);
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isLoggedInVar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">makeVar</span>(Boolean(<span style="color:#a6e22e">token</span>));
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">authTokenVar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">makeVar</span>(<span style="color:#a6e22e">token</span>);
+<span style="color:#ff79c6">const</span> token <span style="color:#ff79c6">=</span> localStorage.getItem(LS_TOKEN);
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">const</span> isLoggedInVar <span style="color:#ff79c6">=</span> makeVar(<span style="color:#8be9fd;font-style:italic">Boolean</span>(token));
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">const</span> authTokenVar <span style="color:#ff79c6">=</span> makeVar(token);
 
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">client</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ApolloClient</span>({
-  <span style="color:#a6e22e">uri</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://nuber-eats-challenge.herokuapp.com/graphql&#34;</span>,
-  <span style="color:#a6e22e">cache</span>: <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">InMemoryCache</span>({
-    <span style="color:#a6e22e">typePolicies</span><span style="color:#f92672">:</span> {
-      <span style="color:#a6e22e">Query</span><span style="color:#f92672">:</span> {
-        <span style="color:#a6e22e">fields</span><span style="color:#f92672">:</span> {
-          <span style="color:#a6e22e">isLoggedIn</span><span style="color:#f92672">:</span> {
-            <span style="color:#a6e22e">read() {</span>
-              <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">isLoggedInVar</span>();
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">const</span> client <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ApolloClient({
+  uri<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;https://nuber-eats-challenge.herokuapp.com/graphql&#34;</span>,
+  cache: <span style="color:#8be9fd">new</span> InMemoryCache({
+    typePolicies<span style="color:#ff79c6">:</span> {
+      Query<span style="color:#ff79c6">:</span> {
+        fields<span style="color:#ff79c6">:</span> {
+          isLoggedIn<span style="color:#ff79c6">:</span> {
+            read() {
+              <span style="color:#ff79c6">return</span> isLoggedInVar();
             },
           },
-          <span style="color:#a6e22e">token</span><span style="color:#f92672">:</span> {
-            <span style="color:#a6e22e">read() {</span>
-              <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">authTokenVar</span>();
+          token<span style="color:#ff79c6">:</span> {
+            read() {
+              <span style="color:#ff79c6">return</span> authTokenVar();
             },
           },
         },
@@ -642,23 +675,45 @@ export const client = new ApolloClient({uri, cache: new InMemoryCache()}) 이런
     },
   }),
 });
-</code></pre></div><h2 id="react-router-dom-설정">react router dom 설정</h2>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="react-router-dom-설정">react router dom 설정</h2>
 <p>react router dom을 사용하려면 Route를 Router(BrowserRouter, 또는 HashRouter)로 감싸서 사용하시면 됩니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">BrowserRouter</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">Router</span>, <span style="color:#a6e22e">Route</span>, <span style="color:#a6e22e">Switch</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;react-router-dom&#34;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Login</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;../pages/login&#34;</span>;
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#ff79c6">import</span> { BrowserRouter <span style="color:#ff79c6">as</span> Router, Route, Switch } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;react-router-dom&#34;</span>;
+<span style="color:#ff79c6">import</span> { Login } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;../pages/login&#34;</span>;
 
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">LoggedOutRouter</span> <span style="color:#f92672">=</span> () <span style="color:#f92672">=&gt;</span> {
-  <span style="color:#66d9ef">return</span> (
-    &lt;<span style="color:#f92672">Router</span>&gt;
-      &lt;<span style="color:#f92672">Switch</span>&gt;
-        &lt;<span style="color:#f92672">Route</span> <span style="color:#a6e22e">path</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span>&gt;
-          &lt;<span style="color:#f92672">Login</span> /&gt;
-        &lt;/<span style="color:#f92672">Route</span>&gt;
-      &lt;/<span style="color:#f92672">Switch</span>&gt;
-    &lt;/<span style="color:#f92672">Router</span>&gt;
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">const</span> LoggedOutRouter <span style="color:#ff79c6">=</span> () <span style="color:#ff79c6">=&gt;</span> {
+  <span style="color:#ff79c6">return</span> (
+    &lt;<span style="color:#ff79c6">Router</span>&gt;
+      &lt;<span style="color:#ff79c6">Switch</span>&gt;
+        &lt;<span style="color:#ff79c6">Route</span> <span style="color:#50fa7b">path</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;/&#34;</span>&gt;
+          &lt;<span style="color:#ff79c6">Login</span> /&gt;
+        &lt;/<span style="color:#ff79c6">Route</span>&gt;
+      &lt;/<span style="color:#ff79c6">Switch</span>&gt;
+    &lt;/<span style="color:#ff79c6">Router</span>&gt;
   );
 };
-</code></pre></div><p><a href="https://reactrouter.com/web/api/BrowserRouter">BrowserRoute</a><br>
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="https://reactrouter.com/web/api/BrowserRouter">BrowserRoute</a><br>
 <a href="https://reactrouter.com/web/api/HashRouter">HashRouter</a></p>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
@@ -671,72 +726,154 @@ export const client = new ApolloClient({uri, cache: new InMemoryCache()}) 이런
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 <h2 id="reactive-variableshttpswwwapollographqlcomdocsreactlocal-statereactive-variables---로그인-토큰-및-로그인-상태"><a href="https://www.apollographql.com/docs/react/local-state/reactive-variables/">reactive variables</a> - 로그인 토큰 및 로그인 상태</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App() {</span>
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isLoggedIn</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useReactiveVar</span>(<span style="color:#a6e22e">isLoggedInVar</span>);
-  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">isLoggedIn</span> <span style="color:#f92672">?</span> &lt;<span style="color:#f92672">LoggedInRouter</span> /&gt; <span style="color:#f92672">:</span> &lt;<span style="color:#f92672">LoggedOutRouter</span> /&gt;;
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> <span style="color:#8be9fd;font-style:italic">function</span> App() {
+  <span style="color:#ff79c6">const</span> isLoggedIn <span style="color:#ff79c6">=</span> useReactiveVar(isLoggedInVar);
+  <span style="color:#ff79c6">return</span> isLoggedIn <span style="color:#ff79c6">?</span> &lt;<span style="color:#ff79c6">LoggedInRouter</span> /&gt; <span style="color:#ff79c6">:</span> &lt;<span style="color:#ff79c6">LoggedOutRouter</span> /&gt;;
 }
-</code></pre></div><p><strong>useReactiveVar(reactive variables)</strong> : apollo client의 cache 밖에서의 local state를 다루기 위해 사용</p>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>useReactiveVar(reactive variables)</strong> : apollo client의 cache 밖에서의 local state를 다루기 위해 사용</p>
 <p>useReactiveVar를 이용하여 로그인 여부를 저장하고, 로그인 하였을 때에는 makeVar로 생성한 변수(isLoggedInVar)에 값을 변형하여 리액트에서 바로바로 반응할 수 있게끔 설정을 해줍니다.</p>
 <p><App> 컴포넌트에서 <LoggedInRouter> 컴포넌트를 사용할지 <LoggedOutRouter>컴포넌트를 사용할 것인지를 결정되게 됩니다. 또한, 로그인 토큰과 관련하여서도 react variables를 사용할 수 있습니다.</p>
 <p>makeVar를 이용하여 로그인 토큰도 localStorage에 연결된 token 값에 반응하도록 설정할 수 있습니다.<br>
 이런 방법으로 로그인 토큰이 저장된 로컬 스토리지를 react로 쉽게 연결하여 사용할 수 있습니다.</p>
 <h2 id="로그인-mutation">로그인 Mutation</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">LOGIN_MUTATION</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">gql</span><span style="color:#e6db74">`
-</span><span style="color:#e6db74">  mutation login($input: LoginInput!) {
-</span><span style="color:#e6db74">    login(input: $input) {
-</span><span style="color:#e6db74">      ok
-</span><span style="color:#e6db74">      error
-</span><span style="color:#e6db74">      token
-</span><span style="color:#e6db74">    }
-</span><span style="color:#e6db74">  }
-</span><span style="color:#e6db74">`</span>;
-</code></pre></div><p>graphql의 mutation을 클라이언트에서 이용하려면 먼저 gql을 사용하여, 쿼리문을 먼저 작성하도록 합니다.<br>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#ff79c6">const</span> LOGIN_MUTATION <span style="color:#ff79c6">=</span> gql<span style="color:#f1fa8c">`
+</span><span style="color:#f1fa8c">  mutation login($input: LoginInput!) {
+</span><span style="color:#f1fa8c">    login(input: $input) {
+</span><span style="color:#f1fa8c">      ok
+</span><span style="color:#f1fa8c">      error
+</span><span style="color:#f1fa8c">      token
+</span><span style="color:#f1fa8c">    }
+</span><span style="color:#f1fa8c">  }
+</span><span style="color:#f1fa8c">`</span>;
+</code></pre></td></tr></table>
+</div>
+</div><p>graphql의 mutation을 클라이언트에서 이용하려면 먼저 gql을 사용하여, 쿼리문을 먼저 작성하도록 합니다.<br>
 login은 mutation이므로 useMutation을 사용하시면 됩니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">login</span>, { <span style="color:#a6e22e">data</span>: <span style="color:#66d9ef">loginResults</span>, <span style="color:#a6e22e">loading</span> }] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useMutation</span><span style="color:#f92672">&lt;</span>
-  <span style="color:#a6e22e">login</span>,
-  <span style="color:#a6e22e">loginVariables</span>
-<span style="color:#f92672">&gt;</span>(<span style="color:#a6e22e">LOGIN_MUTATION</span>, {
-  <span style="color:#a6e22e">onCompleted</span>,
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#ff79c6">const</span> [login, { data: <span style="color:#8be9fd">loginResults</span>, loading }] <span style="color:#ff79c6">=</span> useMutation<span style="color:#ff79c6">&lt;</span>
+  login,
+  loginVariables
+<span style="color:#ff79c6">&gt;</span>(LOGIN_MUTATION, {
+  onCompleted,
 });
-</code></pre></div><p>typescript를 사용하고 있기 때문에 위와 같이 useMutation에 login, loginVariables 타입을 넘겨줍니다.<br>
+</code></pre></td></tr></table>
+</div>
+</div><p>typescript를 사용하고 있기 때문에 위와 같이 useMutation에 login, loginVariables 타입을 넘겨줍니다.<br>
 인자로 넘겨준 것은 위의 쿼리어로 만든 LOGIN_MUTATION과 <a href="https://www.apollographql.com/docs/react/data/mutations/#options">옵션값</a>입니다.</p>
 <p><a href="https://graphql-kr.github.io/learn/queries/">query/mutation</a></p>
 <h2 id="useformhttpsreact-hook-formcomkrv6apiuseform---react-hook-form"><a href="https://react-hook-form.com/kr/v6/api#useForm">useForm</a> - react hook form</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ILoginForm</span> {
-  <span style="color:#a6e22e">email</span>: <span style="color:#66d9ef">string</span>;
-  <span style="color:#a6e22e">password</span>: <span style="color:#66d9ef">string</span>;
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#ff79c6">interface</span> ILoginForm {
+  email: <span style="color:#8be9fd">string</span>;
+  password: <span style="color:#8be9fd">string</span>;
 }
 
-<span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">register</span>, <span style="color:#a6e22e">handleSubmit</span>, <span style="color:#a6e22e">getValues</span>, <span style="color:#a6e22e">errors</span>, <span style="color:#a6e22e">formState</span> } <span style="color:#f92672">=</span>
-  <span style="color:#a6e22e">useForm</span>&lt;<span style="color:#f92672">ILoginForm</span>&gt;({ <span style="color:#a6e22e">mode</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;onChange&#34;</span> });
-</code></pre></div><p>useForm 함수는 위와 같이 사용하며 타입스크립트를 지원하기 때문에 위와 같이 타입을 제공해주면 자동완성이 쉽게 되기 때문에 편하고 실수할 일이 적어집니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">onValid</span> <span style="color:#f92672">=</span> () <span style="color:#f92672">=&gt;</span> {
-  <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">email</span>, <span style="color:#a6e22e">password</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">getValues</span>();
-  <span style="color:#a6e22e">login</span>({
-    <span style="color:#a6e22e">variables</span><span style="color:#f92672">:</span> {
-      <span style="color:#a6e22e">input</span><span style="color:#f92672">:</span> {
-        <span style="color:#a6e22e">email</span>,
-        <span style="color:#a6e22e">password</span>,
+<span style="color:#ff79c6">const</span> { register, handleSubmit, getValues, errors, formState } <span style="color:#ff79c6">=</span>
+  useForm&lt;<span style="color:#ff79c6">ILoginForm</span>&gt;({ mode<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;onChange&#34;</span> });
+</code></pre></td></tr></table>
+</div>
+</div><p>useForm 함수는 위와 같이 사용하며 타입스크립트를 지원하기 때문에 위와 같이 타입을 제공해주면 자동완성이 쉽게 되기 때문에 편하고 실수할 일이 적어집니다.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#ff79c6">const</span> onValid <span style="color:#ff79c6">=</span> () <span style="color:#ff79c6">=&gt;</span> {
+  <span style="color:#ff79c6">const</span> { email, password } <span style="color:#ff79c6">=</span> getValues();
+  login({
+    variables<span style="color:#ff79c6">:</span> {
+      input<span style="color:#ff79c6">:</span> {
+        email,
+        password,
       },
     },
   });
 };
 
-&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;grid gap-3 w-full max-w-xs&#34;</span> <span style="color:#a6e22e">onSubmit</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">handleSubmit</span>(<span style="color:#a6e22e">onValid</span>)}&gt;
-  &lt;<span style="color:#f92672">input</span>
-    <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border border-gray-300 focus:outline-none px-5 py-3 focus:border-gray-500 transition-colors duration-500&#34;</span>
-    <span style="color:#a6e22e">ref</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">register</span>({
-      <span style="color:#a6e22e">required</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Email is required&#34;</span>,
-      <span style="color:#a6e22e">pattern</span><span style="color:#f92672">:</span>
-        <span style="color:#e6db74">/^(([^&lt;&gt;()[\]\\.,;:\s@&#34;]+(\.[^&lt;&gt;()[\]\\.,;:\s@&#34;]+)*)|(&#34;.+&#34;))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/</span>,
+&lt;<span style="color:#ff79c6">form</span> <span style="color:#50fa7b">className</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;grid gap-3 w-full max-w-xs&#34;</span> <span style="color:#50fa7b">onSubmit</span><span style="color:#ff79c6">=</span>{handleSubmit(onValid)}&gt;
+  &lt;<span style="color:#ff79c6">input</span>
+    <span style="color:#50fa7b">className</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;border border-gray-300 focus:outline-none px-5 py-3 focus:border-gray-500 transition-colors duration-500&#34;</span>
+    <span style="color:#50fa7b">ref</span><span style="color:#ff79c6">=</span>{register({
+      required<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Email is required&#34;</span>,
+      pattern<span style="color:#ff79c6">:</span>
+        <span style="color:#f1fa8c">/^(([^&lt;&gt;()[\]\\.,;:\s@&#34;]+(\.[^&lt;&gt;()[\]\\.,;:\s@&#34;]+)*)|(&#34;.+&#34;))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/</span>,
     })}
-    <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>
-    <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>
-    <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Email&#34;</span>
-    <span style="color:#a6e22e">required</span>
+    <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;email&#34;</span>
+    <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;email&#34;</span>
+    <span style="color:#50fa7b">placeholder</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Email&#34;</span>
+    <span style="color:#50fa7b">required</span>
   /&gt;
-&lt;/<span style="color:#f92672">form</span>&gt;;
-</code></pre></div><p>handleSubmit은 onValid에 form 값이 valid했을 때 data를 같이 넘겨줍니다.<br>
+&lt;/<span style="color:#ff79c6">form</span>&gt;;
+</code></pre></td></tr></table>
+</div>
+</div><p>handleSubmit은 onValid에 form 값이 valid했을 때 data를 같이 넘겨줍니다.<br>
 <a href="https://react-hook-form.com/kr/v6/api#register">register</a> react hook form에서 중요한 내용입니다.
 입력 폼에 사용할 여러 옵션을 설정할 수 있습니다.</p>
 <hr>
@@ -1052,7 +1189,7 @@ login은 mutation이므로 useMutation을 사용하시면 됩니다.</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://blog.haneul-lee.com/js/script-nc7irwbrsuq6kdlqb4wt4nsytr2gakrjyrgz86br1v3hzdcblgpfzyqhkc.min.js"></script>
+<script src="https://blog.haneul-lee.com/js/script-e762xkfaovcapl2uwfeylo4rjghsbcfq5l9tyksr2hv4tu9ym3wt4tkkl5o.min.js"></script>
 
 
   

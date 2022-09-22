@@ -27,7 +27,7 @@
     
   },
   "name":"Haneul Devlog 개발 블로그 📚",
-  "description":"Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.\nimport { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from \u0026#34;@apollo\/client\u0026#34;; import { LOCALSTORAGE_TOKEN } from \u0026#34;.\/constants\u0026#34;; import { setContext } from \u0026#34;@apollo\/client\/link\/context\u0026#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: \u0026#34;http:\/\/localhost:4000\/graphql\u0026#34;, }); const authLink = setContext((_, { headers }) =\u0026gt; { return { headers: { .",
+  "description":"Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47  import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from \u0026#34;@apollo\/client\u0026#34;; import { LOCALSTORAGE_TOKEN } from \u0026#34;.",
   "url":"https:\/\/blog.haneul-lee.com\/post\/graphql\/graphql-authentication\/",
   "keywords":"[development, front-end]"
 }
@@ -39,11 +39,11 @@
 <meta name="author" content="Haneul Devlog">
 <meta name="keywords" content="development, front-end">
 <meta name="description" content="Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
-import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;./constants&#34;; import { setContext } from &#34;@apollo/client/link/context&#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: &#34;http://localhost:4000/graphql&#34;, }); const authLink = setContext((_, { headers }) =&gt; { return { headers: { .">
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47  import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;.">
 
 
 <meta property="og:description" content="Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
-import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;./constants&#34;; import { setContext } from &#34;@apollo/client/link/context&#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: &#34;http://localhost:4000/graphql&#34;, }); const authLink = setContext((_, { headers }) =&gt; { return { headers: { .">
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47  import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Apollo에서 Authentication 인증하기 💫">
 <meta name="twitter:title" content="Apollo에서 Authentication 인증하기 💫">
@@ -51,9 +51,9 @@ import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apol
 <meta property="twitter:url" content="https://blog.haneul-lee.com/post/graphql/graphql-authentication/">
 <meta property="og:site_name" content="Haneul Devlog 개발 블로그 📚">
 <meta property="og:description" content="Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
-import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;./constants&#34;; import { setContext } from &#34;@apollo/client/link/context&#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: &#34;http://localhost:4000/graphql&#34;, }); const authLink = setContext((_, { headers }) =&gt; { return { headers: { .">
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47  import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;.">
 <meta name="twitter:description" content="Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
-import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;./constants&#34;; import { setContext } from &#34;@apollo/client/link/context&#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: &#34;http://localhost:4000/graphql&#34;, }); const authLink = setContext((_, { headers }) =&gt; { return { headers: { .">
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47  import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apollo/client&#34;; import { LOCALSTORAGE_TOKEN } from &#34;.">
 <meta property="og:locale" content="en-us">
 
   
@@ -142,7 +142,7 @@ import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &#34;@apol
     
     
     
-    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-uiavxkidzzp7lut0y17c6lqo92fwi6t6dops3hkbhzq8n0ipg9w977qclolr.min.css" />
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-wogrckem35doefclmldageehbl4glrnm7q8sldg6bls3qealoqujnlr3wgj.min.css" />
     
       <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
@@ -239,7 +239,8 @@ if (!doNotTrack) {
   }
 
   body.dark-mode,
-  body.dark-mode *:not(time):not(a):not(#about):not(i),
+  body.dark-mode
+    *:not(time):not(a):not(#about):not(i):not(code > span):not(code),
   body.dark-mode #sidebar,
   body.dark-mode #sidebar i,
   body.dark-mode #sidebar .sidebar-profile .sidebar-profile-name,
@@ -569,46 +570,97 @@ if (!doNotTrack) {
 <h1 id="apollo에서-authentication-인증하기-">Apollo에서 Authentication 인증하기 💫</h1>
 <h2 id="authlink">authLink</h2>
 <p>백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> {
-  <span style="color:#a6e22e">ApolloClient</span>,
-  <span style="color:#a6e22e">createHttpLink</span>,
-  <span style="color:#a6e22e">InMemoryCache</span>,
-  <span style="color:#a6e22e">makeVar</span>,
-} <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@apollo/client&#34;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">LOCALSTORAGE_TOKEN</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;./constants&#34;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">setContext</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@apollo/client/link/context&#34;</span>;
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#ff79c6">import</span> {
+  ApolloClient,
+  createHttpLink,
+  InMemoryCache,
+  makeVar,
+} <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;@apollo/client&#34;</span>;
+<span style="color:#ff79c6">import</span> { LOCALSTORAGE_TOKEN } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;./constants&#34;</span>;
+<span style="color:#ff79c6">import</span> { setContext } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;@apollo/client/link/context&#34;</span>;
 
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">token</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#a6e22e">LOCALSTORAGE_TOKEN</span>);
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isLoggedInVar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">makeVar</span>(Boolean(<span style="color:#a6e22e">token</span>));
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">authTokenVar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">makeVar</span>(<span style="color:#a6e22e">token</span>);
+<span style="color:#ff79c6">const</span> token <span style="color:#ff79c6">=</span> localStorage.getItem(LOCALSTORAGE_TOKEN);
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">const</span> isLoggedInVar <span style="color:#ff79c6">=</span> makeVar(<span style="color:#8be9fd;font-style:italic">Boolean</span>(token));
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">const</span> authTokenVar <span style="color:#ff79c6">=</span> makeVar(token);
 
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">httpLink</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createHttpLink</span>({
-  <span style="color:#a6e22e">uri</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://localhost:4000/graphql&#34;</span>,
+<span style="color:#ff79c6">const</span> httpLink <span style="color:#ff79c6">=</span> createHttpLink({
+  uri<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;http://localhost:4000/graphql&#34;</span>,
 });
 
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">authLink</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setContext</span>((<span style="color:#a6e22e">_</span>, { <span style="color:#a6e22e">headers</span> }) <span style="color:#f92672">=&gt;</span> {
-  <span style="color:#66d9ef">return</span> {
-    <span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> {
-      ...<span style="color:#a6e22e">headers</span>,
-      <span style="color:#e6db74">&#34;x-jwt&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">authTokenVar</span>() <span style="color:#f92672">||</span> <span style="color:#e6db74">&#34;&#34;</span>,
+<span style="color:#ff79c6">const</span> authLink <span style="color:#ff79c6">=</span> setContext((_, { headers }) <span style="color:#ff79c6">=&gt;</span> {
+  <span style="color:#ff79c6">return</span> {
+    headers<span style="color:#ff79c6">:</span> {
+      ...headers,
+      <span style="color:#f1fa8c">&#34;x-jwt&#34;</span><span style="color:#ff79c6">:</span> authTokenVar() <span style="color:#ff79c6">||</span> <span style="color:#f1fa8c">&#34;&#34;</span>,
     },
   };
 });
 
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">client</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ApolloClient</span>({
-  <span style="color:#a6e22e">link</span>: <span style="color:#66d9ef">authLink.concat</span>(<span style="color:#a6e22e">httpLink</span>),
-  <span style="color:#a6e22e">cache</span>: <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">InMemoryCache</span>({
-    <span style="color:#a6e22e">typePolicies</span><span style="color:#f92672">:</span> {
-      <span style="color:#a6e22e">Query</span><span style="color:#f92672">:</span> {
-        <span style="color:#a6e22e">fields</span><span style="color:#f92672">:</span> {
-          <span style="color:#a6e22e">isLoggedIn</span><span style="color:#f92672">:</span> {
-            <span style="color:#a6e22e">read() {</span>
-              <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">isLoggedInVar</span>();
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">const</span> client <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> ApolloClient({
+  link: <span style="color:#8be9fd">authLink.concat</span>(httpLink),
+  cache: <span style="color:#8be9fd">new</span> InMemoryCache({
+    typePolicies<span style="color:#ff79c6">:</span> {
+      Query<span style="color:#ff79c6">:</span> {
+        fields<span style="color:#ff79c6">:</span> {
+          isLoggedIn<span style="color:#ff79c6">:</span> {
+            read() {
+              <span style="color:#ff79c6">return</span> isLoggedInVar();
             },
           },
-          <span style="color:#a6e22e">token</span><span style="color:#f92672">:</span> {
-            <span style="color:#a6e22e">read() {</span>
-              <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">authTokenVar</span>();
+          token<span style="color:#ff79c6">:</span> {
+            read() {
+              <span style="color:#ff79c6">return</span> authTokenVar();
             },
           },
         },
@@ -616,7 +668,9 @@ if (!doNotTrack) {
     },
   }),
 });
-</code></pre></div><p>위처럼 <a href="https://www.apollographql.com/docs/react/networking/authentication/">authLink</a>에 setContext를 넘겨줘서 기존의 httpLink과 연결시켜주면 됩니다.<br>
+</code></pre></td></tr></table>
+</div>
+</div><p>위처럼 <a href="https://www.apollographql.com/docs/react/networking/authentication/">authLink</a>에 setContext를 넘겨줘서 기존의 httpLink과 연결시켜주면 됩니다.<br>
 apollo client에서 Context Link를 사용합니다.</p>
 <p>위 코드와 같이 설정을 해주면 이제 request header에는 x-jwt라는 키값에 인증 토큰이 들어가게 되고,<br>
 서버에서는 위 토큰을 받아서 유저 정보를 파악할 수 있게 됩니다.<br>
@@ -937,7 +991,7 @@ useQuery의 결과 값으로 솔루션에서는 podcast의 배열 값을 받습�
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://blog.haneul-lee.com/js/script-nc7irwbrsuq6kdlqb4wt4nsytr2gakrjyrgz86br1v3hzdcblgpfzyqhkc.min.js"></script>
+<script src="https://blog.haneul-lee.com/js/script-e762xkfaovcapl2uwfeylo4rjghsbcfq5l9tyksr2hv4tu9ym3wt4tkkl5o.min.js"></script>
 
 
   

@@ -14,7 +14,7 @@
       
       <guid>https://blog.haneul-lee.com/post/graphql/graphql-authentication/</guid>
       <description>Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
-import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &amp;#34;@apollo/client&amp;#34;; import { LOCALSTORAGE_TOKEN } from &amp;#34;./constants&amp;#34;; import { setContext } from &amp;#34;@apollo/client/link/context&amp;#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: &amp;#34;http://localhost:4000/graphql&amp;#34;, }); const authLink = setContext((_, { headers }) =&amp;gt; { return { headers: { .</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47  import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &amp;#34;@apollo/client&amp;#34;; import { LOCALSTORAGE_TOKEN } from &amp;#34;.</description>
     </item>
     
     <item>

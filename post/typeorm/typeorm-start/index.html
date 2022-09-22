@@ -136,7 +136,7 @@
     
     
     
-    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-uiavxkidzzp7lut0y17c6lqo92fwi6t6dops3hkbhzq8n0ipg9w977qclolr.min.css" />
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-wogrckem35doefclmldageehbl4glrnm7q8sldg6bls3qealoqujnlr3wgj.min.css" />
     
       <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
@@ -233,7 +233,8 @@ if (!doNotTrack) {
   }
 
   body.dark-mode,
-  body.dark-mode *:not(time):not(a):not(#about):not(i),
+  body.dark-mode
+    *:not(time):not(a):not(#about):not(i):not(code > span):not(code),
   body.dark-mode #sidebar,
   body.dark-mode #sidebar i,
   body.dark-mode #sidebar .sidebar-profile .sidebar-profile-name,
@@ -598,72 +599,155 @@ if (!doNotTrack) {
 MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, WebSQL 데이터베이스를 지원한다.</p>
 <h2 id="entity-설정">entity 설정</h2>
 <p>nestjs에서 typeorm을 사용하려면 repository를 이용하기 위해 typeorm의 data mapper 패턴을 사용합니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Episode</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;./episode.entity&#39;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">ObjectType</span>, <span style="color:#a6e22e">Field</span>, <span style="color:#a6e22e">InputType</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@nestjs/graphql&#39;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">IsString</span>, <span style="color:#a6e22e">IsNumber</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;class-validator&#39;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Column</span>, <span style="color:#a6e22e">Entity</span>, <span style="color:#a6e22e">OneToMany</span>, <span style="color:#a6e22e">PrimaryGeneratedColumn</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;typeorm&#39;</span>;
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#ff79c6">import</span> { Episode } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#39;./episode.entity&#39;</span>;
+<span style="color:#ff79c6">import</span> { ObjectType, Field, InputType } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#39;@nestjs/graphql&#39;</span>;
+<span style="color:#ff79c6">import</span> { IsString, IsNumber } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#39;class-validator&#39;</span>;
+<span style="color:#ff79c6">import</span> { Column, Entity, OneToMany, PrimaryGeneratedColumn } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#39;typeorm&#39;</span>;
 
-<span style="color:#66d9ef">@InputType</span>({ <span style="color:#a6e22e">isAbstract</span>: <span style="color:#66d9ef">true</span> })
-<span style="color:#66d9ef">@ObjectType</span>()
-<span style="color:#66d9ef">@Entity</span>()
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Podcast</span> {
-  <span style="color:#66d9ef">@PrimaryGeneratedColumn</span>()
-  <span style="color:#66d9ef">@Field</span>((<span style="color:#a6e22e">_</span>) <span style="color:#f92672">=&gt;</span> Number)
-  <span style="color:#66d9ef">@IsNumber</span>()
-  <span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">number</span>;
+<span style="color:#8be9fd;font-style:italic">@InputType</span>({ isAbstract: <span style="color:#8be9fd">true</span> })
+<span style="color:#8be9fd;font-style:italic">@ObjectType</span>()
+<span style="color:#8be9fd;font-style:italic">@Entity</span>()
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">class</span> Podcast {
+  <span style="color:#8be9fd;font-style:italic">@PrimaryGeneratedColumn</span>()
+  <span style="color:#8be9fd;font-style:italic">@Field</span>((_) <span style="color:#ff79c6">=&gt;</span> <span style="color:#8be9fd;font-style:italic">Number</span>)
+  <span style="color:#8be9fd;font-style:italic">@IsNumber</span>()
+  id: <span style="color:#8be9fd">number</span>;
 ...
-</code></pre></div><ul>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>@Entity 데코레이터 : TypeORM에게 Entity임을 알려준다.</li>
 <li>@Column 데코레이터 : TypeORM에서 db 필드 설정을 해주는 데코레이터</li>
 </ul>
 <p>또한 graphql의 object type, input type임을 역시 데코레이터를 이용하여 알려주고, input type이나 object type에 name을 지정해주어서 중복 이름을 갖지 않도록 합니다.</p>
 <h2 id="entity-등록-설정">entity 등록 설정</h2>
 <p>src/app.module.ts의 imports에 보면 TypeOrmModule.forRoot 안에 entity를 꼭 등록하고 사용해야 한다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Module</span>({
-  <span style="color:#a6e22e">imports</span><span style="color:#f92672">:</span> [
-    <span style="color:#a6e22e">PodcastsModule</span>,
-    <span style="color:#a6e22e">GraphQLModule</span>.<span style="color:#a6e22e">forRoot</span>({ <span style="color:#a6e22e">autoSchemaFile</span>: <span style="color:#66d9ef">true</span> }),
-    <span style="color:#a6e22e">TypeOrmModule</span>.<span style="color:#a6e22e">forRoot</span>({
-      <span style="color:#66d9ef">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;sqlite&#34;</span>,
-      <span style="color:#a6e22e">database</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;db.sqlite&#34;</span>,
-      <span style="color:#a6e22e">logging</span>: <span style="color:#66d9ef">true</span>,
-      <span style="color:#a6e22e">synchronize</span>: <span style="color:#66d9ef">true</span>,
-      <span style="color:#a6e22e">entities</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">Podcast</span>, <span style="color:#a6e22e">Episode</span>],
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#8be9fd;font-style:italic">@Module</span>({
+  imports<span style="color:#ff79c6">:</span> [
+    PodcastsModule,
+    GraphQLModule.forRoot({ autoSchemaFile: <span style="color:#8be9fd">true</span> }),
+    TypeOrmModule.forRoot({
+      <span style="color:#ff79c6">type</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;sqlite&#34;</span>,
+      database<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;db.sqlite&#34;</span>,
+      logging: <span style="color:#8be9fd">true</span>,
+      synchronize: <span style="color:#8be9fd">true</span>,
+      entities<span style="color:#ff79c6">:</span> [Podcast, Episode],
     }),
   ],
-  <span style="color:#a6e22e">controllers</span><span style="color:#f92672">:</span> [],
-  <span style="color:#a6e22e">providers</span><span style="color:#f92672">:</span> [],
+  controllers<span style="color:#ff79c6">:</span> [],
+  providers<span style="color:#ff79c6">:</span> [],
 })
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AppModule</span> {}
-</code></pre></div><p>src/podcast/podcast.module.ts의 imports에 TypeOrmModule.forFeature에도 사용 등록을 해야 한다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Module</span>({
-  <span style="color:#a6e22e">imports</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">TypeOrmModule</span>.<span style="color:#a6e22e">forFeature</span>([<span style="color:#a6e22e">Podcast</span>, <span style="color:#a6e22e">Episode</span>])],
-  <span style="color:#a6e22e">providers</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">PodcastsService</span>, <span style="color:#a6e22e">PodcastsResolver</span>, <span style="color:#a6e22e">EpisodeResolver</span>],
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">class</span> AppModule {}
+</code></pre></td></tr></table>
+</div>
+</div><p>src/podcast/podcast.module.ts의 imports에 TypeOrmModule.forFeature에도 사용 등록을 해야 한다.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#8be9fd;font-style:italic">@Module</span>({
+  imports<span style="color:#ff79c6">:</span> [TypeOrmModule.forFeature([Podcast, Episode])],
+  providers<span style="color:#ff79c6">:</span> [PodcastsService, PodcastsResolver, EpisodeResolver],
 })
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PodcastsModule</span> {}
-</code></pre></div><p>service에서 사용하려면 repository를 설정해주어야 한다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Injectable</span>()
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PodcastsService</span> {
-  <span style="color:#66d9ef">constructor</span>(
-    <span style="color:#66d9ef">@InjectRepository</span>(<span style="color:#a6e22e">Podcast</span>)
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">podcasts</span>: <span style="color:#66d9ef">Repository</span>&lt;<span style="color:#f92672">Podcast</span>&gt;,
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">class</span> PodcastsModule {}
+</code></pre></td></tr></table>
+</div>
+</div><p>service에서 사용하려면 repository를 설정해주어야 한다.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#8be9fd;font-style:italic">@Injectable</span>()
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">class</span> PodcastsService {
+  <span style="color:#ff79c6">constructor</span>(
+    <span style="color:#8be9fd;font-style:italic">@InjectRepository</span>(Podcast)
+    <span style="color:#ff79c6">private</span> <span style="color:#ff79c6">readonly</span> podcasts: <span style="color:#8be9fd">Repository</span>&lt;<span style="color:#ff79c6">Podcast</span>&gt;,
 
-    <span style="color:#66d9ef">@InjectRepository</span>(<span style="color:#a6e22e">Episode</span>)
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">episodes</span>: <span style="color:#66d9ef">Repository</span>&lt;<span style="color:#f92672">Episode</span>&gt;,
+    <span style="color:#8be9fd;font-style:italic">@InjectRepository</span>(Episode)
+    <span style="color:#ff79c6">private</span> <span style="color:#ff79c6">readonly</span> episodes: <span style="color:#8be9fd">Repository</span>&lt;<span style="color:#ff79c6">Episode</span>&gt;,
   ) {}
 
-</code></pre></div><h2 id="relation-설정">Relation 설정</h2>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="relation-설정">Relation 설정</h2>
 <p>데이터베이스의 관계에는 1:1, 1:N, N:N이 있습니다.
 TypeORM에서는 @OneToOne , @OneToMany / @ManyToOne , @ManyToMany 데코레이터를 이용해서 관계를 설정할 수 있습니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Field</span>((<span style="color:#66d9ef">type</span>) <span style="color:#f92672">=&gt;</span> [<span style="color:#a6e22e">Episode</span>], { <span style="color:#a6e22e">nullable</span>: <span style="color:#66d9ef">true</span> })
-  <span style="color:#66d9ef">@OneToMany</span>((<span style="color:#66d9ef">type</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">Episode</span>, (<span style="color:#a6e22e">episode</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">episode</span>.<span style="color:#a6e22e">podcast</span>)
-  <span style="color:#a6e22e">episodes</span>: <span style="color:#66d9ef">Episode</span>[];
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#8be9fd;font-style:italic">@Field</span>((<span style="color:#ff79c6">type</span>) <span style="color:#ff79c6">=&gt;</span> [Episode], { nullable: <span style="color:#8be9fd">true</span> })
+  <span style="color:#8be9fd;font-style:italic">@OneToMany</span>((<span style="color:#ff79c6">type</span>) <span style="color:#ff79c6">=&gt;</span> Episode, (episode) <span style="color:#ff79c6">=&gt;</span> episode.podcast)
+  episodes: <span style="color:#8be9fd">Episode</span>[];
 
-<span style="color:#66d9ef">@ManyToOne</span>((<span style="color:#66d9ef">type</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">Podcast</span>, (<span style="color:#a6e22e">podcast</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">podcast</span>.<span style="color:#a6e22e">episodes</span>, {
-    <span style="color:#a6e22e">cascade</span>: <span style="color:#66d9ef">true</span>,
+<span style="color:#8be9fd;font-style:italic">@ManyToOne</span>((<span style="color:#ff79c6">type</span>) <span style="color:#ff79c6">=&gt;</span> Podcast, (podcast) <span style="color:#ff79c6">=&gt;</span> podcast.episodes, {
+    cascade: <span style="color:#8be9fd">true</span>,
   })
-  <span style="color:#a6e22e">podcast</span>: <span style="color:#66d9ef">Podcast</span>;
-</code></pre></div><p>Podcast에는 여러개의 Episode가 있습니다. 하지만 Episode는 한 개의 Podcast에 속할 수 있지, 다른 Podcast에 속할 순 없습니다.
+  podcast: <span style="color:#8be9fd">Podcast</span>;
+</code></pre></td></tr></table>
+</div>
+</div><p>Podcast에는 여러개의 Episode가 있습니다. 하지만 Episode는 한 개의 Podcast에 속할 수 있지, 다른 Podcast에 속할 순 없습니다.
 그래서 1:N 관계는 Podcast 쪽에서는 @OneToMany , 반대로 Episode에는 @ManyToOne 데코레이터를 사용하여 설정을 해주면 됩니다.</p>
 <p>그런데, Podcast의 OneToMany 끝 부분을 보면, {cascade: true} 라고 되어 있습니다.
 <a href="https://orkhan.gitbook.io/typeorm/docs/relations#cascades">cascade</a> 옵션이 true 값이면, podcast에 연결된 episode는 save를 하지 않아도 db에 자동으로 저장이 됩니다.
@@ -967,7 +1051,7 @@ update 메소드를 이용해서도 Update 작업을 할 수 있습니다만, up
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://blog.haneul-lee.com/js/script-nc7irwbrsuq6kdlqb4wt4nsytr2gakrjyrgz86br1v3hzdcblgpfzyqhkc.min.js"></script>
+<script src="https://blog.haneul-lee.com/js/script-e762xkfaovcapl2uwfeylo4rjghsbcfq5l9tyksr2hv4tu9ym3wt4tkkl5o.min.js"></script>
 
 
   

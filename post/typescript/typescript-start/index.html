@@ -126,7 +126,7 @@
     
     
     
-    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-uiavxkidzzp7lut0y17c6lqo92fwi6t6dops3hkbhzq8n0ipg9w977qclolr.min.css" />
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-wogrckem35doefclmldageehbl4glrnm7q8sldg6bls3qealoqujnlr3wgj.min.css" />
     
       <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
@@ -223,7 +223,8 @@ if (!doNotTrack) {
   }
 
   body.dark-mode,
-  body.dark-mode *:not(time):not(a):not(#about):not(i),
+  body.dark-mode
+    *:not(time):not(a):not(#about):not(i):not(code > span):not(code),
   body.dark-mode #sidebar,
   body.dark-mode #sidebar i,
   body.dark-mode #sidebar .sidebar-profile .sidebar-profile-name,
@@ -590,21 +591,41 @@ if (!doNotTrack) {
 <h3 id="mapped-type">Mapped Type</h3>
 <p>이전 타입을 기반으로 새로운 타입을 생성
 es6 map함수와 비슷</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">type</span> <span style="color:#a6e22e">Keys</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;option1&#39;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;option2&#39;</span>;
-<span style="color:#a6e22e">type</span> <span style="color:#a6e22e">Flags</span> <span style="color:#f92672">=</span> { [<span style="color:#a6e22e">K</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">Keys</span>]<span style="color:#f92672">:</span> <span style="color:#66d9ef">boolean</span> };
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-jsx" data-lang="jsx">type Keys <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;option1&#39;</span> <span style="color:#ff79c6">|</span> <span style="color:#f1fa8c">&#39;option2&#39;</span>;
+type Flags <span style="color:#ff79c6">=</span> { [K <span style="color:#ff79c6">in</span> Keys]<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">boolean</span> };
 
-<span style="color:#75715e">// 위와 같이 정의했을 경우 Flags는 아래와 같다.
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">type</span> <span style="color:#a6e22e">Flags</span> <span style="color:#f92672">=</span> {
-  <span style="color:#a6e22e">option1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">boolean</span>;
-  <span style="color:#a6e22e">option2</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">boolean</span>;
+<span style="color:#6272a4">// 위와 같이 정의했을 경우 Flags는 아래와 같다.
+</span><span style="color:#6272a4"></span>type Flags <span style="color:#ff79c6">=</span> {
+  option1<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">boolean</span>;
+  option2<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">boolean</span>;
 }
 
-<span style="color:#75715e">// Flags 타입의 변수 선언
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Flags</span> <span style="color:#f92672">=</span> {
-  <span style="color:#a6e22e">option1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
-  <span style="color:#a6e22e">option1</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+<span style="color:#6272a4">// Flags 타입의 변수 선언
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> obj<span style="color:#ff79c6">:</span> Flags <span style="color:#ff79c6">=</span> {
+  option1<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>,
+  option1<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>
 }
-</code></pre></div><p>참고 :
+</code></pre></td></tr></table>
+</div>
+</div><p>참고 :
 <a href="https://namu.wiki/w/TypeScript">https://namu.wiki/w/TypeScript</a>,
 <a href="https://typescript-kr.github.io/">https://typescript-kr.github.io/</a></p>
 
@@ -888,7 +909,7 @@ es6 map함수와 비슷</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://blog.haneul-lee.com/js/script-nc7irwbrsuq6kdlqb4wt4nsytr2gakrjyrgz86br1v3hzdcblgpfzyqhkc.min.js"></script>
+<script src="https://blog.haneul-lee.com/js/script-e762xkfaovcapl2uwfeylo4rjghsbcfq5l9tyksr2hv4tu9ym3wt4tkkl5o.min.js"></script>
 
 
   

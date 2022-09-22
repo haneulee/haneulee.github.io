@@ -158,7 +158,7 @@ https://highlightjs.org/static/demo/에서 마음에 드는 데모 스타일을 
     
     
     
-    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-uiavxkidzzp7lut0y17c6lqo92fwi6t6dops3hkbhzq8n0ipg9w977qclolr.min.css" />
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-wogrckem35doefclmldageehbl4glrnm7q8sldg6bls3qealoqujnlr3wgj.min.css" />
     
       <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
@@ -255,7 +255,8 @@ if (!doNotTrack) {
   }
 
   body.dark-mode,
-  body.dark-mode *:not(time):not(a):not(#about):not(i),
+  body.dark-mode
+    *:not(time):not(a):not(#about):not(i):not(code > span):not(code),
   body.dark-mode #sidebar,
   body.dark-mode #sidebar i,
   body.dark-mode #sidebar .sidebar-profile .sidebar-profile-name,
@@ -598,15 +599,29 @@ if (!doNotTrack) {
 <p>2번 방법은</p>
 <p>먼저 아래 코드를 <head>태그 안에 넣으면 됨!</p>
 <p><a href="https://highlightjs.org/static/demo/">https://highlightjs.org/static/demo/</a>에서 마음에 드는 데모 스타일을 고르고 아래 코드에서 default.min.css 에서 default를 다른 스타일 이름으로 변경하면 된다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span>
-  <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span>
-  <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css&#34;</span>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-html" data-lang="html">&lt;<span style="color:#ff79c6">link</span>
+  <span style="color:#50fa7b">rel</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stylesheet&#34;</span>
+  <span style="color:#50fa7b">href</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css&#34;</span>
 /&gt;
-&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-&lt;<span style="color:#f92672">script</span>&gt;
-  <span style="color:#a6e22e">hljs</span>.<span style="color:#a6e22e">initHighlightingOnLoad</span>();
-&lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div><p><img src="https://blog.kakaocdn.net/dn/m42J6/btqBRwvm8CS/RwybAlxm2zeLp2zEk32w91/img.png" alt=""></p>
+&lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
+&lt;<span style="color:#ff79c6">script</span>&gt;
+  hljs.initHighlightingOnLoad();
+&lt;/<span style="color:#ff79c6">script</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="https://blog.kakaocdn.net/dn/m42J6/btqBRwvm8CS/RwybAlxm2zeLp2zEk32w91/img.png" alt=""></p>
 <p>2번 방법을 따라해보았지만 이상하게 스타일이 변경되지 않았다.</p>
 <p>따라서 1번 방법으로 설정!</p>
 <p>내가 원하는 테마는 Darcular 였기 때문에 플러그인으로 쉽게 변경할 수 있었다.</p>
@@ -892,7 +907,7 @@ if (!doNotTrack) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://blog.haneul-lee.com/js/script-nc7irwbrsuq6kdlqb4wt4nsytr2gakrjyrgz86br1v3hzdcblgpfzyqhkc.min.js"></script>
+<script src="https://blog.haneul-lee.com/js/script-e762xkfaovcapl2uwfeylo4rjghsbcfq5l9tyksr2hv4tu9ym3wt4tkkl5o.min.js"></script>
 
 
   

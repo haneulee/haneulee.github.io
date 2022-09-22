@@ -156,7 +156,7 @@
     
     
     
-    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-uiavxkidzzp7lut0y17c6lqo92fwi6t6dops3hkbhzq8n0ipg9w977qclolr.min.css" />
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-wogrckem35doefclmldageehbl4glrnm7q8sldg6bls3qealoqujnlr3wgj.min.css" />
     
       <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
@@ -253,7 +253,8 @@ if (!doNotTrack) {
   }
 
   body.dark-mode,
-  body.dark-mode *:not(time):not(a):not(#about):not(i),
+  body.dark-mode
+    *:not(time):not(a):not(#about):not(i):not(code > span):not(code),
   body.dark-mode #sidebar,
   body.dark-mode #sidebar i,
   body.dark-mode #sidebar .sidebar-profile .sidebar-profile-name,
@@ -574,7 +575,7 @@ if (!doNotTrack) {
   <ul>
     <li><a href="#singleton-싱글턴-패턴">Singleton 싱글턴 패턴</a>
       <ul>
-        <li><a href="#단장점">(단)장점</a>
+        <li><a href="#장점--단점">장점 &amp; 단점</a>
           <ul>
             <li><a href="#일반-객체-사용">일반 객체 사용</a></li>
           </ul>
@@ -664,7 +665,9 @@ console.log(counter1.getInstance() === counter2.getInstance()); // false
 </code></pre><p>new 메소드를 두 번 호출하여 다른 인스턴스와 동일하게 counter1, counter2를 설정합니다.<br>
 counter1과 counter2의 getInstance 메서드에서 반환된 값들은 다른 인스턴스에 대한 참조를 효과적으로 반환했습니다.<br>
 두 값은 완전히 동일하지 않습니다!</p>
-<video src="https://res.cloudinary.com/ddxwdqwkr/video/upload/v1609056519/patterns.dev/jspat-52_zkwyk1.mp4">
+<div class="video-container">
+    <iframe src="https://res.cloudinary.com/ddxwdqwkr/video/upload/v1609056519/patterns.dev/jspat-52_zkwyk1.mp4" allowfullscreen></iframe>
+</div>
 <p>Counter 클래스의 인스턴스를 하나만 만들 수 있는지 확인합시다.</p>
 <p>인스턴스를 하나만 만들 수 있도록 하는 한 가지 방법은 <code>instance</code>이라는 변수를 만드는 것입니다.<br>
 Counter의 생성자에서 새 인스턴스가 생성될 때 인스턴스에 대한 참조와 동일하게 <code>instance</code>를 설정할 수 있습니다.<br>
@@ -747,12 +750,14 @@ export default singletonCounter;
 </ul>
 <p>blueButton.js, redButton.js 둘 다 counter.js에서 동일한 인스턴스를 가져옵니다.<br>
 이 인스턴스는 두 파일 모두에서 Counter로 가져옵니다.</p>
-<video src="https://res.cloudinary.com/ddxwdqwkr/video/upload/v1609056519/patterns.dev/jspat-56_wylvcf.mp4">
+<div class="video-container">
+    <iframe src="https://res.cloudinary.com/ddxwdqwkr/video/upload/v1609056519/patterns.dev/jspat-56_wylvcf.mp4" allowfullscreen></iframe>
+</div>
 <p>redButton.js 또는 blueButton.js에서 increment메서드를 호출하면 Counter 인스턴스의 counter속성 값이 두 파일 모두에서 업데이트됩니다.<br>
 빨간색 버튼을 클릭하든 파란색 버튼을 클릭하든 상관없습니다. : 모든 인스턴스에서 동일한 값을 공유합니다.<br>
 이것이 다른 파일에서 메서드를 호출하더라도 카운터가 계속 1씩 증가하는 이유입니다.</p>
 <hr>
-<h2 id="단장점">(단)장점</h2>
+<h2 id="장점--단점">장점 &amp; 단점</h2>
 <p>인스턴스화를 한 인스턴스로만 제한하면 잠재적으로 많은 메모리 공간을 절약할 수 있습니다.<br>
 매번 새 인스턴스에 대한 메모리를 설정하는 대신 애플리케이션 전체에서 참조되는 해당 인스턴스에 대한 메모리만 설정하면 됩니다.<br>
 그러나 싱글톤은 실제로 안티 패턴 으로 간주 되며 JavaScript에서 피할 수 있습니다(또는.. 해야 합니다 ).</p>
@@ -1170,7 +1175,7 @@ export default class SuperCounter {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://blog.haneul-lee.com/js/script-nc7irwbrsuq6kdlqb4wt4nsytr2gakrjyrgz86br1v3hzdcblgpfzyqhkc.min.js"></script>
+<script src="https://blog.haneul-lee.com/js/script-e762xkfaovcapl2uwfeylo4rjghsbcfq5l9tyksr2hv4tu9ym3wt4tkkl5o.min.js"></script>
 
 
   

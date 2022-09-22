@@ -149,7 +149,7 @@ class Checkbox extends React.Component { constructor(props) { super(props); this
     
     
     
-    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-uiavxkidzzp7lut0y17c6lqo92fwi6t6dops3hkbhzq8n0ipg9w977qclolr.min.css" />
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-wogrckem35doefclmldageehbl4glrnm7q8sldg6bls3qealoqujnlr3wgj.min.css" />
     
       <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
@@ -246,7 +246,8 @@ if (!doNotTrack) {
   }
 
   body.dark-mode,
-  body.dark-mode *:not(time):not(a):not(#about):not(i),
+  body.dark-mode
+    *:not(time):not(a):not(#about):not(i):not(code > span):not(code),
   body.dark-mode #sidebar,
   body.dark-mode #sidebar i,
   body.dark-mode #sidebar .sidebar-profile .sidebar-profile-name,
@@ -592,11 +593,21 @@ if (!doNotTrack) {
   // ...
 }
 </code></pre><p>물론, <a href="https://github.com/tc39/proposal-class-fields">클래스 필드 제안</a>은 이 과정을 생략하게 한다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Checkbox</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
-  <span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">isOn</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
-  <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>이런 문법은 리액트 0.13이 2015년 자바스크립트 클래스에 대한 지원이 추가될 때 계획되었다.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-jsx" data-lang="jsx"><span style="color:#ff79c6">class</span> Checkbox <span style="color:#ff79c6">extends</span> React.Component {
+  state <span style="color:#ff79c6">=</span> { isOn<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span> };
+  <span style="color:#6272a4">// ...
+</span><span style="color:#6272a4"></span>}
+</code></pre></td></tr></table>
+</div>
+</div><p>이런 문법은 리액트 0.13이 2015년 자바스크립트 클래스에 대한 지원이 추가될 때 계획되었다.
 constructor를 정의하고, super(props)를 부르는 것은 클래스 필드가 편리한 대안을 제공하기 전까지 항상 임시적인 해결책이었다.</p>
 <p>그러나 es2015 기능만 사용하는 아래 예제를 보자.</p>
 <pre tabindex="0"><code class="language-jsx{3}" data-lang="jsx{3}">class Checkbox extends React.Component {
@@ -614,97 +625,213 @@ constructor를 정의하고, super(props)를 부르는 것은 클래스 필드�
 <p>자바스크립트에서는 <code>super</code>가 부모 클래스 생성자를 참조한다.
 (여기 예제에서는 React.Component 구현을 가리킨다.)</p>
 <p>중요한 것은 부모 생성자를 호출할 때까지 생성자 안에서 this를 사용할 수 없다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Checkbox</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
-  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
-    <span style="color:#75715e">// 🔴 Can’t use `this` yet
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
-    <span style="color:#75715e">// ✅ Now it’s okay though
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">isOn</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-jsx" data-lang="jsx"><span style="color:#ff79c6">class</span> Checkbox <span style="color:#ff79c6">extends</span> React.Component {
+  constructor(props) {
+    <span style="color:#6272a4">// 🔴 Can’t use `this` yet
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">super</span>(props);
+    <span style="color:#6272a4">// ✅ Now it’s okay though
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">this</span>.state <span style="color:#ff79c6">=</span> { isOn<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span> };
   }
-  <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>왜 자바스크립트가 this 전에 부모 생성자가 실행되게 하는데에는 좋은 이유가 있다. 클래스 계층 구조를 생각해보라.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
-  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+  <span style="color:#6272a4">// ...
+</span><span style="color:#6272a4"></span>}
+</code></pre></td></tr></table>
+</div>
+</div><p>왜 자바스크립트가 this 전에 부모 생성자가 실행되게 하는데에는 좋은 이유가 있다. 클래스 계층 구조를 생각해보라.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-jsx" data-lang="jsx"><span style="color:#ff79c6">class</span> Person {
+  constructor(name) {
+    <span style="color:#ff79c6">this</span>.name <span style="color:#ff79c6">=</span> name;
   }
 }
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PolitePerson</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Person</span> {
-  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">greetColleagues</span>(); <span style="color:#75715e">// 🔴 This is disallowed, read below why
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">name</span>);
+<span style="color:#ff79c6">class</span> PolitePerson <span style="color:#ff79c6">extends</span> Person {
+  constructor(name) {
+    <span style="color:#ff79c6">this</span>.greetColleagues(); <span style="color:#6272a4">// 🔴 This is disallowed, read below why
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">super</span>(name);
   }
-  <span style="color:#a6e22e">greetColleagues</span>() {
-    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Good morning folks!&#34;</span>);
+  greetColleagues() {
+    alert(<span style="color:#f1fa8c">&#34;Good morning folks!&#34;</span>);
   }
 }
-</code></pre></div><p><code>super</code> 전에 <code>this</code>가 사용된다고 상상해봐라. 한 달 후에, 메세지에서 사람의 이름을 사용하기 위해 greetColleagues를 수정할 수 있다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">greetColleagues</span>() {
-    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;Good morning folks!&#39;</span>);
-    <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;My name is &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;, nice to meet you!&#39;</span>);
+</code></pre></td></tr></table>
+</div>
+</div><p><code>super</code> 전에 <code>this</code>가 사용된다고 상상해봐라. 한 달 후에, 메세지에서 사람의 이름을 사용하기 위해 greetColleagues를 수정할 수 있다.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-jsx" data-lang="jsx">greetColleagues() {
+    alert(<span style="color:#f1fa8c">&#39;Good morning folks!&#39;</span>);
+    alert(<span style="color:#f1fa8c">&#39;My name is &#39;</span> <span style="color:#ff79c6">+</span> <span style="color:#ff79c6">this</span>.name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;, nice to meet you!&#39;</span>);
 }
-</code></pre></div><p>그러나 super() 호출이 this를 설정하기 전에 this.greetColleagues()가 불려진다는 것을 잊었다.
+</code></pre></td></tr></table>
+</div>
+</div><p>그러나 super() 호출이 this를 설정하기 전에 this.greetColleagues()가 불려진다는 것을 잊었다.
 그래서 this.name은 아직 정의되지 않았다. 보다시피, 이런 코드는 생각하기 매우 어렵다.</p>
 <p>이런 문제를 피하기 위해 자바스크립트는 생성자에서 this를 사용하고 싶을 때, super를 먼저 호출하게 한다.
 이런 제한은 클래스로 정의된 리액트 컴포넌트에도 해당된다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
-    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
-    <span style="color:#75715e">// ✅ Okay to use `this` now
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">isOn</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-jsx" data-lang="jsx">constructor(props) {
+    <span style="color:#ff79c6">super</span>(props);
+    <span style="color:#6272a4">// ✅ Okay to use `this` now
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">this</span>.state <span style="color:#ff79c6">=</span> { isOn<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span> };
 }
-</code></pre></div><dl>
+</code></pre></td></tr></table>
+</div>
+</div><dl>
 <dt>이는 또 다른 질문을 남긴다.</dt>
 <dd>왜 props를 전달할까?</dd>
 </dl>
 <p>기본 React.Component 생성자가 this.props를 초기화할 수 있도록 super를 통해 props를 전달하는 것이 필수라고 생각할 수 있다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// Inside React
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Component</span> {
-  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">props</span>;
-    <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>  }
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-jsx" data-lang="jsx"><span style="color:#6272a4">// Inside React
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">class</span> Component {
+  constructor(props) {
+    <span style="color:#ff79c6">this</span>.props <span style="color:#ff79c6">=</span> props;
+    <span style="color:#6272a4">// ...
+</span><span style="color:#6272a4"></span>  }
 }
-</code></pre></div><p>그리고 그것은 진실과 멀지 않다. <a href="https://github.com/facebook/react/blob/1d25aa5787d4e19704c049c3cfa985d3b5190e0d/packages/react/src/ReactBaseClasses.js#L22">사실 그렇게 하는것이다.</a>
+</code></pre></td></tr></table>
+</div>
+</div><p>그리고 그것은 진실과 멀지 않다. <a href="https://github.com/facebook/react/blob/1d25aa5787d4e19704c049c3cfa985d3b5190e0d/packages/react/src/ReactBaseClasses.js#L22">사실 그렇게 하는것이다.</a>
 그러나 어떻게든 props 인자 없이 super()를 호출하더라도 render 또는 다른 메소드에서도 this.props에 접근할 수 있다.
 (직접 시도해봐라!)
 어떻게 이게 가능할까? 리액트는 생성자를 호출한 직후에 인스턴스에 props를 할당하는 것으로 밝혀졌다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// Inside React
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">instance</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">YourComponent</span>(<span style="color:#a6e22e">props</span>);
-<span style="color:#a6e22e">instance</span>.<span style="color:#a6e22e">props</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">props</span>;
-</code></pre></div><p>그래서 super()에 props를 전달하는 것을 잊어버려도 리액트는 나중에 props를 set 해준다. 여기에는 이유가 있는데,
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-jsx" data-lang="jsx"><span style="color:#6272a4">// Inside React
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> instance <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> YourComponent(props);
+instance.props <span style="color:#ff79c6">=</span> props;
+</code></pre></td></tr></table>
+</div>
+</div><p>그래서 super()에 props를 전달하는 것을 잊어버려도 리액트는 나중에 props를 set 해준다. 여기에는 이유가 있는데,
 리액트가 클래스를 지원할 때, 단지 es6 클래스 자체만 지원하는 것이 아니다. 목표는 가능한 한 광범위한 클래스 추상화를 지원하는 것이었다. ClojureScript, CoffeeScript, ES6, Fable, Scala.js, TypeScript 또는 기타 솔루션이 컴포넌트를 정의하는데 얼마나 성공적이었는지 <a href="https://reactjs.org/blog/2015/01/27/react-v0.13.0-beta-1.html#other-languages">분명하지 않다</a>.<br>
 그래서 리액트는 es6 클래스가 그렇더라도 super()를 호출하는 것이 필요한지에 대해 의도적으로 알려주지 않은 것이다.
 그렇다면 <code>super(props)</code> 대신 <code>super()</code>를 사용할 수 있다는 것인가?
 <strong>여전히 혼란스럽기 때문에 아니다.</strong>
 물론 리액트는 생성자가 <em>실행된 후에</em> this.props를 할당할 것이다. 하지만 this.props는 super 호출과 생성자 마지막 사이에서 undefiend가 될 것이다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#75715e">// Inside React
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Component</span> {
-  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">props</span>;
-    <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>  }
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-jsx" data-lang="jsx"><span style="color:#6272a4">// Inside React
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">class</span> Component {
+  constructor(props) {
+    <span style="color:#ff79c6">this</span>.props <span style="color:#ff79c6">=</span> props;
+    <span style="color:#6272a4">// ...
+</span><span style="color:#6272a4"></span>  }
 }
 
-<span style="color:#75715e">// Inside your code
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Button</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
-  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
-    <span style="color:#66d9ef">super</span>(); <span style="color:#75715e">// 😬 We forgot to pass props
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">props</span>); <span style="color:#75715e">// ✅ {}
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>); <span style="color:#75715e">// 😬 undefined
-</span><span style="color:#75715e"></span>  }
-  <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>생성자에서 호출된 일부 메소드에서 이 이슈가 발생하면 디버깅하기 어려울 수 있다. 그래서 꼭 필요한 것은 아니지만 항상 <code>super(props)</code>를 하는것을 추천한다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Button</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
-  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
-    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>); <span style="color:#75715e">// ✅ We passed props
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">props</span>); <span style="color:#75715e">// ✅ {}
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>); <span style="color:#75715e">// ✅ {}
-</span><span style="color:#75715e"></span>  }
-  <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>이렇게 하면 생성자가 끝나기 전에 <code>this.props</code>가 설정된다.</p>
+<span style="color:#6272a4">// Inside your code
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">class</span> Button <span style="color:#ff79c6">extends</span> React.Component {
+  constructor(props) {
+    <span style="color:#ff79c6">super</span>(); <span style="color:#6272a4">// 😬 We forgot to pass props
+</span><span style="color:#6272a4"></span>    console.log(props); <span style="color:#6272a4">// ✅ {}
+</span><span style="color:#6272a4"></span>    console.log(<span style="color:#ff79c6">this</span>.props); <span style="color:#6272a4">// 😬 undefined
+</span><span style="color:#6272a4"></span>  }
+  <span style="color:#6272a4">// ...
+</span><span style="color:#6272a4"></span>}
+</code></pre></td></tr></table>
+</div>
+</div><p>생성자에서 호출된 일부 메소드에서 이 이슈가 발생하면 디버깅하기 어려울 수 있다. 그래서 꼭 필요한 것은 아니지만 항상 <code>super(props)</code>를 하는것을 추천한다.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-jsx" data-lang="jsx"><span style="color:#ff79c6">class</span> Button <span style="color:#ff79c6">extends</span> React.Component {
+  constructor(props) {
+    <span style="color:#ff79c6">super</span>(props); <span style="color:#6272a4">// ✅ We passed props
+</span><span style="color:#6272a4"></span>    console.log(props); <span style="color:#6272a4">// ✅ {}
+</span><span style="color:#6272a4"></span>    console.log(<span style="color:#ff79c6">this</span>.props); <span style="color:#6272a4">// ✅ {}
+</span><span style="color:#6272a4"></span>  }
+  <span style="color:#6272a4">// ...
+</span><span style="color:#6272a4"></span>}
+</code></pre></td></tr></table>
+</div>
+</div><p>이렇게 하면 생성자가 끝나기 전에 <code>this.props</code>가 설정된다.</p>
 <hr>
 <p>오랫동안 리액트 사용자들이 궁금해할만한 하나가 있다.
 Context API를 클래스에서 사용할 때(레거시 <code>contextTypes</code> 또는 React16.6에 추가된 최신 <code>contextType API</code>의 경우) 컨텍스트가 생성자의 두번째 인자로 전달된다는 사실을 알고 있을 것이다.</p>
@@ -996,7 +1123,7 @@ Context API를 클래스에서 사용할 때(레거시 <code>contextTypes</code>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://blog.haneul-lee.com/js/script-nc7irwbrsuq6kdlqb4wt4nsytr2gakrjyrgz86br1v3hzdcblgpfzyqhkc.min.js"></script>
+<script src="https://blog.haneul-lee.com/js/script-e762xkfaovcapl2uwfeylo4rjghsbcfq5l9tyksr2hv4tu9ym3wt4tkkl5o.min.js"></script>
 
 
   

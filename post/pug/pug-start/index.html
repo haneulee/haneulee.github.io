@@ -134,7 +134,7 @@
     
     
     
-    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-uiavxkidzzp7lut0y17c6lqo92fwi6t6dops3hkbhzq8n0ipg9w977qclolr.min.css" />
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-wogrckem35doefclmldageehbl4glrnm7q8sldg6bls3qealoqujnlr3wgj.min.css" />
     
       <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
@@ -231,7 +231,8 @@ if (!doNotTrack) {
   }
 
   body.dark-mode,
-  body.dark-mode *:not(time):not(a):not(#about):not(i),
+  body.dark-mode
+    *:not(time):not(a):not(#about):not(i):not(code > span):not(code),
   body.dark-mode #sidebar,
   body.dark-mode #sidebar i,
   body.dark-mode #sidebar .sidebar-profile .sidebar-profile-name,
@@ -605,38 +606,76 @@ html(lang=&quot;en&quot;)
 </code></pre><ol start="2">
 <li>변환된 html</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
-  &lt;<span style="color:#f92672">head</span>&gt;
-    &lt;<span style="color:#f92672">title</span>&gt;Pug&lt;/<span style="color:#f92672">title</span>&gt;
-    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
-      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">foo</span>) <span style="color:#a6e22e">bar</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span>);
-    &lt;/<span style="color:#f92672">script</span>&gt;
-  &lt;/<span style="color:#f92672">head</span>&gt;
-  &lt;<span style="color:#f92672">body</span>&gt;
-    &lt;<span style="color:#f92672">h1</span>&gt;Pug - node template engine&lt;/<span style="color:#f92672">h1</span>&gt;
-    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;col&#34;</span>&gt;
-      &lt;<span style="color:#f92672">p</span>&gt;You are amazing&lt;/<span style="color:#f92672">p</span>&gt;
-      &lt;<span style="color:#f92672">p</span>&gt;
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-html" data-lang="html"><span style="color:#ff79c6">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;en&#34;</span>&gt;
+  &lt;<span style="color:#ff79c6">head</span>&gt;
+    &lt;<span style="color:#ff79c6">title</span>&gt;Pug&lt;/<span style="color:#ff79c6">title</span>&gt;
+    &lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;text/javascript&#34;</span>&gt;
+      <span style="color:#ff79c6">if</span> (foo) bar(<span style="color:#bd93f9">1</span> <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">5</span>);
+    &lt;/<span style="color:#ff79c6">script</span>&gt;
+  &lt;/<span style="color:#ff79c6">head</span>&gt;
+  &lt;<span style="color:#ff79c6">body</span>&gt;
+    &lt;<span style="color:#ff79c6">h1</span>&gt;Pug - node template engine&lt;/<span style="color:#ff79c6">h1</span>&gt;
+    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;container&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;col&#34;</span>&gt;
+      &lt;<span style="color:#ff79c6">p</span>&gt;You are amazing&lt;/<span style="color:#ff79c6">p</span>&gt;
+      &lt;<span style="color:#ff79c6">p</span>&gt;
         Pug is a terse and simple templating language with a strong focus on
         performance and powerful features.
-      &lt;/<span style="color:#f92672">p</span>&gt;
-    &lt;/<span style="color:#f92672">div</span>&gt;
-  &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h2 id="express-에서-pug-적용">Express 에서 pug 적용</h2>
+      &lt;/<span style="color:#ff79c6">p</span>&gt;
+    &lt;/<span style="color:#ff79c6">div</span>&gt;
+  &lt;/<span style="color:#ff79c6">body</span>&gt;
+&lt;/<span style="color:#ff79c6">html</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="express-에서-pug-적용">Express 에서 pug 적용</h2>
 <ul>
 <li>Express 에서 pug 를 사용하려면 먼저 아래와 같이 설정을 해줘야 한다.</li>
 <li>&ldquo;views&quot;는 pug 파일 경로를 설정하는 것이다.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">express</span>();
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js"><span style="color:#ff79c6">const</span> app <span style="color:#ff79c6">=</span> express();
 
-<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;view engine&#34;</span>, <span style="color:#e6db74">&#34;pug&#34;</span>);
-<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;views&#34;</span>, <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">cwd</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/src/views&#34;</span>);
+app.set(<span style="color:#f1fa8c">&#34;view engine&#34;</span>, <span style="color:#f1fa8c">&#34;pug&#34;</span>);
+app.set(<span style="color:#f1fa8c">&#34;views&#34;</span>, process.cwd() <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;/src/views&#34;</span>);
 
-<span style="color:#75715e">// (localhost:4000/home 경로로 들어왔을 때, &#34;home.pug&#34; 파일을 렌더링하게 되어 있다. pageTitle은 템플릿 파일로 넘겨줄 변수
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">home</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">render</span>(<span style="color:#e6db74">&#34;home&#34;</span>, { <span style="color:#a6e22e">pageTitle</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Home&#34;</span> });
-</code></pre></div><div class="alert info ">
+<span style="color:#6272a4">// (localhost:4000/home 경로로 들어왔을 때, &#34;home.pug&#34; 파일을 렌더링하게 되어 있다. pageTitle은 템플릿 파일로 넘겨줄 변수
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">export</span> <span style="color:#ff79c6">const</span> home <span style="color:#ff79c6">=</span> (req, res) =&gt; res.render(<span style="color:#f1fa8c">&#34;home&#34;</span>, { pageTitle<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Home&#34;</span> });
+</code></pre></td></tr></table>
+</div>
+</div><div class="alert info ">
   <p>아래처럼 기본 베이스 pug 파일(layout.pug)을 생성하고 다른 pug 파일(home.pug)에서 해당 템플릿을 사용할 수 있다.</p>
 </div>
 <pre tabindex="0"><code class="language-pug" data-lang="pug">// layout.pug
@@ -945,7 +984,7 @@ block content
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://blog.haneul-lee.com/js/script-nc7irwbrsuq6kdlqb4wt4nsytr2gakrjyrgz86br1v3hzdcblgpfzyqhkc.min.js"></script>
+<script src="https://blog.haneul-lee.com/js/script-e762xkfaovcapl2uwfeylo4rjghsbcfq5l9tyksr2hv4tu9ym3wt4tkkl5o.min.js"></script>
 
 
   

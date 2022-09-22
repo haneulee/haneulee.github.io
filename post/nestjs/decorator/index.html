@@ -156,7 +156,7 @@ keyof 연산자는 피연산자의 키타입에 해당하는 타입을 리턴해
     
     
     
-    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-uiavxkidzzp7lut0y17c6lqo92fwi6t6dops3hkbhzq8n0ipg9w977qclolr.min.css" />
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-wogrckem35doefclmldageehbl4glrnm7q8sldg6bls3qealoqujnlr3wgj.min.css" />
     
       <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
@@ -253,7 +253,8 @@ if (!doNotTrack) {
   }
 
   body.dark-mode,
-  body.dark-mode *:not(time):not(a):not(#about):not(i),
+  body.dark-mode
+    *:not(time):not(a):not(#about):not(i):not(code > span):not(code),
   body.dark-mode #sidebar,
   body.dark-mode #sidebar i,
   body.dark-mode #sidebar .sidebar-profile .sidebar-profile-name,
@@ -601,27 +602,58 @@ type Greeting = &lsquo;Hello&rsquo;;<br>
 <p>enum에서도 union of literal types를 이용할 수 있습니다.<br>
 enum을 union of literal types로 만들기 위해 사용하는 것이 <strong>keyof typeof</strong> 입니다.<br>
 아래에서는 추가적으로 &lsquo;Any&rsquo;타입까지 추가시켰으므로, keyof typeof UserRole | &lsquo;Any&rsquo;로 사용한 것입니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">UserRole</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;src/users/entities/user.entity&#34;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">SetMetadata</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@nestjs/common&#34;</span>;
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#ff79c6">import</span> { UserRole } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;src/users/entities/user.entity&#34;</span>;
+<span style="color:#ff79c6">import</span> { SetMetadata } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;@nestjs/common&#34;</span>;
 
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">AllowedRoles</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">keyof</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">UserRole</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#34;Any&#34;</span>;
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">type</span> AllowedRoles <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">keyof</span> <span style="color:#ff79c6">typeof</span> UserRole <span style="color:#ff79c6">|</span> <span style="color:#f1fa8c">&#34;Any&#34;</span>;
 
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Role</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">roles</span>: <span style="color:#66d9ef">AllowedRoles</span>[]) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">SetMetadata</span>(<span style="color:#e6db74">&#34;roles&#34;</span>, <span style="color:#a6e22e">roles</span>);
-</code></pre></div><h2 id="app_guard">APP_GUARD</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Module</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@nestjs/common&#34;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">APP_GUARD</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@nestjs/core&#34;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">AuthGuard</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;./auth.guard&#34;</span>;
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">const</span> Role <span style="color:#ff79c6">=</span> (roles: <span style="color:#8be9fd">AllowedRoles</span>[]) <span style="color:#ff79c6">=&gt;</span> SetMetadata(<span style="color:#f1fa8c">&#34;roles&#34;</span>, roles);
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="app_guard">APP_GUARD</h2>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#ff79c6">import</span> { Module } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;@nestjs/common&#34;</span>;
+<span style="color:#ff79c6">import</span> { APP_GUARD } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;@nestjs/core&#34;</span>;
+<span style="color:#ff79c6">import</span> { AuthGuard } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;./auth.guard&#34;</span>;
 
-<span style="color:#66d9ef">@Module</span>({
-  <span style="color:#a6e22e">providers</span><span style="color:#f92672">:</span> [
+<span style="color:#8be9fd;font-style:italic">@Module</span>({
+  providers<span style="color:#ff79c6">:</span> [
     {
-      <span style="color:#a6e22e">provide</span>: <span style="color:#66d9ef">APP_GUARD</span>,
-      <span style="color:#a6e22e">useClass</span>: <span style="color:#66d9ef">AuthGuard</span>,
+      provide: <span style="color:#8be9fd">APP_GUARD</span>,
+      useClass: <span style="color:#8be9fd">AuthGuard</span>,
     },
   ],
 })
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AuthModule</span> {}
-</code></pre></div><p>@Role 데코레이터와 @UseGuards (<a href="https://docs.nestjs.com/security/authentication#enable-authentication-globally">AuthGuard</a>) 를 같이 사용하는것은 좋지 않다.<br>
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">class</span> AuthModule {}
+</code></pre></td></tr></table>
+</div>
+</div><p>@Role 데코레이터와 @UseGuards (<a href="https://docs.nestjs.com/security/authentication#enable-authentication-globally">AuthGuard</a>) 를 같이 사용하는것은 좋지 않다.<br>
 그래서 nestjs 에서 제공해주는 APP_GUARD 상수를 이용해서 UseGuards 사용을 줄일 수 있습니다.<br>
 위와 같이 auth 모듈 설정을 해주면, 더이상 UseGuard는 사용하지 않으셔도 됩니다<br>
 대신에 Auth module을 App 모듈에서 꼭 import 해주셔야 합니다.</p>
@@ -644,54 +676,107 @@ this.reflector.get<AllowedRoles> 에서 SetMetadata로 넘겨준 &lsquo;roles&rs
 <a href="https://developer.mozilla.org/ko/docs/Glossary/Falsy">https://developer.mozilla.org/ko/docs/Glossary/Falsy</a></p>
 <p>Role 값들을 얻어 오려면 메타데이터를 설정을 해줘야 하는데, 앞에 코드처럼 우리는 @Role 데코레이터를 이용하여 설정하기로 했습니다.<br>
 사용을 할 때 원하는 resolver 위에 사용해주면 됩니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">CanActivate</span>, <span style="color:#a6e22e">ExecutionContext</span>, <span style="color:#a6e22e">Injectable</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@nestjs/common&#34;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">GqlExecutionContext</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@nestjs/graphql&#34;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Reflector</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@nestjs/core&#34;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">AllowedRoles</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;./role.decorator&#34;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">User</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;src/users/entities/user.entity&#34;</span>;
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#ff79c6">import</span> { CanActivate, ExecutionContext, Injectable } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;@nestjs/common&#34;</span>;
+<span style="color:#ff79c6">import</span> { GqlExecutionContext } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;@nestjs/graphql&#34;</span>;
+<span style="color:#ff79c6">import</span> { Reflector } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;@nestjs/core&#34;</span>;
+<span style="color:#ff79c6">import</span> { AllowedRoles } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;./role.decorator&#34;</span>;
+<span style="color:#ff79c6">import</span> { User } <span style="color:#ff79c6">from</span> <span style="color:#f1fa8c">&#34;src/users/entities/user.entity&#34;</span>;
 
-<span style="color:#66d9ef">@Injectable</span>()
-<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AuthGuard</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">CanActivate</span> {
-  <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">reflector</span>: <span style="color:#66d9ef">Reflector</span>) {}
+<span style="color:#8be9fd;font-style:italic">@Injectable</span>()
+<span style="color:#ff79c6">export</span> <span style="color:#ff79c6">class</span> AuthGuard <span style="color:#ff79c6">implements</span> CanActivate {
+  <span style="color:#ff79c6">constructor</span>(<span style="color:#ff79c6">private</span> <span style="color:#ff79c6">readonly</span> reflector: <span style="color:#8be9fd">Reflector</span>) {}
 
-  <span style="color:#a6e22e">canActivate</span>(<span style="color:#a6e22e">context</span>: <span style="color:#66d9ef">ExecutionContext</span>) {
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">roles</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">reflector</span>.<span style="color:#66d9ef">get</span>&lt;<span style="color:#f92672">AllowedRoles</span>&gt;(
-      <span style="color:#e6db74">&#34;roles&#34;</span>,
-      <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">getHandler</span>()
+  canActivate(context: <span style="color:#8be9fd">ExecutionContext</span>) {
+    <span style="color:#ff79c6">const</span> roles <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">this</span>.reflector.<span style="color:#ff79c6">get</span>&lt;<span style="color:#ff79c6">AllowedRoles</span>&gt;(
+      <span style="color:#f1fa8c">&#34;roles&#34;</span>,
+      context.getHandler()
     );
-    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">roles</span>) {
-      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+    <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">!</span>roles) {
+      <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">true</span>;
     }
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">gqlContext</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">GqlExecutionContext</span>.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">context</span>).<span style="color:#a6e22e">getContext</span>();
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span>: <span style="color:#66d9ef">User</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">gqlContext</span>[<span style="color:#e6db74">&#34;user&#34;</span>];
-    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">user</span>) {
-      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+    <span style="color:#ff79c6">const</span> gqlContext <span style="color:#ff79c6">=</span> GqlExecutionContext.create(context).getContext();
+    <span style="color:#ff79c6">const</span> user: <span style="color:#8be9fd">User</span> <span style="color:#ff79c6">=</span> gqlContext[<span style="color:#f1fa8c">&#34;user&#34;</span>];
+    <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">!</span>user) {
+      <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">false</span>;
     }
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">roles</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#e6db74">&#34;Any&#34;</span>)) {
-      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+    <span style="color:#ff79c6">if</span> (roles.includes(<span style="color:#f1fa8c">&#34;Any&#34;</span>)) {
+      <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">true</span>;
     }
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">roles</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">role</span>);
+    <span style="color:#ff79c6">return</span> roles.includes(user.role);
   }
 }
-</code></pre></div><h2 id="resolver-에서-role-데코레이터-사용">Resolver 에서 @Role 데코레이터 사용</h2>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="resolver-에서-role-데코레이터-사용">Resolver 에서 @Role 데코레이터 사용</h2>
 <p>getAllPodcasts에는 @Role 이 없는데, createPodcast에는 @Role 이 있습니다.<br>
 전자는 Role이 없으므로, 우리의 AuthGuard 코드에 보면, true를 리턴하게 되므로 public한 resolver로 볼 수 있습니다.<br>
 로그인하지 않아도 팟캐스트들을 검색할 수 있습니다.</p>
 <p>반면에 createPodcast를 보면 Role이 있는데 &lsquo;Host&rsquo;여야 한다는 의미로 AuthGuard에서 처리 해줄 수 있습니다.<br>
 로그인 하지 않거나 Listener인 유저에게 Forbidden Resource 에러가 발생하게 됩니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"> <span style="color:#66d9ef">@Query</span>((<span style="color:#a6e22e">returns</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">GetAllPodcastsOutput</span>)
-  <span style="color:#a6e22e">getAllPodcasts</span>()<span style="color:#f92672">:</span> <span style="color:#a6e22e">Promise</span>&lt;<span style="color:#f92672">GetAllPodcastsOutput</span>&gt; {
-    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">podcastsService</span>.<span style="color:#a6e22e">getAllPodcasts</span>();
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"> <span style="color:#8be9fd;font-style:italic">@Query</span>((returns) <span style="color:#ff79c6">=&gt;</span> GetAllPodcastsOutput)
+  getAllPodcasts()<span style="color:#ff79c6">:</span> Promise&lt;<span style="color:#ff79c6">GetAllPodcastsOutput</span>&gt; {
+    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">this</span>.podcastsService.getAllPodcasts();
   }
 
-  <span style="color:#66d9ef">@Mutation</span>((<span style="color:#a6e22e">returns</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">CreatePodcastOutput</span>)
-  <span style="color:#66d9ef">@Role</span>([<span style="color:#e6db74">&#34;Host&#34;</span>])
-  <span style="color:#a6e22e">createPodcast</span>(
-    <span style="color:#66d9ef">@Args</span>(<span style="color:#e6db74">&#34;input&#34;</span>) <span style="color:#a6e22e">createPodcastInput</span>: <span style="color:#66d9ef">CreatePodcastInput</span>
-  )<span style="color:#f92672">:</span> <span style="color:#a6e22e">Promise</span>&lt;<span style="color:#f92672">CreatePodcastOutput</span>&gt; {
-    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">podcastsService</span>.<span style="color:#a6e22e">createPodcast</span>(<span style="color:#a6e22e">createPodcastInput</span>);
+  <span style="color:#8be9fd;font-style:italic">@Mutation</span>((returns) <span style="color:#ff79c6">=&gt;</span> CreatePodcastOutput)
+  <span style="color:#8be9fd;font-style:italic">@Role</span>([<span style="color:#f1fa8c">&#34;Host&#34;</span>])
+  createPodcast(
+    <span style="color:#8be9fd;font-style:italic">@Args</span>(<span style="color:#f1fa8c">&#34;input&#34;</span>) createPodcastInput: <span style="color:#8be9fd">CreatePodcastInput</span>
+  )<span style="color:#ff79c6">:</span> Promise&lt;<span style="color:#ff79c6">CreatePodcastOutput</span>&gt; {
+    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">this</span>.podcastsService.createPodcast(createPodcastInput);
   }
-</code></pre></div><hr>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
 <p>참고 :
 <a href="https://docs.nestjs.com/guards">https://docs.nestjs.com/guards</a></p>
 
@@ -983,7 +1068,7 @@ this.reflector.get<AllowedRoles> 에서 SetMetadata로 넘겨준 &lsquo;roles&rs
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://blog.haneul-lee.com/js/script-nc7irwbrsuq6kdlqb4wt4nsytr2gakrjyrgz86br1v3hzdcblgpfzyqhkc.min.js"></script>
+<script src="https://blog.haneul-lee.com/js/script-e762xkfaovcapl2uwfeylo4rjghsbcfq5l9tyksr2hv4tu9ym3wt4tkkl5o.min.js"></script>
 
 
   

@@ -146,7 +146,7 @@
     
     
     
-    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-uiavxkidzzp7lut0y17c6lqo92fwi6t6dops3hkbhzq8n0ipg9w977qclolr.min.css" />
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-wogrckem35doefclmldageehbl4glrnm7q8sldg6bls3qealoqujnlr3wgj.min.css" />
     
       <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
@@ -243,7 +243,8 @@ if (!doNotTrack) {
   }
 
   body.dark-mode,
-  body.dark-mode *:not(time):not(a):not(#about):not(i),
+  body.dark-mode
+    *:not(time):not(a):not(#about):not(i):not(code > span):not(code),
   body.dark-mode #sidebar,
   body.dark-mode #sidebar i,
   body.dark-mode #sidebar .sidebar-profile .sidebar-profile-name,
@@ -601,18 +602,36 @@ E2E 테스트는 환경에 의존하는 테스트이지만, 단위 테스트는 
 <p>NestJS에서는 특정 도구를 강제하지는 않지만 Jest를 기본 테스트 프레임워크로 제공해주며 테스팅 패키지도 제공하기 때문에 개발자가 다른 도구를 찾는데 소모하는 리소스를 줄일 수 있다.</p>
 <p></br></br></p>
 <h2 id="테스트-설정하기">테스트 설정하기</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">podcastsRepository</span>: <span style="color:#66d9ef">Repository</span>&lt;<span style="color:#f92672">Podcast</span>&gt;;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">episodesRepository</span>: <span style="color:#66d9ef">Repository</span>&lt;<span style="color:#f92672">Episode</span>&gt;;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">usersRepository</span>: <span style="color:#66d9ef">Repository</span>&lt;<span style="color:#f92672">User</span>&gt;;
-</code></pre></div><p>테스트 설정에 let으로 repository들이 초기화되어있는데, 밑 라인의 beforeAll에서 app과 repository를 초기화시키기 때문에 let으로 선언되어 있습니다.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#8be9fd;font-style:italic">let</span> podcastsRepository: <span style="color:#8be9fd">Repository</span>&lt;<span style="color:#ff79c6">Podcast</span>&gt;;
+<span style="color:#8be9fd;font-style:italic">let</span> episodesRepository: <span style="color:#8be9fd">Repository</span>&lt;<span style="color:#ff79c6">Episode</span>&gt;;
+<span style="color:#8be9fd;font-style:italic">let</span> usersRepository: <span style="color:#8be9fd">Repository</span>&lt;<span style="color:#ff79c6">User</span>&gt;;
+</code></pre></td></tr></table>
+</div>
+</div><p>테스트 설정에 let으로 repository들이 초기화되어있는데, 밑 라인의 beforeAll에서 app과 repository를 초기화시키기 때문에 let으로 선언되어 있습니다.
 </br></br></p>
 <ul>
 <li>repository 초기화</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">podcastsRepository</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">module</span><span style="color:#a6e22e">Fixture.get</span>&lt;<span style="color:#f92672">Repository</span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">Podcast</span>&gt;<span style="color:#f92672">&gt;</span>(
-  <span style="color:#a6e22e">getRepositoryToken</span>(<span style="color:#a6e22e">Podcast</span>)
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts">podcastsRepository <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">module</span>Fixture.get&lt;<span style="color:#ff79c6">Repository</span>&lt;<span style="color:#50fa7b">Podcast</span>&gt;<span style="color:#ff79c6">&gt;</span>(
+  getRepositoryToken(Podcast)
 );
-</code></pre></div><p>나머지 episodeRepsitory, usersRepository 초기화 방법은 모두 동일합니다.
+</code></pre></td></tr></table>
+</div>
+</div><p>나머지 episodeRepsitory, usersRepository 초기화 방법은 모두 동일합니다.
 </br></br></p>
 <blockquote>
 <p><a href="https://jestjs.io/docs/api#afterallfn-timeout">afterAll</a></p>
@@ -623,36 +642,73 @@ E2E 테스트는 환경에 의존하는 테스트이지만, 단위 테스트는 
 </blockquote>
 <h2 id="테스트-수행">테스트 수행</h2>
 <p>e2e테스트는 흔히 종단간 테스트로 번역이 되고, 실제 사용자가 행동하는 방식으로 테스트를 한다고 생각하시면 됩니다. unit 테스트처럼 가짜 데이터 베이스를 사용하지 않습니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">baseTest</span> <span style="color:#f92672">=</span> () <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">request</span>(<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">getHttpServer</span>()).<span style="color:#a6e22e">post</span>(<span style="color:#a6e22e">GRAPHQL_ENDPOINT</span>);
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">publicTest</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">query</span>: <span style="color:#66d9ef">string</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">baseTest</span>().<span style="color:#a6e22e">send</span>({ <span style="color:#a6e22e">query</span> });
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">privateTest</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">query</span>: <span style="color:#66d9ef">string</span>) <span style="color:#f92672">=&gt;</span>
-  <span style="color:#a6e22e">baseTest</span>().<span style="color:#66d9ef">set</span>(<span style="color:#e6db74">&#34;X-JWT&#34;</span>, <span style="color:#a6e22e">jwtToken</span>).<span style="color:#a6e22e">send</span>({ <span style="color:#a6e22e">query</span> });
-</code></pre></div><p>e2e테스트에서는 request(app.getHttpServer()).post(GRAPHQL_ENDPOINT).send({query})가 계속 반복될 것이므로 함수를 wrapping 해놓았습니다.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts"><span style="color:#ff79c6">const</span> baseTest <span style="color:#ff79c6">=</span> () <span style="color:#ff79c6">=&gt;</span> request(app.getHttpServer()).post(GRAPHQL_ENDPOINT);
+<span style="color:#ff79c6">const</span> publicTest <span style="color:#ff79c6">=</span> (query: <span style="color:#8be9fd">string</span>) <span style="color:#ff79c6">=&gt;</span> baseTest().send({ query });
+<span style="color:#ff79c6">const</span> privateTest <span style="color:#ff79c6">=</span> (query: <span style="color:#8be9fd">string</span>) <span style="color:#ff79c6">=&gt;</span>
+  baseTest().<span style="color:#ff79c6">set</span>(<span style="color:#f1fa8c">&#34;X-JWT&#34;</span>, jwtToken).send({ query });
+</code></pre></td></tr></table>
+</div>
+</div><p>e2e테스트에서는 request(app.getHttpServer()).post(GRAPHQL_ENDPOINT).send({query})가 계속 반복될 것이므로 함수를 wrapping 해놓았습니다.
 request는 <a href="https://github.com/visionmedia/supertest">supertest</a> 패키지에서 import한 함수이며, express test를 위해 nestjs 프레임워크에 포함 된 패키지입니다
 </br></br>
 privateTest에 보시면 set(&lsquo;X-JWT&rsquo;, jwtToken)는 헤더에 &lsquo;X-JWT&rsquo;라는 이름으로 jwtToken을 넘겨주는 과정입니다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#34;Podcasts Resolver&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
-  <span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#34;createPodcast&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
-    <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;should create a new podcast&#34;</span>, () <span style="color:#f92672">=&gt;</span>
-      <span style="color:#a6e22e">publicTest</span>(<span style="color:#e6db74">`
-</span><span style="color:#e6db74">            mutation {
-</span><span style="color:#e6db74">              createPodcast(input: {
-</span><span style="color:#e6db74">                title: &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">testPodcast</span>.<span style="color:#a6e22e">title</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;,
-</span><span style="color:#e6db74">                category: &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">testPodcast</span>.<span style="color:#a6e22e">category</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;,
-</span><span style="color:#e6db74">              }) {
-</span><span style="color:#e6db74">                ok
-</span><span style="color:#e6db74">                id
-</span><span style="color:#e6db74">              }
-</span><span style="color:#e6db74">            }
-</span><span style="color:#e6db74">          `</span>)
-        .<span style="color:#a6e22e">expect</span>(<span style="color:#ae81ff">200</span>)
-        .<span style="color:#a6e22e">expect</span>((<span style="color:#a6e22e">res</span>) <span style="color:#f92672">=&gt;</span> {
-          <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">createPodcast</span>.<span style="color:#a6e22e">ok</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">true</span>);
-          <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">createPodcast</span>.<span style="color:#a6e22e">id</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#ae81ff">1</span>);
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts">describe(<span style="color:#f1fa8c">&#34;Podcasts Resolver&#34;</span>, () <span style="color:#ff79c6">=&gt;</span> {
+  describe(<span style="color:#f1fa8c">&#34;createPodcast&#34;</span>, () <span style="color:#ff79c6">=&gt;</span> {
+    it(<span style="color:#f1fa8c">&#34;should create a new podcast&#34;</span>, () <span style="color:#ff79c6">=&gt;</span>
+      publicTest(<span style="color:#f1fa8c">`
+</span><span style="color:#f1fa8c">            mutation {
+</span><span style="color:#f1fa8c">              createPodcast(input: {
+</span><span style="color:#f1fa8c">                title: &#34;</span><span style="color:#f1fa8c">${</span>testPodcast.title<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;,
+</span><span style="color:#f1fa8c">                category: &#34;</span><span style="color:#f1fa8c">${</span>testPodcast.category<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;,
+</span><span style="color:#f1fa8c">              }) {
+</span><span style="color:#f1fa8c">                ok
+</span><span style="color:#f1fa8c">                id
+</span><span style="color:#f1fa8c">              }
+</span><span style="color:#f1fa8c">            }
+</span><span style="color:#f1fa8c">          `</span>)
+        .expect(<span style="color:#bd93f9">200</span>)
+        .expect((res) <span style="color:#ff79c6">=&gt;</span> {
+          expect(res.body.data.createPodcast.ok).toBe(<span style="color:#ff79c6">true</span>);
+          expect(res.body.data.createPodcast.id).toBe(<span style="color:#bd93f9">1</span>);
         }));
   });
 });
-</code></pre></div><p></br></br>
+</code></pre></td></tr></table>
+</div>
+</div><p></br></br>
 래핑해 놓은 함수에 <strong>mutation ~</strong> 부분에 실제로 graphql 문이 들어가있습니다. 주의하실 부분은 ${testPodcast.title} 이 부분인데 자바스크립트에서는 저렇게만 해도 string으로 인식하지만, graphql에서는 그렇지 않습니다. 작은 따옴표(')도 아니고 큰 따옴표(&quot;)로 감싸주어야 텍스트로 인식하므로 주의하셔야 합니다.</p>
 <p></br></br>
 또 한가지 주의해야 할 점은 request.send&hellip;(솔루션은 publicRest, privateTest) 이 코드들은 반드시 리턴값으로 넘겨주셔야 합니다. 그렇지 않으면 테스트는 무조건 success로 나오기 때문에 주의하셔야 합니다. 나머지 결과들도 영향을 받을 수 있기 때문에 꼭 리턴값으로 넘기셔야 한다는 것을 기억하셔야 합니다.
@@ -662,83 +718,165 @@ privateTest에 보시면 set(&lsquo;X-JWT&rsquo;, jwtToken)는 헤더에 &lsquo;
 테스트 방법은 unit 테스트처럼, 성공적으로 처리 되는 경우, 에러인 경우 에러처리 등의 경우가 잘 처리되고 있나 테스트 해보시면 됩니다.
 unit테스트와는 달리 실제 DB 사용, 실제 graphql에 query 요청을 한다는 점 등이 다릅니다.
 </br></br></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#34;updatePodcast&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rating</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">podcastId</span>: <span style="color:#66d9ef">number</span>;
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">76
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ts" data-lang="ts">describe(<span style="color:#f1fa8c">&#34;updatePodcast&#34;</span>, () <span style="color:#ff79c6">=&gt;</span> {
+  <span style="color:#ff79c6">const</span> rating <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3</span>;
+  <span style="color:#8be9fd;font-style:italic">let</span> podcastId: <span style="color:#8be9fd">number</span>;
 
-  <span style="color:#a6e22e">beforeAll</span>(<span style="color:#66d9ef">async</span> () <span style="color:#f92672">=&gt;</span> {
-    <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">podcast</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">podcastsRepository</span>.<span style="color:#a6e22e">find</span>();
-    <span style="color:#a6e22e">podcastId</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">podcast</span>.<span style="color:#a6e22e">id</span>;
+  beforeAll(<span style="color:#ff79c6">async</span> () <span style="color:#ff79c6">=&gt;</span> {
+    <span style="color:#ff79c6">const</span> [podcast] <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> podcastsRepository.find();
+    podcastId <span style="color:#ff79c6">=</span> podcast.id;
   });
 
-  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;should success to update Podcast&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">publicTest</span>(<span style="color:#e6db74">`
-</span><span style="color:#e6db74">            mutation {
-</span><span style="color:#e6db74">              updatePodcast(input: { id: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">podcastId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, payload: { rating: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">rating</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> } }) {
-</span><span style="color:#e6db74">                ok
-</span><span style="color:#e6db74">              }
-</span><span style="color:#e6db74">            }
-</span><span style="color:#e6db74">          `</span>)
-      .<span style="color:#a6e22e">expect</span>(<span style="color:#ae81ff">200</span>)
-      .<span style="color:#a6e22e">expect</span>((<span style="color:#a6e22e">res</span>) <span style="color:#f92672">=&gt;</span> {
-        <span style="color:#66d9ef">const</span> {
-          <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> {
-            <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
-              <span style="color:#a6e22e">updatePodcast</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">ok</span> },
+  it(<span style="color:#f1fa8c">&#34;should success to update Podcast&#34;</span>, () <span style="color:#ff79c6">=&gt;</span> {
+    <span style="color:#ff79c6">return</span> publicTest(<span style="color:#f1fa8c">`
+</span><span style="color:#f1fa8c">            mutation {
+</span><span style="color:#f1fa8c">              updatePodcast(input: { id: </span><span style="color:#f1fa8c">${</span>podcastId<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">, payload: { rating: </span><span style="color:#f1fa8c">${</span>rating<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> } }) {
+</span><span style="color:#f1fa8c">                ok
+</span><span style="color:#f1fa8c">              }
+</span><span style="color:#f1fa8c">            }
+</span><span style="color:#f1fa8c">          `</span>)
+      .expect(<span style="color:#bd93f9">200</span>)
+      .expect((res) <span style="color:#ff79c6">=&gt;</span> {
+        <span style="color:#ff79c6">const</span> {
+          body<span style="color:#ff79c6">:</span> {
+            data<span style="color:#ff79c6">:</span> {
+              updatePodcast<span style="color:#ff79c6">:</span> { ok },
             },
           },
-        } <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>;
-        <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">ok</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">true</span>);
+        } <span style="color:#ff79c6">=</span> res;
+        expect(ok).toBe(<span style="color:#ff79c6">true</span>);
       });
   });
-  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;should failed to update Podcast, becuase of getPodcast emitting error&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">errorPodcastId</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>;
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">publicTest</span>(<span style="color:#e6db74">`
-</span><span style="color:#e6db74">            mutation {
-</span><span style="color:#e6db74">              updatePodcast(input: { id: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">errorPodcastId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, payload: { rating: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">rating</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> } }) {
-</span><span style="color:#e6db74">                ok
-</span><span style="color:#e6db74">                error
-</span><span style="color:#e6db74">              }
-</span><span style="color:#e6db74">            }
-</span><span style="color:#e6db74">          `</span>)
-      .<span style="color:#a6e22e">expect</span>(<span style="color:#ae81ff">200</span>)
-      .<span style="color:#a6e22e">expect</span>((<span style="color:#a6e22e">res</span>) <span style="color:#f92672">=&gt;</span> {
-        <span style="color:#66d9ef">const</span> {
-          <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> {
-            <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
-              <span style="color:#a6e22e">updatePodcast</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">ok</span>, <span style="color:#a6e22e">error</span> },
+  it(<span style="color:#f1fa8c">&#34;should failed to update Podcast, becuase of getPodcast emitting error&#34;</span>, () <span style="color:#ff79c6">=&gt;</span> {
+    <span style="color:#ff79c6">const</span> errorPodcastId <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1000</span>;
+    <span style="color:#ff79c6">return</span> publicTest(<span style="color:#f1fa8c">`
+</span><span style="color:#f1fa8c">            mutation {
+</span><span style="color:#f1fa8c">              updatePodcast(input: { id: </span><span style="color:#f1fa8c">${</span>errorPodcastId<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">, payload: { rating: </span><span style="color:#f1fa8c">${</span>rating<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> } }) {
+</span><span style="color:#f1fa8c">                ok
+</span><span style="color:#f1fa8c">                error
+</span><span style="color:#f1fa8c">              }
+</span><span style="color:#f1fa8c">            }
+</span><span style="color:#f1fa8c">          `</span>)
+      .expect(<span style="color:#bd93f9">200</span>)
+      .expect((res) <span style="color:#ff79c6">=&gt;</span> {
+        <span style="color:#ff79c6">const</span> {
+          body<span style="color:#ff79c6">:</span> {
+            data<span style="color:#ff79c6">:</span> {
+              updatePodcast<span style="color:#ff79c6">:</span> { ok, error },
             },
           },
-        } <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>;
-        <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">ok</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">false</span>);
-        <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">error</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#e6db74">`Podcast with id </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">errorPodcastId</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> not found`</span>);
+        } <span style="color:#ff79c6">=</span> res;
+        expect(ok).toBe(<span style="color:#ff79c6">false</span>);
+        expect(error).toBe(<span style="color:#f1fa8c">`Podcast with id </span><span style="color:#f1fa8c">${</span>errorPodcastId<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> not found`</span>);
       });
   });
-  <span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#34;should fail to update Podcast, due to invalid payload&#34;</span>, () <span style="color:#f92672">=&gt;</span> {
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">errorRating</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">publicTest</span>(<span style="color:#e6db74">`
-</span><span style="color:#e6db74">            mutation {
-</span><span style="color:#e6db74">              updatePodcast(input: { id: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">podcastId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, payload: { rating: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">errorRating</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> } }) {
-</span><span style="color:#e6db74">                ok
-</span><span style="color:#e6db74">                error
-</span><span style="color:#e6db74">              }
-</span><span style="color:#e6db74">            }
-</span><span style="color:#e6db74">          `</span>)
-      .<span style="color:#a6e22e">expect</span>(<span style="color:#ae81ff">200</span>)
-      .<span style="color:#a6e22e">expect</span>((<span style="color:#a6e22e">res</span>) <span style="color:#f92672">=&gt;</span> {
-        <span style="color:#66d9ef">const</span> {
-          <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> {
-            <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
-              <span style="color:#a6e22e">updatePodcast</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">ok</span>, <span style="color:#a6e22e">error</span> },
+  it(<span style="color:#f1fa8c">&#34;should fail to update Podcast, due to invalid payload&#34;</span>, () <span style="color:#ff79c6">=&gt;</span> {
+    <span style="color:#ff79c6">const</span> errorRating <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>;
+    <span style="color:#ff79c6">return</span> publicTest(<span style="color:#f1fa8c">`
+</span><span style="color:#f1fa8c">            mutation {
+</span><span style="color:#f1fa8c">              updatePodcast(input: { id: </span><span style="color:#f1fa8c">${</span>podcastId<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">, payload: { rating: </span><span style="color:#f1fa8c">${</span>errorRating<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> } }) {
+</span><span style="color:#f1fa8c">                ok
+</span><span style="color:#f1fa8c">                error
+</span><span style="color:#f1fa8c">              }
+</span><span style="color:#f1fa8c">            }
+</span><span style="color:#f1fa8c">          `</span>)
+      .expect(<span style="color:#bd93f9">200</span>)
+      .expect((res) <span style="color:#ff79c6">=&gt;</span> {
+        <span style="color:#ff79c6">const</span> {
+          body<span style="color:#ff79c6">:</span> {
+            data<span style="color:#ff79c6">:</span> {
+              updatePodcast<span style="color:#ff79c6">:</span> { ok, error },
             },
           },
-        } <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>;
-        <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">ok</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">false</span>);
-        <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">error</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#e6db74">&#34;Rating must be between 1 and 5.&#34;</span>);
+        } <span style="color:#ff79c6">=</span> res;
+        expect(ok).toBe(<span style="color:#ff79c6">false</span>);
+        expect(error).toBe(<span style="color:#f1fa8c">&#34;Rating must be between 1 and 5.&#34;</span>);
       });
   });
 });
-</code></pre></div><hr>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
 <p>참고 :</p>
 <p><a href="https://github.com/visionmedia/supertest">supertest</a>,
 <a href="https://docs.nestjs.com/fundamentals/testing#end-to-end-testing">nextJS 공식문서</a>,
@@ -1046,7 +1184,7 @@ unit테스트와는 달리 실제 DB 사용, 실제 graphql에 query 요청을 �
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://blog.haneul-lee.com/js/script-nc7irwbrsuq6kdlqb4wt4nsytr2gakrjyrgz86br1v3hzdcblgpfzyqhkc.min.js"></script>
+<script src="https://blog.haneul-lee.com/js/script-e762xkfaovcapl2uwfeylo4rjghsbcfq5l9tyksr2hv4tu9ym3wt4tkkl5o.min.js"></script>
 
 
   

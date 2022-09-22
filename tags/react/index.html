@@ -104,7 +104,7 @@
     
     
     
-    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-uiavxkidzzp7lut0y17c6lqo92fwi6t6dops3hkbhzq8n0ipg9w977qclolr.min.css" />
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-wogrckem35doefclmldageehbl4glrnm7q8sldg6bls3qealoqujnlr3wgj.min.css" />
     
       <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
@@ -201,7 +201,8 @@ if (!doNotTrack) {
   }
 
   body.dark-mode,
-  body.dark-mode *:not(time):not(a):not(#about):not(i),
+  body.dark-mode
+    *:not(time):not(a):not(#about):not(i):not(code > span):not(code),
   body.dark-mode #sidebar,
   body.dark-mode #sidebar i,
   body.dark-mode #sidebar .sidebar-profile .sidebar-profile-name,
@@ -590,10 +591,8 @@ GeekyAnts/NativeBaseNativeBase — Essential cross-platform UI components for Re
     </div>
     <div class="postShorten-excerpt">
       
-        Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src/pages/test/create-account.spec.tsx  beforeEach(async () =&gt; { await waitFor(() =&gt; { mockedClient = createMockClient(); renderResult = render( &lt;ApolloProvider client={mockedClient}&gt; &lt;CreateAccount /&gt; &lt;/ApolloProvider&gt; ); }); }); frontend 유닛테스트의 기본구조
+        Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src/pages/test/create-account.spec.tsx  1 2 3 4 5 6 7 8 9 10  beforeEach(async () =&gt; { await waitFor(() =&gt; { mockedClient = createMockClient(); renderResult = render( &lt;ApolloProvider client={mockedClient}&gt; &lt;CreateAccount /&gt; &lt;/ApolloProvider&gt; ); }); });   frontend 유닛테스트의 기본구조
 apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.
-위와 같은 방법 이외 MockedProvider를 이용하는 방법도 있으니 참고 바랍니다.
-create-account에서는 유저에게 계정에 대한 입력을 받습니다.
       
       <p>
         
@@ -717,7 +716,7 @@ create-account에서는 유저에게 계정에 대한 입력을 받습니다.
     </div>
     <div class="postShorten-excerpt">
       
-        Jest NestJS 에서 UNIT TEST 🏃🏻‍♀️ jwt.service.spec.ts describe(&#39;JwtService&#39;, () =&gt; { let service: JwtService; beforeAll(async () =&gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&lt;JwtService&gt;(JwtService); }); jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다.  jwt service가 제대로 준비 되었는지 확인하려면  it('should be defined',()={ expect(service).toBeDefined();});   이 코드로 확인해볼 수 있다.
+        Jest NestJS 에서 UNIT TEST 🏃🏻‍♀️ jwt.service.spec.ts 1 2 3 4 5 6 7 8 9 10 11 12 13  describe(&#39;JwtService&#39;, () =&gt; { let service: JwtService; beforeAll(async () =&gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&lt;JwtService&gt;(JwtService); });   jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다.  jwt service가 제대로 준비 되었는지 확인하려면  it('should be defined',()={ expect(service).
       
       <p>
         
@@ -1065,7 +1064,7 @@ Why do we need it? 왜 필요한가?  Components have local state, but apps have
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://blog.haneul-lee.com/js/script-nc7irwbrsuq6kdlqb4wt4nsytr2gakrjyrgz86br1v3hzdcblgpfzyqhkc.min.js"></script>
+<script src="https://blog.haneul-lee.com/js/script-e762xkfaovcapl2uwfeylo4rjghsbcfq5l9tyksr2hv4tu9ym3wt4tkkl5o.min.js"></script>
 
 
   

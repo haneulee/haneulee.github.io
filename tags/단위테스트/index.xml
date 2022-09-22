@@ -13,10 +13,8 @@
       <pubDate>Sat, 07 Aug 2021 02:54:15 +0900</pubDate>
       
       <guid>https://blog.haneul-lee.com/post/unittest/jest-frontend-test/</guid>
-      <description>Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src/pages/test/create-account.spec.tsx  beforeEach(async () =&amp;gt; { await waitFor(() =&amp;gt; { mockedClient = createMockClient(); renderResult = render( &amp;lt;ApolloProvider client={mockedClient}&amp;gt; &amp;lt;CreateAccount /&amp;gt; &amp;lt;/ApolloProvider&amp;gt; ); }); }); frontend 유닛테스트의 기본구조
-apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.
-위와 같은 방법 이외 MockedProvider를 이용하는 방법도 있으니 참고 바랍니다.
-create-account에서는 유저에게 계정에 대한 입력을 받습니다.</description>
+      <description>Jest Components Test 제스트 컴포넌트 테스트 🔥 리액트 컴포넌트 테스트 🏃🏻‍♀️  기본 구조 및 테스트 방법  src/pages/test/create-account.spec.tsx  1 2 3 4 5 6 7 8 9 10  beforeEach(async () =&amp;gt; { await waitFor(() =&amp;gt; { mockedClient = createMockClient(); renderResult = render( &amp;lt;ApolloProvider client={mockedClient}&amp;gt; &amp;lt;CreateAccount /&amp;gt; &amp;lt;/ApolloProvider&amp;gt; ); }); });   frontend 유닛테스트의 기본구조
+apollo client를 이용하여 데이터를 받아오는 부분 때문에 apollo를 mocking 할 필요가 있습니다.</description>
     </item>
     
     <item>
@@ -25,7 +23,7 @@ create-account에서는 유저에게 계정에 대한 입력을 받습니다.</d
       <pubDate>Mon, 12 Jul 2021 10:30:49 +0900</pubDate>
       
       <guid>https://blog.haneul-lee.com/post/unittest/jest-service-test/</guid>
-      <description>Jest NestJS 에서 UNIT TEST 🏃🏻‍♀️ jwt.service.spec.ts describe(&amp;#39;JwtService&amp;#39;, () =&amp;gt; { let service: JwtService; beforeAll(async () =&amp;gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&amp;lt;JwtService&amp;gt;(JwtService); }); jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다.  jwt service가 제대로 준비 되었는지 확인하려면  it(&#39;should be defined&#39;,()={ expect(service).toBeDefined();});   이 코드로 확인해볼 수 있다.</description>
+      <description>Jest NestJS 에서 UNIT TEST 🏃🏻‍♀️ jwt.service.spec.ts 1 2 3 4 5 6 7 8 9 10 11 12 13  describe(&amp;#39;JwtService&amp;#39;, () =&amp;gt; { let service: JwtService; beforeAll(async () =&amp;gt; { const module: TestingModule = await Test.createTestingModule({ providers: [ JwtService, { provide: CONFIG_OPTIONS, useValue: jwtOptions }, ], }).compile(); service = module.get&amp;lt;JwtService&amp;gt;(JwtService); });   jwt service 는 jsonwebtoken 패키지 이외에는 달리 mocking 할 것이 없다.  jwt service가 제대로 준비 되었는지 확인하려면  it(&#39;should be defined&#39;,()={ expect(service).</description>
     </item>
     
     <item>

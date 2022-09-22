@@ -14,7 +14,7 @@
       
       <guid>https://blog.haneul-lee.com/post/graphql/graphql-authentication/</guid>
       <description>Apollo에서 Authentication 인증하기 💫 authLink 백엔드에서 role기반(Host, Listener, Any)의 권한부여를 작업했기 때문에 클라이언트에서도 마찬가지로 서버에게 유저 정보에 대해 알려줘야 합니다.
-import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &amp;#34;@apollo/client&amp;#34;; import { LOCALSTORAGE_TOKEN } from &amp;#34;./constants&amp;#34;; import { setContext } from &amp;#34;@apollo/client/link/context&amp;#34;; const token = localStorage.getItem(LOCALSTORAGE_TOKEN); export const isLoggedInVar = makeVar(Boolean(token)); export const authTokenVar = makeVar(token); const httpLink = createHttpLink({ uri: &amp;#34;http://localhost:4000/graphql&amp;#34;, }); const authLink = setContext((_, { headers }) =&amp;gt; { return { headers: { .</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47  import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &amp;#34;@apollo/client&amp;#34;; import { LOCALSTORAGE_TOKEN } from &amp;#34;.</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@ import { ApolloClient, createHttpLink, InMemoryCache, makeVar, } from &amp;#34;@
       
       <guid>https://blog.haneul-lee.com/post/typeorm/typeorm-second/</guid>
       <description>Typeorm study 2 - Hash / JWT / Guard Enum Type (enumerated type) Enum Type은 값을 지정하여 하나의 상수처럼 사용할 수 있다. sqlite 디비에서는 enum type을 지원하지 않는다는 오류가 발생하는데 아래 코드처럼 @Column 데코레이터에 type을 &amp;lsquo;enum&amp;rsquo; 이 아니라 &amp;lsquo;simple-enum&amp;rsquo;으로 지정해주면 해결된다.
-export enum UserRole { Host = &amp;#39;Host&amp;#39;, Listener = &amp;#39;Listener&amp;#39;, } registerEnumType(UserRole, { name: &amp;#39;UserRole&amp;#39; }); @Column({ type: &amp;#39;simple-enum&amp;#39;, enum: UserRole }) @Field(type =&amp;gt; UserRole) role: UserRole; registerEnumType 함수를 사용해 enum type을 등록해준다.</description>
+1 2 3 4 5 6 7 8 9 10 11  export enum UserRole { Host = &amp;#39;Host&amp;#39;, Listener = &amp;#39;Listener&amp;#39;, } registerEnumType(UserRole, { name: &amp;#39;UserRole&amp;#39; }); @Column({ type: &amp;#39;simple-enum&amp;#39;, enum: UserRole }) @Field(type =&amp;gt; UserRole) role: UserRole;   registerEnumType 함수를 사용해 enum type을 등록해준다.</description>
     </item>
     
   </channel>

@@ -142,7 +142,7 @@
     
     
     
-    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-uiavxkidzzp7lut0y17c6lqo92fwi6t6dops3hkbhzq8n0ipg9w977qclolr.min.css" />
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-wogrckem35doefclmldageehbl4glrnm7q8sldg6bls3qealoqujnlr3wgj.min.css" />
     
       <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
@@ -239,7 +239,8 @@ if (!doNotTrack) {
   }
 
   body.dark-mode,
-  body.dark-mode *:not(time):not(a):not(#about):not(i),
+  body.dark-mode
+    *:not(time):not(a):not(#about):not(i):not(code > span):not(code),
   body.dark-mode #sidebar,
   body.dark-mode #sidebar i,
   body.dark-mode #sidebar .sidebar-profile .sidebar-profile-name,
@@ -618,34 +619,67 @@ npm install --save-dev jest
 moduleNameMapper - 경로 설정 가능
 coveragePathIgnorePatterns - 테스트를 제외할 파일 명시</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">&gt;</span> <span style="color:#960050;background-color:#1e0010">package.json</span>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-json" data-lang="json">&gt; package.json
 
-<span style="color:#e6db74">&#34;jest&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
-    <span style="color:#f92672">&#34;moduleFileExtensions&#34;</span>: [
-      <span style="color:#e6db74">&#34;js&#34;</span>,
-      <span style="color:#e6db74">&#34;json&#34;</span>,
-      <span style="color:#e6db74">&#34;ts&#34;</span>
+<span style="color:#f1fa8c">&#34;jest&#34;</span>: {
+    <span style="color:#ff79c6">&#34;moduleFileExtensions&#34;</span>: [
+      <span style="color:#f1fa8c">&#34;js&#34;</span>,
+      <span style="color:#f1fa8c">&#34;json&#34;</span>,
+      <span style="color:#f1fa8c">&#34;ts&#34;</span>
     ],
-    <span style="color:#f92672">&#34;moduleNameMapper&#34;</span>: {
-      <span style="color:#f92672">&#34;^src/(.*)$&#34;</span>: <span style="color:#e6db74">&#34;&lt;rootDir&gt;/$1&#34;</span>
+    <span style="color:#ff79c6">&#34;moduleNameMapper&#34;</span>: {
+      <span style="color:#ff79c6">&#34;^src/(.*)$&#34;</span>: <span style="color:#f1fa8c">&#34;&lt;rootDir&gt;/$1&#34;</span>
     },
-    <span style="color:#f92672">&#34;rootDir&#34;</span>: <span style="color:#e6db74">&#34;src&#34;</span>,
-    <span style="color:#f92672">&#34;testRegex&#34;</span>: <span style="color:#e6db74">&#34;.*\\.spec\\.ts$&#34;</span>,
-    <span style="color:#f92672">&#34;transform&#34;</span>: {
-      <span style="color:#f92672">&#34;^.+\\.(t|j)s$&#34;</span>: <span style="color:#e6db74">&#34;ts-jest&#34;</span>
+    <span style="color:#ff79c6">&#34;rootDir&#34;</span>: <span style="color:#f1fa8c">&#34;src&#34;</span>,
+    <span style="color:#ff79c6">&#34;testRegex&#34;</span>: <span style="color:#f1fa8c">&#34;.*\\.spec\\.ts$&#34;</span>,
+    <span style="color:#ff79c6">&#34;transform&#34;</span>: {
+      <span style="color:#ff79c6">&#34;^.+\\.(t|j)s$&#34;</span>: <span style="color:#f1fa8c">&#34;ts-jest&#34;</span>
     },
-    <span style="color:#f92672">&#34;collectCoverageFrom&#34;</span>: [
-      <span style="color:#e6db74">&#34;**/*.service.ts&#34;</span>
+    <span style="color:#ff79c6">&#34;collectCoverageFrom&#34;</span>: [
+      <span style="color:#f1fa8c">&#34;**/*.service.ts&#34;</span>
     ],
-    <span style="color:#f92672">&#34;coverageDirectory&#34;</span>: <span style="color:#e6db74">&#34;../coverage&#34;</span>,
-    <span style="color:#f92672">&#34;testEnvironment&#34;</span>: <span style="color:#e6db74">&#34;node&#34;</span>,
-    <span style="color:#f92672">&#34;coveragePathIgnorePatterns&#34;</span>: [
-      <span style="color:#e6db74">&#34;node_modules&#34;</span>,
-      <span style="color:#e6db74">&#34;.entity.ts&#34;</span>,
-      <span style="color:#e6db74">&#34;.constants.ts&#34;</span>
+    <span style="color:#ff79c6">&#34;coverageDirectory&#34;</span>: <span style="color:#f1fa8c">&#34;../coverage&#34;</span>,
+    <span style="color:#ff79c6">&#34;testEnvironment&#34;</span>: <span style="color:#f1fa8c">&#34;node&#34;</span>,
+    <span style="color:#ff79c6">&#34;coveragePathIgnorePatterns&#34;</span>: [
+      <span style="color:#f1fa8c">&#34;node_modules&#34;</span>,
+      <span style="color:#f1fa8c">&#34;.entity.ts&#34;</span>,
+      <span style="color:#f1fa8c">&#34;.constants.ts&#34;</span>
     ]
-  }<span style="color:#960050;background-color:#1e0010">,</span>
-</code></pre></div><h2 id="jest-사용-방법">Jest 사용 방법</h2>
+  },
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="jest-사용-방법">Jest 사용 방법</h2>
 <h3 id="mocking">mocking</h3>
 <p>mocking은 단위 테스트를 작성할 때, 해당 코드가 의존하는 부분을 가짜(mock)로 대체하는 기법</p>
 <h3 id="mock-function">mock function</h3>
@@ -653,30 +687,60 @@ coveragePathIgnorePatterns - 테스트를 제외할 파일 명시</p>
 <ul>
 <li>Returns a new, unused mock function. Optionally takes a mock implementation.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mockFn</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">fn</span>();
-<span style="color:#a6e22e">mockFn</span>();
-<span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">mockFn</span>).<span style="color:#a6e22e">toHaveBeenCalled</span>();
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js"><span style="color:#ff79c6">const</span> mockFn <span style="color:#ff79c6">=</span> jest.fn();
+mockFn();
+expect(mockFn).toHaveBeenCalled();
 
-<span style="color:#75715e">// With a mock implementation:
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">returnsTrue</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">fn</span>(() =&gt; <span style="color:#66d9ef">true</span>);
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">returnsTrue</span>()); <span style="color:#75715e">// true;
-</span></code></pre></div><h4 id="jestspyon">jest.spyOn()</h4>
+<span style="color:#6272a4">// With a mock implementation:
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> returnsTrue <span style="color:#ff79c6">=</span> jest.fn(() =&gt; <span style="color:#ff79c6">true</span>);
+console.log(returnsTrue()); <span style="color:#6272a4">// true;
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="jestspyon">jest.spyOn()</h4>
 <ul>
 <li>Creates a mock function similar to jest.fn but also tracks calls to object[methodName]. Returns a Jest mock function.</li>
 </ul>
 <p>Note: By default, jest.spyOn also calls the spied method. This is different behavior from most other test libraries. If you want to overwrite the original function, you can use jest.spyOn(object, methodName).mockImplementation(() =&gt; customImplementation) or object[methodName] = jest.fn(() =&gt; customImplementation);</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">video</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./video&#34;</span>);
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js"><span style="color:#ff79c6">const</span> video <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#34;./video&#34;</span>);
 
-<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#34;plays video&#34;</span>, () =&gt; {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">spy</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jest</span>.<span style="color:#a6e22e">spyOn</span>(<span style="color:#a6e22e">video</span>, <span style="color:#e6db74">&#34;play&#34;</span>);
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isPlaying</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">video</span>.<span style="color:#a6e22e">play</span>();
+test(<span style="color:#f1fa8c">&#34;plays video&#34;</span>, () =&gt; {
+  <span style="color:#ff79c6">const</span> spy <span style="color:#ff79c6">=</span> jest.spyOn(video, <span style="color:#f1fa8c">&#34;play&#34;</span>);
+  <span style="color:#ff79c6">const</span> isPlaying <span style="color:#ff79c6">=</span> video.play();
 
-  <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">spy</span>).<span style="color:#a6e22e">toHaveBeenCalled</span>();
-  <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">isPlaying</span>).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">true</span>);
+  expect(spy).toHaveBeenCalled();
+  expect(isPlaying).toBe(<span style="color:#ff79c6">true</span>);
 
-  <span style="color:#a6e22e">spy</span>.<span style="color:#a6e22e">mockRestore</span>();
+  spy.mockRestore();
 });
-</code></pre></div><hr>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
 <p>참고 :
 <a href="https://jestjs.io/docs/api">jset 공식문서</a>,
 <a href="https://www.daleseo.com/jest-fn-spy-on/">jset mocking</a>,</p>
@@ -979,7 +1043,7 @@ coveragePathIgnorePatterns - 테스트를 제외할 파일 명시</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://blog.haneul-lee.com/js/script-nc7irwbrsuq6kdlqb4wt4nsytr2gakrjyrgz86br1v3hzdcblgpfzyqhkc.min.js"></script>
+<script src="https://blog.haneul-lee.com/js/script-e762xkfaovcapl2uwfeylo4rjghsbcfq5l9tyksr2hv4tu9ym3wt4tkkl5o.min.js"></script>
 
 
   
