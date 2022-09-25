@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <script data-ad-client="ca-pub-7146914144035062" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BHPHWPTLMZ');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js" integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+    crossorigin="anonymous"></script>
+ <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/blog.haneul-lee.com\/",
+  "author": {
+    "@type": "Person",
+    "name": "Haneul Devlog",
+    
+    "image": "https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png"
+    
+  },
+  "name":"Haneul Devlog 개발 블로그 📚",
+  "description":"Strapi \u002b NextJS Blog 블로그 📔 오늘은 strapi와 nextJS로 블로그를 만드는 방법을 소개하려고 한다.\n What is Strapi ?  REST API를 쉽게 만들 수 있게 도와주는 Open source Node.js Headless CMS 특히 MongoDB와의 연결이 가능하고 GraphQL이 기본적으로 제공되기에 편리하게 백엔드 서버를 구축할 수 있다.  What is CMS ?  Contents Management System 인터넷이나 컴퓨터 통신 등을 통하여 제공되는 각종 정보나 그 내용물들을 관리하는 정의된 목적을 달성하기 위한 통합 요소들의 집합체  Why Strapi ?",
+  "url":"https:\/\/blog.haneul-lee.com\/post\/blog\/strapi-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8\/",
+  "keywords":"[development, front-end]"
+}
+
+</script> <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.90.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Haneul Devlog">
+<meta name="keywords" content="development, front-end">
+<meta name="description" content="Strapi &#43; NextJS Blog 블로그 📔 오늘은 strapi와 nextJS로 블로그를 만드는 방법을 소개하려고 한다.
+ What is Strapi ?  REST API를 쉽게 만들 수 있게 도와주는 Open source Node.js Headless CMS 특히 MongoDB와의 연결이 가능하고 GraphQL이 기본적으로 제공되기에 편리하게 백엔드 서버를 구축할 수 있다.  What is CMS ?  Contents Management System 인터넷이나 컴퓨터 통신 등을 통하여 제공되는 각종 정보나 그 내용물들을 관리하는 정의된 목적을 달성하기 위한 통합 요소들의 집합체  Why Strapi ?">
+
+
+<meta property="og:description" content="Strapi &#43; NextJS Blog 블로그 📔 오늘은 strapi와 nextJS로 블로그를 만드는 방법을 소개하려고 한다.
+ What is Strapi ?  REST API를 쉽게 만들 수 있게 도와주는 Open source Node.js Headless CMS 특히 MongoDB와의 연결이 가능하고 GraphQL이 기본적으로 제공되기에 편리하게 백엔드 서버를 구축할 수 있다.  What is CMS ?  Contents Management System 인터넷이나 컴퓨터 통신 등을 통하여 제공되는 각종 정보나 그 내용물들을 관리하는 정의된 목적을 달성하기 위한 통합 요소들의 집합체  Why Strapi ?">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Strapi &#43; NextJS Blog 블로그 📔">
+<meta name="twitter:title" content="Strapi &#43; NextJS Blog 블로그 📔">
+<meta property="og:url" content="https://blog.haneul-lee.com/post/blog/strapi-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/">
+<meta property="twitter:url" content="https://blog.haneul-lee.com/post/blog/strapi-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/">
+<meta property="og:site_name" content="Haneul Devlog 개발 블로그 📚">
+<meta property="og:description" content="Strapi &#43; NextJS Blog 블로그 📔 오늘은 strapi와 nextJS로 블로그를 만드는 방법을 소개하려고 한다.
+ What is Strapi ?  REST API를 쉽게 만들 수 있게 도와주는 Open source Node.js Headless CMS 특히 MongoDB와의 연결이 가능하고 GraphQL이 기본적으로 제공되기에 편리하게 백엔드 서버를 구축할 수 있다.  What is CMS ?  Contents Management System 인터넷이나 컴퓨터 통신 등을 통하여 제공되는 각종 정보나 그 내용물들을 관리하는 정의된 목적을 달성하기 위한 통합 요소들의 집합체  Why Strapi ?">
+<meta name="twitter:description" content="Strapi &#43; NextJS Blog 블로그 📔 오늘은 strapi와 nextJS로 블로그를 만드는 방법을 소개하려고 한다.
+ What is Strapi ?  REST API를 쉽게 만들 수 있게 도와주는 Open source Node.js Headless CMS 특히 MongoDB와의 연결이 가능하고 GraphQL이 기본적으로 제공되기에 편리하게 백엔드 서버를 구축할 수 있다.  What is CMS ?  Contents Management System 인터넷이나 컴퓨터 통신 등을 통하여 제공되는 각종 정보나 그 내용물들을 관리하는 정의된 목적을 달성하기 위한 통합 요소들의 집합체  Why Strapi ?">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2022-09-23T19:06:53">
+  
+  
+    <meta property="article:modified_time" content="2022-09-23T19:06:53">
+  
+  
+  
+    
+      <meta property="article:section" content="development">
+    
+      <meta property="article:section" content="blog">
+    
+      <meta property="article:section" content="nextjs">
+    
+      <meta property="article:section" content="strapi">
+    
+  
+  
+    
+      <meta property="article:tag" content="development">
+    
+      <meta property="article:tag" content="front-end">
+    
+      <meta property="article:tag" content="Strapi &#43; NextJS Blog 블로그">
+    
+      <meta property="article:tag" content="strapi">
+    
+      <meta property="article:tag" content="nextjs">
+    
+      <meta property="article:tag" content="blog">
+    
+      <meta property="article:tag" content="nextjs블로그">
+    
+      <meta property="article:tag" content="스트라피블로그">
+    
+      <meta property="article:tag" content="strapi란">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png">
+  <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png">
+
+
+
+
+
+  <meta property="og:image" content="https://d2zv2ciw0ln4h1.cloudfront.net/uploads/Next_a7b1c0f30b.png">
+  <meta property="twitter:image" content="https://d2zv2ciw0ln4h1.cloudfront.net/uploads/Next_a7b1c0f30b.png">
+
+
+    <title>Strapi &#43; NextJS Blog 블로그 📔</title>
+
+    <link
+      rel="icon"
+      href="https://blog.haneul-lee.com/img/favicon.ico"
+    />
+     
+
+    <link rel="canonical" href="https://blog.haneul-lee.com/post/blog/strapi-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/" />
+
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+      integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    
+    
+    <link rel="stylesheet" href="https://blog.haneul-lee.com/css/style-wogrckem35doefclmldageehbl4glrnm7q8sldg6bls3qealoqujnlr3wgj.min.css" />
+    
+      <link rel="stylesheet"  href="https://blog.haneul-lee.com/css/mystyle.css">    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHPHWPTLMZ"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BHPHWPTLMZ', { 'anonymize_ip': false });
+}
+</script>
+  
+  </head>
+</html>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+ <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+ <div class="header-title">
+   <a class="header-title-link" href="https://blog.haneul-lee.com/">Haneul Devlog 개발 블로그 📚</a>
+ </div>
+ 
+   
+     <a class="header-right-picture "
+        href="https://blog.haneul-lee.com/#about">
+   
+   
+   
+     
+       <img class="header-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+     
+   
+   </a>
+ 
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+ <div class="sidebar-container">
+   
+     <div class="sidebar-profile">
+       <a href="https://blog.haneul-lee.com/#about">
+         <img class="sidebar-profile-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+       </a>
+       <h4 class="sidebar-profile-name">Haneul Devlog</h4>
+       
+         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</h5>
+       
+     </div>
+   
+
+   <div class="js-toggle-wrapper">
+  <div class="js-toggle">
+    <div class="js-toggle-track">
+      <div class="js-toggle-track-check">
+        <img
+          src="data:image/png;base64,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"
+          role="presentation"
+          style="pointer-events: none"
+          width="16"
+          height="16"
+        />
+      </div>
+      <div class="js-toggle-track-x">
+        <img
+          src="data:image/png;base64,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"
+          role="presentation"
+          style="pointer-events: none"
+          width="16"
+          height="16"
+        />
+      </div>
+    </div>
+    <div class="js-toggle-thumb"></div>
+    <input
+      class="js-toggle-screenreader-only"
+      type="checkbox"
+      aria-label="Switch between Dark and Light mode"
+    />
+  </div>
+</div>
+
+<style>
+   
+
+  body.dark-mode,
+  body.dark-mode #main,
+  body.dark-mode #header,
+  body.dark-mode #bottom-bar,
+  body.dark-mode .btn,
+  body.dark-mode a.tag {
+    background: rgb(45, 45, 45) !important;
+  }
+
+  body.dark-mode,
+  body.dark-mode
+    *:not(time):not(a):not(#about):not(i):not(code > span):not(code),
+  body.dark-mode #sidebar,
+  body.dark-mode #sidebar i,
+  body.dark-mode #sidebar .sidebar-profile .sidebar-profile-name,
+  body.dark-mode #sidebar .sidebar-profile .sidebar-profile-bio {
+    color: #f5f5f5;
+  }
+
+  body.dark-mode .alert.info,
+  body.dark-mode .alert.info > p {
+    color: #5d686f !important;
+  }
+
+  .js-toggle-wrapper {
+    margin: 1rem auto;
+    text-align: center;
+    display: block;
+  }
+
+  .js-toggle {
+    touch-action: pan-x;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .js-toggle-screenreader-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .js-toggle-track {
+    width: 50px;
+    height: 24px;
+    padding: 0;
+    border-radius: 30px;
+    background-color: black;
+    transition: all 0.2s ease;
+  }
+  .js-toggle-track-check {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 5px;
+    top: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 0;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  .js-toggle--checked .js-toggle-track-check {
+    opacity: 1;
+    transition: opacity 0.25s ease;
+  }
+
+  .js-toggle-track-x {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    right: 5px;
+    top: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 0;
+    opacity: 1;
+    transition: opacity 0.25s ease;
+  }
+
+  .js-toggle--checked .js-toggle-track-x {
+    opacity: 0;
+  }
+
+  .js-toggle-thumb {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    transform: translateX(0);
+  }
+
+  .js-toggle--checked .js-toggle-thumb {
+    transform: translateX(26px);
+    border-color: #ffffff;
+  }
+</style>
+
+<script>
+  var body = document.body;
+  var switcher = document.getElementsByClassName("js-toggle")[0];
+
+  
+  switcher.addEventListener("click", function () {
+    this.classList.toggle("js-toggle--checked");
+    this.classList.add("js-toggle--focus");
+    
+    if (this.classList.contains("js-toggle--checked")) {
+      body.classList.add("dark-mode");
+      
+      localStorage.setItem("darkMode", "true");
+    } else {
+      body.classList.remove("dark-mode");
+      setTimeout(function () {
+        localStorage.removeItem("darkMode");
+      }, 100);
+    }
+  });
+
+  
+  if (localStorage.getItem("darkMode")) {
+    
+    switcher.classList.add("js-toggle--checked");
+    body.classList.add("dark-mode");
+  }
+</script>
+
+   <ul class="sidebar-buttons">
+     
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/categories/development" title="Development">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-code"></i>
+      
+      <span class="sidebar-button-desc">Development</span>
+    </a>
+  </li>
+
+
+   </ul>
+   <ul class="sidebar-buttons">
+     
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haneul-lee.com" target="_blank" rel="noopener" title="Website">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-window-maximize"></i>
+      
+      <span class="sidebar-button-desc">Website</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/resume/" title="Resume">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-file"></i>
+      
+      <span class="sidebar-button-desc">Resume</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://linkedin.com/in/hnlee" target="_blank" rel="noopener" title="LinkedIn">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:lovesky4294@gmail.com" target="_blank" rel="noopener" title="Email">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-envelope"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+   </ul>
+   <ul class="sidebar-buttons">
+     
+
+   </ul>
+ </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title">
+      Strapi &#43; NextJS Blog 블로그 📔
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-09-23T19:06:53&#43;02:00">
+        
+  September 23, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/blog">blog</a>, 
+    
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/nextjs">nextjs</a>, 
+    
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/strapi">strapi</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              
+              
+                
+                
+                <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#strapi--nextjs-blog-블로그-">Strapi + NextJS Blog 블로그 📔</a>
+      <ul>
+        <li><a href="#what-is-strapi-">What is Strapi ?</a></li>
+        <li><a href="#what-is-cms-">What is CMS ?</a></li>
+        <li><a href="#why-strapi-">Why Strapi ?</a></li>
+        <li><a href="#how-to-create-strapi-blog-api">How to create Strapi blog API</a></li>
+        <li><a href="#how-to-create-nextjs-frontend-page">How to create NextJS frontend page</a>
+          <ul>
+            <li><a href="#fetch-data-from-strapi">fetch data from Strapi</a></li>
+            <li><a href="#creating-pages">creating pages</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<p><img src="https://d2zv2ciw0ln4h1.cloudfront.net/uploads/Next_a7b1c0f30b.png" alt=""></p>
+<h1 id="strapi--nextjs-blog-블로그-">Strapi + NextJS Blog 블로그 📔</h1>
+<p>오늘은 <a href="https://strapi.io/">strapi</a>와 nextJS로 블로그를 만드는 방법을 소개하려고 한다.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="3551187766"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h2 id="what-is-strapi-">What is Strapi ?</h2>
+<ul>
+<li>REST API를 쉽게 만들 수 있게 도와주는 Open source Node.js Headless CMS</li>
+<li>특히 MongoDB와의 연결이 가능하고 GraphQL이 기본적으로 제공되기에 편리하게 백엔드 서버를 구축할 수 있다.</li>
+</ul>
+<h2 id="what-is-cms-">What is CMS ?</h2>
+<ul>
+<li>Contents Management System</li>
+<li>인터넷이나 컴퓨터 통신 등을 통하여 제공되는 각종 정보나 그 내용물들을 관리하는 정의된 목적을 달성하기 위한 통합 요소들의 집합체</li>
+</ul>
+<h2 id="why-strapi-">Why Strapi ?</h2>
+<ul>
+<li>관리자 페이지 제공 - 컨텐츠 관리, 모델링</li>
+<li>REST API 및 GraphQL 사용 가능</li>
+<li>다양한 DB연동 - Mongo, postgresql, mysql 등</li>
+<li>커스터마이징 - 원하는 로직으로 코드 수정</li>
+<li>CLI 제공 - API 생성 과 같은 기능을 CLI로 제공</li>
+</ul>
+<h2 id="how-to-create-strapi-blog-api">How to create Strapi blog API</h2>
+<pre tabindex="0"><code>// blog-strapi 폴더 생성 &amp; 이동
+mkdir blog-strapi &amp;&amp; cd blog-strapi
+// Strapi 블로그 템플릿 설치
+yarn create strapi-app backend  --quickstart --template @strapi/template-blog@1.0.0 blog
+// 로컬 서버 실행
+yarn dev
+</code></pre><p>서버를 실행하면 아래 페이지가 뜨고, 가입을 해준다.<br>
+이미 블로그 템플릿에 맞춰 카테고리, 아티클 필드가 생성되어 있고, 몇 개 데이터가 채워져 있다.</p>
+<p><img src="https://d2zv2ciw0ln4h1.cloudfront.net/uploads/nextjs_tutorial_4_6e6e0455ef.png" alt=""></p>
+<p><img src="https://d2zv2ciw0ln4h1.cloudfront.net/uploads/nextjs_tutorial_2_373896d944.png" alt=""></p>
+<h2 id="how-to-create-nextjs-frontend-page">How to create NextJS frontend page</h2>
+<pre tabindex="0"><code>// nextjs 프로젝트 생성
+npx create-next-app frontend
+// 그 외 필요한 라이브러리 설치
+yarn add qs moment react-moment react-markdown
+</code></pre><h3 id="fetch-data-from-strapi">fetch data from Strapi</h3>
+<p><code>./frontend/lib/api.js</code> 파일을 생성하고 아래와 같이 입력해준다.</p>
+<pre tabindex="0"><code>import qs from &quot;qs&quot;;
+
+/**
+ * Get full Strapi URL from path
+ * @param {string} path Path of the URL
+ * @returns {string} Full Strapi URL
+ */
+export function getStrapiURL(path = &quot;&quot;) {
+  return `${
+    process.env.NEXT_PUBLIC_STRAPI_API_URL || &quot;http://localhost:1337&quot;
+  }${path}`;
+}
+
+/**
+ * Helper to make GET requests to Strapi API endpoints
+ * @param {string} path Path of the API route
+ * @param {Object} urlParamsObject URL params object, will be stringified
+ * @param {Object} options Options passed to fetch
+ * @returns Parsed API call response
+ */
+export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
+  // Merge default and user options
+  const mergedOptions = {
+    headers: {
+      &quot;Content-Type&quot;: &quot;application/json&quot;,
+    },
+    ...options,
+  };
+
+  // Build request URL
+  const queryString = qs.stringify(urlParamsObject);
+  const requestUrl = `${getStrapiURL(
+    `/api${path}${queryString ? `?${queryString}` : &quot;&quot;}`
+  )}`;
+
+  // Trigger API call
+  const response = await fetch(requestUrl, mergedOptions);
+
+  // Handle response
+  if (!response.ok) {
+    console.error(response.statusText);
+    throw new Error(`An error occured please try again`);
+  }
+  const data = await response.json();
+  return data;
+}
+</code></pre><p>fetchAPI 함수는 위의 getStrapiURL 함수 덕분에 요청 URL을 가져온다.<br>
+그런 다음 문자열화되고 데이터를 JSON 형식으로 반환하는 일부 매개변수를 사용하여 이 requestUrl에서 fetch 함수를 호출한다.</p>
+<p>Strapi 미디어를 가져오기 위해 <code>./frontend/lib/media.js</code>파일 생성</p>
+<pre tabindex="0"><code>import { getStrapiURL } from &quot;./api&quot;;
+
+export function getStrapiMedia(media) {
+  const { url } = media.data.attributes;
+  const imageUrl = url.startsWith(&quot;/&quot;) ? getStrapiURL(url) : url;
+  return imageUrl;
+}
+</code></pre><p>이 함수는 이미지가 호스팅되는 위치(로컬 컴퓨터 또는 서버에서 호스팅)에 따라 이미지의 올바른 URL을 반환한다.</p>
+<p><code>./frontend/assets/css/style.css</code> 파일 생성 (CSS)</p>
+<pre tabindex="0"><code>a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: Staatliches;
+  font-size: 120px;
+}
+
+#category {
+  font-family: Staatliches;
+  font-weight: 500;
+}
+
+#title {
+  letter-spacing: 0.4px;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.13636;
+}
+
+#banner {
+  margin: 20px;
+  height: 800px;
+}
+
+#editor {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.uk-navbar-container {
+  background: #fff !important;
+  font-family: Staatliches;
+}
+
+img:hover {
+  opacity: 1;
+  transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+</code></pre><p>그리고 next.config.js 파일에 다음 코드를 추가한다.
+추가할 이미지의 도메인 경로를 아래 domains에 넣어주면 된다.</p>
+<pre tabindex="0"><code>module.exports = {
+  reactStrictMode: true,
+  images: {
+    loader: &quot;default&quot;,
+    domains: [&quot;localhost&quot;],
+  },
+};
+</code></pre><h3 id="creating-pages">creating pages</h3>
+<p><code>./frontend/pages/_app.js</code> 파일 생성<br>
+위에서 생성한 fetchAPI 함수를 사용하여 global 데이터를 가져온다.</p>
+<pre tabindex="0"><code>import App from &quot;next/app&quot;;
+import Head from &quot;next/head&quot;;
+import &quot;../assets/css/style.css&quot;;
+import { createContext } from &quot;react&quot;;
+import { fetchAPI } from &quot;../lib/api&quot;;
+import { getStrapiMedia } from &quot;../lib/media&quot;;
+
+// Store Strapi Global object in context
+export const GlobalContext = createContext({});
+
+const MyApp = ({ Component, pageProps }) =&gt; {
+  const { global } = pageProps;
+
+  return (
+    &lt;&gt;
+      &lt;Head&gt;
+        &lt;link
+          rel=&quot;shortcut icon&quot;
+          href={getStrapiMedia(global.attributes.favicon)}
+        /&gt;
+      &lt;/Head&gt;
+      &lt;GlobalContext.Provider value={global.attributes}&gt;
+        &lt;Component {...pageProps} /&gt;
+      &lt;/GlobalContext.Provider&gt;
+    &lt;/&gt;
+  );
+};
+
+// getInitialProps disables automatic static optimization for pages that don't
+// have getStaticProps. So article, category and home pages still get SSG.
+// Hopefully we can replace this with getStaticProps once this issue is fixed:
+// https://github.com/vercel/next.js/discussions/10949
+MyApp.getInitialProps = async (ctx) =&gt; {
+  // Calls page's `getInitialProps` and fills `appProps.pageProps`
+  const appProps = await App.getInitialProps(ctx);
+  // Fetch global site settings from Strapi
+  const globalRes = await fetchAPI(&quot;/global&quot;, {
+    populate: {
+      favicon: &quot;*&quot;,
+      defaultSeo: {
+        populate: &quot;*&quot;,
+      },
+    },
+  });
+  // Pass the data to our page via props
+  return { ...appProps, pageProps: { global: globalRes.data } };
+};
+
+export default MyApp;
+</code></pre><p>다음은 <code>./pages/_document.js</code> 생성하여 폰트를 정의함</p>
+<pre tabindex="0"><code>import Document, { Html, Head, Main, NextScript } from &quot;next/document&quot;;
+
+class MyDocument extends Document {
+  render() {
+    return (
+      &lt;Html&gt;
+        &lt;Head&gt;
+          {/* eslint-disable-next-line */}
+          &lt;link
+            rel=&quot;stylesheet&quot;
+            href=&quot;https://fonts.googleapis.com/css?family=Staatliches&quot;
+          /&gt;
+          &lt;link
+            rel=&quot;stylesheet&quot;
+            href=&quot;https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css&quot;
+          /&gt;
+          &lt;script
+            async
+            src=&quot;https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js&quot;
+          /&gt;
+          &lt;script
+            async
+            src=&quot;https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit-icons.min.js&quot;
+          /&gt;
+          &lt;script
+            async
+            src=&quot;https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js&quot;
+          /&gt;
+        &lt;/Head&gt;
+        &lt;body&gt;
+          &lt;Main /&gt;
+          &lt;NextScript /&gt;
+        &lt;/body&gt;
+      &lt;/Html&gt;
+    );
+  }
+}
+
+export default MyDocument;
+</code></pre><p>다음은 페이지 레이아웃에 필요한 컴포넌트 파일들을 생성한다.<br>
+아래 코드블럭에 파일별 코드가 있음</p>
+<pre tabindex="0"><code>//./frontend/components/nav.js
+import React from &quot;react&quot;;
+import Link from &quot;next/link&quot;;
+
+const Nav = ({ categories }) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;nav className=&quot;uk-navbar-container&quot; data-uk-navbar&gt;
+        &lt;div className=&quot;uk-navbar-left&quot;&gt;
+          &lt;ul className=&quot;uk-navbar-nav&quot;&gt;
+            &lt;li&gt;
+              &lt;Link href=&quot;/&quot;&gt;
+                &lt;a&gt;Strapi Blog&lt;/a&gt;
+              &lt;/Link&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;uk-navbar-right&quot;&gt;
+          &lt;ul className=&quot;uk-navbar-nav&quot;&gt;
+            {categories.map((category) =&gt; {
+              return (
+                &lt;li key={category.id}&gt;
+                  &lt;Link href={`/category/${category.attributes.slug}`}&gt;
+                    &lt;a className=&quot;uk-link-reset&quot;&gt;{category.attributes.name}&lt;/a&gt;
+                  &lt;/Link&gt;
+                &lt;/li&gt;
+              );
+            })}
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Nav;
+
+//./frontend/components/layout.js
+
+import Nav from &quot;./nav&quot;;
+
+const Layout = ({ children, categories, seo }) =&gt; (
+  &lt;&gt;
+    &lt;Nav categories={categories} /&gt;
+    {children}
+  &lt;/&gt;
+);
+
+export default Layout;
+
+// ./frontend/components/seo.js
+
+import Head from &quot;next/head&quot;;
+import { useContext } from &quot;react&quot;;
+import { GlobalContext } from &quot;../pages/_app&quot;;
+import { getStrapiMedia } from &quot;../lib/media&quot;;
+
+const Seo = ({ seo }) =&gt; {
+  const { defaultSeo, siteName } = useContext(GlobalContext);
+  const seoWithDefaults = {
+    ...defaultSeo,
+    ...seo,
+  };
+  const fullSeo = {
+    ...seoWithDefaults,
+    // Add title suffix
+    metaTitle: `${seoWithDefaults.metaTitle} | ${siteName}`,
+    // Get full image URL
+    shareImage: getStrapiMedia(seoWithDefaults.shareImage),
+  };
+
+  return (
+    &lt;Head&gt;
+      {fullSeo.metaTitle &amp;&amp; (
+        &lt;&gt;
+          &lt;title&gt;{fullSeo.metaTitle}&lt;/title&gt;
+          &lt;meta property=&quot;og:title&quot; content={fullSeo.metaTitle} /&gt;
+          &lt;meta name=&quot;twitter:title&quot; content={fullSeo.metaTitle} /&gt;
+        &lt;/&gt;
+      )}
+      {fullSeo.metaDescription &amp;&amp; (
+        &lt;&gt;
+          &lt;meta name=&quot;description&quot; content={fullSeo.metaDescription} /&gt;
+          &lt;meta property=&quot;og:description&quot; content={fullSeo.metaDescription} /&gt;
+          &lt;meta name=&quot;twitter:description&quot; content={fullSeo.metaDescription} /&gt;
+        &lt;/&gt;
+      )}
+      {fullSeo.shareImage &amp;&amp; (
+        &lt;&gt;
+          &lt;meta property=&quot;og:image&quot; content={fullSeo.shareImage} /&gt;
+          &lt;meta name=&quot;twitter:image&quot; content={fullSeo.shareImage} /&gt;
+          &lt;meta name=&quot;image&quot; content={fullSeo.shareImage} /&gt;
+        &lt;/&gt;
+      )}
+      {fullSeo.article &amp;&amp; &lt;meta property=&quot;og:type&quot; content=&quot;article&quot; /&gt;}
+      &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
+    &lt;/Head&gt;
+  );
+};
+
+export default Seo;
+
+// ./frontend/components/image.js
+
+import { getStrapiMedia } from &quot;../lib/media&quot;;
+import NextImage from &quot;next/image&quot;;
+
+const Image = ({ image }) =&gt; {
+  const { alternativeText, width, height } = image.data.attributes;
+
+  return (
+    &lt;NextImage
+      layout=&quot;responsive&quot;
+      width={width}
+      height={height}
+      objectFit=&quot;contain&quot;
+      src={getStrapiMedia(image)}
+      alt={alternativeText || &quot;&quot;}
+    /&gt;
+  );
+};
+
+export default Image;
+
+//./frontend/components/articles.js
+
+import React from &quot;react&quot;;
+import Card from &quot;./card&quot;;
+
+const Articles = ({ articles }) =&gt; {
+  const leftArticlesCount = Math.ceil(articles.length / 5);
+  const leftArticles = articles.slice(0, leftArticlesCount);
+  const rightArticles = articles.slice(leftArticlesCount, articles.length);
+
+  return (
+    &lt;div&gt;
+      &lt;div className=&quot;uk-child-width-1-2@s&quot; data-uk-grid=&quot;true&quot;&gt;
+        &lt;div&gt;
+          {leftArticles.map((article, i) =&gt; {
+            return (
+              &lt;Card
+                article={article}
+                key={`article__left__${article.attributes.slug}`}
+              /&gt;
+            );
+          })}
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;div className=&quot;uk-child-width-1-2@m uk-grid-match&quot; data-uk-grid&gt;
+            {rightArticles.map((article, i) =&gt; {
+              return (
+                &lt;Card
+                  article={article}
+                  key={`article__left__${article.attributes.slug}`}
+                /&gt;
+              );
+            })}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Articles;
+
+// ./frontend/components/card.js
+
+import React from &quot;react&quot;;
+import Link from &quot;next/link&quot;;
+import NextImage from &quot;./image&quot;;
+
+const Card = ({ article }) =&gt; {
+  return (
+    &lt;Link href={`/article/${article.attributes.slug}`}&gt;
+      &lt;a className=&quot;uk-link-reset&quot;&gt;
+        &lt;div className=&quot;uk-card uk-card-muted&quot;&gt;
+          &lt;div className=&quot;uk-card-media-top&quot;&gt;
+            &lt;NextImage image={article.attributes.image} /&gt;
+          &lt;/div&gt;
+          &lt;div className=&quot;uk-card-body&quot;&gt;
+            &lt;p id=&quot;category&quot; className=&quot;uk-text-uppercase&quot;&gt;
+              {article.attributes.category.data.attributes.name}
+            &lt;/p&gt;
+            &lt;p id=&quot;title&quot; className=&quot;uk-text-large&quot;&gt;
+              {article.attributes.title}
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/Link&gt;
+  );
+};
+
+export default Card;
+
+// ./frontend/pages/index.js
+
+import React from &quot;react&quot;;
+import Articles from &quot;../components/articles&quot;;
+import Layout from &quot;../components/layout&quot;;
+import Seo from &quot;../components/seo&quot;;
+import { fetchAPI } from &quot;../lib/api&quot;;
+
+const Home = ({ articles, categories, homepage }) =&gt; {
+  return (
+    &lt;Layout categories={categories}&gt;
+      &lt;Seo seo={homepage.attributes.seo} /&gt;
+      &lt;div className=&quot;uk-section&quot;&gt;
+        &lt;div className=&quot;uk-container uk-container-large&quot;&gt;
+          &lt;h1&gt;{homepage.attributes.hero.title}&lt;/h1&gt;
+          &lt;Articles articles={articles} /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/Layout&gt;
+  );
+};
+
+export async function getStaticProps() {
+  // Run API calls in parallel
+  const [articlesRes, categoriesRes, homepageRes] = await Promise.all([
+    fetchAPI(&quot;/articles&quot;, { populate: [&quot;image&quot;, &quot;category&quot;] }),
+    fetchAPI(&quot;/categories&quot;, { populate: &quot;*&quot; }),
+    fetchAPI(&quot;/homepage&quot;, {
+      populate: {
+        hero: &quot;*&quot;,
+        seo: { populate: &quot;*&quot; },
+      },
+    }),
+  ]);
+
+  return {
+    props: {
+      articles: articlesRes.data,
+      categories: categoriesRes.data,
+      homepage: homepageRes.data,
+    },
+    revalidate: 1,
+  };
+}
+
+export default Home;
+
+// ./frontend/pages/article/[slug].js
+
+import Moment from &quot;react-moment&quot;;
+import ReactMarkdown from &quot;react-markdown&quot;;
+
+import Seo from &quot;../../components/seo&quot;;
+import Layout from &quot;../../components/layout&quot;;
+
+import { fetchAPI } from &quot;../../lib/api&quot;;
+import { getStrapiMedia } from &quot;../../lib/media&quot;;
+
+const Article = ({ article, categories }) =&gt; {
+  const imageUrl = getStrapiMedia(article.attributes.image);
+
+  const seo = {
+    metaTitle: article.attributes.title,
+    metaDescription: article.attributes.description,
+    shareImage: article.attributes.image,
+    article: true,
+  };
+
+  return (
+    &lt;Layout categories={categories.data}&gt;
+      &lt;Seo seo={seo} /&gt;
+      &lt;div
+        id=&quot;banner&quot;
+        className=&quot;uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin&quot;
+        data-src={imageUrl}
+        data-srcset={imageUrl}
+        data-uk-img
+      &gt;
+        &lt;h1&gt;{article.attributes.title}&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div className=&quot;uk-section&quot;&gt;
+        &lt;div className=&quot;uk-container uk-container-small&quot;&gt;
+          &lt;ReactMarkdown children={article.attributes.content} /&gt;
+          &lt;hr className=&quot;uk-divider-small&quot; /&gt;
+          &lt;div className=&quot;uk-grid-small uk-flex-left&quot; data-uk-grid=&quot;true&quot;&gt;
+            &lt;div&gt;
+              {article.attributes.author.data.attributes.picture &amp;&amp; (
+                &lt;img
+                  src={getStrapiMedia(
+                    article.attributes.author.data.attributes.picture
+                  )}
+                  alt={
+                    article.attributes.author.data.attributes.picture.data
+                      .attributes.alternativeText
+                  }
+                  style={{
+                    position: &quot;static&quot;,
+                    borderRadius: &quot;20%&quot;,
+                    height: 60,
+                  }}
+                /&gt;
+              )}
+            &lt;/div&gt;
+            &lt;div className=&quot;uk-width-expand&quot;&gt;
+              &lt;p className=&quot;uk-margin-remove-bottom&quot;&gt;
+                By {article.attributes.author.data.attributes.name}
+              &lt;/p&gt;
+              &lt;p className=&quot;uk-text-meta uk-margin-remove-top&quot;&gt;
+                &lt;Moment format=&quot;MMM Do YYYY&quot;&gt;
+                  {article.attributes.published_at}
+                &lt;/Moment&gt;
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/Layout&gt;
+  );
+};
+
+export async function getStaticPaths() {
+  const articlesRes = await fetchAPI(&quot;/articles&quot;, { fields: [&quot;slug&quot;] });
+
+  return {
+    paths: articlesRes.data.map((article) =&gt; ({
+      params: {
+        slug: article.attributes.slug,
+      },
+    })),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const articlesRes = await fetchAPI(&quot;/articles&quot;, {
+    filters: {
+      slug: params.slug,
+    },
+    populate: [&quot;image&quot;, &quot;category&quot;, &quot;author.picture&quot;],
+  });
+  const categoriesRes = await fetchAPI(&quot;/categories&quot;);
+
+  return {
+    props: { article: articlesRes.data[0], categories: categoriesRes },
+    revalidate: 1,
+  };
+}
+
+export default Article;
+
+// ./frontend/pages/category/[slug].js
+
+import Seo from &quot;../../components/seo&quot;;
+import Layout from &quot;../../components/layout&quot;;
+import Articles from &quot;../../components/articles&quot;;
+
+import { fetchAPI } from &quot;../../lib/api&quot;;
+
+const Category = ({ category, categories }) =&gt; {
+  const seo = {
+    metaTitle: category.attributes.name,
+    metaDescription: `All ${category.attributes.name} articles`,
+  };
+
+  return (
+    &lt;Layout categories={categories.data}&gt;
+      &lt;Seo seo={seo} /&gt;
+      &lt;div className=&quot;uk-section&quot;&gt;
+        &lt;div className=&quot;uk-container uk-container-large&quot;&gt;
+          &lt;h1&gt;{category.attributes.name}&lt;/h1&gt;
+          &lt;Articles articles={category.attributes.articles.data} /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/Layout&gt;
+  );
+};
+
+export async function getStaticPaths() {
+  const categoriesRes = await fetchAPI(&quot;/categories&quot;, { fields: [&quot;slug&quot;] });
+
+  return {
+    paths: categoriesRes.data.map((category) =&gt; ({
+      params: {
+        slug: category.attributes.slug,
+      },
+    })),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const matchingCategories = await fetchAPI(&quot;/categories&quot;, {
+    filters: { slug: params.slug },
+    populate: {
+      articles: {
+        populate: &quot;*&quot;,
+      },
+    },
+  });
+  const allCategories = await fetchAPI(&quot;/categories&quot;);
+
+  return {
+    props: {
+      category: matchingCategories.data[0],
+      categories: allCategories,
+    },
+    revalidate: 1,
+  };
+}
+
+export default Category;
+
+</code></pre><ul>
+<li>SEO 에 필요한 메타태그 생성 및 기본 이미지 설정</li>
+<li>아티클 페이지 생성
+<ul>
+<li>getStaticPaths로 지정된 모든 경로를 사전에 렌더링</li>
+<li>getStaticProps로 아티클 날짜 및 카테고리를 fetchAPI로 가져와서 props 정의</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://assets.strapi.io/uploads/Capture-d-e-cran-2020-01-29-a--16.53.48--1-.png_8a775dfc1a.png" alt=""></p>
+<div class="alert info ">
+  <p>Strapi 튜토리얼을 통해 NextJS와 함께 멋진 블로그를 만들 수 있다!<br>
+아래 참고 페이지에서 다양한 튜토리얼을 볼 수 있으므로 하나씩 읽어보는것도 Strapi를 연습하는데 좋을 것 같다</p>
+</div>
+<hr>
+<p>참고 :<br>
+<a href="https://strapi.io/">https://strapi.io/</a>,<br>
+<a href="https://strapi.io/blog/categories/tutorials?type=v4">Strapi tutorial</a>,<br>
+<a href="https://strapi.io/blog/build-a-blog-with-next-react-js-strapi">https://strapi.io/blog/build-a-blog-with-next-react-js-strapi</a></p>
+
+              
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+            <a href="https://www.buymeacoffee.com/haneullee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;">
+</a>
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/development/">development</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/front-end/">front-end</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/strapi-&#43;-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/">Strapi &#43; NextJS Blog 블로그</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/strapi/">strapi</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/nextjs/">nextjs</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/blog/">blog</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/nextjs%EB%B8%94%EB%A1%9C%EA%B7%B8/">nextjs블로그</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/%EC%8A%A4%ED%8A%B8%EB%9D%BC%ED%94%BC%EB%B8%94%EB%A1%9C%EA%B7%B8/">스트라피블로그</a>
+
+  <a class="tag tag--primary tag--small" href="https://blog.haneul-lee.com/tags/strapi%EB%9E%80/">strapi란</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/pattern/singleton/" data-tooltip="Singleton 싱글턴 패턴" aria-label="PREVIOUS: Singleton 싱글턴 패턴">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.haneul-lee.com/post/blog/strapi-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.haneul-lee.com/post/blog/strapi-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.haneul-lee.com/post/blog/strapi-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/sharing/share?url=https://blog.haneul-lee.com/post/blog/strapi-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/" title="Share on Google&#43;" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="Table of Contents">
+      <i class="fa fa-list" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+              
+            
+            <div style="margin-top:20px;">
+    <script src="https://utteranc.es/client.js"
+        repo="haneulee/blog-comment"
+        issue-term="pathname"
+        label="✨💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+</div>
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7146914144035062"
+     data-ad-slot="5041197559"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <span class="copyrights">
+      &copy; 2022 <a href="https://github.com/haneulee">Haneul Lee</a>. All Rights Reserved
+    </span>
+  </footer>
+  
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.haneul-lee.com/post/pattern/singleton/" data-tooltip="Singleton 싱글턴 패턴" aria-label="PREVIOUS: Singleton 싱글턴 패턴">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.haneul-lee.com/post/blog/strapi-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.haneul-lee.com/post/blog/strapi-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://blog.haneul-lee.com/post/blog/strapi-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/sharing/share?url=https://blog.haneul-lee.com/post/blog/strapi-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/" title="Share on Google&#43;" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="Table of Contents">
+      <i class="fa fa-list" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fblog%2Fstrapi-nextjs-blog-%25EB%25B8%2594%25EB%25A1%259C%25EA%25B7%25B8%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fblog%2Fstrapi-nextjs-blog-%25EB%25B8%2594%25EB%25A1%259C%25EA%25B7%25B8%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fblog%2Fstrapi-nextjs-blog-%25EB%25B8%2594%25EB%25A1%259C%25EA%25B7%25B8%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/sharing/share?url=https%3A%2F%2Fblog.haneul-lee.com%2Fpost%2Fblog%2Fstrapi-nextjs-blog-%25EB%25B8%2594%25EB%25A1%259C%25EA%25B7%25B8%2F" aria-label="Share on Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/profile.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Haneul Devlog</h4>
+    
+      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Switzerland
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://blog.haneul-lee.com/js/script-e762xkfaovcapl2uwfeylo4rjghsbcfq5l9tyksr2hv4tu9ym3wt4tkkl5o.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

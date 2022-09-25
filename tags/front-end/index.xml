@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 23 Sep 2022 19:06:53 +0200</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/front-end/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Strapi &#43; NextJS Blog 블로그 📔</title>
-      <link>https://blog.haneul-lee.com/post/blog/strapi-blog/</link>
+      <link>https://blog.haneul-lee.com/post/blog/strapi-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/</link>
       <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
       
-      <guid>https://blog.haneul-lee.com/post/blog/strapi-blog/</guid>
+      <guid>https://blog.haneul-lee.com/post/blog/strapi-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/</guid>
       <description>Strapi + NextJS Blog 블로그 📔 오늘은 strapi와 nextJS로 블로그를 만드는 방법을 소개하려고 한다.
  What is Strapi ?  REST API를 쉽게 만들 수 있게 도와주는 Open source Node.js Headless CMS 특히 MongoDB와의 연결이 가능하고 GraphQL이 기본적으로 제공되기에 편리하게 백엔드 서버를 구축할 수 있다.  What is CMS ?  Contents Management System 인터넷이나 컴퓨터 통신 등을 통하여 제공되는 각종 정보나 그 내용물들을 관리하는 정의된 목적을 달성하기 위한 통합 요소들의 집합체  Why Strapi ?</description>
     </item>
