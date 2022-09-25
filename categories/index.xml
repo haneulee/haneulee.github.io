@@ -6,13 +6,40 @@
     <description>Recent content in Categories on Haneul Devlog 개발 블로그 📚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 21 Sep 2022 19:00:39 +0200</lastBuildDate><atom:link href="https://blog.haneul-lee.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Sep 2022 19:06:53 +0200</lastBuildDate><atom:link href="https://blog.haneul-lee.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blog</title>
+      <link>https://blog.haneul-lee.com/categories/blog/</link>
+      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/categories/blog/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>development</title>
       <link>https://blog.haneul-lee.com/categories/development/</link>
-      <pubDate>Wed, 21 Sep 2022 19:00:39 +0200</pubDate>
+      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
       
       <guid>https://blog.haneul-lee.com/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nextjs</title>
+      <link>https://blog.haneul-lee.com/categories/nextjs/</link>
+      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/categories/nextjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>strapi</title>
+      <link>https://blog.haneul-lee.com/categories/strapi/</link>
+      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/categories/strapi/</guid>
       <description></description>
     </item>
     
@@ -53,15 +80,6 @@
     </item>
     
     <item>
-      <title>blog</title>
-      <link>https://blog.haneul-lee.com/categories/blog/</link>
-      <pubDate>Thu, 10 Jun 2021 15:39:20 +0900</pubDate>
-      
-      <guid>https://blog.haneul-lee.com/categories/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>mongoDB</title>
       <link>https://blog.haneul-lee.com/categories/mongodb/</link>
       <pubDate>Fri, 04 Jun 2021 10:03:44 +0900</pubDate>
@@ -85,15 +103,6 @@
       <pubDate>Mon, 31 May 2021 13:11:16 +0900</pubDate>
       
       <guid>https://blog.haneul-lee.com/categories/pug/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nextjs</title>
-      <link>https://blog.haneul-lee.com/categories/nextjs/</link>
-      <pubDate>Sun, 30 May 2021 16:51:26 +0900</pubDate>
-      
-      <guid>https://blog.haneul-lee.com/categories/nextjs/</guid>
       <description></description>
     </item>
     

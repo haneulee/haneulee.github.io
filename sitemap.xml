@@ -2,22 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.haneul-lee.com/categories/</loc>
-    <lastmod>2022-09-21T19:00:39+02:00</lastmod>
+    <loc>https://blog.haneul-lee.com/tags/blog/</loc>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
   </url><url>
-    <loc>https://blog.haneul-lee.com/tags/design-pattern/</loc>
-    <lastmod>2022-09-21T19:00:39+02:00</lastmod>
+    <loc>https://blog.haneul-lee.com/categories/blog/</loc>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/categories/</loc>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/tags/development/</loc>
-    <lastmod>2022-09-21T19:00:39+02:00</lastmod>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/categories/development/</loc>
-    <lastmod>2022-09-21T19:00:39+02:00</lastmod>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/tags/front-end/</loc>
-    <lastmod>2022-09-21T19:00:39+02:00</lastmod>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/</loc>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/nextjs/</loc>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/categories/nextjs/</loc>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/nextjs%EB%B8%94%EB%A1%9C%EA%B7%B8/</loc>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/post/</loc>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/strapi/</loc>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/categories/strapi/</loc>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/strapi-&#43;-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/</loc>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/post/blog/strapi-blog/</loc>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/strapi%EB%9E%80/</loc>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/</loc>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/%EC%8A%A4%ED%8A%B8%EB%9D%BC%ED%94%BC%EB%B8%94%EB%A1%9C%EA%B7%B8/</loc>
+    <lastmod>2022-09-23T19:06:53+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/design-pattern/</loc>
     <lastmod>2022-09-21T19:00:39+02:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/tags/javascript/</loc>
@@ -29,16 +68,10 @@
     <loc>https://blog.haneul-lee.com/categories/pattern/</loc>
     <lastmod>2022-09-21T19:00:39+02:00</lastmod>
   </url><url>
-    <loc>https://blog.haneul-lee.com/post/</loc>
-    <lastmod>2022-09-21T19:00:39+02:00</lastmod>
-  </url><url>
     <loc>https://blog.haneul-lee.com/tags/singleton/</loc>
     <lastmod>2022-09-21T19:00:39+02:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/post/pattern/singleton/</loc>
-    <lastmod>2022-09-21T19:00:39+02:00</lastmod>
-  </url><url>
-    <loc>https://blog.haneul-lee.com/tags/</loc>
     <lastmod>2022-09-21T19:00:39+02:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/tags/%EC%8B%B1%EA%B8%80%ED%84%B4/</loc>
@@ -49,9 +82,6 @@
   </url><url>
     <loc>https://blog.haneul-lee.com/tags/%ED%8C%A8%ED%84%B4/</loc>
     <lastmod>2022-09-21T19:00:39+02:00</lastmod>
-  </url><url>
-    <loc>https://blog.haneul-lee.com/tags/blog/</loc>
-    <lastmod>2022-03-16T10:22:01+01:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/tags/dns/</loc>
     <lastmod>2022-03-16T10:22:01+01:00</lastmod>
@@ -222,9 +252,6 @@
     <lastmod>2021-08-07T02:54:15+09:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/post/unittest/jest-frontend-test/</loc>
-    <lastmod>2021-08-07T02:54:15+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.haneul-lee.com/tags/nextjs/</loc>
     <lastmod>2021-08-07T02:54:15+09:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/tags/tdd/</loc>
@@ -458,9 +485,6 @@
     <loc>https://blog.haneul-lee.com/tags/adsense/</loc>
     <lastmod>2021-06-10T15:39:20+09:00</lastmod>
   </url><url>
-    <loc>https://blog.haneul-lee.com/categories/blog/</loc>
-    <lastmod>2021-06-10T15:39:20+09:00</lastmod>
-  </url><url>
     <loc>https://blog.haneul-lee.com/tags/githup/</loc>
     <lastmod>2021-06-10T15:39:20+09:00</lastmod>
   </url><url>
@@ -534,9 +558,6 @@
     <lastmod>2021-05-31T13:11:16+09:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/tags/document/</loc>
-    <lastmod>2021-05-30T16:51:26+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.haneul-lee.com/categories/nextjs/</loc>
     <lastmod>2021-05-30T16:51:26+09:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/post/nextjs/document-is-undefined/</loc>

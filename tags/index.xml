@@ -6,20 +6,20 @@
     <description>Recent content in Tags on Haneul Devlog 개발 블로그 📚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 21 Sep 2022 19:00:39 +0200</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Sep 2022 19:06:53 +0200</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>design pattern</title>
-      <link>https://blog.haneul-lee.com/tags/design-pattern/</link>
-      <pubDate>Wed, 21 Sep 2022 19:00:39 +0200</pubDate>
+      <title>blog</title>
+      <link>https://blog.haneul-lee.com/tags/blog/</link>
+      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
       
-      <guid>https://blog.haneul-lee.com/tags/design-pattern/</guid>
+      <guid>https://blog.haneul-lee.com/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>development</title>
       <link>https://blog.haneul-lee.com/tags/development/</link>
-      <pubDate>Wed, 21 Sep 2022 19:00:39 +0200</pubDate>
+      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
       
       <guid>https://blog.haneul-lee.com/tags/development/</guid>
       <description></description>
@@ -28,9 +28,72 @@
     <item>
       <title>front-end</title>
       <link>https://blog.haneul-lee.com/tags/front-end/</link>
-      <pubDate>Wed, 21 Sep 2022 19:00:39 +0200</pubDate>
+      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
       
       <guid>https://blog.haneul-lee.com/tags/front-end/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nextjs</title>
+      <link>https://blog.haneul-lee.com/tags/nextjs/</link>
+      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/nextjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nextjs블로그</title>
+      <link>https://blog.haneul-lee.com/tags/nextjs%EB%B8%94%EB%A1%9C%EA%B7%B8/</link>
+      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/nextjs%EB%B8%94%EB%A1%9C%EA%B7%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>strapi</title>
+      <link>https://blog.haneul-lee.com/tags/strapi/</link>
+      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/strapi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Strapi &#43; NextJS Blog 블로그</title>
+      <link>https://blog.haneul-lee.com/tags/strapi-&#43;-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/</link>
+      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/strapi-&#43;-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>strapi란</title>
+      <link>https://blog.haneul-lee.com/tags/strapi%EB%9E%80/</link>
+      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/strapi%EB%9E%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>스트라피블로그</title>
+      <link>https://blog.haneul-lee.com/tags/%EC%8A%A4%ED%8A%B8%EB%9D%BC%ED%94%BC%EB%B8%94%EB%A1%9C%EA%B7%B8/</link>
+      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/%EC%8A%A4%ED%8A%B8%EB%9D%BC%ED%94%BC%EB%B8%94%EB%A1%9C%EA%B7%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design pattern</title>
+      <link>https://blog.haneul-lee.com/tags/design-pattern/</link>
+      <pubDate>Wed, 21 Sep 2022 19:00:39 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/design-pattern/</guid>
       <description></description>
     </item>
     
@@ -85,15 +148,6 @@
       <pubDate>Wed, 21 Sep 2022 19:00:39 +0200</pubDate>
       
       <guid>https://blog.haneul-lee.com/tags/%ED%8C%A8%ED%84%B4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>https://blog.haneul-lee.com/tags/blog/</link>
-      <pubDate>Wed, 16 Mar 2022 10:22:01 +0100</pubDate>
-      
-      <guid>https://blog.haneul-lee.com/tags/blog/</guid>
       <description></description>
     </item>
     
@@ -499,15 +553,6 @@
       <pubDate>Sat, 07 Aug 2021 02:54:15 +0900</pubDate>
       
       <guid>https://blog.haneul-lee.com/tags/jest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nextjs</title>
-      <link>https://blog.haneul-lee.com/tags/nextjs/</link>
-      <pubDate>Sat, 07 Aug 2021 02:54:15 +0900</pubDate>
-      
-      <guid>https://blog.haneul-lee.com/tags/nextjs/</guid>
       <description></description>
     </item>
     
