@@ -20,10 +20,10 @@
     
     <item>
       <title>브라우저 세션 &amp; 쿠키 Browser Session &amp; cookies 🍪</title>
-      <link>https://blog.haneul-lee.com/post/browser/session-start/</link>
+      <link>https://blog.haneul-lee.com/post/browser/browser-session-cookies-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%B8%EC%85%98-%EC%BF%A0%ED%82%A4/</link>
       <pubDate>Fri, 11 Jun 2021 13:50:39 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/post/browser/session-start/</guid>
+      <guid>https://blog.haneul-lee.com/post/browser/browser-session-cookies-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%B8%EC%85%98-%EC%BF%A0%ED%82%A4/</guid>
       <description>브라우저 세션 Browser Session Session  브라우저와 백엔드 사이의 memory or history 쿠키는 상태 데이터를 클라이언트에 저장했다면, 세션은 서버에 저장 세션은 기본적으로는 쿠키를 사용하지만 세션 id만 쿠키로 저장하고, 상태 데이터들은 세션 id를 id로하여 서버에 저장한다.  stateless server side에 client와 server의 동작, 상태정보를 저장하지 않는 형태, server의 응답이 client와의 세션 상태와 독립적임 장점 : 서버가 client정보를 저장관리 하지 않으므로 Scaling이 자유로움
 ex) UDP / HTTP : UDP는 TCP와 달리 Client의 세션 상태와 관계 없이 요청에 대한 응답만을 수행하고, server가 client의 정보를 저장하지 않는다.</description>
     </item>

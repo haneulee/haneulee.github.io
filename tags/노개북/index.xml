@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 24 Jan 2022 00:45:22 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/%EB%85%B8%EA%B0%9C%EB%B6%81/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[노개북] Today I Read - 클린코드 - Day 3 📕</title>
-      <link>https://blog.haneul-lee.com/post/book/clean-code-03/</link>
+      <link>https://blog.haneul-lee.com/post/book/today-i-read-%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-day3/</link>
       <pubDate>Mon, 24 Jan 2022 00:45:22 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/post/book/clean-code-03/</guid>
+      <guid>https://blog.haneul-lee.com/post/book/today-i-read-%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-day3/</guid>
       <description>[노개북] Today I Read - 클린코드 - Day 3 📕 🔖 오늘 읽은 범위 : 1장 깨끗한 코드 (끝까지)
   😃 책에서 기억하고 싶은 내용을 써보세요. C++ 창시자 의존성을 최대한 줄여야 유지보수가 쉬워진다
 깨끗한 코드란 한가지를 잘한다고 단언한다
@@ -24,10 +24,10 @@
     
     <item>
       <title>[노개북] Today I Read - 클린코드 - Day 2 📕</title>
-      <link>https://blog.haneul-lee.com/post/book/clean-code-02/</link>
+      <link>https://blog.haneul-lee.com/post/book/today-i-read-%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-day2/</link>
       <pubDate>Sat, 22 Jan 2022 10:56:43 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/post/book/clean-code-02/</guid>
+      <guid>https://blog.haneul-lee.com/post/book/today-i-read-%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-day2/</guid>
       <description>[노개북] Today I Read - 클린코드 - Day 2 📕 🔖 오늘 읽은 범위 : 1장 깨끗한 코드 (~ p.8)
   😃 책에서 기억하고 싶은 내용을 써보세요. 혹자는 코드는 더 이상 문제가 아니라고 모델이나 요구사항이 집중 해야 한다고 생각한다
 그러나 코드가 사라질 가망은 전혀 없다
@@ -37,10 +37,10 @@
     
     <item>
       <title>[노개북] Today I Read - 클린코드 - Day 1 📕</title>
-      <link>https://blog.haneul-lee.com/post/book/clean-code-01/</link>
+      <link>https://blog.haneul-lee.com/post/book/today-i-read-%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-day1/</link>
       <pubDate>Sat, 22 Jan 2022 10:34:19 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/post/book/clean-code-01/</guid>
+      <guid>https://blog.haneul-lee.com/post/book/today-i-read-%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C-day1/</guid>
       <description>[노개북] Today I Read - 클린코드 - Day 1 📕 🔖 오늘 읽은 범위 : 추천사 &amp;amp; 들어가면서
   😃 책에서 기억하고 싶은 내용을 써보세요. [장인정신]
  장인에게 필요한 원칙, 패턴, 기법, 경험이라는 지식을 습득 해야 한다 열심히 일하고 연습해 지식을 몸과 마음으로 채택해야 한다  깨끗한 코드를 작성 하는 방법은 배우기 어렵다

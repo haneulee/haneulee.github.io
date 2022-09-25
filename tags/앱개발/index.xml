@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 18 May 2021 12:40:39 +0900</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/%EC%95%B1%EA%B0%9C%EB%B0%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>플러터(flutter) 설치</title>
-      <link>https://blog.haneul-lee.com/post/flutter/flutter-install/</link>
+      <link>https://blog.haneul-lee.com/post/flutter/flutter-install-%ED%94%8C%EB%9F%AC%ED%84%B0-%EC%84%A4%EC%B9%98/</link>
       <pubDate>Tue, 18 May 2021 12:40:39 +0900</pubDate>
       
-      <guid>https://blog.haneul-lee.com/post/flutter/flutter-install/</guid>
+      <guid>https://blog.haneul-lee.com/post/flutter/flutter-install-%ED%94%8C%EB%9F%AC%ED%84%B0-%EC%84%A4%EC%B9%98/</guid>
       <description>플러터 Flutter 📱 flutter-ko.dev/docs/get-started/install/macos
 플러터 설치 방법은 아래와 같이 2가지가 있다.    플러터 sdk로 설치하기 git clone 으로 설치하기  github.com/flutter/flutter.git    다음은 아래와 같이 flutter PATH 설정하기 cd vi .bash_profile export PATH=&amp;quot;$HOME/Desktop/flutter/bin:$PATH&amp;quot; :wq로 저장 후 source .bash_profile을 사용하여 적용시켜준다.
 플러터 디렉토리 경로로 가서 pwd 로 경로 찾아서 설정해줘도 됨
