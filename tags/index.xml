@@ -6,31 +6,139 @@
     <description>Recent content in Tags on Haneul Devlog 개발 블로그 📚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 23 Sep 2022 19:06:53 +0200</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Sep 2022 20:42:29 +0200</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>blog</title>
-      <link>https://blog.haneul-lee.com/tags/blog/</link>
-      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
+      <title>backend</title>
+      <link>https://blog.haneul-lee.com/tags/backend/</link>
+      <pubDate>Mon, 26 Sep 2022 20:42:29 +0200</pubDate>
       
-      <guid>https://blog.haneul-lee.com/tags/blog/</guid>
+      <guid>https://blog.haneul-lee.com/tags/backend/</guid>
       <description></description>
     </item>
     
     <item>
       <title>development</title>
       <link>https://blog.haneul-lee.com/tags/development/</link>
-      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
+      <pubDate>Mon, 26 Sep 2022 20:42:29 +0200</pubDate>
       
       <guid>https://blog.haneul-lee.com/tags/development/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>django</title>
+      <link>https://blog.haneul-lee.com/tags/django/</link>
+      <pubDate>Mon, 26 Sep 2022 20:42:29 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Django Backend 장고 백엔드 개발</title>
+      <link>https://blog.haneul-lee.com/tags/django-backend-%EC%9E%A5%EA%B3%A0-%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C/</link>
+      <pubDate>Mon, 26 Sep 2022 20:42:29 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/django-backend-%EC%9E%A5%EA%B3%A0-%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>front-end</title>
       <link>https://blog.haneul-lee.com/tags/front-end/</link>
-      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
+      <pubDate>Mon, 26 Sep 2022 20:42:29 +0200</pubDate>
       
       <guid>https://blog.haneul-lee.com/tags/front-end/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>model-view-template</title>
+      <link>https://blog.haneul-lee.com/tags/model-view-template/</link>
+      <pubDate>Mon, 26 Sep 2022 20:42:29 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/model-view-template/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MVT</title>
+      <link>https://blog.haneul-lee.com/tags/mvt/</link>
+      <pubDate>Mon, 26 Sep 2022 20:42:29 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/mvt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>poetry</title>
+      <link>https://blog.haneul-lee.com/tags/poetry/</link>
+      <pubDate>Mon, 26 Sep 2022 20:42:29 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/poetry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://blog.haneul-lee.com/tags/python/</link>
+      <pubDate>Mon, 26 Sep 2022 20:42:29 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtual environments</title>
+      <link>https://blog.haneul-lee.com/tags/virtual-environments/</link>
+      <pubDate>Mon, 26 Sep 2022 20:42:29 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/virtual-environments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web develop</title>
+      <link>https://blog.haneul-lee.com/tags/web-develop/</link>
+      <pubDate>Mon, 26 Sep 2022 20:42:29 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/web-develop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>백엔드</title>
+      <link>https://blog.haneul-lee.com/tags/%EB%B0%B1%EC%97%94%EB%93%9C/</link>
+      <pubDate>Mon, 26 Sep 2022 20:42:29 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/%EB%B0%B1%EC%97%94%EB%93%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>장고</title>
+      <link>https://blog.haneul-lee.com/tags/%EC%9E%A5%EA%B3%A0/</link>
+      <pubDate>Mon, 26 Sep 2022 20:42:29 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/%EC%9E%A5%EA%B3%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>파이썬</title>
+      <link>https://blog.haneul-lee.com/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/</link>
+      <pubDate>Mon, 26 Sep 2022 20:42:29 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/%ED%8C%8C%EC%9D%B4%EC%8D%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://blog.haneul-lee.com/tags/blog/</link>
+      <pubDate>Fri, 23 Sep 2022 19:06:53 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/tags/blog/</guid>
       <description></description>
     </item>
     

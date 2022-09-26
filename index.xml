@@ -6,7 +6,17 @@
     <description>Recent content on Haneul Devlog 개발 블로그 📚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 23 Sep 2022 19:06:53 +0200</lastBuildDate><atom:link href="https://blog.haneul-lee.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Sep 2022 20:42:29 +0200</lastBuildDate><atom:link href="https://blog.haneul-lee.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Django Backend 장고 백엔드 개발 🤠</title>
+      <link>https://blog.haneul-lee.com/post/django/django-backend-%EC%9E%A5%EA%B3%A0-%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C/</link>
+      <pubDate>Mon, 26 Sep 2022 20:42:29 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/post/django/django-backend-%EC%9E%A5%EA%B3%A0-%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C/</guid>
+      <description>Django Backend 장고 백엔드 개발 🤠  Django 장고 란? Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
+Djano란 보안이 우수하고 유지보수가 편리한 웹사이트를 신속하게 개발하는 하도록 도움을 주는 파이썬 웹 프레임워크</description>
+    </item>
+    
     <item>
       <title>Strapi &#43; NextJS Blog 블로그 📔</title>
       <link>https://blog.haneul-lee.com/post/blog/strapi-nextjs-blog-%EB%B8%94%EB%A1%9C%EA%B7%B8/</link>
