@@ -6,7 +6,16 @@
     <description>Recent content on Haneul Devlog 개발 블로그 📚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 26 Sep 2022 20:42:29 +0200</lastBuildDate><atom:link href="https://blog.haneul-lee.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Oct 2022 13:22:12 +0200</lastBuildDate><atom:link href="https://blog.haneul-lee.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>리액트 뒤로가기 Bfcache</title>
+      <link>https://blog.haneul-lee.com/post/react/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%92%A4%EB%A1%9C%EA%B0%80%EA%B8%B0-bfcache/</link>
+      <pubDate>Thu, 06 Oct 2022 13:22:12 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/post/react/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%92%A4%EB%A1%9C%EA%B0%80%EA%B8%B0-bfcache/</guid>
+      <description>리액트 뒤로가기 Bfcache 처리하기  BF cache 란 ?  bfcache는 인메모리 캐시로, 자바스크립트 힙까지 포함해 페이지 전체를 완전히 캐시로 저장해버리는 것을 의미한다. 전체 페이지가 메모리 안에 있기 때문에, 사용자가 이전페이지로 돌아가고자 했을 때 빠르게 전체 페이지를 보여줄 수 있다.    이슈  사용자가 로그아웃 후에 뒤로가기 버튼을 클릭하여 전 페이지로 돌아왔을 때 BF cache 때문에 서버에서 리소스를 다운로드 하지 않아 authentication 체크하는 부분이 실행되지 않음 로그아웃을 하고 뒤로가기를 하면 사용자가 이용하던 페이지를 볼 수 없게 하거나 로그인 페이지로 이동해야 함  해결방법 const pageShowHandler = useCallback( (event: PageTransitionEvent) =&amp;gt; { if (event.</description>
+    </item>
+    
     <item>
       <title>Django Backend 장고 백엔드 개발 🤠</title>
       <link>https://blog.haneul-lee.com/post/django/django-backend-%EC%9E%A5%EA%B3%A0-%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C/</link>
