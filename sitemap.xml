@@ -44,6 +44,27 @@
     <loc>https://blog.haneul-lee.com/post/react/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%92%A4%EB%A1%9C%EA%B0%80%EA%B8%B0-bfcache/</loc>
     <lastmod>2022-10-06T13:22:12+02:00</lastmod>
   </url><url>
+    <loc>https://blog.haneul-lee.com/tags/back-end/</loc>
+    <lastmod>2022-10-05T21:36:47+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/concurrency/</loc>
+    <lastmod>2022-10-05T21:36:47+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/golang/</loc>
+    <lastmod>2022-10-05T21:36:47+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/google/</loc>
+    <lastmod>2022-10-05T21:36:47+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/goroutine/</loc>
+    <lastmod>2022-10-05T21:36:47+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/%EA%B3%A0%EB%9E%AD%EC%9D%B4%EB%9E%80-golang/</loc>
+    <lastmod>2022-10-05T21:36:47+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/post/go/%EA%B3%A0%EB%9E%AD%EC%9D%B4%EB%9E%80-golang/</loc>
+    <lastmod>2022-10-05T21:36:47+02:00</lastmod>
+  </url><url>
     <loc>https://blog.haneul-lee.com/tags/backend/</loc>
     <lastmod>2022-09-26T20:42:29+02:00</lastmod>
   </url><url>
@@ -549,9 +570,6 @@
     <lastmod>2021-06-10T15:39:20+09:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/tags/githup/</loc>
-    <lastmod>2021-06-10T15:39:20+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.haneul-lee.com/tags/google/</loc>
     <lastmod>2021-06-10T15:39:20+09:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/tags/hugo/</loc>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on Haneul Devlog 개발 블로그 📚</title>
+    <link>https://blog.haneul-lee.com/tags/golang/</link>
+    <description>Recent content in golang on Haneul Devlog 개발 블로그 📚</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 05 Oct 2022 21:36:47 +0200</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>고랭이란 Golang </title>
+      <link>https://blog.haneul-lee.com/post/go/%EA%B3%A0%EB%9E%AD%EC%9D%B4%EB%9E%80-golang/</link>
+      <pubDate>Wed, 05 Oct 2022 21:36:47 +0200</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/post/go/%EA%B3%A0%EB%9E%AD%EC%9D%B4%EB%9E%80-golang/</guid>
+      <description>고랭이란? What is Golang? 2009 년 구글에서 발표한 프로그래밍 언어.
+로버트 그리즈머, 롭 파이크, 케네스 톰슨이 C++의 복잡함이 싫어서 Go를 만들었다.
+Go 언어 사용자들을 Gopher 라고 함
+  특징  정적 타입 : 자료형에 형이 정해져 있음 강타입 : 자료형 변환(타입캐스팅)이 항상 명시되어야 함 안전성 : 타입 안전성과 메모리 안전성 병행성 : 스레드를 한 단계 더 추상화한 &amp;lsquo;고루틴&amp;rsquo;이라는 개념 사용 가비지 컬렉션 : 결과물에 go runtime이 내장되는데 go run time이 메모리를 핸들링 컴파일 언어 : 인터프리터 언어가 아니지만 근접한 수준의 빠른 컴파일 포인터는 존재, 하지만 포인터 연산은 없음  장점 &amp;amp; 단점 장점  진입장벽이 낮다.</description>
+    </item>
+    
+  </channel>
+</rss>
