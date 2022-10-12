@@ -2,37 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.haneul-lee.com/categories/</loc>
+    <lastmod>2022-10-12T20:30:24+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/development/</loc>
+    <lastmod>2022-10-12T20:30:24+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/categories/development/</loc>
+    <lastmod>2022-10-12T20:30:24+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/front-end/</loc>
+    <lastmod>2022-10-12T20:30:24+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/</loc>
+    <lastmod>2022-10-12T20:30:24+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/heroku/</loc>
+    <lastmod>2022-10-12T20:30:24+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/koyeb/</loc>
+    <lastmod>2022-10-12T20:30:24+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/post/</loc>
+    <lastmod>2022-10-12T20:30:24+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/</loc>
+    <lastmod>2022-10-12T20:30:24+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/%EC%BD%94%EC%98%99/</loc>
+    <lastmod>2022-10-12T20:30:24+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/post/koyeb/%ED%97%A4%EB%A1%9C%EC%BF%A0%EC%9C%A0%EB%A3%8C%ED%99%94%EB%8C%80%EC%B2%B4-koyeb/</loc>
+    <lastmod>2022-10-12T20:30:24+02:00</lastmod>
+  </url><url>
+    <loc>https://blog.haneul-lee.com/tags/%ED%97%A4%EB%A1%9C%EC%BF%A0%EC%9C%A0%EB%A3%8C%ED%99%94%EB%8C%80%EC%B2%B4/</loc>
+    <lastmod>2022-10-12T20:30:24+02:00</lastmod>
+  </url><url>
     <loc>https://blog.haneul-lee.com/tags/bfcache/</loc>
     <lastmod>2022-10-06T13:22:12+02:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/tags/cache/</loc>
     <lastmod>2022-10-06T13:22:12+02:00</lastmod>
   </url><url>
-    <loc>https://blog.haneul-lee.com/categories/</loc>
-    <lastmod>2022-10-06T13:22:12+02:00</lastmod>
-  </url><url>
-    <loc>https://blog.haneul-lee.com/tags/development/</loc>
-    <lastmod>2022-10-06T13:22:12+02:00</lastmod>
-  </url><url>
-    <loc>https://blog.haneul-lee.com/categories/development/</loc>
-    <lastmod>2022-10-06T13:22:12+02:00</lastmod>
-  </url><url>
-    <loc>https://blog.haneul-lee.com/tags/front-end/</loc>
-    <lastmod>2022-10-06T13:22:12+02:00</lastmod>
-  </url><url>
-    <loc>https://blog.haneul-lee.com/</loc>
-    <lastmod>2022-10-06T13:22:12+02:00</lastmod>
-  </url><url>
     <loc>https://blog.haneul-lee.com/tags/logout/</loc>
     <lastmod>2022-10-06T13:22:12+02:00</lastmod>
   </url><url>
-    <loc>https://blog.haneul-lee.com/post/</loc>
-    <lastmod>2022-10-06T13:22:12+02:00</lastmod>
-  </url><url>
     <loc>https://blog.haneul-lee.com/tags/react/</loc>
-    <lastmod>2022-10-06T13:22:12+02:00</lastmod>
-  </url><url>
-    <loc>https://blog.haneul-lee.com/tags/</loc>
     <lastmod>2022-10-06T13:22:12+02:00</lastmod>
   </url><url>
     <loc>https://blog.haneul-lee.com/tags/%EB%A1%9C%EA%B7%B8%EC%95%84%EC%9B%83/</loc>
