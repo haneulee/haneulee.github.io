@@ -152,13 +152,13 @@ if (!doNotTrack) {
        </a>
        <h4 class="sidebar-profile-name">Haneul Devlog</h4>
        
-         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</h5>
+         <h5 class="sidebar-profile-bio">안녕하세요 프론트엔드 개발자 하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul, a front-end developer. <br>This is a software development blog.</h5>
        
      </div>
    
 
    <div class="js-toggle-wrapper">
-  <div class="js-toggle">
+  <div class="js-toggle js-toggle--checked">
     <div class="js-toggle-track">
       <div class="js-toggle-track-check">
         <img
@@ -407,26 +407,6 @@ if (!doNotTrack) {
      
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://haneul-lee.com" target="_blank" rel="noopener" title="Website">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-window-maximize"></i>
-      
-      <span class="sidebar-button-desc">Website</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://blog.haneul-lee.com/resume/" title="Resume">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-file"></i>
-      
-      <span class="sidebar-button-desc">Resume</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
       <a class="sidebar-button-link " href="https://github.com/haneulee" target="_blank" rel="noopener" title="GitHub">
     
       <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
@@ -482,6 +462,71 @@ if (!doNotTrack) {
                ">
         <section class="postShorten-group main-content-wrap">
           
+          
+            
+  
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-left">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://blog.haneul-lee.com/post/nestjs/nestjs-relation/" aria-label="Open the post: NestJS 프레임워크 - Entity &amp; Resolver">
+      
+          NestJS 프레임워크 - Entity &amp; Resolver
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-07-16T11:36:53&#43;09:00">
+        
+  July 16, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/development">development</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        NestJS 프레임워크 - Entity &amp; Resolver Entity Setting (relation) eager
+eager 데코레이터가 설정되어 있으면, N:1로 관계가 설정된 podcast의 데이터를 따로 설정 없이(이를테면, find 함수의 relation 사용)
+db에서 쉽게 가져올 수 있습니다.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26  import { ObjectType, Field } from &#34;@nestjs/graphql&#34;; import { IsString } from &#34;class-validator&#34;; import { Column, Entity, ManyToOne } from &#34;typeorm&#34;; import { CoreEntity } from &#34;.
+      
+      <p>
+        
+          <a href="https://blog.haneul-lee.com/post/nestjs/nestjs-relation/" class="postShorten-excerpt_link link" aria-label="Open the post: NestJS 프레임워크 - Entity &amp; Resolver">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+    <a href="https://blog.haneul-lee.com/post/nestjs/nestjs-relation/" aria-label="Open the post: NestJS 프레임워크 - Entity &amp; Resolver">
+      <div class="postShorten-thumbnailimg">
+        <img alt="" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/nestjs/img-1.png"/>
+      </div>
+    </a>
+  
+</article>
+
           
             
   
@@ -1049,71 +1094,6 @@ keyof 연산자는 피연산자의 키타입에 해당하는 타입을 리턴해
 </article>
 
           
-            
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-left">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://blog.haneul-lee.com/post/browser/browser-session-cookies-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%B8%EC%85%98-%EC%BF%A0%ED%82%A4/" aria-label="Open the post: 브라우저 세션 &amp; 쿠키 Browser Session &amp; cookies 🍪">
-      
-          브라우저 세션 &amp; 쿠키 Browser Session &amp; cookies 🍪
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2021-06-11T13:50:39&#43;09:00">
-        
-  June 11, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://blog.haneul-lee.com/categories/development">development</a>, 
-    
-      <a class="category-link" href="https://blog.haneul-lee.com/categories/browser">browser</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        브라우저 세션 Browser Session Session  브라우저와 백엔드 사이의 memory or history 쿠키는 상태 데이터를 클라이언트에 저장했다면, 세션은 서버에 저장 세션은 기본적으로는 쿠키를 사용하지만 세션 id만 쿠키로 저장하고, 상태 데이터들은 세션 id를 id로하여 서버에 저장한다.  stateless server side에 client와 server의 동작, 상태정보를 저장하지 않는 형태, server의 응답이 client와의 세션 상태와 독립적임 장점 : 서버가 client정보를 저장관리 하지 않으므로 Scaling이 자유로움
-ex) UDP / HTTP : UDP는 TCP와 달리 Client의 세션 상태와 관계 없이 요청에 대한 응답만을 수행하고, server가 client의 정보를 저장하지 않는다.
-      
-      <p>
-        
-          <a href="https://blog.haneul-lee.com/post/browser/browser-session-cookies-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%B8%EC%85%98-%EC%BF%A0%ED%82%A4/" class="postShorten-excerpt_link link" aria-label="Open the post: 브라우저 세션 &amp; 쿠키 Browser Session &amp; cookies 🍪">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://blog.haneul-lee.com/post/browser/browser-session-cookies-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%B8%EC%85%98-%EC%BF%A0%ED%82%A4/" aria-label="Open the post: 브라우저 세션 &amp; 쿠키 Browser Session &amp; cookies 🍪">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" src="https://cdn.jsdelivr.net/gh/haneulee/haneulee.github.io/img/post/browser/img-1.png"/>
-      </div>
-    </a>
-  
-</article>
-
-          
           
   <div class="pagination-bar">
     <ul class="pagination">
@@ -1171,7 +1151,7 @@ ex) UDP / HTTP : UDP는 TCP와 달리 Client의 세션 상태와 관계 없이 �
     
     <h4 id="about-card-name">Haneul Devlog</h4>
     
-      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 이하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul Lee, a front-end developer. <br>This blog is created to record software development studies.</div>
+      <div id="about-card-bio">안녕하세요 프론트엔드 개발자 하늘입니다. 😎<br> 이 블로그는 개발 공부를 기록하기 위해 만들었습니다. <br><br>Hello, I&rsquo;m Haneul, a front-end developer. <br>This is a software development blog.</div>
     
     
       <div id="about-card-job">

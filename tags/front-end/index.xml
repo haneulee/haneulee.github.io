@@ -6,7 +6,16 @@
     <description>Recent content in front-end on Haneul Devlog 개발 블로그 📚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 12 Oct 2022 20:30:24 +0200</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/front-end/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Dec 2022 18:29:23 +0100</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/front-end/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React Router 리액트 라우터 V6</title>
+      <link>https://blog.haneul-lee.com/post/react/react-router-%EB%A6%AC%EC%95%A1%ED%8A%B8%EB%9D%BC%EC%9A%B0%ED%84%B0-v6/</link>
+      <pubDate>Thu, 08 Dec 2022 18:29:23 +0100</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/post/react/react-router-%EB%A6%AC%EC%95%A1%ED%8A%B8%EB%9D%BC%EC%9A%B0%ED%84%B0-v6/</guid>
+      <description>React Router 리액트 라우터 V6   BrowserRouter vs createBrowserRouter BrowserRouter import { BrowserRouter, Route, Routes } from &amp;quot;react-router-dom&amp;quot;; import Header from &amp;quot;./components/Header&amp;quot;; import Home from &amp;quot;./components/Home&amp;quot;; import About from &amp;quot;./components/About&amp;quot;; function Router() { return ( &amp;lt;BrowserRouter&amp;gt; &amp;lt;Header/&amp;gt; &amp;lt;Routes&amp;gt; &amp;lt;Route path=&amp;quot;/&amp;quot; element={&amp;lt;Home /&amp;gt;} /&amp;gt; &amp;lt;Route path=&amp;quot;/about&amp;quot; element={&amp;lt;About /&amp;gt;} /&amp;gt; &amp;lt;/Routes&amp;gt; &amp;lt;/BrowserRouter&amp;gt; ) } export default Router; createBrowserRouter React Router 의 라우터 DOM History API를 사용하여 URL을 업데이트하고 기록 스택을 관리</description>
+    </item>
+    
     <item>
       <title>헤로쿠 유료화 대체 👉 Koyeb 코옙</title>
       <link>https://blog.haneul-lee.com/post/koyeb/%ED%97%A4%EB%A1%9C%EC%BF%A0%EC%9C%A0%EB%A3%8C%ED%99%94%EB%8C%80%EC%B2%B4-koyeb/</link>
