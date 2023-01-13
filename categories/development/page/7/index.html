@@ -469,6 +469,73 @@ if (!doNotTrack) {
               
   
     
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-left">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://blog.haneul-lee.com/post/gitlab/gitlab-page-domain/" aria-label="Open the post: gitlab pages에 나의 도메인 연결하기">
+      
+          gitlab pages에 나의 도메인 연결하기
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-02-13T22:20:42&#43;09:00">
+        
+  February 13, 2020
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/development">development</a>, 
+    
+      <a class="category-link" href="https://blog.haneul-lee.com/categories/gitlab">gitlab</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        gitlab pages에 나의 도메인 연결하기 먼저 gitlab repository를 새로 만들고 ,
+정적 웹페이지 든 spa 이든 프로젝트 폴더를 만들고
+.gitlab-ci.yml 파일을 새로 만들어서 아래와 같이 입력한다.
+ image: node:latest cache: paths: - node_modules/ before_script: - npm install # test: # stage: test # script: # - CI=true npm test pages: stage: deploy script: - CI=true npm run build - rm -rf public - mv build public artifacts: paths: - public # GitLab pages serve from a 'public' directory only: - master # run on master branch 그리고 git push 를 하면 자동으로 위와 같이 빌드를 하게되고, 해당 웹사이트에서 자동으로 배포되는 것을 알 수 있다.
+      
+      <p>
+        
+          <a href="https://blog.haneul-lee.com/post/gitlab/gitlab-page-domain/" class="postShorten-excerpt_link link" aria-label="Open the post: gitlab pages에 나의 도메인 연결하기">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+    <a href="https://blog.haneul-lee.com/post/gitlab/gitlab-page-domain/" aria-label="Open the post: gitlab pages에 나의 도메인 연결하기">
+      <div class="postShorten-thumbnailimg">
+        <img alt="" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FB7wAZ%2FbtqBUTZRU2a%2FZkVPDNukK7yJTuC8it3Mv1%2Fimg.png"/>
+      </div>
+    </a>
+  
+</article>
+
+            
+              
+  
+    
       
         
       
@@ -1111,7 +1178,7 @@ Why do we need it? 왜 필요한가?  Components have local state, but apps have
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
     <span class="copyrights">
-      &copy; 2022 <a href="https://github.com/haneulee">Haneul Lee</a>. All Rights Reserved
+      &copy; 2023 <a href="https://github.com/haneulee">Haneul Lee</a>. All Rights Reserved
     </span>
   </footer>
   

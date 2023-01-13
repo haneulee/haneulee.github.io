@@ -6,7 +6,23 @@
     <description>Recent content in development on Haneul Devlog 개발 블로그 📚</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 08 Dec 2022 18:29:23 +0100</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Jan 2023 14:25:20 +0100</lastBuildDate><atom:link href="https://blog.haneul-lee.com/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React Uncaught Syntax Error: unexpected token &#39;&lt;&#39; 리액트 에러</title>
+      <link>https://blog.haneul-lee.com/post/react/uncaught-syntax-error/</link>
+      <pubDate>Fri, 13 Jan 2023 14:25:20 +0100</pubDate>
+      
+      <guid>https://blog.haneul-lee.com/post/react/uncaught-syntax-error/</guid>
+      <description>React Uncaught Syntax Error: unexpected token &amp;lsquo;&amp;lt;&amp;rsquo; 리액트 에러  새로운 피쳐를 작업한 후에 배포까지 잘 완료했다고 생각했는데
+다음날 사이트를 접속하면 빈 화면만 보이는 것을 발견했다.
+개발자 도구에 보이는 에러는
+Uncaught SyntaxError: Unexpected token &amp;lsquo;&amp;lt;&amp;rsquo;
+ 원인 얼핏 드는 생각으로는 JS 파일을 잘 못 읽어서 생기는 문제인 것 같았다.
+구글링을 해보니 리액트 개발할 때 꽤나 자주 발생하는 오류이다.
+원인으로는 상황에 따라 여러가지 일 수 있으나
+브라우저의 캐싱때문에 index.html 파일이 배포 전의 파일이라 배포 전 번들링한 js파일을 참조하고 있어 발생하기도 한다.</description>
+    </item>
+    
     <item>
       <title>React Router 리액트 라우터 V6</title>
       <link>https://blog.haneul-lee.com/post/react/react-router-%EB%A6%AC%EC%95%A1%ED%8A%B8%EB%9D%BC%EC%9A%B0%ED%84%B0-v6/</link>
